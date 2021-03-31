@@ -1,5 +1,7 @@
 --TEST--
 Exceptions before fatal error
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 function exception_error_handler($code, $msg) {
