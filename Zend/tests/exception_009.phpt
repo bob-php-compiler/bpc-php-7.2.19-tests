@@ -24,5 +24,5 @@ class my_exception extends exception
 throw new my_exception;
 
 ?>
---EXPECT--
-Recoverable fatal error: Object of class stdClass could not be converted to string in Unknown on line 0
+--EXPECTF--
+Recoverable fatal error: Object of class stdClass could not be converted to string in %s on line %d
