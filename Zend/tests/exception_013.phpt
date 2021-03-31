@@ -18,12 +18,6 @@ try {
 	echo "\nException: " . $e->getMessage() . " in " , $e->getFile() . " on line " . $e->getLine() . "\n";
 }
 
-try {
-	unset(C::$a);
-} catch (Error $e) {
-	echo "\nException: " . $e->getMessage() . " in " , $e->getFile() . " on line " . $e->getLine() . "\n";
-}
-
 var_dump(C::$a);
 ?>
 --EXPECTF--
@@ -31,9 +25,7 @@ Exception: Access to undeclared static property: C::$a in %sexception_013.php on
 
 Exception: Cannot access private property C::$p in %sexception_013.php on line 13
 
-Exception: Attempt to unset static property C::$a in %sexception_013.php on line 19
-
-Fatal error: Uncaught Error: Access to undeclared static property: C::$a in %sexception_013.php:24
+Fatal error: Uncaught Error: Access to undeclared static property: C::$a in %sexception_013.php:18
 Stack trace:
 #0 {main}
-  thrown in %sexception_013.php on line 24
+  thrown in %sexception_013.php on line 18

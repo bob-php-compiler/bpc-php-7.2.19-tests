@@ -5,3 +5,4 @@
 3. SKIP GOTO
 4. __destruct
 5. FILE and LINE
+6. unset static property
