@@ -1,5 +1,7 @@
 --TEST--
 Exceptions on improper usage of $this
+--SKIPIF--
+skip TODO support typehint callable
 --FILE--
 <?php
 abstract class C {
