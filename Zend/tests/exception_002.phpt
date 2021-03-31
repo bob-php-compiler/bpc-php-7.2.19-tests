@@ -1,5 +1,7 @@
 --TEST--
 Testing exception and GOTO
+--SKIPIF--
+skip bpc does not support GOTO
 --FILE--
 <?php
 
