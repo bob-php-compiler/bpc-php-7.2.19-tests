@@ -15,16 +15,16 @@ $x->getcode(1);
 
 ?>
 --EXPECTF--
-Warning: Exception::getTraceAsString() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method Exception::getTraceAsString(): 0 at most, 1 provided in %s on line %d
 
-Warning: Exception::__toString() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method Exception::__toString(): 0 at most, 1 provided in %s on line %d
 
-Warning: Exception::getTrace() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method Exception::getTrace(): 0 at most, 1 provided in %s on line %d
 
-Warning: Exception::getLine() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method Exception::getLine(): 0 at most, 1 provided in %s on line %d
 
-Warning: Exception::getFile() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method Exception::getFile(): 0 at most, 1 provided in %s on line %d
 
-Warning: Exception::getMessage() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method Exception::getMessage(): 0 at most, 1 provided in %s on line %d
 
-Warning: Exception::getCode() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method Exception::getCode(): 0 at most, 1 provided in %s on line %d
