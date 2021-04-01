@@ -22,4 +22,4 @@ throw new excEption();
 echo "Done\n";
 ?>
 --EXPECTF--
-string(24) "foo(): Exception thrown!"
+string(%d) "foo(): Exception thrown!"
