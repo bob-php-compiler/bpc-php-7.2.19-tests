@@ -12,6 +12,7 @@ try {
     echo "Exception\n";
 }
 
+var_dump($str);
 ?>
 --EXPECT--
-Exception
+string(4) "yfoo"
