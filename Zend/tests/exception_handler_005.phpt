@@ -20,4 +20,4 @@ throw new excEption();
 echo "Done\n";
 ?>
 --EXPECTF--
-string(25) "foo1(): Exception thrown!"
+string(%d) "foo1(): Exception thrown!"
