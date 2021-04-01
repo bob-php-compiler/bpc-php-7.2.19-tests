@@ -1,7 +1,5 @@
 --TEST--
 Exceptions before fatal error
---SKIPIF--
-skip TODO
 --FILE--
 <?php
 function exception_error_handler($code, $msg) {
@@ -33,13 +31,14 @@ try {
 } catch(Throwable $e) {
     var_dump($e->getMessage());
 }
-
+/*
+TODO
 try {
     $foo::b();
 } catch(Throwable $e) {
     var_dump($e->getMessage());
 }
-
+*/
 
 try {
     $b = clone $foo;
@@ -57,10 +56,9 @@ try {
 }
 ?>
 --EXPECT--
-string(23) "Undefined variable: foo"
-string(23) "Undefined variable: foo"
-string(23) "Undefined variable: foo"
-string(23) "Undefined variable: foo"
-string(23) "Undefined variable: foo"
-string(23) "Undefined variable: foo"
-string(23) "Undefined variable: foo"
+string(37) "Call to a member function a() on null"
+string(45) "Class name must be a valid object or a string"
+string(22) "Can only throw objects"
+string(30) "Function name must be a string"
+string(35) "__clone method called on non-object"
+string(30) "Function name must be a string"
