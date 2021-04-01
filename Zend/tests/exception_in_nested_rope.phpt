@@ -1,5 +1,7 @@
 --TEST--
 Exception during nested rope
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
