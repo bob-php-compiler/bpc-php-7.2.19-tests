@@ -14,28 +14,13 @@ echo "*** Testing DateTime::setDate() : error conditions ***\n";
 
 $datetime = new DateTime("2009-01-30 19:34:10");
 
-$year = 2009;
-$month = 1;
-$day = 30;
-
-echo "\n-- Testing DateTime::setDate() function with more than expected no. of arguments --\n";
-$extra_arg = 10;
-var_dump( $datetime->setDate($year, $month, $day, $extra_arg) );
-
+echo "\n-- Testing DateTime::setDate() function with zero arguments --\n";
+var_dump( $datetime->setDate() );
 ?>
 ===DONE===
 --EXPECTF--
 *** Testing DateTime::setDate() : error conditions ***
 
--- Testing DateTime::setDate() function with more than expected no. of arguments --
+-- Testing DateTime::setDate() function with zero arguments --
 
-Warning: Too many arguments to method DateTime::setDate(): 3 at most, 4 provided in %s on line %d
-object(DateTime)#1 (3) {
-  ["date"]=>
-  string(26) "2009-01-30 19:34:10.000000"
-  ["timezone_type"]=>
-  int(3)
-  ["timezone"]=>
-  string(13) "Europe/London"
-}
-===DONE===
+Fatal error: Too few arguments to method DateTime::setDate(): 3 required, 0 provided in %s on line %d

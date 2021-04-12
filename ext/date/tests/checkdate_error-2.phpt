@@ -13,16 +13,11 @@ echo "*** Testing checkdate() : error conditions ***\n";
 //Set the default time zone
 date_default_timezone_set("America/Chicago");
 
-$arg_0 = 1;
-$arg_1 = 1;
-$arg_2 = 1;
-
 echo "\n-- Testing checkdate() function with less than expected no. of arguments --\n";
-var_dump (checkdate($arg_0, $arg_1));
-
+var_dump (checkdate());
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function checkdate(): 3 required, 2 provided in %s on line %d
+Error: Too few arguments to function checkdate(): 3 required, 0 provided in %s on line %d
  -- compile-error

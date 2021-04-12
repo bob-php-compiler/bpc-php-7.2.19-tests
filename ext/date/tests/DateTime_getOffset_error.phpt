@@ -27,6 +27,6 @@ var_dump( $datetime->getOffset($extra_arg) );
 
 -- Testing DateTime::getOffset() function with more than expected no. of arguments --
 
-Warning: DateTime::getOffset() expects exactly 0 parameters, 1 given in %s on line %d
-bool(false)
+Warning: Too many arguments to method DateTime::getOffset(): 0 at most, 1 provided in %s on line %d
+int(0)
 ===DONE===

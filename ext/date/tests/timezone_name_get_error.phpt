@@ -13,14 +13,6 @@ date_default_timezone_set("Europe/London");
 
 echo "*** Testing timezone_name_get() : error conditions ***\n";
 
-echo "\n-- Testing timezone_name_get() function with zero arguments --\n";
-var_dump( timezone_name_get() );
-
-echo "\n-- Testing date_timezone_set() function with more than expected no. of arguments --\n";
-$datetime = date_create("2009-01-30 17:57:32");
-$extra_arg = 99;
-var_dump( timezone_name_get($datetime,  $extra_arg) );
-
 echo "\n-- Testing timezone_name_get() function with an invalid values for \$object argument --\n";
 $invalid_obj = new stdClass();
 var_dump( timezone_name_get($invalid_obj) );
@@ -32,16 +24,6 @@ var_dump( timezone_name_get($invalid_obj) );
 ===DONE===
 --EXPECTF--
 *** Testing timezone_name_get() : error conditions ***
-
--- Testing timezone_name_get() function with zero arguments --
-
-Warning: timezone_name_get() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
--- Testing date_timezone_set() function with more than expected no. of arguments --
-
-Warning: timezone_name_get() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
 
 -- Testing timezone_name_get() function with an invalid values for $object argument --
 

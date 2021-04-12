@@ -16,25 +16,13 @@ echo "*** Testing DateTime::modify() : error conditions ***\n";
 // Create a date object
 $object = new DateTime("2009-01-30 19:34:10");
 
-echo "\n-- Testing DateTime::modify() function with more than expected no. of arguments --\n";
-$modify = "+1 day";
-$extra_arg = 99;
-var_dump( $object->modify($modify, $extra_arg) );
-
+echo "\n-- Testing DateTime::modify() function with less than expected no. of arguments --\n";
+var_dump( $object->modify() );
 ?>
 ===DONE===
 --EXPECTF--
 *** Testing DateTime::modify() : error conditions ***
 
--- Testing DateTime::modify() function with more than expected no. of arguments --
+-- Testing DateTime::modify() function with less than expected no. of arguments --
 
-Warning: Too many arguments to method DateTime::modify(): 1 at most, 2 provided in %s on line %d
-object(DateTime)#1 (3) {
-  ["date"]=>
-  string(26) "2009-01-31 19:34:10.000000"
-  ["timezone_type"]=>
-  int(3)
-  ["timezone"]=>
-  string(13) "Europe/London"
-}
-===DONE===
+Fatal error: Too few arguments to method DateTime::modify(): 1 required, 0 provided in %s on line %d

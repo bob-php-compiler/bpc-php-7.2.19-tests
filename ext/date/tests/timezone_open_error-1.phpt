@@ -10,14 +10,11 @@ Test timezone_open() function : error conditions
 
 echo "*** Testing timezone_open() : error conditions ***\n";
 
-echo "\n-- Testing timezone_open() function with more than expected no. of arguments --\n";
-$time = "GMT";
-$extra_arg = 99;
-var_dump( timezone_open($time, $extra_arg) );
-
+echo "\n-- Testing timezone_open() function with zero arguments --\n";
+var_dump( timezone_open() );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function timezone_open(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function timezone_open(): 1 required, 0 provided in %s on line %d
  -- compile-error

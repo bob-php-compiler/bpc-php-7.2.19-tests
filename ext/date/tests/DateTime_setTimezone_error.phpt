@@ -14,9 +14,6 @@ echo "*** Testing DateTime::setTimezone () : error conditions ***\n";
 
 $datetime = new DateTime("2009-01-30 17:57:32");
 
-echo "\n-- Testing DateTime::setTimezone () function with zero arguments --\n";
-var_dump( $datetime->setTimezone() );
-
 echo "\n-- Testing DateTime::setTimezone () function with more than expected no. of arguments --\n";
 $timezone  = new DateTimezone("GMT");
 $extra_arg = 99;
@@ -27,13 +24,15 @@ var_dump( $datetime->setTimezone($timezone, $extra_arg) );
 --EXPECTF--
 *** Testing DateTime::setTimezone () : error conditions ***
 
--- Testing DateTime::setTimezone () function with zero arguments --
-
-Warning: DateTime::setTimezone() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
 -- Testing DateTime::setTimezone () function with more than expected no. of arguments --
 
-Warning: DateTime::setTimezone() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
+Warning: Too many arguments to method DateTime::setTimezone(): 1 at most, 2 provided in %s on line %d
+object(DateTime)#1 (3) {
+  ["date"]=>
+  string(26) "2009-01-30 17:57:32.000000"
+  ["timezone_type"]=>
+  int(2)
+  ["timezone"]=>
+  string(3) "GMT"
+}
 ===DONE===

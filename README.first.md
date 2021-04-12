@@ -40,3 +40,5 @@
 10. output length
 
     bpc encrypted php script filename and function name, so exception/error output length not match
+
+11. argument type error message

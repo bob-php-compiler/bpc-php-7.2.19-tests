@@ -26,6 +26,6 @@ var_dump( $tz->getName($extra_arg) );
 
 -- Testing DateTimeZone::getName() function with more than expected no. of arguments --
 
-Warning: DateTimeZone::getName() expects exactly 0 parameters, 1 given in %s on line %d
-bool(false)
+Warning: Too many arguments to method DateTimeZone::getName(): 0 at most, 1 provided in %s on line %d
+string(13) "Europe/London"
 ===DONE===

@@ -16,17 +16,13 @@ $date = date_create("GMT");
 
 echo "*** Testing DateTimeZone::getOffset() : error conditions ***\n";
 
-echo "\n-- Testing DateTimeZone::getOffset() function with more than expected no. of arguments --\n";
-$extra_arg = 99;
-var_dump( $tz->getOffset($date, $extra_arg) );
-
+echo "\n-- Testing DateTimeZone::getOffset() function with zero arguments --\n";
+var_dump( $tz->getOffset() );
 ?>
 ===DONE===
 --EXPECTF--
 *** Testing DateTimeZone::getOffset() : error conditions ***
 
--- Testing DateTimeZone::getOffset() function with more than expected no. of arguments --
+-- Testing DateTimeZone::getOffset() function with zero arguments --
 
-Warning: Too many arguments to method DateTimeZone::getOffset(): 1 at most, 2 provided in %s on line %d
-int(3600)
-===DONE===
+Fatal error: Too few arguments to method DateTimeZone::getOffset(): 1 required, 0 provided in %s on line %d

@@ -9,16 +9,12 @@ Test date_default_timezone_set() function : error variations
 
 echo "*** Testing date_default_timezone_set() : error variations ***\n";
 
-echo "\n-- Testing date_default_timezone_set() function with invalid timezone identifier  --\n";
-var_dump( date_default_timezone_set("foo") );
-
+echo "\n-- Testing date_default_timezone_set() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( date_default_timezone_set("GMT", $extra_arg) );
 ?>
 ===Done===
 --EXPECTF--
-*** Testing date_default_timezone_set() : error variations ***
-
--- Testing date_default_timezone_set() function with invalid timezone identifier  --
-
-Notice: date_default_timezone_set(): Timezone ID 'foo' is invalid in %s on line %d
-bool(false)
-===Done===
+*** ERROR:compile-error:
+Error: Too many arguments to function date_default_timezone_set(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

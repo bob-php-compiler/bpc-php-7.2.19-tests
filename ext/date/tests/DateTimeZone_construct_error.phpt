@@ -27,5 +27,6 @@ try {
 *** Testing DateTimeZone() : error conditions ***
 
 -- Testing new DateTimeZone() with more than expected no. of arguments --
-DateTimeZone::__construct() expects exactly 1 parameter, 2 given
+
+Warning: Too many arguments to method DateTimeZone::__construct(): 1 at most, 2 provided in %s on line %d
 ===DONE===

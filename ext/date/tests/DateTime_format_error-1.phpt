@@ -16,18 +16,13 @@ $date = new DateTime("2005-07-14 22:30:41");
 
 echo "*** Testing DateTime::format() : error conditions ***\n";
 
-echo "\n-- Testing date_date_formatcreate() function with more than expected no. of arguments --\n";
-$format = "F j, Y, g:i a";
-$extra_arg = 10;
-var_dump( $date->format($format, $extra_arg) );
-
+echo "\n-- Testing date_date_formatcreate() function with zero arguments --\n";
+var_dump( $date->format() );
 ?>
 ===DONE===
 --EXPECTF--
 *** Testing DateTime::format() : error conditions ***
 
--- Testing date_date_formatcreate() function with more than expected no. of arguments --
+-- Testing date_date_formatcreate() function with zero arguments --
 
-Warning: Too many arguments to method DateTime::format(): 1 at most, 2 provided in %s on line %d
-string(23) "July 14, 2005, 10:30 pm"
-===DONE===
+Fatal error: Too few arguments to method DateTime::format(): 1 required, 0 provided in %s on line %d

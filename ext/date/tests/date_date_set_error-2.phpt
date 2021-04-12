@@ -12,18 +12,12 @@ date_default_timezone_set("Europe/London");
 
 echo "*** Testing date_date_set() : error conditions ***\n";
 
+echo "\n-- Testing date_date_set() function with less than expected no. of arguments --\n";
 $datetime = date_create("2009-01-30 19:34:10");
-$year = 2009;
-$month = 1;
-$day = 30;
-
-echo "\n-- Testing date_date_set() function with more than expected no. of arguments --\n";
-$extra_arg = 10;
-var_dump( date_date_set($datetime, $year, $month, $day, $extra_arg) );
-
+var_dump( date_date_set($datetime) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function date_date_set(): 4 at most, 5 provided in %s on line %d
+Error: Too few arguments to function date_date_set(): 4 required, 1 provided in %s on line %d
  -- compile-error
