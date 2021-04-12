@@ -2,11 +2,12 @@
 
 1. Too few arguments
 
-    compile error
+    compile error (functions) or runtime error (functions/methods)
 
 2. Too many arguments
 
-    compile error or runtime warning
+    compile error (functions) or runtime warning (functions/no default value methods)
+    default value methods is fine
 
 3. SKIP GOTO
 

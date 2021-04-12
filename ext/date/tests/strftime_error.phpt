@@ -21,10 +21,6 @@ var_dump( strftime($format, $timestamp, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing strftime() : error conditions ***
-
--- Testing strftime() function with more than expected no. of arguments --
-
-Warning: strftime() expects at most 2 parameters, 3 given in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function strftime(): 2 at most, 3 provided in %s on line %d
+ -- compile-error

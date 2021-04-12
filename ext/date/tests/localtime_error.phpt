@@ -23,10 +23,6 @@ var_dump( localtime($timestamp, $assoc, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing localtime() : error conditions ***
-
--- Testing localtime() function with more than expected no. of arguments --
-
-Warning: localtime() expects at most 2 parameters, 3 given in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function localtime(): 2 at most, 3 provided in %s on line %d
+ -- compile-error

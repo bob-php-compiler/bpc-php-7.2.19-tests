@@ -14,19 +14,15 @@ date_default_timezone_set("Europe/London");
 
 echo "*** Testing mktime() : error conditions ***\n";
 
-echo "\n-- Testing mktime() function with more than expected no. of arguments --\n";
-$hour = 10;
-$minute = 30;
-$sec = 45;
-$month = 7;
-$day = 2;
-$year = 1963;
-$extra_arg = 10;
-var_dump( mktime($hour, $minute, $sec, $month, $day, $year, $extra_arg) );
-
+echo "\n-- Testing mktime() function with Zero arguments --\n";
+var_dump( mktime() );
 ?>
 ===DONE===
 --EXPECTF--
-*** ERROR:compile-error:
-Error: Too many arguments to function mktime(): 6 at most, 7 provided in %s on line %d
- -- compile-error
+*** Testing mktime() : error conditions ***
+
+-- Testing mktime() function with Zero arguments --
+
+Deprecated: mktime(): You should be using the time() function instead in %s on line %d
+int(%d)
+===DONE===

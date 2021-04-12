@@ -24,10 +24,6 @@ var_dump( gmmktime($hour, $min, $sec, $mon, $day, $year, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing gmmktime() : error conditions ***
-
--- Testing gmmktime() function with more than expected no. of arguments --
-
-Warning: gmmktime() expects at most 6 parameters, 7 given in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function gmmktime(): 6 at most, 7 provided in %s on line %d
+ -- compile-error

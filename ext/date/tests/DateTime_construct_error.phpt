@@ -28,5 +28,12 @@ try {
 *** Testing date_create() : error conditions ***
 
 -- Testing new DateTime() with more than expected no. of arguments --
-DateTime::__construct() expects at most 2 parameters, 3 given
+object(DateTime)#2 (3) {
+  ["date"]=>
+  string(26) "%s"
+  ["timezone_type"]=>
+  int(2)
+  ["timezone"]=>
+  string(3) "GMT"
+}
 ===DONE===

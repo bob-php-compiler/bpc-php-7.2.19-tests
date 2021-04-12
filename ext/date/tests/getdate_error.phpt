@@ -22,10 +22,6 @@ var_dump( getdate($timestamp, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing getdate() : error conditions ***
-
--- Testing getdate() function with more than expected no. of arguments --
-
-Warning: getdate() expects at most 1 parameter, 2 given in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function getdate(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

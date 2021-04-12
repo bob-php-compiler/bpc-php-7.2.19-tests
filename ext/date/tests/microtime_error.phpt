@@ -10,10 +10,6 @@ Test wrong number of arguments for microtime()
 $opt_arg_0 = true;
 $extra_arg = 1;
 
-echo "\n-- Too many arguments --\n";
-var_dump(microtime($opt_arg_0, $extra_arg));
-
-
 echo "\n-- Bad Arg types --\n";
 
 $bad_args = array(null,
@@ -31,10 +27,6 @@ foreach ($bad_args as $bad_arg) {
 ?>
 ===DONE===
 --EXPECTF--
--- Too many arguments --
-
-Warning: microtime() expects at most 1 parameter, 2 given in %s on line 11
-NULL
 
 -- Bad Arg types --
 
@@ -57,13 +49,13 @@ float(%s)
   }
 }
 
-Warning: microtime() expects parameter 1 to be boolean, array given in %s on line 25
+Warning: microtime() expects parameter 1 to be boolean, array given in %s on line 21
 NULL
 
 --> bad arg: object(stdClass)#%d (0) {
 }
 
-Warning: microtime() expects parameter 1 to be boolean, object given in %s on line 25
+Warning: microtime() expects parameter 1 to be boolean, object given in %s on line 21
 NULL
 
 --> bad arg: int(1)

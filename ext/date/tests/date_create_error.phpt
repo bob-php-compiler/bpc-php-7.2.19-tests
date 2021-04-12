@@ -19,10 +19,6 @@ var_dump( date_create($time, $timezone, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing date_create() : error conditions ***
-
--- Testing date_create() function with more than expected no. of arguments --
-
-Warning: date_create() expects at most 2 parameters, 3 given in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function date_create(): 2 at most, 3 provided in %s on line %d
+ -- compile-error
