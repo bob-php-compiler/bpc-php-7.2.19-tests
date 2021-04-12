@@ -10,16 +10,12 @@ Test gmstrftime() function : error conditions
 
 echo "*** Testing gmstrftime() : error conditions ***\n";
 
-//Test gmstrftime with one more than the expected number of arguments
-echo "\n-- Testing gmstrftime() function with more than expected no. of arguments --\n";
-$format = '%b %d %Y %H:%M:%S';
-$timestamp = gmmktime(8, 8, 8, 8, 8, 2008);
-$extra_arg = 10;
-var_dump( gmstrftime($format, $timestamp, $extra_arg) );
-
+// Zero arguments
+echo "\n-- Testing gmstrftime() function with Zero arguments --\n";
+var_dump( gmstrftime() );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function gmstrftime(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function gmstrftime(): 1 required, 0 provided in %s on line %d
  -- compile-error

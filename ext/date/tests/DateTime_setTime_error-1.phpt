@@ -14,27 +14,13 @@ echo "*** Testing DateTime::setTime() : error conditions ***\n";
 
 $datetime = date_create("2009-01-31 15:34:10");
 
-$hour = 18;
-
-echo "\n-- Testing DateTime::setTime() function with more than expected no. of arguments --\n";
-$min = 15;
-$sec = 30;
-$extra_arg = 10;
-$microseconds = 123123;
-var_dump( $datetime->setTime($hour, $min, $sec, $microseconds, $extra_arg) );
-
+echo "\n-- Testing DateTime::setTime() function with zero arguments --\n";
+var_dump( $datetime->setTime() );
 ?>
 ===DONE===
 --EXPECTF--
 *** Testing DateTime::setTime() : error conditions ***
 
--- Testing DateTime::setTime() function with more than expected no. of arguments --
-object(DateTime)#1 (3) {
-  ["date"]=>
-  string(26) "2009-01-31 18:15:30.123123"
-  ["timezone_type"]=>
-  int(3)
-  ["timezone"]=>
-  string(13) "Europe/London"
-}
-===DONE===
+-- Testing DateTime::setTime() function with zero arguments --
+
+Fatal error: Too few arguments to method DateTime::setTime(): 2 required, 0 provided in %s on line %d

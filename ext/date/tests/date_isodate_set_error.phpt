@@ -14,19 +14,9 @@ date_default_timezone_set("Europe/London");
 
 echo "*** Testing date_isodate_set() : error conditions ***\n";
 
-echo "\n-- Testing date_isodate_set() function with zero arguments --\n";
-var_dump( date_isodate_set() );
-
-$datetime = date_create("2009-01-30 19:34:10");
-echo "\n-- Testing date_isodate_set() function with less than expected no. of arguments --\n";
-var_dump( date_isodate_set($datetime) );
-
-echo "\n-- Testing date_isodate_set() function with more than expected no. of arguments --\n";
 $year = 2009;
 $week = 30;
 $day = 7;
-$extra_arg = 30;
-var_dump( date_isodate_set($datetime, $year, $week, $day, $extra_arg) );
 
 echo "\n-- Testing date_isodate_set() function with an invalid values for \$object argument --\n";
 $invalid_obj = new stdClass();
@@ -39,21 +29,6 @@ var_dump( date_isodate_set($invalid_obj, $year, $week, $day) );
 ===DONE===
 --EXPECTF--
 *** Testing date_isodate_set() : error conditions ***
-
--- Testing date_isodate_set() function with zero arguments --
-
-Warning: date_isodate_set() expects at least 3 parameters, 0 given in %s on line %d
-bool(false)
-
--- Testing date_isodate_set() function with less than expected no. of arguments --
-
-Warning: date_isodate_set() expects at least 3 parameters, 1 given in %s on line %d
-bool(false)
-
--- Testing date_isodate_set() function with more than expected no. of arguments --
-
-Warning: date_isodate_set() expects at most 4 parameters, 5 given in %s on line %d
-bool(false)
 
 -- Testing date_isodate_set() function with an invalid values for $object argument --
 

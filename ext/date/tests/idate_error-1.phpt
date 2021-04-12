@@ -10,15 +10,11 @@ Test idate() function : error conditions
 
 echo "*** Testing idate() : error conditions ***\n";
 
-echo "\n-- Testing idate() function with more than expected no. of arguments --\n";
-$format = '%b %d %Y %H:%M:%S';
-$timestamp = gmmktime(8, 8, 8, 8, 8, 2008);
-$extra_arg = 10;
-var_dump( idate($format, $timestamp, $extra_arg) );
-
+echo "\n-- Testing idate() function with Zero arguments --\n";
+var_dump( idate() );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function idate(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function idate(): 1 required, 0 provided in %s on line %d
  -- compile-error

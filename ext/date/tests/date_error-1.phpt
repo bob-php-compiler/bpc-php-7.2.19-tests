@@ -15,13 +15,11 @@ date_default_timezone_set("America/Chicago");
 $format = "m.d.y";
 $timestamp = mktime(10, 44, 30, 2, 27, 2009);
 
-echo "\n-- Testing date function with more than expected no. of arguments --\n";
-$extra_arg = true;
-var_dump (date($format, $timestamp, $extra_arg));
-
+echo "\n-- Testing date function with no arguments --\n";
+var_dump (date());
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function date(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function date(): 1 required, 0 provided in %s on line %d
  -- compile-error
