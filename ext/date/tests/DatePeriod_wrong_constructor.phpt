@@ -10,8 +10,4 @@ date.timezone=UTC
 new DatePeriod();
 ?>
 --EXPECTF--
-Fatal error: Uncaught Exception: DatePeriod::__construct(): This constructor accepts either (DateTimeInterface, DateInterval, int) OR (DateTimeInterface, DateInterval, DateTime) OR (string) as arguments. in %s:%d
-Stack trace:
-#0 %s(%d): DatePeriod->__construct()
-#1 {main}
-  thrown in %s on line %d
+Fatal error: Too few arguments to method DatePeriod::__construct(): 1 required, 0 provided in %s on line %d
