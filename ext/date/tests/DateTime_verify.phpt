@@ -1,5 +1,7 @@
 --TEST--
 Test DateTime class registration
+--SKIPIF--
+skip Reflection
 --FILE--
 <?php
 
