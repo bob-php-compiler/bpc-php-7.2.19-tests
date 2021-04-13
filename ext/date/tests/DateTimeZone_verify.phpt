@@ -1,5 +1,7 @@
 --TEST--
 Test DateTimeZone class registration
+--SKIPIF--
+skip Reflection
 --FILE--
 <?php
 
