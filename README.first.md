@@ -54,3 +54,7 @@
 14. --bpc-include-file
 
     include file need pass via --bpc-include-file
+
+15. object id
+
+    bpc's gc different with php's gc, so object ids may not equal
