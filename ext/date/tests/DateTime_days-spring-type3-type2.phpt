@@ -2,6 +2,8 @@
 DateTime::diff() days -- spring type3 type2
 --CREDITS--
 Daniel Convissor <danielc@php.net>
+--ARGS--
+--bpc-include-file ext/date/tests/examine_diff.inc --bpc-include-file ext/date/tests/DateTime_data-spring-type3-type2.inc
 --FILE--
 <?php
 

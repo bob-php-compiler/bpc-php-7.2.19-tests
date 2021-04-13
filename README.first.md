@@ -42,3 +42,15 @@
     bpc encrypted php script filename and function name, so exception/error output length not match
 
 11. argument type error message
+
+12. __FILE__ not exists
+
+    bpc encrypted php script filename and compile php scripts to one final binary, so __FILE__ not exists
+
+13. SKIP Reflection
+
+    bpc does not support Reflection
+
+14. --bpc-include-file
+
+    include file need pass via --bpc-include-file

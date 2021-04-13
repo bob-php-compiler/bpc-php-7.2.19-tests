@@ -4,6 +4,8 @@ DateTime::add() -- spring type2 type3
 Daniel Convissor <danielc@php.net>
 --XFAIL--
 Various bugs exist
+--ARGS--
+--bpc-include-file ext/date/tests/examine_diff.inc --bpc-include-file ext/date/tests/DateTime_data-spring-type2-type3.inc
 --FILE--
 <?php
 

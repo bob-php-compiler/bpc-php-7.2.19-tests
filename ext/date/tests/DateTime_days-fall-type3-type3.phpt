@@ -2,6 +2,8 @@
 DateTime::diff() days -- fall type3 type3
 --CREDITS--
 Daniel Convissor <danielc@php.net>
+--ARGS--
+--bpc-include-file ext/date/tests/examine_diff.inc --bpc-include-file ext/date/tests/DateTime_data-fall-type3-type3.inc
 --FILE--
 <?php
 
