@@ -39,10 +39,7 @@ $index_array = array (1, 2, 3);
 $assoc_array = array ('one' => 1, 'two' => 2);
 
 // resource
-$file = '/tmp/bpc-test-helper.txt';
-touch($file);
-$file_handle = fopen($file, 'r');
-unlink($file);
+$file_handle = fopen('/proc/self/comm', 'r');
 
 //array of values to iterate over
 $inputs = array(
