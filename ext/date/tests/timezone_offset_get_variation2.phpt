@@ -123,86 +123,86 @@ fclose( $file_handle );
 *** Testing timezone_offset_get() : usage variation -  unexpected values to second argument $datetime***
 
 -- int 0 --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, integer given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, integer given
 
 -- int 1 --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, integer given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, integer given
 
 -- int 12345 --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, integer given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, integer given
 
 -- int -12345 --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, integer given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, integer given
 
 -- float 10.5 --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, float given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, float given
 
 -- float -10.5 --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, float given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, float given
 
 -- float .5 --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, float given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, float given
 
 -- empty array --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, array given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, array given
 
 -- int indexed array --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, array given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, array given
 
 -- associative array --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, array given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, array given
 
 -- nested arrays --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, array given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, array given
 
 -- uppercase NULL --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, null given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, null given
 
 -- lowercase null --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, null given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, null given
 
 -- lowercase true --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, boolean given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, boolean given
 
 -- lowercase false --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, boolean given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, boolean given
 
 -- uppercase TRUE --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, boolean given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, boolean given
 
 -- uppercase FALSE --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, boolean given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, boolean given
 
 -- empty string DQ --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, string given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, string given
 
 -- empty string SQ --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, string given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, string given
 
 -- string DQ --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, string given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, string given
 
 -- string SQ --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, string given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, string given
 
 -- mixed case string --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, string given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, string given
 
 -- heredoc --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, string given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, string given
 
 -- instance of classWithToString --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, instance of classWithToString given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, classWithToString given
 
 -- instance of classWithoutToString --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, instance of classWithoutToString given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, classWithoutToString given
 
 -- undefined var --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, null given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, null given
 
 -- unset var --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, null given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, null given
 
 -- resource --
-Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, resource given
+timezone_offset_get() expects parameter 2 to be DateTimeInterface, resource given
 ===DONE===

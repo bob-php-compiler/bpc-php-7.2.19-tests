@@ -123,86 +123,86 @@ fclose( $file_handle );
 *** Testing timezone_offset_get() : usage variation -  unexpected values to first argument $object***
 
 -- int 0 --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, integer given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, integer given
 
 -- int 1 --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, integer given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, integer given
 
 -- int 12345 --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, integer given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, integer given
 
 -- int -12345 --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, integer given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, integer given
 
 -- float 10.5 --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, float given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, float given
 
 -- float -10.5 --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, float given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, float given
 
 -- float .5 --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, float given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, float given
 
 -- empty array --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, array given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, array given
 
 -- int indexed array --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, array given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, array given
 
 -- associative array --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, array given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, array given
 
 -- nested arrays --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, array given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, array given
 
 -- uppercase NULL --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, null given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, null given
 
 -- lowercase null --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, null given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, null given
 
 -- lowercase true --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, boolean given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, boolean given
 
 -- lowercase false --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, boolean given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, boolean given
 
 -- uppercase TRUE --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, boolean given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, boolean given
 
 -- uppercase FALSE --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, boolean given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, boolean given
 
 -- empty string DQ --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, string given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, string given
 
 -- empty string SQ --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, string given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, string given
 
 -- string DQ --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, string given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, string given
 
 -- string SQ --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, string given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, string given
 
 -- mixed case string --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, string given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, string given
 
 -- heredoc --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, string given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, string given
 
 -- instance of classWithToString --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, instance of classWithToString given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, classWithToString given
 
 -- instance of classWithoutToString --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, instance of classWithoutToString given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, classWithoutToString given
 
 -- undefined var --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, null given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, null given
 
 -- unset var --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, null given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, null given
 
 -- resource --
-Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, resource given
+timezone_offset_get() expects parameter 1 to be DateTimeZone, resource given
 ===DONE===
