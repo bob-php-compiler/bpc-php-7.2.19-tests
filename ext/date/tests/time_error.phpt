@@ -14,6 +14,6 @@ var_dump (time($extra_arg));
 ?>
 ===DONE===
 --EXPECTF--
-Too many arguments
-int(%d)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function time(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
