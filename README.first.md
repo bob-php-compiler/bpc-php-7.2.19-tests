@@ -60,3 +60,8 @@
     bpc's gc different with php's gc, so object ids may not equal
 
 16. ini extra semicolon
+
+17. ini_set date.timezone warning message
+
+    php's warning message "Invalid date.timezone value '%s', we selected the timezone 'UTC' for now." is incorrect.
+    timezone not change.
