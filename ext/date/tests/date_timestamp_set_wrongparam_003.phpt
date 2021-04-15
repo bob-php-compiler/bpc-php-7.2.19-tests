@@ -3,7 +3,7 @@ Check the function date_timestamp_set() with second parameter wrong (array).
 --CREDITS--
 Rodrigo Prado de Jesus <royopa [at] gmail [dot] com>
 --INI--
-date.timezone = UTC;
+date.timezone = UTC
 date_default_timezone_set("America/Sao_Paulo");
 --FILE--
 <?php

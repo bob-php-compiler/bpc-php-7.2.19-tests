@@ -58,3 +58,5 @@
 15. object id
 
     bpc's gc different with php's gc, so object ids may not equal
+
+16. ini extra semicolon
