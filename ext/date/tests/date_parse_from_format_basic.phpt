@@ -10,5 +10,7 @@ display_errors=false
 <?php
 var_dump(date_parse_from_format()); // invalid parameters
 ?>
---EXPECT--
-bool(false)
+--EXPECTF--
+*** ERROR:compile-error:
+Error: Too few arguments to function date_parse_from_format(): 2 required, 0 provided in %s on line %d
+ -- compile-error
