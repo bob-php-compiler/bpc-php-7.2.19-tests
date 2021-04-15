@@ -23,31 +23,6 @@ function err($errno, $errstr) {
 
 echo "*** Testing timezone_offset_get() : error conditions ***\n";
 
-echo "\n-- Testing timezone_offset_get() function with zero arguments --\n";
-try {
-	var_dump( timezone_offset_get() );
-} catch (Error $ex) {
-	var_dump($ex->getMessage());
-	echo "\n";
-}
-
-echo "\n-- Testing timezone_offset_get() function with less than expected no. of arguments --\n";
-try {
-	var_dump( timezone_offset_get($tz) );
-} catch (Error $ex) {
-	var_dump($ex->getMessage());
-	echo "\n";
-}
-
-echo "\n-- Testing timezone_offset_get() function with more than expected no. of arguments --\n";
-$extra_arg = 99;
-try {
-	var_dump( timezone_offset_get($tz, $date, $extra_arg) );
-} catch (Error $ex) {
-	var_dump($ex->getMessage());
-	echo "\n";
-}
-
 echo "\n-- Testing timezone_offset_get() function with an invalid values for \$object argument --\n";
 $invalid_obj = new stdClass();
 try {
@@ -98,28 +73,19 @@ try {
 --EXPECTF--
 *** Testing timezone_offset_get() : error conditions ***
 
--- Testing timezone_offset_get() function with zero arguments --
-bool(false)
-
--- Testing timezone_offset_get() function with less than expected no. of arguments --
-bool(false)
-
--- Testing timezone_offset_get() function with more than expected no. of arguments --
-bool(false)
-
 -- Testing timezone_offset_get() function with an invalid values for $object argument --
-string(%d) "Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, instance of stdClass given"
+string(%d) "timezone_offset_get() expects parameter 1 to be DateTimeZone, stdClass given"
 
-string(%d) "Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, integer given"
+string(%d) "timezone_offset_get() expects parameter 1 to be DateTimeZone, integer given"
 
-string(%d) "Argument 1 passed to timezone_offset_get() must be an instance of DateTimeZone, null given"
+string(%d) "timezone_offset_get() expects parameter 1 to be DateTimeZone, null given"
 
 
 -- Testing timezone_offset_get() function with an invalid values for $datetime argument --
-string(%d) "Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, instance of stdClass given"
+string(%d) "timezone_offset_get() expects parameter 2 to be DateTimeInterface, stdClass given"
 
-string(%d) "Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, integer given"
+string(%d) "timezone_offset_get() expects parameter 2 to be DateTimeInterface, integer given"
 
-string(%d) "Argument 2 passed to timezone_offset_get() must implement interface DateTimeInterface, null given"
+string(%d) "timezone_offset_get() expects parameter 2 to be DateTimeInterface, null given"
 
 ===DONE===
