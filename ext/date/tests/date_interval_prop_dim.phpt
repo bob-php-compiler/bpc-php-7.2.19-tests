@@ -1,5 +1,7 @@
 --TEST--
 Test DateInterval props with dimension handling
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 class Z extends DateInterval{}
