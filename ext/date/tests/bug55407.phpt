@@ -1,5 +1,7 @@
 --TEST--
 Bug #55407 (Impossible to prototype DateTime::createFromFormat)
+--SKIPIF--
+skip namespace
 --INI--
 error_reporting=-1
 --FILE--

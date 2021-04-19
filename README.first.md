@@ -69,3 +69,7 @@
 18. array declare
 
     bpc only support array(), not support []
+
+19. namespace
+
+    bpc does not support namespace
