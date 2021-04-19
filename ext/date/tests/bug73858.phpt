@@ -1,5 +1,7 @@
 --TEST--
 Bug #73858: diff() of two relative/described DateTimes is wrong
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 /*
