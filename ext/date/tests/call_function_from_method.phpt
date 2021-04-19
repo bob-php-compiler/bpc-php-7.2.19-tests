@@ -15,7 +15,7 @@ class Date {
     }
 
     public function getYear2() {
-        return call_user_func([$this->date, 'format'], 'Y');
+        return call_user_func(array($this->date, 'format'), 'Y');
     }
 }
 

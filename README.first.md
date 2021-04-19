@@ -65,3 +65,7 @@
 
     php's warning message "Invalid date.timezone value '%s', we selected the timezone 'UTC' for now." is incorrect.
     timezone not change.
+
+18. array declare
+
+    bpc only support array(), not support []
