@@ -11,4 +11,6 @@ display_errors=false
 var_dump(date_add()); // invalid parameters
 ?>
 --EXPECT--
-bool(false)
+*** ERROR:compile-error:
+Error: Too few arguments to function date_add(): 2 required, 0 provided in %s on line %d
+ -- compile-error

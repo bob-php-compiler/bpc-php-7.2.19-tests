@@ -19,9 +19,6 @@ var_dump( date_default_timezone_get($extra_arg));
 
 ===Done===
 --EXPECTF--
-*** Testing date_default_timezone_get() : error conditions ***
-
--- Testing date_create() function with more than expected no. of arguments --
-string(3) "UTC"
-
-===Done===
+*** ERROR:compile-error:
+Error: Too many arguments to function date_default_timezone_get(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
