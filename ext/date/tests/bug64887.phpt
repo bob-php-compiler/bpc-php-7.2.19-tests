@@ -4,7 +4,7 @@ Bug #64887: Allow DateTime modification with subsecond items
 date.timezone=UTC
 --FILE--
 <?php
-$tests = [
+$tests = array(
 	'+1 ms',
 	'-2 msec',
 	'+3 msecs',
@@ -20,7 +20,7 @@ $tests = [
 	'-12 µsecs',
 
 	'+8 msec -2 µsec',
-];
+);
 
 $datetime = new DateTimeImmutable( "2016-10-07 13:25:50" );
 

@@ -4,7 +4,7 @@ Bug #66836 (DateTime::createFromFormat 'U' with pre 1970 dates fails parsing)
 date.timezone=Europe/Berlin
 --FILE--
 <?php
-foreach (['-1', '-86400', '-1000000'] as $timestamp) {
+foreach (array('-1', '-86400', '-1000000') as $timestamp) {
     $dt = DateTime::createFromFormat('U', $timestamp);
     var_dump($dt->format('U') === $timestamp);
 }
