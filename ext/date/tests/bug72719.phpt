@@ -1,5 +1,7 @@
 --TEST--
 Bug #72719: Relative datetime format ignores weekday on sundays only
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 echo (new DateTimeImmutable('Monday next week 13:00'))->format('l'), "\n";
