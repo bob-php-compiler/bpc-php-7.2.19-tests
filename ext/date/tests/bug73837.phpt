@@ -2,7 +2,7 @@
 Bug #73837: Milliseconds in DateTime()
 --FILE--
 <?php
-$collect = [];
+$collect = array();
 
 for ( $i = 0; $i < 1000; $i++ )
 {
