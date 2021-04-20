@@ -73,3 +73,7 @@
 19. namespace
 
     bpc does not support namespace
+
+20. declare
+
+    bpc does not support declare
