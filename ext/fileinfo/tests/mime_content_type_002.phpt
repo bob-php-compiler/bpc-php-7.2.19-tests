@@ -5,8 +5,8 @@ mime_content_type(): Testing parameter
 --FILE--
 <?php
 
-var_dump(mime_content_type(__FILE__));
-var_dump(mime_content_type(fopen(__FILE__, 'r')));
+var_dump(mime_content_type('mime_content_type_002.php'));
+var_dump(mime_content_type(fopen('mime_content_type_002.php', 'r')));
 var_dump(mime_content_type('.'));
 var_dump(mime_content_type('./..'));
 

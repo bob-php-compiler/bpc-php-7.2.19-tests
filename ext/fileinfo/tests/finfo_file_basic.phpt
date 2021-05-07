@@ -10,14 +10,14 @@ Test finfo_file() function : basic functionality
  * Alias to functions:
  */
 
-$magicFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'magic';
+$magicFile = 'magic';
 $finfo = finfo_open( FILEINFO_MIME );
 
 echo "*** Testing finfo_file() : basic functionality ***\n";
 
 // Calling finfo_file() with all possible arguments
-var_dump( finfo_file( $finfo, __FILE__) );
-var_dump( finfo_file( $finfo, __FILE__, FILEINFO_CONTINUE ) );
+var_dump( finfo_file( $finfo, 'finfo_file_basic.php') );
+var_dump( finfo_file( $finfo, 'finfo_file_basic.php', FILEINFO_CONTINUE ) );
 var_dump( finfo_file( $finfo, $magicFile ) );
 var_dump( finfo_file( $finfo, $magicFile.chr(0).$magicFile) );
 
@@ -27,7 +27,7 @@ var_dump( finfo_file( $finfo, $magicFile.chr(0).$magicFile) );
 *** Testing finfo_file() : basic functionality ***
 string(28) "text/x-php; charset=us-ascii"
 string(32) "PHP script, ASCII text\012- data"
-string(40) "application/octet-stream; charset=binary"
+string(4) "data"
 
 Warning: finfo_file(): Invalid path in %s%efinfo_file_basic.php on line %d
 bool(false)

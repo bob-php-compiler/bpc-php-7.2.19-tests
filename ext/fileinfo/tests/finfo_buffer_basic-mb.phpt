@@ -10,7 +10,7 @@ Test finfo_buffer() function : basic functionality
  * Alias to functions:
  */
 
-$magicFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'magic私はガラスを食べられます';
+$magicFile = 'magic私はガラスを食べられます';
 
 $options = array(
 	FILEINFO_NONE,
@@ -39,6 +39,24 @@ foreach( $options as $option ) {
 ?>
 ===DONE===
 --EXPECTF--
+%s, %d: Warning: Unparseable number `a		\b C.S0050-0 V1.0'
+%s, %d: Warning: Unparseable number `b		\b C.S0050-0-A V1.0.0'
+%s, %d: Warning: Unparseable number `c		\b C.S0050-0-B V1.0'
+%s, %d: Warning: Unparseable number `\b:'
+%s, %d: Warning: Unparseable number `'
+%s, %d: Warning: Unparseable number `ff87 0x2000 Macromedia Flash data'
+%s, %d: Warning: Unparseable number `ffe0 0x3000 Macromedia Flash data'
+%s, %d: Warning: Overflow for numeric type `leshort' value 0x223e9f78
+%s, %d: Warning: Unparseable number `'
+%s, %d: Warning: Unparseable number `a		\b C.S0050-0 V1.0'
+%s, %d: Warning: Unparseable number `b		\b C.S0050-0-A V1.0.0'
+%s, %d: Warning: Unparseable number `c		\b C.S0050-0-B V1.0'
+%s, %d: Warning: Unparseable number `\b:'
+%s, %d: Warning: Unparseable number `'
+%s, %d: Warning: Unparseable number `ff87 0x2000 Macromedia Flash data'
+%s, %d: Warning: Unparseable number `ffe0 0x3000 Macromedia Flash data'
+%s, %d: Warning: Overflow for numeric type `leshort' value 0x223e9f78
+%s, %d: Warning: Unparseable number `'
 *** Testing finfo_buffer() : basic functionality ***
 string(36) "ASCII text, with no line terminators"
 string(3) "ELF"
