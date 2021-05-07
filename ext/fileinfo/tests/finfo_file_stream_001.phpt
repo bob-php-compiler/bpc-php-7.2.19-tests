@@ -1,15 +1,14 @@
 --TEST--
 finfo_file(): Files and directories inside an stream
 --SKIPIF--
-<?php require_once(dirname(__FILE__) . '/skipif.inc'); ?>
-<?php if (!extension_loaded('zip')) { die("skip"); } ?>
+skip TODO
 --FILE--
 <?php
 
 $fp = finfo_open(FILEINFO_MIME_TYPE);
 $results = array();
 
-$zip = __DIR__ . "/resources/dir.zip";
+$zip = "resources/dir.zip";
 $stream = "zip://" . __DIR__ . "/resources/dir.zip";
 $dir = $stream . "#dir/";
 $png = $stream . "#dir/test.png";
