@@ -10,7 +10,7 @@ Test finfo_buffer() function : error conditions
  * Alias to functions:
  */
 
-$magicFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'magic';
+$magicFile = 'magic';
 
 echo "*** Testing finfo_buffer() : error conditions ***\n";
 
@@ -23,23 +23,8 @@ $context = stream_context_get_default();
 $extra_arg = 10;
 var_dump( finfo_buffer($finfo, "foobar", FILEINFO_MIME, $context, $extra_arg) );
 
-// Testing finfo_buffer with one less than the expected number of arguments
-echo "\n-- Testing finfo_buffer() function with less than expected no. of arguments --\n";
-
-var_dump( finfo_buffer($finfo) );
-
 ?>
-===DONE===
 --EXPECTF--
-*** Testing finfo_buffer() : error conditions ***
-
--- Testing finfo_buffer() function with more than expected no. of arguments --
-
-Warning: finfo_buffer() expects at most 4 parameters, 5 given in %s on line %d
-bool(false)
-
--- Testing finfo_buffer() function with less than expected no. of arguments --
-
-Warning: finfo_buffer() expects at least 2 parameters, 1 given in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function finfo_buffer(): 4 at most, 5 provided in %s on line %d
+ -- compile-error

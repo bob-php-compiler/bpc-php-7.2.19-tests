@@ -14,4 +14,5 @@ try {
     echo $e->getMessage(), "\n";
 }
 --EXPECTF--
-finfo::finfo() expects at most 2 parameters, 3 given
+object(finfo)#%d (0) {
+}
