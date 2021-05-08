@@ -7,7 +7,7 @@ if (!class_exists('finfo'))
 --FILE--
 <?php
 
-$filenames = array("..", __FILE__);
+$filenames = array("..", 'bug57547.php');
 
 foreach ($filenames as $filename) {
 	$finfo = new finfo(FILEINFO_MIME);

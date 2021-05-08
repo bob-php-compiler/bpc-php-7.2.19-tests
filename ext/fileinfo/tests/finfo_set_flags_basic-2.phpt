@@ -11,18 +11,10 @@ Test finfo_set_flags() function : basic functionality
  */
 
 $magicFile = 'magic';
-$finfo = finfo_open( FILEINFO_MIME, $magicFile );
-
-echo "*** Testing finfo_set_flags() : basic functionality ***\n";
-
-var_dump( finfo_set_flags( $finfo, FILEINFO_NONE ) );
-var_dump( finfo_set_flags( $finfo, FILEINFO_SYMLINK ) );
-
-finfo_close( $finfo );
 
 // OO way
 $finfo = new finfo( FILEINFO_NONE, $magicFile );
-var_dump( $finfo->set_flags( FILEINFO_MIME ) );
+var_dump( $finfo->set_flags() );
 
 ?>
 ===DONE===
@@ -36,17 +28,5 @@ var_dump( $finfo->set_flags( FILEINFO_MIME ) );
 %s: Warning: Unparseable number `ffe0 0x3000 Macromedia Flash data'
 %s: Warning: Overflow for numeric type `leshort' value 0x223e9f78
 %s: Warning: Unparseable number `'
-%s: Warning: Unparseable number `a		\b C.S0050-0 V1.0'
-%s: Warning: Unparseable number `b		\b C.S0050-0-A V1.0.0'
-%s: Warning: Unparseable number `c		\b C.S0050-0-B V1.0'
-%s: Warning: Unparseable number `\b:'
-%s: Warning: Unparseable number `'
-%s: Warning: Unparseable number `ff87 0x2000 Macromedia Flash data'
-%s: Warning: Unparseable number `ffe0 0x3000 Macromedia Flash data'
-%s: Warning: Overflow for numeric type `leshort' value 0x223e9f78
-%s: Warning: Unparseable number `'
-*** Testing finfo_set_flags() : basic functionality ***
-bool(true)
-bool(true)
-bool(true)
-===DONE===
+
+Fatal error: Too few arguments to method finfo::set_flags(): 1 required, 0 provided in %sfinfo_set_flags_basic-2.php on line 12

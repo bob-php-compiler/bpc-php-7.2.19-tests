@@ -10,7 +10,7 @@ $magic_file = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'magic';
 $ret = @finfo_open(FILEINFO_NONE, $magic_file . ".non-exits");
 var_dump($ret);
 
-$dir = __DIR__ . "/test-folder";
+$dir = "test-folder";
 @mkdir($dir);
 
 $magic_file_copy = $dir . "/magic.copy";
@@ -45,21 +45,16 @@ rmdir($dir);
 ?>
 ===DONE===
 --EXPECTF--
+%s: Warning: offset `string' invalid
+%s: Warning: offset ` Core' invalid
+%s: Warning: offset ` Me' invalid
+%s: Warning: offset `a' invalid
+%s: Warning: offset `b' invalid
 bool(false)
 resource(%d) of type (file_info)
 resource(%d) of type (file_info)
 bool(false)
 
-Notice: finfo_open(): Warning: offset `string' invalid in %sbug61964.php on line %d
-
-Notice: finfo_open(): Warning: offset ` Core' invalid in %sbug61964.php on line %d
-
-Notice: finfo_open(): Warning: offset ` Me' invalid in %sbug61964.php on line %d
-
-Notice: finfo_open(): Warning: offset `a' invalid in %sbug61964.php on line %d
-
-Notice: finfo_open(): Warning: offset `b' invalid in %sbug61964.php on line %d
-
-Warning: finfo_open(): Failed to load magic database at '%stest-folder'. in %sbug61964.php on line %d
+Warning: finfo_open(): Failed to load magic database at 'test-folder'. in %sbug61964.php on line %d
 DONE: testing dir with files
 ===DONE===
