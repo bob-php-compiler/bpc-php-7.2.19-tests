@@ -79,3 +79,5 @@
     bpc does not support declare
 
 21. skip mbstring regex,kana,http,mail
+
+22. ini not support constant

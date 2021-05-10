@@ -4,7 +4,7 @@ timezone_identifiers_list: Test that correct notice is given when timezone_ident
 Havard Eide <nucleuz@gmail.com>
 #PHPTestFest2009 Norway 2009-06-09 \o/
 --INI--
-error_reporting=E_ALL
+error_reporting=32767
 date.timezone=UTC
 --FILE--
 <?php

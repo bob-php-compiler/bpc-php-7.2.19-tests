@@ -1,7 +1,7 @@
 --TEST--
 Check for mktime with out-of-range parameters
 --INI--
-error_reporting=E_ALL
+error_reporting=32767
 --FILE--
 <?php
 
