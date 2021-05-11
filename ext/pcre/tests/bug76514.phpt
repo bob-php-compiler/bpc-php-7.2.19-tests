@@ -494,7 +494,7 @@ $res = preg_match('{(?(DEFINE)
 ^(?P<start>\s*\{\s*(?:(?&string)\s*:\s*(?&json)\s*,\s*)*?)
 (?P<property>'.preg_quote('"require"').'\s*:\s*)(?P<value>(?&json))(?P<end>.*)}sx', $str, $match);
 
-var_dump($res, $match['value'] ?? null, preg_last_error() == PREG_JIT_STACKLIMIT_ERROR);
+var_dump($res, isset($match['value']) ? $match['value'] : null, preg_last_error() == PREG_JIT_STACKLIMIT_ERROR);
 ?>
 --EXPECT--
 int(1)
