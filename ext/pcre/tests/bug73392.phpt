@@ -12,7 +12,7 @@ class Foo {
 		return "ok";
 	}
 }
-function b() {
+function b($match) {
 	return "b";
 }
 var_dump(preg_replace_callback_array(
