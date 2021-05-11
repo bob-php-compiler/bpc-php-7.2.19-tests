@@ -81,3 +81,7 @@
 21. skip mbstring regex,kana,http,mail
 
 22. ini not support constant
+
+23. define constant
+
+    bpc not support const CONSTANT
