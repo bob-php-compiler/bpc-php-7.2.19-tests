@@ -3,7 +3,7 @@ Bug #72688 (preg_match missing group names in matches)
 --FILE--
 <?php
 
-$pattern = [];
+$pattern = array();
 for ($i = 0; $i < 300; $i++) {
     $pattern[] = "(?'group{$i}'{$i}$)";
 }
