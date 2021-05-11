@@ -85,3 +85,5 @@
 23. define constant
 
     bpc not support const CONSTANT
+
+24. SKIP GC_FLAGS

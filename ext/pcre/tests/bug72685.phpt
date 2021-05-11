@@ -1,9 +1,7 @@
 --TEST--
 Bug #72685: Same string is UTF-8 validated repeatedly
 --SKIPIF--
-<?php
-if (getenv('SKIP_PERF_SENSITIVE')) die("skip performance sensitive test");
-?>
+SKIP GC_FLAGS
 --FILE--
 <?php
 
