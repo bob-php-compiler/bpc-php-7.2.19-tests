@@ -87,3 +87,7 @@
     bpc not support const CONSTANT
 
 24. SKIP GC_FLAGS
+
+25. closure no use
+
+    bpc not support use syntax
