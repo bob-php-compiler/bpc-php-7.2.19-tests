@@ -1,11 +1,7 @@
 --TEST--
 Bug #72463 mail fails with invalid argument
 --SKIPIF--
-<?php
-if(substr(PHP_OS, 0, 3) == "WIN") {
-	die('skip not for windows');
-}
-?>
+skip TODO
 --INI--
 sendmail_path="echo >/dev/null"
 --FILE--
