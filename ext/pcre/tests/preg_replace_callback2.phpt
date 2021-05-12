@@ -3,7 +3,7 @@ preg_replace_callback() 2
 --FILE--
 <?php
 
-function f() {
+function f($match) {
 	throw new Exception();
 }
 
