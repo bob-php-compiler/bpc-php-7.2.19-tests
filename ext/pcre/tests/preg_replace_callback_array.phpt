@@ -15,7 +15,7 @@ class Foo {
 	}
 }
 
-function b() {
+function b($matches) {
 	return "b";
 }
 
