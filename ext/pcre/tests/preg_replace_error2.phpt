@@ -36,5 +36,5 @@ Arg value is: Array
 
 Warning: preg_replace(): Parameter mismatch, pattern is a string while replacement is an array in %spreg_replace_error2.php on line %d
 bool(false)
-Object of class stdClass could not be converted to string
-Done
+
+Recoverable fatal error: Object of class stdClass could not be converted to string in %s on line %d
