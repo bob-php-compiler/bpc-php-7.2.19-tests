@@ -99,3 +99,7 @@
 27. Only variables can be passed by reference
 
     compile error or runtime error
+
+28. php-7.2.19 object to string error
+
+    php-7.4.16 throw exception
