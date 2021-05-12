@@ -909,21 +909,21 @@ $count = preg_match($re, $str, $matches);
 if($count === false) {
     switch (preg_last_error()) {
         case PREG_NO_ERROR:
-            throw new \RuntimeException('Failed to execute regex: PREG_NO_ERROR', PREG_NO_ERROR);
+            throw new RuntimeException('Failed to execute regex: PREG_NO_ERROR', PREG_NO_ERROR);
         case PREG_INTERNAL_ERROR:
-            throw new \RuntimeException('Failed to execute regex: PREG_INTERNAL_ERROR', PREG_INTERNAL_ERROR);
+            throw new RuntimeException('Failed to execute regex: PREG_INTERNAL_ERROR', PREG_INTERNAL_ERROR);
         case PREG_BACKTRACK_LIMIT_ERROR:
-            throw new \RuntimeException('Failed to execute regex: PREG_BACKTRACK_LIMIT_ERROR', PREG_BACKTRACK_LIMIT_ERROR);
+            throw new RuntimeException('Failed to execute regex: PREG_BACKTRACK_LIMIT_ERROR', PREG_BACKTRACK_LIMIT_ERROR);
         case PREG_RECURSION_LIMIT_ERROR:
-            throw new \RuntimeException('Failed to execute regex: PREG_RECURSION_LIMIT_ERROR', PREG_RECURSION_LIMIT_ERROR);
+            throw new RuntimeException('Failed to execute regex: PREG_RECURSION_LIMIT_ERROR', PREG_RECURSION_LIMIT_ERROR);
         case PREG_BAD_UTF8_ERROR:
-            throw new \RuntimeException('Failed to execute regex: PREG_BAD_UTF8_ERROR', PREG_BAD_UTF8_ERROR);
+            throw new RuntimeException('Failed to execute regex: PREG_BAD_UTF8_ERROR', PREG_BAD_UTF8_ERROR);
         case PREG_BAD_UTF8_OFFSET_ERROR:
-            throw new \RuntimeException('Failed to execute regex: PREG_BAD_UTF8_OFFSET_ERROR', PREG_BAD_UTF8_OFFSET_ERROR);
+            throw new RuntimeException('Failed to execute regex: PREG_BAD_UTF8_OFFSET_ERROR', PREG_BAD_UTF8_OFFSET_ERROR);
         case PREG_JIT_STACKLIMIT_ERROR:
-            throw new \RuntimeException('Failed to execute regex: PREG_JIT_STACKLIMIT_ERROR', PREG_JIT_STACKLIMIT_ERROR);
+            throw new RuntimeException('Failed to execute regex: PREG_JIT_STACKLIMIT_ERROR', PREG_JIT_STACKLIMIT_ERROR);
         default:
-            throw new \RuntimeException('Failed to execute regex: Unknown error');
+            throw new RuntimeException('Failed to execute regex: Unknown error');
     }
 } else {
 	var_dump("Done, $count matches.");
