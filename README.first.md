@@ -95,3 +95,7 @@
 26. Null Coalescing Operator
 
     bpc not support Null Coalescing Operator
+
+27. Only variables can be passed by reference
+
+    compile error or runtime error
