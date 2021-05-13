@@ -2,6 +2,7 @@
 Bug #20087 (Assertion failure)
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+skip mbstring regex,kana,http,mail
 --FILE--
 <?php
 $testmoo = "blah blah";

@@ -2,6 +2,7 @@
 mb_parse_str() test 2
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+skip mbstring regex,kana,http,mail
 --INI--
 arg_separator.input=&#
 --FILE--

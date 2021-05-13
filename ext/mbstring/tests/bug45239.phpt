@@ -8,6 +8,7 @@ internal_encoding=UTF-8
 <?php
 extension_loaded('mbstring') or die('skip');
 ?>
+skip mbstring regex,kana,http,mail
 --FILE--
 <?php
 mb_internal_encoding("utf-8");
