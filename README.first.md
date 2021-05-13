@@ -103,3 +103,7 @@
 28. php-7.2.19 object to string error
 
     php-7.4.16 throw exception
+
+29. debug_zval_dump is var_dump
+
+    bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
