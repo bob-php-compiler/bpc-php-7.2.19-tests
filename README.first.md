@@ -107,3 +107,5 @@
 29. debug_zval_dump is var_dump
 
     bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
+
+30. mbstring not support function overload
