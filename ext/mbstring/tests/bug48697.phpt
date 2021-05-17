@@ -3,9 +3,10 @@ Bug #48697 (mb_internal_encoding() value gets reset by parse_str() or mb_parse_s
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
 --INI--
-error_reporting=E_ALL & ~E_DEPRECATED
+error_reporting=24575
 --FILE--
 <?php
+// error_reporting=E_ALL & ~E_DEPRECATED
 ini_set('mbstring.internal_encoding', 'ISO-8859-15');
 ini_set('mbstring.encoding_translation', true);
 var_dump(mb_internal_encoding());
