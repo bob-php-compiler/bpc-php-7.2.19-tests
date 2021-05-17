@@ -109,3 +109,7 @@
     bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
 
 30. mbstring not support function overload
+
+31. mbstring can handle recursion
+
+32. php-7.4.16 var_dump recursion different with php-7.2.19
