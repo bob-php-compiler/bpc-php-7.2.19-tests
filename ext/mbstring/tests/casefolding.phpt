@@ -1,27 +1,31 @@
 --TEST--
 Case-insensitive string comparisons use case folding
 --SKIPIF--
-<?php require 'skipif.inc'; ?>
+<?php
+if (!extension_loaded("mbstring")) {
+    die("skip mbstring extension not loaded\n");
+}
+?>
 --FILE--
 <?php
 
-$tests = [
-    ["K", "K"],
-    ["k", "K"],
-    ["Å", "Å"],
-    ["å", "Å"],
-    ["ß", "ẞ"],
-    ["Θ", "ϴ"],
-    ["θ", "ϴ"],
-    ["ϑ", "ϴ"],
-    ["Ω", "Ω"],
-    ["ω", "Ω"],
-    ["I", "ı"],
-    ["i", "ı"],
-];
+$tests = array(
+    array("K", "K"),
+    array("k", "K"),
+    array("Å", "Å"),
+    array("å", "Å"),
+    array("ß", "ẞ"),
+    array("Θ", "ϴ"),
+    array("θ", "ϴ"),
+    array("ϑ", "ϴ"),
+    array("Ω", "Ω"),
+    array("ω", "Ω"),
+    array("I", "ı"),
+    array("i", "ı"),
+);
 
-foreach ($tests as list($a, $b)) {
-    var_dump(mb_stripos($a, $b));
+foreach ($tests as $test) {
+    var_dump(mb_stripos($test[0], $test[1]));
 }
 
 ?>
