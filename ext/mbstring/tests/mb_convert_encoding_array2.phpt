@@ -94,24 +94,18 @@ array(2) {
   string(68) "GyRCRnxLXDhsJUYlLSU5JUgkRyQ5ISMbKEIwMTIzNBskQiM1IzYjNyM4IzkhIxsoQg=="
 }
 Converted Strings:
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(68) "GyRCRnxLXDhsJUYlLSU5JUgkRyQ5ISMbKEIwMTIzNBskQiM1IzYjNyM4IzkhIxsoQg=="
   [1]=>
   string(68) "GyRCRnxLXDhsJUYlLSU5JUgkRyQ5ISMbKEIwMTIzNBskQiM1IzYjNyM4IzkhIxsoQg=="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(68) "GyRCRnxLXDhsJUYlLSU5JUgkRyQ5ISMbKEIwMTIzNBskQiM1IzYjNyM4IzkhIxsoQg=="
   [1]=>
   string(68) "GyRCRnxLXDhsJUYlLSU5JUgkRyQ5ISMbKEIwMTIzNBskQiM1IzYjNyM4IzkhIxsoQg=="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(68) "GyRCRnxLXDhsJUYlLSU5JUgkRyQ5ISMbKEIwMTIzNBskQiM1IzYjNyM4IzkhIxsoQg=="
@@ -128,24 +122,18 @@ array(2) {
   string(52) "xvzL3LjspcalraW5pcikx6S5oaMwMTIzNKO1o7ajt6O4o7mhow=="
 }
 Converted Strings:
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(52) "xvzL3LjspcalraW5pcikx6S5oaMwMTIzNKO1o7ajt6O4o7mhow=="
   [1]=>
   string(52) "xvzL3LjspcalraW5pcikx6S5oaMwMTIzNKO1o7ajt6O4o7mhow=="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(52) "xvzL3LjspcalraW5pcikx6S5oaMwMTIzNKO1o7ajt6O4o7mhow=="
   [1]=>
   string(52) "xvzL3LjspcalraW5pcikx6S5oaMwMTIzNKO1o7ajt6O4o7mhow=="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(52) "xvzL3LjspcalraW5pcikx6S5oaMwMTIzNKO1o7ajt6O4o7mhow=="
@@ -162,24 +150,18 @@ array(2) {
   string(52) "k/qWe4zqg2WDTINYg2eCxYK3gUIwMTIzNIJUglWCVoJXgliBQg=="
 }
 Converted Strings:
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(52) "k/qWe4zqg2WDTINYg2eCxYK3gUIwMTIzNIJUglWCVoJXgliBQg=="
   [1]=>
   string(52) "k/qWe4zqg2WDTINYg2eCxYK3gUIwMTIzNIJUglWCVoJXgliBQg=="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(52) "k/qWe4zqg2WDTINYg2eCxYK3gUIwMTIzNIJUglWCVoJXgliBQg=="
   [1]=>
   string(52) "k/qWe4zqg2WDTINYg2eCxYK3gUIwMTIzNIJUglWCVoJXgliBQg=="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(52) "k/qWe4zqg2WDTINYg2eCxYK3gUIwMTIzNIJUglWCVoJXgliBQg=="
@@ -196,24 +178,18 @@ array(2) {
   string(72) "5pel5pys6Kqe44OG44Kt44K544OI44Gn44GZ44CCMDEyMzTvvJXvvJbvvJfvvJjvvJnjgII="
 }
 Converted Strings:
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(72) "5pel5pys6Kqe44OG44Kt44K544OI44Gn44GZ44CCMDEyMzTvvJXvvJbvvJfvvJjvvJnjgII="
   [1]=>
   string(72) "5pel5pys6Kqe44OG44Kt44K544OI44Gn44GZ44CCMDEyMzTvvJXvvJbvvJfvvJjvvJnjgII="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(72) "5pel5pys6Kqe44OG44Kt44K544OI44Gn44GZ44CCMDEyMzTvvJXvvJbvvJfvvJjvvJnjgII="
   [1]=>
   string(72) "5pel5pys6Kqe44OG44Kt44K544OI44Gn44GZ44CCMDEyMzTvvJXvvJbvvJfvvJjvvJnjgII="
 }
-
-Warning: mb_convert_encoding(): Cannot convert recursively referenced values in %s on line %d
 array(2) {
   [0]=>
   string(72) "5pel5pys6Kqe44OG44Kt44K544OI44Gn44GZ44CCMDEyMzTvvJXvvJbvvJfvvJjvvJnjgII="
