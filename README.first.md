@@ -67,6 +67,8 @@
 
 2. ini not support constant
 
+3. no ini input_encoding, output_encoding, internal_encoding
+
 **syntax**
 
 1. SKIP GOTO
@@ -133,3 +135,5 @@
 2. mbstring not support function overload
 
 3. mbstring can handle recursion
+
+4. no ini mbstring.http_*, mbstring.encoding_translation
