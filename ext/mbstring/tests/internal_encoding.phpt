@@ -1,7 +1,7 @@
 --TEST--
 Check that "internal_encoding" ini is picked up by mbstring
 --SKIPIF--
-<?php require 'skipif.inc'; ?>
+skip no ini input_encoding, output_encoding, internal_encoding
 --INI--
 internal_encoding=iso-8859-1
 --FILE--
