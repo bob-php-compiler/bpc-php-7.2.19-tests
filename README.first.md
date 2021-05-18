@@ -1,5 +1,7 @@
 对phpt的更改仅限于以下几种情况:
 
+## runtime
+
 1. Too few arguments
 
     compile error (functions) or runtime error (functions/methods)
@@ -36,7 +38,7 @@
 9. No Undefined variable
 
     bpc init all variables to NULL, so No Undefined variable
-    
+
 10. output length
 
     bpc encrypted php script filename and function name, so exception/error output length not match
@@ -61,55 +63,59 @@
 
 16. ini extra semicolon
 
-17. ini_set date.timezone warning message
+17. array declare
+
+    bpc only support array(), not support []
+
+18. namespace
+
+    bpc does not support namespace
+
+19. declare
+
+    bpc does not support declare
+
+20. ini not support constant
+
+21. define constant
+
+    bpc not support const CONSTANT
+
+22. SKIP GC_FLAGS
+
+23. closure no use
+
+    bpc not support use syntax
+
+24. Null Coalescing Operator
+
+    bpc not support Null Coalescing Operator
+
+25. Only variables can be passed by reference
+
+    compile error or runtime error
+
+26. php-7.2.19 object to string error
+
+    php-7.4.16 throw exception
+
+27. debug_zval_dump is var_dump
+
+    bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
+
+28. php-7.4.16 var_dump recursion different with php-7.2.19
+
+## ext/date
+
+1. ini_set date.timezone warning message
 
     php's warning message "Invalid date.timezone value '%s', we selected the timezone 'UTC' for now." is incorrect.
     timezone not change.
 
-18. array declare
+## ext/mbstring
 
-    bpc only support array(), not support []
+1. skip mbstring regex,kana,http,mail
 
-19. namespace
+2. mbstring not support function overload
 
-    bpc does not support namespace
-
-20. declare
-
-    bpc does not support declare
-
-21. skip mbstring regex,kana,http,mail
-
-22. ini not support constant
-
-23. define constant
-
-    bpc not support const CONSTANT
-
-24. SKIP GC_FLAGS
-
-25. closure no use
-
-    bpc not support use syntax
-
-26. Null Coalescing Operator
-
-    bpc not support Null Coalescing Operator
-
-27. Only variables can be passed by reference
-
-    compile error or runtime error
-
-28. php-7.2.19 object to string error
-
-    php-7.4.16 throw exception
-
-29. debug_zval_dump is var_dump
-
-    bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
-
-30. mbstring not support function overload
-
-31. mbstring can handle recursion
-
-32. php-7.4.16 var_dump recursion different with php-7.2.19
+3. mbstring can handle recursion
