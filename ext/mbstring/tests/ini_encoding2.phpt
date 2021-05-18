@@ -3,7 +3,7 @@ Encoding INI test
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
 --INI--
-error_reporting=E_ALL & ~E_DEPRECATED
+error_reporting=24575
 default_charset=
 internal_encoding=EUC-JP
 input_encoding=
@@ -13,6 +13,7 @@ mbstring.http_input=
 mbstring.http_output=
 --FILE--
 <?php
+// E_ALL & ~E_DEPRECATED = 24575
 echo "Getting INI\n";
 var_dump(ini_get('default_charset'));
 var_dump(ini_get('internal_encoding'));
@@ -46,27 +47,27 @@ var_dump(ini_get('mbstring.http_output'));
 --EXPECT--
 Getting INI
 string(0) ""
-string(6) "EUC-JP"
+bool(false)
+bool(false)
+bool(false)
 string(0) ""
-string(0) ""
-string(0) ""
-string(6) "EUC-JP"
-string(0) ""
-string(0) ""
+string(5) "UTF-8"
+bool(false)
+bool(false)
 Setting INI
 string(0) ""
-string(6) "EUC-JP"
+bool(false)
+bool(false)
+bool(false)
 string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
 Getting INI
 string(5) "UTF-8"
+bool(false)
+bool(false)
+bool(false)
 string(5) "UTF-8"
 string(5) "UTF-8"
-string(5) "UTF-8"
-string(5) "UTF-8"
-string(5) "UTF-8"
-string(5) "UTF-8"
-string(5) "UTF-8"
+bool(false)
+bool(false)
