@@ -2,6 +2,8 @@
 mb_strwidth()
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --FILE--
 <?php
 // TODO: Add more encoding, strings.....
