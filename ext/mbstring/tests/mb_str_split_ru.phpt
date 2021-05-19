@@ -2,6 +2,8 @@
 mb_str_split()  tests for the russian language
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --INI--
 output_handler=
 mbstring.func_overload=0
@@ -12,7 +14,7 @@ include_once('common.inc');
 
 $string = "рай рай рай ";             /* 12 chars */
 $len = 12;
-$charset = [
+$charset = array(
     "EUC-JP",
     "CP866",
     "KOI8-R",
@@ -21,7 +23,7 @@ $charset = [
     "UTF-32BE",
     "UTF-32LE",
     "UTF-8"
-];
+);
 
 
 foreach($charset as $cs){

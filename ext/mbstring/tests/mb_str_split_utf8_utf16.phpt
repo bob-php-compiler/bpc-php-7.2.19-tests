@@ -2,6 +2,8 @@
 mb_str_split() tests UTF-8 illegal chars & UTF-16 surrogate pairs
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --INI--
 output_handler=
 mbstring.func_overload=0
@@ -11,14 +13,14 @@ ini_set('include_path','.');
 include_once('common.inc');
 
 /* 123 string and 4-bytes length character 0xf09280a9 */
-$utf8 = pack("H*", "313233f09280a9"); 
+$utf8 = pack("H*", "313233f09280a9");
 
 /* 123 string and 4-bytes length character 0xf09280a9 head without tail */
-$utf8_bad = pack("H*", "313233f092"); 
+$utf8_bad = pack("H*", "313233f092");
 
 /* very first and very last utf-16 4-bytes characters  */
-$utf16_first_be = pack("H*", "d800dc00"); 
-$utf16_first_le = pack("H*", "00d800dc"); 
+$utf16_first_be = pack("H*", "d800dc00");
+$utf16_first_le = pack("H*", "00d800dc");
 
 $utf16_last_be = pack("H*", "dbffdfff");
 $utf16_last_le = pack("H*", "ffdbffdf");
@@ -35,37 +37,37 @@ $utf16le_bad = $utf16_first_le . $utf16le_char_bad;
 /* print each chunk as HEX string */
 echo "UTF-8:";
 foreach(mb_str_split($utf8, 2) as $chunk){
-	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]); 	
+	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]);
 }
 echo PHP_EOL;
 
 echo "BAD UTF-8:";
 foreach(mb_str_split($utf8_bad, 2) as $chunk){
-	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]); 	
+	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]);
 }
 echo PHP_EOL;
 
 echo "UTF-16BE:";
 foreach(mb_str_split($utf16be, 1, "UTF-16BE") as $chunk){
-	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]); 	
+	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]);
 }
 echo PHP_EOL;
 
 echo "UTF-16LE:";
 foreach(mb_str_split($utf16le, 1, "UTF-16LE") as $chunk){
-	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]); 	
+	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]);
 }
 echo PHP_EOL;
 
 echo "BAD UTF-16BE:";
 foreach(mb_str_split($utf16be_bad, 1, "UTF-16BE") as $chunk){
-	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]); 	
+	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]);
 }
 echo PHP_EOL;
 
 echo "BAD UTF-16LE:";
 foreach(mb_str_split($utf16le_bad, 1, "UTF-16LE") as $chunk){
-	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]); 	
+	printf(" l:%d v:%s", strlen($chunk), unpack("H*", $chunk)[1]);
 }
 echo PHP_EOL;
 
