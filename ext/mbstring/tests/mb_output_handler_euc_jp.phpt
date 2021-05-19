@@ -1,7 +1,7 @@
 --TEST--
 mb_output_handler() (EUC-JP)
 --SKIPIF--
-<?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+skip mbstring regex,kana,http,mail
 --FILE--
 <?php
 // TODO: Do real test

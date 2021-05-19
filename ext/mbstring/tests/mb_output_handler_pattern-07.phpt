@@ -1,7 +1,7 @@
 --TEST--
 mb_output_handler() and mbstring.http_output_conv_mimetypes (7)
 --SKIPIF--
-<?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+skip mbstring regex,kana,http,mail
 --INI--
 mbstring.http_output_conv_mimetypes=html
 --FILE--
