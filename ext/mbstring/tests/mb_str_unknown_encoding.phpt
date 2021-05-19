@@ -10,7 +10,6 @@ User Group: PHP-WVL & PHPGent #PHPTestFest
 mb_chr(1, 'UTF-0');
 mb_convert_case('coudenys', MB_CASE_UPPER, 'UTF-0');
 mb_convert_encoding('coudenys', 'UTF-8', 'UTF-0');
-mb_convert_kana('coudenys', 'KV', 'UTF-0');
 mb_decode_numericentity('coudenys', 'KV', 'UTF-0');
 mb_ord('coudenys', 'UTF-0');
 mb_strcut('coudenys', 0, 4, 'UTF-0');
@@ -36,8 +35,6 @@ Warning: mb_chr(): Unknown encoding "UTF-0" in %s on line %d
 Warning: mb_convert_case(): Unknown encoding "UTF-0" in %s on line %d
 
 Warning: mb_convert_encoding(): Illegal character encoding specified in %s on line %d
-
-Warning: mb_convert_kana(): Unknown encoding "UTF-0" in %s on line %d
 
 Warning: mb_decode_numericentity(): Unknown encoding "UTF-0" in %s on line %d
 
@@ -74,4 +71,3 @@ Warning: mb_strwidth(): Unknown encoding "UTF-0" in %s on line %d
 Warning: mb_substr(): Unknown encoding "UTF-0" in %s on line %d
 
 Warning: mb_substr_count(): Unknown encoding "UTF-0" in %s on line %d
-
