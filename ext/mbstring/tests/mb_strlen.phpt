@@ -2,6 +2,8 @@
 mb_strlen()
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --INI--
 mbstring.func_overload=0
 --FILE--
