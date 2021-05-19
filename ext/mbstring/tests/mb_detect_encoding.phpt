@@ -87,10 +87,6 @@ $s = $euc_jp;
 $s = mb_detect_encoding($s, 'BAD');
 print("BAD: $s\n"); // BAD
 
-$s = $euc_jp;
-$s = mb_detect_encoding();
-print("MP: $s\n"); // Missing parameter
-
 
 ?>
 --EXPECTF--
@@ -114,5 +110,3 @@ EUC-JP: EUC-JP
 Warning: mb_detect_encoding(): Illegal argument in %s on line %d
 BAD: EUC-JP
 
-Warning: mb_detect_encoding() expects at least 1 parameter, 0 given in %s on line %d
-MP: 
