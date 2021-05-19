@@ -1,10 +1,10 @@
 --TEST--
 Test mb_internal_encoding() function : basic functionality
 --INI--
-default_charset=""
-input_encoding="ISO-8859-1"
-output_encoding="ISO-8859-1"
-internal_encoding="ISO-8859-1"
+default_charset=
+input_encoding=ISO-8859-1
+output_encoding=ISO-8859-1
+internal_encoding=ISO-8859-1
 --SKIPIF--
 <?php
 extension_loaded('mbstring') or die('skip');
@@ -41,13 +41,13 @@ echo "Done";
 --EXPECT--
 *** Testing mb_internal_encoding() : basic functionality ***
 string(0) ""
-string(10) "ISO-8859-1"
-string(10) "ISO-8859-1"
-string(10) "ISO-8859-1"
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
 string(0) ""
-string(0) ""
-string(0) ""
-string(10) "ISO-8859-1"
+string(5) "UTF-8"
 bool(true)
 string(5) "UTF-8"
 Done

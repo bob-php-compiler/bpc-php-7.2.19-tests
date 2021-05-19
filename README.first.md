@@ -65,9 +65,11 @@
 
 1. ini extra semicolon
 
-2. ini not support constant
+2. ini extra string double quotes
 
-3. no ini input_encoding, output_encoding, internal_encoding
+3. ini not support constant
+
+4. no ini input_encoding, output_encoding, internal_encoding
 
 **syntax**
 
