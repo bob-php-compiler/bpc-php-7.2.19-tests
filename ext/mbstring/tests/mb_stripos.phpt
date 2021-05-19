@@ -2,6 +2,8 @@
 mb_stripos()
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --FILE--
 <?php
 // TODO: Add more encodings
@@ -215,7 +217,7 @@ OK_STR
 OK_NEWLINE
 == INVALID PARAMETER TEST ==
 
-Warning: mb_stripos() expects parameter 3 to be int, string given in %s on line %d
+Warning: mb_stripos() expects parameter 3 to be integer, string given in %s on line %d
 OK_NULL
 
 Warning: mb_stripos() expects parameter 2 to be string, array given in %s on line %d
