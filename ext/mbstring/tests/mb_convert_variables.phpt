@@ -2,6 +2,8 @@
 mb_convert_variables()
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --INI--
 output_handler=
 mbstring.language=Japanese
@@ -78,7 +80,7 @@ class foo
 
 	function __construct()
 	{
-		global $sjis, $jis, $euc_jp;
+		global $euc_jp;
 
 		$this->s1 = $euc_jp;
 		$this->s2 = $euc_jp;
@@ -94,7 +96,7 @@ class bar
 
 	function __construct()
 	{
-		global $sjis, $jis, $euc_jp;
+		global $euc_jp;
 
 		$this->s1 = $euc_jp;
 		$this->s2 = $euc_jp;

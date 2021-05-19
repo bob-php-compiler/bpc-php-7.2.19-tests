@@ -103,6 +103,14 @@
 
     bpc not support `foreach array as list($k, $v)`
 
+9. global $$
+
+    bpc not support `global $$varname`
+
+10. no use global decl var
+
+    compile error
+
 **misc**
 
 1. TODO
