@@ -1,11 +1,7 @@
 --TEST--
 mb_http_input()
 --SKIPIF--
-<?php
-extension_loaded('mbstring') or die('skip mbstring not available');
-(php_sapi_name()=='cgi') or die("skip sapi is not a cgi version");
-die("skip disabled temporarily");
-?>
+skip mbstring regex,kana,http,mail
 --POST--
 a=日本語0123456789日本語カタカナひらがな
 --GET--
