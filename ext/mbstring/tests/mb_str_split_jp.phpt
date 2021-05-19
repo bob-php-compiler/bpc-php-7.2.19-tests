@@ -2,6 +2,8 @@
 mb_str_split() tests for the japanese language
 --SKIPIF--
 <?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --INI--
 output_handler=
 mbstring.func_overload=0
@@ -12,7 +14,7 @@ include_once('common.inc');
 
 $string = "日本";             /* 2 chars */
 $len = 2;
-$charset = [
+$charset = array(
     "BIG-5",
     "EUC-JP",
     "ISO-2022-JP",
@@ -22,7 +24,7 @@ $charset = [
     "UTF-32BE",
     "UTF-32LE",
     "UTF-8"
-];
+);
 
 
 foreach($charset as $cs){
