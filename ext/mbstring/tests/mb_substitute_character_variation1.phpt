@@ -48,7 +48,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen("/proc/self/comm", "r");
 
 // add arrays
 $index_array = array (1, 2, 3);
