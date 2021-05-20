@@ -113,6 +113,10 @@
 
     compile error
 
+11. zend.multibyte
+
+    bpc not support multibyte
+
 **misc**
 
 1. TODO

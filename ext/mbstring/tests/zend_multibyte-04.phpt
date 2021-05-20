@@ -1,7 +1,7 @@
 --TEST--
 zend multibyte (4)
 --SKIPIF--
-<?php require 'skipif.inc'; ?>
+skip zend.multibyte
 --INI--
 zend.multibyte=On
 zend.script_encoding=CP932
