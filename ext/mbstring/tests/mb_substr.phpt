@@ -1,7 +1,9 @@
 --TEST--
 mb_substr()
 --SKIPIF--
-<?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+<?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>\
+--ARGS--
+--bpc-include-file ext/mbstring/tests/common.inc
 --INI--
 output_handler=
 mbstring.func_overload=0
