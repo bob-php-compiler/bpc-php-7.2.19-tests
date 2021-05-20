@@ -73,6 +73,10 @@
 
 5. no ini extension
 
+6. no ini track_errors
+
+7. ini bool string only "1" "on"(case insensitive) is true, others false
+
 **syntax**
 
 1. SKIP GOTO
@@ -136,6 +140,8 @@
     bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
 
 5. php-7.4.16 var_dump recursion different with php-7.2.19
+
+6. compile time +-*/% calculate
 
 ## ext/date
 
