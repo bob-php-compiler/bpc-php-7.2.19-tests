@@ -71,6 +71,8 @@
 
 4. no ini input_encoding, output_encoding, internal_encoding
 
+5. no ini extension
+
 **syntax**
 
 1. SKIP GOTO
