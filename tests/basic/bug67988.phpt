@@ -18,9 +18,9 @@ var_dump(bin2hex(html_entity_decode("&pound;", ENT_HTML5)));
 var_dump(bin2hex(html_entity_decode("&pound;", ENT_HTML5, 'cp1252')));
 --EXPECT--
 string(6) "cp1252"
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
+bool(false)
 string(7) "&pound;"
 string(7) "&pound;"
 string(2) "a3"
