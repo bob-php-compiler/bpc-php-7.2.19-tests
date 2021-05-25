@@ -7,9 +7,10 @@ variables_order=GPC
 var_dump($_ENV,$_SERVER);
 var_dump(ini_get("variables_order"));
 ?>
---EXPECT--
+--EXPECTF--
 array(0) {
 }
-array(0) {
+array(%d) {
+%a
 }
-string(3) "GPC"
+bool(false)

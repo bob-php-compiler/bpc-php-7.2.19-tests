@@ -77,6 +77,8 @@
 
 7. ini bool string only "1" "on"(case insensitive) is true, others false
 
+8. no ini variables_order
+
 **syntax**
 
 1. SKIP GOTO
