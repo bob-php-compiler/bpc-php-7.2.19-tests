@@ -149,6 +149,8 @@
 
 7. no constant PHP_BINARY
 
+8. no cli server
+
 ## ext/date
 
 1. ini_set date.timezone warning message
