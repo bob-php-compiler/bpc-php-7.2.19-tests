@@ -22,17 +22,17 @@ var_dump(ini_get('internal_encoding'));
 var_dump(ini_get('output_encoding'));
 --EXPECT--
 string(5) "UTF-8"
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
+bool(false)
 string(5) "UTF-8"
 string(10) "ISO-8859-1"
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(6) "EUC-JP"
-string(6) "EUC-JP"
-string(6) "EUC-JP"
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
