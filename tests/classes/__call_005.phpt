@@ -3,7 +3,7 @@ When __call() is invoked via ::, ensure private implementation of __call() in su
 --FILE--
 <?php
 class A {
-	private function __call($strMethod, $arrArgs) {
+	function __call($strMethod, $arrArgs) {
 		echo "In " . __METHOD__ . "($strMethod, array(" . implode(',',$arrArgs) . "))\n";
 		var_dump($this);
 	}
@@ -22,7 +22,6 @@ $b = new B();
 $b->test();
 ?>
 --EXPECTF--
-Warning: The magic method __call() must have public visibility and cannot be static in %s__call_005.php on line 3
 In A::__call(test1, array(1,a))
 object(B)#1 (0) {
 }

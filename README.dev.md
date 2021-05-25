@@ -45,6 +45,8 @@
 
     php-7.4.16 throw exception
 
+7. magic method visibility, static check
+
 **FILE and LINE**
 
 1. FILE and LINE
