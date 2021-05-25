@@ -3,7 +3,7 @@ Ensure exceptions are handled properly when thrown in a statically declared __ca
 --FILE--
 <?php
 class A {
-	static function __call($strMethod, $arrArgs) {
+	function __call($strMethod, $arrArgs) {
 		@var_dump($this);
 		throw new Exception;
 		echo "You should not see this";
@@ -52,27 +52,26 @@ try {
 ?>
 ==DONE==
 --EXPECTF--
-Warning: The magic method __call() must have public visibility and cannot be static in %s on line 3
 ---> Invoke __call via simple method call.
-object(A)#1 (0) {
+object(A)#%d (0) {
 }
 Exception caught OK; continuing.
 
 
 ---> Invoke __call via scope resolution operator within instance.
-object(A)#1 (0) {
+object(A)#%d (0) {
 }
 Exception caught OK; continuing.
 
 
 ---> Invoke __call via scope resolution operator within child instance.
-object(B)#2 (0) {
+object(B)#%d (0) {
 }
 Exception caught OK; continuing.
 
 
 ---> Invoke __call via callback.
-object(B)#2 (0) {
+object(B)#%d (0) {
 }
 Exception caught OK; continuing.
 ==DONE==
