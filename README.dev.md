@@ -147,6 +147,8 @@
 
 6. compile time +-*/% calculate
 
+7. no constant PHP_BINARY
+
 ## ext/date
 
 1. ini_set date.timezone warning message

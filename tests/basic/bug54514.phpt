@@ -1,5 +1,7 @@
 --TEST--
 Req #54514 (Get php binary path during script execution)
+--SKIPIF--
+skip no constant PHP_BINARY
 --FILE--
 <?php
 if(realpath(getenv('TEST_PHP_EXECUTABLE')) === realpath(PHP_BINARY)) {
