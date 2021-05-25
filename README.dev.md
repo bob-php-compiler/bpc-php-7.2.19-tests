@@ -79,6 +79,8 @@
 
 8. no ini variables_order
 
+9. no ini disable_functions
+
 **syntax**
 
 1. SKIP GOTO

@@ -1,5 +1,7 @@
 --TEST--
 Bug #31875 get_defined_functions() should not list disabled functions
+--SKIPIF--
+skip no ini disable_functions
 --CREDITS--
 Willian Gustavo Veiga <contact@willianveiga.com>
 --INI--
