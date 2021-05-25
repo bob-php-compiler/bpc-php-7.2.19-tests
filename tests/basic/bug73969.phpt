@@ -1,5 +1,7 @@
 --TEST--
 Bug #73969: segfault on debug_print_backtrace with require() call
+--SKIPIF--
+skip trait
 --FILE--
 <?php
 trait c2

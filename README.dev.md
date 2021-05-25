@@ -129,6 +129,10 @@
 
     bpc not support multibyte
 
+12. trait
+
+    bpc not support trait
+
 **misc**
 
 1. TODO
