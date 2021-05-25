@@ -1,6 +1,7 @@
 --TEST--
 Timeout within function trowing exception before timeout reached
 --SKIPIF--
+skip TODO max_execution_time
 <?php
 	if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
 ?>

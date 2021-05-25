@@ -1,6 +1,7 @@
 --TEST--
 Timeout within eval
 --SKIPIF--
+skip TODO max_execution_time
 <?php
 	if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
 ?>
