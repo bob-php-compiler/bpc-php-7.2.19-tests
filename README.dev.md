@@ -157,6 +157,10 @@
 
 8. no cli server
 
+9. float precision -1 or 0
+
+    bpc float to string (glibc snprintf) result may different with php when precision is -1 or 0
+
 ## ext/date
 
 1. ini_set date.timezone warning message
