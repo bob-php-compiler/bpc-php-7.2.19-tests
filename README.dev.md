@@ -81,6 +81,8 @@
 
 9. no ini disable_functions
 
+10. no ini extension_dir, extension
+
 **syntax**
 
 1. SKIP GOTO
