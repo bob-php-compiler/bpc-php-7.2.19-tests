@@ -9,4 +9,6 @@ class Test {
 
 ?>
 --EXPECTF--
-Fatal error: Method Test::__set() must take exactly 2 arguments in %s__set__get_003.php on line %d
+*** ERROR:compile-error:
+Error: Too few arguments to method Test::__set(): 2 required, 0 provided in %s__set__get_003.php on line %d
+ -- compile-error
