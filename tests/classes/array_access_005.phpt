@@ -1,5 +1,7 @@
 --TEST--
 ZE2 ArrayAccess and sub Arrays
+--SKIPIF--
+skip TODO Notice: Indirect modification of overloaded element
 --FILE--
 <?php
 
