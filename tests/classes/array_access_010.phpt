@@ -136,6 +136,7 @@ ArrayReferenceProxy::offsetGet(Array, name)
 string(9) "FooBarBar"
 ArrayReferenceProxy::__construct(Array)
 ArrayReferenceProxy::offsetGet(Array, name)
+ArrayReferenceProxy::__construct(Array)
 ArrayReferenceProxy::offsetSet(Array, name, FooBarBarBaz)
 ArrayReferenceProxy::__construct(Array)
 ArrayReferenceProxy::offsetGet(Array, name)
