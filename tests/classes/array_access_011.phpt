@@ -150,6 +150,7 @@ ArrayAccessReferenceProxy::offsetGet(0, name)
 string(9) "FooBarBar"
 ArrayAccessReferenceProxy::__construct(0)
 ArrayAccessReferenceProxy::offsetGet(0, name)
+ArrayAccessReferenceProxy::__construct(0)
 ArrayAccessReferenceProxy::offsetSet(0, name, FooBarBarBaz)
 ArrayAccessReferenceProxy::__construct(0)
 ArrayAccessReferenceProxy::offsetGet(0, name)
