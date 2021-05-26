@@ -171,6 +171,11 @@
 
 10. no eval()
 
+11. .= access lval twice
+
+    @see tests/classes/array_access_009.phpt `$people[0]['name'] .= 'Baz';`
+    @see `(generate-code node::assigning-string-cat)`
+
 ## ext/date
 
 1. ini_set date.timezone warning message

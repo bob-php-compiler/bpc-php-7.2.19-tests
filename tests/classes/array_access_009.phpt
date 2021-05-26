@@ -159,6 +159,7 @@ ArrayProxy::offsetGet(0, name)
 string(9) "FooBarBar"
 ArrayProxy::__construct(0)
 ArrayProxy::offsetGet(0, name)
+ArrayProxy::__construct(0)
 ArrayProxy::offsetSet(0, name, FooBarBarBaz)
 ArrayProxy::__construct(0)
 ArrayProxy::offsetGet(0, name)
