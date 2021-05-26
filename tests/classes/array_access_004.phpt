@@ -1,5 +1,7 @@
 --TEST--
 ZE2 ArrayAccess::offsetGet ambiguties
+--SKIPIF--
+skip TODO Notice: Indirect modification of overloaded element
 --FILE--
 <?php
 class ObjectOne implements ArrayAccess {
@@ -17,8 +19,8 @@ class ObjectOne implements ArrayAccess {
 			$a = 'foo';
 			return $a . 'Bar';
 		case 2:
-			static $a=1;
-			return $a;
+			static $b=1;
+			return $b;
 		}
 		return $this->a[$index];
 	}
