@@ -176,6 +176,12 @@
     @see tests/classes/array_access_009.phpt `$people[0]['name'] .= 'Baz';`
     @see `(generate-code node::assigning-string-cat)`
 
+12. var_export whole string
+
+    bpc output whole string
+    php output concat string
+    @see tests/classes/array_conversion_keys.phpt
+
 ## ext/date
 
 1. ini_set date.timezone warning message
