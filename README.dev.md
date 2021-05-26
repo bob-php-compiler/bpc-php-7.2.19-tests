@@ -47,6 +47,8 @@
 
 7. magic method visibility, static check
 
+8. early ast class declares before global code
+
 **FILE and LINE**
 
 1. FILE and LINE
