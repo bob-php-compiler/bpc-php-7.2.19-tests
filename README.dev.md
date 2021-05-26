@@ -139,6 +139,8 @@
 
     bpc not support trait
 
+13. bpc not support mix static var and non-static var
+
 **misc**
 
 1. TODO
