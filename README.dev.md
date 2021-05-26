@@ -49,6 +49,8 @@
 
 8. early ast class declares before global code
 
+9. call_user_func not support "CLASS::STATIC_METHOD"
+
 **FILE and LINE**
 
 1. FILE and LINE
