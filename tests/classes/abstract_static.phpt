@@ -17,18 +17,14 @@ class pass implements showable
 
 pass::show();
 
-eval('
 class fail
 {
 	abstract static function func();
 }
-');
 
 fail::show();
 
 echo "Done\n"; // shouldn't be displayed
 ?>
 --EXPECTF--
-Call to function show()
-
-Fatal error: Class fail contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (fail::func) in %sabstract_static.php(%d) : eval()'d code on line %d
+Fatal error: Class fail contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (fail::func) in %sabstract_static.php on line %d

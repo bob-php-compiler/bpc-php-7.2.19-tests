@@ -165,6 +165,8 @@
 
     bpc float to string (glibc snprintf) result may different with php when precision is -1 or 0
 
+10. no eval()
+
 ## ext/date
 
 1. ini_set date.timezone warning message
