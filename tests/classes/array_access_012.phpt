@@ -1,5 +1,7 @@
 --TEST--
 ZE2 ArrayAccess cannot assign by reference
+--SKIPIF--
+skip TODO Notice: Indirect modification of overloaded element
 --FILE--
 <?php
 
