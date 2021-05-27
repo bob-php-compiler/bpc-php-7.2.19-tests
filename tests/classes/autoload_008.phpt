@@ -13,10 +13,10 @@ function f()
 }
 try {
   f();
-}
+}/*
 catch (UndefC $u) {
   echo "In UndefClass catch block.\n";
-}
+}*/
 catch (Exception $e) {
   echo "In Exception catch block. Autoload should not have been triggered.\n";
 }
