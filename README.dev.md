@@ -51,6 +51,8 @@
 
 9. call_user_func not support "CLASS::STATIC_METHOD"
 
+10. class name preferred defined name because of CLASS-xxx
+
 **FILE and LINE**
 
 1. FILE and LINE
