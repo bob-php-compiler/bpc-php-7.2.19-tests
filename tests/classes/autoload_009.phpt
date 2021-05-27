@@ -7,6 +7,8 @@ spl_autoload_register(function ($name) {
   var_dump($name);
 });
 
+class UndefClass {}
+
 function f(UndefClass $x)
 {
 }
