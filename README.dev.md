@@ -15,6 +15,9 @@
 
 3. argument type error message
 
+    int -> integer
+    valid callback -> callable
+
 4. Only variables can be passed by reference
 
     compile error or runtime error
