@@ -53,6 +53,8 @@
 
 10. class name preferred defined name because of CLASS-xxx
 
+11. literal class must exists when compile
+
 **FILE and LINE**
 
 1. FILE and LINE

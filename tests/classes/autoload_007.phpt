@@ -8,7 +8,8 @@ spl_autoload_register(function ($name) {
 });
 
 $a = new stdClass;
-var_dump($a instanceof UndefC);
+$c = 'UndefC';
+var_dump($a instanceof $c);
 ?>
 --EXPECTF--
 bool(false)
