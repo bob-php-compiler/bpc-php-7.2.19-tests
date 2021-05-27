@@ -1,5 +1,7 @@
 --TEST--
 Ensure extends does trigger autoload.
+--ARGS--
+--bpc-include-file tests/classes/UndefBase.inc
 --FILE--
 <?php
 spl_autoload_register(function ($name) {
