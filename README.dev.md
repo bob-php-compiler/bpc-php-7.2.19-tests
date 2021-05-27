@@ -89,6 +89,8 @@
 
 10. no ini extension_dir, extension
 
+11. config-ini-entry error
+
 **syntax**
 
 1. SKIP GOTO

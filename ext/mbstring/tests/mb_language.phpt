@@ -24,6 +24,7 @@ var_dump(mb_language('Pig Latin'));
 var_dump(mb_language());
 ?>
 --EXPECTF--
+invalid config value  for ini entry mbstring.language
 Checking default language:
 string(7) "neutral"
 Checking default language after ini_set:

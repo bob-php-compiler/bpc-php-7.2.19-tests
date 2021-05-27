@@ -8,4 +8,5 @@ date.timezone=Incorrect/Zone
 ?>
 --EXPECTF--
 Timezone ID 'Incorrect/Zone' is invalid
+invalid config value Incorrect/Zone for ini entry date.timezone
 UTC
