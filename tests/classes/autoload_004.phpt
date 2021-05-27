@@ -4,6 +4,8 @@ ZE2 Autoload and recursion
 <?php
 	if (class_exists('autoload_root', false)) die('skip Autoload test classes exist already');
 ?>
+--ARGS--
+--bpc-include-file tests/classes/autoload_root.p5c --bpc-include-file tests/classes/autoload_derived.p5c
 --FILE--
 <?php
 
