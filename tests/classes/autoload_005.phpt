@@ -4,6 +4,8 @@ ZE2 Autoload from destructor
 <?php
 	if (class_exists('autoload_root', false)) die('skip Autoload test classes exist already');
 ?>
+--ARGS--
+--bpc-include-file tests/classes/autoload_root.p5c --bpc-include-file tests/classes/autoload_derived.p5c
 --FILE--
 <?php
 
@@ -33,6 +35,7 @@ unset($o);
 --EXPECTF--
 bool(false)
 bool(false)
+===DONE===
 Test::__destruct
 bool(false)
 bool(false)
@@ -40,4 +43,3 @@ autoload(autoload_root)
 autoload(autoload_derived)
 object(autoload_derived)#%d (0) {
 }
-===DONE===
