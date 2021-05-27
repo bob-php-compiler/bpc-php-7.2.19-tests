@@ -1,5 +1,7 @@
 --TEST--
 Ensure implements does trigger autoload.
+--ARGS--
+--bpc-include-file tests/classes/UndefI.inc
 --FILE--
 <?php
 spl_autoload_register(function ($name) {
