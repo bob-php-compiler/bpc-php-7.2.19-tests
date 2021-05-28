@@ -150,6 +150,10 @@
 
 13. bpc not support mix static var and non-static var
 
+14. redeclare compile error
+
+    Cannot redeclare constant
+
 **misc**
 
 1. TODO

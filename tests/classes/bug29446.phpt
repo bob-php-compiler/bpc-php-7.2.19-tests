@@ -16,4 +16,6 @@ $test = new testClass;
 
 ?>
 --EXPECTF--
-Fatal error: Cannot redefine class constant testClass::TEST_CONST in %s on line 5
+*** ERROR:compile-error:
+Error: Cannot redeclare constant testClass::TEST_CONST in %s on line 5
+ -- compile-error
