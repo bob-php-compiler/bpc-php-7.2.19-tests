@@ -27,8 +27,5 @@ call_user_func(array($o, 'test_base::func'));
 --EXPECTF--
 test::func()
 
-Fatal error: Uncaught Error: Call to undefined method test::test_base::func() in %sabstract_user_call.php:%d
-Stack trace:
-#0 %sabstract_user_call.php(%d): call_user_func(Array)
-#1 {main}
-  thrown in %sabstract_user_call.php on line %d
+Warning: call_user_func() expects parameter 1 to be callable, test::test_base::func given in %s on line %d
+===DONE===
