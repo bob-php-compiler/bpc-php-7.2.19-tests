@@ -180,6 +180,8 @@
 
     bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
 
+17. parse error
+
 **misc**
 
 1. TODO

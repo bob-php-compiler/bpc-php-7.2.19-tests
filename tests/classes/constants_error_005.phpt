@@ -8,4 +8,4 @@ Error case: class constant as an encapsed containing a variable
   }
 ?>
 --EXPECTF--
-Fatal error: Constant expression contains invalid operations in %s on line %d
+parse error (unexpected token `dot') in %s on line %d
