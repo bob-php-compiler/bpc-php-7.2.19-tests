@@ -1,5 +1,7 @@
 --TEST--
 Class constants and doc comments
+--SKIPIF--
+SKIP Reflection
 --INI--
 opcache.save_comments=1
 --FILE--
@@ -27,8 +29,8 @@ foreach ($r->getReflectionConstants() as $rc) {
 ?>
 --EXPECT--
 Y1 : /** comment Y1 */
-Y2 : 
+Y2 :
 Y3 : /** comment Y3 */
 X1 : /** comment X1 */
-X2 : 
+X2 :
 X3 : /** comment X3 */
