@@ -58,6 +58,24 @@
 
 11. literal class must exists when compile
 
+12. class const decl should be ordered
+
+    ```php
+    class C {
+        const CONST_2 = self::CONST_1;
+        const CONST_1 = "hello";
+    }
+    ```
+    will throw Exception Error: Undefined class constant 'CONST_1'
+    
+    ```php
+    class C {
+        const CONST_1 = "hello";
+        const CONST_2 = self::CONST_1;
+    }
+    ```
+    works fine
+
 **FILE and LINE**
 
 1. FILE and LINE
