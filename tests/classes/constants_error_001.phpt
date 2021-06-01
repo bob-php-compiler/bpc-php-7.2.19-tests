@@ -9,4 +9,6 @@ Error case: duplicate class constant definition
   }
 ?>
 --EXPECTF--
-Fatal error: Cannot redefine class constant myclass::myConst in %s on line 5
+*** ERROR:compile-error:
+Error: Cannot redeclare constant myclass::myConst in %s on line 5
+ -- compile-error
