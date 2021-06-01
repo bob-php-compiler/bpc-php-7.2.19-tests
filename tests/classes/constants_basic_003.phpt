@@ -1,5 +1,7 @@
 --TEST--
 Ensure class properties and constants can be defined in terms of constants that are not known at compile time.
+--ARGS--
+--bpc-include-file tests/classes/constants_basic_003.inc
 --FILE--
 <?php
   include 'constants_basic_003.inc';
