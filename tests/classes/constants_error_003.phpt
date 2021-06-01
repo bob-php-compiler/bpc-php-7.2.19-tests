@@ -16,4 +16,6 @@ Basic class support - attempting to pass a class constant by reference.
   var_dump(aclass::myConst);
 ?>
 --EXPECTF--
-Fatal error: Only variables can be passed by reference in %s on line 12
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %s on line 12
+ -- compile-error
