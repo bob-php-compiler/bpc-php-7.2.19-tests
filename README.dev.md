@@ -221,6 +221,19 @@
     php output concat string
     @see tests/classes/array_conversion_keys.phpt
 
+13. problem running command 'bigloo'
+
+    generate scheme code ok, compile scheme code error.
+    
+    ```php
+    <?php
+    class C
+    {
+        const c1 = D::hello;
+    }
+    ```
+    ERR: Unbound variable -- *CLASS-d*
+
 ## ext/date
 
 1. ini_set date.timezone warning message
