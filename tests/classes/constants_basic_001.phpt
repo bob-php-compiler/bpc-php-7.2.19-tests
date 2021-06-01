@@ -1,5 +1,7 @@
 --TEST--
 Class constant declarations
+--ARGS--
+--bpc-include-file tests/classes/constants_basic_001.inc
 --FILE--
 <?php
   define('DEFINED', 1234);
@@ -7,29 +9,7 @@ Class constant declarations
   define('DEFINED_TO_VAR', $def);
   define('DEFINED_TO_UNDEF_VAR', $undef);
 
-  class C
-  {
-      const c0 = UNDEFINED;
-
-      const c1 = 1, c2 = 1.5;
-      const c3 =  + 1, c4 =  + 1.5;
-      const c5 = -1, c6 = -1.5;
-
-      const c7 = __LINE__;
-      const c8 = __FILE__;
-      const c9 = __CLASS__;
-      const c10 = __METHOD__;
-      const c11 = __FUNCTION__;
-
-      const c12 = DEFINED;
-      const c13 = DEFINED_TO_VAR;
-      const c14 = DEFINED_TO_UNDEF_VAR;
-
-      const c15 = "hello1";
-      const c16 = 'hello2';
-      const c17 = C::c16;
-      const c18 = self::c17;
-  }
+  include 'constants_basic_001.inc';
 
   echo "\nAttempt to access various kinds of class constants:\n";
   var_dump(C::c0);
@@ -58,11 +38,10 @@ Class constant declarations
   echo "\nYou should not see this.";
 ?>
 --EXPECTF--
-Notice: Undefined variable: undef in %s on line 5
-
-Attempt to access various kinds of class constants:
 
 Warning: Use of undefined constant UNDEFINED - assumed 'UNDEFINED' (this will throw an Error in a future version of PHP) in %s on line %d
+
+Attempt to access various kinds of class constants:
 string(9) "UNDEFINED"
 int(1)
 float(1.5)
@@ -85,7 +64,7 @@ string(6) "hello2"
 
 Expecting fatal error:
 
-Fatal error: Uncaught Error: Undefined class constant 'c19' in %s:53
+Fatal error: Uncaught Error: Undefined class constant 'c19' in %s:31
 Stack trace:
 #0 {main}
-  thrown in %s on line 53
+  thrown in %s on line 31

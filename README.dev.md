@@ -154,6 +154,14 @@
 
     Cannot redeclare constant
 
+15. class const defines one at a time
+
+    bpc not support `const c1 = 1, c2 = 2;`
+
+16. define constant always case-sensitive
+
+    bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
+
 **misc**
 
 1. TODO
