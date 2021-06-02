@@ -3,7 +3,7 @@ Class protected constant visibility
 --FILE--
 <?php
 class A {
-	protected const protectedConst = 'protectedConst';
+	const protectedConst = 'protectedConst';
 	static function staticConstDump() {
 		var_dump(self::protectedConst);
 	}
@@ -13,12 +13,12 @@ class A {
 }
 
 A::staticConstDump();
-(new A())->constDump();
-constant('A::protectedConst');
+$a = new A();
+$a->constDump();
+var_dump(constant('A::protectedConst'));
 
 ?>
 --EXPECTF--
 string(14) "protectedConst"
 string(14) "protectedConst"
-
-Warning: constant(): Couldn't find constant A::protectedConst in %s on line %d
+string(14) "protectedConst"
