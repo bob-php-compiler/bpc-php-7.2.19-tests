@@ -3,9 +3,9 @@ Only public and protected class constants should be inherited
 --FILE--
 <?php
 class A {
-	public const X = 1;
-	protected const Y = 2;
-	private const Z = 3;
+	const X = 1;
+	const Y = 2;
+	//const Z = 3;
 }
 class B extends A {
 	static public function checkConstants() {
@@ -25,4 +25,4 @@ Fatal error: Uncaught Error: Undefined class constant 'Z' in %s:11
 Stack trace:
 #0 %s(15): B::checkConstants()
 #1 {main}
-  thrown in %s on line 11
+  thrown in %s on line 15
