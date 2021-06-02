@@ -76,6 +76,10 @@
     ```
     works fine
 
+13. class constant visibility
+
+    bpc not support class constant visibility
+
 **FILE and LINE**
 
 1. FILE and LINE
@@ -181,6 +185,10 @@
     bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
 
 17. parse error
+
+18. TODO `rval->`
+
+    bpc currently not support `(new CLASS_NAME())->prop/method`
 
 **misc**
 

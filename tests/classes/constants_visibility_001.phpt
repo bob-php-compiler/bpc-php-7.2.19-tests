@@ -3,7 +3,7 @@ Class public constant visibility
 --FILE--
 <?php
 class A {
-	public const publicConst = 'publicConst';
+	const publicConst = 'publicConst';
 	static function staticConstDump() {
 		var_dump(self::publicConst);
 	}
@@ -14,7 +14,8 @@ class A {
 
 var_dump(A::publicConst);
 A::staticConstDump();
-(new A())->constDump();
+$a = new A();
+$a->constDump();
 
 ?>
 --EXPECTF--
