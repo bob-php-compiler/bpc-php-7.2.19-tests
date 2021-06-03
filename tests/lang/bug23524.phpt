@@ -12,7 +12,10 @@ Bug #23524 (Improper handling of constants in array indices)
   f();
   echo "Done";
 ?>
---EXPECT--
+--EXPECTF--
+Warning: Use of undefined constant THE_CONST - assumed 'THE_CONST' (this will throw an Error in a future version of PHP) in %s on line %d
+
+Warning: Use of undefined constant THE_CONST - assumed 'THE_CONST' (this will throw an Error in a future version of PHP) in %s on line %d
 Begin
 Array
 (

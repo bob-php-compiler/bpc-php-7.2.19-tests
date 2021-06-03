@@ -22,6 +22,24 @@
 
     compile error or runtime error
 
+**function**
+
+1. function signatures before global code
+
+    ```php
+    <?php
+    define('THE_CONST', 123);
+    function f($a = array(THE_CONST => THE_CONST)) {}
+    ```
+    function f argument `$a` default value not as expected
+    
+    ```php
+    <?php
+    define('THE_CONST', 123);
+    function g($a = THE_CONST) {}
+    ```
+    function g argument `$a` default value as expected
+
 **object**
 
 1. __destruct
