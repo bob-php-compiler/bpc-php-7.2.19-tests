@@ -53,13 +53,12 @@ unset($t);
 echo "Done\n";
 ?>
 --EXPECTF--
+Warning: in %s line 17: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 36: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Testing class base
 base::__construct
-base Object
-(
-    [name] => base
-)
-base::__destruct
 base Object
 (
     [name] => base
@@ -82,6 +81,12 @@ derived Object
     [other] => other
     [name] => derived
 )
+Done
+base::__destruct
+base Object
+(
+    [name] => base
+)
 base::__destruct
 derived Object
 (
@@ -94,4 +99,3 @@ derived Object
     [other] => other
     [name] => derived
 )
-Done
