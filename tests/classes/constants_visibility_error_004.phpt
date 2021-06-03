@@ -4,11 +4,14 @@ A redeclared class constant must have the same or higher visibility
 <?php
 
 class A {
-	protected const protectedConst = 0;
+	const protectedConst = 0;
 }
 
 class B extends A {
-	private const protectedConst = 1;
+	const protectedConst = 1;
 }
+var_dump(A::protectedConst);
+var_dump(B::protectedConst);
 --EXPECTF--
-Fatal error: Access level to B::protectedConst must be protected (as in class A) or weaker in %s on line 9
+int(0)
+int(1)

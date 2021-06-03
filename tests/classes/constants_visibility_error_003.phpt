@@ -4,11 +4,15 @@ A redeclared class constant must have the same or higher visibility
 <?php
 
 class A {
-	public const publicConst = 0;
+	const publicConst = 0;
 }
 
 class B extends A {
-	protected const publicConst = 1;
+	const publicConst = 1;
 }
+
+var_dump(A::publicConst);
+var_dump(B::publicConst);
 --EXPECTF--
-Fatal error: Access level to B::publicConst must be public (as in class A) in %s on line 9
+int(0)
+int(1)
