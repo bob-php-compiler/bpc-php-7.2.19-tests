@@ -5,8 +5,8 @@ Defined on private constant should not raise exception
 
 class Foo
 {
-    private const BAR = 1;
+    const BAR = 1;
 }
 echo (int)defined('Foo::BAR');
 --EXPECTF--
-0
+1
