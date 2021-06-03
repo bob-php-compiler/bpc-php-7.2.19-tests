@@ -8,4 +8,4 @@ Error case: class constant as an encapsed containing a variable
   }
 ?>
 --EXPECTF--
-parse error (unexpected token `dot') in %s on line %d
+Parse error: %s in %s on line %d
