@@ -19,7 +19,8 @@ unset($obj);
 ?>
 ===DONE===
 --EXPECTF--
-Fatal error: Uncaught Error: Call to private Derived::__destruct() from context '' in %sdestructor_visibility_001.php:%d
-Stack trace:
-#0 {main}
-  thrown in %sdestructor_visibility_001.php on line %d
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+*** ERROR:compile-error:
+Error: The magic method Base::__destruct() must have public visibility in %s on line 4
+ -- compile-error

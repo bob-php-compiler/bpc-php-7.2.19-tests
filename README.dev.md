@@ -45,6 +45,7 @@
 1. __destruct
 
     compile time warning and run as shutdown function
+    compile error if not public
 
 2. unset static property
 

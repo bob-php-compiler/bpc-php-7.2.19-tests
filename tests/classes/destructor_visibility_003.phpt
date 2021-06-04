@@ -4,7 +4,7 @@ ZE2 Ensuring destructor visibility
 <?php
 
 class Base {
-	private function __destruct() {
+	function __destruct() {
 		echo __METHOD__ . "\n";
 	}
 }
@@ -22,5 +22,9 @@ unset($obj); // Derived::__destruct is being called not Base::__destruct
 ?>
 ===DONE===
 --EXPECTF--
-Derived::__destruct
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 10: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 ===DONE===
+Derived::__destruct
