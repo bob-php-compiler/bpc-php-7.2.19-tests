@@ -98,6 +98,22 @@
 
     bpc not support class constant visibility
 
+14. TODO interface method signature check
+
+    ```php
+    <?php
+    interface iA
+    {
+        function sayhi($name);
+    }
+    class A implements iA
+    {
+        function sayhi()
+        {}
+    }
+    ```
+    php Fatal error, bpc runs ok
+
 **FILE and LINE**
 
 1. FILE and LINE
