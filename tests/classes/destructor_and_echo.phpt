@@ -18,7 +18,9 @@ $o = new Test;
 
 ?>
 ===DONE===
---EXPECT--
+--EXPECTF--
+Warning: in %s line 9: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Test::__construct
 ===DONE===
 Test::__destruct

@@ -46,11 +46,13 @@ Show();
 //counter::destroy($obj2);
 echo "Done\n";
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 24: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Count: 0
 Id: 0
 Count: 1
 Id: 1
 Count: 2
-Count: 1
+Count: 2
 Done

@@ -52,9 +52,22 @@ catch(FatalException $e)
 ?>
 ===DONE===
 --EXPECTF--
-FailClass::__destruct
-Caught: FailClass
+Warning: in %s line 7: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 FatalException::__construct
-FailClass::__destruct
-Caught Exception: FailClass
+Done: FatalException::__construct
+Caught Exception: 
 ===DONE===
+FailClass::__destruct
+FailClass::__destruct
+
+Fatal error: Uncaught Exception: FailClass in %sdestructor_and_exceptions.php:10
+Stack trace:
+#0 %sdestructor_and_exceptions.php(42): FailClass->__destruct()
+#1 {main}
+
+Next Exception: FailClass in %sdestructor_and_exceptions.php:10
+Stack trace:
+#0 %sdestructor_and_exceptions.php(42): FailClass->__destruct()
+#1 {main}
+  thrown in %sdestructor_and_exceptions.php on line 42
