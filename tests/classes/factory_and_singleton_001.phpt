@@ -26,7 +26,7 @@ class test {
     test::$test = NULL;
   }
 
-  protected function __destruct() {
+  function __destruct() {
   	test::$cnt--;
   }
 
@@ -77,7 +77,9 @@ var_dump(test::count());
 
 echo "Done\n";
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 26: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Access static members
 NULL
 int(0)
@@ -95,5 +97,5 @@ int(1)
 int(1)
 Destruct static
 NULL
-int(0)
+int(1)
 Done

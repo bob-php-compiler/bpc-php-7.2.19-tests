@@ -14,6 +14,8 @@ $obj = new test;
 ?>
 ===DONE===
 --EXPECTF--
-===DONE===
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
 
-Warning: Call to private test::__destruct() from context '' during shutdown ignored in Unknown on line 0
+*** ERROR:compile-error:
+Error: The magic method test::__destruct() must have public visibility in %s on line 4
+ -- compile-error
