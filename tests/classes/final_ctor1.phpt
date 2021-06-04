@@ -21,7 +21,7 @@ class Extended extends Base
 	}
 }
 
-ReflectionClass::export('Extended');
+//ReflectionClass::export('Extended');
 
 ?>
 --EXPECTF--
