@@ -1,7 +1,5 @@
 --TEST--
 ZE2 A class constructor must keep the signature of all interfaces
---SKIPIF--
-skip TODO interface method signature check
 --FILE--
 <?php
 interface constr1
