@@ -25,4 +25,7 @@ var_dump( $tz->getOffset() );
 
 -- Testing DateTimeZone::getOffset() function with zero arguments --
 
-Fatal error: Too few arguments to method DateTimeZone::getOffset(): 1 required, 0 provided in %s on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method DateTimeZone::getOffset(): 1 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d

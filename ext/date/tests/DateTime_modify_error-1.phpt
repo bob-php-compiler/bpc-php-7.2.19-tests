@@ -25,4 +25,7 @@ var_dump( $object->modify() );
 
 -- Testing DateTime::modify() function with less than expected no. of arguments --
 
-Fatal error: Too few arguments to method DateTime::modify(): 1 required, 0 provided in %s on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method DateTime::modify(): 1 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d

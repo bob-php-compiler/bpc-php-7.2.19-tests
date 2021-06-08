@@ -25,4 +25,7 @@ var_dump( $date->format() );
 
 -- Testing date_date_formatcreate() function with zero arguments --
 
-Fatal error: Too few arguments to method DateTime::format(): 1 required, 0 provided in %s on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method DateTime::format(): 1 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d

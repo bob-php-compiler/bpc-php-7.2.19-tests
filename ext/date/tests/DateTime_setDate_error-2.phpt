@@ -25,4 +25,7 @@ var_dump( $datetime->setDate($year, $month) );
 
 -- Testing DateTime::setDate() function with less than expected no. of arguments --
 
-Fatal error: Too few arguments to method DateTime::setDate(): 3 required, 2 provided in %s on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method DateTime::setDate(): 3 required, 2 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d

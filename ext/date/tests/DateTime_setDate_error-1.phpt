@@ -23,4 +23,7 @@ var_dump( $datetime->setDate() );
 
 -- Testing DateTime::setDate() function with zero arguments --
 
-Fatal error: Too few arguments to method DateTime::setDate(): 3 required, 0 provided in %s on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method DateTime::setDate(): 3 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d

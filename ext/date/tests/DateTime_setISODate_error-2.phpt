@@ -26,4 +26,7 @@ var_dump( $datetime->setISODate($year) );
 
 -- Testing DateTime::setISODate() function with less than expected no. of arguments --
 
-Fatal error: Too few arguments to method DateTime::setISODate(): 2 required, 1 provided in %s on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method DateTime::setISODate(): 2 required, 1 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d
