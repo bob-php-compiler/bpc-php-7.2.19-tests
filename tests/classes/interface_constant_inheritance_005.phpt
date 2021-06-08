@@ -8,5 +8,5 @@ interface IA {
 
 echo "Done\n";
 ?>
---EXPECT--
-Done
+--EXPECTF--
+Parse error: %s in %s on line 3
