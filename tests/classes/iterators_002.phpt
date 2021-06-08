@@ -68,7 +68,11 @@ unset($t);
 
 print "Done\n";
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 37: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 50: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 c::getIterator
 c_iter::__construct
 c_iter::rewind
@@ -81,7 +85,6 @@ c_iter::rewind
 c_iter::valid = true
 c_iter::current
 double:0:0
-c_iter::__destruct
 c_iter::next
 c_iter::valid = true
 c_iter::current
@@ -92,7 +95,6 @@ c_iter::rewind
 c_iter::valid = true
 c_iter::current
 double:1:0
-c_iter::__destruct
 c_iter::next
 c_iter::valid = true
 c_iter::current
@@ -103,9 +105,11 @@ c_iter::rewind
 c_iter::valid = true
 c_iter::current
 double:2:0
-c_iter::__destruct
 c_iter::next
 c_iter::valid = false
-c_iter::__destruct
-c::__destruct
 Done
+c::__destruct
+c_iter::__destruct
+c_iter::__destruct
+c_iter::__destruct
+c_iter::__destruct
