@@ -100,6 +100,10 @@
 
     bpc not support class constant visibility
 
+14. call parent private method error message
+
+    bpc always report `Call to private method ~a::~a() from context '~a'`
+
 **FILE and LINE**
 
 1. FILE and LINE
