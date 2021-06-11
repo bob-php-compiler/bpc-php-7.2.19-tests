@@ -1,5 +1,7 @@
 --TEST--
 Object to string conversion: error cases and behaviour variations.
+--SKIPIF--
+skip TODO printf
 --FILE--
 <?php
 function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
