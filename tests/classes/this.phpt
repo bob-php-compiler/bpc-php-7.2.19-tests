@@ -49,4 +49,4 @@ print $other->prop;  // shows 'Hello'
 ?>
 ===DONE===
 --EXPECTF--
-Fatal error: Cannot re-assign $this in %sthis.php on line %d
+Parse error: Cannot re-assign $this in %sthis.php on line %d
