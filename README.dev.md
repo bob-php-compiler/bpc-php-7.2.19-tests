@@ -41,6 +41,10 @@
     ```
     function g argument `$a` default value as expected
 
+2. set_error_handler
+
+    `set_error_handler` currently not support parameter 2 `$error_levels`
+
 **object**
 
 1. __destruct

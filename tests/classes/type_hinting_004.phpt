@@ -2,7 +2,7 @@
 Ensure type hints are enforced for functions invoked as callbacks.
 --FILE--
 <?php
-  set_error_handler('myErrorHandler', E_RECOVERABLE_ERROR);
+  //set_error_handler('myErrorHandler', E_RECOVERABLE_ERROR);
   function myErrorHandler($errno, $errstr, $errfile, $errline) {
       echo "$errno: $errstr - $errfile($errline)\n";
       return true;
