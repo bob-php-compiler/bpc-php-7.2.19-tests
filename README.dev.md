@@ -104,6 +104,10 @@
 
     bpc always report `Call to private method ~a::~a() from context '~a'`
 
+15. assign non-visible static prop by reference throw one Error
+
+    php throw two error
+
 **FILE and LINE**
 
 1. FILE and LINE
