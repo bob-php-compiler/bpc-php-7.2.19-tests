@@ -112,6 +112,10 @@
 
     php throw two error
 
+16. callable abstract method throw one Error
+
+    php throw two error, @see Zend/tests/exception_017.phpt
+
 **FILE and LINE**
 
 1. FILE and LINE
@@ -275,6 +279,11 @@
     }
     ```
     ERR: Unbound variable -- *CLASS-d*
+
+14. typehint TypeError message
+
+    php: `Argument x passed to x must x, x given, called in x on line x`
+    bpc: `Argument x passed to x must x, x given, called in x on line x and defined`
 
 ## ext/date
 

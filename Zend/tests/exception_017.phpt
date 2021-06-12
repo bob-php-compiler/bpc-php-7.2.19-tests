@@ -1,7 +1,5 @@
 --TEST--
 Exceptions on improper usage of $this
---SKIPIF--
-skip TODO support typehint callable
 --FILE--
 <?php
 abstract class C {
@@ -32,8 +30,7 @@ C::foo();
 --EXPECTF--
 Exception: Cannot call abstract method C::foo() in %sexception_017.php on line %d
 
-Exception: Argument 1 passed to foo() must be callable, string given, called in %sexception_017.php on line %d
-Exception: Cannot call abstract method C::foo()
+Exception: Argument 1 passed to foo() must be callable, string given, called in %sexception_017.php on line %d and defined
 
 Fatal error: Uncaught Error: Cannot call abstract method C::foo() in %sexception_017.php:%d
 Stack trace:
