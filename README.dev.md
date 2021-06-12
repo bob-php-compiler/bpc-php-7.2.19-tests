@@ -116,6 +116,12 @@
 
     php throw two error, @see Zend/tests/exception_017.phpt
 
+17. abstract check
+
+    php check class before method
+    bpc check method before class
+    @see tests/classes/abstract_redeclare.phpt
+
 **FILE and LINE**
 
 1. FILE and LINE
