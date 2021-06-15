@@ -2,6 +2,8 @@
 Regression test
 --INI--
 date.timezone=UTC
+--ARGS--
+--bpc-include-file tests/lang/023-1.inc --bpc-include-file tests/lang/023-2.inc
 --FILE--
 PHP Regression Test
 
