@@ -1,5 +1,7 @@
 --TEST--
 Testing nested array shortcut
+--SKIPIF--
+skip array declare
 --FILE--
 <?php
 print_r([1, 2, 3, ["foo" => "orange", "bar" => "apple", "baz" => "lemon"]]);
