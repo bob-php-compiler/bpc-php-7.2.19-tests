@@ -1,5 +1,7 @@
 --TEST--
 Testing eval function inside user-defined function
+--SKIPIF--
+skip no eval()
 --FILE--
 <?php
 function F ($a) {

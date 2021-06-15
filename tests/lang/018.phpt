@@ -1,5 +1,7 @@
 --TEST--
 eval() test
+--SKIPIF--
+skip no eval()
 --FILE--
 <?php
 
