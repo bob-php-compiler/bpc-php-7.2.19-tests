@@ -1,5 +1,7 @@
 --TEST--
 Looped regression test (may take a while)
+--ARGS--
+--bpc-include-file tests/lang/023-2.inc
 --FILE--
 <?php
 for ($jdk=0; $jdk<50; $jdk++) {
