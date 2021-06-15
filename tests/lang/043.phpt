@@ -1,5 +1,7 @@
 --TEST--
 Dynamic call for static methods
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 class A {

@@ -1,5 +1,7 @@
 --TEST--
 Dynamic access of constants
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 class A {
