@@ -4,7 +4,7 @@ $this in constructor test
 <?php
 class foo {
 	function __construct($name) {
-     	$GLOBALS['List']= &$this;
+     	$GLOBALS['List']= $this;
      	$this->Name = $name;
 		$GLOBALS['List']->echoName();
 	}
