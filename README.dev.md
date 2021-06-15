@@ -291,6 +291,10 @@
     php: `Argument x passed to x must x, x given, called in x on line x`
     bpc: `Argument x passed to x must x, x given, called in x on line x and defined`
 
+15. skip function with many parameters
+
+    @see tests/func/010.phpt
+
 ## ext/date
 
 1. ini_set date.timezone warning message

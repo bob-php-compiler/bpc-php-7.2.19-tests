@@ -1,9 +1,7 @@
 --TEST--
 function with many parameters
 --SKIPIF--
-<?php
-if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
-?>
+skip function with many parameters
 --FILE--
 <?php
 
