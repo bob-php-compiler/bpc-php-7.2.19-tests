@@ -162,6 +162,8 @@
 
 11. config-ini-entry error
 
+12. no ini hard_timeout
+
 **syntax**
 
 1. SKIP GOTO

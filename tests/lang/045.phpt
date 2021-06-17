@@ -5,8 +5,6 @@ Timeout again inside register_shutdown_function
 if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
 if (PHP_ZTS) die("skip hard_timeout works only on no-zts builds");
 ?>
---INI--
-hard_timeout=1
 --FILE--
 <?php
 set_time_limit(1);
