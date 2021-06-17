@@ -63,11 +63,11 @@ FailClass::__destruct
 
 Fatal error: Uncaught Exception: FailClass in %sdestructor_and_exceptions.php:10
 Stack trace:
-#0 %sdestructor_and_exceptions.php(42): FailClass->__destruct()
+#0 %sdestructor_and_exceptions.php(51): FailClass->__destruct()
 #1 {main}
 
 Next Exception: FailClass in %sdestructor_and_exceptions.php:10
 Stack trace:
-#0 %sdestructor_and_exceptions.php(42): FailClass->__destruct()
+#0 %sdestructor_and_exceptions.php(51): FailClass->__destruct()
 #1 {main}
-  thrown in %sdestructor_and_exceptions.php on line 42
+  thrown in %sdestructor_and_exceptions.php on line 51
