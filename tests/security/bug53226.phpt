@@ -1,5 +1,7 @@
 --TEST--
 Bug #53226 (file_exists fails on big filenames)
+--SKIPIF--
+skip no ini open_basedir
 --INI--
 open_basedir=.
 --FILE--

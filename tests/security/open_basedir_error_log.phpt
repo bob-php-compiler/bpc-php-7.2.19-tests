@@ -1,5 +1,7 @@
 --TEST--
 Test open_basedir configuration
+--SKIPIF--
+skip no ini open_basedir
 --INI--
 open_basedir=.
 error_log=

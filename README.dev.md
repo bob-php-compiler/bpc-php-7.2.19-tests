@@ -164,6 +164,8 @@
 
 12. no ini hard_timeout
 
+13. no ini open_basedir
+
 **syntax**
 
 1. SKIP GOTO

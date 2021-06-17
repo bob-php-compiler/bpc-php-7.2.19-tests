@@ -1,5 +1,7 @@
 --TEST--
 Test open_basedir configuration for glob
+--SKIPIF--
+skip no ini open_basedir
 --INI--
 open_basedir=.
 --FILE--

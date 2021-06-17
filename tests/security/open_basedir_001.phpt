@@ -1,6 +1,7 @@
 --TEST--
 openbase_dir runtime tightning
 --SKIPIF--
+skip no ini open_basedir
 <?php
 if(PHP_OS_FAMILY === "Windows") {
 	die('skip.. only for unix');
