@@ -1,11 +1,9 @@
 --TEST--
 Bug #20175 (Static vars can't store ref to new instance)
 --INI--
-error_reporting=E_ALL
+error_reporting=32767
 --FILE--
 <?php
-print zend_version()."\n";
-
 /* Part 1:
  * Storing the result of a function in a static variable.
  * foo_global() increments global variable $foo_count whenever it is executed.
@@ -49,7 +47,7 @@ function bar_static() {
 	static $bar_value;
 	echo "bar_static()\n";
 	if (!isset($bar_value)) {
-		$bar_value = &bar_global();
+		$bar_value = bar_global();
 	}
 	return $bar_value;
 }
@@ -137,7 +135,6 @@ $oop_tester = new oop_test; // repeated.
 print $oop_tester->oop_static()."\n";
 ?>
 --EXPECTF--
-%s
 foo_static()
 foo_global()
 foo:1
@@ -145,8 +142,6 @@ foo_static()
 foo:1
 bar_static()
 bar_global()
-
-Notice: Only variables should be assigned by reference in %sbug20175.php on line 47
 bar:1
 bar_static()
 bar:1
