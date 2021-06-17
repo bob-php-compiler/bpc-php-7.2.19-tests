@@ -1,5 +1,7 @@
 --TEST--
 Returning a reference from a function
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

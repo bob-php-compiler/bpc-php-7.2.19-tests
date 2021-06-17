@@ -14,7 +14,7 @@ class foo {
 	}
 }
 
-function &foo2(&$foo) {
+function foo2(&$foo) {
 	return $foo;
 }
 
@@ -25,7 +25,7 @@ $bar1->echoName();
 $List->echoName();
 
 $foo = new foo('constructor');
-$bar1 =& foo2($foo);
+$bar1 = foo2($foo);
 $bar1->Name = 'outside';
 $bar1->echoName();
 

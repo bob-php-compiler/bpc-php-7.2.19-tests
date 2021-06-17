@@ -1,5 +1,7 @@
 --TEST--
 Returning a reference from a static method
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 Class C {

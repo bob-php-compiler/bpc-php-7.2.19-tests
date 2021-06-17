@@ -246,6 +246,8 @@
 
     bpc currently not support `(new CLASS_NAME())->prop/method`
 
+19. unsupported return reference from function/method
+
 **misc**
 
 1. TODO

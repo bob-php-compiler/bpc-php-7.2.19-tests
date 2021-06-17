@@ -1,5 +1,7 @@
 --TEST--
 Returning a reference from a static method via another static method
+--SKIPIF--
+skip unsupported return reference from function/method
 --INI--
 error_reporting = E_ALL & ~E_STRICT
 --FILE--
