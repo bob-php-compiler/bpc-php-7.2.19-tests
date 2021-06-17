@@ -53,6 +53,8 @@
 
     @see tests/func/010.phpt
 
+6. no zend_version()
+
 **object**
 
 1. __destruct
