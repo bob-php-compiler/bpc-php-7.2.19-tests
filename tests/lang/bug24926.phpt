@@ -1,5 +1,7 @@
 --TEST--
 Bug #24926 (lambda function (create_function()) cannot be stored in a class property)
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Bug #22690 (ob_start() is broken with create_function() callbacks)
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 	$foo = create_function('$s', 'return strtoupper($s);');

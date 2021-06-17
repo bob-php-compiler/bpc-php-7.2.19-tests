@@ -1,5 +1,7 @@
 --TEST--
 Bug #17115 (lambda functions produce segfault with static vars)
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 $func = create_function('','

@@ -45,6 +45,14 @@
 
     `set_error_handler` currently not support parameter 2 `$error_levels`
 
+3. no eval()
+
+4. no create_function()
+
+5. skip function with many parameters
+
+    @see tests/func/010.phpt
+
 **object**
 
 1. __destruct
@@ -264,20 +272,18 @@
 
     bpc float to string (glibc snprintf) result may different with php when precision is -1 or 0
 
-10. no eval()
-
-11. .= access lval twice
+10. .= access lval twice
 
     @see tests/classes/array_access_009.phpt `$people[0]['name'] .= 'Baz';`
     @see `(generate-code node::assigning-string-cat)`
 
-12. var_export whole string
+11. var_export whole string
 
     bpc output whole string
     php output concat string
     @see tests/classes/array_conversion_keys.phpt
 
-13. problem running command 'bigloo'
+12. problem running command 'bigloo'
 
     generate scheme code ok, compile scheme code error.
     
@@ -290,14 +296,10 @@
     ```
     ERR: Unbound variable -- *CLASS-d*
 
-14. typehint TypeError message
+13. typehint TypeError message
 
     php: `Argument x passed to x must x, x given, called in x on line x`
     bpc: `Argument x passed to x must x, x given, called in x on line x and defined`
-
-15. skip function with many parameters
-
-    @see tests/func/010.phpt
 
 ## ext/date
 
