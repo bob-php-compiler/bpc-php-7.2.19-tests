@@ -1,5 +1,7 @@
 --TEST--
 Bug #23584 (error line numbers off by one when using #!php)
+--SKIPIF--
+skip TODO
 --FILE--
 #!php
 <?php
