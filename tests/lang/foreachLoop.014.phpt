@@ -1,5 +1,7 @@
 --TEST--
 Directly modifying a REFERENCED array when foreach'ing over it.
+--ARGS--
+--bpc-include-file tests/lang/foreachLoop.transform.array_pop.inc --bpc-include-file tests/lang/foreachLoop.transform.array_shift.inc --bpc-include-file tests/lang/foreachLoop.transform.unset.inc --bpc-include-file tests/lang/foreachLoop.transform.array_push.inc --bpc-include-file tests/lang/foreachLoop.transform.array_unshift.inc
 --FILE--
 <?php
 
@@ -21,7 +23,7 @@ function withRefValue($elements, $transform) {
 	echo "--> Do loop:\n";
 	foreach ($a as $k=>$v) {
 		echo "     iteration $counter:  \$k=$k; \$v=$v\n";
-		eval($transform);
+		include $transform;
 		$counter++;
 		if ($counter>MAX_LOOPS) {
 			echo "  ** Stuck in a loop! **\n";
@@ -35,35 +37,35 @@ function withRefValue($elements, $transform) {
 
 
 echo "\nPopping elements off end of a referenced array";
-$transform = 'array_pop($a);';
+$transform = 'foreachLoop.transform.array_pop.inc';
 withRefValue(1, $transform);
 withRefValue(2, $transform);
 withRefValue(3, $transform);
 withRefValue(4, $transform);
 
 echo "\n\n\nShift elements off start of a referenced array";
-$transform = 'array_shift($a);';
+$transform = 'foreachLoop.transform.array_shift.inc';
 withRefValue(1, $transform);
 withRefValue(2, $transform);
 withRefValue(3, $transform);
 withRefValue(4, $transform);
 
 echo "\n\n\nRemove current element of a referenced array";
-$transform = 'unset($a[$k]);';
+$transform = 'foreachLoop.transform.unset.inc';
 withRefValue(1, $transform);
 withRefValue(2, $transform);
 withRefValue(3, $transform);
 withRefValue(4, $transform);
 
 echo "\n\n\nAdding elements to the end of a referenced array";
-$transform = 'array_push($a, "new.$counter");';
+$transform = 'foreachLoop.transform.array_push.inc';
 withRefValue(1, $transform);
 withRefValue(2, $transform);
 withRefValue(3, $transform);
 withRefValue(4, $transform);
 
 echo "\n\n\nAdding elements to the start of a referenced array";
-$transform = 'array_unshift($a, "new.$counter");';
+$transform = 'foreachLoop.transform.array_unshift.inc';
 withRefValue(1, $transform);
 withRefValue(2, $transform);
 withRefValue(3, $transform);
