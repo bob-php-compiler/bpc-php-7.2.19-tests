@@ -1,30 +1,30 @@
 --TEST--
 Bug #22231 (segfault when returning a global variable by reference)
 --INI--
-error_reporting=E_ALL
+error_reporting=32767
 --FILE--
 <?php
 class foo {
     public $fubar = 'fubar';
 }
 
-function &foo(){
+function foo(){
     $obj = new foo();
     $GLOBALS['foo'] = &$obj;
     return $GLOBALS['foo'];
 }
-$bar = &foo();
+$bar = foo();
 var_dump($bar);
 var_dump($bar->fubar);
 unset($bar);
-$bar = &foo();
+$bar = foo();
 var_dump($bar->fubar);
 
-$foo = &foo();
+$foo = foo();
 var_dump($foo);
 var_dump($foo->fubar);
 unset($foo);
-$foo = &foo();
+$foo = foo();
 var_dump($foo->fubar);
 ?>
 --EXPECTF--
