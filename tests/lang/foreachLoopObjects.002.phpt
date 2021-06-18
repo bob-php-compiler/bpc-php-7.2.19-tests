@@ -1,5 +1,7 @@
 --TEST--
 Foreach loop tests - visibility.
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 
