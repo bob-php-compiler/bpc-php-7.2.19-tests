@@ -30,9 +30,6 @@ echo "\n";
 $a=array("a","b","c");
 foreach ($a as $v);
 var_dump(current($a));
-$a=array("a","b","c");
-foreach ($a as &$v);
-var_dump(current($a));
 
 ?>
 --EXPECT--
@@ -60,5 +57,4 @@ string(1) "f"
 int(2)
 string(1) "f"
 
-string(1) "a"
 string(1) "a"

@@ -252,6 +252,8 @@
 
     @see tests/lang/bug21820.phpt
 
+21. not support foreach as reference
+
 **misc**
 
 1. TODO

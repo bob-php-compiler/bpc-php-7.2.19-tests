@@ -1,5 +1,7 @@
 --TEST--
 Ensure foreach splits the iterated entity from its cow reference set, for all sorts of iterated entities.
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
   error_reporting(E_ALL & ~E_STRICT);

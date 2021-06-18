@@ -1,5 +1,7 @@
 --TEST--
 Directly modifying an unreferenced array when foreach'ing over it while using &$value syntax.
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 

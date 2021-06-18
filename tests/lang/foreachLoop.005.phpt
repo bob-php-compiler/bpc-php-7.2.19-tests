@@ -1,5 +1,7 @@
 --TEST--
 Foreach loop tests - modifying the array during the loop: special case. Behaviour is good since php 5.2.2.
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 $a = array("original.0","original.1","original.2");
