@@ -1,7 +1,7 @@
 --TEST--
 Bug #22510 (segfault among complex references)
 --INI--
-error_reporting=E_ALL | E_DEPRECATED
+error_reporting=32767
 --FILE--
 <?php
 class foo
@@ -13,12 +13,12 @@ class foo
 		$cl = &$this->list;
 	}
 
-	function &method1() {
+	function method1() {
 		print __CLASS__."::".__FUNCTION__."\n";
 		return @$this->foo;
 	}
 
-	function &method2() {
+	function method2() {
 		print __CLASS__."::".__FUNCTION__."\n";
 		return $this->foo;
 	}
@@ -95,17 +95,17 @@ print "I'm alive!\n";
 ok1
 bar::run1
 foo::method1
-
-Notice: Only variable references should be returned by reference in %s on line %d
 foo::method1
-
-Notice: Only variable references should be returned by reference in %s on line %d
 foo::finalize
 done!
 ok2
 bar::run2
 foo::method2
+
+Notice: Undefined property: foo::$foo in %s on line 18
 foo::method2
+
+Notice: Undefined property: foo::$foo in %s on line 18
 foo::finalize
 done!
 ok3
@@ -117,10 +117,6 @@ done!
 ouch
 bar::run1
 foo::method1
-
-Notice: Only variable references should be returned by reference in %s on line %d
 foo::method1
-
-Notice: Only variable references should be returned by reference in %s on line %d
 foo::finalize
 I'm alive!
