@@ -66,7 +66,11 @@ unset($t);
 
 ?>
 ===DONE===
---EXPECT--
+--EXPECTF--
+Warning: in %s line 37: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 49: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 c::getIterator
 c_iter::__construct
 c_iter::rewind
