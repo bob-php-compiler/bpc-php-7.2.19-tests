@@ -248,6 +248,10 @@
 
 19. unsupported return reference from function/method
 
+20. bpc support double quoted string array string index
+
+    @see tests/lang/bug21820.phpt
+
 **misc**
 
 1. TODO
