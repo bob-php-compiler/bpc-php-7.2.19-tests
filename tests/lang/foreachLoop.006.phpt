@@ -8,4 +8,4 @@ foreach ($a as &$k=>$v) {
 }
 ?>
 --EXPECTF--
-Fatal error: Key element cannot be a reference in %s on line 3
+Parse error: %s in %s on line 3
