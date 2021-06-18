@@ -44,7 +44,7 @@ class bar extends man
 		{
 			return 'nobody';
 		}
-		return eval("return ".$who.'::getName();');
+		return man::getName();
 	}
 }
 
