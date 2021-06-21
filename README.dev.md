@@ -47,6 +47,8 @@
 
 3. no eval()
 
+    for test purpose, we can use bpc_eval()
+
 4. no create_function()
 
 5. skip function with many parameters

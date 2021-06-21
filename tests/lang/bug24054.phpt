@@ -1,5 +1,7 @@
 --TEST--
 Bug #24054 (Assignment operator *= broken)
+--ARGS--
+--bpc-include-file tests/lang/quicktester.inc --bpc-lib-path /tmp/quicktester
 --FILE--
 <?php // $Id$
 
@@ -17,7 +19,7 @@ $tests = <<<TESTS
 $i === $j
 TESTS;
 
-include(dirname(__FILE__) . '/../quicktester.inc');
+include(dirname(__FILE__) . '/quicktester.inc');
 --EXPECT--
 1,1,0,0
 OK
