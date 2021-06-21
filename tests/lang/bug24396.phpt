@@ -1,5 +1,7 @@
 --TEST--
 Bug #24396 (global $$variable broken)
+--SKIPIF--
+skip global $$
 --FILE--
 <?php
 
