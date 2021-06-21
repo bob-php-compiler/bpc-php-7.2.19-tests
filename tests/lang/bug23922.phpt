@@ -1,5 +1,7 @@
 --TEST--
 Bug #23922 (scope doesn't properly propagate into internal functions)
+--SKIPIF--
+skip TODO assert
 --FILE--
 <?php
   class foo
