@@ -313,6 +313,11 @@
     php: `Argument x passed to x must x, x given, called in x on line x`
     bpc: `Argument x passed to x must x, x given, called in x on line x and defined`
 
+14. stack-trace args
+
+    php only show user passed args
+    bpc show all args
+
 ## ext/date
 
 1. ini_set date.timezone warning message

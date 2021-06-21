@@ -3,16 +3,16 @@ Bug #24658 (combo of typehint / reference causes crash)
 --FILE--
 <?php
 class foo {}
-function no_typehint($a) {
+function no_typehint($a, $k = null) {
 	var_dump($a);
 }
-function typehint(foo $a) {
+function typehint(foo $a, $k = null) {
 	var_dump($a);
 }
-function no_typehint_ref(&$a) {
+function no_typehint_ref(&$a, $k = null) {
 	var_dump($a);
 }
-function typehint_ref(foo &$a) {
+function typehint_ref(foo &$a, $k = null) {
 	var_dump($a);
 }
 $v = new foo();
@@ -56,6 +56,6 @@ object(foo)#%d (0) {
 Fatal error: Uncaught TypeError: Argument 1 passed to typehint() must be an instance of foo, integer given in %s:%d
 Stack trace:
 #0 [internal function]: typehint(1, 1)
-#1 %s(%d): array_walk(Array, 'typehint')
+#1 %s(%d): array_walk(Array, 'typehint', NULL)
 #2 {main}
   thrown in %s on line %d
