@@ -2,7 +2,7 @@
 output buffering - fatalism
 --FILE--
 <?php
-function obh($s)
+function obh($s, $phase)
 {
 	return print_r($s, 1);
 }
