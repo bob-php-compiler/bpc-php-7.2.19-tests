@@ -11,8 +11,8 @@
 
 2. Too many arguments
 
-    compile error (functions) or runtime warning (functions/no default value methods)
-    default value methods is fine
+    compile error (functions) or runtime warning (functions/builtin class methods)
+    user defined class methods is fine.
     bpc continue to run the function while php return NULL if the function is builtin.
 
 3. argument type error message
