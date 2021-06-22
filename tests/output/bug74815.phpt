@@ -1,5 +1,7 @@
 --TEST--
 Bug #74815 crash with a combination of INI entries at startup
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 

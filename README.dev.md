@@ -319,6 +319,8 @@
     php only show user passed args
     bpc show all args
 
+15. invalid test
+
 ## output buffering
 
 1. chunk_size and buffer_used different
