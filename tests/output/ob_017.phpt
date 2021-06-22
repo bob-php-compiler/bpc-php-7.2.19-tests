@@ -23,14 +23,11 @@ print_r($stati);
 ?>
 --EXPECT--
 yes!
-yes!
 Array
 (
-    [0] => 1: yes
-    [1] => 4: !
+    [0] => 5: yes!
 
-    [2] => 2: no
-    [3] => 0: yes!
-
-    [4] => 10: no
+    [1] => 2: no
+    [2] => 10: yes!
+no
 )
