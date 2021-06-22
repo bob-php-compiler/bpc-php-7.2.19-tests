@@ -12,7 +12,6 @@ echo "\nToo many arguments\n";
 var_dump(flush($extra_arg));
 ?>
 --EXPECTF--
-Too many arguments
-
-Warning: flush() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
+*** ERROR:compile-error:
+Error: Too many arguments to function flush(): 0 at most, 1 provided in %s on line 9
+ -- compile-error
