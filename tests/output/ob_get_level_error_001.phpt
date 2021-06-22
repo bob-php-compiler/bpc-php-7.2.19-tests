@@ -18,10 +18,6 @@ var_dump( ob_get_level($extra_arg) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing ob_get_level() : error conditions ***
-
--- Testing ob_get_level() function with one argument --
-
-Warning: ob_get_level() expects exactly 0 parameters, 1 given in %s on line 13
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function ob_get_level(): 0 at most, 1 provided in %s on line 13
+ -- compile-error

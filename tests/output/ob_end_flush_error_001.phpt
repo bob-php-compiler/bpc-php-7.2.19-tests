@@ -18,10 +18,6 @@ var_dump( ob_end_flush($extra_arg) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing ob_end_flush() : error conditions ***
-
--- Testing ob_end_flush() function with one argument --
-
-Warning: ob_end_flush() expects exactly 0 parameters, 1 given in %s on line 13
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function ob_end_flush(): 0 at most, 1 provided in %s on line 13
+ -- compile-error

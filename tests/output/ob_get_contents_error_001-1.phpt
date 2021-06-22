@@ -13,13 +13,10 @@ Iain Lewis <ilewis@php.net>
 
 echo "*** Testing ob_get_contents() : error cases ***\n";
 
-ob_start();
+var_dump(ob_get_contents("bob"));
 
-var_dump(ob_get_contents("bob2",345));
-
-echo "Done\n";
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function ob_get_contents(): 0 at most, 2 provided in %s on line 13
+Error: Too many arguments to function ob_get_contents(): 0 at most, 1 provided in %s on line 11
  -- compile-error

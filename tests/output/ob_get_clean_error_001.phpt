@@ -15,7 +15,6 @@ var_dump(ob_get_clean($extra_arg));
 
 ?>
 --EXPECTF--
-Too many arguments
-
-Warning: ob_get_clean() expects exactly 0 parameters, 1 given in %s on line 10
-NULL
+*** ERROR:compile-error:
+Error: Too many arguments to function ob_get_clean(): 0 at most, 1 provided in %s on line 10
+ -- compile-error
