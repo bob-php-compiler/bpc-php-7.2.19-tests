@@ -20,10 +20,6 @@ var_dump( ob_implicit_flush($flag, $extra_arg) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing ob_implicit_flush() : error conditions ***
-
--- Testing ob_implicit_flush() function with more than expected no. of arguments --
-
-Warning: ob_implicit_flush() expects at most 1 parameter, 2 given in %s on line 15
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function ob_implicit_flush(): 1 at most, 2 provided in %s on line 15
+ -- compile-error
