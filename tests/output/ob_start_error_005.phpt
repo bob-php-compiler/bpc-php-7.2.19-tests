@@ -8,7 +8,7 @@ ob_start(): ensure buffers can't be added from within callback.
  * Function is implemented in main/output.c
 */
 
-function f($str) {
+function f($str, $phase) {
 	ob_start();
 	echo "hello";
 	ob_end_flush();
@@ -20,4 +20,4 @@ var_dump(ob_start('f'));
 echo "done";
 ?>
 --EXPECTF--
-Fatal error: ob_start(): Cannot use output buffering in output buffering display handlers in %s on line 9
+Fatal error: ob_start(): Cannot use output buffering in output buffering display handlers in %s on line 17
