@@ -2,10 +2,10 @@
 output buffering - handlers/status
 --FILE--
 <?php
-function a($s){return $s;}
-function b($s){return $s;}
-function c($s){return $s;}
-function d($s){return $s;}
+function a($s, $phase){return $s;}
+function b($s, $phase){return $s;}
+function c($s, $phase){return $s;}
+function d($s, $phase){return $s;}
 
 ob_start();
 ob_start('a');
@@ -42,7 +42,7 @@ Array
     [flags] => 20593
     [level] => 4
     [chunk_size] => %d
-    [buffer_size] => 16384
+    [buffer_size] => 0
     [buffer_used] => 96
 )
 Array
@@ -54,7 +54,7 @@ Array
             [flags] => 112
             [level] => 0
             [chunk_size] => %d
-            [buffer_size] => 16384
+            [buffer_size] => 0
             [buffer_used] => 0
         )
 
@@ -65,7 +65,7 @@ Array
             [flags] => 113
             [level] => 1
             [chunk_size] => %d
-            [buffer_size] => 16384
+            [buffer_size] => 0
             [buffer_used] => 0
         )
 
@@ -76,7 +76,7 @@ Array
             [flags] => 113
             [level] => 2
             [chunk_size] => %d
-            [buffer_size] => 16384
+            [buffer_size] => 0
             [buffer_used] => 0
         )
 
@@ -87,7 +87,7 @@ Array
             [flags] => 113
             [level] => 3
             [chunk_size] => %d
-            [buffer_size] => 16384
+            [buffer_size] => 0
             [buffer_used] => 4
         )
 
@@ -98,7 +98,7 @@ Array
             [flags] => 20593
             [level] => 4
             [chunk_size] => %d
-            [buffer_size] => 16384
+            [buffer_size] => 0
             [buffer_used] => %d
         )
 
