@@ -1,5 +1,7 @@
 --TEST--
 ob_start(): ensure even fatal error test is affected by output buffering.
+--SKIPIF--
+skip php error/warning/notice/... messages unbuffered
 --FILE--
 <?php
 
