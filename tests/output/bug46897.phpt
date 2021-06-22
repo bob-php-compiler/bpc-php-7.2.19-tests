@@ -2,7 +2,7 @@
 Bug #46897: ob_flush() should fail to flush unerasable buffers
 --FILE--
 <?php
-function callback($string) {
+function callback($string, $phase) {
     static $callback_invocations;
     $callback_invocations++;
     return "[callback:$callback_invocations]$string\n";
@@ -17,11 +17,8 @@ var_dump(ob_get_contents());
 echo 'Done';
 ?>
 --EXPECTF--
-[callback:1]Attempt to flush unerasable buffer - should fail...
 Notice: ob_flush(): failed to flush buffer of callback (0) in %s on line %d
-bool(false)
-string(%d) "Attempt to flush unerasable buffer - should fail...
-Notice: ob_flush(): failed to flush buffer of callback (0) in %s on line %d
-bool(false)
+[callback:1]Attempt to flush unerasable buffer - should fail...bool(false)
+string(%d) "Attempt to flush unerasable buffer - should fail...bool(false)
 "
 Done

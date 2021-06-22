@@ -323,6 +323,8 @@
 
 1. chunk_size and buffer_used different
 
+2. php error/warning/notice/... messages unbuffered
+
 ## ext/date
 
 1. ini_set date.timezone warning message
