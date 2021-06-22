@@ -323,6 +323,8 @@
 
 15. invalid test
 
+16. callable not check method is static or not
+
 ## output buffering
 
 1. chunk_size and buffer_used different

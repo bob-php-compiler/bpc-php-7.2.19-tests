@@ -20,12 +20,11 @@ function checkAndClean() {
   }
 }
 
-var_dump(ob_start('C::h'));
+var_dump(ob_start(array('C', 'h')));
 checkAndClean();
 
 ?>
 --EXPECTF--
-Warning: ob_start(): non-static method C::h() should not be called statically in %s on line 20
 bool(true)
 Array
 (
