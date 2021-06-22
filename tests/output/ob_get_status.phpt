@@ -26,7 +26,7 @@ array(1) {
     ["chunk_size"]=>
     int(0)
     ["buffer_size"]=>
-    int(16384)
+    int(0)
     ["buffer_used"]=>
     int(0)
   }
