@@ -60,6 +60,8 @@
 
 7. get_defined_functions order different
 
+8. as BPC_AUTO_RUN=TRUE, STDOUT is a pipe, stream_isatty(STDOUT) return false
+
 **object**
 
 1. __destruct
@@ -264,6 +266,7 @@
 1. TODO
 
     will support in the future
+    TODO php://memory php://temp
 
 2. No Undefined variable
 
