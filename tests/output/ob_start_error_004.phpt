@@ -15,7 +15,7 @@ var_dump(ob_start(array($c, 'f')));
 echo "done"
 ?>
 --EXPECTF--
-Warning: ob_start(): class 'C' does not have a method 'f' in %s on line %d
+Warning: ob_start() expects parameter 1 to be callable, C::f given in %s on line %d
 
 Notice: ob_start(): failed to create buffer in %s on line 11
 bool(false)
