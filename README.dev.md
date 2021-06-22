@@ -58,6 +58,8 @@
 
 6. no zend_version()
 
+7. get_defined_functions order different
+
 **object**
 
 1. __destruct
