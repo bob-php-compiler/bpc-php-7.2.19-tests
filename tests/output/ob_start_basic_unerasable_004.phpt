@@ -2,7 +2,7 @@
 ob_start(): Ensure unerasable buffer cannot be accessed or flushed by ob_get_flush().
 --FILE--
 <?php
-function callback($string) {
+function callback($string, $phase) {
 	static $callback_invocations;
 	$callback_invocations++;
 	return "[callback:$callback_invocations]$string\n";
@@ -15,8 +15,7 @@ $str = ob_get_flush();
 var_dump($str);
 ?>
 --EXPECTF--
-[callback:1]This call will obtain the content, but will not flush the buffer.
 Notice: ob_get_flush(): failed to send buffer of callback (0) in %s on line 11
 
 Notice: ob_get_flush(): failed to delete buffer of callback (0) in %s on line 11
-string(65) "This call will obtain the content, but will not flush the buffer."
+[callback:1]This call will obtain the content, but will not flush the buffer.string(65) "This call will obtain the content, but will not flush the buffer."
