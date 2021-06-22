@@ -6,6 +6,8 @@ if (getenv("SKIP_IO_CAPTURE_TESTS")) {
 	die("skip I/O capture test");
 }
 ?>
+--ARGS--
+--bpc-include-file tests/output/stream_isatty.inc
 --CAPTURE_STDIO--
 STDOUT STDERR
 --FILE--
@@ -26,7 +28,5 @@ STDERR (php://fd/2): bool(false)
 Not a stream: 
 Warning: stream_isatty() expects parameter 1 to be resource, string given in %s on line %d
 bool(false)
-Invalid stream (php://temp): bool(false)
 Invalid stream (php://input): bool(false)
-Invalid stream (php://memory): bool(false)
 File stream: bool(false)
