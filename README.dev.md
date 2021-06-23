@@ -62,6 +62,8 @@
 
 8. as BPC_AUTO_RUN=TRUE, STDOUT is a pipe, stream_isatty(STDOUT) return false
 
+9. static-decl initial value before function code
+
 **object**
 
 1. __destruct
@@ -260,6 +262,8 @@
     @see tests/lang/bug21820.phpt
 
 21. not support foreach as reference
+
+22. static-decl only support in function or method
 
 **misc**
 
