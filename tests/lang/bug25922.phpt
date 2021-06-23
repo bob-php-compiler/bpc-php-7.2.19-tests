@@ -19,5 +19,5 @@ function test()
 test();
 ?>
 --EXPECT--
-Undefined variable: data
+Undefined index: HTTP_HEADER
 Undefined index here: ''
