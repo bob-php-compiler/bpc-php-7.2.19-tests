@@ -1,5 +1,7 @@
 --TEST--
 Bug #30862 (Static array with boolean indexes)
+--ARGS--
+--bpc-include-file tests/lang/bug30862.inc
 --FILE--
 <?php
 class T {
@@ -11,9 +13,7 @@ print_r(T::$a);
 <?php
 define("X",0);
 define("Y",1);
-class T2 {
-	static $a = array(X=>"false", Y=>"true");
-}
+include "bug30862.inc";
 print_r(T2::$a);
 ?>
 --EXPECT--
