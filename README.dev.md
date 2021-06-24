@@ -187,6 +187,11 @@
 
 14. no ini auto_prepend_file
 
+15. display_errors
+
+    php: value can be bool or stderr ...
+    bpc: 1/on is #t, others #f
+
 **syntax**
 
 1. SKIP GOTO
@@ -335,6 +340,11 @@
 16. callable not check method is static or not
 
 17. include()/require()/*_once() wrong error message different
+
+18. out of memory
+
+    php Fatal error, run shutdown function, and ???(FIXME), exit
+    bpc Fatal error, run shutdown function, flush, exit
 
 ## output buffering
 
