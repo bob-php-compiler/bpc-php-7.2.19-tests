@@ -1,10 +1,11 @@
 --TEST--
 Timeout within eval
 --SKIPIF--
-skip TODO max_execution_time
 <?php
 	if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
 ?>
+--ARGS--
+--bpc-include-file tests/basic/timeout_config.inc --bpc-lib-path /tmp/timeout
 --FILE--
 <?php
 
@@ -17,7 +18,7 @@ function hello ($t) {
 	busy_wait($t*2);
 }
 
-eval('hello($t);');
+bpc_eval('/tmp/timeout', 'php-timeout-variation-3', 'hello($t);');
 ?>
 never reached here
 --EXPECTF--

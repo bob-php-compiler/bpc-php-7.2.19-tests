@@ -1,10 +1,11 @@
 --TEST--
 Timeout within array_walk
 --SKIPIF--
-skip TODO max_execution_time
 <?php
 	if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
 ?>
+--ARGS--
+--bpc-include-file tests/basic/timeout_config.inc
 --FILE--
 <?php
 
