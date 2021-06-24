@@ -1,5 +1,7 @@
 --TEST--
 Bug #73172 parse error: Invalid numeric literal
+--ARGS--
+--bpc-include-file tests/lang/bug73172.inc
 --FILE--
 <?php
 
