@@ -185,6 +185,8 @@
 
 13. no ini open_basedir
 
+14. no ini auto_prepend_file
+
 **syntax**
 
 1. SKIP GOTO
