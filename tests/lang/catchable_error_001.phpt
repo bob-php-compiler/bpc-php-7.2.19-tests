@@ -23,4 +23,4 @@ Fatal error: Uncaught TypeError: Argument 1 passed to blah() must be an instance
 Stack trace:
 #0 %s(%d): blah(Object(stdClass))
 #1 {main}
-  thrown in %scatchable_error_001.php on line 5
+  thrown in %scatchable_error_001.php on line 15
