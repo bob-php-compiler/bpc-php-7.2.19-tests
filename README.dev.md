@@ -334,6 +334,8 @@
 
 16. callable not check method is static or not
 
+17. include()/require()/*_once() wrong error message different
+
 ## output buffering
 
 1. chunk_size and buffer_used different
