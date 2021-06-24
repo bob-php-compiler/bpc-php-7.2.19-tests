@@ -3,7 +3,7 @@ Bug #32828 (Throwing exception in output_callback function with ob_start and ob_
 --FILE--
 <?php
 
-function output_handler($buffer)
+function output_handler($buffer, $phase)
 {
 	throw new Exception;
 }
