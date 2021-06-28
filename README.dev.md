@@ -272,6 +272,10 @@
 
 22. static-decl only support in function or method
 
+23. not support list in list
+
+    bpc not support `list(list($x)) = `, parse error
+
 **misc**
 
 1. TODO
