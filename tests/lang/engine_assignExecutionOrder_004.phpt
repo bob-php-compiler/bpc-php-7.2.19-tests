@@ -19,7 +19,8 @@ function i3() {
 }
 
 $a = array(10, 11, 12, 13);
-list($a[i1()+i2()], , list($a[i3()], $a[])) = array(0, 1, array(30, 40), 3);
+list($a[i1()+i2()],) = array(0, 1, array(30, 40), 3);
+list($a[i3()], $a[]) = array(30, 40);
 
 var_dump($a);
 
