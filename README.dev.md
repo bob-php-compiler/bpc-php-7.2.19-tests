@@ -350,6 +350,8 @@
     php Fatal error, run shutdown function, and ???(FIXME), exit
     bpc Fatal error, run shutdown function, flush, exit
 
+19. error_handler not support deprecated argument $errcontext
+
 ## output buffering
 
 1. chunk_size and buffer_used different
