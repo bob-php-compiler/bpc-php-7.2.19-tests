@@ -64,6 +64,10 @@
 
 9. static-decl initial value before function code
 
+10. func_get_arg/func_get_args/func_num_args
+
+    compile error when call in global scope
+
 **object**
 
 1. __destruct
