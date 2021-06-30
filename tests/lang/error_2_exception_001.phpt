@@ -18,7 +18,7 @@ class MyException extends Exception {
 	}
 }
 
-function ErrorsToExceptions($errno, $errmsg) {
+function ErrorsToExceptions($errno, $errmsg, $errfile, $errline) {
 	throw new MyException($errno, $errmsg);
 }
 
