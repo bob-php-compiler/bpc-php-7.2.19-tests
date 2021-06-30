@@ -7,5 +7,6 @@ var_dump(func_num_args());
 
 ?>
 --EXPECTF--
-Warning: func_num_args():  Called from the global scope - no function context in %s on line %d
-int(-1)
+*** ERROR:compile-error:
+Error: func_num_args():  Called from the global scope - no function context in %s on line %d
+ -- compile-error
