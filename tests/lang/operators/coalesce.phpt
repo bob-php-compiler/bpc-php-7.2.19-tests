@@ -9,39 +9,40 @@ $var2 = NULL;
 $obj = new StdClass;
 $obj->boo = 7;
 
-$arr = [
+$arr = array(
 	2 => 7,
 	"foo" => "bar",
 	"foobar" => NULL,
 	"qux" => $obj,
-	"bing" => [
+	"bing" => array(
 		"bang"
-	]
-];
+	)
+);
 
 function foobar() {
 	echo "called\n";
-	return ['a'];
+	return array('a');
 }
 
-var_dump($nonexistent_variable ?? 3);
+var_dump(isset($nonexistent_variable) ? $nonexistent_variable : 3);
 echo PHP_EOL;
-var_dump($var ?? 3);
-var_dump($var2 ?? 3);
+var_dump(isset($var) ? $var : 3);
+var_dump(isset($var2) ? $var2 : 3);
 echo PHP_EOL;
-var_dump($obj->boo ?? 3);
-var_dump($obj->bing ?? 3);
-var_dump($arr["qux"]->boo ?? 3);
-var_dump($arr["qux"]->bing ?? 3);
+var_dump(isset($obj->boo) ? $obj->boo : 3);
+var_dump(isset($obj->bing) ? $obj->bing : 3);
+var_dump(isset($arr["qux"]->boo) ? $arr["qux"]->boo : 3);
+var_dump(isset($arr["qux"]->bing) ? $arr["qux"]->bing : 3);
 echo PHP_EOL;
-var_dump($arr[2] ?? 3);
-var_dump($arr["foo"] ?? 3);
-var_dump($arr["foobar"] ?? 3);
-var_dump($arr["qux"] ?? 3);
-var_dump($arr["bing"][0] ?? 3);
-var_dump($arr["bing"][1] ?? 3);
+var_dump(isset($arr[2]) ? $arr[2] : 3);
+var_dump(isset($arr["foo"]) ? $arr["foo"] : 3);
+var_dump(isset($arr["foobar"]) ? $arr["foobar"] : 3);
+var_dump(isset($arr["qux"]) ? $arr["qux"] : 3);
+var_dump(isset($arr["bing"][0]) ? $arr["bing"][0] : 3);
+var_dump(isset($arr["bing"][1]) ? $arr["bing"][0] : 3);
 echo PHP_EOL;
-var_dump(foobar()[0] ?? false);
+$foobar_0 = foobar()[0];
+var_dump(isset($foobar_0) ? $foobar_0 : false);
 echo PHP_EOL;
 function f($x)
 {
@@ -49,7 +50,11 @@ function f($x)
     return $x;
 }
 
-$a = f(null) ?? f(1) ?? f(2);
+$f_null = f(null);
+$f_1    = f(1);
+$a = isset($f_null) ? $f_null
+                    : isset($f_1) ? $f_1
+                                  : f(2);
 ?>
 --EXPECTF--
 int(3)
