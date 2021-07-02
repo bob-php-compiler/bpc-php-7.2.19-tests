@@ -144,32 +144,12 @@ var_dump($u1, $u2);
 ?>
 --EXPECTF--
 ---- Pass by ref / pass by val: functions ----
-
-Notice: Undefined variable: u1 in %s on line 72
-
-Notice: Undefined variable: u1 in %s on line 74
 NULL
 string(11) "Ref changed"
-
-Notice: Undefined variable: u1 in %s on line 77
-
-Notice: Undefined variable: u2 in %s on line 77
-
-Notice: Undefined variable: u1 in %s on line 78
-
-Notice: Undefined variable: u2 in %s on line 78
 NULL
 NULL
-
-Notice: Undefined variable: u1 in %s on line 81
-
-Notice: Undefined variable: u1 in %s on line 82
 NULL
 string(11) "Ref changed"
-
-Notice: Undefined variable: u2 in %s on line 85
-
-Notice: Undefined variable: u2 in %s on line 86
 string(11) "Ref changed"
 NULL
 string(12) "Ref1 changed"
@@ -180,39 +160,19 @@ string(12) "Ref2 changed"
 
 Deprecated: Non-static method C::v() should not be called statically in %s on line 95
 
-Notice: Undefined variable: u1 in %s on line 95
-
 Deprecated: Non-static method C::r() should not be called statically in %s on line 96
-
-Notice: Undefined variable: u1 in %s on line 97
 NULL
 string(11) "Ref changed"
 
 Deprecated: Non-static method C::vv() should not be called statically in %s on line 100
-
-Notice: Undefined variable: u1 in %s on line 100
-
-Notice: Undefined variable: u2 in %s on line 100
-
-Notice: Undefined variable: u1 in %s on line 101
-
-Notice: Undefined variable: u2 in %s on line 101
 NULL
 NULL
 
 Deprecated: Non-static method C::vr() should not be called statically in %s on line 104
-
-Notice: Undefined variable: u1 in %s on line 104
-
-Notice: Undefined variable: u1 in %s on line 105
 NULL
 string(11) "Ref changed"
 
 Deprecated: Non-static method C::rv() should not be called statically in %s on line 108
-
-Notice: Undefined variable: u2 in %s on line 108
-
-Notice: Undefined variable: u2 in %s on line 109
 string(11) "Ref changed"
 NULL
 
@@ -222,38 +182,14 @@ string(12) "Ref2 changed"
 
 
  ---- Pass by ref / pass by val: instance method calls ----
-
-Notice: Undefined variable: u1 in %s on line 117
-
-Notice: Undefined variable: u1 in %s on line 118
 NULL
 string(11) "Ref changed"
-
-Notice: Undefined variable: u1 in %s on line 121
-
-Notice: Undefined variable: u1 in %s on line 123
 NULL
 string(11) "Ref changed"
-
-Notice: Undefined variable: u1 in %s on line 126
-
-Notice: Undefined variable: u2 in %s on line 126
-
-Notice: Undefined variable: u1 in %s on line 127
-
-Notice: Undefined variable: u2 in %s on line 127
 NULL
 NULL
-
-Notice: Undefined variable: u1 in %s on line 130
-
-Notice: Undefined variable: u1 in %s on line 131
 NULL
 string(11) "Ref changed"
-
-Notice: Undefined variable: u2 in %s on line 134
-
-Notice: Undefined variable: u2 in %s on line 135
 string(11) "Ref changed"
 NULL
 string(12) "Ref1 changed"
