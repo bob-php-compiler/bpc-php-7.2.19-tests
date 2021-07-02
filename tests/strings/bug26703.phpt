@@ -1,5 +1,7 @@
 --TEST--
 Bug #26703 (Certain characters inside strings incorrectly treated as keywords)
+--SKIPIF--
+skip no highlight_file() highlight_string()
 --INI--
 highlight.string=#DD0000
 highlight.comment=#FF9900
