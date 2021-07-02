@@ -32,6 +32,6 @@ int(7)
 int(16)
 array(1) {
   [0]=>
-  &int(1)
+  int(1)
 }
 int(1)

@@ -24,6 +24,22 @@
 
     compile error or runtime error
 
+5. pass array element by reference different
+
+    ```php
+    <?php
+    function test(&$a, &$b)
+    {
+        var_dump($a, $b);
+        $b = 'b';
+    }
+
+    $arr = array(1);
+    test($arr, $arr[0]);
+    var_dump($arr);
+    ```
+
+
 **function**
 
 1. function signatures before global code
