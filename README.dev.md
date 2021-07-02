@@ -39,7 +39,6 @@
     var_dump($arr);
     ```
 
-
 **function**
 
 1. function signatures before global code
@@ -295,6 +294,8 @@
 23. not support list in list
 
     bpc not support `list(list($x)) = `, parse error
+
+24. not support short tags
 
 **misc**
 

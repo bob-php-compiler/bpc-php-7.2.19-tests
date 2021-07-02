@@ -1,5 +1,7 @@
 --TEST--
 short_open_tag: On
+--SKIPIF--
+skip not support short tags
 --INI--
 short_open_tag=on
 --FILE--
