@@ -6,8 +6,6 @@ Static keyword - basic tests
 echo "\nSame variable used as static and non static.\n";
 function staticNonStatic() {
 	echo "---------\n";
-	$a=0;
-	echo "$a\n";
 	static $a=10;
 	echo "$a\n";
 	$a++;
@@ -37,24 +35,14 @@ manyInits();
 manyInits();
 manyInits();
 
-echo "\nUsing static keyword at global scope\n";
-for ($i=0; $i<3; $i++) {
-   static $s, $k=10;
-   echo "$s $k\n";
-   $s++;
-   $k++;
-}
 ?>
 --EXPECT--
 Same variable used as static and non static.
 ---------
-0
 10
 ---------
-0
 11
 ---------
-0
 12
 
 Lots of initialisations in the same statement.
@@ -76,8 +64,3 @@ Initialised to 10: 12
 Initialised to 20: 22
 Unitialised      : 2
 Initialised to 30: 32
-
-Using static keyword at global scope
- 10
-1 11
-2 12
