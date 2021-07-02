@@ -25,14 +25,10 @@ var_dump($undef2)
 --EXPECTF--
 Passing undefined by value
 
-Notice: Undefined variable: undef1 in %s on line 13
-
 Inside passbyVal call:
 NULL
 
 After call
-
-Notice: Undefined variable: undef1 in %s on line 15
 NULL
 
 Passing undefined by reference
