@@ -1,5 +1,7 @@
 --TEST--
 Test pass by reference semantics
+--SKIPIF--
+skip Only variables can be passed by reference
 --FILE--
 <?php
 error_reporting(E_ALL | E_STRICT | E_NOTICE);
