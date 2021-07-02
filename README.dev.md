@@ -39,6 +39,8 @@
     var_dump($arr);
     ```
 
+6. typehint check compile-error
+
 **function**
 
 1. function signatures before global code
