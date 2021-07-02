@@ -17,5 +17,6 @@ foo(bar(5));
 
 ?>
 --EXPECTF--
-Notice: Only variables should be passed by reference in %s on line 13
-int(5)
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %s on line 13
+ -- compile-error
