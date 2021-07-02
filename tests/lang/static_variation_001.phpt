@@ -1,5 +1,7 @@
 --TEST--
 Statics in nested functions & evals.
+--SKIPIF--
+skip no eval()
 --FILE--
 <?php
 
