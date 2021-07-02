@@ -1,5 +1,7 @@
 --TEST--
 Passing assignments by reference
+--SKIPIF--
+skip Only variables can be passed by reference
 --FILE--
 <?php
 
