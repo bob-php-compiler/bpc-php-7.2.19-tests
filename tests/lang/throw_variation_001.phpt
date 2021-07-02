@@ -1,5 +1,7 @@
 --TEST--
 Catching an exception thrown from an included file
+--ARGS--
+--bpc-include-file tests/lang/inc_throw.inc
 --FILE--
 <?php
 
