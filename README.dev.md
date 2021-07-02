@@ -85,6 +85,8 @@
 
     compile error when call in global scope
 
+11. no highlight_file() highlight_string()
+
 **object**
 
 1. __destruct

@@ -1,5 +1,7 @@
 --TEST--
 highlight_string() buffering
+--SKIPIF--
+skip no highlight_file() highlight_string()
 --INI--
 highlight.string=#DD0000
 highlight.comment=#FF9900
