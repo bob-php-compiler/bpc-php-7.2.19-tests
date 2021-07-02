@@ -1,5 +1,7 @@
 --TEST--
 Pass function and method calls by reference and by value.
+--SKIPIF--
+skip 1) unsupported return reference from function/method. 2) Only variables can be passed by reference
 --FILE--
 <?php
 class C {
