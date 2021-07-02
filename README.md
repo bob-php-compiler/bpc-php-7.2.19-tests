@@ -1,5 +1,6 @@
 # Passed Tests
 
+- [x] tests
 - [x] ext/date
 - [x] ext/pcre
 - [x] ext/mbstring
@@ -50,4 +51,3 @@ $ BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php ext
 ```shell
 $ BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php -w ~/failed.tests ext/date
 ```
-
