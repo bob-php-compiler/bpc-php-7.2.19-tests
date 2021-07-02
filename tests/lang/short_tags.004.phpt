@@ -28,7 +28,3 @@ This gets echoed twice
 
 <? $b=3; ?>
 
-
-Notice: Undefined variable: b in %s on line %d
-
-Notice: Undefined variable: b in %s on line %d
