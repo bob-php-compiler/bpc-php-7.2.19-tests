@@ -1,9 +1,10 @@
 --TEST--
 testing the behavior of string offset chaining
 --INI--
-error_reporting=E_ALL | E_DEPRECATED
+error_reporting=32767
 --FILE--
 <?php
+// E_ALL | E_DEPRECATED = 32767
 $array = array('expected_array' => "foobar");
 var_dump(isset($array['expected_array']));
 var_dump($array['expected_array']);
