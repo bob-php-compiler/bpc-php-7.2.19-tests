@@ -236,6 +236,7 @@
 5. define constant
 
     bpc not support const CONSTANT
+    constant always case-sensitive, bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
 
 6. closure no use
 
@@ -275,31 +276,27 @@
 
     bpc not support `const c1 = 1, c2 = 2;`
 
-16. define constant always case-sensitive
+16. parse error
 
-    bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
-
-17. parse error
-
-18. TODO `rval->`
+17. TODO `rval->`
 
     bpc currently not support `(new CLASS_NAME())->prop/method`
 
-19. unsupported return reference from function/method
+18. unsupported return reference from function/method
 
-20. bpc support double quoted string array string index
+19. bpc support double quoted string array string index
 
     @see tests/lang/bug21820.phpt
 
-21. not support foreach as reference
+20. not support foreach as reference
 
-22. static-decl only support in function or method
+21. static-decl only support in function or method
 
-23. not support list in list
+22. not support list in list
 
     bpc not support `list(list($x)) = `, parse error
 
-24. not support short tags
+23. not support short tags
 
 **misc**
 
