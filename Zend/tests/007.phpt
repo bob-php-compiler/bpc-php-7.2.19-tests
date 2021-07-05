@@ -3,7 +3,6 @@ each() tests
 --FILE--
 <?php
 
-var_dump(each());
 $var = 1;
 var_dump(each($var));
 $var = "string";
@@ -22,8 +21,6 @@ var_dump(each($a));
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: each() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
 
 Deprecated: The each() function is deprecated. This message will be suppressed on further calls in %s on line %d
 
