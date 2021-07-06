@@ -3,7 +3,6 @@ trigger_error() tests
 --FILE--
 <?php
 
-var_dump(trigger_error());
 var_dump(trigger_error("error"));
 var_dump(trigger_error(array()));
 var_dump(trigger_error("error", -1));
@@ -14,8 +13,6 @@ var_dump(trigger_error("error", E_USER_DEPRECATED));
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: trigger_error() expects at least 1 parameter, 0 given in %s on line %d
-NULL
 
 Notice: error in %s on line %d
 bool(true)
