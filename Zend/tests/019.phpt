@@ -150,8 +150,8 @@ foreach ($array_variables as $array_var) {
 }
 
 echo "\n*** Testing unset(), emtpy() & isset() with resource variables ***\n";
-$fp = fopen(__FILE__, "r");
-$dfp = opendir( dirname(__FILE__) );
+$fp = fopen("/proc/self/comm", "r");
+$dfp = opendir( dirname("/proc/self/comm") );
 $resources = array (
   $fp,
   $dfp
@@ -367,8 +367,6 @@ var_dump($global_var);
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -379,8 +377,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -391,8 +387,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -403,8 +397,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -415,8 +407,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -427,8 +417,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -439,8 +427,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -451,8 +437,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -463,8 +447,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -475,8 +457,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -487,8 +467,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -499,8 +477,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -511,8 +487,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -523,8 +497,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -535,8 +507,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -547,8 +517,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -559,8 +527,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -571,8 +537,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -583,8 +547,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -595,8 +557,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -607,8 +567,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -619,8 +577,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -631,8 +587,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -643,8 +597,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -655,8 +607,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -667,8 +617,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(false)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -679,8 +627,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: scalar_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -696,8 +642,6 @@ bool(false)
 bool(true)
 bool(true)
 bool(true)
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -712,19 +656,11 @@ bool(true)
 -- Innerloop Iteration 1 of Outerloop Iteration 2 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -739,19 +675,11 @@ bool(true)
 -- Innerloop Iteration 1 of Outerloop Iteration 3 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -766,19 +694,11 @@ bool(true)
 -- Innerloop Iteration 1 of Outerloop Iteration 4 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -793,19 +713,11 @@ bool(true)
 -- Innerloop Iteration 1 of Outerloop Iteration 5 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -826,14 +738,8 @@ array(3) {
   [3]=>
   int(4)
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(3) {
   [1]=>
@@ -850,14 +756,8 @@ array(2) {
   [3]=>
   int(4)
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(2) {
   [2]=>
@@ -870,14 +770,8 @@ array(1) {
   [3]=>
   int(4)
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(1) {
   [3]=>
@@ -886,19 +780,11 @@ array(1) {
 -- Innerloop Iteration 4 of Outerloop Iteration 6 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -917,14 +803,8 @@ array(2) {
   [2]=>
   float(5.6)
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(2) {
   [1]=>
@@ -937,14 +817,8 @@ array(1) {
   [2]=>
   float(5.6)
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(1) {
   [2]=>
@@ -953,19 +827,11 @@ array(1) {
 -- Innerloop Iteration 3 of Outerloop Iteration 7 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -982,14 +848,8 @@ array(1) {
   [2]=>
   string(3) "two"
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(1) {
   [2]=>
@@ -998,19 +858,11 @@ array(1) {
 -- Innerloop Iteration 2 of Outerloop Iteration 8 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -1027,14 +879,8 @@ array(1) {
   ["Age"]=>
   string(2) "30"
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(1) {
   ["Age"]=>
@@ -1043,19 +889,11 @@ array(1) {
 -- Innerloop Iteration 2 of Outerloop Iteration 9 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -1078,14 +916,8 @@ array(4) {
   [""]=>
   string(0) ""
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(4) {
   [1]=>
@@ -1106,14 +938,8 @@ array(3) {
   [""]=>
   string(0) ""
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(3) {
   ["One"]=>
@@ -1130,14 +956,8 @@ array(2) {
   [""]=>
   string(0) ""
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(2) {
   [2]=>
@@ -1150,14 +970,8 @@ array(1) {
   [""]=>
   string(0) ""
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(1) {
   [""]=>
@@ -1166,19 +980,11 @@ array(1) {
 -- Innerloop Iteration 5 of Outerloop Iteration 10 --
 array(0) {
 }
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(false)
-
-Notice: Undefined variable: key_val in %s on line %d
 bool(true)
 array(0) {
 }
-
-Notice: Undefined variable: array_var in %s on line %d
 NULL
 bool(false)
 bool(false)
@@ -1195,8 +1001,6 @@ bool(false)
 bool(true)
 bool(false)
 bool(false)
-
-Notice: Undefined variable: resource in %s on line %d
 NULL
 -- Iteration 2 --
 resource(%d) of type (stream)
@@ -1208,11 +1012,7 @@ bool(false)
 bool(true)
 bool(false)
 bool(false)
-
-Notice: Undefined variable: resource in %s on line %d
 NULL
-
-Notice: Undefined variable: resources in %s on line %d
 NULL
 bool(false)
 bool(true)
@@ -1228,17 +1028,9 @@ object(Point)#%d (3) {
 }
 bool(true)
 bool(false)
-
-Notice: Undefined variable: lable in %s on line %d
 bool(false)
-
-Notice: Undefined variable: lable in %s on line %d
 bool(true)
-
-Notice: Undefined variable: lable in %s on line %d
 bool(false)
-
-Notice: Undefined variable: lable in %s on line %d
 bool(true)
 object(Point)#%d (3) {
   ["x"]=>
@@ -1262,8 +1054,6 @@ bool(true)
 bool(false)
 bool(false)
 bool(true)
-
-Notice: Undefined variable: point1 in %s on line %d
 NULL
 bool(false)
 bool(true)
@@ -1292,26 +1082,20 @@ object(Point)#%d (3) {
 value of static_var before unset: 1
 bool(true)
 bool(false)
-
-Notice: Undefined variable: static_var in %s on line %d
 value of static_var after unset: 
 bool(false)
 bool(true)
 value of static_var after new assignment: 20
-value of static_var before unset: 2
+value of static_var before unset: 21
 bool(true)
 bool(false)
-
-Notice: Undefined variable: static_var in %s on line %d
 value of static_var after unset: 
 bool(false)
 bool(true)
 value of static_var after new assignment: 20
-value of static_var before unset: 3
+value of static_var before unset: 21
 bool(true)
 bool(false)
-
-Notice: Undefined variable: static_var in %s on line %d
 value of static_var after unset: 
 bool(false)
 bool(true)
