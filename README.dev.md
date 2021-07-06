@@ -244,7 +244,7 @@
 
     bpc not support use syntax
 
-7. Null Coalescing Operator
+7. Null Coalescing Operator ??
 
     bpc not support Null Coalescing Operator
 
@@ -299,6 +299,10 @@
     bpc not support `list(list($x)) = `, parse error
 
 23. not support short tags
+
+24. Ternary Operator ?:
+
+    leave out the middle part of the ternary operator `expr1 ?: expr2` will parse error
 
 **misc**
 
