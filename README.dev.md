@@ -87,6 +87,8 @@
 
 11. no highlight_file() highlight_string()
 
+12. get_loaded_extensions() no zend_extensions parameter
+
 **object**
 
 1. __destruct
