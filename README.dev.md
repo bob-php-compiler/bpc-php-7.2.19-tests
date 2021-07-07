@@ -380,6 +380,11 @@
 
 19. error_handler not support deprecated argument $errcontext
 
+20. Cannot use [] for reading
+
+    php: Fatal error
+    bpc: compile error
+
 ## output buffering
 
 1. chunk_size and buffer_used different
