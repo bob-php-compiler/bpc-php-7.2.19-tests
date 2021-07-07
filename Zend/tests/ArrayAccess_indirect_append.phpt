@@ -1,5 +1,7 @@
 --TEST--
 Using indirect append on ArrayAccess object
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 
