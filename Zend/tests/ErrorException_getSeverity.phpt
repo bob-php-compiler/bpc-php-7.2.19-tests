@@ -3,14 +3,14 @@ final public int ErrorException::getSeverity ( void );
 --CREDITS--
 marcosptf - <marcosptf@yahoo.com.br> - #phparty7 - @phpsp - novatec/2015 - sao paulo - br
 --INI--
-error_reporting = E_ALL
+error_reporting = 32767
 --FILE--
 <?php
-
-const EXCEPTION_CODE_ERROR = 0;
-const EXCEPTION_SEVERITY_ERROR_MSG = "This exception severity is: ";
-const EXCEPTION_PARAM_MSG = "string message param";
-const EXCEPTION_TRACE_AS_STRING_MSG = "#0 {main}";
+// E_ALL = 32767
+define('EXCEPTION_CODE_ERROR',          0);
+define('EXCEPTION_SEVERITY_ERROR_MSG',  "This exception severity is: ");
+define('EXCEPTION_PARAM_MSG',           "string message param");
+define('EXCEPTION_TRACE_AS_STRING_MSG', "#0 {main}");
 
 try {
     throw new ErrorException();
