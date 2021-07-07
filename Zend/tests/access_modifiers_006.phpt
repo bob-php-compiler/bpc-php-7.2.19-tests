@@ -11,4 +11,4 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Multiple static modifiers are not allowed in %s on line %d
+Parse error: Multiple static modifiers are not allowed in %s on line %d

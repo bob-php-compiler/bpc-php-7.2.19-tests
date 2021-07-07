@@ -9,4 +9,4 @@ final abstract class C {
 
 ?>
 --EXPECTF--
-Fatal error: Cannot use the final modifier on an abstract class in %s on line %d
+Parse error: Cannot use the final modifier on an abstract class in %s on line %d
