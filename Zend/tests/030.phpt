@@ -31,4 +31,4 @@ $test->bar();
 
 ?>
 --EXPECTF--
-Fatal error: Cannot re-assign $this in %s030.php on line 11
+Parse error: Cannot re-assign $this in %s030.php on line 13
