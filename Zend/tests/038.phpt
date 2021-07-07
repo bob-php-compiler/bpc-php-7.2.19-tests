@@ -7,6 +7,4 @@ var_dump(array(function() { } => 1));
 
 ?>
 --EXPECTF--
-Warning: Illegal offset type in %s on line %d
-array(0) {
-}
+Parse error: %s in %s on line 3
