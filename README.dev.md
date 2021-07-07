@@ -292,7 +292,7 @@
 
 20. not support foreach as reference
 
-21. static-decl only support in function or method
+21. static-decl/global-decl only support in function or method
 
 22. not support list in list
 
