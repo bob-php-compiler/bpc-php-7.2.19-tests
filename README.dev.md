@@ -370,18 +370,16 @@
 
 15. invalid test
 
-16. callable not check method is static or not
+16. include()/require()/*_once() wrong error message different
 
-17. include()/require()/*_once() wrong error message different
-
-18. out of memory
+17. out of memory
 
     php Fatal error, run shutdown function, and ???(FIXME), exit
     bpc Fatal error, run shutdown function, flush, exit
 
-19. error_handler not support deprecated argument $errcontext
+18. error_handler not support deprecated argument $errcontext
 
-20. Cannot use [] for reading
+19. Cannot use [] for reading
 
     php: Fatal error
     bpc: compile error

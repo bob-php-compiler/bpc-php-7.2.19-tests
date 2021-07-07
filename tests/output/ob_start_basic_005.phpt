@@ -25,6 +25,7 @@ checkAndClean();
 
 ?>
 --EXPECTF--
+Deprecated: Non-static method C::h() should not be called statically in %s on line 16
 bool(true)
 Array
 (
