@@ -273,6 +273,7 @@
 14. redeclare compile error
 
     Cannot redeclare constant
+    Cannot redeclare builtin and extension class
 
 15. class const defines one at a time
 
