@@ -1,5 +1,7 @@
 --TEST--
 Traversables cannot be unpacked into by-reference parameters
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 

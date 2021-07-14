@@ -1,5 +1,7 @@
 --TEST--
 Positional arguments cannot be used after argument unpacking
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 

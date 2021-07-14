@@ -1,5 +1,7 @@
 --TEST--
 Argument unpacking does not work with string keys (forward compatibility for named args)
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 

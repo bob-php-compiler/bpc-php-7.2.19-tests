@@ -1,5 +1,7 @@
 --TEST--
 Array must be separated if unpacking by reference
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Only arrays and Traversables can be unpacked
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 

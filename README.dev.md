@@ -307,6 +307,8 @@
 
 25. not support anonymous class
 
+26. not support ... operator
+
 **misc**
 
 1. TODO

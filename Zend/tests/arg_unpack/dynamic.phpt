@@ -1,5 +1,7 @@
 --TEST--
 Unpack arguments for dynamic call
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 

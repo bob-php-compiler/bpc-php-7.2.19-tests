@@ -1,5 +1,7 @@
 --TEST--
 Unpack arguments for new expression
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 

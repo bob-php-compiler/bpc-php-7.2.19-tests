@@ -1,5 +1,7 @@
 --TEST--
 Argument unpacking with by-ref arguments
+--SKIPIF--
+skip not support ... operator
 --FILE--
 <?php
 
