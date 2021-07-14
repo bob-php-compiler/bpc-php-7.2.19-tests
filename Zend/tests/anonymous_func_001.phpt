@@ -1,5 +1,7 @@
 --TEST--
 Testing calls to anonymous function
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 

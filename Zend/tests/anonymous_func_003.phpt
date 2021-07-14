@@ -1,5 +1,7 @@
 --TEST--
 Using throw $var with anonymous function return
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 

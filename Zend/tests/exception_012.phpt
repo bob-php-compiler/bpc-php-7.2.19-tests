@@ -1,5 +1,7 @@
 --TEST--
 Test exception doesn't cause RSHUTDOWN bypass, variation 1
+--SKIPIF--
+skip no create_function()
 --INI--
 assert.bail=1
 assert.exception=1

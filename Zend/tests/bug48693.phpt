@@ -1,5 +1,7 @@
 --TEST--
 Bug #48693 (Double declaration of __lambda_func when lambda wrongly formatted)
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 

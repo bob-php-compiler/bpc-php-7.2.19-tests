@@ -1,5 +1,7 @@
 --TEST--
 Closure 025: Using closure in create_function()
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 

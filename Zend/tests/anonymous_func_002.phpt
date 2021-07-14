@@ -1,5 +1,7 @@
 --TEST--
 Testing anonymous function return as array key and accessing $GLOBALS
+--SKIPIF--
+skip no create_function()
 --FILE--
 <?php
 
