@@ -1,5 +1,7 @@
 --TEST--
 declare anonymous class extending another
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 class A{}

@@ -1,5 +1,7 @@
 --TEST--
 declare bare anonymous class
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 var_dump(new class{});

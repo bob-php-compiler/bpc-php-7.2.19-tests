@@ -1,5 +1,7 @@
 --TEST--
 testing traits in anon classes
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Trait binding after anon class
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 

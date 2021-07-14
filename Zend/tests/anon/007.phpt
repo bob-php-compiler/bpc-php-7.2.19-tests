@@ -1,5 +1,7 @@
 --TEST--
 testing anon classes in functions outside of classes in namespaces
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 namespace lone {

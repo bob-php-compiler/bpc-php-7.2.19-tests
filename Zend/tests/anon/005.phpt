@@ -1,5 +1,7 @@
 --TEST--
 testing reusing anons that implement an interface
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 class Outer {

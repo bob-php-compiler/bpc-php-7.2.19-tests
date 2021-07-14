@@ -1,5 +1,7 @@
 --TEST--
 reusing anonymous classes
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 while (@$i++<10) {

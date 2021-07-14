@@ -1,5 +1,7 @@
 --TEST--
 closure binding to anonymous class
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 $class = new class {};

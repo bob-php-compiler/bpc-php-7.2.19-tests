@@ -1,5 +1,7 @@
 --TEST--
 Bug #71922: Crash on assert(new class{});
+--SKIPIF--
+skip not support anonymous class
 --INI--
 zend.assertions=1
 assert.exception=1

@@ -1,5 +1,7 @@
 --TEST--
 Ensure proper inheritance with get_class(anon class instance) used via class_alias (see also bug #70106)
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 

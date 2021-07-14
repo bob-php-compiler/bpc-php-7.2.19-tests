@@ -1,5 +1,7 @@
 --TEST--
 testing static access for methods and properties in anon classes
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 $anonClass = new class("cats", "dogs") {

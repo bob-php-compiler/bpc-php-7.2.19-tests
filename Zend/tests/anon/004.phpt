@@ -1,5 +1,7 @@
 --TEST--
 testing anonymous inheritance
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 class Outer {

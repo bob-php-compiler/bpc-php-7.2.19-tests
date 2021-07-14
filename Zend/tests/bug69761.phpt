@@ -1,5 +1,7 @@
 --TEST--
 Bug #69761 (Serialization of anonymous classes should be prevented)
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 $instance = new class('foo') {

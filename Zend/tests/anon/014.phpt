@@ -1,5 +1,7 @@
 --TEST--
 anonymous class trait binding
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 trait TaskTrait {

@@ -305,6 +305,8 @@
 
     leave out the middle part of the ternary operator `expr1 ?: expr2` will parse error
 
+25. not support anonymous class
+
 **misc**
 
 1. TODO

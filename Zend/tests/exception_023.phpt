@@ -1,7 +1,7 @@
 --TEST--
 Ensure proper backtraces with anon classes
 --SKIPIF--
-skip TODO support anon classes
+skip not support anonymous class
 --FILE--
 <?php
 
