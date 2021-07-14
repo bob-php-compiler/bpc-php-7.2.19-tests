@@ -1,5 +1,7 @@
 --TEST--
 Empty statement in assert() shouldn't segfault
+--SKIPIF--
+skip TODO assert()
 --FILE--
 <?php
 

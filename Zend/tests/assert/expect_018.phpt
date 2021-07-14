@@ -1,5 +1,7 @@
 --TEST--
 test assertions in namespace
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=1
 assert.exception=0

@@ -1,5 +1,7 @@
 --TEST--
 test enable/disable assertions at runtime (assertions completely disabled)
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=-1
 assert.exception=0

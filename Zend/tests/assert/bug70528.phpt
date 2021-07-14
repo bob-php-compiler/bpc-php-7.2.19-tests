@@ -1,5 +1,7 @@
 --TEST--
 Bug #70528 (assert() with instanceof adds apostrophes around class name)
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=1
 assert.exception=0

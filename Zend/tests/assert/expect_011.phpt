@@ -1,5 +1,7 @@
 --TEST--
 test overloaded __toString on custom exception
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=1
 assert.exception=1

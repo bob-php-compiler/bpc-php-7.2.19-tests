@@ -1,5 +1,7 @@
 --TEST--
 Misoptimization when variable is modified by assert()
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=1
 --FILE--

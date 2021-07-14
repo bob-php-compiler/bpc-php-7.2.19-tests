@@ -1,5 +1,7 @@
 --TEST--
 test stack trace is correct from failed exception in extended class (parent implementing constructor)
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=1
 assert.exception=1

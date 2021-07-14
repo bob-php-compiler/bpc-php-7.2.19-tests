@@ -1,5 +1,7 @@
 --TEST--
 test disabled expectations have no ill side effects
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=0
 assert.exception=1

@@ -1,5 +1,7 @@
 --TEST--
 Bug #70208 (scope information must be preserved with assert())
+--SKIPIF--
+skip TODO assert()
 --FILE--
 <?php
 
