@@ -1,5 +1,7 @@
 --TEST--
 Ensure "undefined offset" notice formats message corectly when undefined key is negative
+--SKIPIF--
+skip TODO ArrayObject
 --FILE--
 <?php
 
