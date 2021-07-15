@@ -1,5 +1,7 @@
 --TEST--
 Serialization of backtick literal is incorrect
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=1
 --FILE--
