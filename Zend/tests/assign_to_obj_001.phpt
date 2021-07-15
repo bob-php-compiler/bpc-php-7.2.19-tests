@@ -1,5 +1,7 @@
 --TEST--
 assgin to object leaks with ref
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 function &a($i) {
