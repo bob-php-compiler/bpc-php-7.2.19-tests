@@ -1,5 +1,7 @@
 --TEST--
 ZEND_POW_ASSIGN
+--SKIPIF--
+skip TODO assert()
 --INI--
 zend.assertions=1
 --FILE--
