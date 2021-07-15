@@ -311,6 +311,8 @@
 
 27. not support generators
 
+28. not support traits
+
 **misc**
 
 1. TODO
