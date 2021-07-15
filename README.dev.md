@@ -309,6 +309,8 @@
 
 26. not support ... operator
 
+27. not support generators
+
 **misc**
 
 1. TODO
