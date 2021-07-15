@@ -338,7 +338,7 @@
 
     bpc float to string (glibc snprintf) result may different with php when precision is -1 or 0
 
-10. .= access lval twice
+10. assigning-arithmetic-op access lval twice
 
     @see tests/classes/array_access_009.phpt `$people[0]['name'] .= 'Baz';`
     @see `(generate-code node::assigning-string-cat)`
