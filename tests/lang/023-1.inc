@@ -328,12 +328,17 @@ while ($i<5) {
     if ($j>2) {
       $k=0;
       echo "\$k should go from 0 to 2<br>\n";
+      $breakWhile = false;
       while ($k<5) {
         if ($k>2) {
-          break 2;
+          $breakWhile = true;
+          break;
         }
         echo "    \$k=$k<br>\n";
         $k++;
+      }
+      if ($breakWhile) {
+        break;
       }
     }
     echo "  \$j=$j<br>\n";

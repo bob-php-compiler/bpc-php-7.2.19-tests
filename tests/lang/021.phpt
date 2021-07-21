@@ -7,6 +7,7 @@ for ($i=0; $i<=5; $i++)
 {
   echo "i=$i\n";
 
+  $breakFor = false;
   switch($i) {
     case 0:
       echo "In branch 0\n";
@@ -19,13 +20,17 @@ for ($i=0; $i<=5; $i++)
       break;
     case 3:
       echo "In branch 3\n";
-      break 2;
+      $breakFor = true;
+      break;
     case 4:
       echo "In branch 4\n";
       break;
     default:
       echo "In default\n";
       break;
+  }
+  if ($breakFor) {
+    break;
   }
 }
 echo "hi\n";
