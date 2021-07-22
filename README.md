@@ -51,3 +51,10 @@ $ BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php ext
 ```shell
 $ BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php -w ~/failed.tests ext/date
 ```
+
+## 6. run with licensing
+
+```shell
+BPC_SERVER_SIGNATURE="SERVER_SIGNATURE_OUTPUT" BPC_EXPIRED_DATE=YYYY-MM-DD BPC_FIXED_TIME=9 BPC_MIN_CHECKS=3 BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php tests
+```
+
