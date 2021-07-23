@@ -7,4 +7,6 @@ function foo () {
 }
 ?>
 --EXPECTF--
-Fatal error: 'break' not in the 'loop' or 'switch' context in %sbreak_error_003.php on line 3
+*** ERROR:compile-error:
+Error: 'break' not in the 'loop' or 'switch' context in %sbreak_error_003.php on line 3
+ -- compile-error

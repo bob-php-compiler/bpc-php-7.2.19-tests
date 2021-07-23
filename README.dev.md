@@ -315,6 +315,8 @@
 
 29. not support multi-level break/continue
 
+30. break/continue not in loop/switch compile-error
+
 **misc**
 
 1. TODO
