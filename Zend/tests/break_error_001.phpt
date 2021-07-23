@@ -7,4 +7,4 @@ function foo () {
 }
 ?>
 --EXPECTF--
-Fatal error: 'break' operator accepts only positive numbers in %sbreak_error_001.php on line 3
+Parse error: %s in %s on line 3

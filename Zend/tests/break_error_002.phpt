@@ -7,4 +7,4 @@ function foo () {
 }
 ?>
 --EXPECTF--
-Fatal error: 'break' operator with non-constant operand is no longer supported in %sbreak_error_002.php on line 3
+Parse error: %s in %s on line 3
