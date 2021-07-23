@@ -317,6 +317,8 @@
 
 30. break/continue not in loop/switch compile-error
 
+31. not support return type
+
 **misc**
 
 1. TODO
