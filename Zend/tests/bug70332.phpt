@@ -1,5 +1,7 @@
 --TEST--
 Bug #70332 (Wrong behavior while returning reference on object)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 function & test($arg) {

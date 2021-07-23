@@ -1,5 +1,7 @@
 --TEST--
 Testing array dereference with chaining
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

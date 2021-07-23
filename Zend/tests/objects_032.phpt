@@ -1,5 +1,7 @@
 --TEST--
 Covariant return-by-ref constraints
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

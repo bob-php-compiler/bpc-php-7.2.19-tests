@@ -1,5 +1,7 @@
 --TEST--
 method overloading with different method signature
+--SKIPIF--
+skip unsupported return reference from function/method
 --INI--
 error_reporting=8191
 --FILE--

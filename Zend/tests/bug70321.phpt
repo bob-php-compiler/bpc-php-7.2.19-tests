@@ -1,5 +1,7 @@
 --TEST--
 bug #70321 (Magic getter breaks reference to array property)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 class foo implements arrayAccess

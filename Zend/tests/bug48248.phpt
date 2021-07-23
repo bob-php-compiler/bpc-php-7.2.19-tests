@@ -1,5 +1,7 @@
 --TEST--
 Bug #48248 (SIGSEGV when access to private property via &__get)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

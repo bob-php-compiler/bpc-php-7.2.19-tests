@@ -1,5 +1,7 @@
 --TEST--
 Bug #69376 (Wrong ref counting)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 function &test() {

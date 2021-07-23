@@ -1,5 +1,7 @@
 --TEST--
 Bug #75573 (Segmentation fault in 7.1.12 and 7.0.26)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

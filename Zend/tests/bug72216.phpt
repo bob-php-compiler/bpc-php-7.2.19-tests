@@ -1,5 +1,7 @@
 --TEST--
 Bug #72216 (Return by reference with finally is not memory safe)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 function &test() {

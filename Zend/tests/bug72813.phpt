@@ -1,5 +1,7 @@
 --TEST--
 Bug #72813 (Segfault with __get returned by ref)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 class Test

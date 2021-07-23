@@ -1,5 +1,7 @@
 --TEST--
 When performing a dynamic call to a ret-by-ref function, the reference should be unwrapped
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

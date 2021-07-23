@@ -1,5 +1,7 @@
 --TEST--
 Leak in QM_ASSIGN when unwrapping references (rc=1)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

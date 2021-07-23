@@ -1,5 +1,7 @@
 --TEST--
 Bug #69201 (Memory leak using iterator and get by reference on PHP 7)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 class Entity

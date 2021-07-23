@@ -1,5 +1,7 @@
 --TEST--
 Bug #39944 (References broken)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 $intTheValue = 0;

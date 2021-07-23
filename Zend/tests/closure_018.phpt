@@ -1,5 +1,7 @@
 --TEST--
 Closure 018: Assigning lambda to static var and returning by ref
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

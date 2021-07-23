@@ -1,5 +1,7 @@
 --TEST--
 Closure 019: Calling lambda using $GLOBALS and global $var
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 

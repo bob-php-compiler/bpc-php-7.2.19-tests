@@ -1,5 +1,7 @@
 --TEST--
 Bug #27268 (Bad references accentuated by clone)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 class A

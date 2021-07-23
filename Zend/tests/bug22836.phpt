@@ -1,5 +1,7 @@
 --TEST--
 Bug #22836 (returning references to NULL)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 function &f()
