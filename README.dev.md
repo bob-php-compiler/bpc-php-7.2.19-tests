@@ -89,6 +89,8 @@
 
 12. get_loaded_extensions() no zend_extensions parameter
 
+13. no class_alias()
+
 **object**
 
 1. __destruct
