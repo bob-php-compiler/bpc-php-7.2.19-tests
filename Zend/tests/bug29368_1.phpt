@@ -24,6 +24,8 @@ try {
   echo "Caught exception!\n";
 }
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 13: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Inside constructor
 Caught exception!
