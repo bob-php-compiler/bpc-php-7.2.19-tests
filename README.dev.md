@@ -174,6 +174,11 @@
     bpc check method before class
     @see tests/classes/abstract_redeclare.phpt
 
+18. interface implement itself error message
+
+    php: cannot implement itself
+    bpc: interface '%s' not found
+
 **FILE and LINE**
 
 1. FILE and LINE
