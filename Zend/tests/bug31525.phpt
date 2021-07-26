@@ -17,6 +17,4 @@ $bar->destroyThis();
 var_dump($bar);
 ?>
 --EXPECTF--
-Notice: Only variables should be assigned by reference in %sbug31525.php on line 7
-object(Foo)#1 (0) {
-}
+Parse error: Only variables should be assigned by reference in %sbug31525.php on line 7
