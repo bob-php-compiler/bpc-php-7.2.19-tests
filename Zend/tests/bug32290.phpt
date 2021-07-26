@@ -53,7 +53,7 @@ class TestB extends TestA
 		echo __METHOD__ . "($i)\n";
 		$i++;
 		if ($i >= 5) return 5;
-		return call_user_func_array(array($this, "TestA::doSomethingThis"), array($i));
+		return call_user_func_array(array($this, "parent::doSomethingThis"), array($i));
 	}
 
 	public function doSomethingParent($i)
