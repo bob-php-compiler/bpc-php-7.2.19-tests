@@ -29,6 +29,8 @@ unset($bar);
 ?>
 ===DONE===
 --EXPECTF--
+Warning: in %s line 10: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Foo::__construct
 Caught exception!
 ===DONE===
