@@ -1,5 +1,7 @@
 --TEST--
 Bug #31102 (Exception not handled when thrown inside __autoload())
+--ARGS--
+--bpc-lib-path /tmp/bug31102
 --FILE--
 <?php
 
@@ -12,10 +14,10 @@ spl_autoload_register(function ($class) {
 	switch($test)
 	{
 	case 1:
-		eval("class $class { function __construct(){throw new Exception('$class::__construct');}}");
+		bpc_eval("/tmp/bug31102", "php-$class", "class $class { function __construct(){throw new Exception('$class::__construct');}}");
 		return;
 	case 2:
-		eval("class $class { function __construct(){throw new Exception('$class::__construct');}}");
+		bpc_eval("/tmp/bug31102", "php-$class", "class $class { function __construct(){throw new Exception('$class::__construct');}}");
 		throw new Exception(__METHOD__);
 		return;
 	case 3:
@@ -27,7 +29,8 @@ while($test++ < 5)
 {
 	try
 	{
-		eval("\$bug = new Test$test();");
+	    $className = "Test$test";
+		$bug = new $className();
 	}
 	catch (Exception $e)
 	{
@@ -44,8 +47,7 @@ Caught: Test1::__construct
 Caught: {closure}
 {closure}(Test3,3)
 
-Fatal error: Uncaught Error: Class 'Test3' not found in %sbug31102.php(%d) : eval()'d code:1
+Fatal error: Uncaught Error: Class 'Test3' not found in %sbug31102.php:28
 Stack trace:
-#0 %s(%d): eval()
-#1 {main}
-  thrown in %sbug31102.php(%d) : eval()'d code on line 1
+#0 {main}
+  thrown in %sbug31102.php on line 28
