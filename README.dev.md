@@ -91,6 +91,12 @@
 
 13. no class_alias()
 
+14. function name downcase!
+
+15. debug_print_backtrace() print args same as stack trace
+
+    php print full args value
+
 **object**
 
 1. __destruct
