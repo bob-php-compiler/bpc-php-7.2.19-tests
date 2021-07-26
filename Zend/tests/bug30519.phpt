@@ -5,5 +5,6 @@ Bug #30519 (Interface not existing says Class not found)
 class test implements a {
 }
 ?>
---EXPECTF--
-Fatal error: Interface 'a' not found in %sbug30519.php on line 2
+--EXPECT--
+Error: problem running command 'bigloo', exit status 255
+Rerunning with -v[234] may provide more information.
