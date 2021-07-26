@@ -43,7 +43,6 @@ var_dump($db);
 ?>
 ===DONE===
 --EXPECTF--
-Notice: Undefined variable: db in %sbug30162.php on line 35
 NULL
 object(hariCow)#%d (2) {
   ["x"]=>
