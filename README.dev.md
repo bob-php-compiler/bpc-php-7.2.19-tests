@@ -179,6 +179,8 @@
     php: cannot implement itself
     bpc: interface '%s' not found
 
+19. methods order different
+
 **FILE and LINE**
 
 1. FILE and LINE

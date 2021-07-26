@@ -36,25 +36,25 @@ print_r(get_class_methods($a));
 square
 a:Array
 (
-    [0] => x2
-    [1] => buggy
-    [2] => unfold
-    [3] => __construct
+    [0] => __construct
+    [1] => unfold
+    [2] => x2
+    [3] => buggy
 )
 b:Array
 (
-    [0] => x2
+    [0] => __construct
+    [1] => unfold
+    [2] => x2
+    [3] => buggy
+)
+Array
+(
+    [0] => __construct
     [1] => buggy
-    [2] => unfold
-    [3] => __construct
 )
 Array
 (
-    [0] => buggy
-    [1] => __construct
-)
-Array
-(
-    [0] => buggy
-    [1] => __construct
+    [0] => __construct
+    [1] => buggy
 )
