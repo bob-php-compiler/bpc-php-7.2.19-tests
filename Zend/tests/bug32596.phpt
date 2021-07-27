@@ -20,7 +20,9 @@ class BUG {
 BUG::instance()->error;
 echo "this is still executed\n";
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 6: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+this is still executed
 BUG
 please fix this thing, it wasted a nice part of my life!
-this is still executed
