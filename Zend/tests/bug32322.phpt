@@ -51,30 +51,28 @@ class test
 echo "Try static instance inside class :\n";
 $getCopyofSingleton    = test::getInstance();
 $getCopyofSingleton    = null;
-$getCopyofSingleton    = &test::getInstance();
+$getCopyofSingleton    = test::getInstance();
 $getCopyofSingleton    = null;
 $getCopyofSingleton    = test::getInstance();
 echo "Try static instance inside function :\n";
 $getCopyofSingleton2   = test::getInstance2();
 $getCopyofSingleton2   = null;
-$getCopyofSingleton2   = &test::getInstance2();
+$getCopyofSingleton2   = test::getInstance2();
 $getCopyofSingleton2   = null;
 $getCopyofSingleton2   = test::getInstance2();
 
 define('SCRIPT_END',1);
 ?>
 --EXPECTF--
+Warning: in %s line 36: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Try static instance inside class :
 New class Singleton1 created 
 Using old class Singleton1
-
-Notice: Only variables should be assigned by reference in %sbug32322.php on line 49
 Using old class Singleton1
 Try static instance inside function :
 New class Singleton2 created 
 Using old class Singleton2
-
-Notice: Only variables should be assigned by reference in %sbug32322.php on line 55
 Using old class Singleton2
 Class Singleton1 destroyed at script end
 Class Singleton2 destroyed at script end
