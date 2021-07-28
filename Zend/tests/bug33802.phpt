@@ -2,7 +2,7 @@
 Bug #33802 (throw Exception in error handler causes crash)
 --FILE--
 <?php
-set_error_handler('errorHandler', E_USER_ERROR);
+set_error_handler('errorHandler');
 try{
     test();
 }catch(Exception $e){
