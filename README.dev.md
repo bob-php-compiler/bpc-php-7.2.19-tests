@@ -413,6 +413,10 @@
     php: Fatal error
     bpc: compile error
 
+20. once refed, always refed
+
+    @see Zend/tests/bug33282.phpt
+
 ## output buffering
 
 1. chunk_size and buffer_used different
