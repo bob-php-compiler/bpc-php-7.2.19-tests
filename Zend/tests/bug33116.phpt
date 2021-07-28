@@ -1,10 +1,12 @@
 --TEST--
 Bug #33116 (crash when assigning class name to global variable in __autoload)
+--ARGS--
+--bpc-include-file Zend/tests/bug33116.inc
 --FILE--
 <?php
 spl_autoload_register(function ($class) {
   $GLOBALS['include'][] = $class;
-  eval("class DefClass{}");
+  include "bug33116.inc";
 });
 
 $a = new DefClass;
