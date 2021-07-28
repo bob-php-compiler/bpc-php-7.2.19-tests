@@ -14,7 +14,13 @@ function FooTest(Foo $foo)
     echo "Hello!";
 }
 
-FooTest(new Foo());
+try {
+	FooTest();
+} catch (Throwable $e) {
+	echo "Exception: " . $e->getMessage() . "\n";
+}
 ?>
 --EXPECTF--
-Hello!
+*** ERROR:compile-error:
+Error: Too few arguments to function FooTest(): 1 required, 0 provided in %sbug33996-2.php on line 13
+ -- compile-error
