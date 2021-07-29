@@ -11,5 +11,5 @@ $x = new foo();
 $x->bar();
 echo "ok\n";
 ?>
---EXPECT--
-ok
+--EXPECTF--
+Parse error: Cannot create reference to $this in %s on line 4
