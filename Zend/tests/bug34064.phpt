@@ -19,6 +19,7 @@ class XmlTest {
         $this->test_ref($ar[]);
         var_dump($ar);
         $this->test($ar[]);
+        var_dump($ar);
     }
 }
 
@@ -30,9 +31,9 @@ array(1) {
   [0]=>
   string(2) "ok"
 }
-
-Fatal error: Uncaught Error: Cannot use [] for reading in %sbug34064.php:18
-Stack trace:
-#0 %s(%d): XmlTest->run()
-#1 {main}
-  thrown in %sbug34064.php on line 18
+array(2) {
+  [0]=>
+  string(2) "ok"
+  [1]=>
+  NULL
+}

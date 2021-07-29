@@ -41,6 +41,11 @@
 
 6. typehint check compile-error
 
+7. method call and dynamic function call arg always in container
+
+    @see Zend/tests/bug34064.phpt
+    pass `$arr[]` as argument may not be a good idea
+
 **function**
 
 1. function signatures before global code
