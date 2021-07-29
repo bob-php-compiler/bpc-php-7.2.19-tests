@@ -4,6 +4,8 @@ Bug #35017 (Exception thrown in error handler may cause unexpected behavior)
 <?php
 set_error_handler('errorHandler');
 try {
+    $s = array();
+    $a = $s[0];
 	if ($a) {
 		echo "1\n";
 	} else {
@@ -13,7 +15,7 @@ try {
 } catch(Exception $e) {
   echo "This Exception should be catched\n";
 }
-function errorHandler($errno, $errstr, $errfile, $errline, $vars) {
+function errorHandler($errno, $errstr, $errfile, $errline) {
 	throw new Exception('Some Exception');
 }
 ?>
