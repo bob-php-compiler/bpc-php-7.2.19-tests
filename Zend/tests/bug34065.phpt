@@ -2,7 +2,7 @@
 Bug #34065 (throw in foreach causes memory leaks)
 --FILE--
 <?php
-$data = file(__FILE__);
+$data = file('/proc/self/comm');
 try {
   foreach ($data as $line) {
     throw new Exception("error");
