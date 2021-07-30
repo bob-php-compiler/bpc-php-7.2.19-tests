@@ -1,5 +1,7 @@
 --TEST--
 Bug #35655 (whitespace following end of heredoc is lost)
+--SKIPIF--
+skip no highlight_file() highlight_string()
 --INI--
 highlight.string  = #DD0000
 highlight.comment = #FF8000
@@ -11,7 +13,7 @@ highlight.html    = #000000
 $code = '
 <?php
   $x = <<<EOT
-some string    
+some string
 EOT
   $y = 2;
 ?>';
