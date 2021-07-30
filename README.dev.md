@@ -444,3 +444,5 @@
 3. mbstring can handle recursion
 
 4. no ini mbstring.http_*, mbstring.encoding_translation
+
+5. mb_convert_variables() corrupts reference of array element
