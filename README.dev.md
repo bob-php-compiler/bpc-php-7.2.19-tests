@@ -356,30 +356,28 @@
 
     bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
 
-5. php-7.4.16 var_dump recursion different with php-7.2.19
+5. compile time +-*/% calculate
 
-6. compile time +-*/% calculate
+6. no constant PHP_BINARY
 
-7. no constant PHP_BINARY
+7. no cli server
 
-8. no cli server
-
-9. float precision -1 or 0
+8. float precision -1 or 0
 
     bpc float to string (glibc snprintf) result may different with php when precision is -1 or 0
 
-10. assigning-arithmetic-op access lval twice
+9. assigning-arithmetic-op access lval twice
 
     @see tests/classes/array_access_009.phpt `$people[0]['name'] .= 'Baz';`
     @see `(generate-code node::assigning-string-cat)`
 
-11. var_export whole string
+10. var_export whole string
 
     bpc output whole string
     php output concat string
     @see tests/classes/array_conversion_keys.phpt
 
-12. problem running command 'bigloo'
+11. problem running command 'bigloo'
 
     generate scheme code ok, compile scheme code error.
     
@@ -392,33 +390,33 @@
     ```
     ERR: Unbound variable -- *CLASS-d*
 
-13. typehint TypeError message
+12. typehint TypeError message
 
     php: `Argument x passed to x must x, x given, called in x on line x`
     bpc: `Argument x passed to x must x, x given, called in x on line x and defined`
 
-14. stack-trace args
+13. stack-trace args
 
     php only show user passed args
     bpc show all args
 
-15. invalid test
+14. invalid test
 
-16. include()/require()/*_once() wrong error message different
+15. include()/require()/*_once() wrong error message different
 
-17. out of memory
+16. out of memory
 
     php Fatal error, run shutdown function, and ???(FIXME), exit
     bpc Fatal error, run shutdown function, flush, exit
 
-18. error_handler not support deprecated argument $errcontext
+17. error_handler not support deprecated argument $errcontext
 
-19. Cannot use [] for reading
+18. Cannot use [] for reading
 
     php: Fatal error
     bpc: compile error
 
-20. once refed, always refed
+19. once refed, always refed
 
     @see Zend/tests/bug33282.phpt
 
