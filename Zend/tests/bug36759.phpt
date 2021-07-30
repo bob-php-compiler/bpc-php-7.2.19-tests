@@ -22,6 +22,10 @@ class Bar {
 $y = new Bar();
 $x = new Foo($y);
 ?>
---EXPECT--
-Foo::__destruct
+--EXPECTF--
+Warning: in %s line 7: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 14: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Bar::__destruct
+Foo::__destruct

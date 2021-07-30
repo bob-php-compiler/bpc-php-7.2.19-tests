@@ -109,6 +109,7 @@
     compile time warning and run as shutdown function
     compile error if not public
     always run even after fatal errors, @see Zend/tests/bug36268.phpt
+    destructors are invoked in the order of objects constructed
 
 2. unset static property
 
