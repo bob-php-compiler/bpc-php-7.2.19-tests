@@ -18,13 +18,6 @@ $object_type = array_pop((ObjectPath::getType()));
 print_r(ObjectPath::getType());
 ?>
 --EXPECTF--
-Array
-(
-    [0] => main
-)
-
-Notice: Only variables should be passed by reference in %sbug35393.php on line 12
-Array
-(
-    [0] => main
-)
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %sbug35393.php on line 12
+ -- compile-error
