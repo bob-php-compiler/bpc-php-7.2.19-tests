@@ -1,5 +1,7 @@
 --TEST--
 Bug #36513 (comment will be outputed in last line)
+--SKIPIF--
+skip no highlight_file() highlight_string()
 --FILE--
 <?php
 function test($s) {
