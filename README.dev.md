@@ -108,6 +108,7 @@
 
     compile time warning and run as shutdown function
     compile error if not public
+    always run even after fatal errors, @see Zend/tests/bug36268.phpt
 
 2. unset static property
 
