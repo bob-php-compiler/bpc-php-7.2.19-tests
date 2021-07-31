@@ -58,3 +58,9 @@ $ BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php -w 
 BPC_SERVER_SIGNATURE="SERVER_SIGNATURE_OUTPUT" BPC_EXPIRED_DATE=YYYY-MM-DD BPC_FIXED_TIME=9 BPC_MIN_CHECKS=3 BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php tests
 ```
 
+## 7. static link
+
+```shell
+$ BPC_STATIC=TRUE BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/pcc php run-tests.php ext/pcre
+```
+
