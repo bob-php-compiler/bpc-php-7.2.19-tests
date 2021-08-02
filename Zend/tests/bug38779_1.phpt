@@ -1,5 +1,7 @@
 --TEST--
 Bug #38779 (engine crashes when require()'ing file with syntax error through userspace stream wrapper)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 
