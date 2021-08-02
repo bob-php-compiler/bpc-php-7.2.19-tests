@@ -1,5 +1,7 @@
 --TEST--
 Bug #39003 (__autoload() is called for type hinting)
+--ARGS--
+--bpc-include-file Zend/tests/bug39003.inc
 --FILE--
 <?php
 
