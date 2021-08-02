@@ -59,13 +59,22 @@ $obj2 = new A(2);
 unset($obj1);
 $obj2->func1();
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 36: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 before call func1
 A Object
 (
     [i] => 1
 )
 func1(): 1
+after call func1
+before call func1
+A Object
+(
+    [i] => 2
+)
+func1(): 2
 after call func1
 A::__destruct()
 before call close
@@ -75,13 +84,6 @@ A Object
 )
 close(): 1
 after call close
-before call func1
-A Object
-(
-    [i] => 2
-)
-func1(): 1
-after call func1
 A::__destruct()
 before call close
 A Object
