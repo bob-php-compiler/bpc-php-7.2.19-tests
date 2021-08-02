@@ -188,6 +188,8 @@
 
 19. methods order different
 
+20. not support streamWrapper
+
 **FILE and LINE**
 
 1. FILE and LINE
