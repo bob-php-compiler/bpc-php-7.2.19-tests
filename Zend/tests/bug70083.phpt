@@ -1,5 +1,7 @@
 --TEST--
 Bug #70083 (Use after free with assign by ref to overloaded objects)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 
