@@ -1,5 +1,7 @@
 --TEST--
 Bug #39449 (Overloaded array properties do not work correctly)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 class A {
