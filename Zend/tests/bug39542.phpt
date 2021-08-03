@@ -1,14 +1,16 @@
 --TEST--
 Bug #39542 (Behaviour of require_once/include_once different to < 5.2.0)
+--ARGS--
+--bpc-include-file Zend/tests/bug39542-include/bug39542.php
 --FILE--
 <?php
-$oldcwd = getcwd();
-chdir(dirname(__FILE__));
-if (substr(PHP_OS, 0, 3) == 'WIN') {
-	set_include_path(dirname(__FILE__).'/bug39542;.');
-} else {
-	set_include_path(dirname(__FILE__).'/bug39542:.');
-}
+//$oldcwd = getcwd();
+//chdir(dirname(__FILE__));
+//if (substr(PHP_OS, 0, 3) == 'WIN') {
+//	set_include_path(dirname(__FILE__).'/bug39542;.');
+//} else {
+	set_include_path(dirname(__FILE__).'/bug39542-include:.');
+//}
 
 spl_autoload_register(function ($class) {
     if (!require_once($class.'.php')) {
@@ -18,7 +20,7 @@ spl_autoload_register(function ($class) {
 
 new bug39542();
 
-chdir($oldcwd);
+//chdir($oldcwd);
 ?>
 --EXPECT--
 ok
