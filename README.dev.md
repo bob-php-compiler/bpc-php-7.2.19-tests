@@ -102,6 +102,11 @@
 
     php print full args value
 
+16. get_defined_vars()
+
+    php return variables before the function call
+    bpc return all variables of the current scope
+
 **object**
 
 1. __destruct
