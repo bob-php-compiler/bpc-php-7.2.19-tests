@@ -199,6 +199,10 @@
 
 21. Undefined class constant message
 
+22. Cannot use string offset as an object
+
+    @see bug41813.phpt
+
 **FILE and LINE**
 
 1. FILE and LINE
