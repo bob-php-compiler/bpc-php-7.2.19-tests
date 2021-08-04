@@ -18,7 +18,7 @@ var_dump(is_callable("cd"));
 var_dump(is_callable("Test\\"));
 var_dump(is_callable("\\Test"));
 var_dump(is_callable("\\Test\\"));
-var_dump(is_callable("Test::foo"));
+var_dump(is_callable(array('Test', 'foo')));
 var_dump(is_callable("\\Test::foo"));
 var_dump(is_callable("is_string"));
 var_dump(is_callable("\\is_string"));
@@ -36,6 +36,6 @@ bool(false)
 bool(false)
 bool(false)
 bool(true)
+bool(false)
 bool(true)
-bool(true)
-bool(true)
+bool(false)
