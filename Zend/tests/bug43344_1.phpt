@@ -1,8 +1,8 @@
 --TEST--
-Bug #43344.1 (Wrong error message for undefined namespace constant)
+Bug #43344.1 (Wrong error message for undefined constant)
 --FILE--
 <?php
-namespace Foo;
+//namespace Foo;
 function f1($a=bar) {
 	return $a;
 }
@@ -19,14 +19,18 @@ echo f2()."\n";
 echo f3()."\n";
 ?>
 --EXPECTF--
+Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 0
+
+Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 0
+
 Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 13
 bar
 
-Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 3
+Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 14
 bar
 
-Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 6
+Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 15
 bar
 
-Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 9
+Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 16
 bar
