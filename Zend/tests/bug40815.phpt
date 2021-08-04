@@ -9,7 +9,7 @@ class ehandle{
 	}
 }
 
-set_exception_handler("ehandle::exh");
+set_exception_handler(array('ehandle', 'exh'));
 
 throw new Exception ("Whiii");
 echo "Done\n";
