@@ -107,6 +107,8 @@
     php return variables before the function call
     bpc return all variables of the current scope
 
+17. dynamic function call warning message
+
 **object**
 
 1. __destruct

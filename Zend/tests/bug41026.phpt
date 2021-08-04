@@ -23,4 +23,4 @@ echo "Done\n";
 --EXPECTF--
 Done
 
-Warning: (Registered shutdown functions) Unable to call self::on_shutdown() - function does not exist in Unknown on line 0
+Warning: cannot access self:: when no class scope is active in %s on line 18
