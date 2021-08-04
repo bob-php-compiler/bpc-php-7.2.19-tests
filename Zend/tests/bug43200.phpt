@@ -19,32 +19,15 @@ class x extends c implements a, b {
 	function foo() { }
 }
 
-ReflectionClass::export('x');
+$o = new x;
+var_dump($o instanceof x);
+var_dump($o instanceof c);
+var_dump($o instanceof a);
+var_dump($o instanceof b);
 
 ?>
---EXPECTF--
-Class [ <user> class x extends c implements a, b ] {
-  @@ %s 15-17
-
-  - Constants [0] {
-  }
-
-  - Static properties [0] {
-  }
-
-  - Static methods [0] {
-  }
-
-  - Properties [0] {
-  }
-
-  - Methods [2] {
-    Method [ <user, prototype b> public method foo ] {
-      @@ %s 16 - 16
-    }
-
-    Method [ <user, inherits c, prototype a> public method bar ] {
-      @@ %s 12 - 12
-    }
-  }
-}
+--EXPECT--
+bool(true)
+bool(true)
+bool(true)
+bool(true)

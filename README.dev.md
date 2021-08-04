@@ -130,9 +130,7 @@
 
     bpc's gc different with php's gc, so object ids may not equal
 
-5. SKIP Reflection
-
-    bpc does not support Reflection
+5. not support Reflection
 
 6. php-7.2.19 object to string error
 
