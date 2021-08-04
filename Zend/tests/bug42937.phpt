@@ -18,7 +18,7 @@ class B extends A {
 	function test() {
 		self::test1();
 		parent::test2();
-		static::test3();
+		//static::test3();
 		A::test4();
 		B::test5();
 		C::test6();
@@ -35,7 +35,6 @@ $b->test();
 test
 test1
 test2
-test3
 test4
 test5
 
@@ -43,4 +42,4 @@ Fatal error: Uncaught Error: Call to undefined method C::test6() in %sbug42937.p
 Stack trace:
 #0 %s(%d): B->test()
 #1 {main}
-  thrown in %sbug42937.php on line 21
+  thrown in %sbug42937.php on line 29

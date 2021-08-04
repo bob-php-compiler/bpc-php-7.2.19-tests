@@ -357,6 +357,8 @@
 
 31. not support return type
 
+32. not support late static bindings
+
 **misc**
 
 1. TODO
