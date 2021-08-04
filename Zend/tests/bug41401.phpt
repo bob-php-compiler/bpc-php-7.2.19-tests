@@ -1,5 +1,7 @@
 --TEST--
 Bug #41401 (wrong precedence for unary minus)
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 echo 1/-2*5;
