@@ -197,6 +197,8 @@
 
 20. not support streamWrapper
 
+21. Undefined class constant message
+
 **FILE and LINE**
 
 1. FILE and LINE
