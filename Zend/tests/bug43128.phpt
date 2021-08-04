@@ -1,5 +1,7 @@
 --TEST--
 Bug #43128 (Very long class name causes segfault)
+--SKIPIF--
+skip invalid test
 --INI--
 memory_limit=128000000
 --FILE--
