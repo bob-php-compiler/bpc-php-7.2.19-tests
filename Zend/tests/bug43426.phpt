@@ -35,5 +35,6 @@ $c,
 function foo2($d) {}
 echo "ok\n";
 ?>
---EXPECT--
+--EXPECTF--
+Warning: Too many arguments to function foo2(): 1 at most, 259 provided in %sbug43426.php on line 31
 ok
