@@ -2,7 +2,9 @@
 Bug #40899 (memory leak when nesting list())
 --FILE--
 <?php
-list(list($a,$b),$c)=array(array('a','b'),'c');
+$arr = array(array('a','b'),'c');
+list($a,$b) = $arr[0];
+list(,$c) = $arr;
 echo "$a$b$c\n";
 ?>
 --EXPECT--
