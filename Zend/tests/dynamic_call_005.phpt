@@ -6,13 +6,13 @@ Dynamic calls to scope introspection functions are forbidden
 function test_calls($func) {
     $i = 1;
 
-    array_map($func, [['i' => new stdClass]]);
+    array_map($func, array(array('i' => new stdClass)));
     var_dump($i);
 
-    $func(['i' => new stdClass]);
+    $func(array('i' => new stdClass));
     var_dump($i);
 
-    call_user_func($func, ['i' => new stdClass]);
+    call_user_func($func, array('i' => new stdClass));
     var_dump($i);
 }
 test_calls('extract');
