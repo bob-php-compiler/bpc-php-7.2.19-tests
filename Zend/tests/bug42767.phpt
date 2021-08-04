@@ -1,5 +1,7 @@
 --TEST--
 Bug #42767 (highlight_string() truncates trailing comments)
+--SKIPIF--
+skip no highlight_file() highlight_string()
 --INI--
 highlight.string  = #DD0000
 highlight.comment = #FF8000
