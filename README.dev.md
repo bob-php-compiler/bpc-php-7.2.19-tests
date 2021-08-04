@@ -429,6 +429,11 @@
 
     @see Zend/tests/bug33282.phpt
 
+20. dynamic funcall blacklist
+
+    php check arguments
+    bpc not check arguments
+
 ## output buffering
 
 1. chunk_size and buffer_used different
