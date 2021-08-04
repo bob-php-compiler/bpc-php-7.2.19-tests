@@ -1,5 +1,7 @@
 --TEST--
 Bug #41209 (Segmentation fault with ArrayAccess, set_error_handler and undefined var)
+--SKIPIF--
+skip No Undefined variable
 --FILE--
 <?php
 
