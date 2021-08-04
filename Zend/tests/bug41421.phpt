@@ -1,5 +1,7 @@
 --TEST--
 Bug #41421 (Uncaught exception from a stream wrapper segfaults)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 
