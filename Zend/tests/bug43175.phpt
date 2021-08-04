@@ -20,5 +20,12 @@ try {
     echo "__call via traditional factory should be caught\n";
 }
 ?>
---EXPECT--
-__call via traditional factory should be caught
+--EXPECTF--
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+
+Fatal error: Uncaught Exception in %sbug43175.php:5
+Stack trace:
+#0 %sbug43175.php(15): foobar->__destruct()
+#1 {main}
+  thrown in %sbug43175.php on line 15
