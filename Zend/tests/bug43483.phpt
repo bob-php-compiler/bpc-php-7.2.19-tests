@@ -19,6 +19,6 @@ D::test();
 Successfully called D::prot().
 Array
 (
-    [0] => prot
-    [1] => test
+    [0] => test
+    [1] => prot
 )
