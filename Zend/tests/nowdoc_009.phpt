@@ -1,5 +1,7 @@
 --TEST--
 Torture the T_END_NOWDOC rules (nowdoc)
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Torture the T_END_HEREDOC rules (heredoc)
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 
