@@ -363,6 +363,16 @@
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
+34. support $arr['index'] in dqstring
+
+    ```php
+    <?php
+        echo "$arr['index']";
+    ```
+    
+    php parse error
+    bpc ok
+
 **misc**
 
 1. TODO

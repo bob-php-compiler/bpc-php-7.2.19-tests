@@ -1,5 +1,7 @@
 --TEST--
 unbraced complex variable replacement test (heredoc)
+--ARGS--
+--bpc-include-file Zend/tests/nowdoc.inc
 --FILE--
 <?php
 
@@ -19,4 +21,5 @@ print "{$x}";
 
 ?>
 --EXPECTF--
-Parse error: %s in %sheredoc_005.php on line 6
+This is heredoc test #s 1, 2, 3, and 4.
+This is heredoc test #s 1, 2, 3, and 4.
