@@ -9,7 +9,7 @@ class foo {
 		call_user_func(array($this, 'ABC'));
 		foo::XYZ();
 		self::WWW();
-		call_user_func('FOO::ABC');
+		call_user_func(array('FOO', 'ABC'));
 	}
 	function __call($a, $b) {
 		print "__call:\n";
