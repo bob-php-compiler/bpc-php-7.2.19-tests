@@ -358,6 +358,11 @@
 
 32. not support late static bindings
 
+33. not support bprefix strings
+
+    @see https://wiki.php.net/rfc/binary_string_deprecation
+    @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
+
 **misc**
 
 1. TODO
