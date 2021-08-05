@@ -275,6 +275,7 @@
 
     bpc not support const CONSTANT
     constant always case-sensitive, bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
+    Class constants cannot be defined or redefined, parse error and runtime warning
 
 6. closure no use
 
