@@ -16,9 +16,9 @@ class bar  {
 		self::ABC();
 		bar::ABC();
 		call_user_func(array('BAR', 'xyz'));
-		call_user_func('BAR::www');
+		call_user_func(array('BAR', 'www'));
 		call_user_func(array('self', 'y'));
-		call_user_func('self::y');
+		call_user_func(array('self', 'y'));
 	}
 	static function x() {
 		print "ok\n";
@@ -30,8 +30,8 @@ $x = new bar;
 $x->test();
 
 call_user_func(array('BAR','x'));
-call_user_func('BAR::www');
-call_user_func('self::y');
+call_user_func(array('BAR', 'www'));
+call_user_func(array('self', 'y'));
 
 ?>
 --EXPECTF--
@@ -51,4 +51,4 @@ ok
 __callstatic:
 string(3) "www"
 
-Warning: call_user_func() expects parameter 1 to be a valid callback, cannot access self:: when no class scope is active in %sbug45186.php on line 31
+Warning: call_user_func() expects parameter 1 to be callable, self::y given in %sbug45186.php on line 31
