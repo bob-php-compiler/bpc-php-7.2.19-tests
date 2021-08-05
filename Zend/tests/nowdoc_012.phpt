@@ -1,5 +1,7 @@
 --TEST--
 Test false labels
+--ARGS--
+--bpc-include-file Zend/tests/nowdoc.inc
 --FILE--
 <?php
 

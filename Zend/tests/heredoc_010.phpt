@@ -1,5 +1,7 @@
 --TEST--
 Torture the T_END_HEREDOC rules with variable expansions (heredoc)
+--ARGS--
+--bpc-include-file Zend/tests/nowdoc.inc
 --FILE--
 <?php
 

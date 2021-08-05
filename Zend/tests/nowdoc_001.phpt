@@ -1,5 +1,7 @@
 --TEST--
 basic nowdoc syntax
+--ARGS--
+--bpc-include-file Zend/tests/nowdoc.inc
 --FILE--
 <?php
 

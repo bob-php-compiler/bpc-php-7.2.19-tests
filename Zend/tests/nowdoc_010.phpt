@@ -1,5 +1,7 @@
 --TEST--
 Torture the T_END_NOWDOC rules with variable expansions (nowdoc)
+--ARGS--
+--bpc-include-file Zend/tests/nowdoc.inc
 --FILE--
 <?php
 
