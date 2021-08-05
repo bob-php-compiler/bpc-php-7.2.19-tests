@@ -1,5 +1,7 @@
 --TEST--
 braced complex variable replacement test (heredoc)
+--ARGS--
+--bpc-include-file Zend/tests/nowdoc.inc
 --FILE--
 <?php
 

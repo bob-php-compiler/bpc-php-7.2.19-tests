@@ -1,5 +1,7 @@
 --TEST--
 STATIC heredocs CAN be used as static scalars.
+--ARGS--
+--bpc-include-file Zend/tests/nowdoc.inc
 --FILE--
 <?php
 
