@@ -1,5 +1,7 @@
 --TEST--
 Bug #46106 (Memory leaks when using global statement)
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 $foo = array(1);
