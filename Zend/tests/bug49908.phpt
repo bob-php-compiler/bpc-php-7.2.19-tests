@@ -1,5 +1,7 @@
 --TEST--
 Bug #49908 (throwing exception in __autoload crashes when interface is not defined)
+--ARGS--
+--bpc-include-file Zend/tests/bug49908.inc
 --FILE--
 <?php
 
