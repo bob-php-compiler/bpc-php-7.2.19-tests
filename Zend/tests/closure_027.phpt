@@ -12,7 +12,7 @@ test(function() { return new stdclass; });
 
 test(function() { });
 
-$a = function($x) use ($y) {};
+$a = function($x) {};
 try {
 	test($a);
 } catch (Throwable $e) {
@@ -26,9 +26,7 @@ test(new stdclass);
 object(stdClass)#%d (0) {
 }
 NULL
-
-Notice: Undefined variable: y in %s on line %d
-Exception: Too few arguments to function {closure}(), 0 passed in %s on line %d and exactly 1 expected
+Exception: Too few arguments to function {closure}(): 1 required, 0 provided
 
 Fatal error: Uncaught TypeError: Argument 1 passed to test() must be an instance of Closure, instance of stdClass given, called in %s on line %d and defined in %s:%d
 Stack trace:

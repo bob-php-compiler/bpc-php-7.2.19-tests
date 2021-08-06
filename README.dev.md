@@ -281,10 +281,11 @@
     constant always case-sensitive, bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
     Class constants cannot be defined or redefined, parse error and runtime warning
 
-6. closure no use
+6. closure
 
     bpc not support use syntax
     bpc closure just a simple anonymous function, can only access argument vars and global vars, it's not a lambda.
+    bpc closure arguments not support default value
 
 7. Null Coalescing Operator ??
 
