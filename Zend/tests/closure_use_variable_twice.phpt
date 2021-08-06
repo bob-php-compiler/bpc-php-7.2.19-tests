@@ -1,5 +1,7 @@
 --TEST--
 Closure cannot use one variable twice
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

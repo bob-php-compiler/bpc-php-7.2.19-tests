@@ -1,5 +1,7 @@
 --TEST--
 Can't use name of lexical variable for parameter
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 
