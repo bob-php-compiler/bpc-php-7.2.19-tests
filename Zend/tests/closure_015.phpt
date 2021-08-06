@@ -2,7 +2,7 @@
 Closure 015: converting to string/unicode
 --FILE--
 <?php
-set_error_handler('myErrorHandler', E_RECOVERABLE_ERROR);
+set_error_handler('myErrorHandler');
 function myErrorHandler($errno, $errstr, $errfile, $errline) {
   echo "Error: $errstr at $errfile($errline)\n";
   return true;
