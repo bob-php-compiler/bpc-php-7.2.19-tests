@@ -4,7 +4,7 @@ Bug #60738 Allow 'set_error_handler' to handle NULL
 <?php
 
 var_dump(set_error_handler(
-    function() { echo 'Intercepted error!', "\n"; }
+    function($errno, $errstr, $errfile, $errline) { echo 'Intercepted error!', "\n"; }
 ));
 
 trigger_error('Error!');
