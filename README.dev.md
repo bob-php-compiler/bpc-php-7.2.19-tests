@@ -284,6 +284,7 @@
 6. closure no use
 
     bpc not support use syntax
+    bpc closure just a simple anonymous function, can only access argument vars and global vars, it's not a lambda.
 
 7. Null Coalescing Operator ??
 

@@ -1,5 +1,7 @@
 --TEST--
 Closure 005: Lambda inside class, lifetime of $this
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

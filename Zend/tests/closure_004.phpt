@@ -1,5 +1,7 @@
 --TEST--
 Closure 004: Lambda with lexical variables (scope lifetime)
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

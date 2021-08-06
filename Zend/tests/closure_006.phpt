@@ -1,5 +1,7 @@
 --TEST--
 Closure 006: Nested lambdas
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Closure 009: Using static vars inside lambda
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 $a = 1;

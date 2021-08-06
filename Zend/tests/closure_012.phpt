@@ -1,5 +1,7 @@
 --TEST--
 Closure 012: Undefined lexical variables
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 $lambda = function () use ($i) {

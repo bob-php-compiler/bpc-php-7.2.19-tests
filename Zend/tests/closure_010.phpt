@@ -1,5 +1,7 @@
 --TEST--
 Closure 010: Closure calls itself
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 $i = 3;

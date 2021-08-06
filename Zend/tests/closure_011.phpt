@@ -1,5 +1,7 @@
 --TEST--
 Closure 011: Lexical copies not static in closure
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 $i = 1;
