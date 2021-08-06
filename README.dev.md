@@ -286,6 +286,17 @@
     bpc not support use syntax
     bpc closure just a simple anonymous function, can only access argument vars and global vars, it's not a lambda.
     bpc closure arguments not support default value
+    bpc closure arguments not support direct reference
+    ```php
+    <?php
+        $a = function (&$x) { $x = 1; }
+        $v = 1;
+        // error
+        $a($v);
+        // ok
+        $ref_v = &$v;
+        $a($ref_v);
+    ```
 
 7. Null Coalescing Operator ??
 
