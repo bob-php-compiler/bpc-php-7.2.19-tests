@@ -8,4 +8,6 @@ $a{function() { }} = 1;
 
 ?>
 --EXPECTF--
-Parse error: %s in %s on line %d
+Warning: Illegal offset type in %s on line %d
+
+Warning: Illegal offset type in %s on line %d
