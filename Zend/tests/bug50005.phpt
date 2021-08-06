@@ -16,4 +16,4 @@ throw new a;
 Fatal error: Uncaught a in :%d
 Stack trace:
 #0 {main}
-  thrown in Unknown on line %d
+  thrown in %sbug50005.php on line %d
