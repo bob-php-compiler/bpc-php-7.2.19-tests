@@ -1,5 +1,7 @@
 --TEST--
 Bug #47516 (nowdoc can not be embed in heredoc but can be embed in double quote)
+--SKIPIF--
+skip not support heredoc/nowdoc embed each other or in dqstring
 --FILE--
 <?php
 $s='substr';

@@ -375,6 +375,8 @@
     php parse error
     bpc ok
 
+35. not support heredoc/nowdoc embed each other or in dqstring
+
 **misc**
 
 1. TODO
