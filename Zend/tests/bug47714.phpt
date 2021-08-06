@@ -1,5 +1,7 @@
 --TEST--
 Testing lambda function in set_exception_handler()
+--SKIPIF--
+skip no eval()
 --FILE--
 <?php
 function au($class) {
