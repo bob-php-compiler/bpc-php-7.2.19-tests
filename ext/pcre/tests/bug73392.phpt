@@ -3,7 +3,7 @@ Bug #73392 (A use-after-free in zend allocator management)
 --FILE--
 <?php
 class Rep {
-	public function __invoke() {
+	public function __invoke($match) {
 		return "d";
 	}
 }
@@ -17,7 +17,7 @@ function b($match) {
 }
 var_dump(preg_replace_callback_array(
 	array(
-		"/a/" => 'b',	"/b/" => function () { return "c"; }, "/c/" => new Rep, "reporting" => array("Foo", "rep"),  "a1" => array("Foo", "rep"),
+		"/a/" => 'b',	"/b/" => function ($match) { return "c"; }, "/c/" => new Rep, "reporting" => array("Foo", "rep"),  "a1" => array("Foo", "rep"),
 	), 'a'));
 ?>
 --EXPECTF--

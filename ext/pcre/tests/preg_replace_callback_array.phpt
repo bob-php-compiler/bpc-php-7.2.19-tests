@@ -4,7 +4,7 @@ preg_replace_callback_array() basic functions
 <?php
 
 class Rep {
-	public function __invoke() {
+	public function __invoke($matches) {
 		return "d";
 	}
 }
@@ -22,7 +22,7 @@ function b($matches) {
 var_dump(preg_replace_callback_array(
 	array(
 		"/a/" => 'b',
-		"/b/" => function () { return "c"; },
+		"/b/" => function ($matches) { return "c"; },
 		"/c/" => new Rep,
 		'/d/' => array("Foo", "rep")), 'a'));
 
@@ -30,7 +30,7 @@ var_dump(preg_replace_callback_array(
 	array(
 		"/a/" => 'b',
 		"/c/" => new Rep,
-		"/b/" => function () { return "ok"; },
+		"/b/" => function ($matches) { return "ok"; },
 		'/d/' => array("Foo", "rep")), 'a'));
 
 var_dump(preg_replace_callback_array(
