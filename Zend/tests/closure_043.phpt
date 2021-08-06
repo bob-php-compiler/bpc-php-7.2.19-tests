@@ -1,5 +1,7 @@
 --TEST--
 Closure 043: Scope/bounding combination invariants; static closures
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 /* Whether it's scoped or not, a static closure cannot have

@@ -1,5 +1,7 @@
 --TEST--
 Closure 041: Rebinding: preservation of previous scope when not given as arg unless impossible
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

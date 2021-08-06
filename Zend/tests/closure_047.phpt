@@ -1,5 +1,7 @@
 --TEST--
 Closure 047: Use in preg_replace_callback() using variables by reference
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

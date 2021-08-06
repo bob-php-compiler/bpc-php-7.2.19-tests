@@ -1,5 +1,7 @@
 --TEST--
 Rebinding of ::getClosure()s
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 

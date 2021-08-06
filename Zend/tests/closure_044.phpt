@@ -1,5 +1,7 @@
 --TEST--
 Closure 044: Scope/bounding combination invariants; non static closures
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 /* A non-static closure has a bound instance if it has a scope

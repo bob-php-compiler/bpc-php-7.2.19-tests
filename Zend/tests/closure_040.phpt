@@ -1,5 +1,7 @@
 --TEST--
 Closure 040: Rebinding closures, bad arguments
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

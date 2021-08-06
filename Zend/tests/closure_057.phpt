@@ -1,5 +1,7 @@
 --TEST--
 Closure 057: segfault in leave helper
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 class A {

@@ -297,6 +297,7 @@
         $ref_v = &$v;
         $a($ref_v);
     ```
+    bpc closure has only one method: __invoke()
 
 7. Null Coalescing Operator ??
 

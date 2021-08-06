@@ -1,5 +1,7 @@
 --TEST--
 Closure 046: Rebinding: preservation of previous scope when "static" given as scope arg (same as closure #041)
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

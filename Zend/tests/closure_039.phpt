@@ -1,5 +1,7 @@
 --TEST--
 Closure 039: Rebinding closures, change scope, same runtime type
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 

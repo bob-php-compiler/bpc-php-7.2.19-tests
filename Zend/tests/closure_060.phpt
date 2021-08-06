@@ -1,5 +1,7 @@
 --TEST--
 runtime cache must be invalidated for Closure::call()
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 
