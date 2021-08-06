@@ -1,5 +1,7 @@
 --TEST--
 Closure 036: Rebinding closures, keep calling scope
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 
