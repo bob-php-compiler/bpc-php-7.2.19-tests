@@ -109,6 +109,8 @@
 
 17. dynamic function call warning message
 
+18. no __halt_compiler()
+
 **object**
 
 1. __destruct
