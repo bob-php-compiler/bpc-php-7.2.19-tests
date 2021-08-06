@@ -199,8 +199,8 @@
 
 22. Cannot use string offset as an object
 
-    @see bug41813.phpt
-    @see bug41919.phpt
+    @see Zend/tests/bug41813.phpt
+    @see Zend/tests/bug41919.phpt
 
 **FILE and LINE**
 
