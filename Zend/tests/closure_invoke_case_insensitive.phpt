@@ -8,7 +8,8 @@ $inc = function(&$n) {
 };
 
 $n = 1;
-$inc->__INVOKE($n);
+$ref_n = &$n;
+$inc->__INVOKE($ref_n);
 var_dump($n);
 
 ?>
