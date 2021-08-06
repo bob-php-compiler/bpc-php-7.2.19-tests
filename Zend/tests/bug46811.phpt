@@ -1,5 +1,7 @@
 --TEST--
 ini_set() function
+--SKIPIF--
+skip no ini arg_separator
 --INI--
 arg_separator.output=&
 --FILE--

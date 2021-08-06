@@ -253,6 +253,8 @@
     php: value can be bool or stderr ...
     bpc: 1/on is #t, others #f
 
+16. no ini arg_separator
+
 **syntax**
 
 1. SKIP GOTO
