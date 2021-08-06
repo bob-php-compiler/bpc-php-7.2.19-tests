@@ -1,5 +1,7 @@
 --TEST--
 Closure::call
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 
