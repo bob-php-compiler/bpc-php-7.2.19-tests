@@ -5,9 +5,7 @@ Closure 026: Assigning a closure object to an array in $this
 
 class foo {
 	public function __construct() {
-		$a =& $this;
-
-		$a->a[] = function() {
+		$this->a[] = function() {
 			return 1;
 		};
 
@@ -32,9 +30,7 @@ object(foo)#%d (1) {
   ["a"]=>
   array(1) {
     [0]=>
-    object(Closure)#%d (1) {
-      ["this"]=>
-      *RECURSION*
+    object(Closure)#%d (0) {
     }
   }
 }
@@ -43,15 +39,7 @@ int(1)
 string(1) "a"
 array(1) {
   [0]=>
-  object(Closure)#%d (1) {
-    ["this"]=>
-    object(foo)#%d (1) {
-      ["a"]=>
-      array(1) {
-        [0]=>
-        *RECURSION*
-      }
-    }
+  object(Closure)#%d (0) {
   }
 }
 int(1)
