@@ -23,6 +23,8 @@ try {
 	echo $e->getMessage() . "\n";
 }
 ?>
---EXPECT--
-2
+--EXPECTF--
+Warning: in %s line 3: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 1
+2
