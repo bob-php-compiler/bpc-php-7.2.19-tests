@@ -1,5 +1,7 @@
 --TEST--
 Testing Closure::fromCallable() functionality: Getting non-static method statically
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 

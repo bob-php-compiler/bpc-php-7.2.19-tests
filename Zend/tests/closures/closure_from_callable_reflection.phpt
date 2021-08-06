@@ -1,5 +1,7 @@
 --TEST--
 Testing Closure::fromCallable() functionality: Reflection
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 

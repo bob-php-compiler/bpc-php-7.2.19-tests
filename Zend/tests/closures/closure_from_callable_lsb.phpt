@@ -1,5 +1,7 @@
 --TEST--
 Testing Closure::fromCallable() functionality: Late static binding
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 

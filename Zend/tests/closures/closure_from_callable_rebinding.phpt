@@ -1,5 +1,7 @@
 --TEST--
 Testing Closure::fromCallable() functionality: Rebinding
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 
