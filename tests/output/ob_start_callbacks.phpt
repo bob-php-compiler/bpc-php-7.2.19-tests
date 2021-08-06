@@ -4,14 +4,14 @@ Test ob_start() with callbacks in variables
 <?php
 
 // Closure in variable
-$a = function ($s) { return strtoupper($s); };
+$a = function ($s, $phase) { return strtoupper($s); };
 ob_start($a);
 echo 'closure in variable', "\n";
 ob_end_flush();
 
 // Object (array) in variable
 class foo {
-	static function out($foo) {
+	static function out($foo, $phase) {
 		return strtoupper($foo);
 	}
 }

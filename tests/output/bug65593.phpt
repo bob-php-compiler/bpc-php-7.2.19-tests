@@ -4,7 +4,7 @@ Bug #65593 (ob_start(function(){ob_start();});)
 <?php
 echo "Test\n";
 
-ob_start(function(){ob_start();});
+ob_start(function($buffer, $phase){ob_start();});
 ?>
 --EXPECTF--
 Test
