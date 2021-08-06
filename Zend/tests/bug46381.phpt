@@ -1,5 +1,7 @@
 --TEST--
 Bug #46381 (wrong $this passed to internal methods causes segfault)
+--SKIPIF--
+skip TODO ArrayIterator
 --FILE--
 <?php
 
