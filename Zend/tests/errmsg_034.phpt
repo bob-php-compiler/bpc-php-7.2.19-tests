@@ -12,4 +12,6 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Clone method test::__clone() cannot be static in %s on line %d
+*** ERROR:compile-error:
+Error: The magic method test::__clone() cannot be static in %s on line %d
+ -- compile-error
