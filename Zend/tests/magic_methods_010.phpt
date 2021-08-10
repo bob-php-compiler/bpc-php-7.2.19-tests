@@ -4,12 +4,12 @@ Testing __toString() declaration with wrong modifier
 <?php
 
 class a {
-	static protected function __toString($a, $b) {
+	static protected function __toString() {
 	}
 }
 
 ?>
 --EXPECTF--
-Warning: The magic method __toString() must have public visibility and cannot be static in %s on line %d
-
-Fatal error: Method a::__tostring() cannot take arguments in %s on line %d
+*** ERROR:compile-error:
+Error: The magic method a::__tostring() must have public visibility in %s on line %d
+ -- compile-error

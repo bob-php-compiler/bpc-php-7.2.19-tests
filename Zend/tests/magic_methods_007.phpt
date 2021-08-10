@@ -4,11 +4,11 @@ Testing __set() declaration in abstract class with wrong modifier
 <?php
 
 abstract class b {
-	abstract protected function __set($a);
+	abstract protected function __set($a, $b);
 }
 
 ?>
 --EXPECTF--
-Warning: The magic method __set() must have public visibility and cannot be static in %s on line %d
-
-Fatal error: Method b::__set() must take exactly 2 arguments in %s on line %d
+*** ERROR:compile-error:
+Error: The magic method b::__set() must have public visibility in %s on line %d
+ -- compile-error
