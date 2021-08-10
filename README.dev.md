@@ -394,6 +394,8 @@
 
 35. not support heredoc/nowdoc embed each other or in dqstring
 
+36. not support nullable types
+
 **misc**
 
 1. TODO
