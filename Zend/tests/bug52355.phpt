@@ -14,6 +14,7 @@ var_dump(@(1.0 / -0.0));
 
 ?>
 --EXPECT--
+Division by zero
 float(-0)
 float(-0)
 float(-0)
