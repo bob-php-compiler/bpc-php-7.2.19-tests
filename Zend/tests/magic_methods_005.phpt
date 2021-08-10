@@ -9,4 +9,6 @@ interface a {
 
 ?>
 --EXPECTF--
-Warning: The magic method __call() must have public visibility and cannot be static in %s on line %d
+*** ERROR:compile-error:
+Error: The magic method a::__call() cannot be static in %s on line %d
+ -- compile-error

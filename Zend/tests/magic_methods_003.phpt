@@ -11,4 +11,6 @@ class foo {
 
 ?>
 --EXPECTF--
-Warning: The magic method __unset() must have public visibility and cannot be static in %s on line %d
+*** ERROR:compile-error:
+Error: The magic method foo::__unset() cannot be static in %s on line %d
+ -- compile-error
