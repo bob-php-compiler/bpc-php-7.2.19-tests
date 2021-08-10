@@ -12,4 +12,6 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Constructor test::__construct() cannot be static in %s on line %d
+*** ERROR:compile-error:
+Error: Constructor test::__construct() cannot be static in %s on line %d
+ -- compile-error
