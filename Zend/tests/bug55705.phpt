@@ -6,8 +6,6 @@ function f(callable $c) {}
 f();
 ?>
 --EXPECTF--
-Fatal error: Uncaught ArgumentCountError: Too few arguments to function f(), 0 passed in %s on line 3 and exactly 1 expected in %s:2
-Stack trace:
-#0 %s(%d): f()
-#1 {main}
-  thrown in %s on line %d
+*** ERROR:compile-error:
+Error: Too few arguments to function f(): 1 required, 0 provided in %s on line 3
+ -- compile-error
