@@ -7,7 +7,7 @@ class Foo
 	public function start()
 	{
 		self::bar();
-		static::bar();
+		//static::bar();
 		Foo::bar();
 	}
 
@@ -27,6 +27,5 @@ $foo->start();
 
 ?>
 --EXPECT--
-instance
 instance
 instance
