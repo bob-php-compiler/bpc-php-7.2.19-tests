@@ -16,4 +16,7 @@ register_shutdown_function('exploDe');
 --EXPECTF--
 int(1)
 
-Warning: explode() expects at least 2 parameters, 0 given in Unknown on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to function exploDe(): 2 required, 0 provided in %sbug51827.php:10
+Stack trace:
+#0 {main}
+  thrown in %sbug51827.php on line 10

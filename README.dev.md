@@ -6,7 +6,8 @@
 
 1. Too few arguments
 
-    compile error (functions) or runtime error (functions) or ArgumentCountError (methods)
+    compile error (functions) or ArgumentCountError (functions/methods)
+    php warning on builtin functions, bpc always ArgumentCountError
     ArgumentCountError stack trace different with php as bpc check argument number before call the method
 
 2. Too many arguments
