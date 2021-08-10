@@ -9,7 +9,8 @@ var_dump((array) new stdclass);
 var_dump($h = (array) function () { return 2; });
 var_dump($h[0]());
 
-$i = function () use (&$h) {
+$i = function () {
+    global $h;
 	return $h;
 };
 
@@ -41,28 +42,10 @@ array(1) {
 int(2)
 array(1) {
   [0]=>
-  object(Closure)#%d (1) {
-    ["static"]=>
-    array(1) {
-      ["h"]=>
-      &array(1) {
-        [0]=>
-        object(Closure)#%d (0) {
-        }
-      }
-    }
+  object(Closure)#%d (0) {
   }
 }
-object(Closure)#%d (1) {
-  ["static"]=>
-  array(1) {
-    ["h"]=>
-    &array(1) {
-      [0]=>
-      object(Closure)#%d (0) {
-      }
-    }
-  }
+object(Closure)#%d (0) {
 }
 array(1) {
   [0]=>
