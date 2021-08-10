@@ -205,6 +205,10 @@
     @see Zend/tests/bug41813.phpt
     @see Zend/tests/bug41919.phpt
 
+23. constructor cannot be static
+
+    compile error
+
 **FILE and LINE**
 
 1. FILE and LINE
