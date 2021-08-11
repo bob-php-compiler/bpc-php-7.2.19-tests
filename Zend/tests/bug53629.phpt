@@ -1,5 +1,7 @@
 --TEST--
 Bug #53629 (memory leak inside highlight_string())
+--SKIPIF--
+skip no highlight_file() highlight_string()
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Bug #71086: Invalid numeric literal parse error within highlight_string() function
+--SKIPIF--
+skip no highlight_file() highlight_string()
 --FILE--
 <?php
 
