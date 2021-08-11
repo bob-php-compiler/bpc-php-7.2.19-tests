@@ -215,6 +215,11 @@
     php validate after call __unset __set __get ...
     bpc validate before call __unset __set __get ...
 
+25. Method name must be a string
+
+    php Fatal error or Error
+    bpc compile error or Error
+
 **FILE and LINE**
 
 1. FILE and LINE

@@ -24,4 +24,6 @@ Cls::{null}();
 
 ?>
 --EXPECTF--
-Fatal error: Method name must be a string in %sbug60611.php on line %d
+*** ERROR:compile-error:
+Error: Method name must be a string in %sbug60611.php on line %d
+ -- compile-error
