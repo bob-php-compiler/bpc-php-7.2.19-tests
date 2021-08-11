@@ -330,9 +330,7 @@
 
     bpc not support multibyte
 
-12. trait
-
-    bpc not support trait
+12. not support traits
 
 13. bpc not support mix static var and non-static var
 
@@ -377,22 +375,20 @@
 
 27. not support generators
 
-28. not support traits
+28. not support multi-level break/continue
 
-29. not support multi-level break/continue
+29. break/continue not in loop/switch compile-error
 
-30. break/continue not in loop/switch compile-error
+30. not support return type
 
-31. not support return type
+31. not support late static bindings
 
-32. not support late static bindings
-
-33. not support bprefix strings
+32. not support bprefix strings
 
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
-34. support $arr['index'] in dqstring
+33. support $arr['index'] in dqstring
 
     ```php
     <?php
@@ -402,9 +398,9 @@
     php parse error
     bpc ok
 
-35. not support heredoc/nowdoc embed each other or in dqstring
+34. not support heredoc/nowdoc embed each other or in dqstring
 
-36. not support nullable types
+35. not support nullable types
 
 **misc**
 
