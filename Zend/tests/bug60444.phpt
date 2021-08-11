@@ -1,10 +1,12 @@
 --TEST--
 Bug #60444 (Segmentation fault with include & class extending)
+--ARGS--
+--bpc-include-file Zend/tests/bug60444.inc
 --FILE--
 <?php
 class Foo {
 	public function __construct() {
-		eval("class Bar extends Foo {}");
+		require_once "bug60444.inc";
 		Some::foo($this);
 	}
 }
