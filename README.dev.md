@@ -492,6 +492,10 @@
 
 22. compiler always warning: Division by zero
 
+23. maybe php bug
+
+    @see Zend/tests/bug54265.phpt
+
 ## output buffering
 
 1. chunk_size and buffer_used different
