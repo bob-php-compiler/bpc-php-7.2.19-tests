@@ -209,6 +209,12 @@
 
     compile error
 
+24. validate-property early
+
+    property started with '\0'
+    php validate after call __unset __set __get ...
+    bpc validate before call __unset __set __get ...
+
 **FILE and LINE**
 
 1. FILE and LINE
