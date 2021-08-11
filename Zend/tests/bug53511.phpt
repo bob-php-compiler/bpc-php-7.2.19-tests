@@ -20,14 +20,13 @@ function test() {
 test();
 echo "bug\n";
 --EXPECTF--
-Fatal error: Uncaught Exception: ops 2 in %sbug53511.php:11
-Stack trace:
-#0 %sbug53511.php(17): test()
-#1 {main}
+Warning: in %s line 3: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
 
-Next Exception: ops 1 in %sbug53511.php:4
+ops 2
+bug
+
+Fatal error: Uncaught Exception: ops 1 in %sbug53511.php:4
 Stack trace:
-#0 %sbug53511.php(12): Foo->__destruct()
-#1 %sbug53511.php(17): test()
-#2 {main}
-  thrown in %sbug53511.php on line 4
+#0 %sbug53511.php(18): Foo->__destruct()
+#1 {main}
+  thrown in %sbug53511.php on line 18
