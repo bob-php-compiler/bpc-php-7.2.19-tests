@@ -1,5 +1,7 @@
 --TEST--
 Bug #52939 (zend_call_function_array does not respect ZEND_SEND_PREFER_REF)
+--SKIPIF--
+skip TODO array_multisort
 --FILE--
 <?php
 $ar1 = array("row1" => 2, "row2" => 1);
