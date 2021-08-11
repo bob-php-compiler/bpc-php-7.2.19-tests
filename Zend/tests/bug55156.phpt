@@ -1,5 +1,7 @@
 --TEST--
 Bug #55156 (ReflectionClass::getDocComment() returns comment even though the class has none)
+--SKIPIF--
+skip not support Reflection
 --INI--
 opcache.save_comments=1
 --FILE--
