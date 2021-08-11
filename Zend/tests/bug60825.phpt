@@ -16,7 +16,7 @@ require_once $a;
 debug_zval_dump($a, test::$x);
 ?>
 --EXPECTF--
-object(test)#%d (0) refcount(%d){
+object(test)#%d (0) {
 }
-object(test)#%d (0) refcount(%d){
+object(test)#%d (0) {
 }
