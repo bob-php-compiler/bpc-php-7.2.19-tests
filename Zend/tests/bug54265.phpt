@@ -2,7 +2,7 @@
 Bug #54265 (crash when variable gets reassigned in error handler)
 --FILE--
 <?php
-function my_errorhandler($errno,$errormsg) {
+function my_errorhandler($errno,$errormsg, $errfile, $errline) {
   global $my_var;
   $my_var = 0;
   echo "EROOR: $errormsg\n";
@@ -13,4 +13,5 @@ echo "ok\n";
 ?>
 --EXPECT--
 EROOR: Creating default object from empty value
+EROOR: str_repeat() expects parameter 2 to be integer, string given
 ok
