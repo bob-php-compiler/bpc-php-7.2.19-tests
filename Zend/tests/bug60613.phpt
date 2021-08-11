@@ -15,4 +15,6 @@ $cls->{false}();
 $cls->{null}();
 echo "ok\n";
 --EXPECTF--
-Fatal error: Method name must be a string in %sbug60613.php on line %d
+*** ERROR:compile-error:
+Error: Method name must be a string in %sbug60613.php on line %d
+ -- compile-error
