@@ -1,5 +1,7 @@
 --TEST--
 Bug #54358 (Closure, use and reference)
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 class asserter {
