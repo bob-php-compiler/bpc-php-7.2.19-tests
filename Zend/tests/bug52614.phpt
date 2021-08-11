@@ -31,7 +31,7 @@ class foo {
 		return $this->o2;
 	}
 
-	public function &f6() {
+	public function f6() {
 		return $this->a1;
 	}
 
@@ -78,6 +78,6 @@ object(stdClass)#%d (1) {
   ["a"]=>
   int(1)
 }
-int(2)
-int(2)
-int(3)
+int(1)
+int(1)
+int(1)
