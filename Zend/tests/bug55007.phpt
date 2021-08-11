@@ -1,5 +1,7 @@
 --TEST--
 Bug #55007 (compiler fail after previous fail)
+--SKIPIF--
+skip no eval()
 --FILE--
 <?php
 
