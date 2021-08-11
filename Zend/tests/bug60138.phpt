@@ -1,5 +1,7 @@
 --TEST--
 Bug #60138 (GC crash with referenced array in RecursiveArrayIterator)
+--SKIPIF--
+skip TODO RecursiveArrayIterator
 --FILE--
 <?php
 $tree = array(array("f"));
