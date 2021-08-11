@@ -6,4 +6,7 @@ $s = "abd";
 $s[0]->a += 1;
 ?>
 --EXPECTF--
-Warning: Attempt to assign property 'a' of non-object in %sbug47704.php on line 3
+Fatal error: Uncaught Error: Cannot use assign-op operators with string offsets in %sbug47704.php:%d
+Stack trace:
+#0 {main}
+  thrown in %sbug47704.php on line %d
