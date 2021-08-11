@@ -16,7 +16,7 @@ class B extends A {
 		PARENT::testit();
 		$this->v3 = new sELF;
 		$this->v4 = new PARENT;
-		$this->v4 = STATIC::$x;
+		$this->v4 = self::$x;
 	}
 }
 $t = new B();
