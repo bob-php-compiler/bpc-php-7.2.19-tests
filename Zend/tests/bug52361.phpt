@@ -23,12 +23,13 @@ try {
 }
 ?>
 --EXPECTF--
-1. Exception: aaa in %sbug52361.php:5
-Stack trace:
-#0 %sbug52361.php(13): aaa->__destruct()
-#1 %sbug52361.php(16): bbb()
-#2 {main}
+Warning: in %s line 3: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 2. Exception: bbb in %sbug52361.php:13
 Stack trace:
 #0 %sbug52361.php(16): bbb()
+#1 {main}
+1. Exception: aaa in %sbug52361.php:5
+Stack trace:
+#0 %sbug52361.php(19): aaa->__destruct()
 #1 {main}
