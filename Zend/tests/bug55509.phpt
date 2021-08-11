@@ -75,4 +75,4 @@ echo "5\n";
 3
 4
 
-Fatal error: Allowed memory size of %d bytes exhausted%s(tried to allocate %d bytes) in %sbug55509.php on line %d
+Fatal error: GC Warning: Out of Memory! Heap size: 2084 MiB. Returning NULL! in %sbug55509.php on line %d
