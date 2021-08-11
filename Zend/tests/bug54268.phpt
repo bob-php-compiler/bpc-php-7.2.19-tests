@@ -2,13 +2,6 @@
 Bug #54268 (Double free when destroy_zend_class fails)
 --INI--
 memory_limit=8M
---SKIPIF--
-<?php
-$zend_mm_enabled = getenv("USE_ZEND_ALLOC");
-if ($zend_mm_enabled === "0") {
-	die("skip Zend MM disabled");
-}
-?>
 --FILE--
 <?php
 class DestructableObject
@@ -32,4 +25,9 @@ class Test
 $x = new Test();
 Test::$mystatic = new DestructorCreator();
 --EXPECTF--
-Fatal error: Allowed memory size of %s bytes exhausted%s(tried to allocate %s bytes) in %s on line %d
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 11: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+
+Fatal error: GC Warning: Out of Memory! Heap size: 7 MiB. Returning NULL! in %s on line %d
