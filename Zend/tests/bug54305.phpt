@@ -1,5 +1,7 @@
 --TEST--
 Bug #54305 (Crash in gc_remove_zval_from_buffer)
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 class TestClass {
