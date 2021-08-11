@@ -26,5 +26,7 @@ for ($i = 0; $i < OBJECT_COUNT; ++$i) {
 // You probably won't see this because of the "zend_mm_heap corrupted"
 ?>
 If you see this, try to increase OBJECT_COUNT to 100,000
---EXPECT--
+--EXPECTF--
+Warning: in %s line 13: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 If you see this, try to increase OBJECT_COUNT to 100,000
