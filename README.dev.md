@@ -472,6 +472,9 @@
 
 15. include()/require()/*_once() wrong error message different
 
+    php require: warning and fatal error
+    bpc require: fatal error
+
 16. out of memory
 
     php Fatal error, run shutdown function, and ???(FIXME), exit
