@@ -1,5 +1,7 @@
 --TEST--
 Bug #54013 (ReflectionParam for duplicate parameter contains garbage) (PHP7)
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
