@@ -1,5 +1,7 @@
 --TEST--
 Bug #61681: Malformed grammar
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 $la = "ooxx";
