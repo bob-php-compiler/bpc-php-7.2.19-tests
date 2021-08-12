@@ -1,5 +1,7 @@
 --TEST--
 Bug #61011 (Crash when an exception is thrown by __autoload accessing a static property)
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 spl_autoload_register(function ($name) {
