@@ -1,5 +1,7 @@
 --TEST--
 Bug #61767 (Shutdown functions not called in certain error situation)
+--SKIPIF--
+skip No Undefined variable
 --FILE--
 <?php
 set_error_handler(function($code, $msg, $file = null, $line = null) {
