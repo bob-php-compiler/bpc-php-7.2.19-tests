@@ -1,5 +1,7 @@
 --TEST--
 Bug #61087 (Memory leak in parse_ini_file when specifying invalid scanner mode)
+--SKIPIF--
+skip TODO parse_ini_file
 --FILE--
 <?php
 // the used file is actually irrelevant, so just use this file
