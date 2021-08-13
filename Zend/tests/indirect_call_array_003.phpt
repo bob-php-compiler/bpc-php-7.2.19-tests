@@ -12,7 +12,7 @@ class foo {
 	static public function __callStatic($a, $b) {
 		printf("From %s:\n", __METHOD__);
 		var_dump($a);
-		var_dump($this);
+		//var_dump($this);
 	}
 }
 
@@ -31,7 +31,6 @@ $arr();
 --EXPECTF--
 From foo::__callStatic:
 string(3) "abc"
-Exception: Using $this when not in object context
 From foo::__call:
 string(3) "abc"
 object(foo)#%d (0) {
