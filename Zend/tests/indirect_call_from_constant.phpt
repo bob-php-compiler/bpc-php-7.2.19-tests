@@ -1,5 +1,7 @@
 --TEST--
 Indirect call with constants.
+--SKIPIF--
+skip not support indirect call with constants
 --FILE--
 <?php
 

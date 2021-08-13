@@ -397,6 +397,10 @@
 
 35. not support nullable types
 
+36. not support indirect call with constants
+
+    @see Zend/tests/indirect_call_from_constant.phpt
+
 **misc**
 
 1. TODO
