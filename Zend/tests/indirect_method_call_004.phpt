@@ -1,5 +1,7 @@
 --TEST--
 Indirect method call and cloning
+--SKIPIF--
+skip TODO `rval->`
 --FILE--
 <?php
 

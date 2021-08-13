@@ -1,5 +1,7 @@
 --TEST--
 Indirect method call with chaining
+--SKIPIF--
+skip TODO `rval->`
 --FILE--
 <?php
 
