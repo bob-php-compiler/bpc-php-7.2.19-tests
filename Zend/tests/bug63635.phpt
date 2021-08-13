@@ -13,9 +13,9 @@ class Node {
 		$this->childs[] = $this;
 	}
 
-	function __destruct() {
-		$this->childs = NULL;
-	}
+//	function __destruct() {
+//		$this->childs = NULL;
+//	}
 }
 
 define("MAX", 16);
