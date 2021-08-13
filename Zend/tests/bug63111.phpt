@@ -14,20 +14,17 @@ abstract class Bar {
 	}
 }
 var_dump(is_callable(array("Foo", "bar")));
-var_dump(is_callable("Foo::bar"));
+//var_dump(is_callable("Foo::bar"));
 var_dump(is_callable(array("MyInterface", "bar")));
-var_dump(is_callable("MyInterface::bar"));
+//var_dump(is_callable("MyInterface::bar"));
 var_dump(is_callable(array("Bar", "foo")));
-var_dump(is_callable("Bar::foo"));
+//var_dump(is_callable("Bar::foo"));
 Bar::foo();
 Foo::bar();
 ?>
 --EXPECTF--
 bool(false)
 bool(false)
-bool(false)
-bool(false)
-bool(true)
 bool(true)
 ok
 
