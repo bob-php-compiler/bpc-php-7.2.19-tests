@@ -11,15 +11,19 @@ class TestClass
 }
 
 // Test call using array syntax
-$callback = ['TestClass', ''];
+$callback = array('TestClass', '');
 $callback();
 
 // Test call using Class::method syntax.
 $callback = 'TestClass::';
-$callback();
+try {
+    $callback();
+} catch (Error $e) {
+    echo $e->getMessage() . "\n";
+}
 
 // Test array syntax with empty class name
-$callback = ['', 'method'];
+$callback = array('', 'method');
 try {
     $callback();
 } catch (Error $e) {
@@ -35,7 +39,7 @@ try {
 }
 
 // Test array syntax with empty class and method name
-$callback = ['', ''];
+$callback = array('', '');
 try {
     $callback();
 } catch (Error $e) {
@@ -76,11 +80,11 @@ try {
 ?>
 --EXPECT--
 string(0) ""
-string(0) ""
+Call to undefined function TestClass::()
 Class '' not found
+Call to undefined function ::method()
 Class '' not found
-Class '' not found
-Class '' not found
+Call to undefined function ::()
 Call to undefined function Class:()
 Call to undefined function :method()
 Call to undefined function :()
