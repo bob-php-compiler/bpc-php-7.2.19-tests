@@ -1,5 +1,7 @@
 --TEST--
 Testing indirect property access
+--SKIPIF--
+skip TODO `rval->`
 --FILE--
 <?php
 
