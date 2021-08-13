@@ -1,5 +1,7 @@
 --TEST--
 Bug #63762 - Sigsegv when Exception::$trace is changed by user
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 $e = new Exception();
