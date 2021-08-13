@@ -220,6 +220,12 @@
     php Fatal error or Error
     bpc compile error or Error
 
+26. compare objects support recursion
+
+    php fatal error
+    bpc ok
+    @see Zend/tests/bug63882.phpt
+
 **FILE and LINE**
 
 1. FILE and LINE
