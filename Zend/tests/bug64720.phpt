@@ -45,5 +45,9 @@ $bar = new Bar();
 $bar->test();
 ?>
 OK
---EXPECT--
+--EXPECTF--
+Warning: in %s line 11: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 30: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 OK
