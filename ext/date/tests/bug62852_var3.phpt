@@ -23,6 +23,6 @@ Fatal error: Uncaught Error: Invalid serialization data for DateTime object in %
 Stack trace:
 #0 %sbug62852_var3.php(%d): DateTime->__wakeup()
 #1 [internal function]: Foo->__wakeup()
-#2 %sbug62852_var3.php(%d): unserialize('O:3:"Foo":3:{s:...')
+#2 %sbug62852_var3.php(%d): unserialize('O:3:"Foo":3:{s:...', unpassed)
 #3 {main}
   thrown in %sbug62852_var3.php on line %d

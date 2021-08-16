@@ -10,6 +10,6 @@ var_dump(unserialize('O:8:"DateTime":0:{}') == new DateTime);
 Fatal error: Uncaught Error: Invalid serialization data for DateTime object in %sbug55397.php:%d
 Stack trace:
 #0 [internal function]: DateTime->__wakeup()
-#1 %sbug55397.php(%d): unserialize('O:8:"DateTime":...')
+#1 %sbug55397.php(%d): unserialize('O:8:"DateTime":...', unpassed)
 #2 {main}
   thrown in %sbug55397.php on line %d

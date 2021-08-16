@@ -11,6 +11,6 @@ var_dump(unserialize($y));
 Fatal error: Uncaught Error: Invalid serialization data for DateTime object in %sbug66721.php:%d
 Stack trace:
 #0 [internal function]: DateTime->__wakeup()
-#1 %sbug66721.php(%d): unserialize('O:8:"DateTime":...')
+#1 %sbug66721.php(%d): unserialize('O:8:"DateTime":...', unpassed)
 #2 {main}
   thrown in %sbug66721.php on line %d

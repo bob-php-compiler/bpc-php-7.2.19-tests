@@ -9,6 +9,6 @@ var_dump($data);
 Fatal error: Uncaught Error: Timezone initialization failed in %s:%d
 Stack trace:
 #0 [internal function]: DateTimeZone->__wakeup()
-#1 %s(%d): unserialize('a:2:{i:0;O:12:"...')
+#1 %s(%d): unserialize('a:2:{i:0;O:12:"...', unpassed)
 #2 {main}
   thrown in %s on line %d
