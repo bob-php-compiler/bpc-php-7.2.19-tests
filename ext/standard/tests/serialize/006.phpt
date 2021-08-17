@@ -1,5 +1,7 @@
 --TEST--
 serialize()/unserialize() with exotic letters
+--SKIPIF--
+skip strict names
 --FILE--
 <?php
 	$едц≈ƒ÷ = array('едц≈ƒ÷' => 'едц≈ƒ÷');

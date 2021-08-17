@@ -407,6 +407,13 @@
 
     @see Zend/tests/indirect_call_from_constant.phpt
 
+37. strict names
+
+    php support ascii 0x80-0xff in variable/class/function... names
+    bpc not support this
+    @see https://www.php.net/manual/en/language.variables.basics.php
+    @see ext/standard/tests/serialize/006.phpt
+
 **misc**
 
 1. TODO
