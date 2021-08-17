@@ -1,10 +1,10 @@
 --TEST--
 Object serialization / unserialization: properties reference containing object
 --INI--
-error_reporting = E_ALL & ~E_STRICT
+error_reporting = 30719
 --FILE--
 <?php
-
+// E_ALL & ~E_STRICT = 30719
 function check(&$obj) {
 	var_dump($obj);
 	$ser = serialize($obj);
@@ -91,7 +91,7 @@ object(stdClass)#%d (3) {
 }
 object(stdClass)#%d (3) {
   ["a"]=>
-  string(14) "obj->a.changed"
+  &string(14) "obj->a.changed"
   ["b"]=>
   int(1)
   ["c"]=>
@@ -99,7 +99,7 @@ object(stdClass)#%d (3) {
 }
 object(stdClass)#%d (3) {
   ["a"]=>
-  string(14) "obj->a.changed"
+  &string(14) "obj->a.changed"
   ["b"]=>
   string(14) "obj->b.changed"
   ["c"]=>
@@ -107,7 +107,7 @@ object(stdClass)#%d (3) {
 }
 object(stdClass)#%d (3) {
   ["a"]=>
-  string(14) "obj->a.changed"
+  &string(14) "obj->a.changed"
   ["b"]=>
   string(14) "obj->b.changed"
   ["c"]=>
