@@ -1,10 +1,10 @@
 --TEST--
 Bug #31402 (unserialize() generates references when it should not)
 --INI--
-error_reporting=E_ALL
+error_reporting=32767
 --FILE--
 <?php
-
+// E_ALL = 32767
 class TestX {
   var $i;
 
