@@ -226,6 +226,10 @@
     bpc ok
     @see Zend/tests/bug63882.phpt
 
+27. incomplete class message has no current function/method info
+
+    @see ext/standard/tests/serialize/incomplete_class.phpt
+
 **FILE and LINE**
 
 1. FILE and LINE
