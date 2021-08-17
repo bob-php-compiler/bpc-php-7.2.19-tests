@@ -1,9 +1,10 @@
 --TEST--
 Object serialization / unserialization: references amongst properties
 --INI--
-error_reporting = E_ALL & ~E_STRICT
+error_reporting = 30719
 --FILE--
 <?php
+// E_ALL & ~E_STRICT = 30719
 /* Prototype  : proto string serialize(mixed variable)
  * Description: Returns a string representation of variable (which can later be unserialized)
  * Source code: ext/standard/var.c
