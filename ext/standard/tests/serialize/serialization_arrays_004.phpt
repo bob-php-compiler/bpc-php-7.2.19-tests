@@ -86,7 +86,7 @@ array(3) {
 }
 array(3) {
   [0]=>
-  string(10) "b0.changed"
+  &string(10) "b0.changed"
   [1]=>
   int(1)
   [2]=>
@@ -94,7 +94,7 @@ array(3) {
 }
 array(3) {
   [0]=>
-  string(10) "b0.changed"
+  &string(10) "b0.changed"
   [1]=>
   string(10) "b1.changed"
   [2]=>
@@ -102,7 +102,7 @@ array(3) {
 }
 array(3) {
   [0]=>
-  string(10) "b0.changed"
+  &string(10) "b0.changed"
   [1]=>
   string(10) "b1.changed"
   [2]=>
