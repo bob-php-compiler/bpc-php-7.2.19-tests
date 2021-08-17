@@ -510,6 +510,10 @@
 
 2. php error/warning/notice/... messages unbuffered
 
+## ext/standard
+
+1. no ini unserialize_callback_func
+
 ## ext/date
 
 1. ini_set date.timezone warning message

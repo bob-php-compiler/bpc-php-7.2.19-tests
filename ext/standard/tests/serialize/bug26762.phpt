@@ -1,9 +1,7 @@
 --TEST--
 Bug #26762 (unserialize() produces lowercase classnames)
 --SKIPIF--
-<?php
-	if (class_exists('autoload_root')) die('skip Autoload test classes exist already');
-?>
+skip no ini unserialize_callback_func
 --FILE--
 <?php
 

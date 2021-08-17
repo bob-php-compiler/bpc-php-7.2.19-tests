@@ -1,7 +1,7 @@
 --TEST--
 serialize()/unserialize() objects
 --SKIPIF--
-<?php if (!interface_exists('Serializable')) die('skip Interface Serialzable not defined'); ?>
+skip no ini unserialize_callback_func
 --FILE--
 <?php
 

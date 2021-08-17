@@ -1,5 +1,7 @@
 --TEST--
 Ensure __autoload is called twice if unserialize_callback_func is defined.
+--SKIPIF--
+skip no ini unserialize_callback_func
 --FILE--
 <?php
 /* Prototype  : proto string serialize(mixed variable)

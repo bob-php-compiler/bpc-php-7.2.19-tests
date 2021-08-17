@@ -1,5 +1,7 @@
 --TEST--
 Bug #70213: Unserialize context shared on double class lookup
+--SKIPIF--
+skip no ini unserialize_callback_func
 --FILE--
 <?php
 

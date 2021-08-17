@@ -1,5 +1,7 @@
 --TEST--
 Bad unserialize_callback_func
+--SKIPIF--
+skip no ini unserialize_callback_func
 --FILE--
 <?php
 /* Prototype  : proto string serialize(mixed variable)
