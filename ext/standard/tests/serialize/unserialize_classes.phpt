@@ -9,11 +9,11 @@ $z = array(new foo(), 2, "3");
 $s = serialize($z);
 
 var_dump(unserialize($s));
-var_dump(unserialize($s, ["allowed_classes" => false]));
-var_dump(unserialize($s, ["allowed_classes" => true]));
-var_dump(unserialize($s, ["allowed_classes" => ["bar"]]));
-var_dump(unserialize($s, ["allowed_classes" => ["FOO"]]));
-var_dump(unserialize($s, ["allowed_classes" => ["bar", "foO"]]));
+var_dump(unserialize($s, array("allowed_classes" => false)));
+var_dump(unserialize($s, array("allowed_classes" => true)));
+var_dump(unserialize($s, array("allowed_classes" => array("bar"))));
+var_dump(unserialize($s, array("allowed_classes" => array("FOO"))));
+var_dump(unserialize($s, array("allowed_classes" => array("bar", "foO"))));
 --EXPECTF--
 array(3) {
   [0]=>
