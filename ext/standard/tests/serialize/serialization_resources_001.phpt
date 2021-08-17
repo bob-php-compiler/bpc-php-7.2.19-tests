@@ -14,7 +14,7 @@ Test serialize() & unserialize() functions: resources
  */
 
 echo "\n--- Testing Resource ---\n";
-$file_handle = fopen( __FILE__, "r" );
+$file_handle = fopen( "/proc/self/comm", "r" );
 $serialized_data = serialize( $file_handle );
 fclose($file_handle);
 var_dump($serialized_data);
