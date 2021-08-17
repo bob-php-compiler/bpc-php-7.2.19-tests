@@ -525,6 +525,8 @@
 
 1. no ini unserialize_callback_func
 
+2. unserialize() not support "r:array"
+
 ## ext/date
 
 1. ini_set date.timezone warning message

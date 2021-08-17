@@ -1,10 +1,12 @@
 --TEST--
 Memleaks if unserialize return a self-referenced array/object
+--SKIPIF--
+skip unserialize() not support "r:array"
 --INI--
 report_memleaks=1
 --FILE--
 <?php
-function foo() {
+function foo($a) {
 	gc_collect_cycles();
 }
 
