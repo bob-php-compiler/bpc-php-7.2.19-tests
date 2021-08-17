@@ -13,7 +13,7 @@ class Test {
     }
 
     public function __sleep() {
-        return ['pub', 'prot', 'priv'];
+        return array('pub', 'prot', 'priv');
     }
 }
 
