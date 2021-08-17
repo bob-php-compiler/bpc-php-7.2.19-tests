@@ -1,5 +1,7 @@
 --TEST--
 Custom unserialization of classes with no custom unserializer.
+--ARGS--
+--bpc-include-file ext/standard/tests/serialize/serialization_objects_009.inc
 --FILE--
 <?php
 /* Prototype  : proto string serialize(mixed variable)
@@ -15,7 +17,7 @@ Custom unserialization of classes with no custom unserializer.
 
 $ser = 'C:1:"C":6:{dasdas}';
 $a = unserialize($ser);
-eval('class C {}');
+include 'serialization_objects_009.inc';
 $b = unserialize($ser);
 
 var_dump($a, $b);
