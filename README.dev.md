@@ -527,6 +527,8 @@
 
 2. unserialize() not support "r:array"
 
+3. unserialize() "Insufficient data for unserializing" different
+
 ## ext/date
 
 1. ini_set date.timezone warning message
