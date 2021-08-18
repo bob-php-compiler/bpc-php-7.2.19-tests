@@ -1,5 +1,7 @@
 --TEST--
 Bug #45706 Unserialization of classes derived from ArrayIterator fails
+--SKIPIF--
+skip TODO ArrayIterator
 --FILE--
 <?php
 class Foo1 extends ArrayIterator
