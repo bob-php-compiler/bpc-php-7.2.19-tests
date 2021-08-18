@@ -1,5 +1,7 @@
 --TEST--
 Bug #67072 Echoing unserialized "SplFileObject" crash
+--SKIPIF--
+skip TODO SplFileObject
 --FILE--
 <?php
 	echo unserialize('O:13:"SplFileObject":1:{s:9:"*filename";s:15:"/home/flag/flag";}');
