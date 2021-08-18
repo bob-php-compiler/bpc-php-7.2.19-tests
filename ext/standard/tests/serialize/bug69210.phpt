@@ -34,16 +34,16 @@ echo $si . "\n";
 var_dump(unserialize($ss));
 var_dump(unserialize($si));
 ?>
---EXPECT--
+--EXPECTF--
 O:10:"testString":2:{s:1:"a";b:1;s:1:"1";N;}
 O:11:"testInteger":2:{s:1:"a";b:1;s:1:"1";N;}
-object(testString)#3 (2) {
+object(testString)#%d (2) {
   ["a"]=>
   bool(true)
   ["1"]=>
   NULL
 }
-object(testInteger)#3 (2) {
+object(testInteger)#%d (2) {
   ["a"]=>
   bool(true)
   ["1"]=>
