@@ -8,7 +8,7 @@ class A {
 	public $e = array();
 }
 
-class Token implements \Serializable {
+class Token implements Serializable {
 	public function serialize()
 	{
 		$c = new A;
