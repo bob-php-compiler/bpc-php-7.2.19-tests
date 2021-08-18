@@ -1,11 +1,13 @@
 --TEST--
 Bug #62836 (Seg fault or broken object references on unserialize())
+--ARGS--
+--bpc-include-file ext/standard/tests/serialize/bug62836_A.inc --bpc-include-file ext/standard/tests/serialize/bug62836_B.inc
 --FILE--
 <?php
 $serialized_object='O:1:"A":4:{s:1:"b";O:1:"B":0:{}s:2:"b1";r:2;s:1:"c";O:1:"B":0:{}s:2:"c1";r:4;}';
 spl_autoload_register(function ($name) {
     unserialize("i:4;");
-    eval("class $name {} ");
+    include "bug62836_$name.inc";
 });
 
 print_r(unserialize($serialized_object));
