@@ -32,6 +32,6 @@ array(2) {
   object(evilClass)#1 (0) {
   }
   [1]=>
-  int(1)
+  &int(1)
 }
 ===DONE===
