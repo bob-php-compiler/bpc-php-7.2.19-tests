@@ -1,5 +1,7 @@
 --TEST--
 Bug #65806 (unserialize fails with object which is referenced multiple times)
+--SKIPIF--
+skip TODO ArrayIterator
 --FILE--
 <?php
 class myObjA {}
