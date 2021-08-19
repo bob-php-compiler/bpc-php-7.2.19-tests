@@ -230,6 +230,8 @@
 
     @see ext/standard/tests/serialize/incomplete_class.phpt
 
+28. check object property type via write-property handler
+
 **FILE and LINE**
 
 1. FILE and LINE

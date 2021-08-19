@@ -14,7 +14,4 @@ throw new a;
 
 ?>
 --EXPECTF--
-Fatal error: Uncaught a in :0
-Stack trace:
-#0 {main}
-  thrown in %sbug64821.3.php on line %d
+Fatal error: a::line should be a simple php type, array given in %s on line %d
