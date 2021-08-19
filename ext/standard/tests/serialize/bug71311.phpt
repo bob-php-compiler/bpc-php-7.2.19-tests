@@ -1,5 +1,7 @@
 --TEST--
 Bug #71311 Use-after-free vulnerability in SPL(ArrayObject, unserialize)
+--SKIPIF--
+skip Use After Free
 --FILE--
 <?php
 $data = unserialize("C:11:\"ArrayObject\":11:{x:i:0;r:3;X}");
