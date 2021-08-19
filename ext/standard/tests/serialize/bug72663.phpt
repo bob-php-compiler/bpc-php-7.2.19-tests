@@ -47,6 +47,11 @@ try {
 
 ?>
 --EXPECTF--
+Warning: in %s line 7: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 16: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+
 Notice: unserialize(): Error at offset 17 of 24 bytes in %s on line %d
 bool(false)
 
