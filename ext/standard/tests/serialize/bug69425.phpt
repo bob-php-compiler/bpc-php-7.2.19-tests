@@ -1,5 +1,7 @@
 --TEST--
 Bug #69425: Use After Free in unserialize()
+--SKIPIF--
+skip Use After Free
 --FILE--
 <?php
 

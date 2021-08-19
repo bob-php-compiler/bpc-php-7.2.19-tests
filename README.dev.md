@@ -515,6 +515,10 @@
 
     @see Zend/tests/bug54265.phpt
 
+24. Use After Free
+
+    to be confirmed
+
 ## output buffering
 
 1. chunk_size and buffer_used different
