@@ -1,5 +1,7 @@
 --TEST--
 Bug #75054: A Denial of Service Vulnerability was found when performing deserialization
+--SKIPIF--
+skip Use After Free
 --FILE--
 <?php
 $poc = 'a:9:{i:0;s:4:"0000";i:0;s:4:"0000";i:0;R:2;s:4:"5003";R:2;s:4:"0000";R:2;s:4:"0000";R:2;s:4:"';
