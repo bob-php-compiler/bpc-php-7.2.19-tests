@@ -13,7 +13,7 @@ class Identity
     }
 }
 
-class Entry implements \Serializable
+class Entry implements Serializable
 {
     private $identity;
 
@@ -39,7 +39,7 @@ $identityRef = &$identity;
 $entry1 = new Entry($identity);
 $entry2 = new Entry($identityRef);
 
-$serialized = serialize([$entry1, $entry2]);
+$serialized = serialize(array($entry1, $entry2));
 print_r(unserialize($serialized));
 
 ?>
