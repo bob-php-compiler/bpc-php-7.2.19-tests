@@ -1,5 +1,7 @@
 --TEST--
 Bug #70436: Use After Free Vulnerability in unserialize()
+--SKIPIF--
+skip Use After Free
 --FILE--
 <?php
 
