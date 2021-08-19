@@ -1,5 +1,7 @@
 --TEST--
 Bug #72785: allowed_classes only applies to outermost unserialize()
+--SKIPIF--
+skip TODO ArrayObject
 --FILE--
 <?php
 
