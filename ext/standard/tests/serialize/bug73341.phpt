@@ -1,5 +1,7 @@
 --TEST--
 Bug #73144 (Use-afte-free in ArrayObject Deserialization)
+--SKIPIF--
+skip TODO ArrayObject
 --FILE--
 <?php
 try {
