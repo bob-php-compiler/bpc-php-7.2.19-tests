@@ -1,5 +1,7 @@
 --TEST--
 Bug #65322: compile time errors won't trigger auto loading
+--ARGS--
+--bpc-include-file Zend/tests/bug65322.inc
 --FILE--
 <?php
 
@@ -13,12 +15,10 @@ set_error_handler(function($_, $msg, $file) {
     new X;
 });
 
-/* This is just a particular example of a non-fatal compile-time error
- * If this breaks in future, just find another example and use it instead */
-eval('class A { function test() { } } class B extends A { function test($a) { } }');
+include 'bug65322.inc';
 
 ?>
 --EXPECTF--
 string(62) "Declaration of B::test($a) should be compatible with A::test()"
-string(%d) "%s(%d) : eval()'d code"
+string(%d) "tests/bug65322.inc"
 string(1) "X"
