@@ -1,15 +1,18 @@
 --TEST--
 Bug #68148: $this is null inside include
+--ARGS--
+--bpc-include-file Zend/tests/bug68148.inc
 --FILE--
 <?php
 
 class Test {
     public function method() {
-        eval('var_dump($this);');
+        include 'bug68148.inc';
     }
 }
 
-(new Test)->method();
+$o = new Test;
+$o->method();
 
 ?>
 --EXPECT--
