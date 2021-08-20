@@ -521,6 +521,10 @@
 
     to be confirmed
 
+25. nested error handler result silent
+
+    @see Zend/tests/bug64960.phpt
+
 ## output buffering
 
 1. chunk_size and buffer_used different
