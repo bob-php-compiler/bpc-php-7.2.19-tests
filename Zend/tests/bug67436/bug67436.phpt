@@ -2,6 +2,8 @@
 bug67436: Autoloader isn't called if user defined error handler is present
 --INI--
 error_reporting=-1
+--ARGS--
+--bpc-include-file Zend/tests/bug67436/a.php --bpc-include-file Zend/tests/bug67436/b.php --bpc-include-file Zend/tests/bug67436/c.php
 --FILE--
 <?php
 
@@ -12,7 +14,7 @@ spl_autoload_register(function($classname) {
 });
 
 set_error_handler(function ($errno, $errstr, $errfile, $errline) {
-}, error_reporting());
+});
 
 a::staticTest();
 
