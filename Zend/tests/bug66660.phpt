@@ -1,5 +1,7 @@
 --TEST--
 Bug #66660 (Composer.phar install/update fails)
+--SKIPIF--
+skip no highlight_file() highlight_string() php_strip_whitespace()
 --STDIN--
 <?php __CLASS__ ?>
 --FILE--
