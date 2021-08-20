@@ -424,6 +424,10 @@
 
 38. not support finally (try..catch..finally)
 
+39. class constant not support complex value
+
+    bpc not support string-cat value
+
 **misc**
 
 1. TODO
