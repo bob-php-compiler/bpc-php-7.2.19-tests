@@ -91,7 +91,7 @@
 
     compile error when call in global scope
 
-11. no highlight_file() highlight_string()
+11. no highlight_file() highlight_string() php_strip_whitespace()
 
 12. get_loaded_extensions() no zend_extensions parameter
 
