@@ -6,5 +6,5 @@ $s = 'O:8:"stdClass":00000000';
 var_dump(unserialize($s));
 ?>
 --EXPECTF--
-Notice: unserialize(): Error at offset 14 of 23 bytes in %s on line %d
+Notice: unserialize(): Error at offset 15 of 23 bytes in %s on line %d
 bool(false)
