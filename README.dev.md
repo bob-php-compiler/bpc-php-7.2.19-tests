@@ -112,6 +112,8 @@
 
 18. no __halt_compiler()
 
+19. some functions moved to runtime
+
 **object**
 
 1. __destruct
