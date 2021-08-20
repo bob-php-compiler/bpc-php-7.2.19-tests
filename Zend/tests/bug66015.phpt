@@ -8,12 +8,12 @@ class Test
    const SECOND = 2;
    const THIRD = 3;
 
-   protected static $array = [
+   protected static $array = array(
        self::FIRST => 'first',
        'second',
        'third',
        4,
-   ];
+   );
 
    public function __construct()
    {
