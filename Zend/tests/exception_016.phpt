@@ -11,6 +11,9 @@ try {
 $this->foo();
 ?>
 --EXPECTF--
-*** ERROR:compile-error:
-Error: Using $this when not in object context in %sexception_016.php on line %d
- -- compile-error
+Exception: Using $this when not in object context in %sexception_016.php on line %d
+
+Fatal error: Uncaught Error: Using $this when not in object context in %sexception_016.php:%d
+Stack trace:
+#0 {main}
+  thrown in %sexception_016.php on line %d
