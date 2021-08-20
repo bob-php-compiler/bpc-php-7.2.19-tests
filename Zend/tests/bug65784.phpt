@@ -1,5 +1,7 @@
 --TEST--
 Fixed Bug #65784 (Segfault with finally)
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo1() {

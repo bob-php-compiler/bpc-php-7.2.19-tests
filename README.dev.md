@@ -420,6 +420,8 @@
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
+38. not support finally (try..catch..finally)
+
 **misc**
 
 1. TODO
