@@ -1,5 +1,7 @@
 --TEST--
 Bug #65372 (Segfault in gc_zval_possible_root when return reference fails)
+--SKIPIF--
+skip unsupported return reference from function/method
 --FILE--
 <?php
 
