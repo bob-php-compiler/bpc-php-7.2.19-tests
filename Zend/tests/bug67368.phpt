@@ -1,5 +1,7 @@
 --TEST--
 Bug #67368 (Memory leak with immediately dereferenced array in class constant)
+--SKIPIF--
+skip class constant not support complex value
 --INI--
 report_memleaks=1
 --FILE--
