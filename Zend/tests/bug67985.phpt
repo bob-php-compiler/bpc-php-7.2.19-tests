@@ -3,7 +3,7 @@ Bug #67985 - Last used array index not copied to new array at assignment
 --FILE--
 <?php
 
-$a = ['zero', 'one', 'two'];
+$a = array('zero', 'one', 'two');
 unset($a[2]);
 $b = $a;
 $a[] = 'three';
