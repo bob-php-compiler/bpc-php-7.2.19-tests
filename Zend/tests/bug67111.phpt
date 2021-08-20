@@ -1,5 +1,7 @@
 --TEST--
 Bug #67111: Memory leak when using "continue 2" inside two foreach loops
+--SKIPIF--
+skip not support multi-level break/continue
 --FILE--
 <?php
 
