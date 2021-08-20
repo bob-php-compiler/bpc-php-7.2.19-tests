@@ -15,8 +15,5 @@ echo "made it once\n";
 crash();
 echo "ok\n";
 --EXPECTF--
-Notice: Undefined variable: i in %sbug67314.php on line 4
 made it once
-
-Notice: Undefined variable: i in %sbug67314.php on line 4
 ok
