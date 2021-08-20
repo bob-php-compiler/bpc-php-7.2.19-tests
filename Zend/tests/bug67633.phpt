@@ -1,5 +1,7 @@
 --TEST--
 Bug #67633: A foreach on an array returned from a function not doing copy-on-write
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 
