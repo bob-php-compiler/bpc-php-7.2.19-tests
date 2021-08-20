@@ -12,12 +12,14 @@ class Foo {
     }
 }
 
-$array = [[new Foo]];
+$array = array(array(new Foo));
 $array[0][0]->array =& $array;
 unset($array[0][0]);
 
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 6: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 int(0)
 array(0) {
 }
