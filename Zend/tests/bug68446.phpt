@@ -1,5 +1,7 @@
 --TEST--
 Bug #68446 (Array constant not accepted for array parameter default)
+--SKIPIF--
+skip typehint argument default value cannot be php-constant
 --FILE--
 <?php
 const FOO = [1];

@@ -47,6 +47,8 @@
     @see Zend/tests/bug34064.phpt
     pass `$arr[]` as argument may not be a good idea
 
+8. typehint argument default value cannot be php-constant
+
 **function**
 
 1. function signatures before global code
