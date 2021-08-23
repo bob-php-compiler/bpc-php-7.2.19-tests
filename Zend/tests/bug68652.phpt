@@ -37,5 +37,9 @@ class Bar {
 $foo = new Foo();
 ?>
 OK
---EXPECT--
+--EXPECTF--
+Warning: in %s line 12: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 27: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 OK
