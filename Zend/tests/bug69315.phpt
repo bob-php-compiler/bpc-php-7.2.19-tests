@@ -1,5 +1,7 @@
 --TEST--
 Bug #69315 (disable_functions behaviors inconsistently)
+--SKIPIF--
+skip no ini disable_functions
 --INI--
 disable_functions=strlen,defined,call_user_func,constant,is_string
 --FILE--
