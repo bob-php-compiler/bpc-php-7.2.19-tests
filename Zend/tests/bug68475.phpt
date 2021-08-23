@@ -1,5 +1,7 @@
 --TEST--
 Bug #68475 Calling function using $callable() syntax with strings of form 'Class::method'
+--SKIPIF--
+skip call_user_func not support "CLASS::STATIC_METHOD"
 --FILE--
 <?php
 class TestClass
