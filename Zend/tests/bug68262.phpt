@@ -21,4 +21,4 @@ var_dump($first->p);
 
 ?>
 --EXPECT--
-string(4) "init"
+string(3) "foo"
