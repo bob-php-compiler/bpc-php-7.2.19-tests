@@ -236,6 +236,8 @@
 
 28. check object property type via write-property handler
 
+29. not support __debugInfo()
+
 **FILE and LINE**
 
 1. FILE and LINE
