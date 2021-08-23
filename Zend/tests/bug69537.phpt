@@ -1,5 +1,7 @@
 --TEST--
 Bug #69537 (__debugInfo with empty string for key gives error)
+--SKIPIF--
+skip not support __debugInfo()
 --FILE--
 <?php
 class Foo {
