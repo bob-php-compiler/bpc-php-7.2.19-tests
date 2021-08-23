@@ -1,5 +1,7 @@
 --TEST--
 Bug #69676: Resolution of self::FOO in class constants not correct (variation)
+--SKIPIF--
+skip class constant not support complex value
 --FILE--
 <?php
 
