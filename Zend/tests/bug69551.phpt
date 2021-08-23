@@ -1,5 +1,7 @@
 --TEST--
 Bug #69551 - parse_ini_file() and parse_ini_string() segmentation fault
+--SKIPIF--
+skip TODO parse_ini_string()
 --FILE--
 <?php
 $ini = <<<INI
