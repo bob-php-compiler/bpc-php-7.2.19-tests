@@ -10,6 +10,7 @@ class bad {
 		global $bar;
 		$bar = $this;
 		$bar->y = new stdClass;
+		var_dump($bar);
 	}
 }
 
@@ -21,7 +22,10 @@ $foo->bad->x = new stdClass;
 unset($foo);
 gc_collect_cycles();
 var_dump($bar);
---EXPECT--
+--EXPECTF--
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+NULL
 object(bad)#2 (2) {
   ["x"]=>
   object(stdClass)#3 (0) {
