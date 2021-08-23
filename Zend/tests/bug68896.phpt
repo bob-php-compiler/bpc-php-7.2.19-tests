@@ -1,5 +1,7 @@
 --TEST--
 Bug #68896 (Changing ArrayObject value cause Segment Fault)
+--SKIPIF--
+skip TODO ArrayObject
 --FILE--
 <?php
 class A implements ArrayAccess {
