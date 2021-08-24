@@ -1,5 +1,7 @@
 --TEST--
 Bug #69802 (Reflection on Closure::__invoke borks type hint class name)
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 $f = (new ReflectionFunction('iterator_to_array'))->getClosure();
