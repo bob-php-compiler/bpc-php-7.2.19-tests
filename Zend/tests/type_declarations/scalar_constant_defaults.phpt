@@ -1,5 +1,7 @@
 --TEST--
 Scalar type - default via constants
+--SKIPIF--
+skip typehint argument default value cannot be php-constant
 --FILE--
 <?php
 
