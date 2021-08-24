@@ -1,5 +1,7 @@
 --TEST--
 callable type#002 - Reflection
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
