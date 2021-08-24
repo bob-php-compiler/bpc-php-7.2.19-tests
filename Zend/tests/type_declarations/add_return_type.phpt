@@ -1,5 +1,7 @@
 --TEST--
 Adding a return type during inheritance is allowed
+--SKIPIF--
+skip not support return type
 --FILE--
 <?php
 

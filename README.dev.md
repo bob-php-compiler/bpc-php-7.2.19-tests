@@ -432,6 +432,8 @@
 
     bpc not support string-cat value
 
+40. not support return type
+
 **misc**
 
 1. TODO
