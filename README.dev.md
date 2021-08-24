@@ -428,9 +428,7 @@
 
 38. not support finally (try..catch..finally)
 
-39. class constant not support complex value
-
-    bpc not support string-cat value
+39. class constant/property only support simple literal value
 
 40. not support return type
 
