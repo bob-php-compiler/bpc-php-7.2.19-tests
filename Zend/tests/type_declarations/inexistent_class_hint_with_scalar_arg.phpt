@@ -1,5 +1,7 @@
 --TEST--
 Inexistent class as type receiving scalar argument
+--ARGS--
+--bpc-include-file Zend/tests/type_declarations/inexistent_class_hint_with_scalar_arg.inc
 --FILE--
 <?php
 
