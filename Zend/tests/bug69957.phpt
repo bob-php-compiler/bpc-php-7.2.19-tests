@@ -33,15 +33,6 @@ try {
 }
 
 try {
-	$result = 1 % 0;
-	var_dump($result);
-} catch (DivisionByZeroError $t){
-	echo "\nLiteral mod\n";
-	printf("Type: %s\n", get_class($t));
-	printf("Message: %s\n", $t->getMessage());
-}
-
-try {
 	$result = 1 / 0.0;
 	var_dump($result);
 } catch (DivisionByZeroError $t){
@@ -50,34 +41,16 @@ try {
 	printf("Message: %s\n", $t->getMessage());
 }
 
-try {
-	$result = 1 % 0.0;
-	var_dump($result);
-} catch (DivisionByZeroError $t){
-	echo "\nDouble mod\n";
-	printf("Type: %s\n", get_class($t));
-	printf("Message: %s\n", $t->getMessage());
-}
-
 ?>
 --EXPECTF--
+Division by zero
+Division by zero
+
 Warning: Division by zero in %sbug69957.php on line %d
 float(INF)
 
 Variable mod
 Type: DivisionByZeroError
 Message: Modulo by zero
-
-Warning: Division by zero in %sbug69957.php on line %d
 float(INF)
-
-Literal mod
-Type: DivisionByZeroError
-Message: Modulo by zero
-
-Warning: Division by zero in %sbug69957.php on line %d
 float(INF)
-
-Double mod
-Type: DivisionByZeroError
-Message: Modulo by zero

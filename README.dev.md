@@ -523,6 +523,8 @@
 
 22. compiler always warning: Division by zero
 
+    if can be calc result when compile, the final exectable will only contain the result, so not warning again
+
 23. maybe php bug
 
     @see Zend/tests/bug54265.phpt
@@ -534,6 +536,8 @@
 25. nested error handler result silent
 
     @see Zend/tests/bug64960.phpt
+
+26. Modulo by zero compile error
 
 ## output buffering
 
