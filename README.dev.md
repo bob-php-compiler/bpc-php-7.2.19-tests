@@ -323,9 +323,7 @@
     bpc closure arguments not support reference
     bpc closure has only one method: __invoke()
 
-7. Null Coalescing Operator ??
-
-    bpc not support Null Coalescing Operator
+7. not support Null Coalescing Operator ??
 
 8. foreach as list()
 
