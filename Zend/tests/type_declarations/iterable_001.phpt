@@ -1,5 +1,7 @@
 --TEST--
 iterable type#001
+--SKIPIF--
+skip TODO iterable
 --FILE--
 <?php
 

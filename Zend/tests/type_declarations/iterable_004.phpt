@@ -1,5 +1,7 @@
 --TEST--
 iterable type#004 - Parameter covariance
+--SKIPIF--
+skip TODO iterable
 --FILE--
 <?php
 
