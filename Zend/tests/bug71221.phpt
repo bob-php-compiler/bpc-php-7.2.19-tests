@@ -6,5 +6,6 @@ ob_start("get_defined_vars");
 ob_end_clean();
 ?>
 okey
---EXPECT--
+--EXPECTF--
+Warning: Cannot call get_defined_vars() dynamically in %s on line %d
 okey
