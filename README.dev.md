@@ -243,6 +243,8 @@
 
     @see Zend/tests/bug70873.phpt
 
+31. cannot XXX when no class scope is active/when current class scope has no parent
+
 **FILE and LINE**
 
 1. FILE and LINE
