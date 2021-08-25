@@ -1,5 +1,7 @@
 --TEST--
 Bug #70398 (SIGSEGV, Segmentation fault zend_ast_destroy_ex)
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
