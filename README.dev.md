@@ -239,6 +239,10 @@
 
 29. not support __debugInfo()
 
+30. cannot access private static property error message different
+
+    @see Zend/tests/bug70873.phpt
+
 **FILE and LINE**
 
 1. FILE and LINE
