@@ -51,7 +51,7 @@ array(4) {
 }
 string(3) "1st"
 string(3) "2nd"
-NULL
+string(3) "3th"
 string(3) "4th"
 array(4) {
   [0]=>
@@ -59,41 +59,41 @@ array(4) {
   [1]=>
   &string(3) "2nd"
   [2]=>
-  NULL
+  string(3) "3th"
   [3]=>
   string(3) "4th"
 }
 array(4) {
   [0]=>
-  NULL
+  string(3) "1st"
   [1]=>
   string(3) "2nd"
   [2]=>
-  NULL
+  string(3) "3th"
   [3]=>
   string(3) "4th"
 }
 array(4) {
   [0]=>
-  NULL
+  string(3) "1st"
   [1]=>
   &string(3) "2nd"
   [2]=>
-  NULL
+  string(3) "3th"
   [3]=>
   string(3) "4th"
 }
 array(4) {
   [0]=>
-  NULL
+  string(3) "1st"
   [1]=>
-  NULL
+  &string(3) "2nd"
   [2]=>
-  NULL
+  string(3) "3th"
   [3]=>
   string(3) "4th"
 }
-NULL
-NULL
-NULL
+string(3) "1st"
+string(3) "2nd"
+string(3) "3th"
 string(3) "4th"

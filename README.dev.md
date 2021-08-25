@@ -92,6 +92,7 @@
 10. func_get_arg/func_get_args/func_num_args
 
     compile error when call in global scope
+    unset arg not affect args, @see Zend/tests/bug70547.phpt
 
 11. no highlight_file() highlight_string() php_strip_whitespace()
 
@@ -490,6 +491,7 @@
 
     php only show user passed args
     bpc show all args
+    unset arg not affect stack trace, @see Zend/tests/bug70547.phpt
 
 14. invalid test
 
