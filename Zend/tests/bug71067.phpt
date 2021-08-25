@@ -7,9 +7,9 @@ error_reporting=0
 <?php
 class Test {
 	public function test(){
-		$arr = (object) [
-			'children' => []
-		];
+		$arr = (object) array(
+			'children' => array()
+		);
 		$arr->children[] = 1;
 		return $arr;
 	}
