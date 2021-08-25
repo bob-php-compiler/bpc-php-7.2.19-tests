@@ -1,5 +1,7 @@
 --TEST--
 Bug #70944 (try{ } finally{} can create infinite chains of exceptions)
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 try {
