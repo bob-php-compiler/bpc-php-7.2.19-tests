@@ -1,5 +1,7 @@
 --TEST--
 Bug #70630 (Closure::call/bind() crash with ReflectionFunction->getClosure())
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 class a {}
