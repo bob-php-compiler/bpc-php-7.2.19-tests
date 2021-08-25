@@ -523,6 +523,8 @@
 
 21. gc different
 
+    gc_collect_cycles() always return 0
+
 22. compiler always warning: Division by zero
 
     if can be calc result when compile, the final exectable will only contain the result, so not warning again

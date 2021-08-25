@@ -25,15 +25,17 @@ $a->b->a = $a;
 $i = 0;
 
 while ($i++ < 9999) {
-	$t = [];
+	$t = array();
 	$t[] = &$t;
 	unset($t);
 }
-$t = [new C];
+$t = array(new C);
 $t[] = &$t;
 unset($t);
 
 unset($a);
 var_dump(gc_collect_cycles());
---EXPECT--
-int(2)
+--EXPECTF--
+Warning: in %s line 9: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+int(0)

@@ -28,11 +28,11 @@ $array = array($c); //This is used to leave a room for $GLOBALS["a"]
 unset($c);
 
 while ($i++ < 9998) {
-	$t = [];
+	$t = array();
 	$t[] = &$t;
 	unset($t);
 }
-$t = [new C];
+$t = array(new C);
 $t[] = &$t;
 unset($t); // This is used to trigger C::__destruct while doing gc_colloct_roots
 
@@ -42,5 +42,7 @@ unset($a); // This one can not be putted into roots buf because it's full, thus 
 		   // which will make $a be putted into gc roots buf twice
 var_dump(gc_collect_cycles());
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 9: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 int(0)
