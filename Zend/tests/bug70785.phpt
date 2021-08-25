@@ -1,5 +1,7 @@
 --TEST--
 Bug #70785 (Infinite loop due to exception during identical comparison)
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 
