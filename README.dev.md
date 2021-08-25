@@ -360,7 +360,7 @@
 
     bpc currently not support `(new CLASS_NAME())->prop/method`
 
-18. unsupported return reference from function/method
+18. not supported return reference from function/method
 
 19. bpc support double quoted string array string index
 

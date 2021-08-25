@@ -1,5 +1,7 @@
 --TEST--
 Bug #70223 (Incrementing value returned by magic getter)
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 
