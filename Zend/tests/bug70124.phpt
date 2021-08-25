@@ -1,5 +1,7 @@
 --TEST--
 Bug #70124 (null ptr deref / seg fault in ZEND_HANDLE_EXCEPTION_SPEC_HANDLER)
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 
