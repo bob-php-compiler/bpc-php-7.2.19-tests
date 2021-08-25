@@ -1,5 +1,7 @@
 --TEST--
 Bug #70681: Segfault when binding $this of internal instance method to null
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
