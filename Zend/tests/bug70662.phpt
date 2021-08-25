@@ -3,8 +3,9 @@ Bug #70662: Duplicate array key via undefined index error handler
 --FILE--
 <?php
 
-$a = [];
-set_error_handler(function() use(&$a) {
+$a = array();
+set_error_handler(function() {
+    global $a;
     $a['b'] = 2;
 });
 $a['b'] += 1;
