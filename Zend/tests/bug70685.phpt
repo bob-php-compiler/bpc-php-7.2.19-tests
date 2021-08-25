@@ -1,5 +1,7 @@
 --TEST--
 Bug #70685: Segfault for getClosure() internal method rebind with invalid $this
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
