@@ -1,5 +1,7 @@
 --TEST--
 Bug #70183 (null pointer deref (segfault) in zend_eval_const_expr)
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 [[][]]
