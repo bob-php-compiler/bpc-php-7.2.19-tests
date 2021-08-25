@@ -1,5 +1,7 @@
 --TEST--
 Bug #71154: Incorrect HT iterator invalidation causes iterator reuse
+--SKIPIF--
+skip TODO ArrayIterator
 --FILE--
 <?php
 
