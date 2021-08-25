@@ -16,12 +16,9 @@ interface Iface {
 class Foo extends Base implements Iface {
 }
 
-$code = <<<'PHP'
 abstract class Bar extends Base {
     public function __construct(Hint2 $x) { }
 }
-PHP;
-eval($code);
 ?>
 OK
 --EXPECT--
