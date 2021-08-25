@@ -8,7 +8,9 @@ class X {
 		var_dump($this);
 	}
 }
-(new X)();
+
+$o = new X;
+$o();
 
 ?>
 --EXPECT--
