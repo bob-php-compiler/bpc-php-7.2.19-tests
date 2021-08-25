@@ -1,5 +1,7 @@
 --TEST--
 Bug #70748 (Segfault in ini_lex () at Zend/zend_ini_scanner.l)
+--SKIPIF--
+skip TODO parse_ini_file()
 --FILE--
 <?php
 $ini = '[${ 	';
