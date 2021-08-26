@@ -3,7 +3,7 @@ Bug #71529: Variable references on array elements don't work when using count
 --FILE--
 <?php
 
-$a = [1];
+$a = array(1);
 $a[] = &$a[out(count($a) - 1)];
 var_dump($a);
 
