@@ -437,6 +437,8 @@
 
 40. not support return type
 
+41. optional params should always after required params
+
 **misc**
 
 1. TODO
