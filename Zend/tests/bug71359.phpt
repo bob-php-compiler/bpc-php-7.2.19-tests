@@ -3,12 +3,12 @@ Bug #71359: Null coalescing operator and magic
 --FILE--
 <?php
 class AA {
-    private $data = [];
+    private $data = array();
     public function __isset($name) {
         echo "__isset($name)\n";
         return array_key_exists($name, $this->data);
     }
-    public function &__get($name) {
+    public function __get($name) {
         echo "__get($name)\n";
         if (!array_key_exists($name, $this->data)) {
             throw new Exception('Unknown offset');
@@ -28,12 +28,12 @@ class AA {
 $aa = new AA;
 var_dump(isset($aa->zero->one->two));
 var_dump(isset($aa->zero->foo));
-var_dump($aa->zero ?? 42);
-var_dump($aa->zero->one->two ?? 42);
+var_dump(isset($aa->zero) ? $aa->zero : 42);
+var_dump(isset($aa->zero->one->two) ? $aa->zero->one->two : 42);
 $aa->zero = new AA;
 $aa->zero->one = new AA;
 var_dump(isset($aa->zero->one->two));
-var_dump($aa->zero->one->two ?? 42);
+var_dump(isset($aa->zero->one->two) ? $aa->zero->one->two : 42);
 ?>
 --EXPECT--
 __isset(zero)
