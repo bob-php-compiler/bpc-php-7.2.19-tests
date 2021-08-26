@@ -23,8 +23,10 @@ class A
 	}
 }
 
-(new A())->bar();
-(new A())->foo();
+$o = new A();
+$o->bar();
+$o = new A();
+$o->foo();
 ?>
 --EXPECT--
 Array
