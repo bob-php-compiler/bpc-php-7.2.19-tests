@@ -8,4 +8,7 @@ $foo[3]->bar[1] = "bang";
 echo "ok\n";
 ?>
 --EXPECTF--
-Recoverable fatal error: Object of class stdClass could not be converted to string in %sbug41919.php on line 3
+Fatal error: Uncaught Error: Cannot use string offset as an object in %sbug41919.php:%d
+Stack trace:
+#0 {main}
+  thrown in %sbug41919.php on line %d
