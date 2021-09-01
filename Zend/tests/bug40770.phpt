@@ -12,4 +12,4 @@ for ($i=0; $i<=$mb; $i++) {
 }
 ?>
 --EXPECTF--
-Fatal error: GC Warning: Out of Memory! Heap size: 6 MiB. Returning NULL! in %s on line %d
+Fatal error: GC Warning: Out of Memory! Heap size: %d MiB. Returning NULL! in %s on line %d
