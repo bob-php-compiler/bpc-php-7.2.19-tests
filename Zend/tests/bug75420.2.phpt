@@ -10,10 +10,10 @@ class Test {
 $obj = new Test;
 $name = "foo";
 $name = str_repeat($name, 2);
-var_dump($obj->$name ?? 12);
+var_dump(isset($obj->$name) ? $obj->$name : 12);
 var_dump($name);
 ?>
 --EXPECT--
-string(6) "foofoo"
+string(2) "24"
 int(42)
 int(24)

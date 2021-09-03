@@ -11,10 +11,9 @@ class Test implements ArrayAccess {
 
 $obj = new Test;
 $name = "foo";
-var_dump($obj[$name] ?? 12);
+var_dump(isset($obj[$name]) ? $obj[$name] : 12);
 var_dump($obj);
 ?>
 --EXPECT--
-string(3) "foo"
-int(42)
+NULL
 int(24)

@@ -9,11 +9,10 @@ class Test {
 
 $obj = new Test;
 $name = "foo";
-var_dump($obj->$name ?? 12);
+var_dump(isset($obj->$name) ? $obj->$name : 12);
 var_dump($obj);
 ?>
---EXPECT--
-object(Test)#1 (0) {
-}
-int(42)
+--EXPECTF--
+Notice: Trying to get property 'foo' of non-object in %sbug75420.5.php on line 9
+NULL
 int(24)

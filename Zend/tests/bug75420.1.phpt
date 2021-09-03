@@ -9,10 +9,10 @@ class Test {
 
 $obj = new Test;
 $name = "foo";
-var_dump($obj->$name ?? 12);
+var_dump(isset($obj->$name) ? $obj->$name : 12);
 var_dump($name);
 ?>
 --EXPECT--
-string(3) "foo"
+string(2) "24"
 int(42)
 int(24)
