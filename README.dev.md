@@ -551,6 +551,8 @@
 
 26. Modulo by zero compile error
 
+27. bpc `$GLOBALS += array();` may not worked as expected because of variables declared early
+
 ## output buffering
 
 1. chunk_size and buffer_used different

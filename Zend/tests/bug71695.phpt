@@ -11,7 +11,8 @@ function provideGlobals() {
 provideGlobals();
 echo $foo;
 ?>
---EXPECT--
+--EXPECTF--
+bool(true)
 bool(false)
-bool(false)
-foo
+
+Warning: bpc `$GLOBALS += array();` may not worked as expected because of variables declared early in %sbug71695.php on line 5
