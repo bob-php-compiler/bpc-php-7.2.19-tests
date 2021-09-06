@@ -502,8 +502,8 @@
 
 13. stack-trace args
 
-    php only show user passed args
-    bpc show all args
+    php show user passed args
+    bpc show declared args
     unset arg not affect stack trace, @see Zend/tests/bug70547.phpt
 
 14. invalid test
