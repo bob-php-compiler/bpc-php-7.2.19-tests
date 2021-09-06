@@ -13,4 +13,4 @@ class Test {
 
 ?>
 --EXPECTF--
-Fatal error: Cannot use $this as parameter in %s on line %d
+Parse error: Cannot use $this as parameter in %s on line %d
