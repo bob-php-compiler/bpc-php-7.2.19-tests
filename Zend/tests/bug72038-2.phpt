@@ -3,8 +3,8 @@ Bug #72038 (Function calls with values to a by-ref parameter don't always throw 
 --FILE--
 <?php
 
-test($baz = &$bar);
-var_dump($baz);
+test($bar = 2);
+var_dump($bar);
 
 function test(&$param) {
         $param = 1;
@@ -12,4 +12,6 @@ function test(&$param) {
 
 ?>
 --EXPECTF--
-int(1)
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %s on line %d
+ -- compile-error
