@@ -15,8 +15,8 @@ var_dump(++$y[]);
 var_dump($y[]++);
 ?>
 --EXPECT--
-NULL
-NULL
+string(1) "0"
+int(1)
 NULL
 NULL
 NULL

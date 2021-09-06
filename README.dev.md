@@ -245,6 +245,11 @@
 
 31. cannot XXX when no class scope is active/when current class scope has no parent
 
+32. __PHP_Incomplete_Class
+
+    php: .= ++ -- += ... notice and return NULL, stmt abort
+    bpc: incomplete property notice return NULL, stmt continue
+
 **FILE and LINE**
 
 1. FILE and LINE
