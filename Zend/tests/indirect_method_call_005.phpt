@@ -1,7 +1,5 @@
 --TEST--
 Testing array dereferencing from instance with ArrayObject
---SKIPIF--
-skip TODO `rval->`
 --FILE--
 <?php
 

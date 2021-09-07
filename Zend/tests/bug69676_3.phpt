@@ -58,8 +58,7 @@ class C4 extends B4 {
     const N = 'C4';
 }
 
-$o = new C4;
-var_dump($o->prop); // A4
+var_dump((new C4)->prop); // A4
 
 ?>
 --EXPECT--

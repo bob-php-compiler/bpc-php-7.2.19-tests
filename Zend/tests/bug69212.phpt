@@ -16,8 +16,7 @@ try {
     echo "Caught!\n";
 }
 try {
-    $o = new Test;
-    $o->bar(do_throw());
+    (new Test)->bar(do_throw());
 } catch (Exception $e) {
     echo "Caught!\n";
 }

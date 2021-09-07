@@ -9,8 +9,7 @@ set_error_handler(
     }
 );
 
-$f = function (int $i) { bar(); };
-$f("7as");
+(function (int $i) { bar(); })("7as");
 --EXPECTF--
 Fatal error: Uncaught Exception: My custom error in %s:%d
 Stack trace:

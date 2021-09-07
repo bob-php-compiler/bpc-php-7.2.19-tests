@@ -1,7 +1,5 @@
 --TEST--
 Testing indirect method call
---SKIPIF--
-skip TODO `rval->`
 --FILE--
 <?php
 

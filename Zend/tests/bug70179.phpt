@@ -9,8 +9,7 @@ class X {
 	}
 }
 
-$o = new X;
-$o();
+(new X)();
 
 ?>
 --EXPECT--

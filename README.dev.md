@@ -368,50 +368,46 @@
 
 16. parse error
 
-17. TODO `rval->`
+17. not supported return reference from function/method
 
-    bpc currently not support `(new CLASS_NAME())->prop/method`
-
-18. not supported return reference from function/method
-
-19. bpc support double quoted string array string index
+18. bpc support double quoted string array string index
 
     @see tests/lang/bug21820.phpt
 
-20. not support foreach as reference
+19. not support foreach as reference
 
-21. static-decl/global-decl only support in function or method
+20. static-decl/global-decl only support in function or method
 
-22. not support list in list
+21. not support list in list
 
     bpc not support `list(list($x)) = `, parse error
 
-23. not support short tags
+22. not support short tags
 
-24. Ternary Operator ?:
+23. Ternary Operator ?:
 
     leave out the middle part of the ternary operator `expr1 ?: expr2` will parse error
 
-25. not support anonymous class
+24. not support anonymous class
 
-26. not support ... operator
+25. not support ... operator
 
-27. not support generators
+26. not support generators
 
-28. not support multi-level break/continue
+27. not support multi-level break/continue
 
-29. break/continue not in loop/switch compile-error
+28. break/continue not in loop/switch compile-error
 
-30. not support return type
+29. not support return type
 
-31. not support late static bindings
+30. not support late static bindings
 
-32. not support bprefix strings
+31. not support bprefix strings
 
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
-33. support $arr['index'] in dqstring
+32. support $arr['index'] in dqstring
 
     ```php
     <?php
@@ -421,28 +417,28 @@
     php parse error
     bpc ok
 
-34. not support heredoc/nowdoc embed each other or in dqstring
+33. not support heredoc/nowdoc embed each other or in dqstring
 
-35. not support nullable types
+34. not support nullable types
 
-36. not support indirect call with constants
+35. not support indirect call with constants
 
     @see Zend/tests/indirect_call_from_constant.phpt
 
-37. strict names
+36. strict names
 
     php support ascii 0x80-0xff in variable/class/function... names
     bpc not support this
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-38. not support finally (try..catch..finally)
+37. not support finally (try..catch..finally)
 
-39. class constant/property only support simple literal value
+38. class constant/property only support simple literal value
 
-40. not support return type
+39. not support return type
 
-41. optional params should always after required params
+40. optional params should always after required params
 
 **misc**
 

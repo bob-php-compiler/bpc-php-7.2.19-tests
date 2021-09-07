@@ -11,8 +11,7 @@ class Test {
     }
 }
 
-$o = new Test;
-$o->method();
+(new Test)->method();
 
 ?>
 --EXPECT--
