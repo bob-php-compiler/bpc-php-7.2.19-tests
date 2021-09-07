@@ -14,8 +14,7 @@ class A {
 
 var_dump(A::publicConst);
 A::staticConstDump();
-$a = new A();
-$a->constDump();
+(new A())->constDump();
 
 ?>
 --EXPECTF--

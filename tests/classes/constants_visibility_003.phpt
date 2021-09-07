@@ -13,8 +13,7 @@ class A {
 }
 
 A::staticConstDump();
-$a = new A();
-$a->constDump();
+(new A())->constDump();
 var_dump(constant('A::privateConst'));
 
 ?>
