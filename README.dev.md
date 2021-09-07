@@ -46,6 +46,12 @@
 
     @see Zend/tests/bug34064.phpt
     pass `$arr[]` as argument may not be a good idea
+    
+    @see Zend/tests/bug72101.phpt
+    method argument is_ref? not checked
+    
+    @see php-functions.scm
+    call_user_func() pass args not in container, warning reported, same as php
 
 8. typehint argument default value cannot be php-constant
 

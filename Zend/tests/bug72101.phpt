@@ -1,5 +1,7 @@
 --TEST--
 Bug #72101 (crash on complex code)
+--ARGS--
+--bpc-include-file Zend/tests/bug72101.inc
 --FILE--
 <?php
 class PHPUnit_Framework_MockObject_Stub_ReturnCallback {
@@ -13,7 +15,7 @@ class PHPUnit_Framework_MockObject_Stub_ReturnCallback {
 }
 
 class PHPUnit_Framework_MockObject_InvocationMocker {
-    protected $matchers = [];
+    protected $matchers = array();
     public function addMatcher( $matcher) {
         $this->matchers[] = $matcher;
     }
@@ -36,6 +38,7 @@ class MethodCallbackByReference {
         Legacy::bar($a, $b, $c);
     }
     public function callback(&$a, &$b, $c) {
+        echo __METHOD__, "\n";
         $b = 1;
     }
 }
@@ -62,24 +65,19 @@ class Mock_MethodCallbackByReference_7b180d26 extends MethodCallbackByReference 
 set_error_handler(function() {
 //    var_dump(func_get_args());
     DoesNotExists::$nope = true;
-}, E_ALL | E_STRICT);
-
+});
 $foo = new Mock_MethodCallbackByReference_7b180d26();
 $InvMocker = new PHPUnit_Framework_MockObject_InvocationMocker();
 $foo->inv_mocker = $InvMocker;
 $OuterMatcher = new PHPUnit_Framework_MockObject_Matcher();
 $InvMocker->addMatcher($OuterMatcher);
 $OuterMatcher->methodNameMatcher = null;
-$OuterMatcher->stub = new PHPUnit_Framework_MockObject_Stub_ReturnCallback([$foo, 'callback']);
+$OuterMatcher->stub = new PHPUnit_Framework_MockObject_Stub_ReturnCallback(array($foo, 'callback'));
 $a = $b = $c = 0;
 $foo->bar($a, $b, $c);
---EXPECTF--
-Fatal error: Uncaught Error: Class 'DoesNotExists' not found in %sbug72101.php:61
-Stack trace:
-#0 %sbug72101.php(8): {closure}(2, 'Parameter 1 to ...', '%s', 8, Array)
-#1 %sbug72101.php(27): PHPUnit_Framework_MockObject_Stub_ReturnCallback->invoke(Object(PHPUnit_Framework_MockObject_Invocation_Static))
-#2 %sbug72101.php(19): PHPUnit_Framework_MockObject_Matcher->invoked(Object(PHPUnit_Framework_MockObject_Invocation_Static))
-#3 %sbug72101.php(52): PHPUnit_Framework_MockObject_InvocationMocker->invoke(Object(PHPUnit_Framework_MockObject_Invocation_Static))
-#4 %sbug72101.php(72): Mock_MethodCallbackByReference_7b180d26->bar(0, 0, 0)
-#5 {main}
-  thrown in %sbug72101.php on line 61
+var_dump($a, $b, $c);
+--EXPECT--
+MethodCallbackByReference::callback
+int(0)
+int(0)
+int(0)
