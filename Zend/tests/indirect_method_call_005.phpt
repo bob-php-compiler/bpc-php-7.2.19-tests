@@ -1,5 +1,7 @@
 --TEST--
 Testing array dereferencing from instance with ArrayObject
+--SKIPIF--
+skip TODO ArrayObject
 --FILE--
 <?php
 
