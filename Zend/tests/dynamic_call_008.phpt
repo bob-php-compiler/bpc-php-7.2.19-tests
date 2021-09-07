@@ -10,4 +10,4 @@ test();
 
 ?>
 --EXPECTF--
-Parse error: %s in %s on line 4
+Warning: Cannot call extract() dynamically in %s on line %d
