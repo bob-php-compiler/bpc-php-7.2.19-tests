@@ -1,5 +1,7 @@
 --TEST--
 Bug #73900: Use After Free in unserialize() SplFixedArray
+--SKIPIF--
+skip TODO SplFixedArray
 --FILE--
 <?php
 
