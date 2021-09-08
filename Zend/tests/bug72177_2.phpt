@@ -1,5 +1,7 @@
 --TEST--
 Bug #72177 Scope issue in __destruct after ReflectionProperty::setValue()
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 class Foo
