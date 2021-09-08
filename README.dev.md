@@ -574,6 +574,11 @@
 
 3. unserialize() "Insufficient data for unserializing" different
 
+4. error_reporting($error_level)
+
+    php zval_get_string($error_level) first, then convert to long
+    bpc simply mkelong
+
 ## ext/date
 
 1. ini_set date.timezone warning message
