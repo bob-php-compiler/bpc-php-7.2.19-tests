@@ -1,5 +1,7 @@
 --TEST--
 Bug #72543.5 (different references behavior comparing to PHP 5)
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 $arr = [1];
