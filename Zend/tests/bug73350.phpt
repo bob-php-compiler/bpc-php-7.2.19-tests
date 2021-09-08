@@ -14,9 +14,7 @@ var_export($e);
 --EXPECTF--
 Exception::__set_state(array(
    'message' => '',
-   'string' => 'Exception in %sbug73350.php:%d
-Stack trace:
-#0 {main}',
+   'string' => '',
    'code' => 0,
    'file' => '%sbug73350.php',
    'line' => %d,
