@@ -1,5 +1,7 @@
 --TEST--
 Bug #73338: Ensure exceptions in function init opcodes are cleaned properly
+--SKIPIF--
+skip invalid test
 --FILE--
 <?php
 
