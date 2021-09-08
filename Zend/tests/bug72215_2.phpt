@@ -1,7 +1,7 @@
 --TEST--
 Bug #72215.1 (Wrong return value if var modified in finally)
 --SKIPIF--
-skip unsupported return reference from function/method
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function &test(&$b) {
