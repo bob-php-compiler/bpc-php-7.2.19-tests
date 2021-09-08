@@ -1,5 +1,7 @@
 --TEST--
 Bug #72767: PHP Segfaults when trying to expand an infinite operator
+--SKIPIF--
+skip TODO InfiniteIterator
 --FILE--
 <?php
 
