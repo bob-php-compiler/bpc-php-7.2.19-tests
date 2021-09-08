@@ -55,6 +55,10 @@
 
 8. typehint argument default value cannot be php-constant
 
+9. argument default value evaled before function call
+
+    @see Zend/tests/bug73163.phpt
+
 **function**
 
 1. function signatures before global code

@@ -3,7 +3,7 @@ Bug #73163 (PHP hangs if error handler throws while accessing undef const in def
 --FILE--
 <?php
 
-function doSomething(string $value = UNDEFINED) {
+function doSomething($value = UNDEFINED) {
 }
 
 set_error_handler(function($errno, $errstr) {
@@ -16,7 +16,6 @@ doSomething();
 --EXPECTF--
 Fatal error: Uncaught Exception: Use of undefined constant UNDEFINED - assumed 'UNDEFINED' (this will throw an Error in a future version of PHP) in %s:%d
 Stack trace:
-#0 %s(%d): {closure}(%s)
-#1 %s(%d): doSomething()
-#2 {main}
+#0 %s(%d): {closure}(2, '%s')
+#1 {main}
   thrown in %s on line %d
