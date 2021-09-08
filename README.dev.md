@@ -256,6 +256,8 @@
     php: .= ++ -- += ... notice and return NULL, stmt abort
     bpc: incomplete property notice return NULL, stmt continue
 
+33. Cannot create reference to $this
+
 **FILE and LINE**
 
 1. FILE and LINE

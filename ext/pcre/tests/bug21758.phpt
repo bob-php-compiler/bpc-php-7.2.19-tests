@@ -9,7 +9,7 @@ Bug #21758 (preg_replace_callback() not working with class methods)
 
       var_dump(preg_replace_callback(
               '/broken/',
-              array(&$this, 'bar'),
+              array($this, 'bar'),
               $s
            ));
     }
