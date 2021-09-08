@@ -2,7 +2,7 @@
 Bug #72543.1 (different references behavior comparing to PHP 5)
 --FILE--
 <?php
-$arr = [];
+$arr = array();
 $arr[0] = null;
 $ref =& $arr[0];
 unset($ref);
@@ -12,7 +12,7 @@ var_dump($arr);
 --EXPECT--
 array(1) {
   [0]=>
-  array(1) {
+  &array(1) {
     [0]=>
     NULL
   }
