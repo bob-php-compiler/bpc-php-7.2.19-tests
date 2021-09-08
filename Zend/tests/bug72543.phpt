@@ -12,11 +12,11 @@ function change_copy($copy) {
         $copy['b']['z']['z'] = $copy['b'];
 }
 
-$data = [
-    'a' => [
-        'b' => [],
-    ],
-];
+$data = array(
+    'a' => array(
+        'b' => array(),
+    ),
+);
 
 create_references($data);
 
