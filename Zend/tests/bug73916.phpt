@@ -8,9 +8,9 @@ $b = new b;
 $test[] =& $a;
 $test[] =& $b;
 test($test);
-function test() {
+function test($arg) {
 	debug_print_backtrace();
 }
 ?>
 --EXPECTF--
-#0  test(Array ([0] => Array ([0] => a),[1] => b Object ())) called at [%sbug73916.php:%d]
+#0  test(Array) called at [%sbug73916.php:%d]
