@@ -7,7 +7,7 @@ interface Foo {
 }
 
 class Hello implements Foo {
-    public function bar(array $baz = [])
+    public function bar(array $baz = array())
     {
 
     }
@@ -15,4 +15,4 @@ class Hello implements Foo {
 echo "OK\n";
 ?>
 --EXPECTF--
-Fatal error: Declaration of Hello::bar(array $baz = Array) must be compatible with Foo::bar(?array $baz = NULL) in %s on line %d
+Fatal error: Declaration of Hello::bar(array $baz = Array) must be compatible with Foo::bar(array $baz = NULL) in %s on line %d
