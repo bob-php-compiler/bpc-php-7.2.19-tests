@@ -1,5 +1,7 @@
 --TEST--
 Bug #73792 (invalid foreach loop hangs script)
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 $a = 'aaa';
