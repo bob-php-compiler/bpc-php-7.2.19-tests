@@ -3,7 +3,7 @@ Bug #72441 (Segmentation fault: RFC list_keys)
 --FILE--
 <?php
 
-$array = [];
+$array = array();
 
 list(
 	'' => $foo,
@@ -11,4 +11,4 @@ list(
 ) = $array;
 ?>
 --EXPECTF--
-Fatal error: Cannot mix keyed and unkeyed array entries in assignments in %sbug72441.php on line %d
+Parse error: %s in %s on line %d
