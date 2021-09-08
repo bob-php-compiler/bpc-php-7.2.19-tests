@@ -20,4 +20,4 @@ Fatal error: Uncaught TypeError: Argument 1 passed to takes_int() must be of the
 Stack trace:
 #0 %s(9): takes_int(NAN)
 #1 {main}
-  thrown in %s on line 6
+  thrown in %s on line %d
