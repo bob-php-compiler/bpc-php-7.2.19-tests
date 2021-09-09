@@ -215,52 +215,47 @@
 
 21. Undefined class constant message
 
-22. Cannot use string offset as an object
-
-    @see Zend/tests/bug41813.phpt
-    @see Zend/tests/bug41919.phpt
-
-23. constructor cannot be static
+22. constructor cannot be static
 
     compile error
 
-24. validate-property early
+23. validate-property early
 
     property started with '\0'
     php validate after call __unset __set __get ...
     bpc validate before call __unset __set __get ...
 
-25. Method name must be a string
+24. Method name must be a string
 
     php Fatal error or Error
     bpc compile error or Error
 
-26. compare objects support recursion
+25. compare objects support recursion
 
     php fatal error
     bpc ok
     @see Zend/tests/bug63882.phpt
 
-27. incomplete class message has no current function/method info
+26. incomplete class message has no current function/method info
 
     @see ext/standard/tests/serialize/incomplete_class.phpt
 
-28. check object property type via write-property handler
+27. check object property type via write-property handler
 
-29. not support __debugInfo()
+28. not support __debugInfo()
 
-30. cannot access private static property error message different
+29. cannot access private static property error message different
 
     @see Zend/tests/bug70873.phpt
 
-31. cannot XXX when no class scope is active/when current class scope has no parent
+30. cannot XXX when no class scope is active/when current class scope has no parent
 
-32. __PHP_Incomplete_Class
+31. __PHP_Incomplete_Class
 
     php: .= ++ -- += ... notice and return NULL, stmt abort
     bpc: incomplete property notice return NULL, stmt continue
 
-33. Cannot create reference to $this
+32. Cannot create reference to $this
 
 **FILE and LINE**
 
