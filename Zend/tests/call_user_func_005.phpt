@@ -10,7 +10,7 @@ class foo {
 	}
 
 	public function teste() {
-		return foo::x(function &($a=1,$b) { });
+		return foo::x(function ($a,$b) { });
 	}
 }
 
@@ -19,17 +19,10 @@ var_dump(call_user_func(array('foo', 'teste')));
 ?>
 --EXPECTF--
 Deprecated: %son-static method foo::teste() should not be called statically in %s on line %d
-%string|unicode%(1) "x"
+string(1) "x"
 array(1) {
   [0]=>
-  object(Closure)#%d (1) {
-    ["parameter"]=>
-    array(2) {
-      ["$a"]=>
-      string(10) "<required>"
-      ["$b"]=>
-      string(10) "<required>"
-    }
+  object(Closure)#%d (0) {
   }
 }
 int(1)
