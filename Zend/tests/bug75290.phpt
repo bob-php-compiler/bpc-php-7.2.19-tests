@@ -1,5 +1,7 @@
 --TEST--
 Bug #75290 (debug info of Closures of internal functions contain garbage argument names)
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
