@@ -2,14 +2,14 @@
 Bug #75426: "Cannot use empty array elements" reports wrong position
 --FILE--
 <?php
-$a = [
+$a = array(
     1,
     2,
     3,
     ,
     5,
     6,
-];
+);
 ?>
 --EXPECTF--
-Fatal error: Cannot use empty array elements in arrays in %s on line 5
+Parse error: %s in %s on line %d
