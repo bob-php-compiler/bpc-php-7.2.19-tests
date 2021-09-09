@@ -9,7 +9,7 @@ interface I {
 class C {
 	const FOO = I::FOO;
 
-	public $options = [self::FOO => "bar"];
+	public $options = array(self::FOO => "bar");
 }
 
 try {
@@ -19,7 +19,7 @@ try {
 var_dump((new C)->options);
 ?>
 --EXPECTF--
-Fatal error: Uncaught Error: Undefined class constant 'I::FOO' in %sbug74657.php:%d
+Fatal error: Uncaught Error: Undefined class constant 'FOO' in %sbug74657.php:%d
 Stack trace:
 #0 {main}
   thrown in %sbug74657.php on line %d
