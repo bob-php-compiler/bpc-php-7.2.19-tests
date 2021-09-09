@@ -1,5 +1,7 @@
 --TEST--
 class name as scalar from ::class keyword
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
