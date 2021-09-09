@@ -1,5 +1,7 @@
 --TEST--
 Bug #75241 (Null pointer dereference in zend_mm_alloc_small())
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 function eh(){}
