@@ -3,12 +3,12 @@ Bug #76502: Chain of mixed exceptions and errors does not serialize properly
 --FILE--
 <?php
 
-$examples = [
+$examples = array(
     "Exception(Exception())" => new Exception("outer", 0,  new Exception("inner")),
     "Error(Error())"         => new Error("outer", 0, new Error("inner")),
     "Error(Exception())"     => new Error("outer", 0, new Exception("inner")),
     "Exception(Error())"     => new Exception("outer", 0, new Error("inner"))
-];
+);
 
 foreach ($examples as $name => $example) {
     $processed = unserialize(serialize($example));
