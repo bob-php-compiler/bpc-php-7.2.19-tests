@@ -1,6 +1,7 @@
 --TEST--
 Bug #77660 (Segmentation fault on break 2147483648)
 --SKIPIF--
+skip not support multi-level break/continue
 <?php if (PHP_INT_SIZE != 8) die("skip this test is for 64bit platform only"); ?>
 --FILE--
 <?php
