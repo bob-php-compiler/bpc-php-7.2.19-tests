@@ -1,5 +1,7 @@
 --TEST--
 Bug #76754 (parent private constant in extends class memory leak)
+--SKIPIF--
+skip invalid test: bpc not support class constant visibility
 --INI--
 opcache.enable=0
 opcache.enable_cli=0
