@@ -19,18 +19,7 @@ class Foo
 
 $f = Foo::test();
 
-var_dump($f()());
-
-class A{}
-$a = new A;
-var_dump($f->bindTo($a, A::CLASS)()());
-
+var_dump(($f())());
 ?>
 --EXPECTF--
 int(123)
-
-Fatal error: Uncaught Error: Cannot access private property Foo::$bar in %s:%d
-Stack trace:
-#0 %s(%d): A->{closure}()
-#1 {main}
-  thrown in %s on line %d
