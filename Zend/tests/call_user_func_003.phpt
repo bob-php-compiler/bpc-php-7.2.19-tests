@@ -16,16 +16,12 @@ $foo = function() {
 };
 
 var_dump(call_user_func(array($foo, '__invoke'))->__invoke());
-var_dump(call_user_func(function() use (&$foo) { return $foo; }, '__invoke'));
+var_dump(call_user_func(function() { global $foo; return $foo; }, '__invoke'));
 
 ?>
 --EXPECTF--
 string(3) "OK!"
-object(Closure)#%d (1) {
-  ["static"]=>
-  array(1) {
-    ["instance"]=>
-    object(Closure)#%d (0) {
-    }
-  }
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided %s on line %d
+object(Closure)#%d (0) {
 }
