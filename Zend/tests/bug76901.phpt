@@ -1,5 +1,7 @@
 --TEST--
 Bug #76901: method_exists on SPL iterator passthrough method corrupts memory
+--SKIPIF--
+skip TODO ArrayIterator
 --FILE--
 <?php
 
