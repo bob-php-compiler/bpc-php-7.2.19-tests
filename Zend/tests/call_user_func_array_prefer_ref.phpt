@@ -1,5 +1,7 @@
 --TEST--
 call_user_func_array() passes value to prefer-ref arg if element wasn't a reference
+--SKIPIF--
+skip TODO array_multisort
 --FILE--
 <?php
 
