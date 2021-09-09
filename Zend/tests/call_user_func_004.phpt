@@ -17,6 +17,7 @@ Deprecated: %son-static method foo::teste() should not be called statically in %
 
 Fatal error: Uncaught Error: Using $this when not in object context in %s:%d
 Stack trace:
-#0 %s(%d): foo::teste()
-#1 {main}
+#0 [internal function]: foo::teste()
+#1 %scall_user_func_004.php(9): call_user_func(Array)
+#2 {main}
   thrown in %s on line %d

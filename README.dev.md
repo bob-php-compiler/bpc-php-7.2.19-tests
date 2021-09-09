@@ -507,11 +507,12 @@
     php: `Argument x passed to x must x, x given, called in x on line x`
     bpc: `Argument x passed to x must x, x given, called in x on line x and defined`
 
-13. stack-trace args
+13. stack-trace
 
     php show user passed args
     bpc show declared args
     unset arg not affect stack trace, @see Zend/tests/bug70547.phpt
+    bpc push call_user_func() in stack trace, php not
 
 14. invalid test
 
