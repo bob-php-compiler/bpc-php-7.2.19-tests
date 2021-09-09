@@ -1,5 +1,7 @@
 --TEST--
 class constants as default function arguments and dynamically loaded classes
+--SKIPIF--
+skip function signatures before global code
 --FILE--
 <?php
 
