@@ -1,11 +1,12 @@
 --TEST--
 catch shouldn't call __autoload
+--ARGS--
+--bpc-include-file Zend/tests/catch.inc
 --FILE--
 <?php
 
 spl_autoload_register(function ($name) {
 	echo("AUTOLOAD '$name'\n");
-	eval("class $name {}");
 });
 
 try {
