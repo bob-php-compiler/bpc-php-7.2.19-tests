@@ -1,5 +1,7 @@
 --TEST--
 Conversion of a class constant to a reference after it has been cached
+--SKIPIF--
+skip no eval()
 --FILE--
 <?php
 
