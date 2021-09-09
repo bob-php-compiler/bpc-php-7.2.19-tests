@@ -447,6 +447,10 @@
 
 40. optional params should always after required params
 
+41. not support literal string offset
+
+    `var_dump("abc"[1]);`
+
 **misc**
 
 1. TODO
