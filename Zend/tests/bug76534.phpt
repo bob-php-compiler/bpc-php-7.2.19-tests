@@ -1,5 +1,7 @@
 --TEST--
 Bug #76534 (PHP hangs on 'illegal string offset on string references with an error handler)
+--SKIPIF--
+skip invalid test: bpc check string first
 --FILE--
 <?php
 set_error_handler(function ($severity, $message, $file, $line) {
