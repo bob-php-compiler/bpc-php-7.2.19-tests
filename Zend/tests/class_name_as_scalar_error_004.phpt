@@ -1,5 +1,7 @@
 --TEST--
 class name as scalar from ::class keyword error using parent in method signature
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 

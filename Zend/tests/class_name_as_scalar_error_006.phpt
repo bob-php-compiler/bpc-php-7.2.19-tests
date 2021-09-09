@@ -1,5 +1,7 @@
 --TEST--
 class name as scalar from ::class keyword error using parent in non class context
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Cannot access self::class when no class scope is active
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 

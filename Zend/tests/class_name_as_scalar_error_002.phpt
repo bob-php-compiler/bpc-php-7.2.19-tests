@@ -1,5 +1,7 @@
 --TEST--
 class name as scalar from ::class keyword error using parent in class constant
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
