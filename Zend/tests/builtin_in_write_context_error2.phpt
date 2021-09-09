@@ -1,5 +1,7 @@
 --TEST--
 Cannot use built-in functions in write context (reference)
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
