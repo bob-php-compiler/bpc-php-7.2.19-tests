@@ -16,11 +16,11 @@ register_shutdown_function(function() {
     new stdClass;
 });
 
-$ary = [];
+$ary = array();
 while (true) {
     $ary[] = new stdClass;
 }
 
 ?>
 --EXPECTF--
-Fatal error: Allowed memory size of %d bytes exhausted%s(tried to allocate %d bytes) in %s on line %d%A
+Fatal error: GC Warning: Out of Memory! Heap size: %d MiB. Returning NULL! in %s on line %d
