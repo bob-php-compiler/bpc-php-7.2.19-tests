@@ -10,7 +10,7 @@ class Test
 	}
 }
 
-call_user_func("Test::Two", 'A', 'B');
+call_user_func(array('Test', 'Two'), 'A', 'B');
 call_user_func(array("Test", "Three"), NULL, 0, false);
 Test::Four(5, 6, 7, 8);
 --EXPECT--
