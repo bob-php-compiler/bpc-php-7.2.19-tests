@@ -16,7 +16,7 @@ class a {
 
     public static function getInstance()
     {
-        return new static();
+        return new self();
     }
 
     public function cloneIt()
@@ -39,5 +39,5 @@ $e = $d->cloneIt();
 var_dump($e);
 ?>
 --EXPECT--
-object(c)#2 (0) {
+object(a)#2 (0) {
 }
