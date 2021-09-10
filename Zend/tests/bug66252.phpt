@@ -10,5 +10,5 @@ class B extends A {
 }
 const C = B::BHW;
 echo C, "\n";
---EXPECTF--
-Parse error: %s in %s on line 6
+--EXPECT--
+this is A extended by B
