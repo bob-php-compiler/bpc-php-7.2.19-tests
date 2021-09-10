@@ -5,8 +5,8 @@ Bug #69676: Resolution of self::FOO in class constants not correct (variation)
 
 class Foo {
     const A = 'Foo::A';
-    const B = self::A . ' and ' . self::C;
     const C = 'Foo::C';
+    const B = self::A . ' and ' . self::C;
 
 }
 
