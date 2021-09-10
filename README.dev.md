@@ -441,17 +441,15 @@
 
 37. not support finally (try..catch..finally)
 
-38. class constant/property only support simple literal value
+38. not support return type
 
-39. not support return type
+39. optional params should always after required params
 
-40. optional params should always after required params
-
-41. not support literal string offset
+40. not support literal string offset
 
     `var_dump("abc"[1]);`
 
-42. not support array to string conversion at compile time
+41. not support array to string conversion at compile time
 
     php notice
     bpc parse error
