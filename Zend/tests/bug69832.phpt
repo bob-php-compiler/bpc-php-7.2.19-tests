@@ -1,7 +1,5 @@
 --TEST--
 Bug #69832 (Assertion failed in zend_compile_const_expr_magic_const)
---SKIPIF--
-skip class constant/property only support simple literal value
 --FILE--
 <?php
 
