@@ -13,7 +13,7 @@ var_dump($arr["run away"]);
 var_dump($arr[TRUE]);
 var_dump($arr[FALSE]);
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 var_dump($arr[$fp]);
 
 $obj = new stdClass;
