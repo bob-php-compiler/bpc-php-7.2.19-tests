@@ -36,15 +36,15 @@ class A3 {
     const N = 'A3';
     const selfN = self::N;
 }
-//class B3 extends A3 {
-//    const exprSelfN = "expr" . self::selfN;
-//    const N = 'B3';
-//}
-//class C3 extends B3 {
-//    const N = 'C3';
-//}
+class B3 extends A3 {
+    const exprSelfN = "expr" . self::selfN;
+    const N = 'B3';
+}
+class C3 extends B3 {
+    const N = 'C3';
+}
 
-//var_dump(C3::exprSelfN); // exprA3
+var_dump(C3::exprSelfN); // exprA3
 
 class A4 {
     const N = 'A4';
@@ -65,4 +65,5 @@ var_dump((new C4)->prop); // A4
 string(1) "A"
 string(1) "P"
 string(2) "A2"
+string(6) "exprA3"
 string(2) "A4"
