@@ -451,6 +451,11 @@
 
     `var_dump("abc"[1]);`
 
+42. not support array to string conversion at compile time
+
+    php notice
+    bpc parse error
+
 **misc**
 
 1. TODO
