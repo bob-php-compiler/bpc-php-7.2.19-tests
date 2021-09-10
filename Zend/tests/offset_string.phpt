@@ -16,7 +16,7 @@ var_dump($str["15 and then some"]);
 var_dump($str[TRUE]);
 var_dump($str[FALSE]);
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 var_dump($str[$fp]);
 
 $obj = new stdClass;
