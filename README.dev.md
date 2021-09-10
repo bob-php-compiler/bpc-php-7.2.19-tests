@@ -569,6 +569,12 @@
 
 27. bpc `$GLOBALS += array();` may not worked as expected because of variables declared early
 
+28. Cannot use string offset as an array
+
+    @see Zend/tests/offset_assign.phpt
+    php eval offset first, then throw Error
+    bpc throw Error
+
 ## output buffering
 
 1. chunk_size and buffer_used different
