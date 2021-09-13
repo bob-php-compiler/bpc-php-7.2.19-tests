@@ -3,8 +3,8 @@ Testing const names
 --FILE--
 <?php
 
-const a = 'a';
-const A = 'b';
+define('a', 'a');
+define('A', 'b');
 
 
 class a {
