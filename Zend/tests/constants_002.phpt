@@ -6,7 +6,7 @@ Defining constants with non-scalar values
 define('foo', new stdClass);
 var_dump(foo);
 
-define('foo', fopen(__FILE__, 'r'));
+define('foo', fopen('/proc/self/comm', 'r'));
 var_dump(foo);
 
 ?>
