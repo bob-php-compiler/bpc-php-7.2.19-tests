@@ -3,8 +3,6 @@ Magic constants lowercased
 --FILE--
 <?php
 
-namespace test;
-
 var_dump(__dir__);
 var_dump(__file__);
 var_dump(__line__);
@@ -19,14 +17,11 @@ class foo {
 
 new foo;
 
-var_dump(__namespace__);
-
 ?>
 --EXPECTF--
 string(%d) "%s"
 string(%d) "%s"
 int(%d)
-string(21) "test\foo::__construct"
-string(8) "test\foo"
+string(16) "foo::__construct"
+string(3) "foo"
 string(11) "__construct"
-string(4) "test"
