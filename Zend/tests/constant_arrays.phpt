@@ -5,8 +5,8 @@ zend.enable_gc=1
 --FILE--
 <?php
 
-define('FOOBAR', [1, 2, 3, ['foo' => 'bar']]);
-const FOO_BAR = [1, 2, 3, ['foo' => 'bar']];
+define('FOOBAR', array(1, 2, 3, array('foo' => 'bar')));
+define('FOO_BAR', array(1, 2, 3, array('foo' => 'bar')));
 
 $x = FOOBAR;
 $x[0] = 7;
@@ -18,16 +18,16 @@ var_dump($x, FOO_BAR);
 
 // ensure references are removed
 $x = 7;
-$y = [&$x];
+$y = array(&$x);
 define('QUX', $y);
 $y[0] = 3;
 var_dump($x, $y, QUX);
 
 // ensure objects not allowed in arrays
-var_dump(define('ELEPHPANT', [new StdClass]));
+var_dump(define('ELEPHPANT', array(new StdClass)));
 
 // ensure recursion doesn't crash
-$recursive = [];
+$recursive = array();
 $recursive[0] = &$recursive;
 var_dump(define('RECURSION', $recursive));
 --EXPECTF--
