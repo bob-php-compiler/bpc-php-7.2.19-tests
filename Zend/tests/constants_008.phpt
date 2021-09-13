@@ -4,7 +4,7 @@ Defining constant twice with two different forms
 <?php
 
 define('a', 2);
-const a = 1;
+define('a', 1);
 
 
 if (defined('a')) {
