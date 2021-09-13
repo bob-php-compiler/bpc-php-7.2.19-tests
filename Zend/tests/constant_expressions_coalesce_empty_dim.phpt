@@ -1,5 +1,7 @@
 --TEST--
 Constant expressions with empty dimension fetch on coalesce
+--SKIPIF--
+skip not support Null Coalescing Operator ??
 --FILE--
 <?php
 

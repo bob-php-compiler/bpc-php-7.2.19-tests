@@ -1,5 +1,7 @@
 --TEST--
 Constant expressions with null coalescing operator ??
+--SKIPIF--
+skip not support Null Coalescing Operator ??
 --FILE--
 <?php
 
