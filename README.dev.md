@@ -445,11 +445,7 @@
 
 39. optional params should always after required params
 
-40. not support literal string offset
-
-    `var_dump("abc"[1]);`
-
-41. not support array to string conversion at compile time
+40. not support array to string conversion at compile time
 
     php notice
     bpc parse error
