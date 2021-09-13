@@ -273,6 +273,10 @@
 
     include file need pass via --bpc-include-file
 
+5. __DIR__ relative to compile dir
+
+    @see Zend/tests/constants/dir-constant-includes.phpt
+
 **ini**
 
 1. ini extra semicolon
