@@ -3,12 +3,9 @@ Can't use arrays as key for constant array
 --FILE--
 <?php
 
-const C1 = 1; // force dynamic evaluation
-const C2 = [C1, [] => 1];
+define('C1', 1); // force dynamic evaluation
+define('C2', array(C1, array() => 1));
 
 ?>
 --EXPECTF--
-Fatal error: Uncaught Error: Illegal offset type in %s:%d
-Stack trace:
-#0 {main}
-  thrown in %s on line %d
+Parse error: Illegal offset type in %s on line %d
