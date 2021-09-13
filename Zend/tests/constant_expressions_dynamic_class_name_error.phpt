@@ -8,4 +8,7 @@ define('C', $foo::BAR);
 
 ?>
 --EXPECTF--
-Parse error: Dynamic class names are not allowed in compile-time class constant references in %s on line %d
+Fatal error: Uncaught Error: Class 'test' not found in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d
