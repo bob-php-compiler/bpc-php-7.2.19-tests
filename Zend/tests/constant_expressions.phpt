@@ -2,41 +2,42 @@
 Constant Expressions
 --FILE--
 <?php
-const T_1 = 1 << 1;
-const T_2 = 1 / 2;
-const T_3 = 1.5 + 1.5;
-const T_4 = "foo" . "bar";
-const T_5 = (1.5 + 1.5) * 2;
-const T_6 = "foo" . 2 . 3 . 4.0;
-const T_7 = __LINE__;
-const T_8 = <<<ENDOFSTRING
+define('T_1', 1 << 1);
+define('T_2', 1 / 2);
+define('T_3', 1.5 + 1.5);
+define('T_4', "foo" . "bar");
+define('T_5', (1.5 + 1.5) * 2);
+define('T_6', "foo" . 2 . 3 . 4.0);
+define('T_7', __LINE__);
+define('T_8', <<<ENDOFSTRING
 This is a test string
-ENDOFSTRING;
-const T_9 = ~-1;
-const T_10 = (-1?:1) + (0?2:3);
-const T_11 = 1 && 0;
-const T_12 = 1 and 1;
-const T_13 = 0 || 0;
-const T_14 = 1 or 0;
-const T_15 = 1 xor 1;
-const T_16 = 1 xor 0;
-const T_17 = 1 < 0;
-const T_18 = 0 <= 0;
-const T_19 = 1 > 0;
-const T_20 = 1 >= 0;
-const T_21 = 1 === 1;
-const T_22 = 1 !== 1;
-const T_23 = 0 != "0";
-const T_24 = 1 == "1";
+ENDOFSTRING
+);
+define('T_9', ~-1);
+define('T_10', (-1?-1:1) + (0?2:3));
+define('T_11', 1 && 0);
+define('T_12', 1 and 1);
+define('T_13', 0 || 0);
+define('T_14', 1 or 0);
+define('T_15', 1 xor 1);
+define('T_16', 1 xor 0);
+define('T_17', 1 < 0);
+define('T_18', 0 <= 0);
+define('T_19', 1 > 0);
+define('T_20', 1 >= 0);
+define('T_21', 1 === 1);
+define('T_22', 1 !== 1);
+define('T_23', 0 != "0");
+define('T_24', 1 == "1");
 
 // Test order of operations
-const T_25 = 1 + 2 * 3;
+define('T_25', 1 + 2 * 3);
 
 // Test for memory leaks
-const T_26 = "1" + 2 + "3";
+define('T_26', "1" + 2 + "3");
 
 // Allow T_POW
-const T_27 = 2 ** 3;
+define('T_27', 2 ** 3);
 
 var_dump(T_1);
 var_dump(T_2);
