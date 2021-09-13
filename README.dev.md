@@ -567,9 +567,11 @@
 
 26. Modulo by zero compile error
 
-27. bpc `$GLOBALS += array();` may not worked as expected because of variables declared early
+27. Bit shift by negative number compile error
 
-28. Cannot use string offset as an array
+28. bpc `$GLOBALS += array();` may not worked as expected because of variables declared early
+
+29. Cannot use string offset as an array
 
     @see Zend/tests/offset_assign.phpt
     php eval offset first, then throw Error
