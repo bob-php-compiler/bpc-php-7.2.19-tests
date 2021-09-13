@@ -1,5 +1,7 @@
 --TEST--
 Constant Expressions with unsupported operands 002
+--ARGS--
+--bpc-include-file Zend/tests/constant_expressions_exceptions.inc \
 --FILE--
 <?php
 try {
@@ -10,4 +12,4 @@ try {
 ?>
 DONE
 --EXPECTF--
-Fatal error: Unsupported operand types in %sconstant_expressions_exceptions.inc on line 2
+Parse error: Unsupported operand types in %sconstant_expressions_exceptions.inc on line 2

@@ -1,2 +1,2 @@
 <?php
-const T = array(1,2) - array(0);
+define('T', array(1,2) - array(0));
