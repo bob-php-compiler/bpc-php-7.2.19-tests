@@ -3,7 +3,7 @@ Double array cast
 --FILE--
 <?php
 
-$array = [1, 2, $x = 3];
+$array = array(1, 2, $x = 3);
 var_dump((array) (array) $array);
 
 ?>
