@@ -13,4 +13,6 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Cannot redeclare test::foo() in %s on line %d
+*** ERROR:compile-error:
+Error: Cannot redeclare test::foo() in %s on line %d
+ -- compile-error
