@@ -49,7 +49,7 @@ var_dump(empty($str[array(1,2,3)]));
 print "- object ---\n";
 var_dump(empty($str[new stdClass()]));
 print "- resource ---\n";
-$f = fopen(__FILE__, 'r');
+$f = fopen('/proc/self/comm', 'r');
 var_dump(empty($str[$f]));
 print "done\n";
 
