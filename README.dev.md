@@ -262,6 +262,10 @@
 
 32. Cannot create reference to $this
 
+33. Class declarations may not be nested
+
+    compile error
+
 **FILE and LINE**
 
 1. FILE and LINE
