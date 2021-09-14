@@ -1,5 +1,7 @@
 --TEST--
 Error message in error handler during compilation
+--SKIPIF--
+skip no eval()
 --FILE--
 <?php
 
