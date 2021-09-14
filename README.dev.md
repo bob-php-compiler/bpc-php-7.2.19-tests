@@ -328,9 +328,7 @@
 
     bpc does not support namespace
 
-4. declare
-
-    bpc does not support declare
+4. not support declare()
 
 5. define constant
 
