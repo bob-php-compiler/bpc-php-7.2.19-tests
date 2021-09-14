@@ -24,7 +24,9 @@ Scoping in destructor call
         $t->add("Hello");
         $t->add("World");
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 11: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Array
 (
     [0] => Hello
