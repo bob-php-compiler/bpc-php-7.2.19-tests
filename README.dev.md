@@ -16,16 +16,21 @@
     user defined class methods is fine.
     bpc continue to run the function while php return NULL if the function is builtin.
 
-3. argument type error message
+3. must take exactly arguments
+
+    compile error
+    __autoload() must take exactly 1 argument
+
+4. argument type error message
 
     int -> integer
     valid callback -> callable
 
-4. Only variables can be passed by reference
+5. Only variables can be passed by reference
 
     compile error or runtime error
 
-5. pass array element by reference different
+6. pass array element by reference different
 
     ```php
     <?php
@@ -40,9 +45,9 @@
     var_dump($arr);
     ```
 
-6. typehint check compile-error
+7. typehint check compile-error
 
-7. method call and dynamic function call arg always in container
+8. method call and dynamic function call arg always in container
 
     @see Zend/tests/bug34064.phpt
     pass `$arr[]` as argument may not be a good idea
@@ -53,9 +58,9 @@
     @see php-functions.scm
     call_user_func() pass args not in container, warning reported, same as php
 
-8. typehint argument default value cannot be php-constant
+9. typehint argument default value cannot be php-constant
 
-9. argument default value evaled before function call
+10. argument default value evaled before function call
 
     @see Zend/tests/bug73163.phpt
 
