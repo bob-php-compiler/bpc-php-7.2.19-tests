@@ -1,5 +1,7 @@
 --TEST--
 debug_backtrace segmentation fault with include and error handler
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class CLWrapper {
