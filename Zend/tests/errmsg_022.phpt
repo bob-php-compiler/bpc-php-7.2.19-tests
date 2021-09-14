@@ -11,4 +11,6 @@ foo(1);
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Only variables can be passed by reference in %s on line %d
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %s on line %d
+ -- compile-error
