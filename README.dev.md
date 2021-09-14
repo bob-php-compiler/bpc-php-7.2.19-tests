@@ -316,9 +316,7 @@
 
 **syntax**
 
-1. SKIP GOTO
-
-    bpc does not support GOTO
+1. not support GOTO
 
 2. array declare
 
