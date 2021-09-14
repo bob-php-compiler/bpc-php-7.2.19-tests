@@ -319,6 +319,8 @@
 
 16. no ini arg_separator
 
+17. no ini disable_classes
+
 **syntax**
 
 1. not support GOTO

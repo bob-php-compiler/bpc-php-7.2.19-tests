@@ -1,5 +1,7 @@
 --TEST--
 errmsg: disabled class
+--SKIPIF--
+skip no ini disable_classes
 --INI--
 disable_classes=stdclass
 --FILE--
