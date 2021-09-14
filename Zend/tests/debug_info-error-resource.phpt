@@ -1,5 +1,7 @@
 --TEST--
 Testing __debugInfo() magic method with bad returns RESOURCE
+--SKIPIF--
+skip not support __debugInfo()
 --INI--
 allow_url_fopen=1
 --FILE--

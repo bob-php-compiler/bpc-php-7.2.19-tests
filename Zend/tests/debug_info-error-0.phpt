@@ -1,5 +1,7 @@
 --TEST--
 Testing __debugInfo() magic method with bad returns ZERO
+--SKIPIF--
+skip not support __debugInfo()
 --FILE--
 <?php
 
