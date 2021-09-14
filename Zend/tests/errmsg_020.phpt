@@ -1,5 +1,7 @@
 --TEST--
 errmsg: disabled function
+--SKIPIF--
+skip no ini disable_functions
 --INI--
 disable_functions=phpinfo
 --FILE--
