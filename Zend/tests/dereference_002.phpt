@@ -43,7 +43,7 @@ array(2) {
 }
 int(5)
 int(1)
-object(foo)#2 (0) {
+object(foo)#%d (0) {
 }
 array(3) {
   [0]=>
@@ -56,11 +56,11 @@ array(3) {
     int(5)
   }
   [2]=>
-  object(foo)#3 (0) {
+  object(foo)#%d (0) {
   }
 }
 int(3)
-object(foo)#3 (0) {
+object(foo)#%d (0) {
 }
 array(2) {
   [0]=>
