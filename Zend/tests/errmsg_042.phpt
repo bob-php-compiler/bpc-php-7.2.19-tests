@@ -10,4 +10,4 @@ foreach ($a as &$k=>$v) {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Key element cannot be a reference in %s on line %d
+Parse error: %s in %s on line %d
