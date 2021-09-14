@@ -11,4 +11,6 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Method test::__clone() cannot accept any arguments in %s on line %d
+*** ERROR:compile-error:
+Error: Too many arguments to method test::__clone(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
