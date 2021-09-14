@@ -1,5 +1,7 @@
 --TEST--
 Testing array dereference and references
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 
