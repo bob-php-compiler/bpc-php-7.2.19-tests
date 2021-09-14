@@ -11,4 +11,6 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Method test::__isset() must take exactly 1 argument in %s on line %d
+*** ERROR:compile-error:
+Error: Too few arguments to method test::__isset(): 1 required, 0 provided in %s on line %d
+ -- compile-error
