@@ -12,4 +12,4 @@ foo() = 1;
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Can't use function return value in write context in %s on line %d
+Parse error: %s in %s on line %d
