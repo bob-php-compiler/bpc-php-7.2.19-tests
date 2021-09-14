@@ -11,4 +11,6 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Destructor test::__destruct() cannot take arguments in %s on line %d
+*** ERROR:compile-error:
+Error: Too many arguments to method test::__destruct(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
