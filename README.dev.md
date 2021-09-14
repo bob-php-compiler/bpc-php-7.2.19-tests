@@ -527,7 +527,7 @@
 
 17. error_handler not support deprecated argument $errcontext
 
-18. Cannot use [] for reading
+18. Cannot use [] for reading/unsetting
 
     php: Fatal error
     bpc: compile error
