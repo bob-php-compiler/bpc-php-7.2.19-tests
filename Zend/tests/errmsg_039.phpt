@@ -11,4 +11,6 @@ class test {
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Cannot redeclare test::$var in %s on line %d
+*** ERROR:compile-error:
+Error: Cannot redeclare test::$var in %s on line %d
+ -- compile-error
