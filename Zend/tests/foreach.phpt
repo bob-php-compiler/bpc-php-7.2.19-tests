@@ -1,5 +1,7 @@
 --TEST--
 foreach() by-ref bug
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 $foo = array(1,2,3,4);
