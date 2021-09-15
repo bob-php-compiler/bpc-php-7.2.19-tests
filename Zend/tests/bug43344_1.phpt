@@ -23,6 +23,8 @@ Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error
 
 Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 0
 
+Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 0
+
 Warning: Use of undefined constant bar - assumed 'bar' (this will throw an Error in a future version of PHP) in %sbug43344_1.php on line 13
 bar
 
