@@ -20,15 +20,16 @@ unset($f1, $f2);
 gc_collect_cycles();
 ?>
 --EXPECTF--
+Warning: in %s line 5: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+
 Fatal error: Uncaught Exception: foobar in %sgc_030.php:%d
 Stack trace:
-#0 [internal function]: foo->__destruct()
-#1 %sgc_030.php(%d): gc_collect_cycles()
-#2 {main}
+#0 %s(%d): foo->__destruct()
+#1 {main}
 
 Next Exception: foobar in %sgc_030.php:%d
 Stack trace:
-#0 [internal function]: foo->__destruct()
-#1 %sgc_030.php(%d): gc_collect_cycles()
-#2 {main}
+#0 %s(%d): foo->__destruct()
+#1 {main}
   thrown in %sgc_030.php on line %d
