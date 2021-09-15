@@ -22,7 +22,7 @@ class sample  {
 }
 
 //getting the resource
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 // array with different values for $str
 $inputs =  array (
@@ -135,4 +135,4 @@ bool(false)
 -- Iteration 22 --
 bool(false)
 ===Done===
-	
+
