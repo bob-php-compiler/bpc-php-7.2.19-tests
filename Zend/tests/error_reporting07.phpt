@@ -12,7 +12,8 @@ function foo2($arg) {
 }
 
 function foo3() {
-	echo $undef3;
+    $a = array();
+	echo $a[0];
 	throw new Exception("test");
 }
 
