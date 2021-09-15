@@ -1,5 +1,7 @@
 --TEST--
 Iterator exceptions in foreach by reference
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 class IT extends ArrayIterator {
