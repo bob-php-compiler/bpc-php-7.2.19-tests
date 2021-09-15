@@ -1,5 +1,7 @@
 --TEST--
 Foreach by reference on constant
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 for ($i = 0; $i < 3; $i++) {

@@ -1,5 +1,7 @@
 --TEST--
 Nested foreach by reference and array modification
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 $a = [0, 1, 2, 3];
