@@ -1,5 +1,7 @@
 --TEST--
 GC 003: gc_enabled() and ini_set()
+--SKIPIF--
+skip gc different
 --FILE--
 <?php
 ini_set('zend.enable_gc','0');
