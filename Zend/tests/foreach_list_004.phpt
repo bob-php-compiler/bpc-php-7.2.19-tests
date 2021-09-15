@@ -1,5 +1,7 @@
 --TEST--
 foreach with empty list
+--SKIPIF--
+skip not support foreach as list()
 --FILE--
 <?php
 

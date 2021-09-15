@@ -1,5 +1,7 @@
 --TEST--
 foreach with list key
+--SKIPIF--
+skip not support foreach as list()
 --FILE--
 <?php
 

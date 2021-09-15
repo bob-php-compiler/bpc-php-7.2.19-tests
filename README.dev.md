@@ -355,9 +355,7 @@
 
 7. not support Null Coalescing Operator ??
 
-8. foreach as list()
-
-    bpc not support `foreach array as list($k, $v)`
+8. not support foreach as list()
 
 9. global $$
 

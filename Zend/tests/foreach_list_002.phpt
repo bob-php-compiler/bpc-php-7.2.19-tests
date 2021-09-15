@@ -1,5 +1,7 @@
 --TEST--
 foreach with freak lists
+--SKIPIF--
+skip not support foreach as list()
 --FILE--
 <?php
 
