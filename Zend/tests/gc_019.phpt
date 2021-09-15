@@ -12,5 +12,5 @@ var_dump(gc_collect_cycles());
 echo "ok\n"
 ?>
 --EXPECT--
-int(1)
+int(0)
 ok

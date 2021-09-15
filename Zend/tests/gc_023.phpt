@@ -23,7 +23,7 @@ var_dump(gc_collect_cycles());
 echo "ok\n";
 --EXPECT--
 int(0)
-int(9999)
 int(0)
-int(1)
+int(0)
+int(0)
 ok
