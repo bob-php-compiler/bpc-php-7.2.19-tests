@@ -6,18 +6,21 @@ testing @ and error_reporting - 3
 error_reporting(E_ALL);
 
 function foo($arg) {
-	echo @$nonex_foo;
+    $a = array();
+	echo @$a[0];
 }
 
-function bar() {
-	echo @$nonex_bar;
+function bar($arg) {
+    $a = array();
+	echo @$a[0];
 	throw new Exception("test");
 }
 
 function foo1() {
-	echo $undef1;
+    $a = array();
+	echo $a[0];
 	error_reporting(E_ALL|E_STRICT);
-	echo $undef2;
+	echo $a[1];
 }
 
 try {
@@ -30,6 +33,6 @@ var_dump(error_reporting());
 echo "Done\n";
 ?>
 --EXPECTF--
-Notice: Undefined variable: undef2 in %s on line %d
+Notice: Undefined offset: 1 in %s on line %d
 int(32767)
 Done

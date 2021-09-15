@@ -5,19 +5,20 @@ testing @ and error_reporting - 4
 
 error_reporting(E_ALL);
 
-function foo() {
-	echo $undef;
+function foo($arg) {
+    $a = array();
+	echo $a[1];
 	error_reporting(E_ALL|E_STRICT);
 }
 
-
-foo(@$var);
+$v = array();
+foo(@$v[0]);
 
 var_dump(error_reporting());
 
 echo "Done\n";
 ?>
 --EXPECTF--
-Notice: Undefined variable: undef in %s on line %d
+Notice: Undefined offset: 1 in %s on line %d
 int(32767)
 Done
