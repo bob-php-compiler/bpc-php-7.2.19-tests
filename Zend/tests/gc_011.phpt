@@ -18,10 +18,12 @@ var_dump(gc_collect_cycles());
 echo "ok\n"
 ?>
 --EXPECTF--
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 object(Foo)#%d (1) {
   ["a"]=>
   *RECURSION*
 }
-__destruct
-int(1)
+int(0)
 ok
+__destruct
