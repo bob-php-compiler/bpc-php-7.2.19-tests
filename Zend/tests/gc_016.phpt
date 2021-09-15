@@ -20,7 +20,9 @@ unset($a);
 var_dump(gc_collect_cycles());
 echo "ok\n"
 ?>
---EXPECT--
--> int(1)
-int(1)
+--EXPECTF--
+Warning: in %s line 4: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+int(0)
 ok
+-> int(0)
