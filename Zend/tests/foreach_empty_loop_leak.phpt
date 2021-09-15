@@ -1,5 +1,7 @@
 --TEST--
 Empty foreach loops with exception must not leak
+--SKIPIF--
+skip TODO ArrayIterator
 --FILE--
 <?php
 
