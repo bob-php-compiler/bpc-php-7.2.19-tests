@@ -7,4 +7,6 @@ func_get_args();
 
 ?>
 --EXPECTF--
-Warning: func_get_args():  Called from the global scope - no function context in %s on line 3
+*** ERROR:compile-error:
+Error: func_get_args():  Called from the global scope - no function context in %s on line 3
+ -- compile-error
