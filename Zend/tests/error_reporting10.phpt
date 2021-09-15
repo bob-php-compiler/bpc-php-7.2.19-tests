@@ -7,8 +7,9 @@ error_reporting(E_ALL);
 
 function make_exception()
 {
-	@$blah;
-	str_replace();
+    $a = array();
+	@$a[0];
+	base64_encode($a);
 	error_reporting(0);
 	throw new Exception();
 }
