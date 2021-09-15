@@ -1,5 +1,7 @@
 --TEST--
 GC 032: Crash in GC because of invalid reference counting
+--SKIPIF--
+skip TODO
 --INI--
 zend.enable_gc=1
 --FILE--
