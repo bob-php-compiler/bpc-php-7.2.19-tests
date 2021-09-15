@@ -3,12 +3,13 @@ foreach() & undefined var
 --FILE--
 <?php
 
-foreach($a as $val);
+$a = array();
+foreach($a[0] as $val);
 
 echo "Done\n";
 ?>
 --EXPECTF--
-Notice: Undefined variable: a in %s on line %d
+Notice: Undefined offset: 0 in %s on line %d
 
 Warning: Invalid argument supplied for foreach() in %s on line %d
 Done
