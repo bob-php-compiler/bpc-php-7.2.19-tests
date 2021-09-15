@@ -4,13 +4,13 @@ GC 002: gc_enable()/gc_diable() and ini_get()
 <?php
 gc_disable();
 var_dump(gc_enabled());
-echo ini_get('zend.enable_gc') . "\n";
+var_dump(ini_get('zend.enable_gc'));
 gc_enable();
 var_dump(gc_enabled());
-echo ini_get('zend.enable_gc') . "\n";
+var_dump(ini_get('zend.enable_gc'));
 ?>
 --EXPECT--
 bool(false)
-0
+bool(false)
 bool(true)
-1
+bool(false)

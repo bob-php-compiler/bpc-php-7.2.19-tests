@@ -325,6 +325,8 @@
 
 17. no ini disable_classes
 
+18. no ini zend.enable_gc
+
 **syntax**
 
 1. not support GOTO
@@ -553,6 +555,7 @@
 21. gc different
 
     gc_collect_cycles() always return 0
+    gc_* functions only gc_collect_cycles() may do some work, others do nothing
 
 22. compiler always warning: Division by zero
 
