@@ -25,7 +25,7 @@ class IT implements Iterator {
     function next()    {$this->trap(__FUNCTION__); $this->n++;}
 }
 
-foreach(['rewind', 'valid', 'key', 'current', 'next'] as $trap) {
+foreach(array('rewind', 'valid', 'key', 'current', 'next') as $trap) {
 	$obj = new IT(3, $trap);
 	try {
 		// IS_CV
