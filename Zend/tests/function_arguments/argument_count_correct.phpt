@@ -12,7 +12,7 @@ function bat(int $foo, string $bar) { }
 bat(123, "foo");
 bat("123", "foo");
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 fclose($fp);
 
 echo "done";
