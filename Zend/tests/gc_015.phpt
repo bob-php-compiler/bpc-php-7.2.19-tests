@@ -12,9 +12,9 @@ $a->b = "xxx";
 unset($c);
 unset($a);
 unset($b);
-var_dump(gc_collect_cycles() > 0);
+var_dump(gc_collect_cycles());
 echo "ok\n";
 ?>
 --EXPECT--
-bool(true)
+int(0)
 ok

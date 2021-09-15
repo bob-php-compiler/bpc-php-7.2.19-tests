@@ -10,9 +10,9 @@ for ($i = 0; $i < 10001; $i++) {
 }
 $a[] = "xxx";
 unset($a);
-var_dump(gc_collect_cycles() > 0);
+var_dump(gc_collect_cycles());
 echo "ok\n";
 ?>
 --EXPECT--
-bool(true)
+int(0)
 ok
