@@ -7,10 +7,12 @@ error_reporting(E_ALL);
 
 class test {
 	function __get($name) {
-		return $undef_name;
+	    $a = array();
+		return $a[0];
 	}
 	function __set($name, $value) {
-		return $undef_value;
+	    $a = array();
+		return $a[1];
 	}
 }
 
@@ -27,8 +29,8 @@ var_dump(error_reporting());
 echo "Done\n";
 ?>
 --EXPECTF--
-Notice: Undefined variable: undef_value in %s on line %d
+Notice: Undefined offset: 1 in %s on line %d
 
-Notice: Undefined variable: undef_name in %s on line %d
+Notice: Undefined offset: 0 in %s on line %d
 int(32767)
 Done
