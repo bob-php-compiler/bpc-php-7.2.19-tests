@@ -1,5 +1,7 @@
 --TEST--
 array_unshift() function precerve foreach by reference iterator pointer
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 $a = [1,2,3];

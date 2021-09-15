@@ -1,5 +1,7 @@
 --TEST--
 array_splice() function precerve foreach by reference iterator pointer
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 /* remove before */

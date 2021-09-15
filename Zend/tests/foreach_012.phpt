@@ -1,5 +1,7 @@
 --TEST--
 array_walk() function precerve foreach by reference iterator pointer
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 $a = [1,2,3,4,5];
