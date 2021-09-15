@@ -16,5 +16,5 @@ object(stdClass)#%d (1) {
   ["a"]=>
   *RECURSION*
 }
-int(1)
+int(0)
 ok

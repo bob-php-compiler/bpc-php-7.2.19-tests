@@ -20,5 +20,5 @@ object(stdClass)#%d (1) {
     *RECURSION*
   }
 }
-int(2)
+int(0)
 ok
