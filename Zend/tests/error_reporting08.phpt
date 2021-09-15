@@ -13,7 +13,8 @@ function foo2($arg) {
 
 function foo3() {
 	error_reporting(E_ALL|E_STRICT);
-	echo $undef3;
+	$a = array();
+	echo $a[3];
 	throw new Exception("test");
 }
 
@@ -27,6 +28,6 @@ var_dump(error_reporting());
 echo "Done\n";
 ?>
 --EXPECTF--
-Notice: Undefined variable: undef3 in %s on line %d
+Notice: Undefined offset: 3 in %s on line %d
 int(32767)
 Done

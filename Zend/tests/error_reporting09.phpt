@@ -6,14 +6,16 @@ testing @ and error_reporting - 9
 error_reporting(E_ALL);
 
 function bar() {
-	echo @$blah;
-	echo $undef2;
+    $a = array();
+	echo @$a[0];
+	echo $a[1];
 }
 
 function foo() {
-	echo @$undef;
+    $a = array();
+	echo @$a[2];
 	error_reporting(E_ALL|E_STRICT);
-	echo $blah;
+	echo $a[3];
 	return bar();
 }
 
@@ -24,8 +26,8 @@ var_dump(error_reporting());
 echo "Done\n";
 ?>
 --EXPECTF--
-Notice: Undefined variable: blah in %s on line %d
+Notice: Undefined offset: 3 in %s on line %d
 
-Notice: Undefined variable: undef2 in %s on line %d
+Notice: Undefined offset: 1 in %s on line %d
 int(32767)
 Done
