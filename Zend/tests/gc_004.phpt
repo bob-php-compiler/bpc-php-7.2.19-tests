@@ -19,5 +19,5 @@ array(1) {
     *RECURSION*
   }
 }
-int(1)
+int(0)
 ok
