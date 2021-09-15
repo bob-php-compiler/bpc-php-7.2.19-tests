@@ -1,5 +1,7 @@
 --TEST--
 Temporary array expressions can be iterated by reference
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 
