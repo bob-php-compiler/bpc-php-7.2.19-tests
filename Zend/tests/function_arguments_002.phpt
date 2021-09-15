@@ -5,4 +5,4 @@ Argument parsing error #002
 function foo($arg1/) {}
 ?>
 --EXPECTF--
-Parse error: %s error, %s)%s in %sfunction_arguments_002.php on line %d
+Parse error: %s in %sfunction_arguments_002.php on line %d
