@@ -1,5 +1,7 @@
 --TEST--
 Test to ensure ::class still works
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
