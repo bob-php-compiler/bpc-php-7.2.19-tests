@@ -132,6 +132,8 @@
 
 19. some functions moved to runtime
 
+20. get_defined_functions() return encrypted function names
+
 **object**
 
 1. __destruct
