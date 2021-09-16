@@ -37,7 +37,9 @@ class Y extends X implements I {
 new Y;
 
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 31: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 array(3) {
   [0]=>
   string(2) "aa"
@@ -54,17 +56,17 @@ array(9) {
   [2]=>
   string(2) "cc"
   [3]=>
-  string(11) "__construct"
-  [4]=>
-  string(10) "__destruct"
-  [5]=>
   string(1) "a"
-  [6]=>
+  [4]=>
   string(1) "b"
-  [7]=>
+  [5]=>
   string(8) "static_a"
-  [8]=>
+  [6]=>
   string(8) "static_b"
+  [7]=>
+  string(11) "__construct"
+  [8]=>
+  string(10) "__destruct"
 }
 array(4) {
   [0]=>
