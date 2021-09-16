@@ -8,6 +8,9 @@ class Obj
     const return = 'yep';
 }
 
-const return = 'nope';
+define('return', 'nope');
+var_dump(Obj::return);
+var_dump(constant('return'));
 --EXPECTF--
-Parse error: syntax error, unexpected 'return' (T_RETURN), expecting identifier (T_STRING) in %s on line 8
+string(3) "yep"
+string(4) "nope"
