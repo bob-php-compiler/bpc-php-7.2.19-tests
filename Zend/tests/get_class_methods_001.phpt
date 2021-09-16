@@ -33,9 +33,9 @@ array(1) {
 }
 array(2) {
   [0]=>
-  string(4) "test"
-  [1]=>
   string(1) "a"
+  [1]=>
+  string(4) "test"
 }
 array(2) {
   [0]=>
@@ -45,11 +45,11 @@ array(2) {
 }
 array(4) {
   [0]=>
-  string(2) "bb"
-  [1]=>
-  string(4) "test"
-  [2]=>
   string(1) "a"
-  [3]=>
+  [1]=>
   string(1) "c"
+  [2]=>
+  string(2) "bb"
+  [3]=>
+  string(4) "test"
 }
