@@ -8,7 +8,7 @@ class Foo {
 
     public static function new() {
         echo __METHOD__, PHP_EOL;
-        return new static();
+        return new self();
     }
 
     public function self() {
