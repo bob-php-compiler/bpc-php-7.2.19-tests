@@ -10,4 +10,4 @@ class Obj
 
 ?>
 --EXPECTF--
-Fatal error: A class constant must not be called 'class'; it is reserved for class name fetching in %s on line %d
+Parse error: %s in %s on line %d
