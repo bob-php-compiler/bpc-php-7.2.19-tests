@@ -1,5 +1,7 @@
 --TEST--
 Global variable import using a name with side effects
+--SKIPIF--
+skip global decl only support `$var`
 --FILE--
 <?php
 

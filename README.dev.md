@@ -363,9 +363,10 @@
 
 8. not support foreach as list()
 
-9. global $$
+9. global decl only support `$var`
 
     bpc not support `global $$varname`
+    bpc not support `global ${...}`
 
 10. no use global decl var
 
