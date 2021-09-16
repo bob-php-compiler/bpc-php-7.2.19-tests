@@ -20,10 +20,6 @@ var_dump( get_defined_functions($extra_arg, $extra_arg2) );
 ?>
 ===Done===
 --EXPECTF--
-*** Testing get_defined_functions() : error conditions ***
-
--- Testing get_defined_functions() function with more than expected no. of arguments --
-
-Warning: get_defined_functions() expects at most 1 parameter, 2 given in %s on line %d
-NULL
-===Done===
+*** ERROR:compile-error:
+Error: Too many arguments to function get_defined_functions(): 0 at most, 2 provided in %s on line %d
+ -- compile-error
