@@ -5,10 +5,10 @@ Test to ensure const list syntax declaration works
 
 class Obj
 {
-    const DECLARE = 'declare',
-          RETURN = 'return',
-          FUNCTION = 'function',
-          USE = 'use';
+    const DECLARE = 'declare';
+    const RETURN = 'return';
+    const FUNCTION = 'function';
+    const USE = 'use';
 }
 
 echo Obj::DECLARE, PHP_EOL;
