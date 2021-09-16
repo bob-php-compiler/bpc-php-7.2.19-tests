@@ -12,9 +12,6 @@ function test() {
     $func = 'parse_str';
     $func('a=b');
 
-    $func = 'get_defined_vars';
-    $func();
-
     //$func = 'assert';
     //$func('1==2');
 
@@ -36,8 +33,6 @@ Warning: Cannot call extract() dynamically in %s on line %d
 Warning: Cannot call compact() dynamically in %s on line %d
 
 Warning: Cannot call parse_str() dynamically in %s on line %d
-
-Warning: Cannot call get_defined_vars() dynamically in %s on line %d
 
 Warning: Cannot call func_get_args() dynamically in %s on line %d
 

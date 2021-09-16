@@ -134,6 +134,8 @@
 
 20. get_defined_functions() return encrypted function names
 
+21. not support get_defined_vars()
+
 **object**
 
 1. __destruct
