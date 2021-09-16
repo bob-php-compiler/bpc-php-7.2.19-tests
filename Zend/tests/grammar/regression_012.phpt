@@ -4,9 +4,9 @@ Testing for regression on const list syntax and arrays
 <?php
 
 class A {
-    const A = [1, FOREACH];
+    const A = array(1, FOREACH);
 }
 
 ?>
 --EXPECTF--
-Parse error: syntax error, unexpected 'FOREACH' (T_FOREACH), expecting ']' in %s on line %d
+Parse error: %s in %s on line %d
