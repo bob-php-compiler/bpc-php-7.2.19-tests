@@ -3,8 +3,8 @@ Disallow empty elements in normal arrays
 --FILE--
 <?php
 
-var_dump([, 1, 2]);
+var_dump(array(, 1, 2));
 
 ?>
 --EXPECTF--
-Fatal error: Cannot use empty array elements in arrays in %s on line %d
+Parse error: %s in %s on line %d
