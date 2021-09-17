@@ -2,11 +2,13 @@
 is_a() and is_subclass_of() shouldn't call __autoload
 --INI--
 error_reporting=14335
+--ARGS--
+--bpc-include-file Zend/tests/is_a.inc
 --FILE--
 <?php
 spl_autoload_register(function ($name) {
 	echo("AUTOLOAD '$name'\n");
-	eval("class $name {}");
+	include "is_a.inc";
 });
 
 class BASE {
