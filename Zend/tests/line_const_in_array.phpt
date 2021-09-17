@@ -3,11 +3,11 @@ Use of __LINE__ in arrays
 --FILE--
 <?php
 
-var_dump([
+var_dump(array(
     __LINE__,
     __LINE__,
     __LINE__,
-]);
+));
 
 ?>
 --EXPECT--
