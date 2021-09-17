@@ -14,5 +14,7 @@ try {
 }
 
 ?>
---EXPECT--
-Cannot access parent:: when current class scope has no parent
+--EXPECTF--
+*** ERROR:compile-error:
+Error: Cannot access parent:: when current class scope has no parent in %s on line %d
+ -- compile-error
