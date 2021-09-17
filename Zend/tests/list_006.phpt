@@ -1,5 +1,7 @@
 --TEST--
 Testing nested list() with empty array
+--SKIPIF--
+skip not support nested list
 --FILE--
 <?php
 

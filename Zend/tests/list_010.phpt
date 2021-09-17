@@ -1,5 +1,7 @@
 --TEST--
 Do not allow mixing [] and list()
+--SKIPIF--
+skip not support nested list and `[]` list
 --FILE--
 <?php
 

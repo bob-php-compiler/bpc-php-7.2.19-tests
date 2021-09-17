@@ -1,5 +1,7 @@
 --TEST--
 Cannot destructure using array(), even if nested
+--SKIPIF--
+skip not support nested list and `[]` list
 --FILE--
 <?php
 

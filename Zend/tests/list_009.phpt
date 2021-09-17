@@ -1,5 +1,7 @@
 --TEST--
 list with by-reference assignment should fail
+--SKIPIF--
+skip not support nested list and `[]` list
 --FILE--
 <?php
 

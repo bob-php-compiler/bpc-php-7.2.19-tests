@@ -1,5 +1,7 @@
 --TEST--
 Assignment to invalid list() value
+--SKIPIF--
+skip not support nested list and `[]` list
 --FILE--
 <?php
 

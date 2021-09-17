@@ -396,7 +396,7 @@
 
 20. static-decl/global-decl only support in function or method
 
-21. not support list in list
+21. not support nested list and `[]` list
 
     bpc not support `list(list($x)) = `, parse error
 
