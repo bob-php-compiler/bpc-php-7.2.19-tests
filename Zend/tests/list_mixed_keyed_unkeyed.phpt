@@ -1,5 +1,7 @@
 --TEST--
 list() with both keyed and unkeyed elements
+--SKIPIF--
+skip not support nested list and `[]` list and keyed list
 --FILE--
 <?php
 

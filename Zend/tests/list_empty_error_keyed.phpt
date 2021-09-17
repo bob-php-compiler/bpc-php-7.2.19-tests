@@ -1,5 +1,7 @@
 --TEST--
 Cannot use empty elements in keyed array destructuring
+--SKIPIF--
+skip not support nested list and `[]` list and keyed list
 --FILE--
 <?php
 

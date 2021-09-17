@@ -1,5 +1,7 @@
 --TEST--
 list() with keys, evaluation order: nested
+--SKIPIF--
+skip not support nested list and `[]` list and keyed list
 --FILE--
 <?php
 

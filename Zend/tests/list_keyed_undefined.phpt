@@ -1,5 +1,7 @@
 --TEST--
 list() with undefined keys
+--SKIPIF--
+skip not support nested list and `[]` list and keyed list
 --FILE--
 <?php
 

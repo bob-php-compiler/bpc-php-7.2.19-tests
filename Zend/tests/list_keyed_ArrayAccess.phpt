@@ -1,5 +1,7 @@
 --TEST--
 list() with keys and ArrayAccess
+--SKIPIF--
+skip not support nested list and `[]` list and keyed list
 --FILE--
 <?php
 
