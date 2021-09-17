@@ -1,5 +1,7 @@
 --TEST--
 $this in isset
+--SKIPIF--
+skip TODO ArrayObject
 --FILE--
 <?php
 var_dump(isset($this));
