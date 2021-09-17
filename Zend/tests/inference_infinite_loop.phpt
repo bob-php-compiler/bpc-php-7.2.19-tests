@@ -12,6 +12,7 @@ function test() {
 }
 test();
 
+echo "Done";
 ?>
 --EXPECTF--
-Notice: Undefined variable: a in %s on line %d
+Done
