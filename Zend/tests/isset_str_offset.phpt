@@ -46,7 +46,7 @@ var_dump(isset($str[array(1,2,3)]));
 print "- object ---\n";
 var_dump(isset($str[new stdClass()]));
 print "- resource ---\n";
-$f = fopen(__FILE__, 'r');
+$f = fopen('/proc/self/comm', 'r');
 var_dump(isset($str[$f]));
 print "done\n";
 
