@@ -121,10 +121,7 @@
 
     php print full args value
 
-16. get_defined_vars()
-
-    php return variables before the function call
-    bpc return all variables of the current scope
+16. not support get_defined_vars()
 
 17. dynamic function call warning message
 
@@ -133,8 +130,6 @@
 19. some functions moved to runtime
 
 20. get_defined_functions() return encrypted function names
-
-21. not support get_defined_vars()
 
 **object**
 
