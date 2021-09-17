@@ -6,7 +6,7 @@ Accessing self:: properties or methods outside a class
 $fn = function() {
     $str = "foo";
     try {
-        self::${$str . "bar"};
+        isset(self::${$str . "bar"});
     } catch (Error $e) {
         echo $e->getMessage(), "\n";
     }
