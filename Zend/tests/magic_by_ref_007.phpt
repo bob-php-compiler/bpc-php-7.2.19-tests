@@ -16,4 +16,6 @@ $t->$func($arg);
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Method test::__call() cannot take arguments by reference in %s on line %d
+*** ERROR:compile-error:
+Error: Method test::__call() cannot take arguments by reference in %s on line %d
+ -- compile-error

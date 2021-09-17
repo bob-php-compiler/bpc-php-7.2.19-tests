@@ -265,6 +265,10 @@
 
     compile error
 
+34. magic method cannot take arguments by reference
+
+    compile error
+
 **FILE and LINE**
 
 1. FILE and LINE

@@ -15,4 +15,6 @@ var_dump($t->$name);
 echo "Done\n";
 ?>
 --EXPECTF--
-Fatal error: Method test::__unset() cannot take arguments by reference in %s on line %d
+*** ERROR:compile-error:
+Error: Method test::__unset() cannot take arguments by reference in %s on line %d
+ -- compile-error
