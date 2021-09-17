@@ -3,8 +3,8 @@ Empty list() assignments are not allowed
 --FILE--
 <?php
 
-list(,,,,,,,,,,) = [];
+list(,,,,,,,,,,) = array();
 
 ?>
 --EXPECTF--
-Fatal error: Cannot use empty list in %s on line %d
+Parse error: %s in %s on line %d
