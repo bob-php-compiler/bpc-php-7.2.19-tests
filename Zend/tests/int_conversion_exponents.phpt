@@ -25,6 +25,10 @@ var_dump(" -1.2345e9  abc" | 0);
 
 ?>
 --EXPECTF--
+A non well formed numeric value encountered
+A non well formed numeric value encountered
+A non well formed numeric value encountered
+A non well formed numeric value encountered
 int(1234500000)
 int(-1234500000)
 int(1234500000)
@@ -38,15 +42,7 @@ int(1234500000)
 int(-1234500000)
 int(1234500000)
 int(-1234500000)
-
-Notice: A non well formed numeric value encountered in %s on line %d
 int(1234500000)
-
-Notice: A non well formed numeric value encountered in %s on line %d
 int(-1234500000)
-
-Notice: A non well formed numeric value encountered in %s on line %d
 int(1234500000)
-
-Notice: A non well formed numeric value encountered in %s on line %d
 int(-1234500000)
