@@ -587,6 +587,8 @@
 
 30. literal expr evaled compile time
 
+31. isset/empty property-fetch eval obj first, then prop
+
 ## output buffering
 
 1. chunk_size and buffer_used different
