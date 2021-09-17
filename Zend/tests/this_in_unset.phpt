@@ -5,4 +5,4 @@ $this in unset
 unset($this);
 ?>
 --EXPECTF--
-Fatal error: Cannot unset $this in %sthis_in_unset.php on line 2
+Parse error: Cannot unset $this in %sthis_in_unset.php on line 2
