@@ -9,9 +9,7 @@ var_dump(
     __DIR__,
     __FUNCTION__,
     __METHOD__,
-    __CLASS__,
-    __TRAIT__,
-    __NAMESPACE__
+    __CLASS__
 );
 
 ?>
@@ -19,8 +17,6 @@ var_dump(
 int(4)
 string(%d) "%s"
 string(%d) "%s"
-string(0) ""
-string(0) ""
 string(0) ""
 string(0) ""
 string(0) ""
