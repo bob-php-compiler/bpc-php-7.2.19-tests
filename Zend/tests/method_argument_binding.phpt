@@ -30,7 +30,9 @@ class D {
 }
 
 class E extends D {
-    public function __call($name, $args) { }
+    public function __call($name, $args) {
+        var_dump($name, $args);
+    }
 
     public function test() {
         $this->method($x);
@@ -42,5 +44,8 @@ class E extends D {
 ?>
 --EXPECTF--
 int(2)
-
-Notice: Undefined variable: x in %s on line %d
+string(6) "method"
+array(1) {
+  [0]=>
+  NULL
+}
