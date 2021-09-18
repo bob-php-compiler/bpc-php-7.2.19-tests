@@ -13,13 +13,14 @@ class A {
     }
 }
 
-class B {
-    const C = 'B::C';
-}
+//class B {
+//    const C = 'B::C';
+//}
 
 $f = (new A)->f();
-var_dump($f->bindTo(null, 'B')());
+//var_dump($f->bindTo(null, 'B')());
+var_dump($f());
 
 ?>
 --EXPECT--
-string(4) "B::C"
+string(4) "A::C"
