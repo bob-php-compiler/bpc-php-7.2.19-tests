@@ -1,5 +1,7 @@
 --TEST--
 Indirect modification of isref by-value return value not possible
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
