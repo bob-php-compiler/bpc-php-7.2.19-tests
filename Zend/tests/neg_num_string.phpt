@@ -3,7 +3,7 @@ Test edge-cases for negative num strings in interpolated string offsets
 --FILE--
 <?php
 
-$a = [
+$a = array(
     "0" => 1,
     "-0" => 2,
     "1" => 3,
@@ -16,7 +16,7 @@ $a = [
     "-9223372036854775808" => 10,
     "2147483648" => 11,
     "-2147483648" => 12,
-];
+);
 
 var_dump("$a[0]");
 var_dump("$a[-0]");
