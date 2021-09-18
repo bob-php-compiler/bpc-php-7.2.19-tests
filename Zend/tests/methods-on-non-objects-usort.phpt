@@ -7,8 +7,9 @@ set_error_handler(function($code, $message) {
 });
 
 $comparator= null;
-$list= [1, 4, 2, 3, -1];
-usort($list, function($a, $b) use ($comparator) {
+$list= array(1, 4, 2, 3, -1);
+usort($list, function($a, $b) {
+  global $comparator;
   try {
 	  return $comparator->compare($a, $b);
   } catch (Error $e) {
