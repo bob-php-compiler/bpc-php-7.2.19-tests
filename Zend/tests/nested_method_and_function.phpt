@@ -3,8 +3,6 @@ active_class_entry must be always correct (__METHOD__ should not depend on decla
 --FILE--
 <?php
 
-namespace Baz;
-
 class Foo {
 	public static function bar() {
 		function foo() {
@@ -27,13 +25,13 @@ $c = Foo::bar();
 
 $c();
 ?>
---EXPECT--
-string(7) "Baz\foo"
-string(7) "Baz\foo"
-string(7) "Baz\Foo"
+--EXPECTF--
+string(%d) "foo"
+string(%d) "foo"
+string(3) "Foo"
 string(3) "bar"
-string(12) "Baz\Foo::bar"
-string(7) "Baz\Foo"
-string(13) "Baz\{closure}"
-string(13) "Baz\{closure}"
-string(7) "Baz\Foo"
+string(8) "Foo::bar"
+string(3) "Foo"
+string(9) "{closure}"
+string(9) "{closure}"
+string(3) "Foo"
