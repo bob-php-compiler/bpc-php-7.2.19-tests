@@ -5,7 +5,7 @@ precision=14
 --FILE--
 <?php
 
-$r = fopen(__FILE__, "r");
+$r = fopen('/proc/self/comm', "r");
 
 class test {
 	function  __toString() {
