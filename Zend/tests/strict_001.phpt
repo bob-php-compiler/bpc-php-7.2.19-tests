@@ -5,7 +5,7 @@ error_reporting=8191
 --FILE--
 <?php
 
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('/proc/self/comm', 'r');
 
 $array = array(1,2,3,4,5,6,7);
 

@@ -12,7 +12,7 @@ class test {
 $t = new test;
 $t->foo = 5;
 
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('/proc/self/comm', 'r');
 
 var_dump($t);
 
