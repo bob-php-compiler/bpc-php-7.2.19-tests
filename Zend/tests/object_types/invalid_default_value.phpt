@@ -7,4 +7,6 @@ function test(object $obj = 42) { }
 
 ?>
 --EXPECTF--
-Fatal error: Default value for parameters with an object type can only be NULL in %s on line %d
+*** ERROR:compile-error:
+Error: Default value for parameters with an object type can only be NULL in %s on line %d
+ -- compile-error
