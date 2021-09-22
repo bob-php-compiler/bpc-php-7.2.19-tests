@@ -1,5 +1,7 @@
 --TEST--
 Test recursive __debugInfo() method
+--SKIPIF--
+skip not support __debugInfo()
 --FILE--
 <?php
 
