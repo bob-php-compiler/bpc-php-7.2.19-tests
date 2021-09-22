@@ -1,5 +1,7 @@
 --TEST--
 Reflecting object type hint
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
