@@ -7,7 +7,7 @@ function ops() {
     throw new Exception();
 }
 
-$a = [new stdClass, new stdClass];
+$a = array(new stdClass, new stdClass);
 switch ($a[0]) {
 	case false:
 	break;
@@ -16,7 +16,7 @@ switch ($a[0]) {
 			$x = 2;
 			$y = new stdClass;
 			while ($x-- && new stdClass) {
-				$r = [$x] + ($y ? ((array) $x) + [2] : ops());
+				$r = array($x) + ($y ? ((array) $x) + array(2) : ops());
 				$y = (array) $y;
 			}
 		} catch (Exception $e) {
@@ -31,7 +31,7 @@ try {
 			$x = 2;
 			$y = new stdClass;
 			while ($x-- && new stdClass) {
-				$r = [$x] + ($y ? ((array) $x) + [2] : ops());
+				$r = array($x) + ($y ? ((array) $x) + array(2) : ops());
 				$y = (array) $y;
 			}
 	}

@@ -7,8 +7,8 @@ function ops() {
     throw new Exception();
 }
 
-$a = [new stdClass, new stdClass];
-foreach ([$a, [new stdClass]] as $b) {
+$a = array(new stdClass, new stdClass);
+foreach (array($a, array(new stdClass)) as $b) {
 	switch ($b[0]) {
 		case false:
 		break;
@@ -17,7 +17,7 @@ foreach ([$a, [new stdClass]] as $b) {
 				$x = 2;
 				$y = new stdClass;
 				while ($x-- && new stdClass) {
-					$r = [$x] + ($y ? ((array) $x) + [2] : ops());
+					$r = array($x) + ($y ? ((array) $x) + array(2) : ops());
 					$y = (array) $y;
 				}
 			} catch (Exception $e) {
@@ -25,7 +25,7 @@ foreach ([$a, [new stdClass]] as $b) {
 	}
 }
 
-foreach ([$a, [new stdClass]] as $b) {
+foreach (array($a, array(new stdClass)) as $b) {
 	try {
 		switch ($b[0]) {
 			case false:
@@ -34,7 +34,7 @@ foreach ([$a, [new stdClass]] as $b) {
 				$x = 2;
 				$y = new stdClass;
 				while ($x-- && new stdClass) {
-					$r = [$x] + ($y ? ((array) $x) + [2] : ops());
+					$r = array($x) + ($y ? ((array) $x) + array(2) : ops());
 					$y = (array) $y;
 				}
 		}
