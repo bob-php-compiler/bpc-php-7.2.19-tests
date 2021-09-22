@@ -1,5 +1,7 @@
 --TEST--
 Use of self::class inside a constant in an unknown scope
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
