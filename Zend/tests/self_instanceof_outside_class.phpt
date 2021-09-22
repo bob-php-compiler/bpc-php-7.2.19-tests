@@ -13,5 +13,7 @@ $fn = function() {
 $fn();
 
 ?>
---EXPECT--
-Cannot access self:: when no class scope is active
+--EXPECTF--
+*** ERROR:compile-error:
+Error: Cannot access self:: when no class scope is active in %s on line %d
+ -- compile-error
