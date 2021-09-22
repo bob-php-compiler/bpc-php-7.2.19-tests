@@ -1,5 +1,7 @@
 --TEST--
 Live range & free on return
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 class bar {
