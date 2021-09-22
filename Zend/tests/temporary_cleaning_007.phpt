@@ -3,7 +3,7 @@ Exception inside a foreach loop with return
 --FILE--
 <?php
 class saboteurTestController {
-    public function isConsistent() { throw new \Exception(); }
+    public function isConsistent() { throw new Exception(); }
 }
 
 $controllers = array(new saboteurTestController(),new saboteurTestController());
@@ -12,7 +12,7 @@ foreach ($controllers as $controller) {
         if ($controller->isConsistent()) {
             return $controller;
         }
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         echo "Exception\n";
     }
 }
