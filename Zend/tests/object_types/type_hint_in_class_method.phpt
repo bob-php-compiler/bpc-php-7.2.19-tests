@@ -15,4 +15,4 @@ Fatal error: Uncaught TypeError: Argument 1 passed to One::a() must be an object
 Stack trace:
 #0 %s(9): One->a(123)
 #1 {main}
-  thrown in %s on line 4
+  thrown in %s on line 9
