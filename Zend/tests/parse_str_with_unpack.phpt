@@ -5,7 +5,7 @@ Calling parse_str through argument unpacking
 
 function test() {
     $i = 0;
-    parse_str(...["i=41"]);
+    parse_str("i=41");
     var_dump($i + 1);
 }
 test();
