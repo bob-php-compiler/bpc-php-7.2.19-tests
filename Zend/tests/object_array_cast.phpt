@@ -3,11 +3,11 @@
 --FILE--
 <?php
 
-$arr = [1, 2, 3];
+$arr = array(1, 2, 3);
 var_dump((object) (array) $arr);
 var_dump($arr);
 
-$obj = (object) [1, 2, 3];
+$obj = (object) array(1, 2, 3);
 var_dump((array) (object) $obj);
 var_dump($obj);
 
@@ -37,7 +37,7 @@ array(3) {
   [2]=>
   int(3)
 }
-object(stdClass)#1 (3) {
+object(stdClass)#2 (3) {
   ["0"]=>
   int(1)
   ["1"]=>
