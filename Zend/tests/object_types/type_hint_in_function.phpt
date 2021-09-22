@@ -13,4 +13,4 @@ Fatal error: Uncaught TypeError: Argument 1 passed to a() must be an object, int
 Stack trace:
 #0 %s(7): a(123)
 #1 {main}
-  thrown in %s on line 4
+  thrown in %s on line 7
