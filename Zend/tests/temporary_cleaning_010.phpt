@@ -1,5 +1,7 @@
 --TEST--
 Live range & throw from finally
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function test() {
