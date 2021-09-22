@@ -11,7 +11,6 @@ class bar {
 
 class foo extends bar {
 	public function __construct() {
-		static::bar();
 		parent::bar();
 	}
 }
@@ -21,5 +20,4 @@ new foo;
 
 ?>
 --EXPECT--
-hello
 hello
