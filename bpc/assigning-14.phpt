@@ -16,69 +16,69 @@ foreach ($arr as $k => $v) {
     echo "==$k postcrement==\n";
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0]++);
+    var_dump($a->prop[new stdclass]->p->q[0]++);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0]--);
+    var_dump($a->prop[new stdclass]->p->q[0]--);
     var_dump($a);
 
     echo "==$k precrement==\n";
 
     $a = $v;
-    var_dump(++$a->prop[new stdclass]->p[0]);
+    var_dump(++$a->prop[new stdclass]->p->q[0]);
     var_dump($a);
 
     $a = $v;
-    var_dump(--$a->prop[new stdclass]->p[0]);
+    var_dump(--$a->prop[new stdclass]->p->q[0]);
     var_dump($a);
 
     echo "==$k assigning-string-cat==\n";
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] .= 'A');
+    var_dump($a->prop[new stdclass]->p->q[0] .= 'A');
     var_dump($a);
 
     echo "==$k assigning-arithmetic-op==\n";
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] += 2);
+    var_dump($a->prop[new stdclass]->p->q[0] += 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] -= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] -= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] *= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] *= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] /= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] /= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] %= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] %= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] **= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] **= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] <<= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] <<= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] |= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] |= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] ^= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] ^= 2);
     var_dump($a);
 
     $a = $v;
-    var_dump($a->prop[new stdclass]->p[0] &= 2);
+    var_dump($a->prop[new stdclass]->p->q[0] &= 2);
     var_dump($a);
 }
 ?>
