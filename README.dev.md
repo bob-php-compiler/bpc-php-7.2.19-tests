@@ -492,18 +492,13 @@
 
     bpc float to string (glibc snprintf) result may different with php when precision is -1 or 0
 
-9. assigning-arithmetic-op access lval twice
-
-    @see tests/classes/array_access_009.phpt `$people[0]['name'] .= 'Baz';`
-    @see `(generate-code node::assigning-string-cat)`
-
-10. var_export whole string
+9. var_export whole string
 
     bpc output whole string
     php output concat string
     @see tests/classes/array_conversion_keys.phpt
 
-11. problem running command 'bigloo'
+10. problem running command 'bigloo'
 
     generate scheme code ok, compile scheme code error.
     
@@ -516,82 +511,82 @@
     ```
     ERR: Unbound variable -- *CLASS-d*
 
-12. typehint TypeError message
+11. typehint TypeError message
 
     php: `Argument x passed to x must x, x given, called in x on line x`
     bpc: `Argument x passed to x must x, x given, called in x on line x and defined`
 
-13. stack-trace
+12. stack-trace
 
     php show user passed args
     bpc show declared args
     unset arg not affect stack trace, @see Zend/tests/bug70547.phpt
     bpc push call_user_func() in stack trace, php not
 
-14. invalid test
+13. invalid test
 
-15. include()/require()/*_once() wrong error message different
+14. include()/require()/*_once() wrong error message different
 
     php require: warning and fatal error
     bpc require: fatal error
 
-16. out of memory
+15. out of memory
 
     php Fatal error, run shutdown function, and ???(FIXME), exit
     bpc Fatal error, run shutdown function, flush, exit
 
-17. error_handler not support deprecated argument $errcontext
+16. error_handler not support deprecated argument $errcontext
 
-18. Cannot use [] for reading/unsetting
+17. Cannot use [] for reading/unsetting
 
     php: Fatal error
     bpc: compile error
 
-19. once refed, always refed
+18. once refed, always refed
 
     @see Zend/tests/bug33282.phpt
 
-20. dynamic funcall blacklist
+19. dynamic funcall blacklist
 
     php check arguments
     bpc not check arguments
 
-21. gc different
+20. gc different
 
     gc_collect_cycles() always return 0
     gc_* functions only gc_collect_cycles() may do some work, others do nothing
 
-22. compiler always warning: Division by zero
+21. compiler always warning: Division by zero
 
     if can be calc result when compile, the final exectable will only contain the result, so not warning again
 
-23. maybe php bug
+22. maybe php bug
 
     @see Zend/tests/bug54265.phpt
 
-24. Use After Free
+23. Use After Free
 
     to be confirmed
 
-25. nested error handler result silent
+24. nested error handler result silent
 
     @see Zend/tests/bug64960.phpt
 
-26. Modulo by zero compile error
+25. Modulo by zero compile error
 
-27. Bit shift by negative number compile error
+26. Bit shift by negative number compile error
 
-28. bpc `$GLOBALS += array();` may not worked as expected because of variables declared early
+27. bpc `$GLOBALS += array();` may not worked as expected because of variables declared early
 
-29. Cannot use string offset as an array
+28. Cannot use string offset as an array
 
     @see Zend/tests/offset_assign.phpt
     php eval offset first, then throw Error
     bpc throw Error
 
-30. literal expr evaled compile time
+29. literal expr evaled compile time
 
-31. isset/empty property-fetch eval obj first, then prop
+30. isset/empty property-fetch eval obj first, then prop
 
 ## output buffering
 
