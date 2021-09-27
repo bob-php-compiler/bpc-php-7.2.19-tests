@@ -586,7 +586,9 @@
 
 29. literal expr evaled compile time
 
-30. isset/empty property-fetch eval obj first, then prop
+30. isset/empty preferred silent
+
+    @see Zend/tests/isset_003.phpt
 
 ## output buffering
 
