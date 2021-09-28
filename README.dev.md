@@ -467,6 +467,10 @@
 
 41. not support multi catch
 
+42. not support literal string as class name
+
+    `'A'::$prop` will parse error
+
 **misc**
 
 1. TODO
