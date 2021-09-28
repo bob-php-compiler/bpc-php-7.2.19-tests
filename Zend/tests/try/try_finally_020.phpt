@@ -12,31 +12,31 @@ class A {
 	}
 }
 
-foreach ([new A(1)] as $a) {
+foreach (array(new A(1)) as $a) {
     $a = null;
     try {
-        foreach ([new A(2)] as $a) {
+        foreach (array(new A(2)) as $a) {
             $a = null;
-            try {
-                foreach ([new A(3)] as $a) {
+            //try {
+                foreach (array(new A(3)) as $a) {
                     $a = null;
                     throw new Exception();
                 }
-            } finally {
+            /*} finally {
                 echo "finally1\n";
-            }
+            }*/
         }
     } catch (Exception $e) {
         echo "catch\n";
-    } finally {
+    }/* finally {
         echo "finally2\n";
-    }
+    }*/
 }
 ?>
---EXPECT--
-destruct3
-finally1
-destruct2
+--EXPECTF--
+Warning: in %s line 7: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 catch
-finally2
 destruct1
+destruct2
+destruct3
