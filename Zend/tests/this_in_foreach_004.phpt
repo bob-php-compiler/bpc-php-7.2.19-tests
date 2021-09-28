@@ -1,5 +1,7 @@
 --TEST--
 $this in foreach
+--SKIPIF--
+skip not support foreach as list()
 --FILE--
 <?php
 $a = [[1]];
