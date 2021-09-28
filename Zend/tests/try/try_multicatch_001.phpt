@@ -1,5 +1,7 @@
 --TEST--
 Parsing test
+--SKIPIF--
+skip not support multi catch
 --FILE--
 <?php
 

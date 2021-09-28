@@ -1,5 +1,7 @@
 --TEST--
 Catch exception in the nested multicatch
+--SKIPIF--
+skip not support multi catch
 --FILE--
 <?php
 

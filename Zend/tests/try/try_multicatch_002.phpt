@@ -1,5 +1,7 @@
 --TEST--
 Catch first exception in the multicatch
+--SKIPIF--
+skip not support multi catch
 --FILE--
 <?php
 

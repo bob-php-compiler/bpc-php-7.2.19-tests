@@ -1,5 +1,7 @@
 --TEST--
 Catch second exception in the second multicatch
+--SKIPIF--
+skip not support multi catch
 --FILE--
 <?php
 require_once __DIR__ . '/exceptions.inc';

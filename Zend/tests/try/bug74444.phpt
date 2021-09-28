@@ -1,5 +1,7 @@
 --TEST--
 Bug #74444 (multiple catch freezes in some cases)
+--SKIPIF--
+skip not support multi catch
 --FILE--
 <?php
 function foo()

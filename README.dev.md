@@ -465,6 +465,8 @@
     php notice
     bpc parse error
 
+41. not support multi catch
+
 **misc**
 
 1. TODO
