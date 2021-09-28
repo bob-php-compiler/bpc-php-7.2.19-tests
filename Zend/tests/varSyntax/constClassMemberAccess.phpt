@@ -4,7 +4,7 @@ Const class member access with deference
 <?php
 
 class A {
-    const A = ['a' => ['b' => 'c']];
+    const A = array('a' => array('b' => 'c'));
 }
 
 var_dump(A::A);
