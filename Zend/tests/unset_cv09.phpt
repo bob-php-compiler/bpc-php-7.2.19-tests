@@ -4,11 +4,10 @@ unset() CV 9 (unset() of global variable in array_pop($GLOBALS))
 <?php
 $x = "ok\n";
 echo array_pop($GLOBALS);
-echo $x;
+var_dump($x);
 echo "ok\n";
 ?>
 --EXPECTF--
 ok
-
-Notice: Undefined variable: x in %sunset_cv09.php on line %d
+NULL
 ok
