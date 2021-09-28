@@ -5,9 +5,8 @@ unset() CV 2 (unset() global variable in $GLOBALS)
 $x = "ok\n";
 echo $x;
 unset($GLOBALS["x"]);
-echo $x;
+var_dump($x);
 ?>
 --EXPECTF--
 ok
-
-Notice: Undefined variable: x in %sunset_cv02.php on line %d
+NULL
