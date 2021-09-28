@@ -1,7 +1,7 @@
 --TEST--
 unset() CV 6 (indirect unset() of global variable in session_unset())
 --SKIPIF--
-<?php include(dirname(__FILE__).'/../../ext/session/tests/skipif.inc'); ?>
+skip TODO
 --INI--
 session.auto_start=0
 session.save_handler=files
