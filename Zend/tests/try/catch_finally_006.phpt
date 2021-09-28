@@ -8,10 +8,10 @@ function foo ($a) {
    } catch (Exception $e) {
      var_dump($a);
      throw $e;
-   } finally {
+   } /*finally {
      var_dump("finally");
      return "return";
-   }
+   }*/
    return 1;
 }
 
@@ -24,5 +24,4 @@ try {
 ?>
 --EXPECT--
 string(4) "para"
-string(7) "finally"
-string(6) "return"
+string(2) "ex"
