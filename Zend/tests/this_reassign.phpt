@@ -14,4 +14,4 @@ Fatal error: Uncaught Error: Cannot re-assign $this in %sthis_reassign.php:4
 Stack trace:
 #0 %sthis_reassign.php(7): foo()
 #1 {main}
-  thrown in %sthis_reassign.php on line 4
+  thrown in %sthis_reassign.php on line 7
