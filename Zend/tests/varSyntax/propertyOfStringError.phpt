@@ -7,4 +7,4 @@ Cannot take property of a string
 
 ?>
 --EXPECTF--
-Notice: Trying to get property 'bar' of non-object in %s on line %d
+Parse error: %s in %s on line 3
