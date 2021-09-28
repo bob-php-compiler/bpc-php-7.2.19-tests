@@ -1,5 +1,7 @@
 --TEST--
 $this in foreach
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 $a = [1];
