@@ -1,5 +1,7 @@
 --TEST--
 Try finally (segfault with empty break)
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo () {

@@ -1,5 +1,7 @@
 --TEST--
 Loop var dtor throwing exception during return inside try/catch inside finally
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 Break 2 in try and return in finally inside nested loop
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 

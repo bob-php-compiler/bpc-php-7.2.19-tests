@@ -1,5 +1,7 @@
 --TEST--
 Exception in finally inside finally following try/catch containing throwing try/finally
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 

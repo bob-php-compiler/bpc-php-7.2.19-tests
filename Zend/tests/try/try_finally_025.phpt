@@ -1,5 +1,7 @@
 --TEST--
 Throw in try of try/finally inside catch
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 

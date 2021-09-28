@@ -1,5 +1,7 @@
 --TEST--
 Ignoring return inside loop using finally
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 

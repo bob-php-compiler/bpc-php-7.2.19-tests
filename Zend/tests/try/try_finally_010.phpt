@@ -1,5 +1,7 @@
 --TEST--
 Try finally (function call in the finally block after exception)
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo() {

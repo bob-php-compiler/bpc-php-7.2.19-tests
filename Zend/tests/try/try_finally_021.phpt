@@ -1,5 +1,7 @@
 --TEST--
 Live range & return from finally
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 $array = [1];
