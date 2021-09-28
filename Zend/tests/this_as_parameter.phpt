@@ -8,4 +8,4 @@ function foo($this) {
 foo(5);
 ?>
 --EXPECTF--
-Fatal error: Cannot use $this as parameter in %sthis_as_parameter.php on line 2
+Parse error: Cannot use $this as parameter in %sthis_as_parameter.php on line 2
