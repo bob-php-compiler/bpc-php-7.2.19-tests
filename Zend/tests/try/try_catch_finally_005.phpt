@@ -1,5 +1,7 @@
 --TEST--
 Try catch finally (break / cont in try block)
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --CREDITS--
 adoy
 --FILE--
