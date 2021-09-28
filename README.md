@@ -1,9 +1,11 @@
 # Passed Tests
 
 - [x] tests
+- [x] Zend
 - [x] ext/date
 - [x] ext/pcre
 - [x] ext/mbstring
+- [x] bpc
 
 # Requirements
 
