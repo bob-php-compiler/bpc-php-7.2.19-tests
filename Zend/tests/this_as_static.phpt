@@ -9,4 +9,4 @@ function foo() {
 foo();
 ?>
 --EXPECTF--
-Fatal error: Cannot use $this as static variable in %sthis_as_static.php on line 3
+Parse error: Cannot use $this as static variable in %sthis_as_static.php on line 3
