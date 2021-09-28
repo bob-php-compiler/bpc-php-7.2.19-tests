@@ -1,13 +1,14 @@
 --TEST--
 unset() CV 3 (unset() global variable in included file)
+--ARGS--
+--bpc-include-file Zend/tests/unset.inc
 --FILE--
 <?php
 $x = "ok\n";
 echo $x;
 include "unset.inc";
-echo $x;
+var_dump($x);
 ?>
 --EXPECTF--
 ok
-
-Notice: Undefined variable: x in %sunset_cv03.php on line %d
+NULL
