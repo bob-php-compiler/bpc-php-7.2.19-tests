@@ -15,4 +15,4 @@ $obj = new C;
 $obj->foo();
 ?>
 --EXPECTF--
-Fatal error: Cannot re-assign $this in %sthis_in_catch.php on line 6
+Parse error: Cannot re-assign $this in %sthis_in_catch.php on line %d
