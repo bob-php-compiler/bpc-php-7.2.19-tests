@@ -1,5 +1,7 @@
 --TEST--
 Cannot use $this as lexical variable
+--SKIPIF--
+skip closure no use
 --FILE--
 <?php
 
