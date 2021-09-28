@@ -1,7 +1,7 @@
 --TEST--
 $this re-assign in mb_parse_str()
 --SKIPIF--
-<?php extension_loaded('mbstring') or die('skip mbstring not available'); ?>
+skip mbstring regex,kana,http,mail
 --FILE--
 <?php
 function foo() {
