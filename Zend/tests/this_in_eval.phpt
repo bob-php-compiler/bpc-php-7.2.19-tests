@@ -1,11 +1,13 @@
 --TEST--
 $this in eval() block
+--ARGS--
+--bpc-include-file Zend/tests/this_in_eval.inc
 --FILE--
 <?php
 class C {
 	function foo() {
-		eval('var_dump($this);');
-		eval('var_dump($this);');
+	    include "this_in_eval.inc";
+	    include "this_in_eval.inc";
 	}
 }
 $x = new C;
