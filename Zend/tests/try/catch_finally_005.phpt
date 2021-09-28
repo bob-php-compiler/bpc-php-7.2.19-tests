@@ -1,5 +1,7 @@
 --TEST--
 Try catch finally (with multi-returns and exception)
+--SKIPIF--
+skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo ($a) {
