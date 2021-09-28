@@ -10,9 +10,9 @@ function foo ($throw = FALSE) {
      }
    } catch (Exception $e) {
      echo "catch\n";
-   } finally {
+   }/* finally {
      echo "finally\n";
-   }
+   }*/
 
    echo "end\n";
 }
@@ -23,10 +23,8 @@ foo(true);
 ?>
 --EXPECTF--
 try
-finally
 end
 
 try
 catch
-finally
 end
