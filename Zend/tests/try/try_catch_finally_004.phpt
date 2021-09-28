@@ -14,17 +14,15 @@ try {
     } catch (Exception $e) {
         dummy("catch");
         throw $e;
-    } finally {
+    }/* finally {
         dummy("finally");
-    }
+    }*/
 } catch (Exception $e) {
   dummy("catch2");
-} finally {
+}/* finally {
   dummy("finally2");
-}
+}*/
 var_dump("end");
 ?>
 --EXPECTF--
 string(3) "try"
-string(7) "finally"
-string(8) "finally2"

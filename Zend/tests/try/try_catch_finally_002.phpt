@@ -9,34 +9,34 @@ class BE extends Exception {};
 function foo () {
     try {
         try {
-            try {
+            //try {
                 try {
                    echo "1";
                    throw new Exception("try");
                 } catch (AE $e) {
                    die("error");
-                } finally {
+                }/* finally {
                    echo "2";
-                }
-            } finally {
+                }*/
+            /*} finally {
                 echo "3";
-            }
+            }*/
         } catch (BE $e) {
             die("error");
-        } finally {
+        }/* finally {
             echo "4";
-        }
+        }*/
     } catch (Exception $e) {
         echo "5";
     } catch (AE $e) {
         die("error");
-    } finally {
+    }/* finally {
         echo "6";
-    }
+    }*/
    return 7;
 }
 
 var_dump(foo());
 ?>
 --EXPECTF--
-123456int(7)
+15int(7)

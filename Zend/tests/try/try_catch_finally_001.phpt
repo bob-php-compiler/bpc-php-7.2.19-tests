@@ -8,29 +8,29 @@ class BE extends Exception {};
 
 function foo () {
     try {
-        try {
+        //try {
             try {
                 throw new Exception("try");
             } catch (AE $e) {
                 echo "0";
                 die("error");
-            } finally {
+            }/* finally {
                 echo "1";
-            }
-        } finally {
+            }*/
+        /*} finally {
             echo "2";
-        }
+        }*/
     } catch (BE $e) {
       die("error");
     } catch (Exception $e) {
         echo "3";
-    } finally {
+    }/* finally {
         echo "4";
-    }
+    }*/
    return 1;
 }
 
 var_dump(foo());
 ?>
 --EXPECTF--
-1234int(1)
+3int(1)
