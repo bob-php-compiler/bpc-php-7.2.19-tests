@@ -7,4 +7,4 @@ Bug #70782: null ptr deref and segfault (zend_get_class_fetch_type)
 
 ?>
 --EXPECTF--
-Parse error: %s in %s on line %d
+Fatal error: Illegal class name in %s on line %d
