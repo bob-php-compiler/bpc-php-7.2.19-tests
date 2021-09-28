@@ -9,6 +9,4 @@ var_dump($x);
 
 ?>
 --EXPECTF--
-Deprecated: The (unset) cast is deprecated in %s on line %d
-NULL
-int(1)
+Parse error: %s in %s on line 4
