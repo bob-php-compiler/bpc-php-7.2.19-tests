@@ -11,4 +11,4 @@ function foo () {
 foo();
 ?>
 --EXPECTF--
-Fatal error: Cannot use try without catch or finally in %stry_finally_004.php on line %d
+Parse error: %s in %s on line 6
