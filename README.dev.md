@@ -596,6 +596,10 @@
 
     @see Zend/tests/isset_003.phpt
 
+31. double quoted string may split into string-cats
+
+    @see Zend/tests/instanceof_001-1.phpt
+
 ## output buffering
 
 1. chunk_size and buffer_used different

@@ -13,13 +13,9 @@ var_dump($c[0] instanceof stdClass);
 
 var_dump(@$inexistent instanceof stdClass);
 
-var_dump("$a" instanceof stdClass);
-
 ?>
 --EXPECTF--
 bool(true)
 bool(true)
 bool(true)
 bool(false)
-
-Recoverable fatal error: Object of class stdClass could not be converted to string in %s on line %d
