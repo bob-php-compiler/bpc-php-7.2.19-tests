@@ -600,6 +600,11 @@
 
     @see Zend/tests/instanceof_001-1.phpt
 
+32. resource can be array key
+
+    php: `array($fp => 'value')` Illegal offset type, `$arr[$fp] = 'value';` notice casting
+    bpc: both notice casting
+
 ## output buffering
 
 1. chunk_size and buffer_used different
