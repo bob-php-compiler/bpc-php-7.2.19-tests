@@ -42,7 +42,7 @@ echo "-- last_name column from recordset, keyed by value from first_name column 
 var_dump(array_column($records, 'last_name', 'first_name'));
 
 echo "\n*** Testing multiple data types ***\n";
-$fh = fopen(__FILE__, 'r', true);
+$fh = fopen('/proc/self/comm', 'r', false);
 $values = array(
 	array(
 		'id' => 1,
