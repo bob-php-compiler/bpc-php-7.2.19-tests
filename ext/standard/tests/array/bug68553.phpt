@@ -5,20 +5,20 @@ Bug #68553 (array_column: null values in $index_key become incrementing keys in 
 $i = 100;
 /* increase the resource id to make test stable */
 while ($i--) {
-	$fd = fopen(__FILE__, "r");
+	$fd = fopen('/proc/self/comm', "r");
 	fclose($fd);
 }
-$a = [
-	['a' => 10],
-	['a' => 20],
-	['a' => true],
-	['a' => false],
-	['a' => fopen(__FILE__, "r")],
-	['a' => -5],
-	['a' => 7.38],
-	['a' => null, "test"],
-	['a' => null],
-];
+$a = array(
+	array('a' => 10),
+	array('a' => 20),
+	array('a' => true),
+	array('a' => false),
+	array('a' => fopen('/proc/self/comm', "r")),
+	array('a' => -5),
+	array('a' => 7.38),
+	array('a' => null, "test"),
+	array('a' => null),
+);
 
 var_dump(array_column($a, null, 'a'));
 --EXPECTF--
