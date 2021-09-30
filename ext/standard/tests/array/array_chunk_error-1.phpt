@@ -9,12 +9,15 @@ Test array_chunk() function : error conditions
 
 echo "*** Testing array_chunk() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing array_chunk() function with zero arguments --\n";
-var_dump( array_chunk() );
+echo "\n-- Testing array_chunk() function with more than expected no. of arguments --\n";
+$input = array(1, 2);
+$size = 10;
+$preserve_keys = true;
+$extra_arg = 10;
+var_dump( array_chunk($input,$size,$preserve_keys, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_chunk(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function array_chunk(): 3 at most, 4 provided in %s on line %d
  -- compile-error
