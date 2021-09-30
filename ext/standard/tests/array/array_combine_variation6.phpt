@@ -16,7 +16,7 @@ Test array_combine() function : usage variations - binary safe checking
 echo "*** Testing array_combine() : binary safe checking ***\n";
 
 // array with binary values
-$arr_binary = array(b"hello", b"world");
+$arr_binary = array("hello", "world");
 $arr_normal = array("hello", "world");
 
 // array with binary value for $keys and $values argument
