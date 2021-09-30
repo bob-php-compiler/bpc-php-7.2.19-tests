@@ -10,12 +10,13 @@ Test array_combine() function : error conditions
 
 echo "*** Testing array_combine() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing array_combine() function with Zero arguments --\n";
-var_dump( array_combine() );
+// Testing array_combine with one less than the expected number of arguments
+echo "\n-- Testing array_combine() function with less than expected no. of arguments --\n";
+$keys = array(1, 2);
+var_dump( array_combine($keys) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_combine(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function array_combine(): 2 required, 1 provided in %s on line %d
  -- compile-error
