@@ -74,8 +74,8 @@ $inputs = array(
        // binary data
 /*7*/
 'binary' => array(
-      b"binary1" => 'binary 1',
-	  (binary)"binary2" => 'binary 2'),
+      "binary1" => 'binary 1',
+	  "binary2" => 'binary 2'),
 
        // undefined data
 /*8*/

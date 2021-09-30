@@ -15,14 +15,14 @@ Test array_diff_assoc() function : usage variations - binary safe check
 
 echo "*** Testing array_diff_assoc() : usage variations ***\n";
 
-$array1 = array( b"1",
-                 b"hello",
+$array1 = array( "1",
+                 "hello",
                  "world",
                  "str1" => "hello",
                  "str2" => "world");
 
-$array2 = array( b"1" => 'hello',
-                 b"world",
+$array2 = array( "1" => 'hello',
+                 "world",
                  "hello",
                  'test');
 
