@@ -27,14 +27,14 @@ var_dump( array_diff_ukey($array1, $array1, unknown_function) );
 --EXPECTF--
 *** Testing array_diff_ukey() : usage variation ***
 
-Warning: array_diff_ukey() expects parameter 3 to be a valid callback, function 'unknown_function' not found or invalid function name in %s on line %d
+Warning: array_diff_ukey() expects parameter 3 to be callable, unknown_function given in %s on line %d
 NULL
 
-Warning: array_diff_ukey() expects parameter 3 to be a valid callback, function 'unknown_function' not found or invalid function name in %s on line %d
+Warning: array_diff_ukey() expects parameter 3 to be callable, unknown_function given in %s on line %d
 NULL
 
 Warning: Use of undefined constant unknown_function - assumed 'unknown_function' (this will throw an Error in a future version of PHP) in %s on line %d
 
-Warning: array_diff_ukey() expects parameter 3 to be a valid callback, function 'unknown_function' not found or invalid function name in %s on line %d
+Warning: array_diff_ukey() expects parameter 3 to be callable, unknown_function given in %s on line %d
 NULL
 ===DONE===
