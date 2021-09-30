@@ -10,7 +10,7 @@ class myObj {
     }
 }
 
-$objects = [
+$objects = array(
     new myObj(-1),
     new myObj(0),
     new myObj(1),
@@ -20,7 +20,7 @@ $objects = [
     new myObj(false),
     new myObj('abc'),
     new myObj(''),
-];
+);
 
 var_dump(array_column($objects, 'prop'));
 
