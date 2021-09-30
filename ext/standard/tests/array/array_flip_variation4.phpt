@@ -24,7 +24,7 @@ class MyClass
 $obj = new MyClass();
 
 // resource data
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('/proc/self/comm', 'r');
 
 $input = array(
   // float values
