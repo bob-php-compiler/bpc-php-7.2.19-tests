@@ -34,7 +34,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $input argument
 $inputs = array(
@@ -72,8 +72,8 @@ $inputs = array(
        $heredoc,
 
        // binary data
-/*21*/ b"binary",
-	   (binary)"binary",
+/*21*/ "binary",
+	   "binary",
 
        // object data
 /*23*/ new classA(),
