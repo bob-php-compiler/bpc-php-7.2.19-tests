@@ -1,9 +1,10 @@
 --TEST--
 Test array_diff() function : usage variations - multidimensional arrays
 --INI--
-error_reporting=E_ALL & ~E_NOTICE
+error_reporting=32759
 --FILE--
 <?php
+// E_ALL & ~E_NOTICE = 32759
 /* Prototype  : array array_diff(array $arr1, array $arr2 [, array ...])
  * Description: Returns the entries of arr1 that have values which are
  * not present in any of the others arguments.
