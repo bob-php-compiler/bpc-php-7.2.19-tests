@@ -12,10 +12,10 @@ $c_f = array_flip($c);
 $d_f = array_flip($d);
 $i = 1;
 /* give nicer values */
-foreach ($a_f as $k=> &$a_f_el) { $a_f_el =$k*2;}
-foreach ($b_f as $k=> &$b_f_el) { $b_f_el =$k*2;}
-foreach ($c_f as $k=> &$c_f_el) { $c_f_el =$k*2;}
-foreach ($d_f as $k=> &$d_f_el) { $d_f_el =$k*2;}
+foreach ($a_f as $k=> $a_f_el) { $a_f[$k] = $k*2;}
+foreach ($b_f as $k=> $b_f_el) { $b_f[$k] = $k*2;}
+foreach ($c_f as $k=> $c_f_el) { $c_f[$k] = $k*2;}
+foreach ($d_f as $k=> $d_f_el) { $d_f[$k] = $k*2;}
 
 echo "------ Test $i --------\n";$i++;// 1
 var_dump(array_diff_key($a_f, $b_f));// keys -> 1, 6, 15, 1200
@@ -114,7 +114,7 @@ array(6) {
   [1200]=>
   int(2400)
   [-2500]=>
-  &int(-5000)
+  int(-5000)
 }
 array(6) {
   [1]=>
@@ -128,7 +128,7 @@ array(6) {
   [1200]=>
   int(2400)
   [-2500]=>
-  &int(-5000)
+  int(-5000)
 }
 ------ Test 4 --------
 array(3) {
@@ -215,7 +215,7 @@ array(6) {
   [1100]=>
   int(2200)
   [-2500]=>
-  &int(-5000)
+  int(-5000)
 }
 array(6) {
   [0]=>
@@ -229,7 +229,7 @@ array(6) {
   [1100]=>
   int(2200)
   [-2500]=>
-  &int(-5000)
+  int(-5000)
 }
 ------ Test 9 --------
 array(3) {
