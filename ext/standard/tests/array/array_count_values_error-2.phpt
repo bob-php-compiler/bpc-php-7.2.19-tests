@@ -14,17 +14,14 @@ Test array_count_values() function : Invalid parameters
 
 echo "*** Testing array_count_values() : error conditions ***\n";
 
-//Test array_count_values with integer arguments
-echo "\n-- Testing array_count_values() function integer arguments --\n";
-var_dump( array_count_values(1 ));
+//Test array_count_values with one more than the expected number of arguments
+echo "\n-- Testing array_count_values() function with more than expected no. of arguments --\n";
+$input = array(1, 2);
+$extra_arg = 10;
+var_dump( array_count_values($input, $extra_arg) );
 
-echo "Done";
 ?>
 --EXPECTF--
-*** Testing array_count_values() : error conditions ***
-
--- Testing array_count_values() function integer arguments --
-
-Warning: array_count_values() expects parameter 1 to be array, integer given in %sarray_count_values_error.php on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function array_count_values(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
