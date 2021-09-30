@@ -14,12 +14,13 @@ Test array_diff_assoc() function : error conditions - pass array_diff_assoc() to
 
 echo "*** Testing array_diff_assoc() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing array_diff_assoc() function with zero arguments --\n";
-var_dump( array_diff_assoc() );
+// Testing array_diff_assoc with one less than the expected number of arguments
+echo "\n-- Testing array_diff_assoc() function with less than expected no. of arguments --\n";
+$arr1 = array(1, 2);
+var_dump( array_diff_assoc($arr1) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_diff_assoc(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function array_diff_assoc(): 2 required, 1 provided in %s on line %d
  -- compile-error
