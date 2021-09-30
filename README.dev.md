@@ -624,12 +624,7 @@
     php zval_get_string($error_level) first, then convert to long
     bpc simply mkelong
 
-5. array_column() object prop fetch different
-
-    php: has_property __isset ...
-    bpc: property_exists ...
-
-6. fopen() TODO support use_include_path and context
+5. fopen() TODO support use_include_path and context
 
 ## ext/date
 
