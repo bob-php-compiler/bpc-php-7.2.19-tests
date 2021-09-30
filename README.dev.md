@@ -57,6 +57,7 @@
     
     @see php-functions.scm
     call_user_func() pass args not in container, warning reported, same as php
+    array_*diff*() pass args not in container, warning reported, php no warning
 
 9. typehint argument default value cannot be php-constant
 
