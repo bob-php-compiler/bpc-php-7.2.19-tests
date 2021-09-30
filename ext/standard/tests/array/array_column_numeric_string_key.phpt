@@ -3,7 +3,7 @@ array_column() treats numeric string keys as usual
 --FILE--
 <?php
 
-$array = [[42 => 'a'], [42 => 'b']];
+$array = array(array(42 => 'a'), array(42 => 'b'));
 var_dump(array_column($array, 42));
 var_dump(array_column($array, "42"));
 
