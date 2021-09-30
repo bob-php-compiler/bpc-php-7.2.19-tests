@@ -1,5 +1,7 @@
 --TEST--
 Test array_udiff_assoc() function : error conditions
+--ARGS--
+--bpc-include-file ext/standard/tests/array/compare_function.inc
 --FILE--
 <?php
 /* Prototype  : array array_udiff_assoc(array arr1, array arr2 [, array ...], callback key_comp_func)
@@ -21,10 +23,6 @@ $key_comp_func = 'compare_function';
 echo "\n-- Testing array_udiff_assoc() function with more than expected no. of arguments --\n";
 var_dump( array_udiff_assoc($arr1, $arr2, $key_comp_func, $extra_arg) );
 
-// Testing array_udiff_assoc with one less than the expected number of arguments
-echo "\n-- Testing array_udiff_assoc() function with less than expected no. of arguments --\n";
-var_dump( array_udiff_assoc($arr1, $arr2) );
-
 ?>
 ===DONE===
 --EXPECTF--
@@ -32,11 +30,6 @@ var_dump( array_udiff_assoc($arr1, $arr2) );
 
 -- Testing array_udiff_assoc() function with more than expected no. of arguments --
 
-Warning: array_udiff_assoc() expects parameter 4 to be a valid callback, no array or string given in %sarray_udiff_assoc_error.php on line %d
-NULL
-
--- Testing array_udiff_assoc() function with less than expected no. of arguments --
-
-Warning: array_udiff_assoc(): at least 3 parameters are required, 2 given in %sarray_udiff_assoc_error.php on line %d
+Warning: array_udiff_assoc() expects parameter 4 to be callable, 10 given in %sarray_udiff_assoc_error.php on line %d
 NULL
 ===DONE===
