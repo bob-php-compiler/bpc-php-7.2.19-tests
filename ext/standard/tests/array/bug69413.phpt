@@ -3,7 +3,7 @@ Bug #69413: Warning in array_count_values() about array values not being string/
 --FILE--
 <?php
 
-$array = ['a', 'b'];
+$array = array('a', 'b');
 $ref =& $array[0];
 
 var_dump(array_count_values($array));
