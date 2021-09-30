@@ -19,7 +19,7 @@ class classWithoutToString
 }
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -34,6 +34,6 @@ var_dump( array_diff_uassoc($array1, $array2, $value) );
 ===DONE===
 --EXPECTF--
 *** Testing array_diff_uassoc() : usage variation ***
-Error: 2 - array_diff_uassoc() expects parameter 3 to be a valid callback, no array or string given, %s(%d)
+Error: 2 - array_diff_uassoc() expects parameter 3 to be callable, Object without __toString() given, %s(%d)
 NULL
 ===DONE===
