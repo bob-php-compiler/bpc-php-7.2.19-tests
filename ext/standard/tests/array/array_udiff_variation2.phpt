@@ -1,5 +1,7 @@
 --TEST--
 Test array_udiff() function : usage variation
+--ARGS--
+--bpc-include-file ext/standard/tests/array/compare_function.inc
 --FILE--
 <?php
 /* Prototype  : array array_udiff(array arr1, array arr2 [, array ...], callback data_comp_func)
