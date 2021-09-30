@@ -15,7 +15,7 @@ $array2 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
 $array3 = array(1, 2, 3, 4, 5);
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
         if (error_reporting() != 0) {
                 // report non-silenced errors
                 echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -37,8 +37,8 @@ var_dump( array_diff_ukey($array1, $array2, $array3, $value) );
 ===DONE===
 --EXPECTF--
 *** Testing array_diff_ukey() : usage variation ***
-Error: 2 - array_diff_ukey() expects parameter 3 to be a valid callback, no array or string given, %s(%d)
+Error: 2 - array_diff_ukey() expects parameter 3 to be callable, Object without __toString() given, %s(%d)
 NULL
-Error: 2 - array_diff_ukey() expects parameter 4 to be a valid callback, no array or string given, %s(%d)
+Error: 2 - array_diff_ukey() expects parameter 4 to be callable, Object without __toString() given, %s(%d)
 NULL
 ===DONE===
