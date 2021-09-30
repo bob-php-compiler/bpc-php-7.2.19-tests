@@ -16,7 +16,7 @@ class Test {
     }
 }
 
-$arr = [new Test("foobar")];
+$arr = array(new Test("foobar"));
 var_dump(array_column($arr, "prop"));
 
 ?>
