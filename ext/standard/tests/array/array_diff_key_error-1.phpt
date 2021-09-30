@@ -9,16 +9,13 @@ Test array_diff_key() function : error conditions
 
 echo "*** Testing array_diff_key() : error conditions ***\n";
 
-// Initialise the variables
-$array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
-
-// Testing array_diff_key with one less than the expected number of arguments
-echo "\n-- Testing array_diff_key() function with less than expected no. of arguments --\n";
-var_dump( array_diff_key($array1) );
+// Testing array_diff_key with no arguments
+echo "\n-- Testing array_diff_key() function with no arguments --\n";
+var_dump( array_diff_key() );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_diff_key(): 2 required, 1 provided in %s on line %d
+Error: Too few arguments to function array_diff_key(): 2 required, 0 provided in %s on line %d
  -- compile-error
