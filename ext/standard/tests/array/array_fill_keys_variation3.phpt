@@ -13,7 +13,7 @@ Test array_fill_keys() function : variation of parameter
 echo "*** Testing array_fill_keys() : parameter variations ***\n";
 
 $simpleStr = "simple";
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 $bool = false;
 $float = 2.4;
 $array = array("one", "two");

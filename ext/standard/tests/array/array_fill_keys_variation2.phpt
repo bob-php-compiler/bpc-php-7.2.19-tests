@@ -15,7 +15,7 @@ echo "*** Testing array_fill_keys() : parameter variations ***\n";
 $nullVal = null;
 $simpleStr = "simple";
 $refString = &$simpleStr;
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 $emptyArr = array();
 $bool = false;
 $float = 2.4;
