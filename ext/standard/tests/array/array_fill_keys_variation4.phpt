@@ -12,7 +12,7 @@ Test array_fill_keys() function : variation of parameter
 
 echo "*** Testing array_fill_keys() : parameter variations ***\n";
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 $bool = false;
 $float = 2.4;
 $array = array("one");
@@ -82,8 +82,6 @@ array(1) {
 }
 
 -- Testing array_fill_keys() function with unset var --
-
-Notice: Undefined variable: unset_var in %sarray_fill_keys_variation4.php on line %d
 array(1) {
   ["one"]=>
   NULL
