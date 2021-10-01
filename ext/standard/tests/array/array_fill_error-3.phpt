@@ -10,12 +10,15 @@ Test array_fill() function : error conditions
 
 echo "*** Testing array_fill() : error conditions ***\n";
 
-// Zero arguments
-echo "-- Testing array_fill() function with Zero arguments --\n";
-var_dump( array_fill() );
+//calling array_fill with negative values for 'num' parameter
+$num = -1;
+var_dump( array_fill($start_key,$num,$val) );
 
+echo "Done";
 ?>
 --EXPECTF--
-*** ERROR:compile-error:
-Error: Too few arguments to function array_fill(): 3 required, 0 provided in %s on line %d
- -- compile-error
+*** Testing array_fill() : error conditions ***
+
+Warning: array_fill(): Number of elements can't be negative in %s on line %d
+bool(false)
+Done
