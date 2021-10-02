@@ -61,6 +61,22 @@ echo "Done"
 --EXPECTF--
 *** Testing array_filter() : usage variation - different 'callback' functions***
 -- Callback function without parameter and with return --
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
+
+Warning: Too many arguments to function callback1(): 0 at most, 1 provided in %s on line 26
 array(8) {
   [0]=>
   int(0)
@@ -83,6 +99,22 @@ array(8) {
 array(0) {
 }
 -- Callback function without parameter and return --
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
+
+Warning: Too many arguments to function callback3(): 0 at most, 1 provided in %s on line 41
 array(0) {
 }
 -- Callback function with parameter and return --
