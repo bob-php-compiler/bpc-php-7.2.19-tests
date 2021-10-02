@@ -74,7 +74,7 @@ array(3) {
   NULL
 }
 *** Testing array_filter() : usage variations - 'callback' expecting second argument ***
-Exception: Too few arguments to function dump(), 1 passed and exactly 2 expected
+Exception: Too few arguments to function dump(): 2 required, 1 provided
 *** Testing array_filter() with various use types ***
 array(2) {
   [1]=>
@@ -89,13 +89,17 @@ array(2) {
   int(2)
 }
 
-Warning: is_numeric() expects exactly 1 parameter, 2 given in %s on line 48
+Warning: Too many arguments to function is_numeric(): 1 at most, 2 provided in %s on line 48
 
-Warning: is_numeric() expects exactly 1 parameter, 2 given in %s on line 48
+Warning: Too many arguments to function is_numeric(): 1 at most, 2 provided in %s on line 48
 
-Warning: is_numeric() expects exactly 1 parameter, 2 given in %s on line 48
+Warning: Too many arguments to function is_numeric(): 1 at most, 2 provided in %s on line 48
 
-Warning: is_numeric() expects exactly 1 parameter, 2 given in %s on line 48
-array(0) {
+Warning: Too many arguments to function is_numeric(): 1 at most, 2 provided in %s on line 48
+array(2) {
+  ["a"]=>
+  int(1)
+  ["b"]=>
+  int(2)
 }
 Done
