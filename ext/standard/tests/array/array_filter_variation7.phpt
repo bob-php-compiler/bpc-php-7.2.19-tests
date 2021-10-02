@@ -21,7 +21,7 @@ var_dump( array_filter($input, function($input) { return ($input > 1); }) );
 
 // anonymous callback function with reference
 echo "Anonymous callback function with reference parameter\n";
-var_dump( array_filter($input, function(&$input) { return ($input < 1); }) );
+var_dump( array_filter($input, function($input) { return ($input < 1); }) );
 
 // anonymous callback function with null argument
 echo "Anonymous callback funciton with null argument\n";
@@ -56,6 +56,22 @@ array(4) {
   NULL
 }
 Anonymous callback funciton with null argument
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line 25
 array(8) {
   [0]=>
   int(0)
