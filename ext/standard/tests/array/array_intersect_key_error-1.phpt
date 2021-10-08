@@ -9,16 +9,13 @@ Test array_intersect_key() function : error conditions
 
 echo "*** Testing array_intersect_key() : error conditions ***\n";
 
-//Initialise function arguments
-$array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
-
 // Testing array_intersect_key with one less than the expected number of arguments
-echo "\n-- Testing array_intersect_key() function with less than expected no. of arguments --\n";
-var_dump( array_intersect_key($array1) );
+echo "\n-- Testing array_intersect_key() function with no arguments --\n";
+var_dump( array_intersect_key() );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_intersect_key(): 2 required, 1 provided in %s on line %d
+Error: Too few arguments to function array_intersect_key(): 2 required, 0 provided in %s on line %d
  -- compile-error
