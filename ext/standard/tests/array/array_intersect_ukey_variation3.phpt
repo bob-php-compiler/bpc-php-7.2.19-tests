@@ -19,7 +19,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 //resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // define some classes
 class classWithToString
@@ -98,193 +98,193 @@ fclose($fp);
 
 --int 0--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 0 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 0 given in %s on line %d
 NULL
 
 --int 1--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 1 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 1 given in %s on line %d
 NULL
 
 --int 12345--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 12345 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 12345 given in %s on line %d
 NULL
 
 --int -12345--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, -12345 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, -12345 given in %s on line %d
 NULL
 
 --float 10.5--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 10.5 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 10.5 given in %s on line %d
 NULL
 
 --float -10.5--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, -10.5 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, -10.5 given in %s on line %d
 NULL
 
 --float 12.3456789000e10--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 123456789000 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 123456789000 given in %s on line %d
 NULL
 
 --float -12.3456789000e10--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, -123456789000 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, -123456789000 given in %s on line %d
 NULL
 
 --float .5--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 0.5 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 0.5 given in %s on line %d
 NULL
 
 --empty array--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, Array given in %s on line %d
 NULL
 
 --int indexed array--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, Array given in %s on line %d
 NULL
 
 --associative array--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, first array member is not a valid class name or object in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, first array member is not a valid class name or object in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, Array given in %s on line %d
 NULL
 
 --nested arrays--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, Array given in %s on line %d
 NULL
 
 --uppercase NULL--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable,  given in %s on line %d
 NULL
 
 --lowercase null--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable,  given in %s on line %d
 NULL
 
 --lowercase true--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 1 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 1 given in %s on line %d
 NULL
 
 --lowercase false--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable,  given in %s on line %d
 NULL
 
 --uppercase TRUE--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, 1 given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, 1 given in %s on line %d
 NULL
 
 --uppercase FALSE--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable,  given in %s on line %d
 NULL
 
 --instance of classWithToString--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, Class A object given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, Class A object given in %s on line %d
 NULL
 
 --instance of classWithoutToString--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, Object without __toString() given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, Object without __toString() given in %s on line %d
 NULL
 
 --undefined var--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable,  given in %s on line %d
 NULL
 
 --unset var--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable,  given in %s on line %d
 NULL
 
 --resource var--
 
-Warning: array_intersect_ukey() expects parameter 3 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 3 to be callable, Resource id #%d given in %s on line %d
 NULL
 
-Warning: array_intersect_ukey() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_ukey() expects parameter 4 to be callable, Resource id #%d given in %s on line %d
 NULL
 ===DONE===
