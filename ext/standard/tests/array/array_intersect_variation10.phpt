@@ -15,7 +15,7 @@ Test array_intersect() function : usage variations - binary safe checking
 echo "*** Testing array_intersect() : binary safe checking ***\n";
 
 // array with binary values
-$arr_binary = array(b"hello", b"world");
+$arr_binary = array("hello", "world");
 // simple array
 $arr_normal = array("hello", "world");
 
