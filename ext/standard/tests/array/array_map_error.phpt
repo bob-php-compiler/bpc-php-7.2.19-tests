@@ -9,21 +9,6 @@ Test array_map() function : error conditions
 
 echo "*** Testing array_map() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing array_map() function with Zero arguments --\n";
-var_dump( array_map() );
-
-// Testing array_map with one less than the expected number of arguments
-echo "\n-- Testing array_map() function with one less than expected no. of arguments --\n";
-function callback1() {
-  return 1;
-}
-try {
-	var_dump( array_map('callback1') );
-} catch (Throwable $e) {
-	echo "Exception: " . $e->getMessage() . "\n";
-}
-
 echo "\n-- Testing array_map() function with less no. of arrays than callback function arguments --\n";
 $arr1 = array(1, 2);
 function callback2($p, $q) {
@@ -45,20 +30,14 @@ echo "Done";
 --EXPECTF--
 *** Testing array_map() : error conditions ***
 
--- Testing array_map() function with Zero arguments --
-
-Warning: array_map() expects at least 2 parameters, 0 given in %s on line %d%d
-NULL
-
--- Testing array_map() function with one less than expected no. of arguments --
-
-Warning: array_map() expects at least 2 parameters, 1 given in %s on line %d%d
-NULL
-
 -- Testing array_map() function with less no. of arrays than callback function arguments --
-Exception: Too few arguments to function callback2(), 1 passed and exactly 2 expected
+Exception: Too few arguments to function callback2(): 2 required, 1 provided
 
 -- Testing array_map() function with more no. of arrays than callback function arguments --
+
+Warning: Too many arguments to function callback2(): 2 at most, 3 provided in %s on line %d
+
+Warning: Too many arguments to function callback2(): 2 at most, 3 provided in %s on line %d
 array(2) {
   [0]=>
   int(3)
