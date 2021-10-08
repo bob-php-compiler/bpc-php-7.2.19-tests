@@ -9,4 +9,4 @@ var_dump(in_array('foo', array_keys($GLOBALS)));
 
 ?>
 --EXPECT--
-bool(false)
+bool(true)

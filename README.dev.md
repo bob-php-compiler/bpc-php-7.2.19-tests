@@ -482,6 +482,7 @@
 2. No Undefined variable
 
     bpc init all variables to NULL, so No Undefined variable
+    `unset($var)` set `$var` to `NULL`
 
 3. SKIP GC_FLAGS
 
