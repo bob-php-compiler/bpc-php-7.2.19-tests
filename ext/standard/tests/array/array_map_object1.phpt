@@ -127,7 +127,9 @@ test(array('InterClass', 'square'), array(1, 2));
 -- simple class with public variable and method --
 SimpleClass::square
 
-Deprecated: array_map() expects parameter 1 to be a valid callback, non-static method SimpleClass::square() should not be called statically in %sarray_map_object1.php on line %d
+Deprecated: Non-static method SimpleClass::square() should not be called statically in %sarray_map_object1.php on line %d
+
+Deprecated: Non-static method SimpleClass::square() should not be called statically in %sarray_map_object1.php on line %d
 array(2) {
   [0]=>
   int(1)
@@ -138,26 +140,28 @@ array(2) {
 -- simple class with private variable and method --
 SimpleClassPri::add
 
-Warning: array_map() expects parameter 1 to be a valid callback, cannot access private method SimpleClassPri::add() in %sarray_map_object1.php on line %d
+Warning: array_map() expects parameter 1 to be callable, SimpleClassPri::add given in %sarray_map_object1.php on line %d
 NULL
 
 -- simple class with protected variable and method --
 SimpleClassPro::mul
 
-Warning: array_map() expects parameter 1 to be a valid callback, cannot access protected method SimpleClassPro::mul() in %sarray_map_object1.php on line %d
+Warning: array_map() expects parameter 1 to be callable, SimpleClassPro::mul given in %sarray_map_object1.php on line %d
 NULL
 
 -- class without members --
 EmptyClass
 
-Warning: array_map() expects parameter 1 to be a valid callback, array must have exactly two members in %sarray_map_object1.php on line %d
+Warning: array_map() expects parameter 1 to be callable, Array given in %sarray_map_object1.php on line %d
 NULL
 
 -- abstract class --
 ChildClass::emptyFunction
 
-Deprecated: array_map() expects parameter 1 to be a valid callback, non-static method ChildClass::emptyFunction() should not be called statically in %sarray_map_object1.php on line %d
+Deprecated: Non-static method ChildClass::emptyFunction() should not be called statically in %sarray_map_object1.php on line %d
 defined in child
+
+Deprecated: Non-static method ChildClass::emptyFunction() should not be called statically in %sarray_map_object1.php on line %d
 defined in child
 array(2) {
   [0]=>
@@ -169,8 +173,10 @@ array(2) {
 -- class with final method --
 FinalClass::finalMethod
 
-Deprecated: array_map() expects parameter 1 to be a valid callback, non-static method FinalClass::finalMethod() should not be called statically in %sarray_map_object1.php on line %d
+Deprecated: Non-static method FinalClass::finalMethod() should not be called statically in %sarray_map_object1.php on line 28
 This function can't be overloaded
+
+Deprecated: Non-static method FinalClass::finalMethod() should not be called statically in %sarray_map_object1.php on line 28
 This function can't be overloaded
 array(2) {
   [0]=>
@@ -189,11 +195,11 @@ array(2) {
 }
 StaticClass::cube
 
-Warning: array_map() expects parameter 1 to be a valid callback, cannot access private method StaticClass::cube() in %sarray_map_object1.php on line %d
+Warning: array_map() expects parameter 1 to be callable, StaticClass::cube given in %sarray_map_object1.php on line %d
 NULL
 StaticClass::retVal
 
-Warning: array_map() expects parameter 1 to be a valid callback, cannot access protected method StaticClass::retVal() in %sarray_map_object1.php on line %d
+Warning: array_map() expects parameter 1 to be callable, StaticClass::retVal given in %sarray_map_object1.php on line %d
 NULL
 -- class implementing an interface --
 InterClass::square
