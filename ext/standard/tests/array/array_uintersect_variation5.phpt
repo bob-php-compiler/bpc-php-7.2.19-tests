@@ -46,9 +46,13 @@ array(0) {
 }
 
 -- comparison function taking too many parameters --
-Exception: Too few arguments to function too_many_parameters(), 2 passed and exactly 3 expected
+Exception: Too few arguments to function too_many_parameters(): 3 required, 2 provided
 
 -- comparison function taking too few parameters --
+
+Warning: Too many arguments to function too_few_parameters(): 1 at most, 2 provided in %s on line %d
+
+Warning: Too many arguments to function too_few_parameters(): 1 at most, 2 provided in %s on line %d
 array(0) {
 }
 
