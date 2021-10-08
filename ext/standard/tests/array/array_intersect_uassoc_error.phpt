@@ -29,12 +29,8 @@ var_dump( array_intersect_uassoc($array1, $array2, 'key_compare_func',$extra_arg
 
 // Testing array_intersect_uassoc with one less than the expected number of arguments
 echo "\n-- Testing array_intersect_uassoc() function with less than expected no. of arguments --\n";
-var_dump( array_intersect_uassoc($array1, $array2) );
 var_dump( array_intersect_uassoc($array1, $array2, $array3) );
 
-// Testing array_intersect_uassoc with no arguments
-echo "\n-- Testing array_intersect_uassoc() function with no arguments --\n";
-var_dump( array_intersect_uassoc() );
 ?>
 ===DONE===
 --EXPECTF--
@@ -42,19 +38,11 @@ var_dump( array_intersect_uassoc() );
 
 -- Testing array_intersect_uassoc() function with more than expected no. of arguments --
 
-Warning: array_intersect_uassoc() expects parameter 4 to be a valid callback, no array or string given in %s on line %d
+Warning: array_intersect_uassoc() expects parameter 4 to be callable, 10 given in %s on line %d
 NULL
 
 -- Testing array_intersect_uassoc() function with less than expected no. of arguments --
 
-Warning: array_intersect_uassoc(): at least 3 parameters are required, 2 given in %s on line %d
-NULL
-
-Warning: array_intersect_uassoc() expects parameter 3 to be a valid callback, second array member is not a valid method in %s on line %d
-NULL
-
--- Testing array_intersect_uassoc() function with no arguments --
-
-Warning: array_intersect_uassoc(): at least 3 parameters are required, 0 given in %s on line %d
+Warning: array_intersect_uassoc() expects parameter 3 to be callable, Array given in %s on line %d
 NULL
 ===DONE===
