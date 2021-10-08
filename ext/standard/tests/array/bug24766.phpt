@@ -17,25 +17,25 @@ $i=$l[0];
 var_dump($b[$i]);
 ?>
 --EXPECTF--
-array(2) refcount(%d){
+array(2) {
   [1]=>
   int(18)
   [2]=>
   int(52)
 }
-array(2) refcount(%d){
+array(2) {
   [1]=>
   int(18)
   [2]=>
   int(52)
 }
-array(2) refcount(%d){
+array(2) {
   [0]=>
   int(1)
   [1]=>
   int(2)
 }
-array(2) refcount(%d){
+array(2) {
   [0]=>
   int(1)
   [1]=>
