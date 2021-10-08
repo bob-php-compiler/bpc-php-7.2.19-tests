@@ -106,146 +106,146 @@ foreach($inputs as $key =>$value) {
 
 --int 0--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 0 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --int 1--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 1 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --int 12345--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 12345 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --int -12345--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, -2345 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --float 10.5--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 10.5 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --float -10.5--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, -10.5 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --float 12.3456789000e10--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 123456789000 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --float -12.3456789000e10--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, -123456789000 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --float .5--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 0.5 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --empty array--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, array must have exactly two members in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, Array given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --int indexed array--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, array must have exactly two members in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, Array given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --associative array--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, first array member is not a valid class name or object in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, Array given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --nested arrays--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, array must have exactly two members in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, Array given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --uppercase NULL--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --lowercase null--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --lowercase true--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 1 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --lowercase false--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --uppercase TRUE--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, 1 given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --uppercase FALSE--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --empty string DQ--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, function '' not found or invalid function name in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --empty string SQ--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, function '' not found or invalid function name in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --string DQ--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, function 'string' not found or invalid function name in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, string given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --string SQ--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, function 'string' not found or invalid function name in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, string given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --mixed case string--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, function 'sTrInG' not found or invalid function name in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, sTrInG given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --heredoc--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, function 'hello world' not found or invalid function name in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, hello world given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --instance of classWithToString--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, Class A object given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --instance of classWithoutToString--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable, Object without __toString() given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --undefined var--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 
 --unset var--
 
-Warning: array_uintersect() expects parameter 3 to be a valid callback, no array or string given in %sarray_uintersect_variation3.php on line %d
+Warning: array_uintersect() expects parameter 3 to be callable,  given in %sarray_uintersect_variation3.php on line %d
 NULL
 ===DONE===
