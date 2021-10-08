@@ -27,7 +27,7 @@ class MyClass
 
 echo "\n-- Testing array_intersect_ukey() function using class with static method as callback --\n";
 var_dump( array_intersect_ukey($array1, $array2, array('MyClass','static_compare_func')) );
-var_dump( array_intersect_ukey($array1, $array2, 'MyClass::static_compare_func') );
+var_dump( array_intersect_ukey($array1, $array2, array('MyClass','static_compare_func')) );
 
 echo "\n-- Testing array_intersect_uassoc() function using class with regular method as callback --\n";
 $obj = new MyClass();
