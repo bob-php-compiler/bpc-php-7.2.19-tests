@@ -1,5 +1,7 @@
 --TEST--
 Test array_uintersect_uassoc() function : usage variation
+--ARGS--
+--bpc-include-file ext/standard/tests/array/compare_function.inc
 --FILE--
 <?php
 /* Prototype  : array array_uintersect_uassoc(array arr1, array arr2 [, array ...], callback data_compare_func, callback key_compare_func)

@@ -1,5 +1,7 @@
 --TEST--
 Test array_uintersect_assoc() function : basic functionality - testing with multiple array arguments
+--ARGS--
+--bpc-include-file ext/standard/tests/array/compare_function.inc
 --FILE--
 <?php
 /* Prototype  : array array_uintersect_assoc(array arr1, array arr2 [, array ...], callback data_compare_func)
