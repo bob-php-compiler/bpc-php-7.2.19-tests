@@ -4,7 +4,7 @@ Test array_keys() function (variation - 5)
 <?php
 
 echo "\n*** Testing array_keys() with resource type ***\n";
-$resource1 = fopen( __FILE__, "r");
+$resource1 = fopen( '/proc/self/comm', "r");
 $resource2 = opendir( "." );
 
 /* creating an array with resource types as elements */
