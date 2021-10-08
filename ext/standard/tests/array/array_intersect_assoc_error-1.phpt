@@ -10,12 +10,13 @@ Test array_intersect_assoc() function : error conditions(Bug#43197)
 
 echo "*** Testing array_intersect_assoc() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing array_intersect_assoc() function with Zero arguments --\n";
-var_dump( array_intersect_assoc() );
+// Testing array_intersect_assoc with one less than the expected number of arguments
+echo "\n-- Testing array_intersect_assoc() function with less than expected no. of arguments --\n";
+$arr1 = array(1, 2);
+var_dump( array_intersect_assoc($arr1) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_intersect_assoc(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function array_intersect_assoc(): 2 required, 1 provided in %s on line %d
  -- compile-error
