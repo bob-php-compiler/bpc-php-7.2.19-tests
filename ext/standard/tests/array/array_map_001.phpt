@@ -5,7 +5,7 @@ array_map() and exceptions in the callback
 
 $a = array(1,2,3);
 
-function foo() {
+function foo($arg1, $arg2) {
 	throw new exception(1);
 }
 
