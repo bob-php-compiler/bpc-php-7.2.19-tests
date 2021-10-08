@@ -26,7 +26,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 //resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // define some classes
 class classWithToString
