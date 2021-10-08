@@ -14,15 +14,13 @@ Test array_key_exists() function : error conditions - Pass incorrect number of a
 
 echo "*** Testing array_key_exists() : error conditions ***\n";
 
-//Test array_key_exists with one more than the expected number of arguments
-echo "\n-- Testing array_key_exists() function with more than expected no. of arguments --\n";
+// Testing array_key_exists with one less than the expected number of arguments
+echo "\n-- Testing array_key_exists() function with less than expected no. of arguments --\n";
 $key = 1;
-$search = array(1, 2);
-$extra_arg = 10;
-var_dump( array_key_exists($key, $search, $extra_arg) );
+var_dump( array_key_exists($key) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function array_key_exists(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function array_key_exists(): 2 required, 1 provided in %s on line %d
  -- compile-error
