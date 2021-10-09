@@ -20,7 +20,11 @@ echo "-- with built-in function 'pow' and two parameters --\n";
 var_dump( array_map('pow', $array1, $array2));
 
 echo "-- with built-in function 'pow' and one parameter --\n";
-var_dump( array_map('pow', $array1));
+try {
+    var_dump( array_map('pow', $array1));
+} catch (ArgumentCountError $e) {
+    echo "Error: Too few arguments to function pow(): 2 required, 1 provided\n";
+}
 
 echo "-- with language construct --\n";
 var_dump( array_map('echo', $array1));
@@ -39,22 +43,9 @@ array(3) {
   int(243)
 }
 -- with built-in function 'pow' and one parameter --
-
-Warning: pow() expects exactly 2 parameters, 1 given in %s on line %d
-
-Warning: pow() expects exactly 2 parameters, 1 given in %s on line %d
-
-Warning: pow() expects exactly 2 parameters, 1 given in %s on line %d
-array(3) {
-  [0]=>
-  NULL
-  [1]=>
-  NULL
-  [2]=>
-  NULL
-}
+Error: Too few arguments to function pow(): 2 required, 1 provided
 -- with language construct --
 
-Warning: array_map() expects parameter 1 to be a valid callback, function 'echo' not found or invalid function name in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, echo given in %s on line %d
 NULL
 Done
