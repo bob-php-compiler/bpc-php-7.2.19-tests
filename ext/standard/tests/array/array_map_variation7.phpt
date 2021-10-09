@@ -102,6 +102,12 @@ array(3) {
     NULL
   }
 }
+
+Warning: Too many arguments to function callback(): 2 at most, 3 provided in %s on line %d
+
+Warning: Too many arguments to function callback(): 2 at most, 3 provided in %s on line %d
+
+Warning: Too many arguments to function callback(): 2 at most, 3 provided in %s on line %d
 array(3) {
   [0]=>
   array(1) {
