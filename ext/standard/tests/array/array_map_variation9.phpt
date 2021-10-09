@@ -23,14 +23,14 @@ function callback2($a, $b)
 }
 
 // array with binary data
-$arr1 = array(b"hello", b"world", "1", b"22.22");
+$arr1 = array("hello", "world", "1", "22.22");
 
 echo "-- checking binary safe array with one parameter callback function --\n";
 var_dump( array_map('callback1', $arr1) );
 
 echo "-- checking binary safe array with two parameter callback function --\n";
 try {
-	var_dump( array_map(b"callback2", $arr1) );
+	var_dump( array_map("callback2", $arr1) );
 } catch (Throwable $e) {
 	echo "Exception: " . $e->getMessage() . "\n";
 }
@@ -51,5 +51,5 @@ array(4) {
   string(5) "22.22"
 }
 -- checking binary safe array with two parameter callback function --
-Exception: Too few arguments to function callback2(), 1 passed and exactly 2 expected
+Exception: Too few arguments to function callback2(): 2 required, 1 provided
 Done
