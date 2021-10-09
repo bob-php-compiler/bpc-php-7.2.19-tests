@@ -24,7 +24,7 @@ class classA
 }
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $input argument
 $unexpected_callbacks = array(
@@ -77,82 +77,82 @@ echo "Done";
 *** Testing array_map() : unexpected values for 'callback' argument ***
 
 -- Iteration 1 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 0 given in %s on line %d
 NULL
 
 -- Iteration 2 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 1 given in %s on line %d
 NULL
 
 -- Iteration 3 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 12345 given in %s on line %d
 NULL
 
 -- Iteration 4 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, -2345 given in %s on line %d
 NULL
 
 -- Iteration 5 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 10.5 given in %s on line %d
 NULL
 
 -- Iteration 6 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, -10.5 given in %s on line %d
 NULL
 
 -- Iteration 7 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 123456789000 given in %s on line %d
 NULL
 
 -- Iteration 8 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 1.23456789E-9 given in %s on line %d
 NULL
 
 -- Iteration 9 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 0.5 given in %s on line %d
 NULL
 
 -- Iteration 10 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 1 given in %s on line %d
 NULL
 
 -- Iteration 11 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable,  given in %s on line %d
 NULL
 
 -- Iteration 12 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, 1 given in %s on line %d
 NULL
 
 -- Iteration 13 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable,  given in %s on line %d
 NULL
 
 -- Iteration 14 --
-Warning: array_map() expects parameter 1 to be a valid callback, function '' not found or invalid function name in %s on line %d
+Warning: array_map() expects parameter 1 to be callable,  given in %s on line %d
 NULL
 
 -- Iteration 15 --
-Warning: array_map() expects parameter 1 to be a valid callback, function '' not found or invalid function name in %s on line %d
+Warning: array_map() expects parameter 1 to be callable,  given in %s on line %d
 NULL
 
 -- Iteration 16 --
-Warning: array_map() expects parameter 1 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, Array given in %s on line %d
 NULL
 
 -- Iteration 17 --
-Warning: array_map() expects parameter 1 to be a valid callback, first array member is not a valid class name or object in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, Array given in %s on line %d
 NULL
 
 -- Iteration 18 --
-Warning: array_map() expects parameter 1 to be a valid callback, first array member is not a valid class name or object in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, Array given in %s on line %d
 NULL
 
 -- Iteration 19 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, Class A object given in %s on line %d
 NULL
 
 -- Iteration 20 --
-Warning: array_map() expects parameter 1 to be a valid callback, no array or string given in %s on line %d
+Warning: array_map() expects parameter 1 to be callable, Resource id #%d given in %s on line %d
 NULL
 Done
