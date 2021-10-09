@@ -270,6 +270,13 @@
 
     compile error
 
+**array**
+
+1. array copy/separate different
+
+    php add gc refcount first, separate on write
+    bpc copy first, separate on write
+
 **FILE and LINE**
 
 1. FILE and LINE
