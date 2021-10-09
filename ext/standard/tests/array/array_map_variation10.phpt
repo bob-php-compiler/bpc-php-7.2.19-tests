@@ -64,8 +64,14 @@ array(3) {
   }
 }
 -- anonymous function with two parameters and passing one array --
-Exception: Too few arguments to function {closure}(), 1 passed and exactly 2 expected
+Exception: Too few arguments to function {closure}(): 2 required, 1 provided
 -- anonymous function with NULL parameter --
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line %d
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line %d
+
+Warning: Too many arguments to function {closure}(): 0 at most, 1 provided in %s on line %d
 array(3) {
   [0]=>
   NULL
