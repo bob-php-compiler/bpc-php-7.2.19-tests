@@ -13,7 +13,7 @@ $arr = array("k1" => "v1","k2"=>"v2");
 $arr[]=&$arr["k1"];
 $arr[]=&$arr;
 function cb1 ($a) {var_dump ($a);return array ($a);};
-function cb2 (&$a) {var_dump ($a);return array (&$a);};
+function cb2 (&$a, $arg2) {var_dump ($a);return array (&$a);};
 var_dump( array_map("cb1", $arr));
 var_dump( array_map("cb2", $arr,$arr));
 var_dump( array_map(null,  $arr));
@@ -76,7 +76,16 @@ array(4) {
       [0]=>
       &string(2) "v1"
       [1]=>
-      *RECURSION*
+      &array(4) {
+        ["k1"]=>
+        &string(2) "v1"
+        ["k2"]=>
+        string(2) "v2"
+        [0]=>
+        &string(2) "v1"
+        [1]=>
+        *RECURSION*
+      }
     }
   }
 }
@@ -111,7 +120,7 @@ array(4) {
   [1]=>
   array(1) {
     [0]=>
-    string(2) "v2"
+    &string(2) "v2"
   }
   [2]=>
   array(1) {
