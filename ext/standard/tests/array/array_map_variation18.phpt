@@ -40,7 +40,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // different scalar/non-scalar values for array input
 $unexpected_inputs = array(
