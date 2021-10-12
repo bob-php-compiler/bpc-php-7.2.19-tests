@@ -13,14 +13,6 @@ var_dump ($array);
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: array_splice() expects at most 4 parameters, 10 given in %s on line %d
-NULL
-array(3) {
-  [0]=>
-  int(0)
-  [1]=>
-  int(1)
-  [2]=>
-  int(2)
-}
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function array_splice(): 4 at most, 10 provided in %s on line %d
+ -- compile-error
