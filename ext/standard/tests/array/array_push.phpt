@@ -33,9 +33,6 @@ $mixed_array = array(
 /* Error Conditions */
 echo "\n*** Testing Error Conditions ***\n";
 
-/* Zero argument  */
-var_dump( array_push() );
-
 /* Scalar argument */
 var_dump( array_push($number, 22) );
 
@@ -71,9 +68,6 @@ echo"\nDone";
 ?>
 --EXPECTF--
 *** Testing Error Conditions ***
-
-Warning: array_push() expects at least 2 parameters, 0 given in %s on line %d
-NULL
 
 Warning: array_push() expects parameter 1 to be array, integer given in %s on line %d
 NULL
