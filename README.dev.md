@@ -635,6 +635,8 @@
 
 5. fopen() TODO support use_include_path and context
 
+6. bpc not support array_splice($GLOBALS...)
+
 ## ext/date
 
 1. ini_set date.timezone warning message

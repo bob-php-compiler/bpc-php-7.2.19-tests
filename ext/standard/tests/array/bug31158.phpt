@@ -1,9 +1,10 @@
 --TEST--
 Bug #31158 (array_splice on $GLOBALS crashes)
 --INI--
-error_reporting = E_ALL
+error_reporting = 32767
 --FILE--
 <?php
+// E_ALL = 32767
 function __(){
   $GLOBALS['a'] = "bug\n";
   array_splice($GLOBALS,0,count($GLOBALS));
@@ -14,5 +15,6 @@ __();
 echo "ok\n";
 ?>
 --EXPECTF--
-Notice: Undefined variable: GLOBALS in %sbug31158.php on line 6
+Warning: bpc not support array_splice($GLOBALS...) in %s on line %d
+bug
 ok
