@@ -1,5 +1,7 @@
 --TEST--
 Bug #69371 (Hash table collision leads to inaccessible array keys)
+--SKIPIF--
+skip TODO array_multisort
 --FILE--
 <?php
 $array = array(

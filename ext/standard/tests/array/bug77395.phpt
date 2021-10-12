@@ -1,5 +1,7 @@
 --TEST--
 Bug #77395 (segfault about array_multisort)
+--SKIPIF--
+skip TODO array_multisort
 --FILE--
 <?php
 function error_handle($level, $message, $file = '', $line = 0){
@@ -10,7 +12,7 @@ function error_handle($level, $message, $file = '', $line = 0){
 }
 set_error_handler('error_handle');
 $data = [['aa'=> 'bb',], ['aa'=> 'bb',],];
-array_multisort(array_column($data, 'bb'),SORT_DESC, $data); // PHP Warning error 
+array_multisort(array_column($data, 'bb'),SORT_DESC, $data); // PHP Warning error
 ?>
 --EXPECT--
 array_multisort(): Array sizes are inconsistent

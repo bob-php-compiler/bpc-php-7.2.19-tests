@@ -1,5 +1,7 @@
 --TEST--
 Bug #25359 (array_multisort() does not work in a function if array is global or reference)
+--SKIPIF--
+skip TODO array_multisort
 --FILE--
 <?php
 

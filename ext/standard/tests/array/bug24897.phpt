@@ -1,5 +1,7 @@
 --TEST--
 Bug #24897 (inconsistent behaviour or shuffle() & array_multisort())
+--SKIPIF--
+skip TODO array_multisort
 --FILE--
 <?php
 $a = array(1 => 2);
