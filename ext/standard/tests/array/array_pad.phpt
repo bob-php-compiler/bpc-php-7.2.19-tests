@@ -3,9 +3,6 @@ array_pad() tests
 --FILE--
 <?php
 
-var_dump(array_pad());
-var_dump(array_pad(array()));
-var_dump(array_pad(array(), 1));
 var_dump(array_pad(array(), 1, 0));
 
 var_dump(array_pad(array(), 0, 0));
@@ -21,14 +18,6 @@ var_dump(array_pad("", 2000000, 0));
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: array_pad() expects exactly 3 parameters, 0 given in %s on line %d
-NULL
-
-Warning: array_pad() expects exactly 3 parameters, 1 given in %s on line %d
-NULL
-
-Warning: array_pad() expects exactly 3 parameters, 2 given in %s on line %d
-NULL
 array(1) {
   [0]=>
   int(0)
