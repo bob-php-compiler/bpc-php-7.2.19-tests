@@ -637,6 +637,8 @@
 
 6. bpc not support array_splice($GLOBALS...)
 
+7. warning "Cannot add element to the array as the next element is already occupied" without function name
+
 ## ext/date
 
 1. ini_set date.timezone warning message

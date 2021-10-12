@@ -24,7 +24,7 @@ echo "Done";
 --EXPECTF--
 *** Testing array_push() : error conditions ***
 
-Warning: array_push(): Cannot add element to the array as the next element is already occupied in %s on line %d
+Warning: Cannot add element to the array as the next element is already occupied in %s on line %d
 bool(false)
 array(1) {
   [%d]=>
