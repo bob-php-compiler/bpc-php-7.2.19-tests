@@ -21,10 +21,6 @@ var_dump( array_push($stack) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing array_push() : error conditions ***
-
--- Testing array_push() function with less than expected no. of arguments --
-
-Warning: array_push() expects at least 2 parameters, 1 given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function array_push(): 2 required, 1 provided in %s on line %d
+ -- compile-error
