@@ -9,12 +9,16 @@ Test array_pad() function : error conditions
 
 echo "*** Testing array_pad() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing array_pad() function with Zero arguments --\n";
-var_dump( array_pad() );
+//Test array_pad with one more than the expected number of arguments
+echo "\n-- Testing array_pad() function with more than expected no. of arguments --\n";
+$input = array(1, 2);
+$pad_size = 10;
+$pad_value = 1;
+$extra_arg = 10;
+var_dump( array_pad($input, $pad_size, $pad_value, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_pad(): 3 required, 0 provided in %s on line %d
+Error: Too many arguments to function array_pad(): 3 at most, 4 provided in %s on line %d
  -- compile-error
