@@ -21,10 +21,6 @@ var_dump( array_merge() );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing array_merge() : error conditions ***
-
--- Testing array_merge() function with less than expected no. of arguments --
-
-Warning: array_merge() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function array_merge(): 1 required, 0 provided in %s on line %d
+ -- compile-error
