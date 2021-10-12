@@ -35,7 +35,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // arrays of different data types to be passed as $input
 $inputs = array(
