@@ -3,11 +3,6 @@ Test array_pop() function (errors)
 --FILE--
 <?php
 
-$empty_array = array();
-$number = 5;
-$str = "abc";
-
-
 /* Various combinations of arrays to be used for the test */
 $mixed_array = array(
   array(),
@@ -25,28 +20,11 @@ $mixed_array = array(
           5.4 => 54, 5.7 => 57, "5.4" => 554, "5.7" => 557 )
 );
 
-/* Testing Error Conditions */
-echo "\n*** Testing Error Conditions ***\n";
+/* Invalid Number of arguments */
+var_dump( array_pop($mixed_array[1],$mixed_array[2]) );
 
-/* Scalar argument */
-var_dump( array_pop($number) );
-
-/* String argument */
-var_dump( array_pop($str) );
-
-/* Empty Array as argument */
-var_dump( array_pop($empty_array) );
-
-echo"\nDone";
 ?>
 --EXPECTF--
-*** Testing Error Conditions ***
-
-Warning: array_pop() expects parameter 1 to be array, integer given in %s on line %d
-NULL
-
-Warning: array_pop() expects parameter 1 to be array, string given in %s on line %d
-NULL
-NULL
-
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function array_pop(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
