@@ -20,7 +20,7 @@ test_splice (2.1);
 
 test_splice (true);
 //file type resource
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 test_splice ($file_handle);
 echo "Done\n";
