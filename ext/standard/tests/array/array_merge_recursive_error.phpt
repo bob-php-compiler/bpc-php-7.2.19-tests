@@ -16,10 +16,6 @@ var_dump( array_merge_recursive() );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing array_merge_recursive() : error conditions ***
-
--- Testing array_merge_recursive() function with Zero arguments --
-
-Warning: array_merge_recursive() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function array_merge_recursive(): 1 required, 0 provided in %s on line %d
+ -- compile-error
