@@ -5,7 +5,7 @@ array_sum() on array with references
 
 $n = "10";
 $n .= "0";
-$nums = [&$n, 100];
+$nums = array(&$n, 100);
 var_dump(array_sum($nums));
 var_dump($n);
 
