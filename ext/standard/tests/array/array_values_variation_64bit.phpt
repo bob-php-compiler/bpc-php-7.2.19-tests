@@ -10,7 +10,7 @@ precision=14
 <?php
 
 echo "\n*** Testing array_values() with resource type ***\n";
-$resource1 = fopen(__FILE__, "r");  // Creating a file resource
+$resource1 = fopen('/proc/self/comm', "r");  // Creating a file resource
 $resource2 = opendir(".");  // Creating a dir resource
 
 /* creating an array with resources as elements */
