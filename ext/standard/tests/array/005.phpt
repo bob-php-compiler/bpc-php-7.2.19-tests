@@ -33,17 +33,11 @@ $mixed_array = array(
 /* Testing Error Conditions */
 echo "\n*** Testing Error Conditions ***\n";
 
-/* Zero argument  */
-var_dump( array_shift() );
-
 /* Scalar argument */
 var_dump( array_shift($number) );
 
 /* String argument */
 var_dump( array_shift($str) );
-
-/* Invalid Number of arguments */
-var_dump( array_shift($mixed_array[1],$mixed_array[2]) );
 
 /* Empty Array as argument */
 var_dump( array_shift($empty_array) );
@@ -82,18 +76,15 @@ var_dump( current($mixed_array[1]) );
 echo"Done";
 ?>
 --EXPECTF--
-*** Testing Error Conditions ***
 
-Warning: array_shift() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
+Warning: bpc not support array_shift($GLOBALS) in %s on line %d
+
+*** Testing Error Conditions ***
 
 Warning: array_shift() expects parameter 1 to be array, integer given in %s on line %d
 NULL
 
 Warning: array_shift() expects parameter 1 to be array, string given in %s on line %d
-NULL
-
-Warning: array_shift() expects exactly 1 parameter, 2 given in %s on line %d
 NULL
 NULL
 

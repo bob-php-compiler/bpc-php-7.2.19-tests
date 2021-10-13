@@ -639,6 +639,8 @@
 
 7. warning "Cannot add element to the array as the next element is already occupied" without function name
 
+8. bpc not support array_pop/shift($GLOBALS)
+
 ## ext/date
 
 1. ini_set date.timezone warning message
