@@ -11,10 +11,10 @@ Test array_search() function : usage variations - haystack as resource/multi dim
 /* checking for Resources */
 echo "*** Testing resource type with array_search() ***\n";
 //file type resource
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 //directory type resource
-$dir_handle = opendir( dirname(__FILE__) );
+$dir_handle = opendir( '.' );
 
 //store resources in array for comparison.
 $resources = array($file_handle, $dir_handle);
