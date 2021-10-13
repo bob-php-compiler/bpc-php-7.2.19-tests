@@ -9,12 +9,14 @@ Test array_reverse() function : error conditions
 
 echo "*** Testing array_reverse() : error conditions ***\n";
 
-// zero arguments
-echo "\n-- Testing array_reverse() function with Zero arguments --\n";
-var_dump( array_reverse() );
+// more than the expected number of arguments
+echo "\n-- Testing array_diff() function with more than expected no. of arguments --\n";
+$array = array(1, 2, 3, 4, 5, 6);
+$extra_arg = 10;
+var_dump( array_reverse($array, false, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_reverse(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function array_reverse(): 2 at most, 3 provided in %s on line %d
  -- compile-error
