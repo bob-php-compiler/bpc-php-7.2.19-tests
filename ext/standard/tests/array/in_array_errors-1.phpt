@@ -10,20 +10,11 @@ Test in_array() function : error conditions
 */
 
 echo "\n*** Testing error conditions of in_array() ***\n";
+/* zero argument */
+var_dump( in_array() );
 
-/* unexpected second argument in in_array() */
-$var="test";
-var_dump( in_array("test", $var) );
-var_dump( in_array(1, 123) );
-
-echo "Done\n";
 ?>
 --EXPECTF--
-*** Testing error conditions of in_array() ***
-
-Warning: in_array() expects parameter 2 to be array, string given in %s on line %d
-NULL
-
-Warning: in_array() expects parameter 2 to be array, integer given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function in_array(): 2 required, 0 provided in %s on line %d
+ -- compile-error
