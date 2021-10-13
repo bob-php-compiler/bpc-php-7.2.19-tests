@@ -19,7 +19,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 //get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 //get a class
 class classA{
@@ -85,11 +85,11 @@ echo "Done";
 
 Warning: Illegal offset type in %s on line %d
 
-Warning: Illegal offset type in %s on line %d
+Notice: Resource ID#%d used as offset, casting to integer (%d) in %s on line %d
 
 Warning: Illegal offset type in %s on line %d
 
-Warning: Illegal offset type in %s on line %d
+Notice: Resource ID#%d used as offset, casting to integer (%d) in %s on line %d
 -- Iteration 1 --
 - default argument -
 array(0) {
@@ -314,23 +314,29 @@ array(2) {
 }
 -- Iteration 10 --
 - default argument -
-array(1) {
+array(2) {
+  [0]=>
+  string(8) "resource"
   [""]=>
   string(5) "hello"
 }
 - $preserve keys = true -
-array(1) {
+array(2) {
+  [%d]=>
+  string(8) "resource"
   [""]=>
   string(5) "hello"
 }
 - $preserve_keys = false -
-array(1) {
+array(2) {
+  [0]=>
+  string(8) "resource"
   [""]=>
   string(5) "hello"
 }
 -- Iteration 11 --
 - default argument -
-array(6) {
+array(7) {
   ["Hello world"]=>
   string(7) "heredoc"
   [""]=>
@@ -339,13 +345,15 @@ array(6) {
   string(5) "float"
   [1]=>
   string(3) "int"
+  [2]=>
+  string(8) "resource"
   ["fruit"]=>
   float(2.2)
   ["hello"]=>
   int(1)
 }
 - $preserve keys = true -
-array(6) {
+array(7) {
   ["Hello world"]=>
   string(7) "heredoc"
   [""]=>
@@ -354,13 +362,15 @@ array(6) {
   string(5) "float"
   [133]=>
   string(3) "int"
+  [%d]=>
+  string(8) "resource"
   ["fruit"]=>
   float(2.2)
   ["hello"]=>
   int(1)
 }
 - $preserve_keys = false -
-array(6) {
+array(7) {
   ["Hello world"]=>
   string(7) "heredoc"
   [""]=>
@@ -369,6 +379,8 @@ array(6) {
   string(5) "float"
   [1]=>
   string(3) "int"
+  [2]=>
+  string(8) "resource"
   ["fruit"]=>
   float(2.2)
   ["hello"]=>
