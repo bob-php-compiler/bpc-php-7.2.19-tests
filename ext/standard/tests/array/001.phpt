@@ -1,5 +1,7 @@
 --TEST--
 Test array_merge and array_walk
+--ARGS--
+--bpc-include-file ext/standard/tests/array/data.inc
 --INI--
 precision=14
 --FILE--
