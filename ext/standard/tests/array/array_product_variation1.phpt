@@ -13,7 +13,7 @@ echo "*** Testing array_product() : variation - using non numeric values ***\n";
 class A {
   static function help() { echo "hello\n"; }
 }
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 $types = array("boolean (true)" => true, "boolean (false)" => false,
        "string" => "hello", "numeric string" =>  "12",
