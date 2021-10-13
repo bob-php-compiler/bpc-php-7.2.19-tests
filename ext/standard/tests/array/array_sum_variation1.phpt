@@ -64,7 +64,7 @@ $input_values = array(
 /*20*/   new MyClass(),
 
          // resource data
-/*21*/   $fp = fopen(__FILE__,'r'),
+/*21*/   $fp = fopen('/proc/self/comm','r'),
 
          // undefined data
 /*22*/   @$undefined_var,
