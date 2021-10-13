@@ -37,8 +37,10 @@ try {
 *** Testing array_reduce() : variation ***
 
 --- Testing with a callback with too few parameters ---
+
+Warning: Too many arguments to function oneArg(): 1 at most, 2 provided in %s on line %d
 int(2)
 
 --- Testing with a callback with too many parameters ---
-Exception: Too few arguments to function threeArgs(), 2 passed and exactly 3 expected
+Exception: Too few arguments to function threeArgs(): 3 required, 2 provided
 ===DONE===
