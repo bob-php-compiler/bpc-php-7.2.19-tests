@@ -23,7 +23,9 @@ echo array_pop($c), "\n";
 var_dump($c);
 
 ?>
---EXPECT--
+--EXPECTF--
+
+Warning: bpc not support array_pop($GLOBALS) in %s on line %d
 fubar
 array(3) {
   [0]=>
