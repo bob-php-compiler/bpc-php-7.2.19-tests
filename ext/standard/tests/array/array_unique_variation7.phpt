@@ -14,7 +14,7 @@ Test array_unique() function : usage variations - binary safe checking
 echo "*** Testing array_unique() : array with binary data for \$input argument ***\n";
 
 // array with binary values
-$input = array( b"1", b"hello", "world", "str1" => "hello", "str2" => "world");
+$input = array( "1", "hello", "world", "str1" => "hello", "str2" => "world");
 
 var_dump( array_unique($input) );
 
