@@ -3,7 +3,6 @@ array_walk() tests
 --FILE--
 <?php
 
-var_dump(array_walk());
 $var = 1;
 var_dump(array_walk($var,1));
 $var = array();
@@ -31,13 +30,11 @@ try {
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: array_walk() expects at least 2 parameters, 0 given in %s on line %d
-NULL
 
 Warning: array_walk() expects parameter 1 to be array, integer given in %s on line %d
 NULL
 
-Warning: array_walk() expects parameter 2 to be a valid callback, function '' not found or invalid function name in %s on line %d
+Warning: array_walk() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 int(1)
 int(0)
