@@ -18,20 +18,14 @@ Test array_shift() function : usage variations - maintaining referenced elements
 
 echo "*** Testing array_shift() : usage variations ***\n";
 
-// solution: referencing the first element first:
-echo "\n-- Reference first element before array_shift: --\n";
+// using only array_shift:
+echo "\n-- Reference result of array_shift: --\n";
 $a = 1;
 $array = array(&$a);
-$b =& $array[0];
-array_shift($array);
+$b =& array_shift($array);
 $b = 2;
 echo "a = $a, b = $b\n";
 
-echo "Done";
 ?>
 --EXPECTF--
-*** Testing array_shift() : usage variations ***
-
--- Reference first element before array_shift: --
-a = 2, b = 2
-Done
+Parse error: Only variables should be assigned by reference in %s on line %d
