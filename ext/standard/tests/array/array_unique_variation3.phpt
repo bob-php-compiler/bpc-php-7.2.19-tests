@@ -19,7 +19,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // get a class
 class classA
@@ -70,7 +70,7 @@ echo "Done";
 
 Warning: Illegal offset type in %s on line %d
 
-Warning: Illegal offset type in %s on line %d
+Notice: Resource ID#%d used as offset, casting to integer (%d) in %s on line %d
 -- Iteration 1 --
 array(1) {
   [0]=>
@@ -125,10 +125,12 @@ array(2) {
   string(6) "string"
 }
 -- Iteration 8 --
-array(2) {
+array(3) {
   [""]=>
   string(5) "hello"
-  [0]=>
+  [%d]=>
+  string(8) "resource"
+  [%d]=>
   int(11)
 }
 Done
