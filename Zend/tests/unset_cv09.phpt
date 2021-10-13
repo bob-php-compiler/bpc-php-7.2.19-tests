@@ -8,6 +8,7 @@ var_dump($x);
 echo "ok\n";
 ?>
 --EXPECTF--
-ok
-NULL
+Warning: bpc not support array_pop($GLOBALS) in %s on line %d
+string(3) "ok
+"
 ok
