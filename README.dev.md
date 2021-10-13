@@ -641,6 +641,8 @@
 
 8. bpc not support array_pop/shift($GLOBALS)
 
+9. bpc not support array_unique($GLOBALS...)
+
 ## ext/date
 
 1. ini_set date.timezone warning message
