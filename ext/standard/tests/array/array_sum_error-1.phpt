@@ -9,12 +9,14 @@ Test array_sum() function : error conditions
 
 echo "*** Testing array_sum() : error conditions ***\n";
 
-// Zero arguments
-echo "-- Testing array_sum() function with zero arguments --\n";
-var_dump( array_sum() );
+// One more than the expected number of arguments
+echo "-- Testing array_sum() function with more than expected no. of arguments --\n";
+$input = array(1, 2, 3, 4);
+$extra_arg = 10;
+var_dump( array_sum($input, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function array_sum(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function array_sum(): 1 at most, 2 provided in %s on line %d
  -- compile-error
