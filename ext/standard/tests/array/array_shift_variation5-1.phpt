@@ -15,18 +15,14 @@ Test array_shift() function : usage variations - call recursively
 
 echo "*** Testing array_shift() : usage variations ***\n";
 
-$stack = array (array( array('zero', 'one', 'two'), 'un', 'deux'), 'eins', 'zwei');
-// correct way of doing above:
-echo "\n-- Correct Method: --\n";
-$result1 = array_shift($stack);
-$result2 = array_shift($result1);
-var_dump(array_shift($result2));
+$stack = array ( array ( array ('zero', 'one', 'two'), 'un', 'deux'), 'eins', 'zwei');
 
-echo "Done";
+// not following strict standards
+echo "\n-- Incorrect Method: --\n";
+var_dump(array_shift(array_shift(array_shift($stack))));
+
 ?>
 --EXPECTF--
-*** Testing array_shift() : usage variations ***
-
--- Correct Method: --
-string(4) "zero"
-Done
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %s on line %d
+ -- compile-error
