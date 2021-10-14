@@ -40,7 +40,7 @@ var_dump(array_walk($arr, 'test3', $user_data));
 var_dump($arr, $user_data);
 
 ?>
---EXPECTF--
+--EXPECT--
 v=A, k=a, arg=1
 v=B, k=b, arg=2
 v=C, k=c, arg=3
