@@ -35,7 +35,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 // get resource variable
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('/proc/self/comm', 'r');
 
 // different scalar/nonscalar values to be used in place of an 'input' argument
 $input_values = array(
