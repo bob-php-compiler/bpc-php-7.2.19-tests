@@ -29,9 +29,6 @@ var_dump( array_walk($input, function($value, $key) { var_dump($key); var_dump($
 echo "-- Anonymous function with three arguments --\n";
 var_dump( array_walk($input, function($value, $key, $user_data) { var_dump($key); var_dump($value); var_dump($user_data); echo "\n"; }, 10));
 
-echo "-- Anonymous function with one more argument --\n";
-var_dump( array_walk($input, function($value, $key, $user_data) { var_dump($key); var_dump($value); var_dump($user_data); echo "\n"; }, 20, 30));
-
 echo "-- Anonymous function with null argument --\n";
 var_dump( array_walk( $input, function() { echo "1\n"; }));
 echo "Done"
@@ -39,12 +36,20 @@ echo "Done"
 --EXPECTF--
 *** Testing array_walk() : anonymous function as callback ***
 -- Anonymous function with one argument --
+
+Warning: Too many arguments to function {closure}(): 1 at most, 2 provided in %s on line %d
 int(2)
 
+
+Warning: Too many arguments to function {closure}(): 1 at most, 2 provided in %s on line %d
 int(5)
 
+
+Warning: Too many arguments to function {closure}(): 1 at most, 2 provided in %s on line %d
 int(10)
 
+
+Warning: Too many arguments to function {closure}(): 1 at most, 2 provided in %s on line %d
 int(0)
 
 bool(true)
@@ -80,14 +85,18 @@ int(0)
 int(10)
 
 bool(true)
--- Anonymous function with one more argument --
-
-Warning: array_walk() expects at most 3 parameters, 4 given in %s on line %d
-NULL
 -- Anonymous function with null argument --
+
+Warning: Too many arguments to function {closure}(): 0 at most, 2 provided in %s on line %d
 1
+
+Warning: Too many arguments to function {closure}(): 0 at most, 2 provided in %s on line %d
 1
+
+Warning: Too many arguments to function {closure}(): 0 at most, 2 provided in %s on line %d
 1
+
+Warning: Too many arguments to function {closure}(): 0 at most, 2 provided in %s on line %d
 1
 bool(true)
 Done
