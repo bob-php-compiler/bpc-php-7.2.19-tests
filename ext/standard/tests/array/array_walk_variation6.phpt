@@ -70,7 +70,7 @@ echo "-- Associative array with string keys --\n";
 var_dump( array_walk($input, "for_string"));
 
 // binary keys
-$input = array( b"a" => "Apple", b"b" => "Banana");
+$input = array( "a" => "Apple", "b" => "Banana");
 echo "-- Associative array with binary keys --\n";
 var_dump( array_walk($input, "for_string"));
 
