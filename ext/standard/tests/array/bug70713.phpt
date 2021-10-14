@@ -19,8 +19,9 @@ class obj
 }
 
 $arr = array('string' => new obj);
-array_walk_recursive($arr, 'settype');
-
+var_dump(array_walk_recursive($arr, 'settype'));
+var_dump($arr);
 ?>
 --EXPECTF--
-Warning: array_walk_recursive(): Iterated value is no longer an array or object in %s on line %d
+bool(true)
+int(1)
