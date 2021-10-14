@@ -45,23 +45,12 @@ try {
 	echo "Exception: " . $e->getMessage() . "\n";
 }
 
-echo "-- Testing array_walk() function with too many callback parameters --\n";
-try {
-	var_dump( array_walk($input, "callback1", 20, 10) );
-} catch (Throwable $e) {
-	echo "Exception: " . $e->getMessage() . "\n";
-}
-
 echo "Done";
 ?>
 --EXPECTF--
 *** Testing array_walk() : error conditions - callback parameters ***
-Exception: Too few arguments to function callback1(), 2 passed and exactly 3 expected
-Exception: Too few arguments to function callback2(), 3 passed and exactly 4 expected
-Exception: Too few arguments to function callback1(), 2 passed and exactly 3 expected
-Exception: Too few arguments to function callback2(), 3 passed and exactly 4 expected
--- Testing array_walk() function with too many callback parameters --
-
-Warning: array_walk() expects at most 3 parameters, 4 given in %s on line %d
-NULL
+Exception: Too few arguments to function callback1(): 3 required, 2 provided
+Exception: Too few arguments to function callback2(): 4 required, 3 provided
+Exception: Too few arguments to function callback1(): 3 required, 2 provided
+Exception: Too few arguments to function callback2(): 4 required, 3 provided
 Done
