@@ -648,6 +648,12 @@
     unset array elements in callback function different with php
     bpc still walk all elements, include unset elements
     php walk only left elements
+    @see ext/standard/tests/array/bug61730.phpt
+
+    change array itself in callback function different with php
+    bpc continue walk the old array
+    php walk the new array
+    @see ext/standard/tests/array/bug69068.phpt
 
 ## ext/date
 
