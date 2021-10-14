@@ -643,6 +643,12 @@
 
 9. bpc not support array_unique($GLOBALS...)
 
+10. array_walk/array_walk_recursive
+
+    unset array elements in callback function different with php
+    bpc still walk all elements, include unset elements
+    php walk only left elements
+
 ## ext/date
 
 1. ini_set date.timezone warning message
