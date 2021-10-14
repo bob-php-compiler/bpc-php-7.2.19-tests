@@ -2,11 +2,11 @@
 Test array_walk_recursive()
 --FILE--
 <?php
-function foo($value) {
+function foo($value, $key) {
 	echo $value . " foo\n";
 }
 
-function bar($value) {
+function bar($value, $key) {
 	echo $value . " bar\n";
 }
 
