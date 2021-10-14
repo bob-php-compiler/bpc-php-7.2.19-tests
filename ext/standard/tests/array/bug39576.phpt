@@ -17,8 +17,9 @@ $test->_columns['name'] = new stdClass;
 
 function test ($value, $column, &$columns) {}
 
+$vars = get_object_vars ($test);
 array_walk (
-	get_object_vars ($test),
+	$vars,
 	'test',
 	$test->_columns
 );
@@ -33,7 +34,6 @@ array_intersect_key (
 echo "Done\n";
 ?>
 --EXPECTF--
-Notice: Only variables should be passed by reference in %s on line %d
 object(Test)#%d (4) {
   ["_table"]=>
   string(0) ""
