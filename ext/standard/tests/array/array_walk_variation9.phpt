@@ -67,31 +67,55 @@ string(6) "Orange"
 
 bool(true)
 -- callback function with only one parameter --
+
+Warning: Too many arguments to function callback_one_parameter(): 1 at most, 2 provided in %s on line %d
 string(5) "Apple"
 
+
+Warning: Too many arguments to function callback_one_parameter(): 1 at most, 2 provided in %s on line %d
 string(6) "Banana"
 
+
+Warning: Too many arguments to function callback_one_parameter(): 1 at most, 2 provided in %s on line %d
 string(5) "Mango"
 
+
+Warning: Too many arguments to function callback_one_parameter(): 1 at most, 2 provided in %s on line %d
 string(6) "Orange"
 
 bool(true)
 -- callback function without parameters --
+
+Warning: Too many arguments to function callback_no_parameter(): 0 at most, 2 provided in %s on line %d
 callback3() called
+
+Warning: Too many arguments to function callback_no_parameter(): 0 at most, 2 provided in %s on line %d
 callback3() called
+
+Warning: Too many arguments to function callback_no_parameter(): 0 at most, 2 provided in %s on line %d
 callback3() called
+
+Warning: Too many arguments to function callback_no_parameter(): 0 at most, 2 provided in %s on line %d
 callback3() called
 bool(true)
 -- passing one more parameter to function with two parameters --
+
+Warning: Too many arguments to function callback_two_parameter(): 2 at most, 3 provided in %s on line %d
 int(0)
 string(5) "Apple"
 
+
+Warning: Too many arguments to function callback_two_parameter(): 2 at most, 3 provided in %s on line %d
 int(1)
 string(6) "Banana"
 
+
+Warning: Too many arguments to function callback_two_parameter(): 2 at most, 3 provided in %s on line %d
 int(2)
 string(5) "Mango"
 
+
+Warning: Too many arguments to function callback_two_parameter(): 2 at most, 3 provided in %s on line %d
 int(3)
 string(6) "Orange"
 
