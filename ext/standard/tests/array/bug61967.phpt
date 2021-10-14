@@ -11,13 +11,34 @@ $arr = array(
 );
 
 array_walk_recursive($arr,
-    function (&$value, $key) use(&$arr) {
+    function ($value, $key) {
+        global $arr;
         var_dump($key);
         unset($arr[$key]);
     }
 );
 ?>
 --EXPECT--
+int(0)
+int(1)
+int(2)
+int(3)
+int(4)
+int(0)
+int(1)
+int(2)
+int(3)
+int(4)
+int(0)
+int(1)
+int(2)
+int(3)
+int(4)
+int(0)
+int(1)
+int(2)
+int(3)
+int(4)
 int(0)
 int(1)
 int(2)
