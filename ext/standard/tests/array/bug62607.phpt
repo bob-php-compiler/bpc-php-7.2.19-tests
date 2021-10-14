@@ -4,7 +4,7 @@ Bug #62607: array_walk_recursive move internal pointer
 <?php
 $arr = array('a'=>'b');
 echo 'Before -> '.current($arr).PHP_EOL;
-array_walk_recursive($arr, function(&$val){});
+array_walk_recursive($arr, function($val, $k){});
 echo 'After -> '.current($arr);
 ?>
 --EXPECT--
