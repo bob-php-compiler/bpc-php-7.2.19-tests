@@ -70,7 +70,7 @@ $funcname_values = array(
          new MyClass(),
 
          // resource data
-/* 23*/  $fp = fopen(__FILE__, 'r'),
+/* 23*/  $fp = fopen('/proc/self/comm', 'r'),
 
          // undefined data
          @$undefined_var,
@@ -92,177 +92,177 @@ echo "Done"
 *** Testing array_walk_recursive() : unexpected values for 'funcname' argument ***
 -- Iteration 1 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 0 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 0 given in %s on line %d
 NULL
 -- Iteration 2 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1 given in %s on line %d
 NULL
 -- Iteration 3 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 12345 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 12345 given in %s on line %d
 NULL
 -- Iteration 4 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, -2345 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, -2345 given in %s on line %d
 NULL
 -- Iteration 5 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 10.5 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 10.5 given in %s on line %d
 NULL
 -- Iteration 6 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, -10.5 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, -10.5 given in %s on line %d
 NULL
 -- Iteration 7 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1012345670 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1012345670 given in %s on line %d
 NULL
 -- Iteration 8 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1.07654321E-7 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1.07654321E-7 given in %s on line %d
 NULL
 -- Iteration 9 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 0.5 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 0.5 given in %s on line %d
 NULL
 -- Iteration 10 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 -- Iteration 11 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 -- Iteration 12 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, array must have exactly two members in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 -- Iteration 13 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, first array member is not a valid class name or object in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, first array member is not a valid class name or object in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Array given in %s on line %d
 NULL
 -- Iteration 14 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 -- Iteration 15 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 -- Iteration 16 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1 given in %s on line %d
 NULL
 -- Iteration 17 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 -- Iteration 18 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1 given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, 1 given in %s on line %d
 NULL
 -- Iteration 19 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 -- Iteration 20 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, function '' not found or invalid function name in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, function '' not found or invalid function name in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 -- Iteration 21 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, function '' not found or invalid function name in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, function '' not found or invalid function name in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 -- Iteration 22 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, object given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, object given in %s on line %d
 NULL
 -- Iteration 23 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Resource id #%d given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable, Resource id #%d given in %s on line %d
 NULL
 -- Iteration 24 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 -- Iteration 25 --
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 
-Warning: array_walk_recursive() expects parameter 2 to be a valid callback, no array or string given in %s on line %d
+Warning: array_walk_recursive() expects parameter 2 to be callable,  given in %s on line %d
 NULL
 Done
