@@ -3,16 +3,16 @@ Bug #72622 (array_walk + array_replace_recursive create references from nothing)
 --FILE--
 <?php
 
-function walk (array $arr) {
-	array_walk($arr, function (&$val, $name) {
+function test(&$val, $name) {}
 
-	});
+function walk (array $arr) {
+	array_walk($arr, 'test');
 
 	return $arr;
 }
 
-$arr3 = ['foo' => 'foo'];
-$arr4 = walk(['foo' => 'bar']);
+$arr3 = array('foo' => 'foo');
+$arr4 = walk(array('foo' => 'bar'));
 $arr5 = array_replace_recursive($arr3, $arr4);
 $arr5['foo'] = 'baz';
 
