@@ -22,10 +22,6 @@ var_dump( compact() );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing compact() : error conditions ***
-
--- Testing compact() function with Zero arguments --
-
-Warning: compact() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function compact(): 1 required, 0 provided in %s on line %d
+ -- compile-error
