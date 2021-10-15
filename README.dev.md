@@ -132,6 +132,10 @@
 
 20. get_defined_functions() return encrypted function names
 
+21. function alias preferred original name
+
+    eg. count/sizeof: warning message start with count() not sizeof()
+
 **object**
 
 1. __destruct

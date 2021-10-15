@@ -15,7 +15,7 @@ echo "--- Testing sizeof() with different values for 'mode' argument ---\n";
 $array1 = array(1, 2, 3, 4, array(1.0, 2.0, array()), array() );
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 //unset variable
 $unset_var = 10;
@@ -105,28 +105,28 @@ int(6)
 int(6)
 -- Iteration 16 --
 
-Warning: sizeof() expects parameter 2 to be integer, string given in %s on line %d
+Warning: count() expects parameter 2 to be integer, string given in %s on line %d
 NULL
 -- Iteration 17 --
 
-Warning: sizeof() expects parameter 2 to be integer, string given in %s on line %d
+Warning: count() expects parameter 2 to be integer, string given in %s on line %d
 NULL
 -- Iteration 18 --
 
-Warning: sizeof() expects parameter 2 to be integer, string given in %s on line %d
+Warning: count() expects parameter 2 to be integer, string given in %s on line %d
 NULL
 -- Iteration 19 --
 
-Warning: sizeof() expects parameter 2 to be integer, string given in %s on line %d
+Warning: count() expects parameter 2 to be integer, string given in %s on line %d
 NULL
 -- Iteration 20 --
 int(6)
 -- Iteration 21 --
 
-Warning: sizeof() expects parameter 2 to be integer, object given in %s on line %d
+Warning: count() expects parameter 2 to be integer, object given in %s on line %d
 NULL
 -- Iteration 22 --
 
-Warning: sizeof() expects parameter 2 to be integer, resource given in %s on line %d
+Warning: count() expects parameter 2 to be integer, resource given in %s on line %d
 NULL
 Done
