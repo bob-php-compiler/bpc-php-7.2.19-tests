@@ -69,10 +69,10 @@ array(5) {
 }
 -- Testing uasort() with language construct as 'cmp_function' --
 
-Warning: uasort() expects parameter 2 to be a valid callback, function 'echo' not found or invalid function name in %s on line %d
+Warning: uasort() expects parameter 2 to be callable, echo given in %s on line %d
 NULL
 -- Testing uasort() with language construct as 'cmp_function' --
 
-Warning: uasort() expects parameter 2 to be a valid callback, function 'exit' not found or invalid function name in %s on line %d
+Warning: uasort() expects parameter 2 to be callable, exit given in %s on line %d
 NULL
 Done
