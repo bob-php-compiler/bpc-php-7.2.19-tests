@@ -39,7 +39,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 // get resource variable
-$fp = fopen(__FILE__,'r');
+$fp = fopen('/proc/self/comm','r');
 
 //array of values to iterate over
 $input_values = array(
