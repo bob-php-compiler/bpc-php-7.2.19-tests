@@ -60,7 +60,7 @@ $array_arg = array(
 
   // binary key
   "a".chr(0)."b" => 45,
-  b"binary" => 30,
+  "binary" => 30,
 
   //heredoc keys
   $simple_heredoc => 75,
