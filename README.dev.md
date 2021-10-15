@@ -54,16 +54,16 @@
     
     @see Zend/tests/bug72101.phpt
     method argument is_ref? not checked
-    
-    @see php-functions.scm
-    call_user_func() pass args not in container, warning reported, same as php
-    array_*diff*() pass args not in container, warning reported, php no warning
 
 9. typehint argument default value cannot be php-constant
 
 10. argument default value evaled before function call
 
     @see Zend/tests/bug73163.phpt
+
+11. user callback arg preferred pass by value
+
+    if user callback arg is ref, warning "Parameter ~a to ~a() expected to be a reference, value given"
 
 **function**
 

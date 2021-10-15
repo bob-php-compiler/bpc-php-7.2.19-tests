@@ -16,4 +16,7 @@ var_dump($a);
 
 ?>
 --EXPECTF--
+Warning: Parameter 1 to array_compare() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to array_compare() expected to be a reference, value given in %s on line %d
 string(1) "B"
