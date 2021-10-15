@@ -6,5 +6,6 @@ ob_start("compact");
 ob_end_clean();
 ?>
 okey
---EXPECT--
+--EXPECTF--
+Warning: Cannot call compact() dynamically in %s on line %d
 okey
