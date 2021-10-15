@@ -26,7 +26,7 @@ echo "-- Anonymous 'cmp_function' with parameters passed by value --\n";
 var_dump( uasort($array_arg, $cmp_function) );
 var_dump($array_arg);
 
-$cmp_function = function(&$value1, &$value2) {
+$cmp_function = function($value1, $value2) {
     if ($value1 == $value2) { return 0; }
     else if ($value1 > $value2) { return 1; }
     else { return -1; }
