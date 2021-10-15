@@ -13,12 +13,15 @@ Test krsort() function : error conditions
 
 echo "*** Testing krsort() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing krsort() function with zero arguments --\n";
-var_dump( krsort() );
+//Test krsort with more than the expected number of arguments
+echo "\n-- Testing krsort() function with more than expected no. of arguments --\n";
+$array_arg = array(1 => 1, 2 => 2);
+$extra_arg = 10;
+
+var_dump( krsort($temp_array, SORT_NUMERIC, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function krsort(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function krsort(): 2 at most, 3 provided in %s on line %d
  -- compile-error

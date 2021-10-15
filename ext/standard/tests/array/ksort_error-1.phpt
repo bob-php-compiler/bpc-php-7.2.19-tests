@@ -13,12 +13,15 @@ Test ksort() function : error conditions
 
 echo "*** Testing ksort() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing ksort() function with Zero arguments --\n";
-var_dump( ksort() );
+//Test ksort with more than the expected number of arguments
+echo "\n-- Testing ksort() function with more than expected no. of arguments --\n";
+$array_arg = array(1 => 1, 2 => 2);
+$extra_arg = 10;
+
+var_dump( ksort($temp_array, SORT_STRING, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ksort(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ksort(): 2 at most, 3 provided in %s on line %d
  -- compile-error
