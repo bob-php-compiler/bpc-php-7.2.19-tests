@@ -99,126 +99,126 @@ foreach($inputs as $key =>$value) {
 
 --int 0--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 0 given in %suksort_variation2.php on line %d
 NULL
 
 --int 1--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 1 given in %suksort_variation2.php on line %d
 NULL
 
 --int 12345--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 12345 given in %suksort_variation2.php on line %d
 NULL
 
 --int -12345--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, -2345 given in %suksort_variation2.php on line %d
 NULL
 
 --float 10.5--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 10.5 given in %suksort_variation2.php on line %d
 NULL
 
 --float -10.5--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, -10.5 given in %suksort_variation2.php on line %d
 NULL
 
 --float 12.3456789000e10--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 123456789000 given in %suksort_variation2.php on line %d
 NULL
 
 --float -12.3456789000e10--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, -123456789000 given in %suksort_variation2.php on line %d
 NULL
 
 --float .5--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 0.5 given in %suksort_variation2.php on line %d
 NULL
 
 --empty array--
 
-Warning: uksort() expects parameter 2 to be a valid callback, array must have exactly two members in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, Array given in %suksort_variation2.php on line %d
 NULL
 
 --int indexed array--
 
-Warning: uksort() expects parameter 2 to be a valid callback, array must have exactly two members in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, Array given in %suksort_variation2.php on line %d
 NULL
 
 --associative array--
 
-Warning: uksort() expects parameter 2 to be a valid callback, first array member is not a valid class name or object in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, Array given in %suksort_variation2.php on line %d
 NULL
 
 --nested arrays--
 
-Warning: uksort() expects parameter 2 to be a valid callback, array must have exactly two members in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, Array given in %suksort_variation2.php on line %d
 NULL
 
 --uppercase NULL--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 
 --lowercase null--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 
 --lowercase true--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 1 given in %suksort_variation2.php on line %d
 NULL
 
 --lowercase false--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 
 --uppercase TRUE--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, 1 given in %suksort_variation2.php on line %d
 NULL
 
 --uppercase FALSE--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 
 --empty string DQ--
 
-Warning: uksort() expects parameter 2 to be a valid callback, function '' not found or invalid function name in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 
 --empty string SQ--
 
-Warning: uksort() expects parameter 2 to be a valid callback, function '' not found or invalid function name in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 
 --instance of classWithToString--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, Class A object given in %suksort_variation2.php on line %d
 NULL
 
 --instance of classWithoutToString--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable, Object without __toString() given in %suksort_variation2.php on line %d
 NULL
 
 --undefined var--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 
 --unset var--
 
-Warning: uksort() expects parameter 2 to be a valid callback, no array or string given in %suksort_variation2.php on line %d
+Warning: uksort() expects parameter 2 to be callable,  given in %suksort_variation2.php on line %d
 NULL
 ===DONE===
