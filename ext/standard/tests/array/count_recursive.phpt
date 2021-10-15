@@ -95,7 +95,7 @@ print "COUNT_NORMAL: should be 3, is ".count($obj)."\n";
 
 
 echo "\n-- Testing count() on resource type --\n";
-$resource1 = fopen( __FILE__, "r" );  // Creating file(stream type) resource
+$resource1 = fopen( '/proc/self/comm', "r" );  // Creating file(stream type) resource
 $resource2 = opendir( "." );  // Creating dir resource
 
 /* creating an array with resources as elements */
@@ -115,9 +115,6 @@ for( $i =0; $i < count( $mode_arr ); $i++) {
 
 
 echo "\n-- Testing error conditions --";
-var_dump( count() );  // No. of args = 0
-var_dump( count(array(), COUNT_NORMAL, 100) );  // No. of args > expected
-
 /* Testing Invalid type arguments */
 var_dump( count("string", ABCD) );
 var_dump( count(100, "string") );
@@ -233,12 +230,6 @@ For mode '' count is => int(3)
 For mode '' count is => int(3)
 
 -- Testing error conditions --
-Warning: count() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: count() expects at most 2 parameters, 3 given in %s on line %d
-NULL
-
 Warning: Use of undefined constant ABCD - assumed 'ABCD' (this will throw an Error in a future version of PHP) in %s on line %d
 
 Warning: count() expects parameter 2 to be integer, %s given in %s on line %d
