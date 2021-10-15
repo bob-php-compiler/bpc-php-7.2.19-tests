@@ -3,7 +3,7 @@ compact()
 --FILE--
 <?php
 
-$çity  = "San Francisco";
+$city  = "San Francisco";
 $state = "CA";
 $event = "SIGGRAPH";
 
