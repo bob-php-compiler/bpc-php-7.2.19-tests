@@ -17,18 +17,14 @@ echo "*** Testing usort() : error conditions ***\n";
 
 // Initialize 'array_arg'
 $array_arg = array(0 => 1, 1 => 10, 2 => 'string', 3 => 3, 4 => 2, 5 => 100, 6 => 25);
+$extra_arg = 10;
 
-// With non existent comparison function
-echo "\n-- Testing usort() function with non-existent compare function --\n";
-var_dump( usort($array_arg, 'non_existent') );
-
+// With non existent comparison function and extra argument
+echo "\n-- Testing usort() function with non-existent compare function and extra argument --\n";
+var_dump( usort($array_arg, 'non_existent', $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing usort() : error conditions ***
-
--- Testing usort() function with non-existent compare function --
-
-Warning: usort() expects parameter 2 to be callable, non_existent given in %s on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function usort(): 2 at most, 3 provided in %s on line %d
+ -- compile-error
