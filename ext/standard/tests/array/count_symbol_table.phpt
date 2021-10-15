@@ -18,5 +18,5 @@ $c1 = count($GLOBALS);
 var_dump($c1 - $c2);
 ?>
 --EXPECT--
-int(2)
-int(1)
+int(0)
+int(0)
