@@ -13,12 +13,15 @@ Test sort() function : error conditions
 
 echo "*** Testing sort() : error conditions ***\n";
 
-// zero arguments
-echo "\n-- Testing sort() function with Zero arguments --\n";
-var_dump( sort() );
+//Test sort with more than the expected number of arguments
+echo "\n-- Testing sort() function with more than expected no. of arguments --\n";
+$array_arg = array(1, 2);
+$extra_arg = 10;
+
+var_dump( sort($array_arg, SORT_REGULAR, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function sort(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function sort(): 2 at most, 3 provided in %s on line %d
  -- compile-error

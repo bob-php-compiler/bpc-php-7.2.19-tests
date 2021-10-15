@@ -13,12 +13,18 @@ Test rsort() function : error conditions - Pass incorrect number of args
 
 echo "*** Testing rsort() : error conditions ***\n";
 
-// zero arguments
-echo "\n-- Testing rsort() function with Zero arguments --\n";
-var_dump( rsort() );
+//Test rsort() with more than the expected number of arguments
+echo "\n-- Testing rsort() function with more than expected no. of arguments --\n";
+$array_arg = array(1, 2);
+$sort_flags = SORT_REGULAR;
+$extra_arg = 10;
+var_dump( rsort($array_arg, $sort_flags, $extra_arg) );
+
+// dump the input array to ensure that it wasn't changed
+var_dump($array_arg);
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function rsort(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function rsort(): 2 at most, 3 provided in %s on line %d
  -- compile-error
