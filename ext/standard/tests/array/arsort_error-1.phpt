@@ -13,12 +13,15 @@ Test arsort() function : error conditions
 
 echo "*** Testing arsort() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing arsort() function with Zero arguments --\n";
-var_dump( arsort() );
+//Test arsort with more than the expected number of arguments
+echo "\n-- Testing arsort() function with more than expected no. of arguments --\n";
+$array_arg = array(1, 2);
+$extra_arg = 10;
+
+var_dump( arsort($array_arg, SORT_REGULAR, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function arsort(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function arsort(): 2 at most, 3 provided in %s on line %d
  -- compile-error
