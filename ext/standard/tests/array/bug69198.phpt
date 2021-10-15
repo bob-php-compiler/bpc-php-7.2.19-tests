@@ -8,8 +8,10 @@ if (false) {
 $result = compact('willNeverBeDefined');
 var_dump($result, empty($result), $result === array(), empty($willNeverBeDefined));
 --EXPECT--
-array(0) {
+array(1) {
+  ["willNeverBeDefined"]=>
+  NULL
 }
-bool(true)
-bool(true)
+bool(false)
+bool(false)
 bool(true)
