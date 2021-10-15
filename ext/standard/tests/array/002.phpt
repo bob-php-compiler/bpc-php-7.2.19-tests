@@ -1,5 +1,7 @@
 --TEST--
 Test arsort, asort, krsort, ksort, rsort, and sort
+--ARGS--
+--bpc-include-file ext/standard/tests/array/data.inc \
 --INI--
 precision=14
 --FILE--

@@ -1,5 +1,7 @@
 --TEST--
 Test usort, uksort and uasort
+--ARGS--
+--bpc-include-file ext/standard/tests/array/data.inc \
 --INI--
 precision=14
 --FILE--
