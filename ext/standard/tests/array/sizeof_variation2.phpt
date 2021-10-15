@@ -12,7 +12,7 @@ Test sizeof() function : usage variations - different array values for 'var' arg
 echo "*** Testing sizeof() : usage variations ***\n";
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 echo "--- Testing sizeof() with different array values for 'var' argument ---\n";
 
