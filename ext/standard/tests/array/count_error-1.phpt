@@ -13,12 +13,15 @@ Test count() function : error conditions - pass incorrect number of args
 
 echo "*** Testing count() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing count() function with Zero arguments --\n";
-var_dump( count() );
+//Test count with one more than the expected number of arguments
+echo "\n-- Testing count() function with more than expected no. of arguments --\n";
+$var = 1;
+$mode = 10;
+$extra_arg = 10;
+var_dump( count($var, $mode, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function count(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function count(): 2 at most, 3 provided in %s on line %d
  -- compile-error

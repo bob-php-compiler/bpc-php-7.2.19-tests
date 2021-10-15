@@ -13,11 +13,13 @@ Test sizeof() function : error conditions
 
 echo "*** Testing sizeof() : error conditions ***\n";
 
-echo "-- Testing sizeof() with zero arguments --\n";
-var_dump( sizeof() );
+echo "-- Testing sizeof() function with more than two arguments under COUNT_NORMAL mode --\n";
+$var = 100;
+$extra_arg = 10;
+var_dump( sizeof($var, COUNT_NORMAL, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function sizeof(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function sizeof(): 2 at most, 3 provided in %s on line %d
  -- compile-error
