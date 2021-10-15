@@ -3,44 +3,47 @@ compact() with object context
 --FILE--
 <?php
 
-var_dump(
-    (new class {
-        function test(){
-            return compact('this');
-        }
-    })->test()
-);
+class A
+{
+    function test(){
+        return compact('this');
+    }
+}
 
-var_dump(
-    (new class {
-        function test(){
-            return compact([['this']]);
-        }
-    })->test()
-);
+var_dump((new A)->test());
 
-var_dump(
-    (new class {
-        function test(){
-            return (function(){ return compact('this'); })();
-        }
-    })->test()
-);
+class B
+{
+    function test(){
+        return compact(array(array('this')));
+    }
+}
+
+var_dump((new B)->test());
+
+class C
+{
+    function test(){
+        return (function(){ return compact('this'); })();
+    }
+}
+
+var_dump((new C)->test());
 
 ?>
---EXPECT--
+--EXPECTF--
 array(1) {
   ["this"]=>
-  object(class@anonymous)#1 (0) {
+  object(A)#%d (0) {
   }
 }
 array(1) {
   ["this"]=>
-  object(class@anonymous)#1 (0) {
+  object(B)#%d (0) {
   }
 }
 array(1) {
   ["this"]=>
-  object(class@anonymous)#1 (0) {
+  object(C)#%d (0) {
   }
 }
