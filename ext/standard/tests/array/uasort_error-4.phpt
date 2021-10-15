@@ -12,16 +12,12 @@ echo "*** Testing uasort() : error conditions ***\n";
 // Initialize 'array_arg'
 $array_arg = array(0 => 1, 1 => 10, 2 => 'string', 3 => 3, 4 => 2, 5 => 100, 6 => 25);
 
-// With non existent comparison function
-echo "-- Testing uasort() function with non-existent compare function --\n";
-var_dump( uasort($array_arg, 'non_existent') );
+// With non existent comparison function and extra argument
+echo "-- Testing uasort() function with non-existent compare function and extra argument --\n";
+var_dump( uasort($array_arg, 'non_existent', $extra_arg) );
 
-echo "Done"
 ?>
 --EXPECTF--
-*** Testing uasort() : error conditions ***
--- Testing uasort() function with non-existent compare function --
-
-Warning: uasort() expects parameter 2 to be callable, non_existent given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function uasort(): 2 at most, 3 provided in %s on line %d
+ -- compile-error
