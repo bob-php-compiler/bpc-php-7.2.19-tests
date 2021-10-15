@@ -8,12 +8,15 @@ Test strnatcmp() function : error conditions
 */
 echo "*** Testing strnatcmp() : error conditions ***\n";
 
-echo "-- Testing strnatcmp() function with Zero arguments --\n";
-var_dump( strnatcmp() );
+echo "\n\n-- Testing strnatcmp() function with more than expected no. of arguments --\n";
+$str1 = "abc1";
+$str2 = "ABC1";
+$extra_arg = 10;
+var_dump( strnatcmp( $str1, $str2, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strnatcmp(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function strnatcmp(): 2 at most, 3 provided in %s on line %d
  -- compile-error

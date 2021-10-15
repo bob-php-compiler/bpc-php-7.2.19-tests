@@ -8,12 +8,14 @@ Test strnatcasecmp() function : error conditions
 */
 echo "*** Testing strnatcasecmp() : error conditions ***\n";
 
-echo "-- Testing strnatcmp() function with Zero arguments --\n";
-var_dump( strnatcasecmp() );
-
+echo "\n\n-- Testing strnatcasecmp() function with more than expected no. of arguments --\n";
+$str1 = "abc1";
+$str2 = "ABC1";
+$extra_arg = 10;
+var_dump( strnatcasecmp( $str1, $str2, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strnatcasecmp(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function strnatcasecmp(): 2 at most, 3 provided in %s on line %d
  -- compile-error
