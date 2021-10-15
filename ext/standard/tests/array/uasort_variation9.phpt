@@ -49,6 +49,66 @@ echo "Done"
 --EXPECTF--
 *** Testing uasort() : 'cmp_function' with reference arguments ***
 -- Passing integer values to 'cmp_function' --
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
 bool(true)
 array(7) {
   [0]=>
@@ -67,6 +127,30 @@ array(7) {
   int(9)
 }
 -- Passing string values to 'cmp_function' --
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 1 to cmp() expected to be a reference, value given in %s on line %d
+
+Warning: Parameter 2 to cmp() expected to be a reference, value given in %s on line %d
 bool(true)
 array(4) {
   [1]=>
