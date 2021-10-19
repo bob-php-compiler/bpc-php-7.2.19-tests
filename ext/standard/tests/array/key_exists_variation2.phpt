@@ -47,7 +47,7 @@ var_dump(key_exists(0, $g));
 
 echo "stream resource\n";
 // stream resource has index = 0, netherless its position is the first
-$st = fopen('php://memory', '+r');
+$st = fopen('/proc/self/comm', 'r+');
 $h = array($st, 'foo' => 'baz');
 var_dump(key_exists(0, $h));
 
