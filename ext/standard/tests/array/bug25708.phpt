@@ -97,9 +97,9 @@ int(3)
 int(3)
 --
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(3)
 --
 int(1)
@@ -135,9 +135,9 @@ int(3)
 int(3)
 --
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(3)
 --
 int(1)
@@ -173,9 +173,9 @@ int(3)
 int(3)
 --
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(3)
 --
 int(1)
@@ -211,13 +211,13 @@ int(3)
 int(3)
 --
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(4)
-string(1) "x" refcount(%d)
+string(1) "x"
 int(3)
 --
 int(1)
 int(2)
 ----r
-string(2) "ok" refcount(%d)
-string(2) "ok" refcount(%d)
+string(2) "ok"
+string(2) "ok"
