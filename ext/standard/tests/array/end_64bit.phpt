@@ -96,10 +96,10 @@ var_dump($array_object);
 /* Checking on RESOURCE type */
 echo "\n*** Testing end() on resource type ***\n";
 //file type resource
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 //directory type resource
-$dir_handle = opendir( dirname(__FILE__) );
+$dir_handle = opendir( '.' );
 
 //store resources in array
 $resources = array($file_handle, $dir_handle);
@@ -107,9 +107,6 @@ var_dump( end($resources) );
 var_dump( current($resources) );
 
 echo "\n*** Testing error conditions ***\n";
-/* checking for unexpected number of arguments */
-var_dump( end() );
-var_dump( end($array[0], $array[0]) );
 
 /* checking for unexpected type of arguments */
 $var=1;
@@ -220,12 +217,6 @@ resource(%d) of type (stream)
 resource(%d) of type (stream)
 
 *** Testing error conditions ***
-
-Warning: end() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: end() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
 
 Warning: end() expects parameter 1 to be array, integer given in %s on line %d
 NULL
