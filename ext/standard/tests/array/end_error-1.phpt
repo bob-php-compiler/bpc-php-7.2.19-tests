@@ -13,13 +13,14 @@ Test end() function : error conditions - Pass incorrect number of args
 
 echo "*** Testing end() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing end() function with Zero arguments --\n";
-var_dump( end() );
-
+//Test end with one more than the expected number of arguments
+echo "\n-- Testing end() function with more than expected no. of arguments --\n";
+$array_arg = array(1, 2);
+$extra_arg = 10;
+var_dump( end($array_arg, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function end(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function end(): 1 at most, 2 provided in %s on line %d
  -- compile-error

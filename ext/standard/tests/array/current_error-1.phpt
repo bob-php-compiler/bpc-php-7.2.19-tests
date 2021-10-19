@@ -14,13 +14,14 @@ Test current() function : error conditions - Pass incorrect number of args
 
 echo "*** Testing current() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing current() function with Zero arguments --\n";
-var_dump( current() );
-
+//Test current with one more than the expected number of arguments
+echo "\n-- Testing current() function with more than expected no. of arguments --\n";
+$array_arg = array(1, 2);
+$extra_arg = 10;
+var_dump( current($array_arg, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function current(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function current(): 1 at most, 2 provided in %s on line %d
  -- compile-error
