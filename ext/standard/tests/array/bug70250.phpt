@@ -2,7 +2,7 @@
 Bug #70250 (extract() turns array elements to references)
 --FILE--
 <?php
-$array = ['key' => 'value'];
+$array = array('key' => 'value');
 
 $ref = &$array['key'];
 
@@ -17,5 +17,5 @@ var_dump($array);
 --EXPECT--
 array(1) {
   ["key"]=>
-  string(5) "value"
+  &string(5) "value"
 }
