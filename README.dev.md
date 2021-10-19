@@ -495,6 +495,7 @@
 
     bpc init all variables to NULL, so No Undefined variable
     `unset($var)` set `$var` to `NULL`
+    extract() collision different with php
 
 3. SKIP GC_FLAGS
 
