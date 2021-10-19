@@ -660,6 +660,8 @@
     php walk the new array
     @see ext/standard/tests/array/bug69068.phpt
 
+11. "Warning: range(): Invalid range supplied: start=~a end=~a" start/end may different
+
 ## ext/date
 
 1. ini_set date.timezone warning message

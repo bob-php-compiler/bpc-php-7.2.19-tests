@@ -6,5 +6,5 @@ range(pow(2.0, 100000000), pow(2.0, 100000000) + 1);
 ?>
 ===DONE===
 --EXPECTF--
-Warning: range(): Invalid range supplied: start=inf end=inf in %srange_bug70239_1.php on line %d
+Warning: range(): Invalid range supplied: start=+inf.0 end=+inf.0 in %srange_bug70239_1.php on line %d
 ===DONE===
