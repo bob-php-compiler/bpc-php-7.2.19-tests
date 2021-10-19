@@ -8,10 +8,11 @@ Francesco Fullone ff@ideato.it
 
 echo "*** Test by calling method or function with incorrect numbers of arguments ***\n";
 
-var_dump(key_exists());
+$a = array('bar' => 1);
+var_dump(key_exists('foo', $a, 'baz'));
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function key_exists(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function key_exists(): 2 at most, 3 provided in %s on line %d
  -- compile-error
