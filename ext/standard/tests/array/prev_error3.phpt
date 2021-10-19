@@ -15,4 +15,6 @@ prev - ensure we cannot pass a temporary
 var_dump(prev(array(1, 2)));
 ?>
 --EXPECTF--
-Fatal error: Only variables can be passed by reference in %s on line %d
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %s on line %d
+ -- compile-error
