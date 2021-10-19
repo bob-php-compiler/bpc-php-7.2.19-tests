@@ -12,8 +12,10 @@ $test = array(
 var_dump($test);
 var_dump(extract($test));
 var_dump($a);
-var_dump($æ);
-var_dump($æøåäö);
+$name = 'æ';
+var_dump($$name);
+$name = 'æøåäö';
+var_dump($$name);
 
 echo "Done.\n";
 ?>
@@ -26,8 +28,8 @@ array(3) {
   ["æøåäö"]=>
   string(1) "3"
 }
-int(3)
+int(1)
 string(1) "1"
-string(1) "2"
-string(1) "3"
+NULL
+NULL
 Done.
