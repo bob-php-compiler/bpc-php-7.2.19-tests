@@ -81,18 +81,6 @@ var_dump( reset($unset_array) );
 
 
 echo "\n*** Testing error conditions ***\n";
-//Zero argument, expected 1 argument
-var_dump( key() );
-var_dump( current() );
-var_dump( reset() );
-var_dump( next() );
-
-// args more than expected, expected 1 argument
-$temp_array = array(1);
-var_dump( key($temp_array, $temp_array) );
-var_dump( current($temp_array, $temp_array) );
-var_dump( reset($temp_array, $temp_array) );
-var_dump( next($temp_array, $temp_array) );
 
 // invalid args type, valid argument: array
 $int_var = 1;
@@ -459,12 +447,8 @@ array(5) {
 
 -- Testing variation: when array is unset --
 
-Notice: Undefined variable: unset_array in %s on line %d
-
 Warning: current() expects parameter 1 to be array, null given in %s on line %d
 NULL
-
-Notice: Undefined variable: unset_array in %s on line %d
 
 Warning: key() expects parameter 1 to be array, null given in %s on line %d
 NULL
@@ -476,30 +460,6 @@ Warning: reset() expects parameter 1 to be array, null given in %s on line %d
 NULL
 
 *** Testing error conditions ***
-
-Warning: key() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: current() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: reset() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: next() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: key() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
-
-Warning: current() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
-
-Warning: reset() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
-
-Warning: next() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
 
 Warning: key() expects parameter 1 to be array, integer given in %s on line %d
 NULL
