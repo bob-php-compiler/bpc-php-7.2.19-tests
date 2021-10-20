@@ -8,4 +8,6 @@ function f() {
 var_dump(next(array(1, 2)));
 ?>
 --EXPECTF--
-Fatal error: Only variables can be passed by reference in %s on line %d
+*** ERROR:compile-error:
+Error: Only variables can be passed by reference in %s on line %d
+ -- compile-error
