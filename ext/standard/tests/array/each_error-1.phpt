@@ -14,12 +14,14 @@ Test each() function : error conditions - pass incorrect number of args
 
 echo "*** Testing each() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing each() function with Zero arguments --\n";
-var_dump( each() );
+//Test each with one more than the expected number of arguments
+echo "\n-- Testing each() function with more than expected no. of arguments --\n";
+$arr = array(1, 2);
+$extra_arg = 10;
+var_dump( each($arr, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function each(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function each(): 1 at most, 2 provided in %s on line %d
  -- compile-error
