@@ -1,6 +1,7 @@
 --TEST--
 Bug #40191 (use of array_unique() with objects triggers segfault)
 --SKIPIF--
+skip TODO ArrayObject
 <?php if (!extension_loaded('spl')) die("skip SPL is not available"); ?>
 --FILE--
 <?php
