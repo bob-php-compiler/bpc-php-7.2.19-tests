@@ -13,16 +13,11 @@ Test bindec() function :  error conditions - incorrect input
 
 echo "*** Testing bindec() : error conditions ***\n";
 
-// get a class
-class classA
-{
-}
+echo "Incorrect number of arguments\n";
+bindec('01010101111',true);
 
-echo "Incorrect input\n";
-bindec(new classA());
 ?>
 --EXPECTF--
-*** Testing bindec() : error conditions ***
-Incorrect input
-
-Recoverable fatal error: Object of class classA could not be converted to string in %s on line %d
+*** ERROR:compile-error:
+Error: Too many arguments to function bindec(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

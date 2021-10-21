@@ -9,19 +9,11 @@ Test octdec() - wrong params  test octdec()
 
 echo "*** Testing octdec() :  error conditions ***\n";
 
-// get a class
-class classA
-{
-}
-
-echo "\n-- Incorrect input --\n";
-octdec(new classA());
-
+echo "\n-- Incorrect number of arguments --\n";
+octdec('0123567',true);
 
 ?>
 --EXPECTF--
-*** Testing octdec() :  error conditions ***
-
--- Incorrect input --
-
-Recoverable fatal error: Object of class classA could not be converted to string in %s on line %d
+*** ERROR:compile-error:
+Error: Too many arguments to function octdec(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

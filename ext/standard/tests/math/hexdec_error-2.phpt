@@ -9,18 +9,11 @@ Test hexdec() - wrong params test hexdec()
 
 echo "*** Testing hexdec() :  error conditions ***\n";
 
-// get a class
-class classA
-{
-}
-
-echo "\n-- Incorrect input --\n";
-hexdec(new classA());
+echo "\n-- Incorrect number of arguments --\n";
+hexdec('0x123abc',true);
 
 ?>
 --EXPECTF--
-*** Testing hexdec() :  error conditions ***
-
--- Incorrect input --
-
-Recoverable fatal error: Object of class classA could not be converted to string in %s on line %d
+*** ERROR:compile-error:
+Error: Too many arguments to function hexdec(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
