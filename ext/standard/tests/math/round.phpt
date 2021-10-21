@@ -1,5 +1,7 @@
 --TEST--
 Simple math tests
+--ARGS--
+--bpc-include-file ext/standard/tests/math/quicktester.inc --bpc-lib-path /tmp/quicktester \
 --FILE--
 <?php // $Id$
 
@@ -31,7 +33,7 @@ $tests = <<<TESTS
  LONG_MAX   ~== floor(LONG_MAX + 0.5)
 TESTS;
 
-include(dirname(__FILE__) . '/../../../../tests/quicktester.inc');
+include('quicktester.inc');
 --EXPECT--
 1,1,0,0
 OK
