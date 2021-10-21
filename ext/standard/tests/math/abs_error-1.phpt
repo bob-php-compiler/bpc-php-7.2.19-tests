@@ -13,15 +13,12 @@ Test abs() function :  error conditions - incorrect number of args
 
 echo "*** Testing abs() : error conditions ***\n";
 
-$arg_0 = 1.0;
-$extra_arg = 1;
-
-echo "\nToo many arguments\n";
-var_dump(abs($arg_0, $extra_arg));
+echo "\nToo few arguments\n";
+var_dump(abs());
 
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function abs(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function abs(): 1 required, 0 provided in %s on line %d
  -- compile-error
