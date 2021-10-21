@@ -15,13 +15,11 @@ Test round() function :  error conditions - incorrect number of args
 echo "*** Testing round() : error conditions ***\n";
 
 echo "\n-- Wrong nmumber of arguments --\n";
-var_dump(round(500, 10, true));
+var_dump(round());
 
 ?>
 ===Done===
 --EXPECTF--
-*** Testing round() : error conditions ***
-
--- Wrong nmumber of arguments --
-float(500)
-===Done===
+*** ERROR:compile-error:
+Error: Too few arguments to function round(): 1 required, 0 provided in %s on line %d
+ -- compile-error
