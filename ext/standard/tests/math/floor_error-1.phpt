@@ -8,15 +8,12 @@ Test floor() - error conditions - incorrect number of args
  */
 
 echo "*** Testing floor() :  error conditions ***\n";
-$arg_0 = 1.0;
-$extra_arg = 1;
 
-echo "\n-- Too many arguments --\n";
-var_dump(floor($arg_0, $extra_arg));
-
+echo "\n-- Too few arguments --\n";
+var_dump(floor());
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function floor(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function floor(): 1 required, 0 provided in %s on line %d
  -- compile-error
