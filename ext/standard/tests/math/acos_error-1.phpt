@@ -7,14 +7,11 @@ Test wrong number of arguments for acos()
  * Function is implemented in ext/standard/math.c
 */
 
-$arg_0 = 1.0;
-$extra_arg = 1;
-
-echo "\nToo many arguments\n";
-var_dump(acos($arg_0, $extra_arg));
+echo "\nToo few arguments\n";
+var_dump(acos());
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function acos(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function acos(): 1 required, 0 provided in %s on line %d
  -- compile-error
