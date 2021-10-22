@@ -30,7 +30,7 @@ class classA
 }
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 $inputs = array(
        // int data
