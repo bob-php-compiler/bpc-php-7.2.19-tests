@@ -10,12 +10,12 @@ Test log1p() - Error conditions
 
 echo "*** Testing log1p() : error conditions ***\n";
 
-echo "\n-- Testing log1p() function with less than expected no. of arguments --\n";
-log1p();
+echo "\n-- Testing log1p() function with more than expected no. of arguments --\n";
+log1p(36, true);
 
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function log1p(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function log1p(): 1 at most, 2 provided in %s on line %d
  -- compile-error
