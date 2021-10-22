@@ -1,5 +1,7 @@
 --TEST--
 Test return type and value for expected input sinh()
+--ARGS--
+--bpc-include-file ext/standard/tests/math/allowed_rounding_error.inc \
 --INI--
 precision = 14
 --FILE--
