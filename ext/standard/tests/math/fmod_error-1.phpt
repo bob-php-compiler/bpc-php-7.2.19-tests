@@ -4,9 +4,9 @@ Test fmod() - wrong params test fmod()
 precision=14
 --FILE--
 <?php
-fmod();
+fmod(23);
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function fmod(): 2 required, 0 provided in %s on line 2
+Error: Too few arguments to function fmod(): 2 required, 1 provided in %s on line 2
  -- compile-error
