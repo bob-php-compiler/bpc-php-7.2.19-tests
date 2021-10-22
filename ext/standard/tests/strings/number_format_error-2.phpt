@@ -10,15 +10,12 @@ Test number_format() - wrong params test number_format()
 
 echo "*** Testing number_format() : error conditions ***\n";
 
-echo "\n-- Testing number_format() function with 3 arguments --\n";
-number_format(23,2,true);
+echo "\n-- Testing number_format() function with more than 4 arguments --\n";
+number_format(23,2,true,false,36);
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing number_format() : error conditions ***
-
--- Testing number_format() function with 3 arguments --
-
-Warning: Wrong parameter count for number_format() in %s on line %d
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function number_format(): 4 at most, 5 provided in %s on line %d
+ -- compile-error
