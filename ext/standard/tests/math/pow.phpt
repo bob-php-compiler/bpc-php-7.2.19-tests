@@ -1,5 +1,7 @@
 --TEST--
 Various pow() tests
+--ARGS--
+--bpc-include-file ext/standard/tests/math/quicktester.inc --bpc-lib-path /tmp/quicktester \
 --FILE--
 <?php // $Id$
 
@@ -141,7 +143,7 @@ LONG_MIN*LONG_MIN ~== pow(LONG_MIN,2.0)
 TESTS;
 
  echo "On failure, please mail result to php-dev@lists.php.net\n";
- include(dirname(__FILE__) . '/../../../../tests/quicktester.inc');
+ include('quicktester.inc');
 --EXPECT--
 1,1,0,0
 On failure, please mail result to php-dev@lists.php.net

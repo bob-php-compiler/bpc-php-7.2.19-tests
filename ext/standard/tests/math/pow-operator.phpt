@@ -1,5 +1,7 @@
 --TEST--
 Various pow() tests
+--ARGS--
+--bpc-include-file ext/standard/tests/math/quicktester.inc --bpc-lib-path /tmp/quicktester \
 --FILE--
 <?php // $Id$
 
@@ -15,7 +17,7 @@ $tests = <<<TESTS
 TESTS;
 
  echo "On failure, please mail result to php-dev@lists.php.net\n";
- include(dirname(__FILE__) . '/../../../../tests/quicktester.inc');
+ include('quicktester.inc');
 --EXPECT--
 On failure, please mail result to php-dev@lists.php.net
 OK
