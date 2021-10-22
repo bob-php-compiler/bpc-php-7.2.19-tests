@@ -10,11 +10,11 @@ Test hypot() - wrong params test hypot()
 echo "*** Testing hypot() : error conditions ***\n";
 
 echo "\n-- Testing hypot() function with less than expected no. of arguments --\n";
-hypot();
+hypot(36);
 
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function hypot(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function hypot(): 2 required, 1 provided in %s on line %d
  -- compile-error
