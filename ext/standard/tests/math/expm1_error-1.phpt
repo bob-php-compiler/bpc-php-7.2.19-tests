@@ -10,12 +10,12 @@ Test expm1() - Error conditions
 
 echo "*** Testing expm1() : error conditions ***\n";
 
-echo "\n-- Testing expm1() function with less than expected no. of arguments --\n";
-expm1();
+echo "\n-- Testing expm1() function with more than expected no. of arguments --\n";
+expm1(23,true);
 
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function expm1(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function expm1(): 1 at most, 2 provided in %s on line %d
  -- compile-error

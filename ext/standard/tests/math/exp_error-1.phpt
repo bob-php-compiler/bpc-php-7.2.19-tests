@@ -4,9 +4,9 @@ Test exp() - wrong params for exp()
 precision=14
 --FILE--
 <?php
-exp();
+exp(23,true);
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function exp(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function exp(): 1 at most, 2 provided in %s on line %d
  -- compile-error
