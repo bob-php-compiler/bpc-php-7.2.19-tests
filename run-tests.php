@@ -1152,7 +1152,7 @@ function system_with_timeout($commandline, $env = null, $stdin = null, $captureS
 		unset($pipes[0]);
 	}
 
-	$timeout = $leak_check ? 300 : (isset($env['TEST_TIMEOUT']) ? $env['TEST_TIMEOUT'] : 60);
+	$timeout = $leak_check ? 300 : (isset($env['TEST_TIMEOUT']) ? $env['TEST_TIMEOUT'] : 180);
 
 	while (true) {
 		/* hide errors from interrupted syscalls */
