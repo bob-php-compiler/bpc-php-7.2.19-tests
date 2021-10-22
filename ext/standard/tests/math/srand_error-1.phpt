@@ -13,16 +13,10 @@ Test srand() function :  error conditions - incorrect number of args
 
 echo "*** Testing srand() : error conditions ***\n";
 
-var_dump(srand("fivehundred"));
-var_dump(srand("500ABC"));
+var_dump(srand(500, 0, true));
 ?>
 ===Done===
 --EXPECTF--
-*** Testing srand() : error conditions ***
-
-Warning: mt_srand() expects parameter 1 to be integer, string given in %s on line %d
-NULL
-
-Notice: A non well formed numeric value encountered in %s on line %d
-NULL
-===Done===
+*** ERROR:compile-error:
+Error: Too many arguments to function srand(): 2 at most, 3 provided in %s on line %d
+ -- compile-error
