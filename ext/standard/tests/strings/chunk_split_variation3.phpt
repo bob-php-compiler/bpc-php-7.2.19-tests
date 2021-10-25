@@ -19,7 +19,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 //resource variable
-$fp = fopen(__FILE__,'r');
+$fp = fopen('/proc/self/comm','r');
 
 //Class to get object variable
 class MyClass
