@@ -44,8 +44,8 @@ foreach ($tests as $n=>$test)
 		exit;
 	}
 
-	$left  = bpc_eval("/tmp/quicktester", "php-test-$n-left",  "return ($left );");
-	$right = bpc_eval("/tmp/quicktester", "php-test-$n-right", "return ($right);");
+	$left  = bpc_eval("/tmp/quicktester-math", "php-test-$n-left",  "return ($left );");
+	$right = bpc_eval("/tmp/quicktester-math", "php-test-$n-right", "return ($right);");
 	switch (@$operator) {
 		case '===': // exact match
 			$result = $left === $right;

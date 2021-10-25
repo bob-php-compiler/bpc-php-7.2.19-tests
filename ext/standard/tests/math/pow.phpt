@@ -1,7 +1,7 @@
 --TEST--
 Various pow() tests
 --ARGS--
---bpc-include-file ext/standard/tests/math/quicktester.inc --bpc-lib-path /tmp/quicktester \
+--bpc-include-file ext/standard/tests/math/quicktester.inc --bpc-lib-path /tmp/quicktester-math \
 --FILE--
 <?php // $Id$
 
