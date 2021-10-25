@@ -10,12 +10,13 @@ Test bin2hex() function : error conditions
 
 echo "*** Testing bin2hex() : error conditions ***\n";
 
-echo "\n-- Testing bin2hex() function with no arguments --\n";
-var_dump( bin2hex() );
+echo "\n-- Testing bin2hex() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( bin2hex("Hello World", $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function bin2hex(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function bin2hex(): 1 at most, 2 provided in %s on line %d
  -- compile-error
