@@ -10,12 +10,13 @@ Test ord() function : error conditions
 
 echo "*** Testing ord() : error conditions ***\n";
 
-echo "\n-- Testing ord() function with no arguments --\n";
-var_dump( ord() );
+echo "\n-- Testing ord() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( ord(72, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ord(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ord(): 1 at most, 2 provided in %s on line %d
  -- compile-error

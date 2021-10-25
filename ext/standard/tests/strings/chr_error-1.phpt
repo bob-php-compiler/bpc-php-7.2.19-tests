@@ -10,12 +10,13 @@ Test chr() function : error conditions
 
 echo "*** Testing chr() : error conditions ***\n";
 
-echo "\n-- Testing chr() function with no arguments --\n";
-var_dump( chr() );
+echo "\n-- Testing chr() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( chr(72, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function chr(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function chr(): 1 at most, 2 provided in %s on line %d
  -- compile-error
