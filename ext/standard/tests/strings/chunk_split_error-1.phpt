@@ -15,12 +15,17 @@ Test chunk_split() function : error conditions
 
 echo "*** Testing chunk_split() : error conditions ***\n";
 
-// Zero arguments
-echo "-- Testing chunk_split() function with Zero arguments --";
-var_dump( chunk_split() );
+// With one more than the expected number of arguments
+$str = 'Testing chunk_split';
+$chunklen = 5;
+$ending = '***';
+$extra_arg = 10;
+echo "-- Testing chunk_split() function with more than expected no. of arguments --";
+var_dump( chunk_split($str, $chunklen, $ending, $extra_arg) );
 
+echo "Done"
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function chunk_split(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function chunk_split(): 3 at most, 4 provided in %s on line %d
  -- compile-error
