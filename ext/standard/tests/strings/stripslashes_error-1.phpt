@@ -13,12 +13,15 @@ Test stripslashes() function : error conditions
 
 echo "*** Testing stripslashes() : error conditions ***\n";
 
-// Zero argument
-echo "\n-- Testing stripslashes() function with Zero arguments --\n";
-var_dump( stripslashes() );
+// More than expected number of arguments
+echo "\n-- Testing stripslashes() function with more than expected no. of arguments --\n";
+$str = '\"hello\"\"world\"';
+$extra_arg = 10;
+
+var_dump( stripslashes($str, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function stripslashes(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function stripslashes(): 1 at most, 2 provided in %s on line %d
  -- compile-error
