@@ -26,7 +26,7 @@ class sample  {
 }
 
 // Defining resource
-$file_handle = fopen(__FILE__, 'r');
+$file_handle = fopen('/proc/self/comm', 'r');
 
 // array with different values
 $values =  array (
@@ -98,10 +98,6 @@ fclose($file_handle);
 ===DONE===
 --EXPECTF--
 *** Testing addslashes() : with non-string type argument ***
-
-Notice: Undefined variable: undefined_var in %s on line %d
-
-Notice: Undefined variable: unset_var in %s on line %d
 
 --- Testing addslashes() by supplying different values for 'str' argument ---
 -- Iteration 1 --
