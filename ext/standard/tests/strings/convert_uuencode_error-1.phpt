@@ -10,12 +10,13 @@ Test convert_uuencode() function : error conditions
 
 echo "*** Testing convert_uuencode() : error conditions ***\n";
 
-echo "\n-- Testing chconvert_uuencoder() function with no arguments --\n";
-var_dump( convert_uuencode() );
+echo "\n-- Testing convert_uuencode() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( convert_uuencode(72, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function convert_uuencode(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function convert_uuencode(): 1 at most, 2 provided in %s on line %d
  -- compile-error
