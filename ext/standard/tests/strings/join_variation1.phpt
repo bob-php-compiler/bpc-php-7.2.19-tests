@@ -21,7 +21,7 @@ $unset_var = 'string_val';
 unset($unset_var);
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // define a class
 class test
