@@ -663,6 +663,11 @@
 
 11. "Warning: range(): Invalid range supplied: start=~a end=~a" start/end may different
 
+12. crypt()
+
+    bpc simply use the C function `crypt()`, so not support CRYPT_EXT_DES and CRYPT_BLOWFISH
+    bpc warning if C `crypt()` return NULL
+
 ## ext/date
 
 1. ini_set date.timezone warning message

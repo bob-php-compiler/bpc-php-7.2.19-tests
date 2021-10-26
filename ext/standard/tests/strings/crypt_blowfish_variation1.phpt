@@ -27,11 +27,24 @@ foreach($salts as $i=>$salt) {
 }
 
 ?>
---EXPECT--
+--EXPECTF--
+Warning: crypt(): salt '$2a$32$CCCCCCCCCCCCCCCCCCCCCC$' has the wrong format in %s on line %d
 32. OK
+
+Warning: crypt(): salt '$2a$33$CCCCCCCCCCCCCCCCCCCCCC$' has the wrong format in %s on line %d
 33. OK
+
+Warning: crypt(): salt '$2a$34$CCCCCCCCCCCCCCCCCCCCCC$' has the wrong format in %s on line %d
 34. OK
+
+Warning: crypt(): salt '$2a$35$CCCCCCCCCCCCCCCCCCCCCC$' has the wrong format in %s on line %d
 35. OK
+
+Warning: crypt(): salt '$2a$36$CCCCCCCCCCCCCCCCCCCCCC$' has the wrong format in %s on line %d
 36. OK
+
+Warning: crypt(): salt '$2a$37$CCCCCCCCCCCCCCCCCCCCCC$' has the wrong format in %s on line %d
 37. OK
+
+Warning: crypt(): salt '$2a$38$CCCCCCCCCCCCCCCCCCCCCC$' has the wrong format in %s on line %d
 38. OK

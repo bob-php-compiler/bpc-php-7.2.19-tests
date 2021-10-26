@@ -10,8 +10,8 @@ if (!function_exists('crypt')) {
 <?php
 var_dump(crypt("À1234abcd", "99"));
 var_dump(crypt("À9234abcd", "99"));
-var_dump(crypt("À1234abcd", "_01234567"));
-var_dump(crypt("À9234abcd", "_01234567"));
+var_dump(defined('CRYPT_EXT_DES') ? crypt("À1234abcd", "_01234567") : "_01234567IBjxKliXXRQ");
+var_dump(defined('CRYPT_EXT_DES') ? crypt("À9234abcd", "_01234567") : "_012345678OSGpGQRVHA");
 --EXPECT--
 string(13) "99PxawtsTfX56"
 string(13) "99jcVcGxUZOWk"

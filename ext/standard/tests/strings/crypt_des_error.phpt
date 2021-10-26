@@ -12,5 +12,6 @@ if (!function_exists('crypt')) {
 var_dump(crypt('foo', '*0'));
 
 ?>
---EXPECT--
+--EXPECTF--
+Warning: crypt(): salt '*0' has the wrong format in %s on line %d
 string(2) "*1"

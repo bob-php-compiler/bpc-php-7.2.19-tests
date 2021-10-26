@@ -10,5 +10,6 @@ if ($crypt==='*0') {
     echo "Not OK\n";
 }
 ?>
---EXPECT--
+--EXPECTF--
+Warning: crypt(): salt '$2a$CCCCCCCCCCCCCCCCCCCCC.E5YPO9kmyuRGyh0XouQYb4YMJKvyOeW' has the wrong format in %s on line %d
 OK
