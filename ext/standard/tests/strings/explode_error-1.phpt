@@ -10,12 +10,16 @@ Test explode() function : error conditions
 
 echo "*** Testing explode() : error conditions ***\n";
 
-echo "\n-- Testing explode() function with no arguments --\n";
-var_dump( explode() );
+echo "\n-- Testing explode() function with more than expected no. of arguments --\n";
+$delimiter = " ";
+$string = "piece1 piece2 piece3 piece4 piece5 piece6";
+$limit = 5;
+$extra_arg = 10;
+var_dump( explode($delimiter, $string, $limit, $extra_arg) );
 
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function explode(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function explode(): 3 at most, 4 provided in %s on line %d
  -- compile-error
