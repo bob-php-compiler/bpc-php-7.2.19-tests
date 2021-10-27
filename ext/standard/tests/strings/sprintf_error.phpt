@@ -9,10 +9,6 @@ Test sprintf() function : error conditions
 
 echo "*** Testing sprintf() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing sprintf() function with Zero arguments --\n";
-var_dump( sprintf() );
-
 echo "\n-- Testing sprintf() function with less than expected no. of arguments --\n";
 $format1 = '%s';
 $format2 = '%s%s';
@@ -36,11 +32,6 @@ echo "Done";
 ?>
 --EXPECTF--
 *** Testing sprintf() : error conditions ***
-
--- Testing sprintf() function with Zero arguments --
-
-Warning: sprintf() expects at least %d parameter, %d given in %s on line %d
-bool(false)
 
 -- Testing sprintf() function with less than expected no. of arguments --
 
