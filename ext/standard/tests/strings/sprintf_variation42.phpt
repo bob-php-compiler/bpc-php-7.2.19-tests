@@ -10,8 +10,8 @@ Test sprintf() function : usage variations - unsigned formats with resource valu
 echo "*** Testing sprintf() : unsigned formats with resource values ***\n";
 
 // resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 // array of resource types
 $resource_values = array (

@@ -10,8 +10,8 @@ Test sprintf() function : usage variations - int formats with resource values
 echo "*** Testing sprintf() : integer formats with resource values ***\n";
 
 // resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 $fp_copy = $fp;
 $dfp_copy = $dfp;
