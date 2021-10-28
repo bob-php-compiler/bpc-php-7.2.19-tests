@@ -12,20 +12,11 @@ precision=14
  * Alias to functions:
  */
 
-// Open handle
-$file = 'vfprintf_test.txt';
-$fp = fopen( $file, "a+" );
-
-echo "\n-- Testing vfprintf() function with less than expected no. of arguments --\n";
-$format = 'string_val';
-var_dump( vfprintf($fp, $format) );
-
-// Close handle
-fclose($fp);
+var_dump( vfprintf() );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function vfprintf(): 3 required, 2 provided in %s on line %d
+Error: Too few arguments to function vfprintf(): 3 required, 0 provided in %s on line %d
  -- compile-error
