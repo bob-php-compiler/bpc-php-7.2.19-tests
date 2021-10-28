@@ -1,7 +1,5 @@
 --TEST--
 Bug #61642 (modify("+5 weekdays") returns Sunday)
---SKIPIF--
-skip TODO printf
 --INI--
 date.timezone=UTC
 --FILE--

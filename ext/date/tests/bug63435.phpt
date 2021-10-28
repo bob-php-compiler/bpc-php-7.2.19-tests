@@ -1,7 +1,5 @@
 --TEST--
 Bug #63435 	Datetime::format('u') sometimes wrong by 1 microsecond
---SKIPIF--
-skip TODO sprintf
 --INI--
 date.timezone=UTC
 --FILE--

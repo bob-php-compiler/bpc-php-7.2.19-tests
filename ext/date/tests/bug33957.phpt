@@ -1,7 +1,5 @@
 --TEST--
 Bug #33957 (gmdate('W')/date('W') sometimes returns wrong week number)
---SKIPIF--
-skip TODO sprintf
 --FILE--
 <?php
 date_default_timezone_set("UTC");
