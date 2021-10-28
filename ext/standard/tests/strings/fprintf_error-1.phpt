@@ -6,11 +6,11 @@ Test fprintf() function (errors)
 /* Testing Error Conditions */
 echo "*** Testing Error Conditions ***\n";
 
-/* zero argument */
-var_dump( fprintf() );
+/* scalar argument */
+var_dump( fprintf(3) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function fprintf(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function fprintf(): 2 required, 1 provided in %s on line %d
  -- compile-error
