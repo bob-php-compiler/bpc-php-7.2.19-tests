@@ -18,7 +18,7 @@ echo "*** Testing vfprintf() : variation functionality ***\n";
 $file = 'vfprintf_test.txt';
 $fp = fopen( $file, 'a+' );
 
-$funset = fopen( __FILE__, 'r' );
+$funset = fopen( '/proc/self/comm', 'r' );
 unset( $funset );
 
 class FooClass

@@ -30,7 +30,7 @@ class sample
 }
 
 // Defining resource
-$file_handle = fopen(__FILE__, 'r');
+$file_handle = fopen('/proc/self/comm', 'r');
 
 
 //array of values to iterate over
@@ -81,7 +81,7 @@ $values = array(
 );
 
 /* creating dumping file */
-$data_file = dirname(__FILE__) . '/vfprintf_variation21.txt';
+$data_file = 'vfprintf_variation21.txt';
 if (!($fp = fopen($data_file, 'wt')))
    return;
 
