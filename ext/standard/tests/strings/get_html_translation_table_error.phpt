@@ -20,10 +20,6 @@ var_dump( get_html_translation_table($table, $quote_style, "UTF-8", $extra_arg) 
 echo "Done\n";
 ?>
 --EXPECTF--
-*** Testing get_html_translation_table() : error conditions ***
-
--- Testing get_html_translation_table() function with more than expected no. of arguments --
-
-Warning: get_html_translation_table() expects at most 3 parameters, 4 given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function get_html_translation_table(): 3 at most, 4 provided in %s on line %d
+ -- compile-error
