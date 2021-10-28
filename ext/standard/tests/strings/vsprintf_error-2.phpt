@@ -9,12 +9,16 @@ Test vsprintf() function : error conditions
 
 echo "*** Testing vsprintf() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing vsprintf() function with Zero arguments --\n";
-var_dump( vsprintf() );
+// initialising the required variables
+$format = "%s";
+$args = array("hello");
+$extra_arg = "extra arg";
+
+echo "\n-- testing vsprintf() function with more than expected no. of arguments --\n";
+var_dump( vsprintf($format, $args, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function vsprintf(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function vsprintf(): 2 at most, 3 provided in %s on line %d
  -- compile-error
