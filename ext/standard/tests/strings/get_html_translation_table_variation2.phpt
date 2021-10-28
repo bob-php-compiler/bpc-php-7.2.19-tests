@@ -23,7 +23,7 @@ $unset_var = 10;
 unset($unset_var);
 
 // a resource var
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // array with different values
 $values =  array (
