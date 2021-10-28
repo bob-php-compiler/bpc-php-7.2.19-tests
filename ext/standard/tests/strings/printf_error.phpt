@@ -9,10 +9,6 @@ Test printf() function : error conditions
 
 echo "*** Testing printf() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing printf() function with Zero arguments --\n";
-var_dump( printf() );
-
 echo "\n-- Testing printf() function with less than expected no. of arguments --\n";
 $format1 = '%s';
 $format2 = '%s%s';
@@ -36,11 +32,6 @@ var_dump( printf($format3) );
 ===DONE===
 --EXPECTF--
 *** Testing printf() : error conditions ***
-
--- Testing printf() function with Zero arguments --
-
-Warning: printf() expects at least 1 parameter, 0 given in %s on line %d
-bool(false)
 
 -- Testing printf() function with less than expected no. of arguments --
 
