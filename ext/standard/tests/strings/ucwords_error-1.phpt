@@ -9,12 +9,15 @@ Test ucwords() function : error conditions
 
 echo "*** Testing ucwords() : error conditions ***\n";
 
-// Zero argument
-echo "\n-- Testing ucwords() function with Zero arguments --\n";
-var_dump( ucwords() );
+// More than expected number of arguments
+echo "\n-- Testing ucwords() function with more than expected no. of arguments --\n";
+$str = 'string_val';
+$extra_arg = 10;
+
+var_dump( ucwords($str, $extra_arg, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ucwords(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ucwords(): 2 at most, 3 provided in %s on line %d
  -- compile-error
