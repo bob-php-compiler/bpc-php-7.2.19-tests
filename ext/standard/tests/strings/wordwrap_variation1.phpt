@@ -18,7 +18,7 @@ $break = '<br />\n';
 $cut = true;
 
 // resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // get an unset variable
 $unset_var = 'string_val';
