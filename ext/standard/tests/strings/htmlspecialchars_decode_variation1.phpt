@@ -22,7 +22,7 @@ class classA
 }
 
 //get a resource variable
-$file_handle=fopen(__FILE__, "r");
+$file_handle=fopen('/proc/self/comm', "r");
 
 //get an unset variable
 $unset_var = 10;
@@ -158,4 +158,4 @@ string(0) ""
 Warning: htmlspecialchars_decode() expects parameter 1 to be string, resource given in %s on line %d
 NULL
 ===DONE===
-	
+

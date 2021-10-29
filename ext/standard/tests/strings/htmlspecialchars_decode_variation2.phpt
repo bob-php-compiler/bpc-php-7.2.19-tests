@@ -25,7 +25,7 @@ class classA {
 }
 
 //get a resource variable
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 //get an unset variable
 $unset_var = 10;
