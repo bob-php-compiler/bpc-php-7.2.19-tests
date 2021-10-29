@@ -1,7 +1,7 @@
 --TEST--
 Test setlocale() function : error condition
 --INI--
-error_reporting=E_ALL
+error_reporting=32767
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -10,6 +10,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 ?>
 --FILE--
 <?php
+// E_ALL = 32767
 /* Prototype  : string setlocale (int $category , string $locale [,string $..] )
               : string setlocale(int $category , array $locale);
  * Description: Sets locale information.Returns the new current locale , or FALSE if locale functionality is not implemented in this platform.
@@ -17,14 +18,6 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 */
 
 echo "*** Testing setlocale() : error conditions ***\n";
-
-// Zero argument
-echo "\n-- Testing setlocale() function with Zero arguments --";
-var_dump( setlocale());
-
-// One argument
-echo "\n-- Testing setlocale() function with One argument, 'category' = LC_ALL --";
-var_dump( setlocale(LC_ALL) );
 
 echo "\n-- Testing setlocale() function with invalid locale array, 'category' = LC_ALL --\n";
 //Invalid array of locales
@@ -43,14 +36,6 @@ echo "\nDone";
 ?>
 --EXPECTF--
 *** Testing setlocale() : error conditions ***
-
--- Testing setlocale() function with Zero arguments --
-Warning: setlocale() expects at least 2 parameters, 0 given in %s on line %d
-NULL
-
--- Testing setlocale() function with One argument, 'category' = LC_ALL --
-Warning: setlocale() expects at least 2 parameters, 1 given in %s on line %d
-NULL
 
 -- Testing setlocale() function with invalid locale array, 'category' = LC_ALL --
 bool(false)
