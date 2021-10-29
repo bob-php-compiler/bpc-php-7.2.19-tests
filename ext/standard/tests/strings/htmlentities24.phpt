@@ -36,8 +36,6 @@ var_dump( htmlentities($str, ENT_NOQUOTES) );
 var_dump( htmlentities($str, ENT_COMPAT) );
 
 echo "\n*** Testing error conditions ***\n";
-/* zero argument */
-var_dump( htmlentities() );
 /* arguments more than expected */
 var_dump( htmlentities("\x84\x91",ENT_QUOTES, 'cp1252', "test1") );
 
@@ -322,8 +320,5 @@ string(36) "A 'quote' is &lt;b&gt;bold&lt;/b&gt;"
 string(36) "A 'quote' is &lt;b&gt;bold&lt;/b&gt;"
 
 *** Testing error conditions ***
-
-Warning: htmlentities() expects at least 1 parameter, 0 given in %s on line %d
-NULL
 string(14) "&bdquo;&lsquo;"
 Done
