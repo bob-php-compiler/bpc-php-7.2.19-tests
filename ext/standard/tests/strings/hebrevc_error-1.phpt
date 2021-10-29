@@ -10,12 +10,13 @@ Test hebrevc() function : error conditions
 
 echo "*** Testing hebrevc() : error conditions ***\n";
 
-echo "\n-- Testing hebrevc() function with no arguments --\n";
-var_dump( hebrevc() );
+echo "\n-- Testing hebrevc() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( hebrevc("Hello World", 5, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function hebrevc(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function hebrevc(): 2 at most, 3 provided in %s on line %d
  -- compile-error
