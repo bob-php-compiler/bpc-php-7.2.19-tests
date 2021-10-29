@@ -668,6 +668,10 @@
     bpc simply use the C function `crypt()`, so not support CRYPT_EXT_DES and CRYPT_BLOWFISH
     bpc warning if C `crypt()` return NULL
 
+13. php8 levenshtein()
+
+    Prior to 8.0.0, levenshtein() had to be called with either two or five arguments.
+
 ## ext/date
 
 1. ini_set date.timezone warning message
