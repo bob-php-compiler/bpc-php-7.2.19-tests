@@ -18,7 +18,7 @@ echo "*** Testing ucwords() : usage variations ***\n";
 $unset_var = 'string_val';
 unset($unset_var);
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 class my
 {
