@@ -1,5 +1,7 @@
 --TEST--
 trim(), rtrim() and ltrim() functions
+--ARGS--
+--bpc-include-file ext/standard/tests/strings/quicktester.inc --bpc-lib-path /tmp/quicktester-strings \
 --FILE--
 <?php
 
@@ -21,6 +23,6 @@ $tests = <<<TESTS
 "ABC" === trim("ABC\\x50\\xC1\\x60\\x90","\\x50..\\xC1")
 TESTS;
 
-include(dirname(__FILE__) . '/../../../../tests/quicktester.inc');
+include('quicktester.inc');
 --EXPECT--
 OK
