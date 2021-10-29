@@ -9,12 +9,14 @@ Test soundex() function : error conditions
 
 echo "\n*** Testing soundex error conditions ***";
 
-echo "-- Testing soundex() function with Zero arguments --\n";
-var_dump( soundex() );
+echo "\n\n-- Testing soundex() function with more than expected no. of arguments --\n";
+$str = "Euler";
+$extra_arg = 10;
+var_dump( soundex( $str, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function soundex(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function soundex(): 1 at most, 2 provided in %s on line %d
  -- compile-error
