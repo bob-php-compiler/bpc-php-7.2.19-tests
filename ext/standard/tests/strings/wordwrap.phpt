@@ -1,5 +1,7 @@
 --TEST--
 wordwrap() function
+--ARGS--
+--bpc-include-file ext/standard/tests/strings/quicktester.inc --bpc-lib-path /tmp/quicktester-strings \
 --FILE--
 <?php
 
@@ -31,6 +33,6 @@ FALSE === @wordwrap(chr(0), 0, "")
 
 TESTS;
 
-include(dirname(__FILE__) . '/../../../../tests/quicktester.inc');
+include('quicktester.inc');
 --EXPECT--
 OK
