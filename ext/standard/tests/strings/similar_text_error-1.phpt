@@ -10,13 +10,11 @@ Mats Lindh <mats at lindh.no>
 * Source code: ext/standard/string.c
 */
 
-$extra_arg = 10;
-echo "\n-- Testing similar_text() function with more than expected no. of arguments --\n";
-similar_text("abc", "def", $percent, $extra_arg);
-
+echo "\n-- Testing similar_text() function with less than expected no. of arguments --\n";
+similar_text("abc");
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function similar_text(): 3 at most, 4 provided in %s on line %d
+Error: Too few arguments to function similar_text(): 2 required, 1 provided in %s on line %d
  -- compile-error
