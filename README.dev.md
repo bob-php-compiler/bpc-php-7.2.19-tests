@@ -674,6 +674,8 @@
 
 14. md5_file() mmap file failed warning
 
+15. sha1_file() mmap file failed warning
+
 ## ext/date
 
 1. ini_set date.timezone warning message
