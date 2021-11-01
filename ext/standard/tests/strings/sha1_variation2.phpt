@@ -25,7 +25,7 @@ class MyClass
 }
 
 //resource variable
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('/proc/self/comm', 'r');
 
 //different values for 'str' argument
 $values = array(
