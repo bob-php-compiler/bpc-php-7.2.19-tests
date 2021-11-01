@@ -16,12 +16,13 @@ if( substr(PHP_OS, 0, 3) == 'WIN'){
 
 echo "*** Testing nl_langinfo() : error conditions ***\n";
 
-echo "\n-- Testing nl_langinfo() function with no arguments --\n";
-var_dump( nl_langinfo() );
+echo "\n-- Testing nl_langinfo() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( nl_langinfo(ABDAY_2, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function nl_langinfo(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function nl_langinfo(): 1 at most, 2 provided in %s on line %d
  -- compile-error
