@@ -10,12 +10,14 @@ Test sha1() function : error conditions
 
 echo "*** Testing sha1() : error conditions ***\n";
 
-echo "\n-- Testing sha1() function with no arguments --\n";
-var_dump( sha1() );
+echo "\n-- Testing sha1() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( sha1("Hello World",  true, $extra_arg) );
+
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function sha1(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function sha1(): 2 at most, 3 provided in %s on line %d
  -- compile-error
