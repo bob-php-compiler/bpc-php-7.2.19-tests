@@ -1,5 +1,7 @@
 --TEST--
 Test parse_str() function : non-default arg_separator.input specified
+--SKIPIF--
+skip no ini arg_separator
 --INI--
 arg_separator.input = "/"
 --FILE--
