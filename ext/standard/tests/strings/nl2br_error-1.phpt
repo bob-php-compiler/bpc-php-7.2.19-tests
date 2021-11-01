@@ -9,12 +9,14 @@ Test nl2br() function : error conditions
 
 echo "*** Testing nl2br() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing nl2br() function with Zero arguments --";
-var_dump( nl2br() );
+//Test nl2br with one more than the expected number of arguments
+echo "\n-- Testing nl2br() function with more than expected no. of arguments --";
+$str = 'string_val';
+$extra_arg = 10;
+var_dump( nl2br($str, true, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function nl2br(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function nl2br(): 2 at most, 3 provided in %s on line %d
  -- compile-error
