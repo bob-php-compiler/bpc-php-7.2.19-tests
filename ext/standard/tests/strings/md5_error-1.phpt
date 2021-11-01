@@ -9,12 +9,15 @@ Test md5() function : error conditions
 
 echo "*** Testing md5() : error conditions ***\n";
 
-echo "\n-- Testing md5() function with no arguments --\n";
-var_dump( md5());
+echo "\n-- Testing md5() function with more than expected no. of arguments --\n";
+$str = "Hello World";
+$raw_output = true;
+$extra_arg = 10;
 
+var_dump(md5($str, $raw_output, $extra_arg));
 ?>
 ===DONE==
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function md5(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function md5(): 2 at most, 3 provided in %s on line %d
  -- compile-error
