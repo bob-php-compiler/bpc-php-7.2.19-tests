@@ -672,6 +672,8 @@
 
     Prior to 8.0.0, levenshtein() had to be called with either two or five arguments.
 
+14. md5_file() mmap file failed warning
+
 ## ext/date
 
 1. ini_set date.timezone warning message
