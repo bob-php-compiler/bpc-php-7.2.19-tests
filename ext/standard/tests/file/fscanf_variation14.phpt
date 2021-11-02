@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - string formats with strings
 
 /* Test fscanf() to scan different strings using different string format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different string format types with different string ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation14.tmp";
+$filename = "fscanf_variation14.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -104,8 +102,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation14.tmp";
+$filename = "fscanf_variation14.tmp";
 unlink($filename);
 ?>
 --EXPECTF--
@@ -162,7 +159,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -237,7 +237,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -312,7 +315,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -387,7 +393,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -462,7 +471,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -537,7 +549,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -687,7 +702,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -762,7 +780,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -837,7 +858,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(4) "@#$#"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -912,7 +936,10 @@ array(1) {
   [0]=>
   string(3) "055"
 }
-NULL
+array(1) {
+  [0]=>
+  string(13) "@#$#$%$^^$$^&"
+}
 array(1) {
   [0]=>
   string(4) "This"
@@ -1061,7 +1088,8 @@ array(0) {
 }
 array(0) {
 }
-NULL
+array(0) {
+}
 array(0) {
 }
 array(0) {

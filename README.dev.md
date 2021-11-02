@@ -620,6 +620,10 @@
     php: `array($fp => 'value')` Illegal offset type, `$arr[$fp] = 'value';` notice casting
     bpc: both notice casting
 
+33. bpc error message binary safe
+
+    php not. @see ext/standard/tests/file/fscanf_error.phpt
+
 ## output buffering
 
 1. chunk_size and buffer_used different
@@ -675,6 +679,10 @@
 14. md5_file() mmap file failed warning
 
 15. sha1_file() mmap file failed warning
+
+16. sprintf()
+
+    bpc strict argnum, @see ext/standard/tests/file/fscanf_variation14.phpt
 
 ## ext/date
 
