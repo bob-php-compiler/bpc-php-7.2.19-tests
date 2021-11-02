@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - unsigned formats with arrays
 
 /* Test fscanf() to scan arrays using different unsigned format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different unsigned format types with arrays ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation42.tmp";
+$filename = "fscanf_variation42.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -70,8 +68,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation42.tmp";
+$filename = "fscanf_variation42.tmp";
 unlink($filename);
 ?>
 --EXPECTF--

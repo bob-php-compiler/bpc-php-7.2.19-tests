@@ -10,8 +10,6 @@ Test fscanf() function: usage variations - objects
 
 /* Test fscanf() to scan a file to read objects */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): to read objects from a file ***\n";
 
 // declare a class
@@ -28,7 +26,7 @@ class foo
 $obj = new foo(); //creating new object
 
 // create a file
-$filename = "$file_path/fscanf_variation54.tmp";
+$filename = "fscanf_variation54.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -60,8 +58,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation54.tmp";
+$filename = "fscanf_variation54.tmp";
 unlink($filename);
 ?>
 --EXPECT--

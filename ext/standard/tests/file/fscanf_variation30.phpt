@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - octal formats with arrays
 
 /* Test fscanf() to scan arrays using different octal format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different octal format types with arrays ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation30.tmp";
+$filename = "fscanf_variation30.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -75,8 +73,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation30.tmp";
+$filename = "fscanf_variation30.tmp";
 unlink($filename);
 ?>
 --EXPECTF--

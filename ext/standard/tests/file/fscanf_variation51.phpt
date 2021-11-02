@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - file opened in write only mode
 
 /* Test fscanf() to scan a file for read when file is opened inwrite only mode */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): to read from a file opened in write only mode ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation51.tmp";
+$filename = "fscanf_variation51.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -59,8 +57,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation51.tmp";
+$filename = "fscanf_variation51.tmp";
 if(file_exists($filename)) {
   unlink($filename);
 }

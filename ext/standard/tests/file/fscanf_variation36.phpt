@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - hexa formats with arrays
 
 /* Test fscanf() to scan arrays using different hexa format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different hexa format types with arrays ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation36.tmp";
+$filename = "fscanf_variation36.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -70,8 +68,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation36.tmp";
+$filename = "fscanf_variation36.tmp";
 unlink($filename);
 ?>
 --EXPECTF--

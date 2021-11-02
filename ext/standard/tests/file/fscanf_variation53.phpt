@@ -10,8 +10,6 @@ Test fscanf() function: usage variations - file pointer pointing to EOF
 
 /* Test fscanf() to read a file when file pointer is pointing to EOF */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): to read a file when file pointer is pointing to EOF ***\n";
 
 // various formats
@@ -30,7 +28,7 @@ $counter = 1;
 foreach($modes as $mode) {
 
   // create an empty file
-  $filename = "$file_path/fscanf_variation53.tmp";
+  $filename = "fscanf_variation53.tmp";
   $file_handle = fopen($filename, "w");
   if($file_handle == false)
     exit("Error:failed to open file $filename");
@@ -72,8 +70,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation53.tmp";
+$filename = "fscanf_variation53.tmp";
 if(file_exists($filename)) {
   unlink($filename);
 }

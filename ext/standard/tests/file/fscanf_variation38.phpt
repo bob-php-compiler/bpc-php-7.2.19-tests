@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - hexa formats with boolean
 
 /* Test fscanf() to scan boolean data using different hexa format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different hexa format types with boolean data ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation38.tmp";
+$filename = "fscanf_variation38.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -62,8 +60,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation38.tmp";
+$filename = "fscanf_variation38.tmp";
 unlink($filename);
 ?>
 --EXPECTF--

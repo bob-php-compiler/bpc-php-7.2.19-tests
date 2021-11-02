@@ -10,20 +10,18 @@ Test fscanf() function: usage variations - char formats with resource
 
 /* Test fscanf() to scan resource type using different char format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different char format types with resource ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation22.tmp";
+$filename = "fscanf_variation22.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
 
 
 // resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 // array of resource types
 $resource_types = array (
@@ -73,8 +71,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation22.tmp";
+$filename = "fscanf_variation22.tmp";
 unlink($filename);
 ?>
 --EXPECTF--
