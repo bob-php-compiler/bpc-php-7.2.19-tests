@@ -11,12 +11,13 @@ arg_separator.input = "/"
 
 echo "*** Testing parse_str() : error conditions ***\n";
 
-echo "\n-- Testing htmlentities() function with less than expected no. of arguments --\n";
-parse_str();
+echo "\n-- Testing htmlentities() function with more than expected no. of arguments --\n";
+$s1 = "first=val1&second=val2&third=val3";
+parse_str($s1, $res_array, true);
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function parse_str(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function parse_str(): 2 at most, 3 provided in %s on line %d
  -- compile-error
