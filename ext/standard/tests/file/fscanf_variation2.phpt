@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - integer formats with integer values
 
 /* Test fscanf() to scan different integer values using different interger format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different integer format types with different integer values ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation2.tmp";
+$filename = "fscanf_variation2.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -76,8 +74,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation2.tmp";
+$filename = "fscanf_variation2.tmp";
 unlink($filename);
 ?>
 --EXPECTF--

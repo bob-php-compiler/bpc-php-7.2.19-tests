@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - return type without third argument
 
 /* test fscanf() for its return type */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Testing fscanf(): for its return type without third argument ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation1.tmp";
+$filename = "fscanf_variation1.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -34,8 +32,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation1.tmp";
+$filename = "fscanf_variation1.tmp";
 unlink($filename);
 ?>
 --EXPECTF--

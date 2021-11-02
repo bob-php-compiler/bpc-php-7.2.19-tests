@@ -10,12 +10,10 @@ Test fscanf() function: usage variations - float formats with float values
 
 /* Test fscanf() to scan different float values using different format types */
 
-$file_path = dirname(__FILE__);
-
 echo "*** Test fscanf(): different float format types with different float values ***\n";
 
 // create a file
-$filename = "$file_path/fscanf_variation8.tmp";
+$filename = "fscanf_variation8.tmp";
 $file_handle = fopen($filename, "w");
 if($file_handle == false)
   exit("Error:failed to open file $filename");
@@ -94,8 +92,7 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$filename = "$file_path/fscanf_variation8.tmp";
+$filename = "fscanf_variation8.tmp";
 unlink($filename);
 ?>
 --EXPECTF--
