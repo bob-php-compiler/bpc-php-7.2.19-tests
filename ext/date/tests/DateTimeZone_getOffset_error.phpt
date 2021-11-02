@@ -28,5 +28,5 @@ var_dump( $tz->getOffset($date, $extra_arg) );
 -- Testing DateTimeZone::getOffset() function with more than expected no. of arguments --
 
 Warning: Too many arguments to method DateTimeZone::getOffset(): 1 at most, 2 provided in %s on line %d
-int(3600)
+int(0)
 ===DONE===
