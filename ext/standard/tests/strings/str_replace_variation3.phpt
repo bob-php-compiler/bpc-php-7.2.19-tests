@@ -93,7 +93,7 @@ var_dump($count);
 
 
 echo "\n-- Testing Resources --\n";
-$resource1 = fopen( __FILE__, "r" );
+$resource1 = fopen( '/proc/self/comm', "r" );
 $resource2 = opendir( "." );
 var_dump(str_replace("stream", "FOUND", $resource1, $count));
 var_dump($count);
@@ -219,8 +219,6 @@ int(0)
 -- Testing simple and complex syntax strings --
 string(5) "FOUND"
 string(5) "FOUND"
-
-Notice: Undefined variable: strS in %s on line %d
 string(0) ""
 string(5) "FOUND"
 string(5) "FOUND"
