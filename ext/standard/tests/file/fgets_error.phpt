@@ -8,14 +8,8 @@ Test fgets() function : error conditions
 */
 
 echo "*** Testing error conditions ***\n";
-// zero argument
-echo "-- Testing fgets() with zero argument --\n";
-var_dump( fgets() );
 
-// more than expected no. of args
-echo "-- Testing fgets() with more than expected number of arguments --\n";
-$fp = fopen(__FILE__, "r");
-var_dump( fgets($fp, 10, $fp) );
+$fp = fopen('/proc/self/comm', "r");
 
 // invalid length argument
 echo "-- Testing fgets() with invalid length arguments --\n";
@@ -49,7 +43,7 @@ fclose($fp);
 var_dump(fgets($fp,10));
 
 // fgets() on a file handle which is unset
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 unset($file_handle); //unset file handle
 var_dump( fgets(@$file_handle,10));
 
@@ -57,14 +51,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing error conditions ***
--- Testing fgets() with zero argument --
-
-Warning: fgets() expects at least 1 parameter, 0 given in %s on line %d
-bool(false)
--- Testing fgets() with more than expected number of arguments --
-
-Warning: fgets() expects at most 2 parameters, 3 given in %s on line %d
-bool(false)
 -- Testing fgets() with invalid length arguments --
 
 Warning: fgets(): Length parameter must be greater than 0 in %s on line %d
