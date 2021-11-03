@@ -15,7 +15,7 @@
 
 */
 
-define('file_not_found', 2, 1);
+define('file_not_found', 2);
 
 /*
  Function: bool create_file(string $filename, string $mode = "w");
