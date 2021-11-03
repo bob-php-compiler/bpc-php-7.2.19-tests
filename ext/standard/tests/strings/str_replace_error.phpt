@@ -1,7 +1,5 @@
 --TEST--
 Test str_replace() function error conditions
---INI--
-precision=14
 --FILE--
 <?php
 /*
@@ -11,31 +9,12 @@ precision=14
                the replacement string
 */
 
-
-echo "\n*** Testing str_replace error conditions ***";
+echo "\n*** Testing error conditions ***";
 /* Invalid arguments */
 var_dump( str_replace() );
-var_dump( str_replace("") );
-var_dump( str_replace(NULL) );
-var_dump( str_replace(1, 2) );
-var_dump( str_replace(1,2,3,$var,5) );
 
 ?>
-===DONE===
 --EXPECTF--
-*** Testing str_replace error conditions ***
-Warning: str_replace() expects at least 3 parameters, 0 given in %sstr_replace_error.php on line 12
-NULL
-
-Warning: str_replace() expects at least 3 parameters, 1 given in %sstr_replace_error.php on line 13
-NULL
-
-Warning: str_replace() expects at least 3 parameters, 1 given in %sstr_replace_error.php on line 14
-NULL
-
-Warning: str_replace() expects at least 3 parameters, 2 given in %sstr_replace_error.php on line 15
-NULL
-
-Warning: str_replace() expects at most 4 parameters, 5 given in %sstr_replace_error.php on line 16
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too few arguments to function str_replace(): 3 required, 0 provided in %s on line %d
+ -- compile-error

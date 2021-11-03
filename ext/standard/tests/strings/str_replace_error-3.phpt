@@ -1,5 +1,5 @@
 --TEST--
-Test str_replace() function
+Test str_replace() function error conditions
 --FILE--
 <?php
 /*
@@ -11,10 +11,10 @@ Test str_replace() function
 
 echo "\n*** Testing error conditions ***";
 /* Invalid arguments */
-var_dump( str_replace() );
+var_dump( str_replace(1, 2) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function str_replace(): 3 required, 0 provided in %s on line %d
+Error: Too few arguments to function str_replace(): 3 required, 2 provided in %s on line %d
  -- compile-error
