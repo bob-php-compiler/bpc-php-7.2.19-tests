@@ -8,12 +8,16 @@ Test strtr() function : error conditions
 */
 
 echo "*** Testing strtr() : error conditions ***\n";
+$str = "string";
+$from = "string";
+$to = "STRING";
+$extra_arg = "extra_argument";
 
-echo "\n-- Testing strtr() function with Zero arguments --";
-var_dump( strtr() );
+echo "\n-- Testing strtr() function with more than expected no. of arguments --";
+var_dump( strtr($str, $from, $to, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strtr(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function strtr(): 3 at most, 4 provided in %s on line %d
  -- compile-error
