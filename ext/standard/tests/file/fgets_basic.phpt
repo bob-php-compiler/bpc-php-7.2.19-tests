@@ -1,5 +1,7 @@
 --TEST--
 Test fgets() function : basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -20,8 +22,8 @@ foreach($file_modes as $file_mode) {
   foreach($file_content_types as $file_content_type) {
     echo "-- File content type : $file_content_type --\n";
     /* create files with $file_content_type */
-    create_files ( dirname(__FILE__), 1, $file_content_type, 0755, 50, "w", "fgets_basic", 1, "bytes"); //create a file
-    $filename = dirname(__FILE__)."/fgets_basic1.tmp"; // this is name of the file created by create_files()
+    create_files ( '.', 1, $file_content_type, 0755, 50, "w", "fgets_basic", 1, "bytes"); //create a file
+    $filename = "fgets_basic1.tmp"; // this is name of the file created by create_files()
     $file_handle = fopen($filename, $file_mode);
     if ( !$file_handle ) {
       echo "Error: failed to open file $filename!";
