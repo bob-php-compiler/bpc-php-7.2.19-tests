@@ -6,6 +6,8 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip Not valid for Windows');
 }
 ?>
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -24,7 +26,7 @@ $file_content_types = array("numeric", "text", "text_with_new_line", "alphanumer
 
 echo "*** Testing fgets() : usage variations ***\n";
 
-$filename = dirname(__FILE__)."/fgets_variation4.tmp";
+$filename = "fgets_variation4.tmp";
 
 foreach($file_modes as $file_mode) {
   echo "\n-- Testing fgets() with file opened using mode $file_mode --\n";
