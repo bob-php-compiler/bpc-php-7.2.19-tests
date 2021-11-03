@@ -26,7 +26,7 @@ var_dump( $count );
 var_dump( str_replace("long string here", "", "", $count) );
 var_dump( $count );
 
-$fp = fopen( __FILE__, "r" );
+$fp = fopen('/proc/self/comm', "r" );
 $fp_copy = $fp;
 var_dump( str_replace($fp_copy, $fp_copy, $fp_copy, $fp_copy) );
 var_dump( $fp_copy );
@@ -180,7 +180,7 @@ var_dump($count);
 
 
 echo "\n-- Testing Resources --\n";
-$resource1 = fopen( __FILE__, "r" );
+$resource1 = fopen( '/proc/self/comm', "r" );
 $resource2 = opendir( "." );
 var_dump(str_replace("stream", "FOUND", $resource1, $count));
 var_dump($count);
@@ -222,15 +222,6 @@ var_dump( str_replace("worldS", "FOUND", "$strS") );
 /* String with curly braces, complex syntax */
 var_dump( str_replace("worldS", "FOUND", "${str}S") );
 var_dump( str_replace("worldS", "FOUND", "{$str}S") );
-
-
-echo "\n*** Testing error conditions ***";
-/* Invalid arguments */
-var_dump( str_replace() );
-var_dump( str_replace("") );
-var_dump( str_replace(NULL) );
-var_dump( str_replace(1, 2) );
-var_dump( str_replace(1,2,3,$var,5) );
 
 fclose($resource1);
 closedir($resource2);
@@ -933,25 +924,7 @@ int(0)
 -- Testing simple and complex syntax strings --
 string(5) "FOUND"
 string(5) "FOUND"
-
-Notice: Undefined variable: strS in %s on line %d
 string(0) ""
 string(5) "FOUND"
 string(5) "FOUND"
-
-*** Testing error conditions ***
-Warning: str_replace() expects at least 3 parameters, 0 given in %s on line %d
-NULL
-
-Warning: str_replace() expects at least 3 parameters, 1 given in %s on line %d
-NULL
-
-Warning: str_replace() expects at least 3 parameters, 1 given in %s on line %d
-NULL
-
-Warning: str_replace() expects at least 3 parameters, 2 given in %s on line %d
-NULL
-
-Warning: str_replace() expects at most 4 parameters, 5 given in %s on line %d
-NULL
 Done
