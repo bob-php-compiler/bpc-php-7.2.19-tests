@@ -8,19 +8,6 @@ Test fgetcsv() function : error conditions
 */
 
 echo "*** Testing error conditions ***\n";
-// zero argument
-echo "-- Testing fgetcsv() with zero argument --\n";
-var_dump( fgetcsv() );
-
-// more than expected no. of args
-echo "-- Testing fgetcsv() with more than expected number of arguments --\n";
-$fp = fopen(__FILE__, "r");
-$len = 1024;
-$delim = ";";
-$enclosure ="\"";
-$escape = '"';
-var_dump( fgetcsv($fp, $len, $delim, $enclosure, $escape, $fp) );
-fclose($fp);
 
 // test invalid arguments : non-resources
 echo "-- Testing fgetcsv() with invalid arguments --\n";
@@ -40,16 +27,9 @@ for($loop_counter = 1; $loop_counter <= count($invalid_args); $loop_counter++) {
 }
 
 echo "Done\n";
+?>
 --EXPECTF--
 *** Testing error conditions ***
--- Testing fgetcsv() with zero argument --
-
-Warning: fgetcsv() expects at least 1 parameter, 0 given in %s on line %d
-NULL
--- Testing fgetcsv() with more than expected number of arguments --
-
-Warning: fgetcsv() expects at most 5 parameters, 6 given in %s on line %d
-NULL
 -- Testing fgetcsv() with invalid arguments --
 -- Iteration 1 --
 
