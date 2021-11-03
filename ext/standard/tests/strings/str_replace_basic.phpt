@@ -26,7 +26,7 @@ var_dump( $count );
 var_dump( str_replace("long string here", "", "", $count) );
 var_dump( $count );
 
-$fp = fopen( __FILE__, "r" );
+$fp = fopen( '/proc/self/comm', "r" );
 $fp_copy = $fp;
 var_dump( str_replace($fp_copy, $fp_copy, $fp_copy, $fp_copy) );
 var_dump( $fp_copy );
