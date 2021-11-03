@@ -4,7 +4,7 @@ Test str_replace() function and array refs
 precision=14
 --FILE--
 <?php
-$data = ['a' => 'b', 'numeric' => 1];
+$data = array('a' => 'b', 'numeric' => 1);
 $ref = &$data;
 $b = &$ref['a'];
 $numeric = &$ref['numeric'];

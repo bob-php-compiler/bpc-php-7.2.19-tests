@@ -14,12 +14,12 @@ $closure = function (array $array, array $keys, $value)
 class SomeClass { public $prop; }
 
 $obj = new SomeClass;
-$obj->prop = ['x' => 'property'];
-$obj->prop = $closure($obj->prop, ['x'], 'a');
+$obj->prop = array('x' => 'property');
+$obj->prop = $closure($obj->prop, array('x'), 'a');
 var_dump(str_replace(array_keys($obj->prop), $obj->prop, "x property"));
 
-$array = ['x' => 'property'];
-$array = $closure($array, ['x'], 'a');
+$array = array('x' => 'property');
+$array = $closure($array, array('x'), 'a');
 var_dump(str_replace(array_keys($array), $array, "x property"));
 --EXPECTF--
 string(10) "a property"
