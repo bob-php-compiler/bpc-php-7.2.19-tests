@@ -2,7 +2,6 @@
 stristr() function
 --FILE--
 <?php
-	var_dump(stristr());
 	var_dump(stristr(array(), ""));
 	var_dump(stristr("", array()));
 	var_dump(stristr(array(), array()));
@@ -19,9 +18,6 @@ stristr() function
 	var_dump(stristr("tEsT sTrInG", " "));
 ?>
 --EXPECTF--
-Warning: stristr() expects at least 2 parameters, 0 given in %s on line %d
-NULL
-
 Warning: stristr() expects parameter 1 to be string, array given in %s on line %d
 NULL
 
