@@ -8,12 +8,13 @@ Test strripos() function : error conditions
 */
 
 echo "*** Testing strripos() function: error conditions ***";
-echo "\n-- With Zero arguments --";
-var_dump( strripos() );
+
+echo "\n-- With less than expected number of arguments --";
+var_dump( strripos("String") );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strripos(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function strripos(): 2 required, 1 provided in %s on line %d
  -- compile-error
