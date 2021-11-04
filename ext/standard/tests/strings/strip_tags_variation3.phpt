@@ -16,7 +16,7 @@ set short_open_tag = on
 echo "*** Testing strip_tags() : usage variations ***\n";
 
 // get a resource
-$fp=fopen(__FILE__, "r");
+$fp=fopen('/proc/self/comm', "r");
 
 // get an unset variable
 $unset_var = 10;
