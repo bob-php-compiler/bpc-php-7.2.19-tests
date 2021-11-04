@@ -12,12 +12,15 @@ Test str_split() function : error conditions
 
 echo "*** Testing str_split() : error conditions ***\n";
 
-// Zero arguments
-echo "-- Testing str_split() function with Zero arguments --\n";
-var_dump( str_split() );
+//Test str_split with one more than the expected number of arguments
+echo "-- Testing str_split() function with more than expected no. of arguments --\n";
+$str = 'This is error testcase';
+$split_length = 4;
+$extra_arg = 10;
+var_dump( str_split( $str, $split_length, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function str_split(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function str_split(): 2 at most, 3 provided in %s on line %d
  -- compile-error
