@@ -16,7 +16,7 @@ strripos() function
 	var_dump(@strripos("", "a"));
 	var_dump(@strripos("\\\\a", "\\a"));
 
-	$fp = fopen(__FILE__, "r");
+	$fp = fopen('/proc/self/comm', "r");
 	var_dump(@strripos("", $fp));
 ?>
 --EXPECT--
