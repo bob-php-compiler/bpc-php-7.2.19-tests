@@ -35,7 +35,7 @@ class sample  {
 }
 
 // creating a file resource
-$file_handle = fopen(__FILE__, 'r');
+$file_handle = fopen('/proc/self/comm', 'r');
 
 
 //array of values to iterate over
