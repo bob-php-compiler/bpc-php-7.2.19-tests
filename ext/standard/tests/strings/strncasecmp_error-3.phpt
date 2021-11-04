@@ -11,15 +11,11 @@ echo "*** Testing strncasecmp() function: error conditions ***\n";
 $str1 = 'string_val';
 $str2 = 'string_val';
 
-echo "\n-- Testing strncasecmp() function with invalid argument --";
-$len = -10;
-var_dump( strncasecmp($str1, $str2, $len) );
-echo "*** Done ***\n";
+echo "\n-- Testing strncasecmp() function with less than expected number of arguments --";
+var_dump( strncasecmp($str1, $str2) );
+
 ?>
 --EXPECTF--
-*** Testing strncasecmp() function: error conditions ***
-
--- Testing strncasecmp() function with invalid argument --
-Warning: Length must be greater than or equal to 0 in %s on line %d
-bool(false)
-*** Done ***
+*** ERROR:compile-error:
+Error: Too few arguments to function strncasecmp(): 3 required, 2 provided in %s on line %d
+ -- compile-error
