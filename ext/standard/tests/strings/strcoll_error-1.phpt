@@ -9,11 +9,11 @@ Test strcoll() function : error conditions
 echo "*** Testing strcoll() : error conditions ***\n";
 
 echo "\n-- Testing strcoll() function with no arguments --\n";
-var_dump( strcoll() );
+var_dump( strcoll("") );
 
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strcoll(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function strcoll(): 2 required, 1 provided in %s on line %d
  -- compile-error

@@ -8,12 +8,13 @@ Test strcoll() function : error conditions
 
 echo "*** Testing strcoll() : error conditions ***\n";
 
-echo "\n-- Testing strcoll() function with no arguments --\n";
-var_dump( strcoll() );
+echo "\n-- Testing strcoll() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( strcoll("Hello World",  "World", $extra_arg) );
 
 ?>
 ===Done===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strcoll(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function strcoll(): 2 at most, 3 provided in %s on line %d
  -- compile-error
