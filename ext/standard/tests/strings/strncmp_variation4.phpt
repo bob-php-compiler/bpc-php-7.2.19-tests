@@ -15,7 +15,7 @@ $unset_var = 'string_val';
 unset($unset_var);
 
 /* get resource handle */
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 /* declaring a class */
 class sample  {
@@ -99,10 +99,6 @@ echo "*** Done ***\n";
 ?>
 --EXPECTF--
 *** Testing strncmp() function: by supplying all types for 'str1' and 'str2' ***
-
-Notice: Undefined variable: undefined_var in %s on line %d
-
-Notice: Undefined variable: unset_var in %s on line %d
 -- Iteration 1 --
 int(0)
 -- Iteration 2 --
