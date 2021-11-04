@@ -12,15 +12,13 @@ Test strncmp() function : error conditions
 echo "*** Testing strncmp() function: error conditions ***\n";
 $str1 = 'string_val';
 $str2 = 'string_val';
+$len = 10;
+$extra_arg = 10;
 
-/* Invalid argument for $len */
-$len = -10;
-var_dump( strncmp($str1, $str2, $len) );
-echo "*** Done ***\n";
+var_dump( strncmp($str1, $str2, $len, $extra_arg) );  //Four arguments, greater than expected no. of args
+
 ?>
 --EXPECTF--
-*** Testing strncmp() function: error conditions ***
-
-Warning: Length must be greater than or equal to 0 in %s on line %d
-bool(false)
-*** Done ***
+*** ERROR:compile-error:
+Error: Too many arguments to function strncmp(): 3 at most, 4 provided in %s on line %d
+ -- compile-error

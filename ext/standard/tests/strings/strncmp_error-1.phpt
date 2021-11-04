@@ -10,17 +10,11 @@ Test strncmp() function : error conditions
 /* Test strncmp() function with more/less number of args and invalid args */
 
 echo "*** Testing strncmp() function: error conditions ***\n";
-$str1 = 'string_val';
-$str2 = 'string_val';
 
-/* Invalid argument for $len */
-$len = -10;
-var_dump( strncmp($str1, $str2, $len) );
-echo "*** Done ***\n";
+var_dump( strncmp() );  //Zero argument
+
 ?>
 --EXPECTF--
-*** Testing strncmp() function: error conditions ***
-
-Warning: Length must be greater than or equal to 0 in %s on line %d
-bool(false)
-*** Done ***
+*** ERROR:compile-error:
+Error: Too few arguments to function strncmp(): 3 required, 0 provided in %s on line %d
+ -- compile-error
