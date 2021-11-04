@@ -15,12 +15,13 @@ Test strspn() function : error conditions
 
 echo "*** Testing strspn() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing strspn() function with Zero arguments --\n";
-var_dump( strspn() );
+// Testing strspn withone less than the expected number of arguments
+echo "\n-- Testing strspn() function with less than expected no. of arguments --\n";
+$str = 'string_val';
+var_dump( strspn($str) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strspn(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function strspn(): 2 required, 1 provided in %s on line %d
  -- compile-error

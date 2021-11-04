@@ -15,12 +15,19 @@ Test strcspn() function : error conditions
 
 echo "*** Testing strcspn() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing strcspn() function with Zero arguments --\n";
-var_dump( strcspn() );
+//Test strcspn with one more than the expected number of arguments
+echo "\n-- Testing strcspn() function with more than expected no. of arguments --\n";
+$str = 'string_val';
+$mask = 'string_val';
+$start = 2;
+$len = 20;
+
+
+$extra_arg = 10;
+var_dump( strcspn($str,$mask,$start,$len, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strcspn(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function strcspn(): 4 at most, 5 provided in %s on line %d
  -- compile-error
