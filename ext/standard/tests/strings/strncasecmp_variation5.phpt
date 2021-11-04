@@ -22,7 +22,7 @@ $unset_var = 'string_val';
 unset($unset_var);
 
 /* get resource handle */
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 /* declaring a class */
 class sample  {
