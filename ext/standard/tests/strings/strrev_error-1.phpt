@@ -8,11 +8,12 @@ Test strrev() function : error conditions
 */
 
 echo "*** Testing strrev() : error conditions ***\n";
-echo "-- Testing strrev() function with Zero arguments --";
-var_dump( strrev() );
+
+echo "\n-- Testing strrev() function with more than expected no. of arguments --";
+var_dump( strrev("string", 'extra_arg') );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strrev(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function strrev(): 1 at most, 2 provided in %s on line %d
  -- compile-error
