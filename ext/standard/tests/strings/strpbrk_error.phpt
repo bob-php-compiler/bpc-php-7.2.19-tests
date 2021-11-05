@@ -11,14 +11,6 @@ Test strpbrk() function : error conditions
 echo "*** Testing strpbrk() : error conditions ***\n";
 
 $haystack = 'This is a Simple text.';
-$char_list = 'string_val';
-$extra_arg = 10;
-
-echo "\n-- Testing strpbrk() function with more than expected no. of arguments --\n";
-var_dump( strpbrk($haystack, $char_list, $extra_arg) );
-
-echo "\n-- Testing strpbrk() function with less than expected no. of arguments --\n";
-var_dump( strpbrk($haystack) );
 
 echo "\n-- Testing strpbrk() function with empty second argument --\n";
 var_dump( strpbrk($haystack, '') );
@@ -31,16 +23,6 @@ var_dump( strpbrk(array('foo', 'bar'), 'b') );
 ===DONE===
 --EXPECTF--
 *** Testing strpbrk() : error conditions ***
-
--- Testing strpbrk() function with more than expected no. of arguments --
-
-Warning: strpbrk() expects exactly 2 parameters, 3 given in %s on line %d
-bool(false)
-
--- Testing strpbrk() function with less than expected no. of arguments --
-
-Warning: strpbrk() expects exactly 2 parameters, 1 given in %s on line %d
-bool(false)
 
 -- Testing strpbrk() function with empty second argument --
 
