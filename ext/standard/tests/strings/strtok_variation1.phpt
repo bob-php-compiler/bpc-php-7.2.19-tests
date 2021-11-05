@@ -27,7 +27,7 @@ class sample  {
 }
 
 // Defining resource
-$file_handle = fopen(__FILE__, 'r');
+$file_handle = fopen('/proc/self/comm', 'r');
 
 // array with different values
 $values =  array (
@@ -101,10 +101,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing strtok() : with first argument as non-string ***
-
-Notice: Undefined variable: undefined_var in %s on line %d
-
-Notice: Undefined variable: unset_var in %s on line %d
 
 --- Testing strtok() by supplying different values for 'str' argument ---
 -- Iteration 1 --
