@@ -11,12 +11,13 @@ Test strlen() function :  error conditions
 echo "*** Testing strlen() : unexpected number of arguments ***";
 
 
-echo "\n-- Testing strlen() function with no arguments --\n";
-var_dump( strlen() );
+echo "\n-- Testing strlen() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( strlen("abc def", $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strlen(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function strlen(): 1 at most, 2 provided in %s on line %d
  -- compile-error
