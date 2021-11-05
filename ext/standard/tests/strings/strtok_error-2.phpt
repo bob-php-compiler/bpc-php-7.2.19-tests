@@ -13,19 +13,16 @@ Test strtok() function : error conditions
 
 echo "*** Testing strtok() : error conditions ***\n";
 
-// Less than expected number of arguments
-echo "\n-- Testing strtok() with less than expected no. of arguments --\n";
-$str = 'string val';
+// More than expected number of arguments
+echo "\n-- Testing strtok() function with more than expected no. of arguments --\n";
+$str = 'sample string';
+$token = ' ';
+$extra_arg = 10;
 
-var_dump( strtok($str));
-var_dump( $str );
+var_dump( strtok($str, $token, $extra_arg) );
 
-echo "Done\n";
 ?>
 --EXPECTF--
-*** Testing strtok() : error conditions ***
-
--- Testing strtok() with less than expected no. of arguments --
-bool(false)
-string(10) "string val"
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function strtok(): 2 at most, 3 provided in %s on line %d
+ -- compile-error

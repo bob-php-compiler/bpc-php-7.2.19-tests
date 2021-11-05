@@ -13,19 +13,12 @@ Test strtok() function : error conditions
 
 echo "*** Testing strtok() : error conditions ***\n";
 
-// Less than expected number of arguments
-echo "\n-- Testing strtok() with less than expected no. of arguments --\n";
-$str = 'string val';
+// Zero argument
+echo "\n-- Testing strtok() function with Zero arguments --\n";
+var_dump( strtok() );
 
-var_dump( strtok($str));
-var_dump( $str );
-
-echo "Done\n";
 ?>
 --EXPECTF--
-*** Testing strtok() : error conditions ***
-
--- Testing strtok() with less than expected no. of arguments --
-bool(false)
-string(10) "string val"
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function strtok(): 1 required, 0 provided in %s on line %d
+ -- compile-error
