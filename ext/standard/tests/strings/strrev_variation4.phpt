@@ -18,7 +18,7 @@ class sample {
 }
 
 //get the resource
-$resource = fopen(__FILE__, "r");
+$resource = fopen('/proc/self/comm', "r");
 
 //get an unset variable
 $unset_var = 10;
