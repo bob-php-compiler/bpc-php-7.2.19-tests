@@ -8,12 +8,15 @@ Test strrchr() function : error conditions
 */
 
 echo "*** Testing strrchr() function: error conditions ***\n";
+$haystack = "Hello";
+$needle = "Hello";
+$extra_arg = "Hello";
 
-echo "\n-- Testing strrchr() function with Zero arguments --";
-var_dump( strrchr() );
+echo "\n-- Testing strrchr() function with more than expected no. of arguments --";
+var_dump( strrchr($haystack, $needle, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function strrchr(): 2 required, 0 provided in %s on line %d
+Error: Too many arguments to function strrchr(): 2 at most, 3 provided in %s on line %d
  -- compile-error
