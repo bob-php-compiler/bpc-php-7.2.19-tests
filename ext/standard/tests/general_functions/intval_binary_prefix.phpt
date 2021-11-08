@@ -6,7 +6,7 @@ Test intval() function with "0b" string prefix
 
 $isspaceChars = " \t\n\r\f\v";
 
-$goodInputs = [
+$goodInputs = array(
     '0b1111111111111111111111111111111',
     '+0b1111111111111111111111111111111',
     '-0b1111111111111111111111111111111',
@@ -20,16 +20,16 @@ $goodInputs = [
     '0b001',
     '0b00100',
     '0b1 1'
-];
+);
 
-$badInputs = [
+$badInputs = array(
     'b101',
     '0b00200',
     '--0b123',
     '++0b123',
     '0bb123',
     '0 b123',
-];
+);
 
 print "--- Good Inputs - Base = 0 ---\n";
 
