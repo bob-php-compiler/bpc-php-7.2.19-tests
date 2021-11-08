@@ -7,14 +7,11 @@ Test dirname() function : error conditions
 */
 echo "*** Testing error conditions ***\n";
 
-// Bad arg
-var_dump( dirname("/var/tmp/bar.gz", 0) );
+// more than expected no. of arguments
+var_dump( dirname("/var/tmp/bar.gz", 1, ".gz") );
 
-echo "Done\n";
 ?>
 --EXPECTF--
-*** Testing error conditions ***
-
-Warning: dirname(): Invalid argument, levels must be >= 1 in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function dirname(): 2 at most, 3 provided in %s on line %d
+ -- compile-error
