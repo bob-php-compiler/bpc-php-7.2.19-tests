@@ -28,7 +28,7 @@ class sample  {
 $sample_obj = new sample;
 
 // creating a file resource
-$file_handle = fopen(__FILE__, 'r');
+$file_handle = fopen('/proc/self/comm', 'r');
 
 // array with different values
 $values =  array (
@@ -104,10 +104,6 @@ echo "Done\n";
 --EXPECTF--
 *** Testing chop() : with unexpected values for str argument ***
 
-Notice: Undefined variable: undefined_var in %s on line %d
-
-Notice: Undefined variable: unset_var in %s on line %d
-
 --- Testing chop() by supplying different values for 'str' argument ---
 -- Iteration 1 --
 string(1) "0"
@@ -138,38 +134,38 @@ string(3) "0.5"
 string(2) "0."
 -- Iteration 10 --
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 -- Iteration 11 --
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 -- Iteration 12 --
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 -- Iteration 13 --
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 -- Iteration 14 --
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 
-Warning: chop() expects parameter 1 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, array given in %s on line %d
 NULL
 -- Iteration 15 --
 string(1) "1"
@@ -206,9 +202,9 @@ string(16) " @#$%Object @#$%"
 string(11) " @#$%Object"
 -- Iteration 26 --
 
-Warning: chop() expects parameter 1 to be string, resource given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, resource given in %s on line %d
 NULL
 
-Warning: chop() expects parameter 1 to be string, resource given in %s on line %d
+Warning: rtrim() expects parameter 1 to be string, resource given in %s on line %d
 NULL
 Done

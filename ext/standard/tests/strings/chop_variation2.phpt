@@ -27,7 +27,7 @@ class sample  {
 }
 
 // defining a resource
-$file_handle = fopen(__FILE__, 'r');
+$file_handle = fopen('/proc/self/comm', 'r');
 
 // array with different values
 $values =  array (
@@ -103,10 +103,6 @@ echo "Done\n";
 --EXPECTF--
 *** Testing chop() : with different unexpected values for charlist argument ***
 
-Notice: Undefined variable: undefined_var in %s on line %d
-
-Notice: Undefined variable: unset_var in %s on line %d
-
 --- Testing chop() by supplying different values for 'charlist' argument ---
 -- Iteration 1 --
 string(17) "hello world12345 "
@@ -128,23 +124,23 @@ string(17) "hello world12345 "
 string(17) "hello world12345 "
 -- Iteration 10 --
 
-Warning: chop() expects parameter 2 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 2 to be string, array given in %s on line %d
 NULL
 -- Iteration 11 --
 
-Warning: chop() expects parameter 2 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 2 to be string, array given in %s on line %d
 NULL
 -- Iteration 12 --
 
-Warning: chop() expects parameter 2 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 2 to be string, array given in %s on line %d
 NULL
 -- Iteration 13 --
 
-Warning: chop() expects parameter 2 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 2 to be string, array given in %s on line %d
 NULL
 -- Iteration 14 --
 
-Warning: chop() expects parameter 2 to be string, array given in %s on line %d
+Warning: rtrim() expects parameter 2 to be string, array given in %s on line %d
 NULL
 -- Iteration 15 --
 string(17) "hello world12345 "
@@ -166,7 +162,7 @@ string(17) "hello world12345 "
 string(17) "hello world12345 "
 -- Iteration 24 --
 
-Warning: chop() expects parameter 2 to be string, resource given in %s on line %d
+Warning: rtrim() expects parameter 2 to be string, resource given in %s on line %d
 NULL
 -- Iteration 25 --
 string(17) "hello world12345 "
