@@ -10,12 +10,14 @@ Test base64_encode() function : error conditions - wrong number of args
 
 echo "*** Testing base64_encode() : error conditions - wrong number of args ***\n";
 
-// Zero arguments
-echo "\n-- Testing base64_encode() function with Zero arguments --\n";
-var_dump( base64_encode() );
+//Test base64_encode with one more than the expected number of arguments
+echo "\n-- Testing base64_encode() function with more than expected no. of arguments --\n";
+$str = 'string_val';
+$extra_arg = 10;
+var_dump( base64_encode($str, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function base64_encode(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function base64_encode(): 1 at most, 2 provided in %s on line %d
  -- compile-error
