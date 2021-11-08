@@ -8,7 +8,7 @@ Test base64_decode() function : usage variations  - unexpected types for arg 1
  * Alias to functions:
  */
 
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	echo "Error: $err_no - $err_msg, $filename($linenum)\n";
 }
 set_error_handler('test_error_handler');
@@ -19,7 +19,7 @@ echo "*** Testing base64_decode() : usage variations ***\n";
 $strict = true;
 
 //getting the resource
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 //get an unset variable
 $unset_var = 10;
@@ -91,8 +91,6 @@ foreach($values as $key=>$value) {
 ===Done===
 --EXPECTF--
 *** Testing base64_decode() : usage variations ***
-Error: 8 - Undefined variable: undefined_var, %s(%d)
-Error: 8 - Undefined variable: unset_var, %s(%d)
 
 -- Arg value 0 --
 bool(false)
