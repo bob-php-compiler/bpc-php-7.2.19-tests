@@ -1,5 +1,7 @@
 --TEST--
 Test utf8_encode() function : error conditions
+--SKIPIF--
+skip TODO XML Parser
 --FILE--
 <?php
 /* Prototype  : proto string utf8_encode(string data)
