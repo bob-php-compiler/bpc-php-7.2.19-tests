@@ -11,7 +11,7 @@ Test base64_encode() function : usage variations - unexpected types for argument
 echo "*** Testing base64_encode() : usage variations ***\n";
 
 
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	echo "Error: $err_no - $err_msg, $filename($linenum)\n";
 }
 set_error_handler('test_error_handler');
@@ -80,8 +80,6 @@ echo "Done";
 ?>
 --EXPECTF--
 *** Testing base64_encode() : usage variations ***
-Error: 8 - Undefined variable: undefined_var, %s(63)
-Error: 8 - Undefined variable: unset_var, %s(66)
 
 Arg value 0 
 string(4) "MA=="
