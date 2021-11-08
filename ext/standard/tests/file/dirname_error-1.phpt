@@ -12,13 +12,15 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 
 echo "*** Testing dirname() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing dirname() function with Zero arguments --\n";
-var_dump( dirname() );
+//Test dirname with one more than the expected number of arguments
+echo "\n-- Testing dirname() function with more than expected no. of arguments --\n";
+$path = 'string_val';
+$extra_arg = 10;
+var_dump( dirname($path, 1, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function dirname(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function dirname(): 2 at most, 3 provided in %s on line %d
  -- compile-error
