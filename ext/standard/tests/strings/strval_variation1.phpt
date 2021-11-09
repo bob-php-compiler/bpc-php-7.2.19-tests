@@ -16,7 +16,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 //getting the resource
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 class MyClass
 {
