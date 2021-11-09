@@ -8,11 +8,6 @@ Test basename() function : error conditions
                 If the filename ends in suffix this will also be cut off.
 */
 echo "*** Testing error conditions ***\n";
-// zero arguments
-var_dump( basename() );
-
-// more than expected no. of arguments
-var_dump( basename("/var/tmp/bar.gz", ".gz", ".gz") );
 
 // passing invalid type arguments
 $object = new stdclass;
@@ -28,12 +23,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing error conditions ***
-
-Warning: basename() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: basename() expects at most 2 parameters, 3 given in %s on line %d
-NULL
 
 Warning: basename() expects parameter 1 to be string, array given in %s on line %d
 NULL
