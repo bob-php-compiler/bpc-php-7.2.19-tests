@@ -2,9 +2,6 @@
 default_charset and htmlentities/htmlspecialchars/html_entity_decode
 --INI--
 default_charset=UTF-8
-internal_encoding=
-input_encoding=
-output_encoding=
 --FILE--
 <?php
 echo "*** Default php.ini value ***\n";
@@ -66,37 +63,37 @@ echo "Done\n";
 --EXPECT--
 *** Default php.ini value ***
 string(5) "UTF-8"
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
+bool(false)
 *** Runtime change of default_charset ***
 string(5) "UTF-8"
 *** Test with updated default_charset ***
 string(6) "cp1252"
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
+bool(false)
 string(7) "&pound;"
 string(7) "&pound;"
 string(2) "a3"
 string(2) "a3"
 *** Change internal_encoding to empty ***
-string(0) ""
+bool(false)
 string(6) "cp1252"
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
+bool(false)
 string(7) "&pound;"
 string(7) "&pound;"
 string(2) "a3"
 string(2) "a3"
 *** Update input/output_encoding ***
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
 string(6) "cp1252"
-string(0) ""
-string(10) "ISO-8859-1"
-string(10) "ISO-8859-1"
+bool(false)
+bool(false)
+bool(false)
 string(7) "&pound;"
 string(7) "&pound;"
 string(2) "a3"
