@@ -1,5 +1,7 @@
 --TEST--
 Bug #49687 Several utf8_decode deficiencies and vulnerabilities
+--SKIPIF--
+skip TODO XML Parser
 --FILE--
 <?php
 
