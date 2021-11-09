@@ -684,6 +684,8 @@
 
     bpc strict argnum, @see ext/standard/tests/file/fscanf_variation14.phpt
 
+17. get_defined_constants() order different
+
 ## ext/date
 
 1. ini_set date.timezone warning message

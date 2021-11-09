@@ -11,21 +11,24 @@ Test parse_url() function : check values of URL related constants
 /*
  *  check values of URL related constants
  */
-foreach(get_defined_constants() as $constantName => $constantValue) {
-	if (strpos($constantName, 'PHP_URL')===0) {
-		echo "$constantName: $constantValue \n";
-	}
-}
+echo "PHP_URL_SCHEME: ", PHP_URL_SCHEME, PHP_EOL;
+echo "PHP_URL_HOST: ", PHP_URL_HOST, PHP_EOL;
+echo "PHP_URL_PORT: ", PHP_URL_PORT, PHP_EOL;
+echo "PHP_URL_USER: ", PHP_URL_USER, PHP_EOL;
+echo "PHP_URL_PASS: ", PHP_URL_PASS, PHP_EOL;
+echo "PHP_URL_PATH: ", PHP_URL_PATH, PHP_EOL;
+echo "PHP_URL_QUERY: ", PHP_URL_QUERY, PHP_EOL;
+echo "PHP_URL_FRAGMENT: ", PHP_URL_FRAGMENT, PHP_EOL;
 
 echo "Done";
 ?>
 --EXPECTF--
-PHP_URL_SCHEME: 0 
-PHP_URL_HOST: 1 
-PHP_URL_PORT: 2 
-PHP_URL_USER: 3 
-PHP_URL_PASS: 4 
-PHP_URL_PATH: 5 
-PHP_URL_QUERY: 6 
-PHP_URL_FRAGMENT: 7 
+PHP_URL_SCHEME: 0
+PHP_URL_HOST: 1
+PHP_URL_PORT: 2
+PHP_URL_USER: 3
+PHP_URL_PASS: 4
+PHP_URL_PATH: 5
+PHP_URL_QUERY: 6
+PHP_URL_FRAGMENT: 7
 Done
