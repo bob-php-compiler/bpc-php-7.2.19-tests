@@ -1,5 +1,7 @@
 --TEST--
 highlight_file() tests
+--SKIPIF--
+skip no highlight_file() highlight_string() php_strip_whitespace()
 --INI--
 highlight.string=#DD0000
 highlight.comment=#FF9900
@@ -21,12 +23,12 @@ var_dump(highlight_file('data:,<?php echo "test"; ?>'));
 var_dump(highlight_file('data:,<?php echo "test ?>'));
 
 $data = '
-<?php 
- class test { 
-	 public $var = 1; 
+<?php
+ class test {
+	 public $var = 1;
 	 private function foo() { echo "foo"; }
 	 public function bar() { var_dump(test::foo()); }
- }  
+ }
 ?>';
 
 file_put_contents($filename, $data);

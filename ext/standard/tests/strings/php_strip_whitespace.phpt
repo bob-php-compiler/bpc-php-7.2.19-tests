@@ -1,5 +1,7 @@
 --TEST--
 php_strip_whitespace() tests
+--SKIPIF--
+skip no highlight_file() highlight_string() php_strip_whitespace()
 --FILE--
 <?php
 

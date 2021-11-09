@@ -1,5 +1,7 @@
 --TEST--
 Test function show_source() by calling it with its expected arguments, more test for highlight_file()
+--SKIPIF--
+skip no highlight_file() highlight_string() php_strip_whitespace()
 --CREDITS--
 Francesco Fullone ff@ideato.it
 #PHPTestFest Cesena Italia on 2009-06-20
