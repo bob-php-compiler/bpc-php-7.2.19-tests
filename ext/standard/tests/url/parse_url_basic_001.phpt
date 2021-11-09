@@ -1,5 +1,7 @@
 --TEST--
 Test parse_url() function: Parse a load of URLs without specifying the component
+--ARGS--
+--bpc-include-file ext/standard/tests/url/urls.inc \
 --FILE--
 <?php
 /* Prototype  : proto mixed parse_url(string url, [int url_component])
