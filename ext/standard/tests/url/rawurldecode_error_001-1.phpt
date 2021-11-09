@@ -12,12 +12,14 @@ Test rawurldecode() function : error conditions - wrong number of args
 
 echo "*** Testing rawurldecode() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing rawurldecode() function with Zero arguments --\n";
-var_dump( rawurldecode() );
+//Test rawurldecode with one more than the expected number of arguments
+echo "\n-- Testing rawurldecode() function with more than expected no. of arguments --\n";
+$str = 'string_val';
+$extra_arg = 10;
+var_dump( rawurldecode($str, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function rawurldecode(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function rawurldecode(): 1 at most, 2 provided in %s on line %d
  -- compile-error

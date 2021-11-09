@@ -12,12 +12,14 @@ Test urlencode() function : error conditions
 
 echo "*** Testing urlencode() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing urlencode() function with Zero arguments --\n";
-var_dump( urlencode() );
+//Test urlencode with one more than the expected number of arguments
+echo "\n-- Testing urlencode() function with more than expected no. of arguments --\n";
+$str = 'string_val';
+$extra_arg = 10;
+var_dump( urlencode($str, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function urlencode(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function urlencode(): 1 at most, 2 provided in %s on line %d
  -- compile-error

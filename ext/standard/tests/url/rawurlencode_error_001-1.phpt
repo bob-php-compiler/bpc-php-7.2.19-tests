@@ -12,12 +12,14 @@ Test rawurlencode() function : error conditions
 
 echo "*** Testing rawurlencode() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing rawurlencode() function with Zero arguments --\n";
-var_dump( rawurlencode() );
+//Test rawurlencode with one more than the expected number of arguments
+echo "\n-- Testing rawurlencode() function with more than expected no. of arguments --\n";
+$str = 'string_val';
+$extra_arg = 10;
+var_dump( rawurlencode($str, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function rawurlencode(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function rawurlencode(): 1 at most, 2 provided in %s on line %d
  -- compile-error
