@@ -8,7 +8,7 @@ Test pathinfo() function: usage variations
 
 echo "*** Testing pathinfo() with miscelleneous input arguments ***\n";
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 unset($fp);
 
 class object_temp {
@@ -92,8 +92,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing pathinfo() with miscelleneous input arguments ***
-
-Notice: Undefined variable: fp in %s on line %d
 -- Iteration 1 --
 array(3) {
   ["dirname"]=>
