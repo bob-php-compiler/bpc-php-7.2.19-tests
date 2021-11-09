@@ -1,5 +1,7 @@
 --TEST--
 UTF-8<->ISO Latin 1 encoding/decoding test
+--SKIPIF--
+skip TODO XML Parser
 --FILE--
 <?php
 printf("%s -> %s\n", urlencode("æ"), urlencode(utf8_encode("æ")));
