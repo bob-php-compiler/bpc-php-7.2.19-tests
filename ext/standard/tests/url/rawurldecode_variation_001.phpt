@@ -10,7 +10,7 @@ Test rawurldecode() function : usage variations  - unexpected type for arg 1.
 
 // NB: basic functionality tested in tests/strings/001.phpt
 
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	echo "Error: $err_no - $err_msg, $filename($linenum)\n";
 }
 set_error_handler('test_error_handler');
@@ -81,8 +81,6 @@ echo "Done";
 ?>
 --EXPECTF--
 *** Testing rawurldecode() : usage variations ***
-Error: 8 - Undefined variable: undefined_var, %s(64)
-Error: 8 - Undefined variable: unset_var, %s(67)
 
 Arg value 0 
 string(1) "0"
