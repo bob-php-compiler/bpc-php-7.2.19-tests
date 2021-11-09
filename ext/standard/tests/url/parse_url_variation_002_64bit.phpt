@@ -10,7 +10,7 @@ Test parse_url() function : usage variations  - unexpected type for arg 2.
  * Alias to functions:
  */
 
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	echo "Error: $err_no - $err_msg, $filename($linenum)\n";
 }
 set_error_handler('test_error_handler');
@@ -80,8 +80,6 @@ echo "Done";
 ?>
 --EXPECTF--
 *** Testing parse_url() : usage variations ***
-Error: 8 - Undefined variable: undefined_var, %s(61)
-Error: 8 - Undefined variable: unset_var, %s(64)
 
 Arg value 10.5 
 Error: 2 - parse_url(): Invalid URL component identifier 10, %s(71)
