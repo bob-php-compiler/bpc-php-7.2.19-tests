@@ -1,5 +1,7 @@
 --TEST--
 highlight_file() and output buffer
+--SKIPIF--
+skip no highlight_file() highlight_string() php_strip_whitespace()
 --INI--
 log_errors_max_len=4096
 --FILE--

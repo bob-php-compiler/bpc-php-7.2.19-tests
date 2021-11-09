@@ -1,5 +1,7 @@
 --TEST--
 highlight_string(), output buffer and error level
+--SKIPIF--
+skip no highlight_file() highlight_string() php_strip_whitespace()
 --INI--
 error_reporting=8192
 --FILE--
