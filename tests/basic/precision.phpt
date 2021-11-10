@@ -78,6 +78,7 @@ echo join($v, ' ').PHP_EOL;
 var_dump(serialize($v));
 var_export($v);echo PHP_EOL;
 --EXPECT--
+Warning: truncate literal float '123456789.012345678901234567890' to '123456789.01234567', use string may avoid truncate
 INI
 -1
 -1

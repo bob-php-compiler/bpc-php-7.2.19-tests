@@ -483,6 +483,10 @@
 
     `'A'::$prop` will parse error
 
+43. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+
+    @see ext/standard/tests/strings/bug47168.phpt
+
 **misc**
 
 1. TODO

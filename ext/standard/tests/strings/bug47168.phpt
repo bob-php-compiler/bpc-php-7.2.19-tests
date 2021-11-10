@@ -3,7 +3,7 @@ Bug #47168 (printf of floating point variable prints maximum of 40 decimal place
 --FILE--
 <?php
 
-$dyadic = 0.00000000000045474735088646411895751953125;
+$dyadic = "0.00000000000045474735088646411895751953125";
 var_dump(printf ("%1.41f\n",unserialize(serialize($dyadic))));
 
 ?>

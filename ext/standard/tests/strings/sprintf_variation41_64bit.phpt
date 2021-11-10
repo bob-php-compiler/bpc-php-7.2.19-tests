@@ -53,6 +53,7 @@ foreach($float_values as $float_value) {
 echo "Done";
 ?>
 --EXPECTF--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
 *** Testing sprintf() : unsigned formats with float values ***
 
 -- Iteration 1 --

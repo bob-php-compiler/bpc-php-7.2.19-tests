@@ -36,6 +36,7 @@ foreach ($doubles as $d) {
 echo "Done\n";
 ?>
 --EXPECTF--
+Warning: truncate literal float '0.12345678901234567890' to '0.12345678901234568', use string may avoid truncate
 string(7) "2.9E+37"
 string(18) "290000000000000000"
 string(15) "290000000000000"

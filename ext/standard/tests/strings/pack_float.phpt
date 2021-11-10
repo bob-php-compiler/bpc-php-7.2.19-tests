@@ -114,6 +114,14 @@ var_dump(
 );
 ?>
 --EXPECTF--
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
+Warning: truncate literal float '12345678901234567890.1234567898765432123456789' to '1.2345678901234567e19', use string may avoid truncate
 string(6) "pack e"
 string(16) "0000000000000000"
 string(16) "0000000000000000"

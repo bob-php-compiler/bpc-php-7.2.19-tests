@@ -13,4 +13,6 @@ class Sub extends Base {
 }
 ?>
 --EXPECTF--
+Warning: truncate literal float '3.141592653589793238462643383279502884197169399375105' to '3.141592653589793', use string may avoid truncate
+
 Warning: Declaration of Sub::test($foo, array &$bar) should be compatible with Base::test($foo, array &$bar, $option = NULL, $extra = 3.1415926535898) in %sargument_restriction_002.php on line %d
