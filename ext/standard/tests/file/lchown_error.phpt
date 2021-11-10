@@ -5,7 +5,7 @@ Test lchown() function : error functionality
 if (substr(PHP_OS, 0, 3) == 'WIN') die('skip no windows support');
 if (!function_exists("posix_getuid")) die("skip no posix_getuid()");
 // Skip if being run by root
-$filename = dirname(__FILE__)."/is_readable_root_check.tmp";
+$filename = "is_readable_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -25,16 +25,10 @@ unlink($filename);
 echo "*** Testing lchown() : error functionality ***\n";
 
 // Set up
-$filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'lchown.txt';
+$filename = 'lchown.txt';
 touch( $filename );
 $uid = posix_getuid();
 
-
-// Less than expected arguments
-var_dump( lchown( $filename ) );
-
-// More than expected arguments
-var_dump( lchown( $filename, $uid, 'foobar' ) );
 
 // Non-existent filename
 var_dump( lchown( 'foobar_lchown.txt', $uid ) );
@@ -51,27 +45,21 @@ var_dump( lchown( $filename, -5 ) );
 --CLEAN--
 <?php
 
-$filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'lchown.txt';
+$filename = 'lchown.txt';
 unlink($filename);
 
 ?>
 --EXPECTF--
 *** Testing lchown() : error functionality ***
 
-Warning: lchown() expects exactly 2 parameters, 1 given in %s on line %d
-bool(true)
-
-Warning: lchown() expects exactly 2 parameters, 3 given in %s on line %d
-bool(true)
-
 Warning: lchown(): No such file or directory in %s on line %d
 bool(false)
 
 Warning: lchown() expects parameter 1 to be a valid path, object given in %s on line %d
-bool(true)
+NULL
 
 Warning: lchown() expects parameter 1 to be a valid path, array given in %s on line %d
-bool(true)
+NULL
 
 Warning: lchown(): %r(Operation not permitted|Invalid argument)%r in %s on line %d
 bool(false)
