@@ -7,5 +7,6 @@ if ($res === '*0' || $res === '*1') echo 'OK';
 else echo 'Not OK';
 
 ?>
---EXPECT--
+--EXPECTF--
+Warning: crypt(): salt '_' has the wrong format in %s on line 2
 OK
