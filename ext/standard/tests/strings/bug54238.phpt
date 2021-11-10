@@ -1,9 +1,10 @@
 --TEST--
 Bug #54238 (use-after-free in substr_replace())
 --INI--
-error_reporting=E_ALL&~E_NOTICE
+error_reporting=32759
 --FILE--
 <?php
+// E_ALL&~E_NOTICE = 32759
 $f = array(array('A', 'A'));
 
 $z = substr_replace($f, $f, $f, 1);
