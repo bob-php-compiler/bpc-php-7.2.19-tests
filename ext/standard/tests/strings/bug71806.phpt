@@ -1,5 +1,7 @@
 --TEST--
 Bug #71806 (php_strip_whitespace() fails on some numerical values)
+--SKIPIF--
+skip no highlight_file() highlight_string() php_strip_whitespace()
 --FILE--
 <?php
 
