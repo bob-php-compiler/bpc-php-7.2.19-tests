@@ -21,8 +21,13 @@ var_dump(crypt($pass, $salt));
 
 ?>
 ==OK==
---EXPECT--
-string(60) "$2y$07$usesomesillystringforex.u2VJUMLRWaJNuw0Hu2FvCEimdeYVO"
-string(60) "$2y$07$usesomesillystringforex.u2VJUMLRWaJNuw0Hu2FvCEimdeYVO"
-string(60) "$2y$07$usesomesillystringforuw2Gm1ef7lMsvtzSK2p/14F0q1e8uOCO"
+--EXPECTF--
+Warning: crypt(): salt '$2y$07$usesomesillystringforsalt$' has the wrong format in %s on line 5
+string(2) "*0"
+
+Warning: crypt(): salt '$2y$07$usesomesillystringforsaltzzzzzzzzzzzzz$' has the wrong format in %s on line 8
+string(2) "*0"
+
+Warning: crypt(): salt '$2y$07$usesomesillystringforx' has the wrong format in %s on line 11
+string(2) "*0"
 ==OK==
