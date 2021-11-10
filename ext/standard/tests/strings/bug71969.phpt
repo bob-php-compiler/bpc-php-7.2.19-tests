@@ -6,10 +6,9 @@ $a = array(
 	array("one" => array("a"=>"0000", "b"=>"1111")),
 );
 
-//foreach by reference, changing the array value
-foreach($a as &$record)
+foreach($a as $idx => $record)
 {
-	$record["one"]["a"] = "2222";
+	$a[$idx]["one"]["a"] = "2222";
 }
 var_dump(str_replace("2", "3", $a));
 ?>
