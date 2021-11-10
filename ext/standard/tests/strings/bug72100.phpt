@@ -6,9 +6,9 @@ if (PHP_INT_SIZE != 8) die("skip this test is for 64bit platform only");
 ?>
 --FILE--
 <?php
-var_dump( implode(" ", ["hello long", 999999999999999999, PHP_INT_MAX]));
-var_dump( implode(" ", ["hello negative long", -999999999999999999, PHP_INT_MIN] ) );
-var_dump( implode(" ", ["hello small long", -101, -100, -99, -90, -11, -10, -9, -1, 0, 1, 2, 9, 10, 11, 90, 99, 100, 101] ) );
+var_dump( implode(" ", array("hello long", 999999999999999999, PHP_INT_MAX)));
+var_dump( implode(" ", array("hello negative long", -999999999999999999, PHP_INT_MIN) ) );
+var_dump( implode(" ", array("hello small long", -101, -100, -99, -90, -11, -10, -9, -1, 0, 1, 2, 9, 10, 11, 90, 99, 100, 101) ) );
 echo "Done\n";
 ?>
 --EXPECT--
