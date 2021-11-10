@@ -4,6 +4,8 @@ Default precision is sufficient to serialize all the information in floats
 <?php
 if (pack('s', 1) != "\x01\x00")
 	die("skip test for little-endian architectures");
+--INI--
+serialize_precision=17
 --FILE--
 <?php
 
