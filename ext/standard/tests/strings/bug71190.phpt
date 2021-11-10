@@ -2,7 +2,7 @@
 Bug #71190 (substr_replace converts integers in original $search array to strings)
 --FILE--
 <?php
-$b = [0, 1, 2];
+$b = array(0, 1, 2);
 
 var_dump($b);
 substr_replace("test", $b, "1");
