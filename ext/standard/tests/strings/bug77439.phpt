@@ -2,7 +2,7 @@
 Bug #77439: parse_str segfaults when inserting item into existing array
 --FILE--
 <?php
-$a = [];
+$a = array();
 parse_str('a[1]=1');
 var_dump($a);
 ?>
