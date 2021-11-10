@@ -1,5 +1,7 @@
 --TEST--
 Bug #72433: Use After Free Vulnerability in PHP's GC algorithm and unserialize
+--SKIPIF--
+skip TODO ArrayObject
 --FILE--
 <?php
 // Fill any potential freed spaces until now.
