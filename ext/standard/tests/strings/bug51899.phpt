@@ -1,5 +1,7 @@
 --TEST--
 Bug #51899 (Parse error in parse_ini_file() function when empy value followed by no newline)
+--SKIPIF--
+skip TODO parse_ini_string()
 --FILE--
 <?php
 
