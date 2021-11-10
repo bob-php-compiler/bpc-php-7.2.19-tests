@@ -1,5 +1,7 @@
 --TEST--
 Bug #61116 (HTML functions use encoding, not charset)
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 Reflection::export(new ReflectionFunction('htmlspecialchars'));
