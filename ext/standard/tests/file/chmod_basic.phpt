@@ -11,7 +11,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 define("MODE_MASK", 07777);
 
-$filename = __FILE__ . ".tmp";
+$filename = "chmod_basic.tmp";
 
 $fd = fopen($filename, "w+");
 fclose($fd);

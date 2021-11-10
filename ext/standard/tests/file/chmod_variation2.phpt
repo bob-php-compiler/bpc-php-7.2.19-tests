@@ -11,12 +11,12 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 define("PERMISSIONS_MASK", 0777);
 
-$script_directory = dirname(__FILE__);
+$script_directory = '.';
 chdir($script_directory);
 $test_dirname = basename(__FILE__, ".php") . "testdir";
 mkdir($test_dirname);
 
-$filepath = __FILE__ . ".tmp";
+$filepath = "chmod_variation2.tmp";
 $filename = basename($filepath);
 $fd = fopen($filepath, "w+");
 fclose($fd);
@@ -47,8 +47,8 @@ chdir($test_dirname);
 var_dump(chmod("../$filename", 0777));
 var_dump(chmod("../$filename", 0755));
 clearstatcache();
-printf("%o\n", fileperms($filepath) & PERMISSIONS_MASK);
-chdir($script_directory);
+printf("%o\n", fileperms("../$filepath") & PERMISSIONS_MASK);
+chdir('..');
 
 echo "\nchmod() on a directory with a trailing /\n";
 var_dump(chmod($test_dirname, 0777));
@@ -56,7 +56,7 @@ var_dump(chmod("$test_dirname/", 0775));
 clearstatcache();
 printf("%o\n", fileperms($filepath) & PERMISSIONS_MASK);
 
-chdir($script_directory);
+chdir('.');
 rmdir($test_dirname);
 unlink($filepath);
 
