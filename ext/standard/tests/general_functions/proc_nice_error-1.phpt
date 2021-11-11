@@ -8,15 +8,11 @@ if(!function_exists('proc_nice')) die("skip. proc_nice not available ");
 <?php
 echo "*** Test by calling method or function with incorrect numbers of arguments ***\n";
 
-$priority = 1;
-
-$extra_arg = 1;
-
-var_dump(proc_nice( $priority, $extra_arg) );
+var_dump(proc_nice(  ) );
 
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function proc_nice(): 1 at most, 2 provided in %s line %d
+Error: Too few arguments to function proc_nice(): 1 required, 0 provided in %s line %d
  -- compile-error
