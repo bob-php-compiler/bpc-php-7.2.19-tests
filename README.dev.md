@@ -690,6 +690,10 @@
 
 17. get_defined_constants() order different
 
+18. no statcache
+
+    clearstatcache() simply return NULL, do nothing
+
 ## ext/date
 
 1. ini_set date.timezone warning message

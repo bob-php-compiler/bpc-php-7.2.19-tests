@@ -9,35 +9,35 @@ if (strncmp(PHP_OS, "WIN", 3) === 0) {
 --FILE--
 <?php
 
-@rmdir(__FILE__ . "_dir1");
-@rmdir(__FILE__ . "_dir2");
-@unlink(__FILE__ . "_link1");
-@unlink(__FILE__ . "_link2");
+@rmdir("clearstatcache_001_dir1");
+@rmdir("clearstatcache_001_dir2");
+@unlink("clearstatcache_001_link1");
+@unlink("clearstatcache_001_link2");
 
-mkdir(__FILE__ . "_dir1");
-mkdir(__FILE__ . "_dir2");
-symlink(__FILE__ . "_link1", __FILE__ . "_link2");
-symlink(__FILE__ . "_dir1", __FILE__ . "_link1");
+mkdir("clearstatcache_001_dir1");
+mkdir("clearstatcache_001_dir2");
+symlink("clearstatcache_001_link1", "clearstatcache_001_link2");
+symlink("clearstatcache_001_dir1", "clearstatcache_001_link1");
 
-var_dump(realpath(__FILE__ . "_link2"));
-passthru("rm -f " . escapeshellarg(__FILE__ . "_link1"));
-var_dump(realpath(__FILE__ . "_link2"));
+var_dump(realpath("clearstatcache_001_link2"));
+passthru("rm -f " . escapeshellarg("clearstatcache_001_link1"));
+var_dump(realpath("clearstatcache_001_link2"));
 clearstatcache(false);
-var_dump(realpath(__FILE__ . "_link2"));
+var_dump(realpath("clearstatcache_001_link2"));
 clearstatcache(true, "/foo/bar");
-var_dump(realpath(__FILE__ . "_link2"));
-clearstatcache(true, __FILE__ . "_link2");
-clearstatcache(true, __FILE__ . "_link1");
-var_dump(realpath(__FILE__ . "_link2"));
+var_dump(realpath("clearstatcache_001_link2"));
+clearstatcache(true, "clearstatcache_001_link2");
+clearstatcache(true, "clearstatcache_001_link1");
+var_dump(realpath("clearstatcache_001_link2"));
 
-@rmdir(__FILE__ . "_dir1");
-@rmdir(__FILE__ . "_dir2");
-@unlink(__FILE__ . "_link1");
-@unlink(__FILE__ . "_link2");
+@rmdir("clearstatcache_001_dir1");
+@rmdir("clearstatcache_001_dir2");
+@unlink("clearstatcache_001_link1");
+@unlink("clearstatcache_001_link2");
 ?>
 --EXPECTF--
 string(%d) "%s_dir1"
-string(%d) "%s_dir1"
-string(%d) "%s_dir1"
-string(%d) "%s_dir1"
+bool(false)
+bool(false)
+bool(false)
 bool(false)
