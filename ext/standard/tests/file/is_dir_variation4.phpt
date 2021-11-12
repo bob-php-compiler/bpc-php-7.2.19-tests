@@ -9,29 +9,29 @@ Test is_dir() function: usage variations - diff. path notations
 
 /* Passing dir names with different notations, using slashes, wild-card chars */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Testing is_dir() with different notations of dir names ***";
-$dir_name = "/is_dir_variation4";
+$dir_name = "/is-dir-variation4";
 mkdir($file_path.$dir_name);
 
 $dirs_arr = array(
-  "is_dir_variation4",
-  "./is_dir_variation4",
+  "is-dir-variation4",
+  "./is-dir-variation4",
 
   /* Testing a file trailing slash */
-  "is_dir_variation4/",
-  "./is_dir_variation4/",
+  "is-dir-variation4/",
+  "./is-dir-variation4/",
 
   /* Testing file with double trailing slashes */
-  "is_dir_variation4//",
-  "./is_dir_variation4//",
-  ".//is_dir_variation4//",
-  "is_dir_vari*",
+  "is-dir-variation4//",
+  "./is-dir-variation4//",
+  ".//is-dir-variation4//",
+  "is-dir-vari*",
 
   /* Testing Binary safe */
-  "./is_dir_variation4/".chr(0),
-  "is_dir_variation4\0"
+  "./is-dir-variation4/".chr(0),
+  "is-dir-variation4\0"
 );
 
 $count = 1;
