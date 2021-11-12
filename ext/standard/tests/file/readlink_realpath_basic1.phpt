@@ -16,34 +16,34 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 */
 
 /* creating directories, symbolic links and files */
-$file_path = dirname(__FILE__);
-mkdir("$file_path/readlink_realpath_basic1/home/test/", 0777, true);
+$file_path = getcwd();
+mkdir("$file_path/readlink-realpath-basic1/home/test/", 0777, true);
 
-$file_handle1 = fopen("$file_path/readlink_realpath_basic1/home/test/readlink_realpath_basic1.tmp", "w");
-$file_handle2 = fopen("$file_path/readlink_realpath_basic1/home/readlink_realpath_basic1.tmp", "w");
-$file_handle3 = fopen("$file_path/readlink_realpath_basic1/readlink_realpath_basic1.tmp", "w");
+$file_handle1 = fopen("$file_path/readlink-realpath-basic1/home/test/readlink_realpath_basic1.tmp", "w");
+$file_handle2 = fopen("$file_path/readlink-realpath-basic1/home/readlink_realpath_basic1.tmp", "w");
+$file_handle3 = fopen("$file_path/readlink-realpath-basic1/readlink_realpath_basic1.tmp", "w");
 fclose($file_handle1);
 fclose($file_handle2);
 fclose($file_handle3);
 
-symlink("$file_path/readlink_realpath_basic1/home/test/readlink_realpath_basic1.tmp",
-        "$file_path/readlink_realpath_basic1/home/test/readlink_realpath_basic1_link.tmp");
-symlink("$file_path/readlink_realpath_basic1/home/readlink_realpath_basic1.tmp",
-        "$file_path/readlink_realpath_basic1/home/readlink_realpath_basic1_link.tmp");
+symlink("$file_path/readlink-realpath-basic1/home/test/readlink_realpath_basic1.tmp",
+        "$file_path/readlink-realpath-basic1/home/test/readlink_realpath_basic1_link.tmp");
+symlink("$file_path/readlink-realpath-basic1/home/readlink_realpath_basic1.tmp",
+        "$file_path/readlink-realpath-basic1/home/readlink_realpath_basic1_link.tmp");
 
 
 echo "*** Testing readlink() and realpath(): with valid and invalid path ***\n";
 $linknames = array (
   /* linknames resulting in valid paths */
-  "$file_path/readlink_realpath_basic1/home/readlink_realpath_basic1_link.tmp",
-  "$file_path/readlink_realpath_basic1/home/test/readlink_realpath_basic1_link.tmp",
-  "$file_path/readlink_realpath_basic1//home/test//../test/./readlink_realpath_basic1_link.tmp",
+  "$file_path/readlink-realpath-basic1/home/readlink_realpath_basic1_link.tmp",
+  "$file_path/readlink-realpath-basic1/home/test/readlink_realpath_basic1_link.tmp",
+  "$file_path/readlink-realpath-basic1//home/test//../test/./readlink_realpath_basic1_link.tmp",
 
   /* linknames with invalid linkpath */
-  "$file_path///readlink_realpath_basic1/home//..//././test//readlink_realpath_basic1_link.tmp",
-  "$file_path/readlink_realpath_basic1/home/../home/../test/../readlink_realpath_basic1_link.tmp",
-  "$file_path/readlink_realpath_basic1/..readlink_realpath_basic1_link.tmp",
-  "$file_path/readlink_realpath_basic1/home/test/readlink_realpath_basic1_link.tmp/"
+  "$file_path///readlink-realpath-basic1/home//..//././test//readlink_realpath_basic1_link.tmp",
+  "$file_path/readlink-realpath-basic1/home/../home/../test/../readlink_realpath_basic1_link.tmp",
+  "$file_path/readlink-realpath-basic1/..readlink_realpath_basic1_link.tmp",
+  "$file_path/readlink-realpath-basic1/home/test/readlink_realpath_basic1_link.tmp/"
 );
 
 $counter = 1;
@@ -60,7 +60,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$name_prefix = dirname(__FILE__)."/readlink_realpath_basic1";
+$name_prefix = getpwd()."/readlink-realpath-basic1";
 unlink("$name_prefix/home/test/readlink_realpath_basic1.tmp");
 unlink("$name_prefix/home/readlink_realpath_basic1.tmp");
 unlink("$name_prefix/readlink_realpath_basic1.tmp");
@@ -74,16 +74,16 @@ rmdir("$name_prefix/");
 *** Testing readlink() and realpath(): with valid and invalid path ***
 
 -- Iteration 1 --
-string(%d) "%s/readlink_realpath_basic1/home/readlink_realpath_basic1.tmp"
-string(%d) "%s/readlink_realpath_basic1/home/readlink_realpath_basic1.tmp"
+string(%d) "%s/readlink-realpath-basic1/home/readlink_realpath_basic1.tmp"
+string(%d) "%s/readlink-realpath-basic1/home/readlink_realpath_basic1.tmp"
 
 -- Iteration 2 --
-string(%d) "%s/readlink_realpath_basic1/home/test/readlink_realpath_basic1.tmp"
-string(%d) "%s/readlink_realpath_basic1/home/test/readlink_realpath_basic1.tmp"
+string(%d) "%s/readlink-realpath-basic1/home/test/readlink_realpath_basic1.tmp"
+string(%d) "%s/readlink-realpath-basic1/home/test/readlink_realpath_basic1.tmp"
 
 -- Iteration 3 --
-string(%d) "%s/readlink_realpath_basic1/home/test/readlink_realpath_basic1.tmp"
-string(%d) "%s/readlink_realpath_basic1/home/test/readlink_realpath_basic1.tmp"
+string(%d) "%s/readlink-realpath-basic1/home/test/readlink_realpath_basic1.tmp"
+string(%d) "%s/readlink-realpath-basic1/home/test/readlink_realpath_basic1.tmp"
 
 -- Iteration 4 --
 
