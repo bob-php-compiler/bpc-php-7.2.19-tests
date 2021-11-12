@@ -20,10 +20,6 @@ var_dump( getcwd($extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing getcwd() : error conditions ***
-
--- Testing getcwd() function with one argument --
-
-Warning: getcwd() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function getcwd(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
