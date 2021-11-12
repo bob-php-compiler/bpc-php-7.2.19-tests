@@ -12,22 +12,14 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description : Deletes filename
 */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 $filename = "$file_path/unlink_error.tmp";  // temp file name used here
 $fp = fopen($filename, "w");  // create file
 fclose($fp);
 
-// creating a context
-$context = stream_context_create();
-
 echo "*** Testing unlink() : error conditions ***\n";
 
-echo "-- Testing unlink() on unexpected no. of arguments --\n";
-// arg < expected
-var_dump( unlink() );
-// args > expected
-var_dump( unlink($filename, $context, true) );
 var_dump( file_exists($filename) ); // expected true
 
 echo "\n-- Testing unlink() on invalid arguments --\n";
@@ -47,11 +39,11 @@ var_dump( unlink($filename, NULL) );  // $context as NULL
 
 
 echo "\n-- Testing unlink() on non-existent file --\n";
-var_dump( unlink(dirname(__FILE__)."/non_existent_file.tmp") );
+var_dump( unlink("./non_existent_file.tmp") );
 
 echo "\n-- Testing unlink() on directory --\n";
 // temp directory used here
-$dirname = "$file_path/unlink_error";
+$dirname = "$file_path/unlink-error";
 // create temp dir
 mkdir($dirname);
 // unlinking directory
@@ -61,18 +53,11 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/unlink_error.tmp");
-rmdir(dirname(__FILE__)."/unlink_error");
+unlink("unlink_error.tmp");
+rmdir("unlink-error");
 ?>
 --EXPECTF--
 *** Testing unlink() : error conditions ***
--- Testing unlink() on unexpected no. of arguments --
-
-Warning: unlink() expects at least 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: unlink() expects at most 2 parameters, 3 given in %s on line %d
-bool(false)
 bool(true)
 
 -- Testing unlink() on invalid arguments --
@@ -105,6 +90,6 @@ bool(false)
 
 -- Testing unlink() on directory --
 
-Warning: unlink(%s/unlink_error): %s in %s on line %d
+Warning: unlink(%s/unlink-error): %s in %s on line %d
 bool(false)
 Done
