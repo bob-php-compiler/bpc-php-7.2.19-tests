@@ -60,7 +60,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$name_prefix = getpwd()."/readlink-realpath-basic1";
+$name_prefix = getcwd()."/readlink-realpath-basic1";
 unlink("$name_prefix/home/test/readlink_realpath_basic1.tmp");
 unlink("$name_prefix/home/readlink_realpath_basic1.tmp");
 unlink("$name_prefix/readlink_realpath_basic1.tmp");
