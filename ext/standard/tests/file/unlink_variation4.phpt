@@ -8,7 +8,7 @@ Test unlink() function : usage variations - unlink deleted file
 
 /* Try deleting a file which is already deleted */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 // temp file used
 $filename = "$file_path/unlink_variation4.tmp";
