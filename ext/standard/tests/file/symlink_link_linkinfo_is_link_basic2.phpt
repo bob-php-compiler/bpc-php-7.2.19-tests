@@ -21,14 +21,14 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description: Gets information about a link
 */
 
-$file_path = dirname(__FILE__);
+$file_path = getcwd();
 
 echo "*** Testing symlink(), linkinfo(), link() and is_link() : basic functionality ***\n";
 
 /* Creating soft/hard link to the temporary dir $dirname and checking
    linkinfo() and is_link() on the link created to $dirname */
 
-$dirname = "symlink_link_linkinfo_is_link_basic2";
+$dirname = "symlink-link-linkinfo-is-link-basic2";
 mkdir($file_path."/".$dirname);
 
 echo "\n*** Testing symlink(), linkinfo(), link() and is_link() on directory ***\n";
@@ -66,7 +66,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$dirname = dirname(__FILE__)."/symlink_link_linkinfo_is_link_basic2";
+$dirname = getcwd() . "/symlink-link-linkinfo-is-link-basic2";
 rmdir($dirname);
 ?>
 --EXPECTF--

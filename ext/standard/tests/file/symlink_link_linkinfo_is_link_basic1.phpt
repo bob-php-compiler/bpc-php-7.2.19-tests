@@ -21,10 +21,10 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description: Gets information about a link
 */
 
-$file_path = dirname(__FILE__);
+$file_path = getcwd();
 
 // temp dir created in present working directory
-$dirname = "symlink_link_linkinfo_is_link_basic1";
+$dirname = "symlink-link-linkinfo-is-link-basic1";
 mkdir("$file_path/$dirname");  // creating temp dir
 
 /* Creating soft/hard link to $filename created in temp directory $dirname
@@ -85,7 +85,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$dirname = dirname(__FILE__)."/symlink_link_linkinfo_is_link_basic1";
+$dirname = getcwd() . "/symlink-link-linkinfo-is-link-basic1";
 unlink("$dirname/symlink_link_linkinfo_is_link_basic1.tmp");
 rmdir($dirname);
 ?>
