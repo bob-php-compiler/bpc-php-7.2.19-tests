@@ -13,13 +13,14 @@ Test chdir() function : error conditions - Incorrect number of arguments
 
 echo "*** Testing chdir() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing chdir() function with Zero arguments --\n";
-var_dump( chdir() );
-
+//Test chdir with one more than the expected number of arguments
+echo "\n-- Testing chdir() function with more than expected no. of arguments --\n";
+$directory = __FILE__;
+$extra_arg = 10;
+var_dump( chdir($directory, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function chdir(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function chdir(): 1 at most, 2 provided in %s on line %d
  -- compile-error
