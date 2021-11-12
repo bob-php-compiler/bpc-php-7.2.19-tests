@@ -11,29 +11,29 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 
 /* Passing file names with different notations, using slashes, wild-card chars */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Testing fileowner() with different notations of file names ***\n";
-$dir_name = $file_path."/fileowner_variation3";
+$dir_name = $file_path."/fileowner-variation3";
 mkdir($dir_name);
 $file_handle = fopen($dir_name."/fileowner_variation3.tmp", "w");
 fclose($file_handle);
 
 $files_arr = array(
-  "/fileowner_variation3/fileowner_variation3.tmp",
+  "/fileowner-variation3/fileowner_variation3.tmp",
 
   /* Testing a file trailing slash */
-  "/fileowner_variation3/fileowner_variation3.tmp/",
+  "/fileowner-variation3/fileowner_variation3.tmp/",
 
   /* Testing file with double slashes */
-  "/fileowner_variation3//fileowner_variation3.tmp",
-  "//fileowner_variation3//fileowner_variation3.tmp",
-  "/fileowner_variation3/*.tmp",
-  "fileowner_variation3/fileowner*.tmp",
+  "/fileowner-variation3//fileowner_variation3.tmp",
+  "//fileowner-variation3//fileowner_variation3.tmp",
+  "/fileowner-variation3/*.tmp",
+  "fileowner-variation3/fileowner*.tmp",
 
   /* Testing Binary safe */
-  "/fileowner_variation3/fileowner_variation3.tmp".chr(0),
-  "/fileowner_variation3/fileowner_variation3.tmp\0"
+  "/fileowner-variation3/fileowner_variation3.tmp".chr(0),
+  "/fileowner-variation3/fileowner_variation3.tmp\0"
 );
 
 $count = 1;
@@ -49,8 +49,8 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dir_name = $file_path."/fileowner_variation3";
+$file_path = '.';
+$dir_name = $file_path."/fileowner-variation3";
 unlink($dir_name."/fileowner_variation3.tmp");
 rmdir($dir_name);
 ?>
@@ -60,7 +60,7 @@ rmdir($dir_name);
 int(%d)
 - Iteration 2 -
 
-Warning: fileowner(): stat failed for %s//fileowner_variation3/fileowner_variation3.tmp/ in %s on line %d
+Warning: fileowner(): stat failed for %s//fileowner-variation3/fileowner_variation3.tmp/ in %s on line %d
 bool(false)
 - Iteration 3 -
 int(%d)
@@ -68,11 +68,11 @@ int(%d)
 int(%d)
 - Iteration 5 -
 
-Warning: fileowner(): stat failed for %s//fileowner_variation3/*.tmp in %s on line %d
+Warning: fileowner(): stat failed for %s//fileowner-variation3/*.tmp in %s on line %d
 bool(false)
 - Iteration 6 -
 
-Warning: fileowner(): stat failed for %s/fileowner_variation3/fileowner*.tmp in %s on line %d
+Warning: fileowner(): stat failed for %s/fileowner-variation3/fileowner*.tmp in %s on line %d
 bool(false)
 - Iteration 7 -
 
