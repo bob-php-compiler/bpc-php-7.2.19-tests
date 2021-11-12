@@ -6,7 +6,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip.. only on LINUX');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/is_readable_root_check.tmp";
+$filename = "is_readable_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -26,13 +26,13 @@ echo "*** Testing mkdir() and rmdir() for different permissions ***\n";
 
 $context = stream_context_create();
 
-$file_path = dirname(__FILE__);
+$file_path = ".";
 $counter = 1;
 
 for($mode = 0000; $mode <= 0777; $mode++) {
   echo "-- Changing mode of directory to $mode --\n";
-  var_dump( mkdir("$file_path/mkdir_variation1/", $mode, true) );
-  var_dump( rmdir("$file_path/mkdir_variation1/") );
+  var_dump( mkdir("$file_path/mkdirvariation1/", $mode, true) );
+  var_dump( rmdir("$file_path/mkdirvariation1/") );
   $counter++;
 }
 
