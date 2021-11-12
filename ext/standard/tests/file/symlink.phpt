@@ -9,8 +9,8 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 --FILE--
 <?php
 
-$filename = dirname(__FILE__)."/symlink.dat";
-$link = dirname(__FILE__)."/symlink.link";
+$filename = "symlink.dat";
+$link = "symlink.link";
 
 var_dump(symlink($filename, $link));
 var_dump(readlink($link));
@@ -21,7 +21,7 @@ var_dump(readlink($link));
 var_dump(linkinfo($link));
 
 touch($filename);
-var_dump(symlink($filename, dirname(__FILE__)));
+var_dump(symlink($filename, "../file"));
 @unlink($link);
 
 var_dump(symlink($filename, $link));
@@ -46,7 +46,7 @@ echo "Done\n";
 ?>
 --EXPECTF--
 bool(true)
-string(%d) "%ssymlink.dat"
+string(11) "symlink.dat"
 int(%d)
 
 Warning: readlink(): No such file or directory in %s on line %d
