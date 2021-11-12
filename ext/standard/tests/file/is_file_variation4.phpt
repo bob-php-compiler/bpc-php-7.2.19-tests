@@ -9,29 +9,29 @@ Test is_file() function: usage variations - diff. path notations (Bug #42027)
 
 /* Passing file names with different notations, using slashes, wild-card chars */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Testing is_file() with different notations of file names ***\n";
-$dir_name = $file_path."/is_file_variation4";
+$dir_name = $file_path."/is-file-variation4";
 mkdir($dir_name);
 $file_handle = fopen($dir_name."/is_file_variation4.tmp", "w");
 fclose($file_handle);
 
 $files_arr = array(
-  "/is_file_variation4/is_file_variation4.tmp",
+  "/is-file-variation4/is_file_variation4.tmp",
 
   /* Testing a file trailing slash */
-  "/is_file_variation4/is_file_variation4.tmp/",
+  "/is-file-variation4/is_file_variation4.tmp/",
 
   /* Testing file with double slashes */
-  "/is_file_variation4//is_file_variation4.tmp",
-  "//is_file_variation4//is_file_variation4.tmp",
-  "/is_file_variation4/*.tmp",
-  "is_file_variation4/is_file*.tmp",
+  "/is-file-variation4//is_file_variation4.tmp",
+  "//is-file-variation4//is_file_variation4.tmp",
+  "/is-file-variation4/*.tmp",
+  "is-file-variation4/is_file*.tmp",
 
   /* Testing Binary safe */
-  "/is_file_variation4/is_file_variation4.tmp".chr(0),
-  "/is_file_variation4/is_file_variation4.tmp\0"
+  "/is-file-variation4/is_file_variation4.tmp".chr(0),
+  "/is-file-variation4/is_file_variation4.tmp\0"
 );
 
 $count = 1;
@@ -47,8 +47,8 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dir_name = $file_path."/is_file_variation4";
+$file_path = '.';
+$dir_name = $file_path."/is-file-variation4";
 unlink($dir_name."/is_file_variation4.tmp");
 rmdir($dir_name);
 ?>
