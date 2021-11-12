@@ -5,7 +5,7 @@ Test is_readable() function: usage variations - invalid file names
 if (substr(PHP_OS, 0, 3) != 'WIN') {
 
   // Skip if being run by root (files are always readable, writeable and executable)
-  $filename = dirname(__FILE__)."/is_readable_root_check.tmp";
+  $filename = "is_readable_root_check.tmp";
   $fp = fopen($filename, 'w');
   fclose($fp);
   if(fileowner($filename) == 0) {
@@ -25,7 +25,7 @@ if (substr(PHP_OS, 0, 3) != 'WIN') {
 
 echo "*** Testing is_readable(): usage variations ***\n";
 
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 unset($file_handle);
 
 echo "\n*** Testing is_readable() on miscelleneous filenames ***\n";
