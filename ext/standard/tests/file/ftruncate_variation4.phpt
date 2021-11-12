@@ -1,5 +1,7 @@
 --TEST--
 Test ftruncate() function : usage variations - truncate file to negative size
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -33,13 +35,13 @@ foreach($file_content_types as $file_content_type) {
    echo "-- Testing ftruncate() with file opening using $file_modes[$mode_counter] mode --\n";
 
    // create 1 file with some contents
-   $filename = dirname(__FILE__)."/ftruncate_variation4.tmp";
+   $filename = "ftruncate_variation4.tmp";
    if( strstr($file_modes[$mode_counter], "x") || strstr($file_modes[$mode_counter], "w") ) {
      // fopen the file using the $file_modes
      $file_handle = fopen($filename, $file_modes[$mode_counter]);
      fill_file($file_handle, $file_content_type, 1024);
    } else {
-     create_files ( dirname(__FILE__), 1, $file_content_type, 0755, 1, "w", "ftruncate_variation", 4);
+     create_files ( '.', 1, $file_content_type, 0755, 1, "w", "ftruncate_variation", 4);
      // fopen the file using the $file_modes
      $file_handle = fopen($filename, $file_modes[$mode_counter]);
    }
