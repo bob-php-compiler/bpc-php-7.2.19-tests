@@ -1,12 +1,14 @@
 --TEST--
 Test is_executable() function: basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip not for windows');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/is_readable_root_check.tmp";
+$filename = "is_readable_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -22,13 +24,12 @@ unlink($filename);
    Description: Tells whether the filename is executable
 */
 
-// include common file test functions
-require dirname(__FILE__).'/file.inc';
+require 'file.inc';
 
 echo "*** Testing is_executable(): basic functionality ***\n";
 
 // create a file
-$filename = dirname(__FILE__)."/is_executable.tmp";
+$filename = "is_executable.tmp";
 create_file($filename);
 
 $counter = 1;
