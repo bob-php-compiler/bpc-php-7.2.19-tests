@@ -16,18 +16,18 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 */
 
 echo "*** Testing readlink() and realpath() : usage variations ***\n";
-$name_prefix = dirname(__FILE__);
+$name_prefix = getcwd();
 // create temp dir
-mkdir("$name_prefix/readlink_realpath_variation2/home/tests/link/", 0777, true);
+mkdir("$name_prefix/readlink-realpath-variation2/home/tests/link/", 0777, true);
 // create the file
-$filename = "$name_prefix/readlink_realpath_variation2/home/tests/link/readlink_realpath_variation2.tmp";
+$filename = "$name_prefix/readlink-realpath-variation2/home/tests/link/readlink_realpath_variation2.tmp";
 $fp = fopen($filename, "w");
 fclose($fp);
 
 echo "\n*** Testing readlink() and realpath() with linkname stored in an array ***\n";
 $link_arr = array (
-  "$name_prefix////readlink_realpath_variation2/home/tests/link/readlink_realpath_variation2_link.tmp",
-  "$name_prefix/./readlink_realpath_variation2/home/../home//tests//..//..//..//home//readlink_realpath_variation2_link.tmp/"
+  "$name_prefix////readlink-realpath-variation2/home/tests/link/readlink_realpath_variation2_link.tmp",
+  "$name_prefix/./readlink-realpath-variation2/home/../home//tests//..//..//..//home//readlink_realpath_variation2_link.tmp/"
 );
 
 echo "\n-- Testing readlink() and realpath() with softlink, linkname stored inside an array --\n";
@@ -60,7 +60,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$name_prefix = dirname(__FILE__)."/readlink_realpath_variation2";
+$name_prefix = getcwd()."/readlink-realpath-variation2";
 unlink("$name_prefix/home/tests/link/readlink_realpath_variation2.tmp");
 rmdir("$name_prefix/home/tests/link/");
 rmdir("$name_prefix/home/tests/");
@@ -74,8 +74,8 @@ rmdir("$name_prefix/");
 
 -- Testing readlink() and realpath() with softlink, linkname stored inside an array --
 bool(true)
-string(%d) "%s/readlink_realpath_variation2/home/tests/link/readlink_realpath_variation2.tmp"
-string(%d) "%s/readlink_realpath_variation2/home/tests/link/readlink_realpath_variation2.tmp"
+string(%d) "%s/readlink-realpath-variation2/home/tests/link/readlink_realpath_variation2.tmp"
+string(%d) "%s/readlink-realpath-variation2/home/tests/link/readlink_realpath_variation2.tmp"
 
 Warning: symlink(): No such file or directory in %s on line %d
 bool(false)
@@ -84,14 +84,14 @@ Warning: readlink(): No such file or directory in %s on line %d
 bool(false)
 bool(false)
 
-Warning: unlink(%s/./readlink_realpath_variation2/home/../home//tests//..//..//..//home//readlink_realpath_variation2_link.tmp/): No such file or directory in %s on line %d
+Warning: unlink(%s/./readlink-realpath-variation2/home/../home//tests//..//..//..//home//readlink_realpath_variation2_link.tmp/): No such file or directory in %s on line %d
 
 -- Testing readlink() and realpath() with hardlink, linkname stored inside an array --
 bool(true)
 
 Warning: readlink(): Invalid argument in %s on line %d
 bool(false)
-string(%d) "%s/readlink_realpath_variation2/home/tests/link/readlink_realpath_variation2_link.tmp"
+string(%d) "%s/readlink-realpath-variation2/home/tests/link/readlink_realpath_variation2_link.tmp"
 
 Warning: link(): No such file or directory in %s on line %d
 bool(false)
@@ -100,5 +100,5 @@ Warning: readlink(): No such file or directory in %s on line %d
 bool(false)
 bool(false)
 
-Warning: unlink(%s/./readlink_realpath_variation2/home/../home//tests//..//..//..//home//readlink_realpath_variation2_link.tmp/): No such file or directory in %s on line %d
+Warning: unlink(%s/./readlink-realpath-variation2/home/../home//tests//..//..//..//home//readlink_realpath_variation2_link.tmp/): No such file or directory in %s on line %d
 Done

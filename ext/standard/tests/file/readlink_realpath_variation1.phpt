@@ -16,9 +16,9 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 */
 
 echo "*** Testing readlink() and realpath() : usage variations ***\n";
-$name_prefix = dirname(__FILE__);
-$filename = "$name_prefix/readlink_realpath_variation1/home/tests/link/readlink_realpath_variation1.tmp";
-mkdir("$name_prefix/readlink_realpath_variation1/home/tests/link/", 0777, true);
+$name_prefix = getcwd();
+$filename = "$name_prefix/readlink-realpath-variation1/home/tests/link/readlink_realpath_variation1.tmp";
+mkdir("$name_prefix/readlink-realpath-variation1/home/tests/link/", 0777, true);
 
 echo "\n*** Testing readlink() and realpath() with linkname stored inside a object ***\n";
 // create a temp file
@@ -32,8 +32,8 @@ class object_temp {
     $this->linkname = $link;
   }
 }
-$obj1 = new object_temp("$name_prefix/readlink_realpath_variation1/../././readlink_realpath_variation1/home/readlink_realpath_variation1_link.tmp");
-$obj2 = new object_temp("$name_prefix/readlink_realpath_variation1/home/../..///readlink_realpath_variation1_link.tmp");
+$obj1 = new object_temp("$name_prefix/readlink-realpath-variation1/../././readlink-realpath-variation1/home/readlink_realpath_variation1_link.tmp");
+$obj2 = new object_temp("$name_prefix/readlink-realpath-variation1/home/../..///readlink_realpath_variation1_link.tmp");
 
 echo "\n-- Testing readlink() and realpath() with softlink, linkname stored inside an object --\n";
 // creating the links
@@ -65,7 +65,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$name_prefix = dirname(__FILE__)."/readlink_realpath_variation1";
+$name_prefix = getcwd()."/readlink-realpath-variation1";
 unlink("$name_prefix/home/tests/link/readlink_realpath_variation1.tmp");
 rmdir("$name_prefix/home/tests/link/");
 rmdir("$name_prefix/home/tests/");
@@ -79,18 +79,18 @@ rmdir("$name_prefix/");
 
 -- Testing readlink() and realpath() with softlink, linkname stored inside an object --
 bool(true)
-string(%d) "%s/readlink_realpath_variation1/home/tests/link/readlink_realpath_variation1.tmp"
-string(%d) "%s/readlink_realpath_variation1/home/tests/link/readlink_realpath_variation1.tmp"
+string(%d) "%s/readlink-realpath-variation1/home/tests/link/readlink_realpath_variation1.tmp"
+string(%d) "%s/readlink-realpath-variation1/home/tests/link/readlink_realpath_variation1.tmp"
 bool(true)
-string(%d) "%s/readlink_realpath_variation1/home/tests/link/readlink_realpath_variation1.tmp"
-string(%d) "%s/readlink_realpath_variation1/home/tests/link/readlink_realpath_variation1.tmp"
+string(%d) "%s/readlink-realpath-variation1/home/tests/link/readlink_realpath_variation1.tmp"
+string(%d) "%s/readlink-realpath-variation1/home/tests/link/readlink_realpath_variation1.tmp"
 
 -- Testing readlink() and realpath() with hardlink, linkname stored inside an object --
 bool(true)
 
 Warning: readlink(): Invalid argument in %s on line %d
 bool(false)
-string(%d) "%s/readlink_realpath_variation1/home/readlink_realpath_variation1_link.tmp"
+string(%d) "%s/readlink-realpath-variation1/home/readlink_realpath_variation1_link.tmp"
 bool(true)
 
 Warning: readlink(): Invalid argument in %s on line %d
