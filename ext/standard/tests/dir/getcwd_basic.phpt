@@ -14,7 +14,7 @@ Test getcwd() function : basic functionality
 echo "*** Testing getcwd() : basic functionality ***\n";
 
 //create temporary directory for test, removed in CLEAN section
-$directory = dirname(__FILE__) . "/getcwd_basic";
+$directory = "getcwd-basic";
 mkdir($directory);
 
 var_dump(getcwd());
@@ -24,11 +24,11 @@ var_dump(getcwd());
 ===DONE===
 --CLEAN--
 <?php
-$directory = dirname(__FILE__) . "/getcwd_basic";
+$directory = "getcwd-basic";
 rmdir($directory);
 ?>
 --EXPECTF--
 *** Testing getcwd() : basic functionality ***
 string(%d) "%s"
-string(%d) "%s%egetcwd_basic"
+string(%d) "%s%egetcwd-basic"
 ===DONE===
