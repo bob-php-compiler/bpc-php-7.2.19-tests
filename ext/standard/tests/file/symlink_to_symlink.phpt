@@ -8,7 +8,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 ?>
 --FILE--
 <?php
-$prefix = __FILE__;
+$prefix = getcwd() . "/symlink_to_symlink.php";
 
 touch($prefix . "_file");
 
