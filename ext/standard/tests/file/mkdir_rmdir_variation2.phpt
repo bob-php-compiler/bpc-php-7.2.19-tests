@@ -25,12 +25,12 @@ unlink($filename);
 $file_path = ".";
 
 echo "\n*** Testing mkdir() and rmdir() by giving stream context as fourth argument ***\n";
-var_dump( mkdir("$file_path/mkdir_variation2/test/", 0777, true) );
-var_dump( rmdir("$file_path/mkdir_variation2/test/") );
+var_dump( mkdir("$file_path/mkdir-variation2/test/", 0777, true) );
+var_dump( rmdir("$file_path/mkdir-variation2/test/") );
 
 echo "\n*** Testing rmdir() on a non-empty directory ***\n";
-var_dump( mkdir("$file_path/mkdir_variation2/test/", 0777, true) );
-var_dump( rmdir("$file_path/mkdir_variation2/") );
+var_dump( mkdir("$file_path/mkdir-variation2/test/", 0777, true) );
+var_dump( rmdir("$file_path/mkdir-variation2/") );
 
 echo "\n*** Testing mkdir() and rmdir() for binary safe functionality ***\n";
 var_dump( mkdir("$file_path/temp".chr(0)."/") );
@@ -38,17 +38,17 @@ var_dump( rmdir("$file_path/temp".chr(0)."/") );
 
 echo "\n*** Testing mkdir() with miscelleneous input ***\n";
 /* changing mode of mkdir to prevent creating sub-directory under it */
-var_dump( chmod("$file_path/mkdir_variation2/", 0000) );
+var_dump( chmod("$file_path/mkdir-variation2/", 0000) );
 /* creating sub-directory test1 under mkdir, expected: false */
-var_dump( mkdir("$file_path/mkdir_variation2/test1", 0777, true) );
-var_dump( chmod("$file_path/mkdir_variation2/", 0777) );  // chmod to enable removing test1 directory
+var_dump( mkdir("$file_path/mkdir-variation2/test1", 0777, true) );
+var_dump( chmod("$file_path/mkdir-variation2/", 0777) );  // chmod to enable removing test1 directory
 
 echo "Done\n";
 ?>
 --CLEAN--
 <?php
-rmdir("./mkdir_variation2/test/");
-rmdir("./mkdir_variation2/");
+rmdir("./mkdir-variation2/test/");
+rmdir("./mkdir-variation2/");
 ?>
 --EXPECTF--
 *** Testing mkdir() and rmdir() by giving stream context as fourth argument ***
@@ -58,7 +58,7 @@ bool(true)
 *** Testing rmdir() on a non-empty directory ***
 bool(true)
 
-Warning: rmdir(%s/mkdir_variation2/): %s on line %d
+Warning: rmdir(%s/mkdir-variation2/): %s on line %d
 bool(false)
 
 *** Testing mkdir() and rmdir() for binary safe functionality ***
