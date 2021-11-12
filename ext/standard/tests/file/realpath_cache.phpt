@@ -11,20 +11,12 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 var_dump(realpath_cache_size());
 $data = realpath_cache_get();
-var_dump($data[__DIR__]);
+var_dump($data);
 
 echo "Done\n";
 ?>
 --EXPECTF--
 int(%d)
-array(4) {
-  ["key"]=>
-  %s(%f)
-  ["is_dir"]=>
-  bool(true)
-  ["realpath"]=>
-  string(%d) "%sfile"
-  ["expires"]=>
-  int(%d)
+array(0) {
 }
 Done

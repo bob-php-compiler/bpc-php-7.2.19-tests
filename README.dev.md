@@ -693,6 +693,8 @@
 18. no statcache
 
     clearstatcache() simply return NULL, do nothing
+    realpath_cache_get() return an empty array
+    realpath_cache_size() return 0
 
 19. limited context parameter support
 
