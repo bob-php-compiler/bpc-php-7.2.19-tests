@@ -9,14 +9,11 @@ Test mkdir() and rmdir() functions : error conditions
     Description: Removes directory
 */
 
-echo "\n*** Testing rmdir() on non-existent directory ***\n";
-var_dump( rmdir("temp") );
+echo "*** Testing mkdir(): error conditions ***\n";
+var_dump( mkdir("testdir", 0777, false, $context, "test") );  // args > expected
 
-echo "Done\n";
 ?>
 --EXPECTF--
-*** Testing rmdir() on non-existent directory ***
-
-Warning: rmdir(temp): No such file or directory in %s on line %d
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function mkdir(): 4 at most, 5 provided in %s on line %d
+ -- compile-error
