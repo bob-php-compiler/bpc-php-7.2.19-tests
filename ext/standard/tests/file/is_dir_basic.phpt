@@ -8,13 +8,13 @@ Test is_dir() function: basic functionality
 */
 
 echo "*** Testing is_dir(): basic functionality ***\n";
-$file_path = dirname(__FILE__);
+$file_path = getcwd();
 var_dump( is_dir($file_path) );
 clearstatcache();
 var_dump( is_dir(".") );
-var_dump( is_dir(__FILE__) );  // expected: bool(false)
+var_dump( is_dir("is_dir_basic.php") );  // expected: bool(false)
 
-$dir_name = $file_path."/is_dir_basic";
+$dir_name = $file_path."/is-dir-basic";
 mkdir($dir_name);
 var_dump( is_dir($dir_name) );
 
@@ -26,8 +26,8 @@ echo "*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dir_name = $file_path."/is_dir_basic";
+$file_path = '.';
+$dir_name = $file_path."/is-dir-basic";
 rmdir($dir_name);
 ?>
 --EXPECTF--
