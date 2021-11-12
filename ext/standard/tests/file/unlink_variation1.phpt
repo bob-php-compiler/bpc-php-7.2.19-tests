@@ -6,7 +6,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip only on Linux');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/unlink_root_check.tmp";
+$filename = "unlink_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -27,10 +27,10 @@ unlink($filename);
 */
 
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 // temp dir name used here
-$dirname = "$file_path/unlink_variation1";
+$dirname = "$file_path/unlink-variation1";
 // temp filename used here
 $filename = "$dirname/unlink_variation1.tmp";
 
