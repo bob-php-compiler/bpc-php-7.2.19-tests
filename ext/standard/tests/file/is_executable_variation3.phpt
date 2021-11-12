@@ -6,7 +6,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip not for windows');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/is_executable_root_check.tmp";
+$filename = "is_executable_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -26,7 +26,7 @@ unlink($filename);
 
 echo "*** Testing is_executable(): usage variations ***\n";
 
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 unset($file_handle);
 
 echo "\n*** Testing is_executable() on invalid files ***\n";
