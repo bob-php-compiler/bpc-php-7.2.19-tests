@@ -694,6 +694,10 @@
 
     clearstatcache() simply return NULL, do nothing
 
+19. limited context parameter support
+
+    only the following functions support context parameter:
+
 ## ext/date
 
 1. ini_set date.timezone warning message
