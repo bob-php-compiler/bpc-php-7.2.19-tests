@@ -1,12 +1,14 @@
 --TEST--
 Test is_readable() function: usage variations - file/dir with diff. perms
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip not for windows');
 }
 // Skip if being run by root
-$filename = dirname(__FILE__)."/is_readable_root_check.tmp";
+$filename = "is_readable_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -23,29 +25,29 @@ unlink($filename);
 
 /* test is_executable() with file/dir having different permissions */
 
-require dirname(__FILE__).'/file.inc';
+require 'file.inc';
 echo "*** Testing is_readable(): usage variations ***\n";
 
-$file_path = dirname(__FILE__);
-mkdir("$file_path/is_readable_variation2");
+$file_path = '.';
+mkdir("$file_path/is-readable-variation2");
 
 echo "\n*** Testing is_readable() on directory without read permission ***\n";
-chmod("$file_path/is_readable_variation2", 0001);
-var_dump( is_readable("$file_path/is_readable_variation2") );  // exp: bool(false)
-chmod("$file_path/is_readable_variation2", 0777);  // chmod to enable deletion of directory
+chmod("$file_path/is-readable-variation2", 0001);
+var_dump( is_readable("$file_path/is-readable-variation2") );  // exp: bool(false)
+chmod("$file_path/is-readable-variation2", 0777);  // chmod to enable deletion of directory
 
 echo "\n*** Testing miscelleneous input for is_readable() function ***\n";
 $name_prefix = "is_readable_variation2";
-create_files(dirname(__FILE__), 1, "numeric", 0755, 1, "w", $name_prefix, 1);
-create_files(dirname(__FILE__), 1, "text", 0755, 1, "w", $name_prefix, 2);
-create_files(dirname(__FILE__), 1, "empty", 0755, 1, "w", $name_prefix, 3);
-create_files(dirname(__FILE__), 1, "numeric", 0555, 1, "w", $name_prefix, 4);
-create_files(dirname(__FILE__), 1, "text", 0222, 1, "w", $name_prefix, 5);
-create_files(dirname(__FILE__), 1, "numeric", 0711, 1, "w", $name_prefix, 6);
-create_files(dirname(__FILE__), 1, "text", 0411, 1, "w", $name_prefix, 7);
-create_files(dirname(__FILE__), 1, "numeric", 0444, 1, "w", $name_prefix, 8);
-create_files(dirname(__FILE__), 1, "text", 0421, 1, "w", $name_prefix, 9);
-create_files(dirname(__FILE__), 1, "text", 0422, 1, "w", $name_prefix, 10);
+create_files('.', 1, "numeric", 0755, 1, "w", $name_prefix, 1);
+create_files('.', 1, "text", 0755, 1, "w", $name_prefix, 2);
+create_files('.', 1, "empty", 0755, 1, "w", $name_prefix, 3);
+create_files('.', 1, "numeric", 0555, 1, "w", $name_prefix, 4);
+create_files('.', 1, "text", 0222, 1, "w", $name_prefix, 5);
+create_files('.', 1, "numeric", 0711, 1, "w", $name_prefix, 6);
+create_files('.', 1, "text", 0411, 1, "w", $name_prefix, 7);
+create_files('.', 1, "numeric", 0444, 1, "w", $name_prefix, 8);
+create_files('.', 1, "text", 0421, 1, "w", $name_prefix, 9);
+create_files('.', 1, "text", 0422, 1, "w", $name_prefix, 10);
 
 $files = array (
   "$file_path/is_readable_variation21.tmp",
@@ -77,7 +79,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-rmdir(dirname(__FILE__)."/is_readable_variation2/");
+rmdir("./is-readable-variation2/");
 ?>
 --EXPECTF--
 *** Testing is_readable(): usage variations ***
