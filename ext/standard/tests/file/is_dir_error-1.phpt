@@ -7,11 +7,11 @@ Test is_dir() function: error conditions
  *               Returns TRUE if the filename exists and is a regular file
  */
 
-/* Non-existing dir */
-var_dump( is_dir("/no/such/dir") );
+echo "*** Testing is_dir() error conditions ***";
+var_dump( is_dir() );  // Zero No. of args
 
-echo "*** Done ***";
 ?>
 --EXPECTF--
-bool(false)
-*** Done ***
+*** ERROR:compile-error:
+Error: Too few arguments to function is_dir(): 1 required, 0 provided in %s on line %d
+ -- compile-error

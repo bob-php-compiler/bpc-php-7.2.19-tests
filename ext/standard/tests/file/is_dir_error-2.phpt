@@ -7,11 +7,12 @@ Test is_dir() function: error conditions
  *               Returns TRUE if the filename exists and is a regular file
  */
 
-/* Non-existing dir */
-var_dump( is_dir("/no/such/dir") );
+echo "*** Testing is_dir() error conditions ***";
 
-echo "*** Done ***";
+var_dump( is_dir('/tmp', "is_dir_error1") ); // args > expected no.of args
+
 ?>
 --EXPECTF--
-bool(false)
-*** Done ***
+*** ERROR:compile-error:
+Error: Too many arguments to function is_dir(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
