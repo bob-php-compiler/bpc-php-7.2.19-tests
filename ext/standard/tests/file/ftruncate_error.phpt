@@ -9,27 +9,11 @@ Test ftruncate() function : error conditions
 
 echo "*** Testing ftruncate() : error conditions ***\n";
 
-$filename = dirname(__FILE__)."/ftruncate_error.tmp";
+$filename = "ftruncate_error.tmp";
 $file_handle = fopen($filename, "w" );
 fwrite($file_handle, "Testing ftruncate error conditions \n");
 fflush($file_handle);
 echo "\n Initial file size = ".filesize($filename)."\n";
-
-echo "-- Testing ftruncate() with less than expected number of arguments --\n";
-
-// zero arguments
-var_dump( ftruncate() );
-
-// arguments less than expected numbers
-var_dump( ftruncate( $file_handle ) );
-// check the first size
-var_dump( filesize($filename) );
-
-echo "-- Testing ftruncate() with more than expected number of arguments --\n";
-// more than expected number of arguments
-var_dump( ftruncate($file_handle, 10, 20) );
-// check the first size
-var_dump( filesize($filename) );
 
 // test invalid arguments : non-resources
 echo "-- Testing ftruncate() with invalid file pointer --\n";
@@ -67,26 +51,13 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$filename = dirname(__FILE__)."/ftruncate_error.tmp";
+$filename = "ftruncate_error.tmp";
 unlink( $filename );
 ?>
 --EXPECTF--
 *** Testing ftruncate() : error conditions ***
 
  Initial file size = 36
--- Testing ftruncate() with less than expected number of arguments --
-
-Warning: ftruncate() expects exactly 2 parameters, 0 given in %s on line %d
-bool(false)
-
-Warning: ftruncate() expects exactly 2 parameters, 1 given in %s on line %d
-bool(false)
-int(36)
--- Testing ftruncate() with more than expected number of arguments --
-
-Warning: ftruncate() expects exactly 2 parameters, 3 given in %s on line %d
-bool(false)
-int(36)
 -- Testing ftruncate() with invalid file pointer --
 -- Iteration 1 --
 
@@ -120,5 +91,5 @@ int(36)
 
 Warning: ftruncate() expects parameter 1 to be resource, null given in %s on line %d
 bool(false)
-int(36)
+int(0)
 Done
