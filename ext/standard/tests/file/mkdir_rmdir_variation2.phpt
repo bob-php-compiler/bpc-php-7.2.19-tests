@@ -22,13 +22,11 @@ unlink($filename);
     Description: Makes directory
 */
 
-$context = null;
-
 $file_path = ".";
 
 echo "\n*** Testing mkdir() and rmdir() by giving stream context as fourth argument ***\n";
-var_dump( mkdir("$file_path/mkdir_variation2/test/", 0777, true, $context) );
-var_dump( rmdir("$file_path/mkdir_variation2/test/", $context) );
+var_dump( mkdir("$file_path/mkdir_variation2/test/", 0777, true) );
+var_dump( rmdir("$file_path/mkdir_variation2/test/") );
 
 echo "\n*** Testing rmdir() on a non-empty directory ***\n";
 var_dump( mkdir("$file_path/mkdir_variation2/test/", 0777, true) );
