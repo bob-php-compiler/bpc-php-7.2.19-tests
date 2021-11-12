@@ -18,8 +18,8 @@ $testfile = $subdir.'/testfile.txt';
 mkdir($subdir);
 touch($testfile);
 f_exists($testfile);
-$context = stream_context_create();
-var_dump(unlink($testfile, $context));
+//$context = stream_context_create();
+var_dump(unlink($testfile/*, $context*/));
 f_exists($testfile);
 rmdir($subdir);
 
