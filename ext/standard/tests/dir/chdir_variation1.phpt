@@ -14,8 +14,8 @@ Test chdir() function : usage variations - different data type as $directory arg
 echo "*** Testing chdir() : usage variations ***\n";
 
 // create the temporary directory
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/chdir_basic";
+$file_path = getcwd();
+$dir_path = $file_path."/chdir-basic";
 @mkdir($dir_path);
 
 //get an unset variable
@@ -41,7 +41,7 @@ $dir_path
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $directory argument
 $inputs = array(
@@ -106,8 +106,8 @@ fclose($fp);
 ===DONE===
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/chdir_basic";
+$file_path = '.';
+$dir_path = $file_path."/chdir-basic";
 
 rmdir($dir_path);
 ?>
