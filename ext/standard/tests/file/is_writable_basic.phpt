@@ -1,9 +1,11 @@
 --TEST--
 Test is_writable() and its alias is_writeable() function: basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/is_readable_root_check.tmp";
+$filename = "is_readable_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -22,12 +24,12 @@ unlink($filename);
 */
 
 // include common file test functions
-require dirname(__FILE__).'/file.inc';
+require 'file.inc';
 
 echo "*** Testing is_writable(): basic functionality ***\n";
 
 // create a file
-$filename = dirname(__FILE__)."/is_writable.tmp";
+$filename = "is_writable.tmp";
 create_file($filename);
 
 $counter = 1;
