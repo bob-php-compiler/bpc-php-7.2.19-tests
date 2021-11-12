@@ -4,7 +4,7 @@ Test is_writable() and its alias is_writeable() function: usage variations - inv
 <?php
 if (substr(PHP_OS, 0, 3) != 'WIN') {
   // Skip if being run by root (files are always readable, writeable and executable)
-  $filename = dirname(__FILE__)."/is_writable_root_check.tmp";
+  $filename = "is_writable_root_check.tmp";
   $fp = fopen($filename, 'w');
   fclose($fp);
   if(fileowner($filename) == 0) {
@@ -70,7 +70,7 @@ bool(false)
 Warning: is_writable() expects parameter 1 to be a valid path, array given in %s on line %d
 NULL
 
-Warning: is_writeable() expects parameter 1 to be a valid path, array given in %s on line %d
+Warning: is_writable() expects parameter 1 to be a valid path, array given in %s on line %d
 NULL
 bool(false)
 bool(false)
