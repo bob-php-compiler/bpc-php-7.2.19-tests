@@ -46,8 +46,8 @@ echo "\n*** Done ***";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dir_name = $file_path."/is_dir_variation4";
+$file_path = '.';
+$dir_name = $file_path."/is-dir-variation4";
 rmdir($dir_name);
 ?>
 --EXPECTF--

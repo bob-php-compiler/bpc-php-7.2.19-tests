@@ -72,7 +72,7 @@ if(file_exists($file_path."/is_dir_variation2.tmp")) {
   unlink($file_path."/is_dir_variation2.tmp");
 }
 if(file_exists($file_path."/is-dir-variation2")) {
-  rmdir($file_path."/is_dir_variation2");
+  rmdir($file_path."/is-dir-variation2");
 }
 ?>
 --EXPECTF--
