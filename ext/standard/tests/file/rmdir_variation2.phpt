@@ -13,7 +13,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing rmdir() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -49,7 +49,7 @@ EOT;
 $index_array = array (1, 2, 3);
 $assoc_array = array ('one' => 1, 'two' => 2);
 
-$fileres = fopen(__FILE__, 'r');
+$fileres = fopen('/proc/self/comm', 'r');
 
 //array of values to iterate over
 $inputs = array(
