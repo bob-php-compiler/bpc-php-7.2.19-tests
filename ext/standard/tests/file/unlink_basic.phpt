@@ -6,7 +6,7 @@ Testing unlink() function : basic functionality
    Description : Deletes filename
 */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Testing unlink() on a file ***\n";
 $filename = "$file_path/unlink_basic.tmp";  // temp file name used here
@@ -17,7 +17,7 @@ fclose($fp);
 // delete file
 var_dump( unlink($filename) );
 var_dump( file_exists($filename) );  // confirm file doesnt exist
-
+/*
 echo "\n*** Testing unlink() : checking second argument ***\n";
 // creating a context
 $context = stream_context_create();
@@ -29,15 +29,11 @@ fclose($fp);
 // delete file
 var_dump( unlink($filename, $context) );  // using $context in second argument
 var_dump( file_exists($filename) );  // confirm file doesnt exist
-
+*/
 echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing unlink() on a file ***
-bool(true)
-bool(false)
-
-*** Testing unlink() : checking second argument ***
 bool(true)
 bool(false)
 Done
