@@ -11,9 +11,8 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 // This doesn't work for windows, time, atime usage results in very different
 // output to linux. This could be a php.net bug on windows or a windows querk.
-$filename = dirname(__FILE__)."/touch.dat";
+$filename = "touch.dat";
 
-var_dump(touch());
 var_dump(touch($filename));
 var_dump(filemtime($filename));
 @unlink($filename);
@@ -39,8 +38,6 @@ var_dump(touch("/no/such/file/or/directory"));
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: touch() expects at least 1 parameter, 0 given in %s on line %d
-NULL
 bool(true)
 int(%d)
 bool(true)
