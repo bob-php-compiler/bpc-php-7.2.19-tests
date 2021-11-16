@@ -1,5 +1,7 @@
 --TEST--
 Test copy() function: usage variations - stat after copy
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /* Prototype: bool copy ( string $source, string $dest );
@@ -9,7 +11,7 @@ Test copy() function: usage variations - stat after copy
 
 /* Test copy(): checking stat of file before and after after copy operation */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 require($file_path."/file.inc");
 
@@ -44,8 +46,8 @@ echo "*** Done ***\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/copy_copy_variation18.tmp");
-unlink(dirname(__FILE__)."/copy_variation18.tmp");
+unlink("./copy_copy_variation18.tmp");
+unlink("./copy_variation18.tmp");
 ?>
 --EXPECTF--
 *** Test copy() function: stat of file before and after copy ***
