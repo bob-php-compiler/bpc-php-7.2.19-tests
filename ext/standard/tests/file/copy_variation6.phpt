@@ -16,7 +16,7 @@ if(substr(PHP_OS, 0, 3) == "WIN")
      into different destination dir paths given in various notations */
 
 echo "*** Test copy() function: copying file across directories ***\n";
-$base_dir = dirname(__FILE__)."/copy_variation6";
+$base_dir = "./copy-variation6";
 mkdir($base_dir);
 
 $sub_dir = $base_dir."/copy_variation6_sub";
@@ -25,7 +25,7 @@ mkdir($sub_dir);
 $dirname_with_blank = $sub_dir."/copy variation6";
 mkdir($dirname_with_blank);
 
-$src_file_name = dirname(__FILE__)."/copy_variation6.tmp";
+$src_file_name = "./copy_variation6.tmp";
 fclose( fopen($src_file_name, "w") );
 
 echo "Size of source file => ";
@@ -86,56 +86,56 @@ Size of source file => int(0)
 -- Iteration 1 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_copy_variation6.tmp
+Destination file name is => %s/copy-variation6/copy_copy_variation6.tmp
 Size of source file => int(0)
 Size of destination file => int(0)
 
 -- Iteration 2 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_variation6_sub/copy_copy_variation6.tmp
+Destination file name is => %s/copy-variation6/copy_variation6_sub/copy_copy_variation6.tmp
 Size of source file => int(0)
 Size of destination file => int(0)
 
 -- Iteration 3 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_variation6_sub/copy_copy_variation6.tmp
+Destination file name is => %s/copy-variation6/copy_variation6_sub/copy_copy_variation6.tmp
 Size of source file => int(0)
 Size of destination file => int(0)
 
 -- Iteration 4 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_variation6_sub/../copy_copy_variation6.tmp
+Destination file name is => %s/copy-variation6/copy_variation6_sub/../copy_copy_variation6.tmp
 Size of source file => int(0)
 Size of destination file => int(0)
 
 -- Iteration 5 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_variation6_sub/../copy_variation6_sub/copy_copy_variation6.tmp
+Destination file name is => %s/copy-variation6/copy_variation6_sub/../copy_variation6_sub/copy_copy_variation6.tmp
 Size of source file => int(0)
 Size of destination file => int(0)
 
 -- Iteration 6 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_variation6_sub/..///../copy_copy_variation6.tmp
+Destination file name is => %s/copy-variation6/copy_variation6_sub/..///../copy_copy_variation6.tmp
 Size of source file => int(0)
 Size of destination file => int(0)
 
 -- Iteration 7 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_variation6_sub/..///../*
+Destination file name is => %s/copy-variation6/copy_variation6_sub/..///../*
 Size of source file => int(0)
 Size of destination file => int(0)
 
 -- Iteration 8 --
 Copy operation => bool(true)
 Existence of destination file => bool(true)
-Destination file name is => %s/copy_variation6/copy_variation6_sub/copy variation6/copy_copy_variation6.tmp
+Destination file name is => %s/copy-variation6/copy_variation6_sub/copy variation6/copy_copy_variation6.tmp
 Size of source file => int(0)
 Size of destination file => int(0)
 *** Done ***
