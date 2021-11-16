@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() & stat() functions: basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
@@ -16,7 +18,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description: Gives information about a file
 */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require("$file_path/file.inc");
 
 echo "*** Testing lstat() & stat() : basic functionality ***\n";
@@ -24,7 +26,7 @@ echo "*** Testing lstat() & stat() : basic functionality ***\n";
 /* creating temp directory and file */
 
 // creating dir
-$dirname = "$file_path/lstat_stat_basic";
+$dirname = "$file_path/lstat-stat-basic";
 @rmdir($dirname);
 mkdir($dirname);
 // stat of the dir created
@@ -80,10 +82,10 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink("$file_path/lstat_stat_basic_link.tmp");
-unlink("$file_path/lstat_stat_basic/lstat_stat_basic.tmp");
-rmdir("$file_path/lstat_stat_basic");
+unlink("$file_path/lstat-stat-basic/lstat_stat_basic.tmp");
+rmdir("$file_path/lstat-stat-basic");
 ?>
 --EXPECTF--
 *** Testing lstat() & stat() : basic functionality ***
