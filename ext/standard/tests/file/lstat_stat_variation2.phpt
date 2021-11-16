@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - effects of rename() on dir
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -17,15 +19,15 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test the effects of rename() on stats of dir */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require("file.inc");
 
 /* create temp directory */
-mkdir("$file_path/lstat_stat_variation1/");  // temp dir
+mkdir("$file_path/lstat-stat-variation1/");  // temp dir
 
 // renaming a directory and check stat
 echo "*** Testing stat() for directory after being renamed ***\n";
-$old_dirname = "$file_path/lstat_stat_variation1";
+$old_dirname = "$file_path/lstat-stat-variation1";
 $new_dirname = "$file_path/lstat_stat_variation1a";
 $old_stat = stat($old_dirname);
 clearstatcache();
@@ -48,7 +50,7 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 rmdir("$file_path/lstat_stat_variation1a");
 ?>
 --EXPECTF--
