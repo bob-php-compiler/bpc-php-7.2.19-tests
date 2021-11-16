@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - deleting file/subdir
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -15,7 +17,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description: Gives information about a file
 */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 /* test the effects on stats by deleting file/subdir from a dir
@@ -24,11 +26,11 @@ require "$file_path/file.inc";
 echo "*** Testing stat() for comparing stats after the deletion of subdir and file ***\n";
 
 /* first create the dir/subdir and files, record the stat */
-@rmdir("$file_path/lstat_stat_variation9/");  // ensure that dir doesn't exists
-mkdir("$file_path/lstat_stat_variation9/");  // temp dir
+@rmdir("$file_path/lstat-stat-variation9/");  // ensure that dir doesn't exists
+mkdir("$file_path/lstat-stat-variation9/");  // temp dir
 
 // creating and deleting subdir and files in the dir
-$dirname = "$file_path/lstat_stat_variation9";
+$dirname = "$file_path/lstat-stat-variation9";
 @rmdir("$dirname/lstat_stat_variation9_subdir"); // ensure that dir doesn't exists
 mkdir("$dirname/lstat_stat_variation9_subdir");
 $file_handle = fopen("$dirname/lstat_stat_variation9a.tmp", "w");
@@ -54,8 +56,8 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dirname = "$file_path/lstat_stat_variation9";
+$file_path = '.';
+$dirname = "$file_path/lstat-stat-variation9";
 rmdir($dirname);
 ?>
 --EXPECTF--

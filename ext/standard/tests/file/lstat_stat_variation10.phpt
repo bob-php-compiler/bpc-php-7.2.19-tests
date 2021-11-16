@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - effects of is_dir()
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
@@ -18,12 +20,12 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test the effects of is_dir() on stats of a dir */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 
 /* create temp file, link and directory */
-$dirname = "$file_path/lstat_stat_variation10";
+$dirname = "$file_path/lstat-stat-variation10";
 mkdir($dirname);  // temp dir
 
 // is_dir() on a directory
@@ -45,8 +47,8 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-rmdir("$file_path/lstat_stat_variation10");
+$file_path = '.';
+rmdir("$file_path/lstat-stat-variation10");
 ?>
 --EXPECTF--
 *** Testing stat() on directory after using is_dir() on it ***
