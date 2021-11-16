@@ -9,7 +9,7 @@ Test disk_free_space and its alias diskfreespace() functions : Usage Variations
  *               filesystem or disk partition
  */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Testing with a directory ***\n";
 var_dump( disk_free_space($file_path."/..") );
@@ -57,7 +57,7 @@ echo"\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 rmdir($file_path."/disk_free_space");
 ?>
 --EXPECTF--
@@ -106,7 +106,7 @@ float(%d)
 Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
-Warning: diskfreespace() expects parameter 1 to be a valid path, string given in %s on line %d
+Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
 -- Iteration 10 --
@@ -114,7 +114,7 @@ NULL
 Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
-Warning: diskfreespace() expects parameter 1 to be a valid path, string given in %s on line %d
+Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
 -- Iteration 11 --
@@ -122,7 +122,7 @@ NULL
 Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
-Warning: diskfreespace() expects parameter 1 to be a valid path, string given in %s on line %d
+Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
 -- Iteration 12 --
@@ -130,7 +130,7 @@ NULL
 Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
-Warning: diskfreespace() expects parameter 1 to be a valid path, string given in %s on line %d
+Warning: disk_free_space() expects parameter 1 to be a valid path, string given in %s on line %d
 NULL
 
 --- Done ---
