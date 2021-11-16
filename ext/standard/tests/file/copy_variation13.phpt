@@ -10,10 +10,10 @@ Test copy() function: usage variations - src as dir and dest as an existing file
 /* Test copy(): Trying to copy dir to an existing file */
 
 echo "*** Test copy() function: Trying to copy dir to file ***\n";
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $file = $file_path."/copy_variation13_dir.tmp";
 fclose(fopen($file, "w"));
-$dir = $file_path."/copy_variation13";
+$dir = $file_path."/copy-variation13";
 mkdir($dir);
 
 echo "*** Testing copy() in copying dir to file ***\n";
@@ -35,8 +35,8 @@ echo "*** Done ***\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/copy_variation13_dir.tmp");
-rmdir(dirname(__FILE__)."/copy_variation13");
+unlink("./copy_variation13_dir.tmp");
+rmdir("./copy-variation13");
 ?>
 --EXPECTF--
 *** Test copy() function: Trying to copy dir to file ***
