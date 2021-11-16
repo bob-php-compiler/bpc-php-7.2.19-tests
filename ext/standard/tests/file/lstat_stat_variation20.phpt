@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - link names stored in array/object
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -17,7 +19,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test for stats of link when their names are stored in object and array */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 $fp = fopen("$file_path/lstat_stat_variation20.tmp", "w");  // temp file
@@ -56,7 +58,7 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink("$file_path/lstat_stat_variation20_link.tmp");
 unlink("$file_path/lstat_stat_variation20.tmp");
 ?>
