@@ -16,8 +16,8 @@ echo "*** Testing filegroup(): basic functionality ***\n";
 
 echo "-- Testing with the file or directory created by owner --\n";
 
-$file_path = dirname(__FILE__);
-var_dump( filegroup(__FILE__) );
+$file_path = '.';
+var_dump( filegroup('filegroup_basic.php') );
 var_dump( filegroup(".") );
 var_dump( filegroup("./..") );
 
@@ -30,7 +30,7 @@ fwrite($file_handle, $string);
 var_dump( filegroup($file_name) );
 fclose($file_handle);
 
-$dir_name = $file_path."/filegroup_basic";
+$dir_name = $file_path."/filegroup-basic";
 mkdir($dir_name);
 var_dump( filegroup($dir_name) );
 
@@ -44,9 +44,9 @@ echo "\n*** Done ***\n";
 --CLEAN--
 <?php
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $file_name = $file_path."/filegroup_basic.tmp";
-$dir_name  = $file_path."/filegroup_basic";
+$dir_name  = $file_path."/filegroup-basic";
 unlink($file_name);
 rmdir($dir_name);
 ?>
