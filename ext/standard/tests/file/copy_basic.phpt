@@ -9,13 +9,13 @@ Test copy() function: basic functionality
 
 echo "*** Testing copy() function: to copy file from source to destination --\n";
 
-var_dump( file_exists(__FILE__) );
+var_dump( file_exists('copy_basic.php') );
 
 /* copying the file */
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $file_name1 = $file_path."/copy_basic1.tmp";
 $file_name2 = $file_path."/copy_basic2.tmp";
-var_dump( copy(__FILE__, $file_name1) );
+var_dump( copy('copy_basic.php', $file_name1) );
 var_dump( copy($file_name1, $file_name2) );
 
 echo "-- Checking whether the copy of file exists --\n";
@@ -23,7 +23,7 @@ var_dump( file_exists($file_name1) );
 var_dump( file_exists($file_name2) );
 
 echo "-- Checking filepermissions of file and its copies --\n";
-printf( "%o", fileperms(__FILE__) );
+printf( "%o", fileperms('copy_basic.php') );
 echo "\n";
 printf( "%o", fileperms($file_name1) );
 echo "\n";
@@ -34,7 +34,7 @@ echo "*** Done ***\n";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $file_name1 = $file_path."/copy_basic1.tmp";
 $file_name2 = $file_path."/copy_basic2.tmp";
 unlink($file_name1);
