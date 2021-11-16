@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - creating file/subdir
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
@@ -16,18 +18,18 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description: Gives information about a file
 */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 /* test the effects on stats with creating file/subdir in a dir
 */
 
 /* create temp file */
-mkdir("$file_path/lstat_stat_variation8/");  // temp dir
+mkdir("$file_path/lstat-stat-variation8/");  // temp dir
 
 // creating and deleting subdir and files in the dir
 echo "*** Testing stat() on dir after subdir and file is created in it ***\n";
-$dirname = "$file_path/lstat_stat_variation8";
+$dirname = "$file_path/lstat-stat-variation8";
 $old_stat = stat($dirname);
 clearstatcache();
 sleep(2);
@@ -48,10 +50,10 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-unlink("$file_path/lstat_stat_variation8/lstat_stat_variation8a.tmp");
-rmdir("$file_path/lstat_stat_variation8/lstat_stat_variation8_subdir/");
-rmdir("$file_path/lstat_stat_variation8");
+$file_path = '.';
+unlink("$file_path/lstat-stat-variation8/lstat_stat_variation8a.tmp");
+rmdir("$file_path/lstat-stat-variation8/lstat_stat_variation8_subdir/");
+rmdir("$file_path/lstat-stat-variation8");
 ?>
 --EXPECTF--
 *** Testing stat() on dir after subdir and file is created in it ***
