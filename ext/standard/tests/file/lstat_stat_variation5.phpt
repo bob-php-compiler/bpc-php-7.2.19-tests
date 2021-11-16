@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - effects of touch() on dir
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
@@ -19,13 +21,13 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test the effects of touch() on stats of dir */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 
 /* create temp directory */
 
-$dir_name = "$file_path/lstat_stat_variation5";
+$dir_name = "$file_path/lstat-stat-variation5";
 @rmdir($dir_name);  //ensure that dir doesn't exists
 mkdir($dir_name);  // temp dir
 
@@ -52,8 +54,8 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-rmdir("$file_path/lstat_stat_variation5");
+$file_path = '.';
+rmdir("$file_path/lstat-stat-variation5");
 ?>
 --EXPECTF--
 *** Testing stat() for directory after using touch() on the directory ***
