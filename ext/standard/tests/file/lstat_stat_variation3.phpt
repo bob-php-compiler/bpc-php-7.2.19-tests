@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - effects of rename() on link
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -17,7 +19,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test the effects of rename() on stats of link */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 /* create temp file & link */
@@ -49,7 +51,7 @@ var_dump( compare_stats($old_stat, $new_stat, $keys_to_compare) );
 ===Done===
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink("$file_path/lstat_stat_variation3.tmp");
 unlink("$file_path/lstat_stat_variation_link3a.tmp");
 ?>
