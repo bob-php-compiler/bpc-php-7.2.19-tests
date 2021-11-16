@@ -18,7 +18,7 @@ Description: Returns the type of the file. Possible values are fifo, char,
 */
 
 echo "*** Testing filetype() with various types ***\n";
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $file1 = $file_path."/filetype1_variation.tmp";
 $file2 = $file_path."/filetype2_variation.tmp";
 $file3 = $file_path."/filetype3_variation.tmp";
@@ -47,9 +47,9 @@ unlink($file1);
 unlink($file2);
 
 echo "-- Checking with directory --\n";
-mkdir("$file_path/filetype_variation");
-print( filetype("$file_path/filetype_variation") )."\n";
-rmdir( "$file_path/filetype_variation" );
+mkdir("$file_path/filetype-variation");
+print( filetype("$file_path/filetype-variation") )."\n";
+rmdir( "$file_path/filetype-variation" );
 
 echo "-- Checking with fifo --\n";
 posix_mkfifo( $file3, 0755);
