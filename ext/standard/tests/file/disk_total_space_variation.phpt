@@ -9,7 +9,7 @@ Testing disk_total_space() functions : Usage Variations.
  *               filesystem or disk partition.
  */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Testing with a directory ***\n";
 var_dump( disk_total_space($file_path."/..") );
@@ -54,13 +54,13 @@ foreach($dirs_arr as $dir1) {
 }
 
 echo "*** Testing with Binary Input ***\n";
-var_dump( disk_total_space(b"$file_path") );
+var_dump( disk_total_space("$file_path") );
 
 echo"\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 rmdir($file_path."/disk_total_space");
 ?>
 --EXPECTF--
