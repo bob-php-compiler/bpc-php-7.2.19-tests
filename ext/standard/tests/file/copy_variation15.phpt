@@ -51,7 +51,7 @@ echo "*** Done ***\n";
 --CLEAN--
 <?php
 unlink("./copy_variation15.tmp");
-rmdir("/copy-variation15");
+rmdir("./copy-variation15");
 ?>
 --EXPECTF--
 *** Test copy() function: Trying to create a copy of file in a dir which doesn't have write permissions ***
