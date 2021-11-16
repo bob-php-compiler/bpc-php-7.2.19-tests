@@ -9,7 +9,7 @@ Test copy() function: usage variations - wildcard chars in source
 
 /* Test copy(): Trying to copy the source file which is given with the combination of wild-card chars */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Test copy() function: With source file names containing wild-card chars ***\n";
 $src_file = $file_path."/copy_variation17.tmp";
@@ -17,7 +17,7 @@ $file_handle =  fopen($src_file, "w");
 fwrite($file_handle, str_repeat("Hello2world...\n", 100));
 fclose($file_handle);
 
-$dir = $file_path."/copy_variation17";
+$dir = $file_path."/copy-variation17";
 mkdir($dir);
 
 $src_file_names = array(
@@ -47,8 +47,8 @@ echo "*** Done ***\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/copy_variation17.tmp");
-rmdir(dirname(__FILE__)."/copy_variation17");
+unlink("./copy_variation17.tmp");
+rmdir("./copy-variation17");
 ?>
 --EXPECTF--
 *** Test copy() function: With source file names containing wild-card chars ***
