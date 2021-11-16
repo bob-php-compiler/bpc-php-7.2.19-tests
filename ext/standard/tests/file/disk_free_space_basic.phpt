@@ -15,7 +15,7 @@ memory_limit=32M
  *               filesystem or disk partition
  */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Testing with existing directory ***\n";
 var_dump( disk_free_space($file_path) );
@@ -45,13 +45,13 @@ else {
 }
 
 echo "*** Testing with Binary Input ***\n";
-var_dump( disk_free_space(b"$file_path") );
+var_dump( disk_free_space("$file_path") );
 
 echo"\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink($file_path."/disk_free_space/disk_free_space.tmp");
 rmdir($file_path."/disk_free_space");
 ?>
