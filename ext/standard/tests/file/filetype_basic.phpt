@@ -10,7 +10,7 @@ Description: Returns the type of the file. Possible values are fifo, char,
 
 echo "*** Testing filetype() with files and dirs ***\n";
 
-print( filetype(__FILE__) )."\n";
+print( filetype('filetype_basic.php') )."\n";
 print( filetype(".") )."\n";
 
 echo "*** Done ***\n";
