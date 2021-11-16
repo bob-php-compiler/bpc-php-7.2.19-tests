@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - dir/file name stored in object
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -17,12 +19,12 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test for stats of dir/file when their names are stored in objects */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 
 /* create temp file and directory */
-mkdir("$file_path/lstat_stat_variation18/");  // temp dir
+mkdir("$file_path/lstat-stat-variation18/");  // temp dir
 $fp = fopen("$file_path/lstat_stat_variation18.tmp", "w");  // temp file
 fclose($fp);
 
@@ -36,7 +38,7 @@ class names {
 }
 
 // directory name stored in an object
-$dir_name = new names("$file_path/lstat_stat_variation18");
+$dir_name = new names("$file_path/lstat-stat-variation18");
 
 // file name stored in an object
 $file_name = new names("$file_path/lstat_stat_variation18.tmp");
@@ -53,9 +55,9 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink("$file_path/lstat_stat_variation18.tmp");
-rmdir("$file_path/lstat_stat_variation18");
+rmdir("$file_path/lstat-stat-variation18");
 ?>
 --EXPECTF--
 *** Testing stat() with filename & directory name stored inside an object ***
