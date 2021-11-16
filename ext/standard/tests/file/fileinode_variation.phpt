@@ -14,7 +14,7 @@ Description: Returns the inode number of the file, or FALSE in case of an error.
 */
 
 echo "*** Testing fileinode() with files, links and directories ***\n";
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $file1 = $file_path."/fileinode1_variation.tmp";
 $file2 = $file_path."/fileinode2_variation.tmp";
 $link1 = $file_path."/fileinode1_variation_link.tmp";
@@ -77,9 +77,9 @@ print( fileinode("$file_path/dir/subdir") )."\n";
 clearstatcache();
 
 echo "-- Testing with binary input --\n";
-print( fileinode(b"$file_path/dir") )."\n";
+print( fileinode("$file_path/dir") )."\n";
 clearstatcache();
-print( fileinode(b"$file_path/dir/subdir") );
+print( fileinode("$file_path/dir/subdir") );
 
 rmdir("$file_path/dir/subdir");
 rmdir("$file_path/dir");
