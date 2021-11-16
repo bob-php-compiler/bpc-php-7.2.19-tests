@@ -1,5 +1,7 @@
 --TEST--
 Test filesize() function: usage variations - size of files
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -13,7 +15,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    (and generates an error of level E_WARNING) in case of an error.
 */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require($file_path."/file.inc");
 
 echo "*** Testing filesize(): usage variations ***\n";
