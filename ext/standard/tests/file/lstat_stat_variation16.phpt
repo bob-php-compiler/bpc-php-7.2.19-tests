@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - effects changing permissions of file
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
@@ -18,7 +20,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test the effects on stats with changing permissions of file */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 $filename = "$file_path/lstat_stat_variation16.tmp";
@@ -44,7 +46,7 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink("$file_path/lstat_stat_variation16.tmp");
 ?>
 --EXPECTF--

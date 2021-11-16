@@ -1,5 +1,7 @@
 --TEST--
 Test lstat() and stat() functions: usage variations - hardlink
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -17,7 +19,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 /* test the effects of is_link() on stats of hard link */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require "$file_path/file.inc";
 
 
@@ -47,7 +49,7 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink("$file_path/lstat_stat_variation14_hard.tmp");
 unlink("$file_path/lstat_stat_variation14.tmp");
 ?>
