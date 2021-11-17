@@ -1,5 +1,7 @@
 --TEST--
 Test fopen() function : variation: use include path (path is bad) create a file (relative)
+--SKIPIF--
+skip TODO fopen use_include_path
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--

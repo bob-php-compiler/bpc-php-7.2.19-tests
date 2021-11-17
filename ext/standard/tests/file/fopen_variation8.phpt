@@ -1,5 +1,7 @@
 --TEST--
 Test fopen() function : variation: use include path and stream context (relative directories in path)
+--SKIPIF--
+skip TODO fopen use_include_path context
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--

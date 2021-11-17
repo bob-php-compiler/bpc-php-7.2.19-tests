@@ -3,6 +3,7 @@ Test fopen() function : variation: file uri, use include path = true
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --SKIPIF--
+skip TODO fopen file:// use_include_path
 <?php
 if(substr(PHP_OS, 0, 3) == "WIN")
   die("skip Not for Windows");
