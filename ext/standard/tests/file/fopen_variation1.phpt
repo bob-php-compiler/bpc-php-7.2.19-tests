@@ -3,9 +3,9 @@ fopen() with relative path on a file in the script directory
 --FILE--
 <?php
 
-$file = basename(__FILE__);
+$file = 'fopen_variation1.php';
 
-$fd = fopen($file, "r", true);
+$fd = fopen($file, "r");
 var_dump($fd);
 fclose($fd);
 
