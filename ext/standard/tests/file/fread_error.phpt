@@ -11,16 +11,8 @@ Test fread() function : error conditions
 */
 
 echo "*** Testing error conditions ***\n";
-$filename = __FILE__;
+$filename = 'fread_error.php';
 $file_handle = fopen($filename, "r");
-
-// zero argument
-echo "-- Testing fread() with zero argument --\n";
-var_dump( fread() );
-
-// more than expected no. of args
-echo "-- Testing fread() with more than expected number of arguments --\n";
-var_dump( fread($file_handle, 10, $file_handle) );
 
 // invalid length argument
 echo "-- Testing fread() with invalid length arguments --\n";
@@ -57,16 +49,9 @@ var_dump( fread(@$fp,10) );
 var_dump( fclose(@$fp) );
 
 echo "Done\n";
+?>
 --EXPECTF--
 *** Testing error conditions ***
--- Testing fread() with zero argument --
-
-Warning: fread() expects exactly 2 parameters, 0 given in %s on line %d
-bool(false)
--- Testing fread() with more than expected number of arguments --
-
-Warning: fread() expects exactly 2 parameters, 3 given in %s on line %d
-bool(false)
 -- Testing fread() with invalid length arguments --
 
 Warning: fread(): Length parameter must be greater than 0 in %s on line %d
@@ -100,8 +85,6 @@ bool(false)
 Warning: fread() expects parameter 1 to be resource, object given in %s on line %d
 bool(false)
 -- Testing fwrite() with closed/unset file handle --
-
-Notice: Undefined variable: file_content_type in %s on line %d
 
 Warning: fread(): supplied resource is not a valid stream resource in %s on line %d
 bool(false)
