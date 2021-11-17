@@ -1,5 +1,7 @@
 --TEST--
 Test fflush() function: usage variations - file opened in read-only mode
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*  Prototype: bool fflush ( resource $handle );
@@ -8,7 +10,7 @@ Test fflush() function: usage variations - file opened in read-only mode
 
 /* test fflush() with handle to a file opened in read-only mode as resource */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require $file_path.'/file.inc';
 
 echo "*** Testing fflush(): with file handles of files opened in various read modes ***\n";

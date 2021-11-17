@@ -1,5 +1,7 @@
 --TEST--
 Test fflush() function: usage variations - hard links as resource
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if( substr(PHP_OS, 0, 3) == 'WIN')
@@ -13,7 +15,7 @@ if( substr(PHP_OS, 0, 3) == 'WIN')
 
 /* test fflush() with handle to hard links as resource */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require $file_path.'/file.inc';
 
 echo "*** Testing fflush(): with hard links to files opened in diff modes ***\n";
