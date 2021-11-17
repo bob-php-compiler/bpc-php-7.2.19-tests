@@ -1,5 +1,7 @@
 --TEST--
 Test fgetc() function : usage variations - closed handle
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -19,7 +21,7 @@ echo "*** Testing fgetc() : usage variations ***\n";
 
 echo "-- Testing fgetc() with closed handle --\n";
 // open the file for reading
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 // close the file
 fclose($file_handle);
 
@@ -28,7 +30,7 @@ var_dump( fgetc($file_handle) );
 
 echo "-- Testing fgetc() with unset handle --\n";
 // open the file for reading
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 // unset the file handle
 unset($file_handle);
 
@@ -44,8 +46,6 @@ echo "Done";
 Warning: fgetc(): supplied resource is not a valid stream resource in %s on line %d
 bool(false)
 -- Testing fgetc() with unset handle --
-
-Notice: Undefined variable: file_handle in %s on line %d
 
 Warning: fgetc() expects parameter 1 to be resource, null given in %s on line %d
 bool(false)
