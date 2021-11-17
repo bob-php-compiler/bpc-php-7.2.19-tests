@@ -2,7 +2,7 @@
 Test function fstat() by calling it with its expected arguments
 --FILE--
 <?php
-$fp = fopen (__FILE__, 'r');
+$fp = fopen ('fstat_basic.php', 'r');
 var_dump(fstat( $fp ) );
 fclose($fp);
 ?>

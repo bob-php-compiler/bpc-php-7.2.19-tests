@@ -2,9 +2,9 @@
 Test function fstat() by calling it with its expected arguments
 --FILE--
 <?php
-$stat_result = stat(__FILE__);
+$stat_result = stat('fstat_variation8.php');
 clearstatcache();
-$fp = fopen (__FILE__, 'r');
+$fp = fopen ('fstat_variation8.php', 'r');
 $fstat_result = fstat($fp);
 fclose($fp);
 
