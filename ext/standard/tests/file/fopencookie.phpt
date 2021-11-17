@@ -1,5 +1,7 @@
 --TEST--
 fopencookie detected and working (or cast mechanism works)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 # vim600:syn=php:
