@@ -8,15 +8,6 @@ Test fgetc() function : error conditions
 */
 
 echo "*** Testing error conditions ***\n";
-// zero argument
-echo "-- Testing fgetc() with zero argument --\n";
-var_dump( fgetc() );
-
-// more than expected no. of args
-echo "-- Testing fgetc() with more than expected number of arguments --\n";
-$fp = fopen(__FILE__, "r");
-var_dump( fgetc($fp, $fp) );
-fclose($fp);
 
 // test invalid arguments : non-resources
 echo "-- Testing fgetc() with invalid arguments --\n";
@@ -35,16 +26,9 @@ for($loop_counter = 1; $loop_counter <= count($invalid_args); $loop_counter++) {
 }
 
 echo "Done\n";
+?>
 --EXPECTF--
 *** Testing error conditions ***
--- Testing fgetc() with zero argument --
-
-Warning: fgetc() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
--- Testing fgetc() with more than expected number of arguments --
-
-Warning: fgetc() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
 -- Testing fgetc() with invalid arguments --
 -- Iteration 1 --
 
