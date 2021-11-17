@@ -1,5 +1,7 @@
 --TEST--
 Test fgetc() function : usage variations - read when file pointer at EOF
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -12,9 +14,9 @@ include ("file.inc");
 echo "*** Testing fgetc() : usage variations ***\n";
 echo "-- Testing fgetc() with file whose file pointer is pointing to EOF --\n";
 // create a file
-create_files(dirname(__FILE__), 1, "text_with_new_line", 0755, 1, "w", "fgetc_variation");
+create_files('.', 1, "text_with_new_line", 0755, 1, "w", "fgetc_variation");
 
-$filename = dirname(__FILE__)."/fgetc_variation1.tmp";
+$filename = "./fgetc_variation1.tmp";
 
 // loop to check the file opened in different read modes
 $file_modes = array("r", "rb", "rt", "r+", "r+b", "r+t");
@@ -44,7 +46,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-unlink( dirname(__FILE__)."/fgetc_variation1.tmp");
+unlink( "./fgetc_variation1.tmp");
 ?>
 --EXPECTF--
 *** Testing fgetc() : usage variations ***

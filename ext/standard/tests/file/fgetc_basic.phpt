@@ -1,5 +1,7 @@
 --TEST--
 Test fgetc() function : basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -21,7 +23,7 @@ for($outerloop_counter = 0; $outerloop_counter < count($file_content_types); $ou
   echo $outerloop_counter + 1;
   echo " ---\n";
   // create file file
-  create_files(dirname(__FILE__), 1, $file_content_types[$outerloop_counter], 0755, 1, "w", "fgetc_basic", 1);
+  create_files('.', 1, $file_content_types[$outerloop_counter], 0755, 1, "w", "fgetc_basic", 1);
 
   //open the file in different modes and check the working of fgetc
   for($innerloop_counter = 0; $innerloop_counter < count($file_modes); $innerloop_counter++) {
@@ -32,7 +34,7 @@ for($outerloop_counter = 0; $outerloop_counter < count($file_content_types); $ou
     echo " --\n";
 
     // open the file using the $file_modes
-    $filename = dirname(__FILE__)."/fgetc_basic1.tmp"; // file name that is created by create_files
+    $filename = "./fgetc_basic1.tmp"; // file name that is created by create_files
     echo "-- Testing fgetc() : file opened using $file_modes[$innerloop_counter] mode --\n";
     $file_handle = fopen($filename, $file_modes[$innerloop_counter]);
     if ( !$file_handle ) {
@@ -55,7 +57,7 @@ for($outerloop_counter = 0; $outerloop_counter < count($file_content_types); $ou
   } // end of innerloop for
 
   // delete the file
-  delete_files(dirname(__FILE__), 1, "fgetc_basic", 1, ".tmp");
+  delete_files('.', 1, "fgetc_basic", 1, ".tmp");
 
 } // end of outerloop for
 
