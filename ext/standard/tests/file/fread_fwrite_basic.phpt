@@ -19,7 +19,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 */
 
 
-$outputfile = __FILE__.".tmp";
+$outputfile = "fread_fwrite_basic.php.tmp";
 
 echo "--- testing rw moving about the file ---\n";
 $h = fopen($outputfile, 'wb+');
