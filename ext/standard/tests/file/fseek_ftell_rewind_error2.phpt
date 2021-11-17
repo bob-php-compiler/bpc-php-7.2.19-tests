@@ -14,14 +14,8 @@ Test fseek(), ftell() & rewind() functions : error conditions - ftell()
 */
 
 echo "*** Testing ftell() : error conditions ***\n";
-// zero argument
-echo "-- Testing ftell() with zero argument --\n";
-var_dump( ftell() );
 
-// more than expected no. of args
-echo "-- Testing ftell() with more than expected number of arguments --\n";
-$fp = fopen(__FILE__, "r");
-var_dump( ftell($fp, 10) );
+$fp = fopen('/proc/self/comm', "r");
 
 // test invalid arguments : non-resources
 echo "-- Testing ftell() with invalid arguments --\n";
@@ -45,7 +39,7 @@ fclose($fp);
 var_dump(ftell($fp));
 
 // ftell on a file handle which is unset
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 unset($file_handle); //unset file handle
 var_dump( ftell(@$file_handle) );
 
@@ -53,14 +47,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing ftell() : error conditions ***
--- Testing ftell() with zero argument --
-
-Warning: ftell() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
--- Testing ftell() with more than expected number of arguments --
-
-Warning: ftell() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
 -- Testing ftell() with invalid arguments --
 -- Iteration 1 --
 

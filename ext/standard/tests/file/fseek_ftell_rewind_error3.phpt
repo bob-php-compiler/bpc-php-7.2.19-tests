@@ -14,14 +14,8 @@ Test fseek(), ftell() & rewind() functions : error conditions - rewind()
 */
 
 echo "*** Testing rewind() : error conditions ***\n";
-// zero argument
-echo "-- Testing rewind() with zero argument --\n";
-var_dump( rewind() );
 
-// more than expected no. of args
-echo "-- Testing rewind() with more than expected number of arguments --\n";
-$fp = fopen(__FILE__, "r");
-var_dump( rewind($fp, 10) );
+$fp = fopen('/proc/self/comm', "r");
 
 // test invalid arguments : non-resources
 echo "-- Testing rewind() with invalid arguments --\n";
@@ -45,7 +39,7 @@ fclose($fp);
 var_dump(rewind($fp));
 
 // rewind on a file handle which is unset
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 unset($file_handle); //unset file handle
 var_dump( rewind(@$file_handle) );
 
@@ -53,14 +47,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing rewind() : error conditions ***
--- Testing rewind() with zero argument --
-
-Warning: rewind() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
--- Testing rewind() with more than expected number of arguments --
-
-Warning: rewind() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
 -- Testing rewind() with invalid arguments --
 -- Iteration 1 --
 

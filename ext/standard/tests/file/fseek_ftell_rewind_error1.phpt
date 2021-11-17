@@ -14,15 +14,8 @@ Test fseek(), ftell() & rewind() functions : error conditions - fseek()
 */
 
 echo "*** Testing fseek() : error conditions ***\n";
-// zero argument
-echo "-- Testing fseek() with zero argument --\n";
-var_dump( fseek() );
 
-// unexpected no. of args
-echo "-- Testing fseek() with unexpected number of arguments --\n";
-$fp = fopen(__FILE__, "r");
-var_dump( fseek($fp) );
-var_dump( fseek($fp, 10, $fp,10) );
+$fp = fopen('/proc/self/comm', "r");
 
 // test invalid arguments : non-resources
 echo "-- Testing fseek() with invalid arguments --\n";
@@ -46,7 +39,7 @@ fclose($fp);
 var_dump(fseek($fp,10));
 
 // fseek() on a file handle which is unset
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 unset($file_handle); //unset file handle
 var_dump( fseek(@$file_handle,10));
 
@@ -54,17 +47,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Testing fseek() : error conditions ***
--- Testing fseek() with zero argument --
-
-Warning: fseek() expects at least 2 parameters, 0 given in %s on line %d
-bool(false)
--- Testing fseek() with unexpected number of arguments --
-
-Warning: fseek() expects at least 2 parameters, 1 given in %s on line %d
-bool(false)
-
-Warning: fseek() expects at most 3 parameters, 4 given in %s on line %d
-bool(false)
 -- Testing fseek() with invalid arguments --
 -- Iteration 1 --
 
