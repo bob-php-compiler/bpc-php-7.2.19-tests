@@ -1,5 +1,7 @@
 --TEST--
 Test fopen() function : usage variation different datatypes for use_include_path
+--SKIPIF--
+skip TODO fopen use_include_path
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--
