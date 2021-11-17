@@ -13,7 +13,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing fwrite() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -23,7 +23,7 @@ set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted (if any)
 
-$filename = __DIR__ . '/fwriteVar5.tmp';
+$filename = './fwriteVar5.tmp';
 
 
 
