@@ -15,17 +15,10 @@ if(substr(PHP_OS, 0, 3) == 'WIN' || strtoupper( substr(PHP_OS, 0, 3) ) == 'SUN')
  * Description: Closes process file pointer.
  */
 echo "*** Testing for error conditions ***\n";
-var_dump( popen("abc.txt", "rw") );   // Invalid mode Argument
-var_dump( pclose(1) );
-echo "\n--- Done ---";
+var_dump( pclose() );
+
 ?>
 --EXPECTF--
-*** Testing for error conditions ***
-
-Warning: popen(abc.txt,rw): %s on line %d
-bool(false)
-
-Warning: pclose() expects parameter 1 to be resource, integer given in %s on line %d
-bool(false)
-
---- Done ---
+*** ERROR:compile-error:
+Error: Too few arguments to function pclose(): 1 required, 0 provided in %s on line %d
+ -- compile-error
