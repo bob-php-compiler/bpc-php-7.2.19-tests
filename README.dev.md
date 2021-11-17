@@ -700,6 +700,10 @@
 
     only the following functions support context parameter:
 
+20. ftell of append-only streams same as C
+
+    @see ext/standard/tests/file/fwrite_variation3.phpt
+
 ## ext/date
 
 1. ini_set date.timezone warning message
