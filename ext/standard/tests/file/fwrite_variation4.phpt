@@ -1,5 +1,7 @@
 --TEST--
 Test fwrite() function : usage variations - x, xb, xt, x+, x+b & x+t modes
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if( substr(PHP_OS, 0, 3) == 'WIN' ) {
@@ -38,7 +40,7 @@ foreach($file_content_types as $file_content_type) {
   foreach($file_modes as $file_mode) {
     echo "-- Opening file in $file_mode --\n";
 
-    $filename = dirname(__FILE__)."/fwrite_variation4.tmp"; // this is name of the file
+    $filename = "./fwrite_variation4.tmp"; // this is name of the file
 
     $file_handle = fopen($filename, $file_mode);
     if(!$file_handle) {

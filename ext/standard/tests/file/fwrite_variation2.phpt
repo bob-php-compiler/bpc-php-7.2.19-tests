@@ -1,5 +1,7 @@
 --TEST--
 Test fwrite() function : usage variations - r+, r+b & r+t modes
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if( substr(PHP_OS, 0, 3) == 'WIN' ) {
@@ -39,8 +41,8 @@ foreach($file_content_types as $file_content_type) {
     echo "-- Opening file in $file_mode --\n";
 
     // create temp file and fill the data of type $file_content_type
-    $filename = dirname(__FILE__)."/fwrite_variation2.tmp"; // this is name of the file
-    create_files ( dirname(__FILE__), 1, $file_content_type, 0755, 1, "w", "fwrite_variation", 2);
+    $filename = "./fwrite_variation2.tmp"; // this is name of the file
+    create_files ( '.', 1, $file_content_type, 0755, 1, "w", "fwrite_variation", 2);
 
     $file_handle = fopen($filename, $file_mode);
     if(!$file_handle) {

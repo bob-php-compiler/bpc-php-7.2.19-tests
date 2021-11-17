@@ -1,5 +1,7 @@
 --TEST--
 Test fwrite() function : basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if( substr(PHP_OS, 0, 3) == 'WIN' ) {
@@ -29,7 +31,7 @@ $file_content_types = array("numeric","text","text_with_new_line","alphanumeric"
 
 foreach($file_content_types as $file_content_type) {
   echo "\n-- Testing fwrite() with file having data of type ". $file_content_type ." --\n";
-  $filename = dirname(__FILE__)."/fwrite_basic.tmp"; // this is name of the file
+  $filename = "./fwrite_basic.tmp"; // this is name of the file
 
   for($inner_loop_counter = 0;
       $inner_loop_counter < count($file_modes);
