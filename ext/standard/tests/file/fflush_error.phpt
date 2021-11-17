@@ -8,22 +8,6 @@ Test fflush() function: error conditions
 */
 
 echo "*** Testing error conditions ***\n";
-$file_path = dirname(__FILE__);
-
-// zero argument
-echo "-- Testing fflush(): with zero argument --\n";
-var_dump( fflush() );
-
-// more than expected no. of args
-echo "-- Testing fflush(): with more than expected number of arguments --\n";
-
-$filename = "$file_path/fflush_error.tmp";
-$file_handle = fopen($filename, "w");
-if($file_handle == false)
-  exit("Error:failed to open file $filename");
-
-var_dump( fflush($file_handle, $file_handle) );
-fclose($file_handle);
 
 // test invalid arguments : non-resources
 echo "-- Testing fflush(): with invalid arguments --\n";
@@ -43,21 +27,8 @@ for($loop_counter = 1; $loop_counter <= count($invalid_args); $loop_counter++) {
 }
 echo "\n*** Done ***";
 ?>
---CLEAN--
-<?php
-$file_path = dirname(__FILE__);
-unlink("$file_path/fflush_error.tmp");
-?>
 --EXPECTF--
 *** Testing error conditions ***
--- Testing fflush(): with zero argument --
-
-Warning: fflush() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
--- Testing fflush(): with more than expected number of arguments --
-
-Warning: fflush() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
 -- Testing fflush(): with invalid arguments --
 -- Iteration 1 --
 
