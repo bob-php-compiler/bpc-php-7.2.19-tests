@@ -12,7 +12,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 
 echo "*** Testing fseek() : variation - beyond file boundaries ***\n";
 
-$outputfile = __FILE__.".tmp";
+$outputfile = "fseek_variation3.php.tmp";
 
 $h = fopen($outputfile, "wb+");
 for ($i = 1; $i < 10; $i++) {

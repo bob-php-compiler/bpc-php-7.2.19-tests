@@ -14,7 +14,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 
 echo "*** Testing fseek() : usage variations ***\n";
 error_reporting(E_ALL & ~E_NOTICE);
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('fseek_variation2.php', 'r');
 $offset = 3;
 
 //get an unset variable

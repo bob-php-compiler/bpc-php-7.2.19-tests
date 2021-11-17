@@ -15,7 +15,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 // Initialise function arguments not being substituted (if any)
 
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('fseek_variation1.php', 'r');
 $whence = SEEK_SET;
 
 //get an unset variable
