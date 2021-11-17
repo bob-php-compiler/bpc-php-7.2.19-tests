@@ -1,5 +1,7 @@
 --TEST--
 Test fread() function : usage variations - read some/all chars, write only mode (Bug #42036)
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -62,10 +64,10 @@ foreach($file_content_types as $file_content_type) {
   foreach($file_modes as $file_mode) {
     if(!strstr($file_mode,"x")){
        /* create files with $file_content_type */
-       create_files ( dirname(__FILE__), 1, $file_content_type, 0755, 1, "w", "fread_variation", 2);
+       create_files ( '.', 1, $file_content_type, 0755, 1, "w", "fread_variation", 2);
     }
 
-    $filename = dirname(__FILE__)."/fread_variation2.tmp"; // this is name of the file created by create_files()
+    $filename = "./fread_variation2.tmp"; // this is name of the file created by create_files()
     echo "-- File opened in mode ".$file_mode." --\n";
     $file_handle = fopen($filename, $file_mode);
     if (!$file_handle) {

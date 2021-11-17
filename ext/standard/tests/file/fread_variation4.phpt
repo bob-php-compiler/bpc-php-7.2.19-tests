@@ -1,5 +1,7 @@
 --TEST--
 Test fread() function : usage variations - read beyond file size, write only mode
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -65,10 +67,10 @@ foreach($file_content_types as $file_content_type) {
   foreach($file_modes as $file_mode) {
     if(!strstr($file_mode,"x")){
        /* create files with $file_content_type */
-       create_files ( dirname(__FILE__), 1, $file_content_type, 0755, 1, "w", "fread_variation", 4);
+       create_files ( '.', 1, $file_content_type, 0755, 1, "w", "fread_variation", 4);
     }
 
-    $filename = dirname(__FILE__)."/fread_variation4.tmp"; // this is name of the file created by create_files()
+    $filename = "./fread_variation4.tmp"; // this is name of the file created by create_files()
     echo "-- File opened in mode ".$file_mode." --\n";
     $file_handle = fopen($filename, $file_mode);
     if (!$file_handle) {
