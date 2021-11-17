@@ -1,5 +1,7 @@
 --TEST--
 Test fgetc() function : usage variations - write only modes (Bug #42036)
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -18,7 +20,7 @@ include ("file.inc");
 echo "*** Testing fgetc() with file opened in write only mode ***\n";
 
 $file_modes = array("w", "wb", "wt", "a", "ab", "at", "x", "xb", "xt");
-$filename = dirname(__FILE__)."/fgetc_variation3.tmp";
+$filename = "./fgetc_variation3.tmp";
 foreach ($file_modes as $file_mode ) {
   echo "-- File opened in mode : $file_mode --\n";
 
