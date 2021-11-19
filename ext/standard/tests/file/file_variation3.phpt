@@ -13,7 +13,7 @@ Test file() function : second parameter variation
 echo "*** Testing file() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -22,12 +22,12 @@ function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
 set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted
-$filename = __FILE__ . ".tmp";
+$filename = "file_variation3.tmp";
 $fd = fopen($filename, "w+");
 fwrite($fd, "Line 1\nLine 2\nLine 3");
 fclose($fd);
 
-$context = stream_context_create();
+$context = null;
 
 
 //get an unset variable
@@ -76,9 +76,9 @@ $inputs = array(
       'lowercase null' => null,
 
       // boolean data
-      'lowercase true' => true,
+//      'lowercase true' => true,
       'lowercase false' =>false,
-      'uppercase TRUE' =>TRUE,
+//      'uppercase TRUE' =>TRUE,
       'uppercase FALSE' =>FALSE,
 
       // empty data
@@ -109,7 +109,7 @@ foreach($inputs as $key =>$value) {
       var_dump( file($filename, $value, $context) );
 };
 
-unlink(__FILE__ . ".tmp");
+unlink("file_variation3.tmp");
 
 ?>
 ===DONE===
@@ -190,31 +190,7 @@ array(3) {
   string(6) "Line 3"
 }
 
---lowercase true--
-array(3) {
-  [0]=>
-  string(7) "Line 1
-"
-  [1]=>
-  string(7) "Line 2
-"
-  [2]=>
-  string(6) "Line 3"
-}
-
 --lowercase false--
-array(3) {
-  [0]=>
-  string(7) "Line 1
-"
-  [1]=>
-  string(7) "Line 2
-"
-  [2]=>
-  string(6) "Line 3"
-}
-
---uppercase TRUE--
 array(3) {
   [0]=>
   string(7) "Line 1
