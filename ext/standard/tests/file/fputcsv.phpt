@@ -26,7 +26,7 @@ $list = array (
   19 => '"\\""",aaa',
 );
 
-$file = dirname(__FILE__) . 'fgetcsv.csv';
+$file = 'fgetcsv.csv';
 @unlink($file);
 
 $fp = fopen($file, "w");
@@ -36,9 +36,9 @@ foreach ($list as $v) {
 fclose($fp);
 
 $res = file($file);
-foreach($res as &$val)
+foreach($res as $idx => $val)
 {
-	$val = substr($val, 0, -1);
+	$res[$idx] = substr($val, 0, -1);
 }
 echo '$list = ';var_export($res);echo ";\n";
 
