@@ -3,7 +3,7 @@ file() on a file with blank lines
 --FILE--
 <?php
 
-$filepath = __FILE__ . ".tmp";
+$filepath = "file_variation7.php.tmp";
 $fd = fopen($filepath, "w+");
 fwrite($fd, "Line 1\n\n \n  \n\Line 3");
 fclose($fd);
