@@ -15,11 +15,11 @@ var_dump(filegroup("./.."));
 var_dump(fileatime("./.."));
 var_dump(filectime("./.."));
 
-var_dump(fileinode(__FILE__));
-var_dump(fileowner(__FILE__));
-var_dump(filegroup(__FILE__));
-var_dump(fileatime(__FILE__));
-var_dump(filectime(__FILE__));
+var_dump(fileinode("filestat.php"));
+var_dump(fileowner("filestat.php"));
+var_dump(filegroup("filestat.php"));
+var_dump(fileatime("filestat.php"));
+var_dump(filectime("filestat.php"));
 
 var_dump(fileinode("/no/such/file/or/dir"));
 var_dump(fileowner("/no/such/file/or/dir"));
