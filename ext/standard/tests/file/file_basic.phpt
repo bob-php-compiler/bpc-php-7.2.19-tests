@@ -1,5 +1,7 @@
 --TEST--
 Test file() function : basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -7,8 +9,8 @@ Test file() function : basic functionality
  * Description: Reads entire file into an array
  *              Returns the  file in an array
  */
-require(dirname(__FILE__) . '/file.inc');
-$file_path = dirname(__FILE__);
+require('file.inc');
+$file_path = '.';
 echo "*** Testing file() with basic types of files ***\n";
 $filetypes = array("numeric", "text", "empty", "text_with_new_line");
 
