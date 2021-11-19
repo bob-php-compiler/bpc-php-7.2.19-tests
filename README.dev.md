@@ -704,6 +704,8 @@
 
     @see ext/standard/tests/file/fwrite_variation3.phpt
 
+21. TODO support use_include_path
+
 ## ext/date
 
 1. ini_set date.timezone warning message

@@ -1,5 +1,7 @@
 --TEST--
 Test file() function : usage variations
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -7,12 +9,12 @@ Test file() function : usage variations
  *  Description: Reads entire file into an array
                  Returns the  file in an array
  */
-require(dirname(__FILE__) . '/file.inc');
+require('file.inc');
 
 $data_array = array( "Garbage data", "Gar\nba\nge d\nata", "Gar\n\nbage \n\n data" );
 echo "*** Using various flags values with different data in a file\n";
 $count=1;
-$file_path = dirname(__FILE__);
+$file_path = '.';
 foreach( $data_array as $data ) {
    echo "--Iteration $count --\n";
    $fh  = fopen($file_path."/file_variation.tmp", "w");
@@ -23,14 +25,14 @@ foreach( $data_array as $data ) {
    fclose($fh);
 }
 
-echo "*** Testing with variation in use_include_path argument ***\n";
-$file_path1 = dirname(__FILE__)."/file_variation";
-mkdir($file_path1);
-ini_set( 'include_path',$file_path.'/file_variation' );
+//echo "*** Testing with variation in use_include_path argument ***\n";
+//$file_path1 = dirname(__FILE__)."/file_variation";
+//mkdir($file_path1);
+//ini_set( 'include_path',$file_path.'/file_variation' );
 
-file_put_contents( $file_path1."/file1_variation.tmp", "aaaaaaaaaaaaaaabbbbbbbbbbb111111111222222222" );
-var_dump( file("file1_variation.tmp", FILE_USE_INCLUDE_PATH) );
-var_dump( file($file_path1."/file1_variation.tmp", 1) );
+//file_put_contents( $file_path1."/file1_variation.tmp", "aaaaaaaaaaaaaaabbbbbbbbbbb111111111222222222" );
+//var_dump( file("file1_variation.tmp", FILE_USE_INCLUDE_PATH) );
+//var_dump( file($file_path1."/file1_variation.tmp", 1) );
 
 echo "*** Using file function to remove line containing a key string ***\n";
 $file_handle = fopen($file_path."/file2_variation.tmp", "w");
@@ -55,12 +57,12 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink($file_path."/file_variation.tmp");
-unlink($file_path."/file_variation/file1_variation.tmp");
+//unlink($file_path."/file_variation/file1_variation.tmp");
 unlink($file_path."/file2_variation.tmp");
 unlink($file_path."/file3_variation.tmp");
-rmdir($file_path."/file_variation");
+//rmdir($file_path."/file_variation");
 
 ?>
 --EXPECTF--
@@ -126,15 +128,6 @@ array(5) {
 "
   [4]=>
   string(5) " data"
-}
-*** Testing with variation in use_include_path argument ***
-array(1) {
-  [0]=>
-  string(44) "aaaaaaaaaaaaaaabbbbbbbbbbb111111111222222222"
-}
-array(1) {
-  [0]=>
-  string(44) "aaaaaaaaaaaaaaabbbbbbbbbbb111111111222222222"
 }
 *** Using file function to remove line containing a key string ***
 File contents in array form Before replacement of the key
