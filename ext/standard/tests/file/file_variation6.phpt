@@ -3,13 +3,13 @@ file() with a range of integer flag values
 --FILE--
 <?php
 
-$filepath = __FILE__ . ".tmp";
+$filepath = "file_variation6.tmp";
 $fd = fopen($filepath, "w+");
 fwrite($fd, "Line 1\nLine 2\nLine 3");
 fclose($fd);
 
 for ($flags = 0; $flags <= 32; $flags++) {
-	var_dump(file($filepath, $flags));
+	var_dump(file($filepath, $flags & ~FILE_USE_INCLUDE_PATH));
 }
 
 unlink($filepath);
@@ -236,25 +236,25 @@ array(3) {
 Warning: file(): '24' flag is not supported in %s on line %d
 bool(false)
 
-Warning: file(): '25' flag is not supported in %s on line %d
+Warning: file(): '24' flag is not supported in %s on line %d
 bool(false)
 
 Warning: file(): '26' flag is not supported in %s on line %d
 bool(false)
 
-Warning: file(): '27' flag is not supported in %s on line %d
+Warning: file(): '26' flag is not supported in %s on line %d
 bool(false)
 
 Warning: file(): '28' flag is not supported in %s on line %d
 bool(false)
 
-Warning: file(): '29' flag is not supported in %s on line %d
+Warning: file(): '28' flag is not supported in %s on line %d
 bool(false)
 
 Warning: file(): '30' flag is not supported in %s on line %d
 bool(false)
 
-Warning: file(): '31' flag is not supported in %s on line %d
+Warning: file(): '30' flag is not supported in %s on line %d
 bool(false)
 
 Warning: file(): '32' flag is not supported in %s on line %d
