@@ -11,7 +11,7 @@ Test file() function : third parameter variation
 echo "*** Testing file() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -20,7 +20,7 @@ function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
 set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted
-$filename = __FILE__ . ".tmp";
+$filename = "file_variation4.tmp";
 $fd = fopen($filename, "w+");
 fwrite($fd, "Line 1\nLine 2\nLine 3");
 fclose($fd);
@@ -53,7 +53,7 @@ $index_array = array (1, 2, 3);
 $assoc_array = array ('one' => 1, 'two' => 2);
 
 // create a file stream resource
-$tmp_filename = __FILE__ . ".tmp2";
+$tmp_filename = "file_variation4.tmp2";
 $file_stream_resource = fopen($tmp_filename, "w+");
 
 //array of values to iterate over
