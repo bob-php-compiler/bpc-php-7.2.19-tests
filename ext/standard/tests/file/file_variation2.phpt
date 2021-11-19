@@ -11,7 +11,7 @@ Test file() function : first parameter variation
 echo "*** Testing file() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -21,7 +21,7 @@ set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted
 $flags = 0;
-$context = stream_context_create();
+$context = null;
 
 
 //get an unset variable
