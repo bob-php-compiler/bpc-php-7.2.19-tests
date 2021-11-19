@@ -9,12 +9,12 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 --FILE--
 <?php
 
-$script_directory = dirname(__FILE__);
+$script_directory = getcwd();
 chdir($script_directory);
-$test_dirname = basename(__FILE__, ".php") . "testdir";
+$test_dirname = basename("file_variation5.php", ".php") . "testdir";
 mkdir($test_dirname);
 
-$filepath = __FILE__ . ".tmp";
+$filepath = "file_variation5.php.tmp";
 $filename = basename($filepath);
 $fd = fopen($filepath, "w+");
 fwrite($fd, "Line 1\nLine 2\nLine 3");
