@@ -1,5 +1,7 @@
 --TEST--
 Test readfile() function: usage variation - include path
+--SKIPIF--
+skip TODO use_include_path and context
 --FILE--
 <?php
 /* Prototype: int readfile ( string $filename [, bool $use_include_path [, resource $context]] );
