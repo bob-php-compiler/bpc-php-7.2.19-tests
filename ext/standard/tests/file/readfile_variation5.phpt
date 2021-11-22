@@ -13,7 +13,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing readfile() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -58,16 +58,16 @@ $inputs = array(
 
       // int data
       'int 0' => 0,
-      'int 1' => 1,
-      'int 12345' => 12345,
-      'int -12345' => -2345,
+//      'int 1' => 1,
+//      'int 12345' => 12345,
+//      'int -12345' => -2345,
 
       // float data
-      'float 10.5' => 10.5,
-      'float -10.5' => -10.5,
-      'float 12.3456789000e10' => 12.3456789000e10,
-      'float -12.3456789000e10' => -12.3456789000e10,
-      'float .5' => .5,
+//      'float 10.5' => 10.5,
+//      'float -10.5' => -10.5,
+//      'float 12.3456789000e10' => 12.3456789000e10,
+//      'float -12.3456789000e10' => -12.3456789000e10,
+//      'float .5' => .5,
 
       // array data
       'empty array' => array(),
@@ -80,9 +80,9 @@ $inputs = array(
       'lowercase null' => null,
 
       // boolean data
-      'lowercase true' => true,
+//      'lowercase true' => true,
       'lowercase false' =>false,
-      'uppercase TRUE' =>TRUE,
+//      'uppercase TRUE' =>TRUE,
       'uppercase FALSE' =>FALSE,
 
       // empty data
@@ -90,10 +90,10 @@ $inputs = array(
       'empty string SQ' => '',
 
       // string data
-      'string DQ' => "string",
-      'string SQ' => 'string',
-      'mixed case string' => "sTrInG",
-      'heredoc' => $heredoc,
+//      'string DQ' => "string",
+//      'string SQ' => 'string',
+//      'mixed case string' => "sTrInG",
+//      'heredoc' => $heredoc,
 
       // object data
       'instance of classWithToString' => new classWithToString(),
@@ -129,30 +129,6 @@ unlink($filename);
 --int 0--
 testing readfile
 
---int 1--
-testing readfile
-
---int 12345--
-testing readfile
-
---int -12345--
-testing readfile
-
---float 10.5--
-testing readfile
-
---float -10.5--
-testing readfile
-
---float 12.3456789000e10--
-testing readfile
-
---float -12.3456789000e10--
-testing readfile
-
---float .5--
-testing readfile
-
 --empty array--
 Error: 2 - readfile() expects parameter 2 to be boolean, array given, %s(%d)
 File not read
@@ -175,13 +151,7 @@ testing readfile
 --lowercase null--
 testing readfile
 
---lowercase true--
-testing readfile
-
 --lowercase false--
-testing readfile
-
---uppercase TRUE--
 testing readfile
 
 --uppercase FALSE--
@@ -191,18 +161,6 @@ testing readfile
 testing readfile
 
 --empty string SQ--
-testing readfile
-
---string DQ--
-testing readfile
-
---string SQ--
-testing readfile
-
---mixed case string--
-testing readfile
-
---heredoc--
 testing readfile
 
 --instance of classWithToString--
