@@ -1,5 +1,7 @@
 --TEST--
 Test readfile() function : variation
+--SKIPIF--
+skip TODO use_include_path
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--
