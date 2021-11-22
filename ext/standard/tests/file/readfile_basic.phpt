@@ -1,5 +1,7 @@
 --TEST--
 Test readfile() function: basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -12,10 +14,10 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description: Outputs a file
 */
 // common file used
-require(dirname(__FILE__) . '/file.inc');
+require('file.inc');
 
 echo "*** Testing readfile() : basic functionality ***\n";
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $file_prefix = "readfile_basic";  // temp files created with this prefix
 
 // the content that is filled into the temp files as created
