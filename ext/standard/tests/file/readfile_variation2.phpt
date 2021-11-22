@@ -1,5 +1,7 @@
 --TEST--
 Test readfile() function: usage variations - links
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -21,7 +23,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 // include file.inc
 require("file.inc");
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 // temp file used here
 $filename = "$file_path/readfile_variation2.tmp";
@@ -61,7 +63,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink("$file_path/readfile_variation2.tmp");
 ?>
 --EXPECTF--
