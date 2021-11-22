@@ -6,12 +6,7 @@ Test readfile() function: error conditions
    Description: Outputs a file
 */
 
-$context = stream_context_create();
-
 echo "*** Test readfile(): error conditions ***\n";
-echo "-- Testing readfile() with unexpected no. of arguments --\n";
-var_dump( readfile() );  // args < expected
-var_dump( readfile(__FILE__, true, $context, 4) );  // args > expected
 
 echo "\n-- Testing readfile() with invalid arguments --\n";
 // invalid arguments
@@ -29,13 +24,6 @@ echo "Done\n";
 ?>
 --EXPECTF--
 *** Test readfile(): error conditions ***
--- Testing readfile() with unexpected no. of arguments --
-
-Warning: readfile() expects at least 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: readfile() expects at most 3 parameters, 4 given in %s on line %d
-bool(false)
 
 -- Testing readfile() with invalid arguments --
 
