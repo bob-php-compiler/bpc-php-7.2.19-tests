@@ -1,5 +1,7 @@
 --TEST--
 Test readfile() function: usage variation - stream_context
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /* Prototype: int readfile ( string $filename [, bool $use_include_path [, resource $context]] );
@@ -10,13 +12,13 @@ Test readfile() function: usage variation - stream_context
 
 // include file.inc
 require("file.inc");
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 /* Variation 1 : Check working of third argument of readfile() */
 
 echo "*** Testing readfile(): checking third argument ***\n";
 // creating a context
-$context = stream_context_create();
+$context = null;
 // temp file name used here
 $filename = "$file_path/readfile_variation1.tmp";
 
@@ -24,7 +26,7 @@ $filename = "$file_path/readfile_variation1.tmp";
 $fp = fopen($filename, "w");
 fill_file($fp, "text_with_new_line", 50);
 fclose($fp);
-$count = readfile($filename, true, $context);
+$count = readfile($filename, false, $context);
 echo "\n";
 var_dump($count);
 
@@ -32,7 +34,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/readfile_variation1.tmp");
+unlink("./readfile_variation1.tmp");
 ?>
 --EXPECT--
 *** Testing readfile(): checking third argument ***
