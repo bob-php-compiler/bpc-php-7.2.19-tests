@@ -1,5 +1,7 @@
 --TEST--
 file_get_contents() function : basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--
@@ -10,7 +12,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
  *  Description: Reads entire file into a string
  */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 include($file_path."/file.inc");
 
 echo "*** Testing the basic functionality of the file_get_contents() function ***\n";
