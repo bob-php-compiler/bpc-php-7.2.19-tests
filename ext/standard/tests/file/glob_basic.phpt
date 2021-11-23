@@ -8,10 +8,10 @@ Test glob() function: basic functions
 
 echo "*** Testing glob() : basic functions ***\n";
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 // temp dirname used here
-$dirname = "$file_path/glob_basic";
+$dirname = "$file_path/glob-basic";
 
 // temp dir created
 mkdir($dirname);
@@ -41,42 +41,42 @@ function sort_var_dump($results) {
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-unlink("$file_path/glob_basic/wonder12345");
-unlink("$file_path/glob_basic/wonder.txt");
-unlink("$file_path/glob_basic/file.text");
-rmdir("$file_path/glob_basic/");
+$file_path = '.';
+unlink("$file_path/glob-basic/wonder12345");
+unlink("$file_path/glob-basic/wonder.txt");
+unlink("$file_path/glob-basic/file.text");
+rmdir("$file_path/glob-basic/");
 ?>
 --EXPECTF--
 *** Testing glob() : basic functions ***
 array(3) {
   [0]=>
-  string(%d) "%s/glob_basic/file.text"
+  string(%d) "%s/glob-basic/file.text"
   [1]=>
-  string(%d) "%s/glob_basic/wonder.txt"
+  string(%d) "%s/glob-basic/wonder.txt"
   [2]=>
-  string(%d) "%s/glob_basic/wonder12345"
+  string(%d) "%s/glob-basic/wonder12345"
 }
 array(1) {
   [0]=>
-  string(%d) "%s/glob_basic/wonder.txt"
+  string(%d) "%s/glob-basic/wonder.txt"
 }
 array(1) {
   [0]=>
-  string(%d) "%s/glob_basic/wonder.txt"
+  string(%d) "%s/glob-basic/wonder.txt"
 }
 array(2) {
   [0]=>
-  string(%d) "%s/glob_basic/file.text"
+  string(%d) "%s/glob-basic/file.text"
   [1]=>
-  string(%d) "%s/glob_basic/wonder.txt"
+  string(%d) "%s/glob-basic/wonder.txt"
 }
 array(0) {
 }
 array(2) {
   [0]=>
-  string(%d) "%s/glob_basic/file.text"
+  string(%d) "%s/glob-basic/file.text"
   [1]=>
-  string(%d) "%s/glob_basic/wonder.txt"
+  string(%d) "%s/glob-basic/wonder.txt"
 }
 Done

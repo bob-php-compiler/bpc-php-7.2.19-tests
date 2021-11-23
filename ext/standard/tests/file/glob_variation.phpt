@@ -17,30 +17,30 @@ if (!defined('GLOB_BRACE')) {
 
 echo "*** Testing glob() : usage variations ***\n";
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 // temp dir created
-mkdir("$file_path/glob_variation");
-mkdir("$file_path/glob_variation/wonder");
+mkdir("$file_path/glob-variation");
+mkdir("$file_path/glob-variation/wonder");
 
 // temp files created
-$fp = fopen("$file_path/glob_variation/wonder12345", "w");
+$fp = fopen("$file_path/glob-variation/wonder12345", "w");
 fclose($fp);
-$fp = fopen("$file_path/glob_variation/wonder;123456", "w");
+$fp = fopen("$file_path/glob-variation/wonder;123456", "w");
 fclose($fp);
 
 $patterns = array (
-  "$file_path/glob_variation/*der*",
-  "$file_path/glob_variation/?onder*",
-  "$file_path/glob_variation/w*der?*",
-  "$file_path/glob_variation/*der5",
-  "$file_path/glob_variation/??onder*",
-  "$file_path/glob_variation/***der***",
-  "$file_path/glob_variation/++onder*",
-  "$file_path/glob_variation/WONDER5\0",
-  '$file_path/glob_variation/wonder5',
-  "$file_path/glob_variation/?wonder?",
-  "$file_path/glob_variation/wonder?",
+  "$file_path/glob-variation/*der*",
+  "$file_path/glob-variation/?onder*",
+  "$file_path/glob-variation/w*der?*",
+  "$file_path/glob-variation/*der5",
+  "$file_path/glob-variation/??onder*",
+  "$file_path/glob-variation/***der***",
+  "$file_path/glob-variation/++onder*",
+  "$file_path/glob-variation/WONDER5\0",
+  '$file_path/glob-variation/wonder5',
+  "$file_path/glob-variation/?wonder?",
+  "$file_path/glob-variation/wonder?",
   TRUE  // boolean true
 );
 $counter = 1;
@@ -58,17 +58,17 @@ foreach($patterns as $pattern) {
 }
 
 echo "\n*** Testing glob() with pattern within braces ***\n";
-var_dump( glob("$file_path/glob_variation/*{5}", GLOB_BRACE) );
+var_dump( glob("$file_path/glob-variation/*{5}", GLOB_BRACE) );
 
 // delete temp files and dir
-unlink("$file_path/glob_variation/wonder12345");
-unlink("$file_path/glob_variation/wonder;123456");
-rmdir("$file_path/glob_variation/wonder");
-rmdir("$file_path/glob_variation");
+unlink("$file_path/glob-variation/wonder12345");
+unlink("$file_path/glob-variation/wonder;123456");
+rmdir("$file_path/glob-variation/wonder");
+rmdir("$file_path/glob-variation");
 
 echo "\n*** Testing glob() on directories ***\n";
 // temp dir created to check for pattern matching the sub dir created in it
-mkdir("$file_path/glob_variation/wonder1/wonder2", 0777, true);
+mkdir("$file_path/glob-variation/wonder1/wonder2", 0777, true);
 
 $counter = 1;
 /* loop through $patterns to match each $pattern with the directories created
@@ -83,10 +83,10 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-rmdir("$file_path/glob_variation/wonder1/wonder2");
-rmdir("$file_path/glob_variation/wonder1/");
-rmdir("$file_path/glob_variation/");
+$file_path = '.';
+rmdir("$file_path/glob-variation/wonder1/wonder2");
+rmdir("$file_path/glob-variation/wonder1/");
+rmdir("$file_path/glob-variation/");
 ?>
 --EXPECTF--
 *** Testing glob() : usage variations ***
@@ -94,19 +94,19 @@ rmdir("$file_path/glob_variation/");
 -- Iteration 1 --
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder/"
+  string(%d) "%s/glob-variation/wonder/"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
@@ -118,45 +118,45 @@ array(3) {
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 
 -- Iteration 2 --
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder/"
+  string(%d) "%s/glob-variation/wonder/"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
@@ -168,41 +168,41 @@ array(3) {
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 
 -- Iteration 3 --
 array(2) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [1]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(2) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [1]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(2) {
   [0]=>
@@ -212,21 +212,21 @@ array(2) {
 }
 array(2) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [1]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(2) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [1]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(2) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [1]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 
 -- Iteration 4 --
@@ -238,7 +238,7 @@ array(0) {
 }
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/*der5"
+  string(%d) "%s/glob-variation/*der5"
 }
 array(0) {
 }
@@ -254,7 +254,7 @@ array(0) {
 }
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/??onder*"
+  string(%d) "%s/glob-variation/??onder*"
 }
 array(0) {
 }
@@ -264,19 +264,19 @@ array(0) {
 -- Iteration 6 --
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder/"
+  string(%d) "%s/glob-variation/wonder/"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
@@ -288,27 +288,27 @@ array(3) {
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 array(3) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder"
+  string(%d) "%s/glob-variation/wonder"
   [1]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
   [2]=>
-  string(%d) "%s/glob_variation/wonder;123456"
+  string(%d) "%s/glob-variation/wonder;123456"
 }
 
 -- Iteration 7 --
@@ -320,7 +320,7 @@ array(0) {
 }
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/++onder*"
+  string(%d) "%s/glob-variation/++onder*"
 }
 array(0) {
 }
@@ -356,7 +356,7 @@ array(0) {
 }
 array(1) {
   [0]=>
-  string(%d) "$file_path/glob_variation/wonder5"
+  string(%d) "$file_path/glob-variation/wonder5"
 }
 array(0) {
 }
@@ -372,7 +372,7 @@ array(0) {
 }
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/?wonder?"
+  string(%d) "%s/glob-variation/?wonder?"
 }
 array(0) {
 }
@@ -388,7 +388,7 @@ array(0) {
 }
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder?"
+  string(%d) "%s/glob-variation/wonder?"
 }
 array(0) {
 }
@@ -414,24 +414,24 @@ array(0) {
 *** Testing glob() with pattern within braces ***
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder12345"
+  string(%d) "%s/glob-variation/wonder12345"
 }
 
 *** Testing glob() on directories ***
 -- Iteration 1 --
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder1"
+  string(%d) "%s/glob-variation/wonder1"
 }
 -- Iteration 2 --
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder1"
+  string(%d) "%s/glob-variation/wonder1"
 }
 -- Iteration 3 --
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder1"
+  string(%d) "%s/glob-variation/wonder1"
 }
 -- Iteration 4 --
 array(0) {
@@ -442,7 +442,7 @@ array(0) {
 -- Iteration 6 --
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder1"
+  string(%d) "%s/glob-variation/wonder1"
 }
 -- Iteration 7 --
 array(0) {
@@ -460,7 +460,7 @@ array(0) {
 -- Iteration 11 --
 array(1) {
   [0]=>
-  string(%d) "%s/glob_variation/wonder1"
+  string(%d) "%s/glob-variation/wonder1"
 }
 -- Iteration 12 --
 array(0) {
