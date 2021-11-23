@@ -14,13 +14,13 @@ echo "*** Testing file_put_contents() : usage variation ***\n";
 
 $mainDir = "filePutContentsVar7.dir";
 $subDir = "filePutContentsVar7Sub";
-$absMainDir = dirname(__FILE__)."/".$mainDir;
+$absMainDir = getcwd()."/".$mainDir;
 mkdir($absMainDir);
 $absSubDir = $absMainDir."/".$subDir;
 mkdir($absSubDir);
 
 $old_dir_path = getcwd();
-chdir(dirname(__FILE__));
+chdir($old_dir_path);
 
 
 // Note invalid dirs in p8 result in (The system cannot find the path specified.)
