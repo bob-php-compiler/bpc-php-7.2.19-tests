@@ -13,7 +13,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing rename() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -22,11 +22,11 @@ function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
 set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted (if any)
-$old_name = __FILE__.'.tmp';
-$new_name = __FILE__.'.renamed';
+$old_name = 'rename_variation10.php.tmp';
+$new_name = 'rename_variation10.php.renamed';
 
 //file resource
-$fileRes = fopen(__FILE__, 'r');
+$fileRes = fopen('/proc/self/comm', 'r');
 
 //get an unset variable
 $unset_var = 10;
