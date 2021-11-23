@@ -1,5 +1,7 @@
 --TEST--
 Test file_get_contents() function : usage variation - different type for use_include_path
+--SKIPIF--
+skip TODO use_include_path
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--

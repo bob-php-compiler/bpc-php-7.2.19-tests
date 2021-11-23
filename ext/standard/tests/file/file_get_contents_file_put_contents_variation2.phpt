@@ -1,5 +1,7 @@
 --TEST--
 Test file_get_contents() and file_put_contents() functions : usage variations - use_include_path
+--SKIPIF--
+skip TODO use_include_path
 --FILE--
 <?php
 /* Prototype: string file_get_contents( string $filename[, bool $use_include_path[,
