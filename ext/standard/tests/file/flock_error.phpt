@@ -10,7 +10,7 @@ Description: PHP supports a portable way of locking complete files
 
 echo "*** Testing error conditions ***\n";
 
-$file = dirname(__FILE__)."/flock.tmp";
+$file = "flock.tmp";
 $fp = fopen($file, "w");
 
 /* array of operatons */
@@ -41,18 +41,11 @@ var_dump(flock($fp, LOCK_SH|LOCK_NB));
 
 var_dump(flock("", "", $var));
 
-/* No.of args leass than expected */
-var_dump(flock());
-var_dump(flock($fp));
-
-/* No.of args greater than expected */
-var_dump(flock($fp, "", $var, ""));
-
 echo "\n*** Done ***\n";
 ?>
 --CLEAN--
 <?php
-$file = dirname(__FILE__)."/flock.tmp";
+$file = "flock.tmp";
 unlink($file);
 ?>
 --EXPECTF--
@@ -98,15 +91,6 @@ Warning: flock(): supplied resource is not a valid stream resource in %s on line
 bool(false)
 
 Warning: flock() expects parameter 1 to be resource, string given in %s on line %d
-NULL
-
-Warning: flock() expects at least 2 parameters, 0 given in %s on line %d
-NULL
-
-Warning: flock() expects at least 2 parameters, 1 given in %s on line %d
-NULL
-
-Warning: flock() expects at most 3 parameters, 4 given in %s on line %d
 NULL
 
 *** Done ***
