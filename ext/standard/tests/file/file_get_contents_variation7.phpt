@@ -13,13 +13,13 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing file_get_contents() : variation ***\n";
 $mainDir = "fileGetContentsVar7.dir";
 $subDir = "fileGetContentsVar7Sub";
-$absMainDir = dirname(__FILE__)."/".$mainDir;
+$absMainDir = getcwd()."/".$mainDir;
 mkdir($absMainDir);
 $absSubDir = $absMainDir."/".$subDir;
 mkdir($absSubDir);
 
 $old_dir_path = getcwd();
-chdir(dirname(__FILE__));
+chdir($old_dir_path);
 
 $allDirs = array(
   // absolute paths
