@@ -700,6 +700,8 @@
 
     only the following functions support context parameter:
 
+        file_get_contents("https?://xxx")
+
 20. ftell of append-only streams same as C
 
     @see ext/standard/tests/file/fwrite_variation3.phpt
