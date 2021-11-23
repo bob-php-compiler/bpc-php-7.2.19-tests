@@ -13,7 +13,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing file_put_contents() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -23,10 +23,10 @@ set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted (if any)
 $filename = 'FilePutContentsVar4.tmp';
-$absFile = dirname(__FILE__).'/'.$filename;
+$absFile = getcwd().'/'.$filename;
 
-$fileRes = fopen(__FILE__,'r');
-$strContext = stream_context_create();
+$fileRes = fopen('/proc/self/comm','r');
+//$strContext = stream_context_create();
 
 $data = "data to write";
 
@@ -111,7 +111,7 @@ $inputs = array(
       'file resource' => $fileRes,
 
       //valid stream context
-      'stream context' => $strContext,
+//      'stream context' => $strContext,
 );
 
 // loop through each element of the array for context
@@ -243,8 +243,5 @@ int(13)
 
 --file resource--
 Error: 2 - file_put_contents(): supplied resource is not a valid Stream-Context resource, %s(%d)
-int(13)
-
---stream context--
 int(13)
 ===DONE===
