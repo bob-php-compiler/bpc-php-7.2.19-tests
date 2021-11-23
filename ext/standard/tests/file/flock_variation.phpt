@@ -10,7 +10,7 @@ Description: PHP supports a portable way of locking complete files
 
 echo "*** Testing flock() fun with the various operation and 
             wouldblock values                                ***\n";
-$file = dirname(__FILE__)."/flock.tmp";
+$file = "flock.tmp";
 $fp = fopen($file, "w");
 
 /* array of operatons */
@@ -41,8 +41,8 @@ $wouldblocks = array(
   "string",
   "",
   /* binary input */
-  b"string",
-  b"",
+  "string",
+  "",
   "\0"
 );
 
