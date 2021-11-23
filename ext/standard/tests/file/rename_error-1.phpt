@@ -7,11 +7,12 @@ Test rename() function: error conditions
 */
 
 echo "*** Testing rename() for error conditions ***\n";
-//Zero argument
-var_dump( rename() );
+
+// less than expected,1 argument
+var_dump( rename(__FILE__) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function rename(): 2 required, 0 provided in %s on line %d
+Error: Too few arguments to function rename(): 2 required, 1 provided in %s on line %d
  -- compile-error
