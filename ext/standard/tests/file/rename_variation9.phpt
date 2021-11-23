@@ -7,9 +7,7 @@ Test rename() function: basic functionality
 */
 
 echo "\n*** Testing rename() by giving stream context as third argument ***\n";
-$file_path = dirname(__FILE__);
-
-$context = stream_context_create();
+$file_path = '.';
 
 // on directory
 $dir_name = "$file_path/rename_variation_dir9";
@@ -17,7 +15,7 @@ $new_dir_name = "$file_path/rename_variation_dir9_new";
 
 mkdir($dir_name);
 
-var_dump( rename($dir_name, $new_dir_name, $context) );
+var_dump( rename($dir_name, $new_dir_name) );
 var_dump( file_exists($dir_name) );  // expecting flase
 var_dump( file_exists($new_dir_name) ); // expecting true
 
@@ -30,7 +28,7 @@ $fp = fopen($src_name, "w");
 $s1 = stat($src_name);
 fclose($fp);
 
-var_dump( rename($src_name, $dest_name, $context) );
+var_dump( rename($src_name, $dest_name) );
 var_dump( file_exists($src_name) );  // expecting false
 var_dump( file_exists($dest_name) );  // expecting true
 
@@ -38,8 +36,8 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/rename_variation9_new.tmp");
-rmdir(dirname(__FILE__)."/rename_variation_dir9_new");
+unlink("./rename_variation9_new.tmp");
+rmdir("./rename_variation_dir9_new");
 ?>
 --EXPECT--
 *** Testing rename() by giving stream context as third argument ***
