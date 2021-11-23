@@ -1,6 +1,7 @@
 --TEST--
 Test glob() function: ensure no platform difference, variation 3
 --SKIPIF--
+skip no ini open_basedir
 <?php if( substr(PHP_OS, 0, 3) == "WIN" ) {die('skip not valid on Windows');} ?>
 --FILE--
 <?php

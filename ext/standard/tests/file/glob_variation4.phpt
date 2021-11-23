@@ -1,5 +1,7 @@
 --TEST--
 Test glob() function: ensure no platform difference, variation 2
+--SKIPIF--
+skip no ini open_basedir
 --FILE--
 <?php
 $path = dirname(__FILE__);
