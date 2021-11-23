@@ -1,5 +1,7 @@
 --TEST--
 Test file_get_contents() and file_put_contents() functions : usage variations - all arguments
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /* Prototype: string file_get_contents( string $filename[, bool $use_include_path[,
@@ -12,7 +14,7 @@ Test file_get_contents() and file_put_contents() functions : usage variations - 
  */
 
 /* Testing variation in all argument values */
-$file_path = dirname(__FILE__);
+$file_path = '.';
 include($file_path."/file.inc");
 
 echo "*** Testing with variations in the arguments values ***\n";
@@ -23,11 +25,11 @@ foreach( $buffer_types as $type) {
   fill_buffer($buffer, $type, 100);
   file_put_contents( $file_path."/file_put_contents_variation1.tmp", $buffer);
   var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 0) );
-  var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 1) );
+  var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 0) );
   var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 0, NULL, 5) );
-  var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 1, NULL, 5) );
+  var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 0, NULL, 5) );
   var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 0, NULL, 5, 20) );
-  var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 1, NULL, 5, 20) );
+  var_dump( file_get_contents($file_path."/file_put_contents_variation1.tmp", 0, NULL, 5, 20) );
 
 }
 
@@ -37,7 +39,7 @@ echo "--- Done ---";
 <?php
 //Deleting the temporary file
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 unlink($file_path."/file_put_contents_variation1.tmp");
 ?>
 --EXPECTF--
