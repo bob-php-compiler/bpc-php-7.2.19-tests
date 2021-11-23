@@ -13,7 +13,7 @@ if (!function_exists('fnmatch'))
 */
 
 echo "*** Testing fnmatch() with file and various patterns ***\n";
-$file_name = dirname(__FILE__)."/match.tmp";
+$file_name = getcwd()."/match.tmp";
 
 /* avoid using \, it breaks the pattern */
 if (substr(PHP_OS, 0, 3) == 'WIN') {
@@ -57,11 +57,11 @@ $pattern_arr = array(
 31 => $file_name,
 
 /* binary inputs */
-32 => b"match*",
-33 => b"*.tmp",
-34 => b"mat*",
-35 => b"mat*tmp",
-36 => b"m*t",
+32 => "match*",
+33 => "*.tmp",
+34 => "mat*",
+35 => "mat*tmp",
+36 => "m*t",
 );
 
 for( $i = 0; $i<count($pattern_arr); $i++ ) {
@@ -103,7 +103,7 @@ $str_arr = array(
   "stringstring",
 
   /* binary input */
-  b"string"
+  "string"
 );
 match($str_arr, $str_arr);
 
