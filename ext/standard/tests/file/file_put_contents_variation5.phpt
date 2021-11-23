@@ -1,5 +1,7 @@
 --TEST--
 Test file_put_contents() function : variation - include path testing
+--SKIPIF--
+skip TODO use_include_path
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--
