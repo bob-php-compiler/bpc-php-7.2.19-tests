@@ -8,9 +8,11 @@ if (!function_exists("symlink")) die("skip symlinks are not supported");
 --FILE--
 <?php
 
-$tmp_file = __FILE__.".tmp";
-$tmp_link = __FILE__.".tmp.link";
-$tmp_link2 = __FILE__.".tmp.link2";
+$file_path = getcwd() . '/rename_variation6.php';
+
+$tmp_file = $file_path . ".tmp";
+$tmp_link = $file_path . ".tmp.link";
+$tmp_link2 = $file_path . ".link2";
 
 touch($tmp_file);
 symlink($tmp_file, $tmp_link);

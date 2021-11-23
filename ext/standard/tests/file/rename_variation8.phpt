@@ -11,7 +11,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') die('skip..  not for Windows');
 */
 
 echo "\n*** Testing rename() on non-existing file ***\n";
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 // try renaming a non existing file
 $src_name = $file_path."/non_existent_file.tmp";
@@ -45,8 +45,8 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/rename_basic_new2.tmp");
-rmdir(dirname(__FILE__)."/rename_basic_dir1");
+unlink("./rename_basic_new2.tmp");
+rmdir("./rename_basic_dir1");
 ?>
 --EXPECTF--
 *** Testing rename() on non-existing file ***

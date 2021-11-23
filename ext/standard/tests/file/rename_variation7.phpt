@@ -8,10 +8,13 @@ if (!function_exists("symlink")) die("skip symlinks are not supported");
 --FILE--
 <?php
 
-$tmp_link = __FILE__.".tmp.link";
-$tmp_link2 = __FILE__.".tmp.link2";
+$dir = getcwd();
+$file_path = $dir . '/rename_variation7.php';
 
-symlink(dirname(__FILE__)."/there_is_no_such_file", $tmp_link);
+$tmp_link = $file_path.".tmp.link";
+$tmp_link2 = $file_path.".tmp.link2";
+
+symlink($dir."/there_is_no_such_file", $tmp_link);
 rename($tmp_link, $tmp_link2);
 
 clearstatcache();
