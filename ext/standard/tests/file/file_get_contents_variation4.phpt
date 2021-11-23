@@ -13,7 +13,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing file_get_contents() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -23,13 +23,13 @@ set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted (if any)
 $filename = 'FileGetContentsVar4.tmp';
-$absFile = dirname(__FILE__).'/'.$filename;
+$absFile = getcwd().'/'.$filename;
 $h = fopen($absFile,"w");
 fwrite($h, "contents read");
 fclose($h);
 
-$fileRes = fopen(__FILE__,'r');
-$strContext = stream_context_create();
+$fileRes = fopen('/proc/self/comm','r');
+//$strContext = stream_context_create();
 
 //get an unset variable
 $unset_var = 10;
@@ -112,7 +112,7 @@ $inputs = array(
       'file resource' => $fileRes,
 
       //valid stream context
-      'stream context' => $strContext,
+//      'stream context' => $strContext,
 );
 
 // loop through each element of the array for context
@@ -244,8 +244,5 @@ string(%d) "contents read"
 
 --file resource--
 Error: 2 - file_get_contents(): supplied resource is not a valid Stream-Context resource, %s(%d)
-string(%d) "contents read"
-
---stream context--
 string(%d) "contents read"
 ===DONE===
