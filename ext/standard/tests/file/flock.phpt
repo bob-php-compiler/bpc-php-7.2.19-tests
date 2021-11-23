@@ -3,9 +3,8 @@ flock() tests
 --FILE--
 <?php
 
-$file = dirname(__FILE__)."/flock.dat";
+$file = "flock.dat";
 
-var_dump(flock());
 var_dump(flock("", "", $var));
 
 $fp = fopen($file, "w");
@@ -37,13 +36,10 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$file = dirname(__FILE__)."/flock.dat";
+$file = "flock.dat";
 unlink($file);
 ?>
 --EXPECTF--
-Warning: flock() expects at least 2 parameters, 0 given in %s on line %d
-NULL
-
 Warning: flock() expects parameter 1 to be resource, string given in %s on line %d
 NULL
 
