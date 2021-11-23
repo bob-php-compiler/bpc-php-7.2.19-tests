@@ -19,7 +19,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') die('skip..  not for Windows');
 echo "*** Testing rename() with absolute and relative paths ***\n";
 $mainDir = "renameVar11";
 $subDir = "renameVar11Sub";
-$absMainDir = dirname(__FILE__)."/".$mainDir;
+$absMainDir = getcwd()."/".$mainDir;
 mkdir($absMainDir);
 $absSubDir = $absMainDir."/".$subDir;
 mkdir($absSubDir);
@@ -28,7 +28,7 @@ $fromFile = "renameMe.tmp";
 $toFile = "IwasRenamed.tmp";
 
 $old_dir_path = getcwd();
-chdir(dirname(__FILE__));
+chdir($old_dir_path);
 
 $allDirs = array(
   // absolute paths
