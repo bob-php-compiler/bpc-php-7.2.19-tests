@@ -13,7 +13,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 echo "*** Testing file_get_contents() : usage variation ***\n";
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -23,7 +23,7 @@ set_error_handler('test_error_handler');
 
 // Initialise function arguments not being substituted (if any)
 $filename = 'FileGetContentsVar5.tmp';
-$absFile = dirname(__FILE__).'/'.$filename;
+$absFile = getcwd().'/'.$filename;
 $h = fopen($absFile,"w");
 fwrite($h, "contents read");
 fclose($h);
