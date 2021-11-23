@@ -10,26 +10,26 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 <?php
 
 /* creating directory */
-$file_path = dirname(__FILE__);
-mkdir("$file_path/rename_variation");
+$file_path = '.';
+mkdir("$file_path/rename-variation");
 
 /* rename files across directories */
 echo "*** Testing rename() : rename files across directories ***\n";
 $src_filenames = array(
-  "$file_path/rename_variation/rename_variation.tmp",
+  "$file_path/rename-variation/rename_variation.tmp",
 
   /* Testing a file trailing slash */
-  "$file_path/rename_variation/rename_variation.tmp/",
+  "$file_path/rename-variation/rename_variation.tmp/",
 
   /* Testing file with double slashes */
-  "$file_path/rename_variation//rename_variation.tmp",
-  "$file_path//rename_variation//rename_variation.tmp",
+  "$file_path/rename-variation//rename_variation.tmp",
+  "$file_path//rename-variation//rename_variation.tmp",
 );
 $counter = 1;
 /* loop through each $file and rename it to rename_variation2.tmp */
 foreach($src_filenames as $src_filename) {
   echo "-- Iteration $counter --\n";
-  $fp = fopen("$file_path/rename_variation/rename_variation.tmp", "w");
+  $fp = fopen("$file_path/rename-variation/rename_variation.tmp", "w");
   fclose($fp);
   $dest_filename = "$file_path/rename_variation2.tmp";
   var_dump( rename($src_filename, $dest_filename) );
@@ -43,7 +43,7 @@ foreach($src_filenames as $src_filename) {
 }
 
 // clean the temp dir and file
-rmdir("$file_path/rename_variation");
+rmdir("$file_path/rename-variation");
 
 echo "Done\n";
 ?>
