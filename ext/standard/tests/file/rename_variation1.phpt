@@ -51,7 +51,7 @@ echo "Done\n";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 rmdir($file_path."/rename_variation1_dir");
 ?>
 --EXPECTF--
