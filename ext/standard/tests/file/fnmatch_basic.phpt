@@ -13,7 +13,7 @@ if (!function_exists('fnmatch'))
 */
 
 echo "*** Testing fnmatch() with file ***\n";
-$file = basename(__FILE__);
+$file = "fnmatch_basic.php";
 
 var_dump( fnmatch("*.php", $file) );
 var_dump( fnmatch("*.p*p", $file) );
