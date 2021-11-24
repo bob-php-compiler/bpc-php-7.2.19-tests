@@ -19,8 +19,6 @@ var_dump( umask(0000, true) );  // args > expected
 echo "Done\n";
 ?>
 --EXPECTF--
-*** Testing umask() : error conditions ***
-
-Warning: umask() expects at most 1 parameter, 2 given in %s on line %d
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function umask(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
