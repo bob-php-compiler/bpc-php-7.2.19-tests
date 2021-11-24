@@ -6,7 +6,7 @@ if( substr(PHP_OS, 0, 3) == 'WIN') {
 	die('skip Not for Windows');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/dir_root_check.tmp";
+$filename = "dir_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -31,12 +31,12 @@ unlink($filename);
 echo "*** Testing opendir() : usage variations ***\n";
 
 /* create the temporary directory :
- * opendir_variation5  ( parent )
+ * opendir-variation5  ( parent )
  *  |-> sub_dir    ( sub parent )
  *      |-> child_dir  ( child dir)
  */
 
-$parent_dir_path = dirname(__FILE__) . "/opendir_variation5";
+$parent_dir_path = "./opendir-variation5";
 mkdir($parent_dir_path);
 chmod($parent_dir_path, 0777);
 
@@ -74,7 +74,7 @@ if (is_resource($dir_handle2)) {
 ===DONE===
 --CLEAN--
 <?php
-$parent_dir_path = dirname(__FILE__) . "/opendir_variation5";
+$parent_dir_path = "./opendir-variation5";
 $sub_dir_path = $parent_dir_path."/sub_dir";
 $child_dir_path = $sub_dir_path."/child_dir";
 
@@ -92,11 +92,11 @@ rmdir($parent_dir_path);
 
 -- After restricting 1st level parent directory --
 
-Warning: opendir(%s/opendir_variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
+Warning: opendir(%s/opendir-variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
 bool(false)
 
 -- After restricting parent directory --
 
-Warning: opendir(%s/opendir_variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
+Warning: opendir(%s/opendir-variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
 bool(false)
 ===DONE===

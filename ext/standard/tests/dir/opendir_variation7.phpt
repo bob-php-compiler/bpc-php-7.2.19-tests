@@ -6,7 +6,7 @@ if( substr(PHP_OS, 0, 3) == 'WIN') {
   die('skip Not for Windows');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__) . "/opendir_root_check.tmp";
+$filename = "opendir_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -29,8 +29,8 @@ unlink($filename);
 echo "*** Testing opendir() : usage variations ***\n";
 
 // create the temporary directory
-$file_path = dirname(__FILE__);
-$dir_path = $file_path . "/opendir_variation7";
+$file_path = '.';
+$dir_path = $file_path . "/opendir-variation7";
 mkdir($dir_path);
 
 /* different values for directory permissions */
@@ -79,7 +79,7 @@ foreach ($permission_values as $perm) {
 --CLEAN--
 <?php
 // deleting temporary directory
-$dir_path = dirname(__FILE__) . "/opendir_variation7";
+$dir_path = "./opendir-variation7";
 rmdir($dir_path);
 ?>
 --EXPECTF--
