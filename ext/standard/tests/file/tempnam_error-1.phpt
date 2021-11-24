@@ -10,7 +10,7 @@ echo "*** Testing tempnam() error conditions ***\n";
 $file_path = dirname(__FILE__);
 
 /* More number of arguments than expected */
-var_dump( tempnam("$file_path", "tempnam_error.tmp", "") ); //Two Valid & One Invalid
+var_dump( tempnam("$file_path", "tempnam_error.tmp", TRUE) );
 
 ?>
 --EXPECTF--

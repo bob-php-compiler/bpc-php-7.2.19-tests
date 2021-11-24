@@ -9,11 +9,11 @@ Test tempnam() function: error conditions
 echo "*** Testing tempnam() error conditions ***\n";
 $file_path = dirname(__FILE__);
 
-/* More number of arguments than expected */
-var_dump( tempnam("$file_path", "tempnam_error.tmp", "") ); //Two Valid & One Invalid
+/* Less number of arguments than expected */
+var_dump( tempnam("$file_path") );  //One Valid arg
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function tempnam(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function tempnam(): 2 required, 1 provided in %s on line %d
  -- compile-error
