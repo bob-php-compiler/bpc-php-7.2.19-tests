@@ -16,7 +16,7 @@ echo "*** Testing opendir() : usage variation ***\n";
 
 // Initialise function arguments not being substituted (if any)
 // create temporary directory for test, removed in CLEAN section
-$path = dirname(__FILE__) . "/opendir_variation2";
+$path = "./opendir-variation2";
 mkdir($path);
 
 
@@ -39,7 +39,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $context argument
 $inputs = array(
@@ -106,7 +106,7 @@ fclose($fp);
 ===DONE===
 --CLEAN--
 <?php
-$path = dirname(__FILE__) . "/opendir_variation2";
+$path = "./opendir-variation2";
 rmdir($path);
 ?>
 --EXPECTF--
