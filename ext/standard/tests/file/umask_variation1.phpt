@@ -12,7 +12,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
    Description: Changes the current umask
 */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 /* Check umask() on file/dir */
 
@@ -20,7 +20,7 @@ echo "*** Testing umask() on file and directory ***\n";
 // temp filename used
 $filename = "$file_path/umask_variation1.tmp";
 // temp dir used
-$dirname = "$file_path/umask_variation1";
+$dirname = "$file_path/umask-variation1";
 
 for($mask = 0000; $mask <= 0350; $mask++) {
   echo "-- Setting umask to ";
