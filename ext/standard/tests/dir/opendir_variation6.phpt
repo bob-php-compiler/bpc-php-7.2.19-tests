@@ -19,8 +19,8 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 
 echo "*** Testing opendir() : usage variations ***\n";
 // create the temporary directories
-$file_path = dirname(__FILE__);
-$dir_path = $file_path . "/opendir_variation6";
+$file_path = '.';
+$dir_path = $file_path . "/opendir-variation6";
 $sub_dir_path = $dir_path . "/sub_dir1";
 
 mkdir($dir_path);
@@ -40,7 +40,7 @@ var_dump( opendir($dir_path . "/sub?dir1") );
 ===DONE===
 --CLEAN--
 <?php
-$dir_path = dirname(__FILE__) . "/opendir_variation6";
+$dir_path = "./opendir-variation6";
 $sub_dir_path = $dir_path . "/sub_dir1";
 
 rmdir($sub_dir_path);
@@ -59,9 +59,9 @@ bool(false)
 
 -- Wildcard = '?' --
 
-Warning: opendir(%s/opendir_variation6/sub_dir?): failed to open dir: %s in %s on line %d
+Warning: opendir(%s/opendir-variation6/sub_dir?): failed to open dir: %s in %s on line %d
 bool(false)
 
-Warning: opendir(%s/opendir_variation6/sub?dir1): failed to open dir: %s in %s on line %d
+Warning: opendir(%s/opendir-variation6/sub?dir1): failed to open dir: %s in %s on line %d
 bool(false)
 ===DONE===
