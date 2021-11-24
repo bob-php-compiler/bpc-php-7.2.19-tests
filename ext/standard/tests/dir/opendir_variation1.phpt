@@ -21,7 +21,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 echo "*** Testing opendir() : usage variations ***\n";
 
 // create directory to be passed as string value where possible
-$path = dirname(__FILE__) . "/opendir_variation1";
+$path = "./opendir-variation1";
 mkdir($path);
 
 //get an unset variable
@@ -46,7 +46,7 @@ $path
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $path argument
 $inputs = array(
@@ -113,7 +113,7 @@ fclose($fp);
 ===DONE===
 --CLEAN--
 <?php
-$path = dirname(__FILE__) . "/opendir_variation1";
+$path = "./opendir-variation1";
 rmdir($path);
 ?>
 --EXPECTF--
