@@ -6,7 +6,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip Not valid for Windows');
 }
 // Skip if being run by root
-$filename = dirname(__FILE__)."/is_readable_root_check.tmp";
+$filename = "is_readable_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -27,8 +27,8 @@ unlink($filename);
 */
 
 echo "*** Testing tempnam() with dir of permissions from 0000 to 0350 ***\n";
-$file_path = dirname(__FILE__);
-$dir_name = $file_path."/tempnam_variation4";
+$file_path = getcwd();
+$dir_name = $file_path."/tempnam-variation4";
 $prefix = "tempnamVar4.";
 
 mkdir($dir_name);
