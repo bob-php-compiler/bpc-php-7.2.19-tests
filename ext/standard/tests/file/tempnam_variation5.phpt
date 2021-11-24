@@ -13,10 +13,10 @@ if(substr(PHP_OS, 0, 3) == "WIN")
 
 /* Passing an existing file as $prefix for tempnam() fn */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 echo "*** Test tempnam() function: by passing an existing filename as prefix ***\n";
-$dir_name = $file_path."/tempnam_variation5";
+$dir_name = $file_path."/tempnam-variation5";
 mkdir($dir_name);
 $h = fopen($dir_name."/tempnam_variation5.tmp", "w");
 
@@ -43,10 +43,10 @@ echo "\n*** Done ***\n";
 --EXPECTF--
 *** Test tempnam() function: by passing an existing filename as prefix ***
 -- Iteration 1 --
-File name is => %stempnam_variation5%etempnam_variation5.tmp%s
+File name is => %stempnam-variation5%etempnam_variation5.tmp%s
 -- Iteration 2 --
-File name is => %stempnam_variation5%etempnam_variation5.tmp%s
+File name is => %stempnam-variation5%etempnam_variation5.tmp%s
 -- Iteration 3 --
-File name is => %stempnam_variation5%etempnam_variation5.tmp%s
+File name is => %stempnam-variation5%etempnam_variation5.tmp%s
 
 *** Done ***
