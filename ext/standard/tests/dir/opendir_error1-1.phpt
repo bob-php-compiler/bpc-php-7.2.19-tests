@@ -13,13 +13,17 @@ Test opendir() function : error conditions - Incorrect number of args
 
 echo "*** Testing opendir() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing opendir() function with Zero arguments --\n";
-var_dump( opendir() );
+//Test opendir with one more than the expected number of arguments
+echo "\n-- Testing opendir() function with more than expected no. of arguments --\n";
+$path = dirname(__FILE__) . "/opendir_error";
+mkdir($path);
+$context = stream_context_create();
 
+$extra_arg = 10;
+var_dump( opendir($path, $context, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function opendir(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function opendir(): 2 at most, 3 provided in %s on line %d
  -- compile-error
