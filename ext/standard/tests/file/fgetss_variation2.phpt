@@ -1,5 +1,7 @@
 --TEST--
 Test fgetss() function : usage variations - read modes
+--SKIPIF--
+skip TODO fgetss()
 --FILE--
 <?php
 /*

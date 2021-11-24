@@ -1,5 +1,7 @@
 --TEST--
 Test fgetss() function : error conditions
+--SKIPIF--
+skip TODO fgetss()
 --FILE--
 <?php
 /*

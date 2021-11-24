@@ -1,5 +1,7 @@
 --TEST--
 fgetss() tests
+--SKIPIF--
+skip TODO fgetss()
 --FILE--
 <?php
 

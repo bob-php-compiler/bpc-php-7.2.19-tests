@@ -1,6 +1,7 @@
 --TEST--
 Test fgetss() function : usage variations - read/write modes, file pointer at EOF
 --SKIPIF--
+skip TODO fgetss()
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip.. Not valid for Windows');

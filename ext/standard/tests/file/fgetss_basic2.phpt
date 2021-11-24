@@ -1,6 +1,7 @@
 --TEST--
 Test fgetss() function : Basic functionality - read/write modes
 --SKIPIF--
+skip TODO fgetss()
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip.. Not valid for Windows');

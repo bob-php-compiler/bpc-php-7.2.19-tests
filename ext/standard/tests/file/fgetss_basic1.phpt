@@ -1,5 +1,7 @@
 --TEST--
 Test fgetss() function : Basic functionality - read modes only
+--SKIPIF--
+skip TODO fgetss()
 --FILE--
 <?php
 /*
