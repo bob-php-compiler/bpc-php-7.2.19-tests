@@ -1,5 +1,7 @@
 --TEST--
 Test dir() function : basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/dir/file.inc \
 --FILE--
 <?php
 /*
@@ -11,11 +13,11 @@ Test dir() function : basic functionality
 echo "*** Testing dir() : basic functionality ***\n";
 
 // include the file.inc for Function: function create_files()
-include(dirname(__FILE__)."/../file/file.inc");
+include("file.inc");
 
 // create the temporary directory
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/dir_basic";
+$file_path = '.';
+$dir_path = $file_path."/dir-basic";
 @mkdir($dir_path);
 
 // create files within the temporary directory
@@ -47,8 +49,8 @@ echo "Done";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/dir_basic";
+$file_path = '.';
+$dir_path = $file_path."/dir-basic";
 
 rmdir($dir_path);
 ?>
@@ -57,7 +59,7 @@ rmdir($dir_path);
 Get Directory instance:
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_basic"
+  string(%d) "%s/dir-basic"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -75,7 +77,7 @@ Close directory:
 NULL
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_basic"
+  string(%d) "%s/dir-basic"
   ["handle"]=>
   resource(%d) of type (Unknown)
 }
