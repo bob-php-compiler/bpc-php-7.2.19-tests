@@ -14,7 +14,7 @@ Test readdir() function : usage variations - use file pointers
 echo "*** Testing readdir() : usage variations ***\n";
 
 // get a resource variable
-var_dump($fp = fopen(__FILE__, "r"));
+var_dump($fp = fopen('/proc/self/comm', "r"));
 var_dump( readdir($fp) );
 
 ?>
