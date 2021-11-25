@@ -6,7 +6,7 @@ if( substr(PHP_OS, 0, 3) == 'WIN') {
   die('skip Not for Windows');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/dir_root_check.tmp";
+$filename = "dir_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -32,12 +32,12 @@ unlink($filename);
 echo "*** Testing dir() : remove execute permission from the parent dir ***\n";
 
 /* create the temporary directory :
-  dir_variation7  ( parent )
+  dir-variation7  ( parent )
     |-> sub_dir    ( sub parent )
          |-> child_dir  ( child dir)
 */
-$file_path = dirname(__FILE__);
-$parent_dir_path = $file_path."/dir_variation7";
+$file_path = '.';
+$parent_dir_path = $file_path."/dir-variation7";
 @mkdir($parent_dir_path);
 chmod($parent_dir_path, 0777);
 
@@ -67,8 +67,8 @@ echo "Done";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$parent_dir_path = $file_path."/dir_variation7";
+$file_path = '.';
+$parent_dir_path = $file_path."/dir-variation7";
 $sub_dir_path = $parent_dir_path."/sub_dir";
 $child_dir_path = $sub_dir_path."/child_dir";
 
@@ -85,10 +85,10 @@ rmdir($parent_dir_path);
 *** Testing dir() : remove execute permission from the parent dir ***
 -- After restricting 1st level parent directory --
 
-Warning: dir(%s/dir_variation7/sub_dir/child_dir): failed to open dir: %s in %s on line %d
+Warning: dir(%s/dir-variation7/sub_dir/child_dir): failed to open dir: %s in %s on line %d
 bool(false)
 -- After restricting parent directory --
 
-Warning: dir(%s/dir_variation7/sub_dir/child_dir): failed to open dir: %s in %s on line %d
+Warning: dir(%s/dir-variation7/sub_dir/child_dir): failed to open dir: %s in %s on line %d
 bool(false)
 Done
