@@ -22,7 +22,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
 echo "*** Testing dir() : open a file instead of a directory ***\n";
 
 // open the file instead of directory
-$d = dir(__FILE__);
+$d = dir('dir_variation5.php');
 var_dump( $d );
 
 echo "Done";
