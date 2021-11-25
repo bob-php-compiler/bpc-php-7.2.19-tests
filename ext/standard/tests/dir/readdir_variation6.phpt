@@ -1,5 +1,7 @@
 --TEST--
 Test readdir() function : usage variations - operate on previously opened directory
+--ARGS--
+--bpc-include-file ext/standard/tests/dir/file.inc \
 --FILE--
 <?php
 /* Prototype  : string readdir([resource $dir_handle])
@@ -15,10 +17,10 @@ Test readdir() function : usage variations - operate on previously opened direct
 echo "*** Testing readdir() : usage variations ***\n";
 
 // include the file.inc for Function: function create_files()
-include( dirname(__FILE__)."/../file/file.inc");
+include("file.inc");
 
 // create the temporary directory
-$dir_path = dirname(__FILE__) . "/readdir_variation6";
+$dir_path = "./readdir-variation6";
 mkdir($dir_path);
 
 // create files within the temporary directory
@@ -58,7 +60,7 @@ closedir();
 ===DONE===
 --CLEAN--
 <?php
-$dir_path = dirname(__FILE__) . "/readdir_variation6";
+$dir_path = "./readdir-variation6";
 rmdir($dir_path);
 ?>
 --EXPECTF--
