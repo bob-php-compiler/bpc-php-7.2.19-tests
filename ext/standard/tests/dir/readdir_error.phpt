@@ -28,16 +28,7 @@ var_dump( readdir($dir_handle, $extra_arg) );
 closedir($dir_handle);
 ?>
 ===DONE===
---CLEAN--
-<?php
-$path = dirname(__FILE__) . "/readdir_error";
-rmdir($path);
-?>
 --EXPECTF--
-*** Testing readdir() : error conditions ***
-
--- Testing readdir() function with more than expected no. of arguments --
-
-Warning: readdir() expects at most 1 parameter, 2 given in %s on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function readdir(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
