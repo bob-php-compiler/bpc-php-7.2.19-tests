@@ -1,5 +1,7 @@
 --TEST--
 get_meta_tags() tests
+--SKIPIF--
+skip TODO get_meta_tags()
 --FILE--
 <?php
 
