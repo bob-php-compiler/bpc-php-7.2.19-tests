@@ -59,11 +59,17 @@ bool(false)
 
 --> Try all methods with wrong number of args:
 
-Warning: Directory::read() expects at most 1 parameter, 2 given in %s on line %d
-NULL
+Warning: Too many arguments to method Directory::read(): 0 at most, 2 provided in %s on line %d
 
-Warning: Directory::rewind() expects at most 1 parameter, 2 given in %s on line %d
-NULL
+Warning: Directory::read(): Unable to find my handle property in %s on line %d
+bool(false)
 
-Warning: Directory::close() expects at most 1 parameter, 2 given in %s on line %d
-NULL
+Warning: Too many arguments to method Directory::rewind(): 0 at most, 2 provided in %s on line %d
+
+Warning: Directory::rewind(): Unable to find my handle property in %s on line %d
+bool(false)
+
+Warning: Too many arguments to method Directory::close(): 0 at most, 2 provided in %s on line %d
+
+Warning: Directory::close(): Unable to find my handle property in %s on line %d
+bool(false)
