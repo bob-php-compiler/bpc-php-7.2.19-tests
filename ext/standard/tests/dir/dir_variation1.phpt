@@ -34,8 +34,8 @@ class A
 }
 
 // get a resource variable
-$fp = fopen(__FILE__, "r"); // get a file handle
-$dfp = opendir( dirname(__FILE__) ); // get a dir handle
+$fp = fopen('/proc/self/comm', "r"); // get a file handle
+$dfp = opendir( '.' ); // get a dir handle
 
 // unexpected values to be passed to $directory argument
 $unexpected_values = array (
