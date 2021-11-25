@@ -15,7 +15,7 @@ Test closedir() function : usage variations - close a file pointer
 echo "*** Testing closedir() : usage variations ***\n";
 
 echo "\n-- Open a file using fopen() --\n";
-var_dump($fp = fopen(__FILE__, 'r'));
+var_dump($fp = fopen('/proc/self/comm', 'r'));
 
 echo "\n-- Try to close the file pointer using closedir() --\n";
 var_dump(closedir($fp));
