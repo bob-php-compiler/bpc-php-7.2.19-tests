@@ -1,5 +1,7 @@
 --TEST--
 Test dir() function : usage variations - operate on previously opened directory
+--ARGS--
+--bpc-include-file ext/standard/tests/dir/file.inc \
 --FILE--
 <?php
 /*
@@ -16,11 +18,11 @@ Test dir() function : usage variations - operate on previously opened directory
 echo "*** Testing dir() : operate on previously opened directory ***\n";
 
 // include the file.inc for Function: function create_files()
-include( dirname(__FILE__)."/../file/file.inc");
+include( "file.inc");
 
 // create the temporary directory
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/dir_variation4";
+$file_path = '.';
+$dir_path = $file_path."/dir-variation4";
 @mkdir($dir_path);
 
 // create files within the temporary directory
@@ -46,8 +48,8 @@ echo "Done";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/dir_variation4";
+$file_path = '.';
+$dir_path = $file_path."/dir-variation4";
 
 rmdir($dir_path);
 ?>
@@ -55,13 +57,13 @@ rmdir($dir_path);
 *** Testing dir() : operate on previously opened directory ***
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation4"
+  string(%d) "%s/dir-variation4"
   ["handle"]=>
   resource(%d) of type (stream)
 }
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation4"
+  string(%d) "%s/dir-variation4"
   ["handle"]=>
   resource(%d) of type (stream)
 }
