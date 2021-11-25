@@ -29,17 +29,7 @@ var_dump( closedir($dir_handle, $extra_arg) );
 closedir($dir_handle);
 ?>
 ===DONE===
---CLEAN--
-<?php
-$base_dir = dirname(__FILE__);
-$dir_path = $base_dir . '\closedir_error';
-rmdir($dir_path);
-?>
 --EXPECTF--
-*** Testing closedir() : error conditions ***
-
--- Testing closedir() function with more than expected no. of arguments --
-
-Warning: closedir() expects at most 1 parameter, 2 given in %s on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function closedir(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
