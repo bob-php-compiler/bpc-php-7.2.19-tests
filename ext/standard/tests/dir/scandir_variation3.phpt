@@ -14,7 +14,7 @@ Test scandir() function : usage variations - diff data types as $context arg
 echo "*** Testing scandir() : usage variations ***\n";
 
 // Initialise function arguments not being substituted
-$dir = dirname(__FILE__) . '/scandir_variation3';
+$dir = './scandir-variation3';
 mkdir($dir);
 $sorting_order = SCANDIR_SORT_ASCENDING;
 
@@ -36,7 +36,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $context argument
 $inputs = array(
@@ -100,7 +100,7 @@ fclose($fp);
 ===DONE===
 --CLEAN--
 <?php
-$dir = dirname(__FILE__) . '/scandir_variation3';
+$dir = './scandir-variation3';
 rmdir($dir);
 ?>
 --EXPECTF--
