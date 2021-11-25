@@ -1,5 +1,7 @@
 --TEST--
 Test scandir() function : usage variations - different relative paths
+--ARGS--
+--bpc-include-file ext/standard/tests/dir/file.inc \
 --FILE--
 <?php
 /* Prototype  : array scandir(string $dir [, int $sorting_order [, resource $context]])
@@ -14,9 +16,9 @@ Test scandir() function : usage variations - different relative paths
 echo "*** Testing scandir() : usage variations ***\n";
 
 // include for create_files/delete_files functions
-include (dirname(__FILE__) . '/../file/file.inc');
+include ('file.inc');
 
-$base_dir_path = dirname(__FILE__);
+$base_dir_path = getcwd();
 
 $level_one_dir_path = "$base_dir_path/level_one";
 $level_two_dir_path = "$level_one_dir_path/level_two";
@@ -61,7 +63,7 @@ var_dump(scandir('../../level_one'));
 ===DONE===
 --CLEAN--
 <?php
-$dir_path = dirname(__FILE__);
+$dir_path = '.';
 rmdir("$dir_path/level_one/level_two");
 rmdir("$dir_path/level_one");
 ?>
