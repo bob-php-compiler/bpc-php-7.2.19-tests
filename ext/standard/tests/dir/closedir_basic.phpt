@@ -14,8 +14,8 @@ Test closedir() function : basic functionality
 
 echo "*** Testing closedir() : basic functionality ***\n";
 
-$base_dir = dirname(__FILE__);
-$dir_path = $base_dir . '/closedir_basic';
+$base_dir = '.';
+$dir_path = $base_dir . '/closedir-basic';
 mkdir($dir_path);
 
 echo "\n-- Call closedir() with no arguments: --\n";
@@ -37,8 +37,8 @@ var_dump($dh2);
 ===DONE===
 --CLEAN--
 <?php
-$base_dir = dirname(__FILE__);
-$dir_path = $base_dir . '/closedir_basic';
+$base_dir = '.';
+$dir_path = $base_dir . '/closedir-basic';
 rmdir($dir_path);
 ?>
 --EXPECTF--
