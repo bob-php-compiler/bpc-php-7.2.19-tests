@@ -10,12 +10,13 @@ Test dir() function : error conditions
 
 echo "*** Testing dir() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing dir() function with zero arguments --";
-var_dump( dir() );
+// With one more than expected number of arguments
+echo "\n-- Testing dir() function with one more than expected number of arguments --";
+$extra_arg = 10;
+var_dump( dir(getcwd(), "stream", $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function dir(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function dir(): 2 at most, 3 provided in %s on line %d
  -- compile-error
