@@ -6,7 +6,7 @@ if( substr(PHP_OS, 0, 3) == 'WIN') {
 	die('skip Not for Windows');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/dir_root_check.tmp";
+$filename = "dir_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -32,12 +32,12 @@ echo "*** Testing scandir() : usage variations ***\n";
 
 /*
  * create the temporary directory :
- * scandir_variation5  ( parent )
+ * scandir-variation5  ( parent )
  *  |-> sub_dir     ( sub parent )
  *      |-> child_dir  ( child dir)
  */
 
-$parent_dir_path = dirname(__FILE__) . "/scandir_variation5";
+$parent_dir_path = "./scandir-variation5";
 mkdir($parent_dir_path);
 chmod($parent_dir_path, 0777);
 
@@ -66,7 +66,7 @@ var_dump(scandir($child_dir_path));
 ===DONE===
 --CLEAN--
 <?php
-$parent_dir_path = dirname(__FILE__) . "/scandir_variation5";
+$parent_dir_path = "./scandir-variation5";
 $sub_dir_path = $parent_dir_path."/sub_dir";
 $child_dir_path = $sub_dir_path."/child_dir";
 
@@ -84,14 +84,14 @@ rmdir($parent_dir_path);
 
 -- After restricting 1st level parent directory --
 
-Warning: scandir(%s/scandir_variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
+Warning: scandir(%s/scandir-variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
 
 Warning: scandir(): (errno %d): %s in %s on line %d
 bool(false)
 
 -- After restricting parent directory --
 
-Warning: scandir(%s/scandir_variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
+Warning: scandir(%s/scandir-variation5/sub_dir/child_dir): failed to open dir: %s in %s on line %d
 
 Warning: scandir(): (errno %d): %s in %s on line %d
 bool(false)
