@@ -16,7 +16,7 @@ internal_encoding=utf-8
 */
 
 $item = "bug74589_新建文件夹"; // utf-8 string
-$dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . $item;
+$dir = getcwd() . DIRECTORY_SEPARATOR . $item;
 $test_file = $dir . DIRECTORY_SEPARATOR . "test.php";
 
 mkdir($dir);
@@ -34,15 +34,12 @@ echo shell_exec("$php -n $test_file");
 ?>
 ===DONE===
 --EXPECTF--
-string(%d) "%sbug74589_新建文件夹"
-string(%d) "%sbug74589_新建文件夹%etest.php"
+string(%d) "bug74589_新建文件夹"
+string(%d) "bug74589_新建文件夹%etest.php"
 bool(true)
 ===DONE===
 --CLEAN--
 <?php
 	$item = "bug74589_新建文件夹"; // utf-8 string
-	$dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . $item;
-	$test_file = $dir . DIRECTORY_SEPARATOR . "test.php";
-	unlink($test_file);
-	rmdir($dir);
+	shell_exec("rm -rf $item");
 ?>
