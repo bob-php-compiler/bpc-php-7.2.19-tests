@@ -1,5 +1,7 @@
 --TEST--
 Test readdir() function : basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/dir/file.inc \
 --FILE--
 <?php
 /* Prototype  : string readdir([resource $dir_handle])
@@ -14,10 +16,10 @@ Test readdir() function : basic functionality
 echo "*** Testing readdir() : basic functionality ***\n";
 
 // include the file.inc for Function: function create_files()
-chdir(dirname(__FILE__));
-include(dirname(__FILE__)."/../file/file.inc");
+chdir('.');
+include("file.inc");
 
-$path = dirname(__FILE__) . '/readdir_basic';
+$path = './readdir-basic';
 mkdir($path);
 create_files($path, 3);
 
@@ -49,7 +51,7 @@ closedir($dh);
 ===DONE===
 --CLEAN--
 <?php
-$path = dirname(__FILE__) . '/readdir_basic';
+$path = './readdir-basic';
 rmdir($path);
 ?>
 --EXPECTF--
