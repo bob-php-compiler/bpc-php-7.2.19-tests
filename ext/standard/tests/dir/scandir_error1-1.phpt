@@ -13,13 +13,17 @@ Test scandir() function : error conditions - Incorrect number of args
 
 echo "*** Testing scandir() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing scandir() function with Zero arguments --\n";
-var_dump( scandir() );
-
+//Test scandir with one more than the expected number of arguments
+echo "\n-- Testing scandir() function with more than expected no. of arguments --\n";
+$dir = dirname(__FILE__) . '/scandir_error';
+mkdir($dir);
+$sorting_order = 10;
+$context = stream_context_create();
+$extra_arg = 10;
+var_dump( scandir($dir, $sorting_order, $context, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function scandir(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function scandir(): 3 at most, 4 provided in %s on line %d
  -- compile-error
