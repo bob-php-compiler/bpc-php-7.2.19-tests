@@ -15,7 +15,7 @@ Test rewinddir() function : usage variations - file pointers
 echo "*** Testing rewinddir() : usage variations ***\n";
 
 echo "\n-- Open a file using fopen --\n";
-var_dump($fp = fopen(__FILE__, 'r'));
+var_dump($fp = fopen('/proc/self/comm', 'r'));
 
 $result1 = fread($fp, 5);
 var_dump(rewinddir($fp));
