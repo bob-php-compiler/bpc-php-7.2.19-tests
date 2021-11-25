@@ -1,5 +1,7 @@
 --TEST--
 Test scandir() function : usage variations - different sorting constants
+--ARGS--
+--bpc-include-file ext/standard/tests/dir/file.inc \
 --FILE--
 <?php
 /* Prototype  : array scandir(string $dir [, int $sorting_order [, resource $context]])
@@ -19,10 +21,10 @@ printf("SCANDIR_SORT_NONE: %d\n", SCANDIR_SORT_NONE);
 echo "*** Testing scandir() : usage variations ***\n";
 
 // include for create_files/delete_files functions
-include(dirname(__FILE__) . '/../file/file.inc');
+include('file.inc');
 
 // create directory and files
-$dir = dirname(__FILE__) . '/scandir_variation10';
+$dir = './scandir-variation10';
 mkdir($dir);
 @create_files($dir, 2);
 
@@ -43,7 +45,7 @@ delete_files($dir, 2);
 ===DONE===
 --CLEAN--
 <?php
-$dir = dirname(__FILE__) . '/scandir_variation10';
+$dir = './scandir-variation10';
 rmdir($dir);
 ?>
 --EXPECTF--
