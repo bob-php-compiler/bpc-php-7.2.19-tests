@@ -6,7 +6,7 @@ if( substr(PHP_OS, 0, 3) == 'WIN') {
   die('skip Not for Windows');
 }
 // Skip if being run by root (files are always readable, writeable and executable)
-$filename = dirname(__FILE__)."/dir_root_check.tmp";
+$filename = "dir_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -31,8 +31,8 @@ unlink($filename);
 echo "*** Testing dir() : different directory permissions ***";
 
 // create the temporary directory
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/dir_variation3";
+$file_path = '.';
+$dir_path = $file_path."/dir-variation3";
 @mkdir($dir_path);
 
 /* different values for directory permissions */
@@ -58,8 +58,8 @@ for($count = 0; $count < count($permission_values); $count++) {
   echo "\n-- Iteration ".($count + 1)." --\n";
 
   // try to remove the dir if exists  & create
-  $file_path = dirname(__FILE__);
-  $dir_path = $file_path."/dir_variation3";
+  $file_path = '.';
+  $dir_path = $file_path."/dir-variation3";
   @chmod ($dir_path, 0777); // change dir permission to allow all operation
   @rmdir ($dir_path);  // try n delete the dir
 
@@ -86,8 +86,8 @@ echo "Done";
 --CLEAN--
 <?php
 // deleting temporary directory
-$file_path = dirname(__FILE__);
-$dir_path = $file_path."/dir_variation3";
+$file_path = '.';
+$dir_path = $file_path."/dir-variation3";
 rmdir($dir_path);
 ?>
 --EXPECTF--
@@ -96,7 +96,7 @@ rmdir($dir_path);
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -107,7 +107,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -118,7 +118,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -129,7 +129,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -140,7 +140,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -151,7 +151,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -162,7 +162,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -173,7 +173,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -184,7 +184,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
@@ -195,7 +195,7 @@ string(%d) "%s"
 bool(true)
 object(Directory)#%d (2) {
   ["path"]=>
-  string(%d) "%s/dir_variation3"
+  string(%d) "%s/dir-variation3"
   ["handle"]=>
   resource(%d) of type (stream)
 }
