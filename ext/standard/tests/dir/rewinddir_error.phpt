@@ -27,16 +27,7 @@ var_dump( rewinddir($dir_handle, $extra_arg) );
 closedir($dir_handle);
 ?>
 ===DONE===
---CLEAN--
-<?php
-$dir_path = dirname(__FILE__) . "/rewinddir_error";
-rmdir($dir_path);
-?>
 --EXPECTF--
-*** Testing rewinddir() : error conditions ***
-
--- Testing rewinddir() function with more than expected no. of arguments --
-
-Warning: rewinddir() expects at most 1 parameter, 2 given in %s on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function rewinddir(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
