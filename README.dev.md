@@ -708,6 +708,10 @@
 
 21. TODO support use_include_path
 
+22. Directory::close/read/rewind accepts none arguments
+
+    php accepts at most one argument
+
 ## ext/date
 
 1. ini_set date.timezone warning message
