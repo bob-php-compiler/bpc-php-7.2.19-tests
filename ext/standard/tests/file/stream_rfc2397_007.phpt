@@ -120,7 +120,7 @@ int(2)
 bool(false)
 ===S:-10,C===
 int(-1)
-bool(false)
+int(2)
 bool(false)
 ===S:3,S===
 int(0)
@@ -128,7 +128,7 @@ int(3)
 bool(false)
 ===S:10,C===
 int(-1)
-bool(false)
+int(3)
 bool(false)
 ===S:-1,E===
 int(0)
@@ -136,10 +136,10 @@ int(5)
 bool(false)
 ===S:0,E===
 int(0)
-int(6)
+int(5)
 bool(false)
 ===S:1,E===
 int(-1)
-bool(false)
+int(5)
 bool(false)
 ===DONE===

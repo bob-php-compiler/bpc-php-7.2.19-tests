@@ -702,9 +702,19 @@
 
         file_get_contents("https?://xxx")
 
-20. ftell of append-only streams same as C
+20. ftell()
 
+    ftell of append-only FILE stream same as C
     @see ext/standard/tests/file/fwrite_variation3.phpt
+    
+    ftell of string(rfc2397) stream same as bigloo (input-string-port)
+    bigloo: 
+        if fseek failed, pos not change
+        fseek to end, pos is string length - 1
+    php:
+        if fseek failed, ftell return false
+        fseek to end, pos is string length
+    @see ext/standard/tests/file/stream_rfc2397_007.phpt
 
 21. TODO support use_include_path
 
