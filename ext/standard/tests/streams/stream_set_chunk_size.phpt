@@ -1,5 +1,7 @@
 --TEST--
 stream_set_chunk_size basic tests
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class test_wrapper {

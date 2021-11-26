@@ -1,5 +1,7 @@
 --TEST--
 Stream wrappers in include_path
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 $data1 = $data2 = $data3 = $data4 = $data5 = $data6 = <<<'EOD'

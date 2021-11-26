@@ -1,5 +1,7 @@
 --TEST--
 E_ERROR during UserStream Open
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 

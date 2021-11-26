@@ -1,5 +1,7 @@
 --TEST--
 int set_file_buffer ( resource $stream , int $buffer );
+--SKIPIF--
+skip not support streamWrapper
 --CREDITS--
 marcosptf - <marcosptf@yahoo.com.br> - #phparty7 - @phpsp - novatec/2015 - sao paulo - br
 --FILE--

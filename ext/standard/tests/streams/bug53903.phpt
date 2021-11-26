@@ -1,5 +1,7 @@
 --TEST--
 Bug #53903 streamwrapper/stream_stat causes problems
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 

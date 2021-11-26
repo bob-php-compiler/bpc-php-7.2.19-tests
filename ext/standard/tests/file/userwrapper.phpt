@@ -1,5 +1,7 @@
 --TEST--
 Userstream unlink, rename, mkdir, rmdir, and url_stat.
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php # vim:ft=php:
 class test {

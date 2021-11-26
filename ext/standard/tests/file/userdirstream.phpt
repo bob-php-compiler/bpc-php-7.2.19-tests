@@ -1,5 +1,7 @@
 --TEST--
 Directory Streams
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class test {

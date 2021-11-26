@@ -1,5 +1,7 @@
 --TEST--
 Bug#74951 Null pointer dereference in user streams
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 trait Stream00ploiter{

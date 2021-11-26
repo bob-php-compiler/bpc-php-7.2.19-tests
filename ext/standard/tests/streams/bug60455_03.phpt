@@ -1,5 +1,7 @@
 --TEST--
 Bug #60455: stream_get_line and 2 lines, one possibly empty
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class TestStream {

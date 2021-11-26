@@ -1,5 +1,7 @@
 --TEST--
 User-space streams
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 # vim600:syn=php:

@@ -1,5 +1,7 @@
 --TEST--
 Bug #71287 (Error message contains hexadecimal instead of decimal number)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class Stream {

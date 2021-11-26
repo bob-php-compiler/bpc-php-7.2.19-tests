@@ -3,6 +3,7 @@ array stream_get_wrappers ( void );
 --CREDITS--
 marcosptf - <marcosptf@yahoo.com.br> - #phparty7 - @phpsp - novatec/2015 - sao paulo - br
 --SKIPIF--
+skip not support streamWrapper
 <?php
 if (phpversion() < "5.3.0") {
   die('SKIP php version so lower.');

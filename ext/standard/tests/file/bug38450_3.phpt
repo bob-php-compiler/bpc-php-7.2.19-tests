@@ -1,5 +1,7 @@
 --TEST--
 Bug #38450 (constructor is not called for classes used in userspace stream wrappers)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 

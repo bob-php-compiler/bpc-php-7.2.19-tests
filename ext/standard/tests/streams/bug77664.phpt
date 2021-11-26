@@ -1,5 +1,7 @@
 --TEST--
 BUG #77664 (Segmentation fault when using undefined constant in custom wrapper)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class ErrorWrapper {

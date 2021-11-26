@@ -1,5 +1,7 @@
 --TEST--
 Bug #37158 (if userspace stream is present, fread() reads in 8192 max, otherwise it works)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 

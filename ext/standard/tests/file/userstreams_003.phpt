@@ -1,5 +1,7 @@
 --TEST--
 User-space streams: stream_set_option()
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class test_wrapper_base {

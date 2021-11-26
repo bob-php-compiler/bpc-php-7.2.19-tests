@@ -1,5 +1,7 @@
 --TEST--
 Bug #67626: Exceptions not properly handled in user stream handlers
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class MyStream

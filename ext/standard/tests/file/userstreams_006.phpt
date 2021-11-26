@@ -1,5 +1,7 @@
 --TEST--
 User-space streams: set_options returns "not implemented" for unhandled option types
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class test_wrapper {

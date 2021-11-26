@@ -1,5 +1,7 @@
 --TEST--
 User-space streams: test metadata option
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class test_wrapper {

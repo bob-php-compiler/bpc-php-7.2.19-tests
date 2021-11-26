@@ -1,6 +1,8 @@
 --TEST--
 Bug #60455: stream_get_line and 1-line with maxlen size followed by 0-length
 read with EOL indication
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class TestStream {

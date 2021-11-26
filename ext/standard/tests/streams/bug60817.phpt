@@ -1,5 +1,7 @@
 --TEST--
 Bug #60817: stream_get_line() reads from stream even when there is already sufficient data buffered
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class TestStream { //data, empty data, empty data + eof

@@ -1,5 +1,7 @@
 --TEST--
 User-space streams: stream_lock()
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class test_wrapper_base {

@@ -1,5 +1,7 @@
 --TEST--
 Bug #60455: stream_get_line and \0 as a delimiter
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class TestStream {

@@ -1,5 +1,7 @@
 --TEST--
 Bug #27508 (userspace wrappers have bogus eof indicator)
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php # vim:ft=php
 class FileStream {

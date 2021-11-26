@@ -1,5 +1,7 @@
 --TEST--
 Bug #60455: stream_get_line and 1-line followed by eol input
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 class TestStream {
