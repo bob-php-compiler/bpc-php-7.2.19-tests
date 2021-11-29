@@ -1,5 +1,7 @@
 --TEST--
 Bug #39551 (Segfault with stream_bucket_new in user filter)
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 
