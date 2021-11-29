@@ -4,7 +4,7 @@ Bug #41655 (open_basedir bypass via glob()) 2/2
 open_basedir=/
 --FILE--
 <?php
-	$dir = dirname(__FILE__);
+	$dir = getcwd();
 	$a=glob($dir . "/test*csv");
 	print_r($a);
 ?>
