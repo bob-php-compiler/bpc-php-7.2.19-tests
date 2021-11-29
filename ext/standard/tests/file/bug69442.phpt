@@ -1,6 +1,7 @@
 --TEST--
 proc_open with PTY closes incorrect file descriptor
 --SKIPIF--
+skip TODO proc_open()
 <?php
 
 $code = <<< 'EOC'
