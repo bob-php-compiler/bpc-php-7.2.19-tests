@@ -1,5 +1,7 @@
 --TEST--
 Test fopen and fclose() functions - usage variations - "xt" mode
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -20,7 +22,7 @@ Test fopen and fclose() functions - usage variations - "xt" mode
    checking for the warning msg when trying to open an existing file in "xt" mode,
    and fclose function
 */
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $string = "abcdefghij\nmnopqrst\tuvwxyz\n0123456789";
 $file = $file_path."/007_variation15.tmp";
 
@@ -40,7 +42,7 @@ $file_handle = fopen($file, "xt");  //Opening the existing data file in 'xt' mod
 echo "*** Done ***\n";
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/007_variation15.tmp");
+unlink("./007_variation15.tmp");
 ?>
 --EXPECTF--
 *** Test fopen() & fclose() functions:  with 'xt' mode ***

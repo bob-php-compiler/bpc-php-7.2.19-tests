@@ -1,5 +1,7 @@
 --TEST--
 Test fopen and fclose() functions - usage variations - "wt" mode
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if( substr(PHP_OS, 0, 3) == "WIN" )
@@ -25,7 +27,7 @@ if( substr(PHP_OS, 0, 3) == "WIN" )
    checking for the file truncation when trying to open an existing file in "wt" mode,
    and fclose function
 */
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require($file_path."/file.inc");
 
 create_files($file_path, 1, "text_with_new_line", 0755, 20, "wt", "007_variation", 11, "bytes");
@@ -57,7 +59,7 @@ var_dump( file_exists($file) );  //Check for the existence of file
 echo "*** Done ***\n";
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/007_variation11.tmp");
+unlink("./007_variation11.tmp");
 ?>
 --EXPECTF--
 *** Test fopen() & fclose() functions:  with 'wt' mode ***
