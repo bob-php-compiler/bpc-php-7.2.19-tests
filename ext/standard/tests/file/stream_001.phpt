@@ -1,5 +1,7 @@
 --TEST--
 stream_wrapper_unregister() & stream_wrapper_restore()
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 
