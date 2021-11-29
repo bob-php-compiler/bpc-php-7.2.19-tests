@@ -1,6 +1,7 @@
 --TEST--
 Bug #41655 (open_basedir bypass via glob()) 1/2
 --SKIPIF--
+skip no ini open_basedir
 <?php
 if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip not for Windows');
