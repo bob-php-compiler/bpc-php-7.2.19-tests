@@ -1,5 +1,7 @@
 --TEST--
 stream_supports_lock
+--SKIPIF--
+skip TODO stream_supports_lock()
 --INI--
 allow_url_fopen=1
 --FILE--
