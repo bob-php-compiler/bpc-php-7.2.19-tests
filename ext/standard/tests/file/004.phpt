@@ -2,13 +2,13 @@
 file_put_contents() test
 --FILE--
 <?php
-	chdir(dirname(__FILE__));
+	chdir('.');
 	for ($i = 1; $i < 6; $i++) {
 		@unlink("./TEST{$i}");
 	}
 
 	echo "String Test: ";
-	echo file_put_contents("TEST1", file_get_contents(__FILE__)) !== FALSE ? 'OK' : 'FAIL';
+	echo file_put_contents("TEST1", file_get_contents('004.php')) !== FALSE ? 'OK' : 'FAIL';
 	echo "\n";
 
 	$old_int = $int = rand();
@@ -31,9 +31,9 @@ file_put_contents() test
 	}
 	echo "\n";
 
-	$ret = file_put_contents("TEST4", __FILE__);
+	$ret = file_put_contents("TEST4", '004.php');
 	echo "Bool Test: ";
-	if ($ret !== FALSE && md5(__FILE__) == md5_file("TEST4")) {
+	if ($ret !== FALSE && md5('004.php') == md5_file("TEST4")) {
 		echo 'OK';
 	} else {
 		echo 'FAIL';
