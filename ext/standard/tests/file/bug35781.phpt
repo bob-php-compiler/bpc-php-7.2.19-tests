@@ -1,5 +1,7 @@
 --TEST--
 Bug #35781 (stream_filter_append() causes segfault)
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 
