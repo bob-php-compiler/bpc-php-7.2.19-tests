@@ -1,5 +1,7 @@
 --TEST--
 Bug #66509 (copy() showing $context parameter as required)
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 
