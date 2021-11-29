@@ -9,10 +9,10 @@ if (!defined('GLOB_BRACE')) {
 --FILE--
 <?php
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 
 // temp dirname used here
-$dirname = "$file_path/bug69628";
+$dirname = "$file_path/bug69628-dir";
 
 // temp dir created
 mkdir($dirname);
@@ -33,17 +33,17 @@ function sort_var_dump($results) {
 --CLEAN--
 <?php
 
-$file_path = dirname(__FILE__);
-unlink("$file_path/bug69628/image.jPg");
-unlink("$file_path/bug69628/image.gIf");
-unlink("$file_path/bug69628/image.png");
-rmdir("$file_path/bug69628/");
+$file_path = '.';
+unlink("$file_path/bug69628-dir/image.jPg");
+unlink("$file_path/bug69628-dir/image.gIf");
+unlink("$file_path/bug69628-dir/image.png");
+rmdir("$file_path/bug69628-dir/");
 
 ?>
 --EXPECTF--
 array(2) {
   [0]=>
-  string(%d) "%s/bug69628/image.gIf"
+  string(%d) "%s/bug69628-dir/image.gIf"
   [1]=>
-  string(%d) "%s/bug69628/image.jPg"
+  string(%d) "%s/bug69628-dir/image.jPg"
 }
