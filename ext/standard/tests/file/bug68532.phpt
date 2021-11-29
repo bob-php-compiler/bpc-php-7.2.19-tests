@@ -1,5 +1,7 @@
 --TEST--
 Bug #68532: convert.base64-encode omits padding bytes
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 $testString = 'test';
