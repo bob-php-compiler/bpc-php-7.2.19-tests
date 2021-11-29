@@ -728,6 +728,11 @@
 
     @see ext/standard/tests/file/fseek_dir_basic.phpt
 
+25. php://fd mode not ignored
+
+    @see ext/standard/tests/file/php_fd_wrapper_02.phpt
+    php does ignore the mode parameter for php://fd
+
 ## ext/date
 
 1. ini_set date.timezone warning message
