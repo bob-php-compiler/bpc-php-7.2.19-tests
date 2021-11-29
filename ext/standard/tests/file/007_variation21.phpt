@@ -1,5 +1,7 @@
 --TEST--
 Test fopen and fclose() functions - usage variations - "ab" mode
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --FILE--
 <?php
 /*
@@ -19,7 +21,7 @@ Test fopen and fclose() functions - usage variations - "ab" mode
    checking for the file pointer position,
    and fclose function
 */
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require($file_path."/file.inc");
 
 create_files($file_path, 1, "text_with_new_line", 0755, 20, "w", "007_variation", 21, "bytes");
@@ -44,7 +46,7 @@ var_dump( file_exists($file) );  //Check for the existence of file
 echo "*** Done ***\n";
 --CLEAN--
 <?php
-unlink(dirname(__FILE__)."/007_variation21.tmp");
+unlink("./007_variation21.tmp");
 ?>
 --EXPECTF--
 *** Test fopen() & fclose() functions:  with 'ab' mode ***
