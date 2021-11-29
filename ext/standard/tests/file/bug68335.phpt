@@ -1,5 +1,7 @@
 --TEST--
 Bug #68335: rmdir doesnt work with file:// stream wrapper
+--SKIPIF--
+skip TODO support file://
 --FILE--
 <?php
 $dir = 'file://' . dirname(__FILE__) . '/testDir';
