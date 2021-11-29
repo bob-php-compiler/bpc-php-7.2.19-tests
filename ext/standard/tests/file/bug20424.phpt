@@ -2,7 +2,7 @@
 Bug #20424 (stream_get_meta_data crashes on a normal file stream)
 --FILE--
 <?php
-$f = fopen(__FILE__, "r");
+$f = fopen('/proc/self/comm', "r");
 $dummy = var_export(stream_get_meta_data($f), TRUE);
 echo "I'm alive!\n";
 ?>
