@@ -1,5 +1,7 @@
 --TEST--
 Bug #22414 (passthru() does not read data correctly)
+--SKIPIF--
+skip TODO
 --INI--
 output_handler=
 --FILE--
