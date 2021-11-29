@@ -3,7 +3,7 @@ Test fopen() function : variation: interesting paths, no use include path
 --FILE--
 <?php
 // fopen with interesting windows paths.
-$testdir = __DIR__ . '/bug47177.tmpdir';
+$testdir = './bug47177.tmpdir';
 mkdir($testdir);
 $t = time() - 3600;
 touch($testdir, $t);

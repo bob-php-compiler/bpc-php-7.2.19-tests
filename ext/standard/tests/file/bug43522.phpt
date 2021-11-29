@@ -3,7 +3,7 @@ Bug #43522 (stream_get_line() eats additional characters)
 --FILE--
 <?php // 1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-$fp = fopen(__FILE__, 'r'); // Open self
+$fp = fopen('bug43522.php', 'r'); // Open self
 
 DoTest($fp, 'ZZZ');  // test multi-char delimiter
 DoTest($fp, "Z");  // test single-char delimiter
