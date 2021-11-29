@@ -10,7 +10,7 @@ if (!function_exists("glob")) {
 <?php
 
 // run this test in ext/standard/tests (see bug #64714)
-chdir(__DIR__); // ensure in ext/standard/tests/file
+chdir('.'); // ensure in ext/standard/tests/file
 chdir('..'); // move up to ext/standard/tests
 
 $globdirs = glob("*", GLOB_ONLYDIR);
