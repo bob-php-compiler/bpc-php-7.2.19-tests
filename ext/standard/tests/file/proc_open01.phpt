@@ -1,5 +1,7 @@
 --TEST--
 proc_open() regression test 1 (proc_open() leak)
+--SKIPIF--
+skip TODO proc_open()
 --FILE--
 <?php
 $pipes = array(1, 2, 3);
