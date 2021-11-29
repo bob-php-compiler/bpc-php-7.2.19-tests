@@ -1,5 +1,7 @@
 --TEST--
 stream userfilter test
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 # vim600:syn=php:
