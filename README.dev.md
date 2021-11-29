@@ -738,6 +738,8 @@
     @see ext/standard/tests/file/php_fd_wrapper_02.phpt
     php does ignore the mode parameter for php://fd
 
+26. getlastmod/getmyinode() always return false
+
 ## ext/date
 
 1. ini_set date.timezone warning message

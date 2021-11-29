@@ -12,8 +12,8 @@ var_dump(getmygid());
 echo "Done\n";
 ?>
 --EXPECTF--
-int(%d)
-int(%d)
+bool(false)
+bool(false)
 int(%d)
 int(%d)
 int(%d)
