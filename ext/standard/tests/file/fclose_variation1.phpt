@@ -2,7 +2,7 @@
 fclose() actually closes streams with refcount > 1
 --FILE--
 <?php
-$s = fopen(__FILE__, "rb");
+$s = fopen('fclose_variation1.php', "rb");
 function separate_zval(&$var) { }
 $s2 = $s;
 separate_zval($s2);

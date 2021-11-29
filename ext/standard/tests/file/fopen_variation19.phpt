@@ -16,10 +16,10 @@ if(substr(PHP_OS, 0, 3) == "WIN")
  */
 
 $tmpDir = 'fopenVar19.Dir';
-$realFilename = __FILE__.'.real';
-$sortFilename = __FILE__.'.soft';
-$hardFilename = __FILE__.'.hard';
-$linkOfLink = __FILE__.'.soft2';
+$realFilename = 'fopen_variation19.php.real';
+$sortFilename = 'fopen_variation19.php.soft';
+$hardFilename = 'fopen_variation19.php.hard';
+$linkOfLink = 'fopen_variation19.php.soft2';
 
 echo "*** Testing fopen() : variation ***\n";
 // start the test
