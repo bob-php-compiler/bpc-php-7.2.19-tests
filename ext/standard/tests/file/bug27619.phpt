@@ -1,5 +1,7 @@
 --TEST--
 Bug #27619 (filters not applied to pre-buffered data)
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 	$fp = tmpfile();

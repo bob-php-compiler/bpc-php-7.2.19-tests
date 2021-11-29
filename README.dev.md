@@ -722,6 +722,8 @@
 
     php accepts at most one argument
 
+23. not support stream filter
+
 ## ext/date
 
 1. ini_set date.timezone warning message
