@@ -1,5 +1,7 @@
 --TEST--
 Bug #71882 (Negative ftruncate() on php://memory exhausts memory)
+--SKIPIF--
+skip TODO php://memory
 --FILE--
 <?php
 $fd = fopen("php://memory", "w+");
