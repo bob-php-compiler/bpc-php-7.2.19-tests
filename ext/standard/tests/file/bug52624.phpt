@@ -1,5 +1,7 @@
 --TEST--
 Bug #52624 (tempnam() by-pass open_basedir with inexistent directory)
+--SKIPIF--
+skip no ini open_basedir
 --INI--
 open_basedir=.
 --FILE--
