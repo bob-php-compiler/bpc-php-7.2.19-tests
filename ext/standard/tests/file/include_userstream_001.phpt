@@ -1,5 +1,7 @@
 --TEST--
 User streams and include()
+--SKIPIF--
+skip not support streamWrapper
 --INI--
 allow_url_fopen=1
 allow_url_include=0

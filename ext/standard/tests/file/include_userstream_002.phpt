@@ -1,5 +1,7 @@
 --TEST--
 local user streams must not be able to open() url's
+--SKIPIF--
+skip not support streamWrapper
 --INI--
 allow_url_fopen=1
 allow_url_include=0

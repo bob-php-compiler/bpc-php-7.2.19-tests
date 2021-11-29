@@ -1,5 +1,7 @@
 --TEST--
 allow_url_fopen disabled
+--SKIPIF--
+skip not support streamWrapper
 --INI--
 allow_url_fopen=0
 allow_url_include=1
