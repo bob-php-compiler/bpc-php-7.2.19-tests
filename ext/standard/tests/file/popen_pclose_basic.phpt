@@ -1,5 +1,7 @@
 --TEST--
 Test popen() and pclose function: basic functionality
+--ARGS--
+--bpc-include-file ext/standard/tests/file/file.inc \
 --SKIPIF--
 <?php
 if(substr(PHP_OS, 0, 3) == 'WIN' )
@@ -15,7 +17,7 @@ if(substr(PHP_OS, 0, 3) == 'WIN' )
  *  Description: Closes process file pointer.
  */
 
-$file_path = dirname(__FILE__);
+$file_path = '.';
 require($file_path."/file.inc");
 
 echo "*** Testing popen() and pclose() with different processes ***\n";
@@ -64,13 +66,17 @@ echo "\n--- Done ---";
 ?>
 --CLEAN--
 <?php
-$file_path = dirname(__FILE__);
+$file_path = '.';
 $dirpath = $file_path."/popen_basic";
 unlink($dirpath."/popen_basic.tmp");
 unlink($dirpath."/popen_basic1.tmp");
 rmdir($dirpath);
 ?>
 --EXPECTF--
+aaa
+ddd
+ggg
+sss
 *** Testing popen() and pclose() with different processes ***
 -- Testing popen(): reading from the pipe --
 popen_basic.tmp
@@ -89,10 +95,6 @@ line
 line 
 int(100)
 *** Testing popen(): writing to the pipe ***
-aaa
-ddd
-ggg
-sss
 *** Testing for return type of popen() and pclose() functions ***
 bool(true)
 Test String

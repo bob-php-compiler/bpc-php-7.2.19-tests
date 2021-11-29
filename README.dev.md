@@ -628,6 +628,11 @@
 
     php not. @see ext/standard/tests/file/fscanf_error.phpt
 
+35. TO BE FIXED bigloo pipe problem
+
+    tests/basic/timeout_variation_*.phpt sometimes got empty output
+    ext/standard/tests/file/popen_pclose_basic.phpt sort output should not come first
+
 ## output buffering
 
 1. chunk_size and buffer_used different
