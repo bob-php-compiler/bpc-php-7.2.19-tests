@@ -1,5 +1,7 @@
 --TEST--
 Testing fseek() on a directory stream
+--SKIPIF--
+skip not support fseek() on a directory stream
 --FILE--
 <?php
 

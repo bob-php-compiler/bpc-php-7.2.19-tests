@@ -724,6 +724,10 @@
 
 23. not support stream filter
 
+24. not support fseek() on a directory stream
+
+    @see ext/standard/tests/file/fseek_dir_basic.phpt
+
 ## ext/date
 
 1. ini_set date.timezone warning message
