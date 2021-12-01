@@ -1,7 +1,5 @@
 --TEST--
 BUG #77589 (Core dump using parse_ini_string with numeric sections)
---SKIPIF--
-skip TODO parse_ini_string()
 --FILE--
 <?php
 var_dump(
