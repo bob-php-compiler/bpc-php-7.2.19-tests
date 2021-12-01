@@ -762,6 +762,9 @@
     
         @see ext/standard/tests/general_functions/parse_ini_basic.phpt
 
+    - allow = in value
+    
+        @see ext/standard/tests/general_functions/parse_ini_file.phpt
 
 ## ext/date
 
