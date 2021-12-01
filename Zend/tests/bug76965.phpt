@@ -1,7 +1,5 @@
 --TEST--
 Bug #76965 (INI_SCANNER_RAW doesn't strip trailing whitespace)
---SKIPIF--
-skip TODO parse_ini_string()
 --FILE--
 <?php
 // the trailing whitespace is intentional
