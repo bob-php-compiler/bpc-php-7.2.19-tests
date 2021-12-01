@@ -1,11 +1,9 @@
 --TEST--
 Bug #52508 (newline problem with parse_ini_file+INI_SCANNER_RAW)
---SKIPIF--
-skip TODO parse_ini_file
 --FILE--
 <?php
 
-$file = dirname(__FILE__) .'/bug52508.ini';
+$file = 'bug52508.ini';
 
 file_put_contents($file, "a = 1");
 
