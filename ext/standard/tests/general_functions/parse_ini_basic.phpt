@@ -6,7 +6,7 @@ basicqval=FUBAR_QUOTES_VARIABLE
 --FILE--
 <?php
 
-$ini_file = dirname(__FILE__)."/parse_ini_basic.data";
+$ini_file = "parse_ini_basic.data";
 
 define('TEST_CONSTANT', 'this_is_test_constant');
 
@@ -86,21 +86,21 @@ array(26) {
   ["variables"]=>
   array(8) {
     ["var1"]=>
-    string(14) "FUBAR_VARIABLE"
+    string(11) "${basicval}"
     ["var2"]=>
-    string(18) "FUBAR_VARIABLE/foo"
+    string(15) "${basicval}/foo"
     ["var3"]=>
-    string(18) "foo/FUBAR_VARIABLE"
+    string(15) "foo/${basicval}"
     ["var4"]=>
-    string(22) "foo/FUBAR_VARIABLE/foo"
+    string(19) "foo/${basicval}/foo"
     ["quoted_var1"]=>
-    string(21) "FUBAR_QUOTES_VARIABLE"
+    string(12) "${basicqval}"
     ["quoted_var2"]=>
-    string(25) "FUBAR_QUOTES_VARIABLE/foo"
+    string(16) "${basicqval}/foo"
     ["quoted_var3"]=>
-    string(25) "foo/FUBAR_QUOTES_VARIABLE"
+    string(16) "foo/${basicqval}"
     ["quoted_var4"]=>
-    string(29) "foo/FUBAR_QUOTES_VARIABLE/foo"
+    string(20) "foo/${basicqval}/foo"
   }
   ["offset values"]=>
   array(6) {
@@ -134,24 +134,24 @@ array(26) {
     }
     ["foo6"]=>
     array(4) {
-      ["FUBAR_VARIABLE"]=>
+      ["${basicval}"]=>
       string(8) "variable"
-      ["FUBAR_VARIABLE/foo"]=>
+      ["${basicval}/foo"]=>
       string(22) "variable with string 1"
-      ["foo/FUBAR_VARIABLE"]=>
+      ["foo/${basicval}"]=>
       string(22) "variable with string 2"
-      ["foo/FUBAR_VARIABLE/foo"]=>
+      ["foo/${basicval}/foo"]=>
       string(22) "variable with string 3"
     }
     ["foo7"]=>
     array(4) {
-      ["FUBAR_QUOTES_VARIABLE"]=>
+      ["${basicqval}"]=>
       string(17) "quoted variable 1"
-      ["FUBAR_QUOTES_VARIABLE/foo"]=>
+      ["${basicqval}/foo"]=>
       string(17) "quoted variable 2"
-      ["foo/FUBAR_QUOTES_VARIABLE"]=>
+      ["foo/${basicqval}"]=>
       string(17) "quoted variable 3"
-      ["foo/FUBAR_QUOTES_VARIABLE/foo"]=>
+      ["foo/${basicqval}/foo"]=>
       string(17) "quoted variable 4"
     }
   }
@@ -176,34 +176,34 @@ array(26) {
   ["Quoted strings and variables in sections"]=>
   array(0) {
   }
-  ["FUBAR_VARIABLE"]=>
+  ["${basicval}"]=>
   array(0) {
   }
-  ["FUBAR_VARIABLE/foo"]=>
+  ["${basicval}/foo"]=>
   array(0) {
   }
-  ["foo/FUBAR_VARIABLE"]=>
+  ["foo/${basicval}"]=>
   array(0) {
   }
-  ["foo/FUBAR_VARIABLE/foo"]=>
+  ["foo/${basicval}/foo"]=>
   array(0) {
   }
-  ["FUBAR_QUOTES_VARIABLE"]=>
+  ["${basicqval}"]=>
   array(0) {
   }
-  ["FUBAR_QUOTES_VARIABLE/foo"]=>
+  ["${basicqval}/foo"]=>
   array(0) {
   }
-  ["foo/FUBAR_QUOTES_VARIABLE"]=>
+  ["foo/${basicqval}"]=>
   array(0) {
   }
-  ["foo/FUBAR_QUOTES_VARIABLE/foo"]=>
+  ["foo/${basicqval}/foo"]=>
   array(0) {
   }
-  ["PATH=FUBAR_VARIABLE/no/quotes"]=>
+  ["PATH=${basicval}/no/quotes"]=>
   array(0) {
   }
-  ["PATH=FUBAR_VARIABLE/all/quoted"]=>
+  ["PATH=${basicval}/all/quoted"]=>
   array(0) {
   }
   ["01"]=>
@@ -251,17 +251,17 @@ array(26) {
   ["bug #44019"]=>
   array(6) {
     ["concatenation_before"]=>
-    string(37) "this_is_test_constant+some_text_after"
+    string(32) "TEST_CONSTANT "+some_text_after""
     ["concatenation_middle"]=>
-    string(54) "some_text_before+this_is_test_constant+some_text_after"
+    string(53) "x"some_text_before+" TEST_CONSTANT "+some_text_after""
     ["concatenation_after"]=>
-    string(38) "some_text_before+this_is_test_constant"
+    string(34) "x"some_text_before+" TEST_CONSTANT"
     ["concatenation_nows_before"]=>
-    string(37) "this_is_test_constant+some_text_after"
+    string(31) "TEST_CONSTANT"+some_text_after""
     ["concatenation_nows_middle"]=>
-    string(54) "some_text_before+this_is_test_constant+some_text_after"
+    string(51) "x"some_text_before+"TEST_CONSTANT"+some_text_after""
     ["concatenation_nows_after"]=>
-    string(38) "some_text_before+this_is_test_constant"
+    string(33) "x"some_text_before+"TEST_CONSTANT"
   }
   ["bug #43915"]=>
   array(3) {
@@ -273,11 +273,9 @@ array(26) {
     string(14) "hyphen and dot"
   }
   ["windows paths"]=>
-  array(2) {
+  array(1) {
     ["winpath1"]=>
     string(69) "c:\some windows\path\test\new\r\quote " here\single ' quote\some more"
-    ["winpath2"]=>
-    string(13) "special case\"
   }
 }
 Done.

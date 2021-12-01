@@ -756,6 +756,12 @@
     - non-quoted value always trimmed
     
         @see ext/standard/tests/strings/bug51899.phpt
+    
+    - not support $variable
+    - not support mixed quoted values and constants
+    
+        @see ext/standard/tests/general_functions/parse_ini_basic.phpt
+
 
 ## ext/date
 
