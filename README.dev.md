@@ -765,6 +765,10 @@
     - allow = in value
     
         @see ext/standard/tests/general_functions/parse_ini_file.phpt
+    
+    - not support arithmetical operation
+    
+        @see ext/standard/tests/general_functions/parse_ini_string_bug76068.phpt
 
 ## ext/date
 
