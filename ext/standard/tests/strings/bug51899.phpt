@@ -1,7 +1,5 @@
 --TEST--
 Bug #51899 (Parse error in parse_ini_file() function when empy value followed by no newline)
---SKIPIF--
-skip TODO parse_ini_string()
 --FILE--
 <?php
 
@@ -29,7 +27,7 @@ array(1) {
 }
 array(1) {
   ["a"]=>
-  string(2) "b "
+  string(1) "b"
 }
 array(0) {
 }

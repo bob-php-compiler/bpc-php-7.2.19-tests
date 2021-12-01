@@ -740,17 +740,22 @@
 
 26. getlastmod/getmyinode() always return false
 
-27. parse_ini_file() not support include path searching
+27. parse_ini_file/parse_ini_string()
+    
+    - not support include path searching
+    - INI_SCANNER_RAW handle quoted value same as INI_SCANNER_NORMAL/TYPED
 
-28. INI_SCANNER_RAW handle quoted value same as INI_SCANNER_NORMAL/TYPED
+        @see ext/standard/tests/file/bug51094.phpt not support half quoted value
+        @see ext/standard/tests/file/bug63512.phpt not support quoted value with non-quoted suffix
 
-    @see ext/standard/tests/file/bug51094.phpt not support half quoted value
-    @see ext/standard/tests/file/bug63512.phpt not support quoted value with non-quoted suffix
+    - warning message different and return array
 
-29. parse_ini_file/parse_ini_string() warning message different and return array
-
-    php: syntax error ... return false
-    bpc: parse ini error on line ... return array
+        php: syntax error ... return false
+        bpc: parse ini error on line ... return array
+    
+    - non-quoted value always trimmed
+    
+        @see ext/standard/tests/strings/bug51899.phpt
 
 ## ext/date
 
