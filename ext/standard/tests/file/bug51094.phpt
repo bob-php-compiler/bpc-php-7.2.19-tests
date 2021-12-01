@@ -15,7 +15,9 @@ $ini = parse_ini_string("ini=\r\niniraw", null, INI_SCANNER_RAW);
 var_dump($ini['ini']);
 --EXPECTF--
 string(7) "ini;raw"
-string(4) ""ini"
+
+Notice: Undefined index: ini in %s on line %d
+NULL
 string(3) "ini"
 string(7) "ini"raw"
 string(0) ""

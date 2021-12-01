@@ -742,6 +742,10 @@
 
 27. parse_ini_file() not support include path searching
 
+28. INI_SCANNER_RAW handle quoted value same as INI_SCANNER_NORMAL/TYPED
+
+    @see ext/standard/tests/file/bug51094.phpt
+
 ## ext/date
 
 1. ini_set date.timezone warning message
