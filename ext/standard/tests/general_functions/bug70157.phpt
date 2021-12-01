@@ -21,7 +21,7 @@ array(%d) {
   ["foo"]=>
   array(%d) {
     [123]=>
-    string(%d) "24575"
+    string(%d) "E_ALL & ~E_DEPRECATED"
     [456]=>
     int(123)
   }
