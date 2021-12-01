@@ -11,7 +11,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
  */
 
 echo "*** Testing parse_ini_file() : variation ***\n";
-$output_file = __FILE__.".ini";
+$output_file = "parse_ini_file_variation2.php.ini";
 $iniFile = <<<FILE
 [section1]
 value1=on
