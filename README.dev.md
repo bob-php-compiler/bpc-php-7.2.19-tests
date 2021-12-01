@@ -747,6 +747,11 @@
     @see ext/standard/tests/file/bug51094.phpt not support half quoted value
     @see ext/standard/tests/file/bug63512.phpt not support quoted value with non-quoted suffix
 
+29. parse_ini_file/parse_ini_string() warning message different and return array
+
+    php: syntax error ... return false
+    bpc: parse ini error on line ... return array
+
 ## ext/date
 
 1. ini_set date.timezone warning message
