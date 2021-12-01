@@ -1,5 +1,7 @@
 --TEST--
 Test parse_ini_file() function : variation: include path searching
+--SKIPIF--
+skip parse_ini_file() not support include path searching
 --CREDITS--
 Dave Kelsey <d_kelsey@uk.ibm.com>
 --FILE--

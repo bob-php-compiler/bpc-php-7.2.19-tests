@@ -740,6 +740,8 @@
 
 26. getlastmod/getmyinode() always return false
 
+27. parse_ini_file() not support include path searching
+
 ## ext/date
 
 1. ini_set date.timezone warning message
