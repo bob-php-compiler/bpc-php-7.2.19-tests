@@ -3,7 +3,7 @@ parse_ini_file() boolean operators
 --FILE--
 <?php
 
-$ini_file = dirname(__FILE__)."/parse_ini_booleans.data";
+$ini_file = "parse_ini_booleans.data";
 
 var_dump(parse_ini_file($ini_file, 1));
 
@@ -15,17 +15,17 @@ array(3) {
   ["error_reporting values"]=>
   array(6) {
     ["foo"]=>
-    string(7) "32767 8"
+    string(14) "E_ALL E_NOTICE"
     ["error_reporting"]=>
     string(5) "32767"
     ["error_reporting1"]=>
-    string(4) "4177"
+    string(57) "E_COMPILE_ERROR|E_RECOVERABLE_ERROR	|E_ERROR|E_CORE_ERROR"
     ["error_reporting2"]=>
-    string(5) "32759"
+    string(15) "E_ALL&~E_NOTICE"
     ["error_reporting3"]=>
-    string(5) "32759"
+    string(17) "E_ALL & ~E_NOTICE"
     ["error_reporting4"]=>
-    string(5) "32759"
+    string(28) "E_ALL & ~E_NOTICE | E_STRICT"
   }
   ["true or false"]=>
   array(8) {

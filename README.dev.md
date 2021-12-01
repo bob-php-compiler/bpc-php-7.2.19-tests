@@ -758,7 +758,7 @@
         @see ext/standard/tests/strings/bug51899.phpt
     
     - not support $variable
-    - not support mixed quoted values and constants
+    - not support mixed quoted values and constants, or multi constants
     
         @see ext/standard/tests/general_functions/parse_ini_basic.phpt
 
