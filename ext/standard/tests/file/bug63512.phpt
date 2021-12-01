@@ -14,7 +14,8 @@ $array = parse_ini_string('
 
 var_dump($array);
 --EXPECTF--
-array(7) {
+Warning: parse ini error on line 7 in %s on line %d
+array(5) {
   ["int"]=>
   string(3) "123"
   ["constant"]=>
@@ -25,8 +26,4 @@ array(7) {
   string(18) "INSTALL_ROOT "waa""
   ["b"]=>
   string(12) "INSTALL_ROOT"
-  ["c"]=>
-  string(18) ""waa" INSTALL_ROOT"
-  ["d"]=>
-  string(27) "INSTALL_ROOT "INSTALL_ROOT""
 }
