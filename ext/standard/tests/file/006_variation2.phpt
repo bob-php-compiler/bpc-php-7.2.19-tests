@@ -6,7 +6,7 @@ if (substr(PHP_OS, 0, 3) == 'WIN') {
     die('skip Not on Windows');
 }
 // Skip if being run by root
-$filename = dirname(__FILE__)."/006_root_check.tmp";
+$filename = "006_root_check.tmp";
 $fp = fopen($filename, 'w');
 fclose($fp);
 if(fileowner($filename) == 0) {
@@ -32,10 +32,10 @@ unlink($filename);
 
 echo "*** Testing fileperms() & chmod() : usage variations ***\n";
 
-$file_name = dirname(__FILE__)."/006_variation2.tmp";
+$file_name = "006_variation2.tmp";
 $file_handle = fopen($file_name, "w");
 fclose($file_handle);
-$dir_name = dirname(__FILE__)."/006_variation2";
+$dir_name = "006-variation2";
 mkdir($dir_name);
 
 echo "\n*** Testing fileperms(), chmod() with miscellaneous permissions ***\n";
@@ -83,10 +83,10 @@ echo "*** Done ***\n";
 ?>
 --CLEAN--
 <?php
-chmod(dirname(__FILE__)."/006_variation2.tmp", 0777);
-chmod(dirname(__FILE__)."/006_variation2", 0777);
-unlink(dirname(__FILE__)."/006_variation2.tmp");
-rmdir(dirname(__FILE__)."/006_variation2");
+chmod("006_variation2.tmp", 0777);
+chmod("006-variation2", 0777);
+unlink("006_variation2.tmp");
+rmdir("006-variation2");
 ?>
 --EXPECTF--
 *** Testing fileperms() & chmod() : usage variations ***
