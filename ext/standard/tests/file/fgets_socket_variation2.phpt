@@ -6,7 +6,7 @@ Dave Kelsey <d_kelsey@uk.ibm.com>
 <?php
 
 // create a file
-$filename = __FILE__ . ".tmp";
+$filename = "fgets_socket_variation2.php.tmp";
 $fd = fopen($filename, "w+");
 
 // populate the file with lines of data
