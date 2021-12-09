@@ -706,6 +706,8 @@
     only the following functions support context parameter:
 
         file_get_contents("https?://xxx")
+        stream_socket_client()
+        stream_socket_server()
 
 20. ftell()
 
@@ -769,6 +771,16 @@
     - not support arithmetical operation
     
         @see ext/standard/tests/general_functions/parse_ini_string_bug76068.phpt
+
+28. server socket
+
+    server socket only valid for the following functions:
+    
+        fclose()
+        stream_socket_accept()
+        stream_socket_recvfrom()    // udp only
+        stream_socket_sendto()      // udp only
+        stream_set_timeout()
 
 ## ext/date
 

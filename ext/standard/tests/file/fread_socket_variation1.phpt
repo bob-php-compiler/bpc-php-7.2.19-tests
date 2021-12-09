@@ -19,5 +19,5 @@ var_dump(fread($server, 1));
 fclose($server);
 
 ?>
---EXPECT--
-string(0) ""
+--EXPECTF--
+Fatal error: stream-read: unsupport stream in %s on line %d
