@@ -795,6 +795,11 @@
 
     as bpc use Gio, errno is g_io_error_from_errno ()
 
+31. stream_socket_sendto()
+
+    error message different
+    TODO STREAM_OOB
+
 ## ext/date
 
 1. ini_set date.timezone warning message

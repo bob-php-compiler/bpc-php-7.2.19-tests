@@ -9,19 +9,15 @@ if (getenv("SKIP_ONLINE_TESTS")) { die('skip: online test'); }
 --FILE--
 <?php
 $serverUri = "tcp://127.0.0.1:31854";
-$serverUrl = "http://php.net";
-$stringSocket = "out of band data.";
 $sock = stream_socket_server($serverUri, $errno, $errstr);
 
 if (is_resource($sock)) {
-    var_dump(stream_socket_sendto($sock, $stringSocket));
-    //var_dump(stream_socket_sendto($sock, $stringSocket, STREAM_OOB));
-    //var_dump(stream_socket_sendto($sock, $stringSocket, STREAM_OOB, $serverUri));
-    //var_dump(stream_socket_sendto($sock, $stringSocket, STREAM_OOB, $serverUrl));
+    var_dump(stream_socket_sendto());
 } else {
     die("Test stream_socket_enable_crypto has failed; Unable to connect: {$errstr} ({$errno})");
 }
 ?>
 --EXPECTF--
-Warning: stream_socket_sendto(): sendto on server socket only works with udp/udg in %s on line %d
-bool(false)
+*** ERROR:compile-error:
+Error: Too few arguments to function stream_socket_sendto(): 2 required, 0 provided in %s on line %d
+ -- compile-error
