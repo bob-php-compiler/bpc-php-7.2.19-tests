@@ -784,6 +784,8 @@
         stream_set_blocking()
         stream_set_timeout()
         stream_select()
+    
+    server socket metadata mode always "r", php is "r+", FIXME: server socket can be write???
 
 29. stream_socket_client()
     
