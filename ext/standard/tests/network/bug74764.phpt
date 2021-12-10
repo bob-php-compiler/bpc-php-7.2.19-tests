@@ -1,10 +1,10 @@
 --TEST--
 Bug #74764 IPv6 bindto fails with stream_socket_client()
 --SKIPIF--
+skip TODO stream_socket_client() context => socket => bindto
 <?php
-/* following copied straight from the tcp6loop.phpt */
-@stream_socket_client('tcp://[::1]:0', $errno);
-if ($errno != 111) die('skip IPv6 not supported.');
+@stream_socket_client('tcp://[::1]:0', $errno, $errstr);
+if (strpos($errstr, 'Connection refused') === false) die('skip IPv6 not supported.');
 ?>
 --FILE--
 <?php

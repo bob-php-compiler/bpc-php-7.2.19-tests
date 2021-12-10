@@ -786,6 +786,10 @@
     
     not support STREAM_CLIENT_ASYNC_CONNECT
 
+30. stream_socket_* errno different
+
+    as bpc use Gio, errno is g_io_error_from_errno ()
+
 ## ext/date
 
 1. ini_set date.timezone warning message
