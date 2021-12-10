@@ -1,5 +1,7 @@
 --TEST--
 Bug #61115: Stream related segfault on fatal error in php_stream_context_del_link.
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 
