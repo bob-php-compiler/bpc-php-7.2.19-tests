@@ -8,7 +8,7 @@ if (getenv("SKIP_SLOW_TESTS")) { die('skip: slow test'); }
 --FILE--
 <?php
 $data = base64_decode("1oIBAAABAAAAAAAAB2V4YW1wbGUDb3JnAAABAAE=");
-$fd = stream_socket_client("udp://8.8.8.8:53", $errno, $errstr, 0, STREAM_CLIENT_CONNECT | STREAM_CLIENT_ASYNC_CONNECT);
+$fd = stream_socket_client("udp://8.8.8.8:53", $errno, $errstr, 0, STREAM_CLIENT_CONNECT);
 stream_set_blocking($fd, 0);
 stream_socket_sendto($fd,$data);
 sleep(1);

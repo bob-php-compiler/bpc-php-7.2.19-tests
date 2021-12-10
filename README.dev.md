@@ -782,6 +782,10 @@
         stream_socket_sendto()      // udp only
         stream_set_timeout()
 
+29. stream_socket_client()
+    
+    not support STREAM_CLIENT_ASYNC_CONNECT
+
 ## ext/date
 
 1. ini_set date.timezone warning message
