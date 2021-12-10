@@ -2,7 +2,7 @@
 Bug #72075 (Referencing socket resources breaks stream_select)
 --FILE--
 <?php
-$r = [stream_socket_server("tcp://127.0.0.1:0", $errno, $errStr)];
+$r = array(stream_socket_server("tcp://127.0.0.1:0", $errno, $errStr));
 $w = NULL;
 $e = NULL;
 
