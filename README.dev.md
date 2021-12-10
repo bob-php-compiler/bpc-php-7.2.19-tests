@@ -780,7 +780,10 @@
         stream_socket_accept()
         stream_socket_recvfrom()    // udp only
         stream_socket_sendto()      // udp only
+        stream_socket_get_name()
+        stream_set_blocking()
         stream_set_timeout()
+        stream_select()
 
 29. stream_socket_client()
     

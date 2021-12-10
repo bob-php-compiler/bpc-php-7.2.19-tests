@@ -11,8 +11,8 @@ Streams Based IPv6 UDP Loopback test
 	 * this isn't really practical.
    	 */
 
-	@stream_socket_client('tcp://[::1]:0', $errno);
-	if ($errno != 111) die('skip IPv6 not supported.');
+	@stream_socket_client('tcp://[::1]:0', $errno, $errstr);
+	if (strpos($errstr, 'Connection refused') === false) die('skip IPv6 not supported.');
 ?>
 --FILE--
 <?php
@@ -38,7 +38,7 @@ Streams Based IPv6 UDP Loopback test
 
 	fwrite($client, "ABCdef123\n");
 
-	$data = fread($server, 10);
+	$data = stream_socket_recvfrom($server, 10);
 	var_dump($data);
 
 	fclose($client);
