@@ -799,6 +799,7 @@
 
     error message different
     TODO STREAM_OOB STREAM_PEEK
+    recvfrom only set address when success
 
 32. feof() on socket will try to fill the buffer
 
