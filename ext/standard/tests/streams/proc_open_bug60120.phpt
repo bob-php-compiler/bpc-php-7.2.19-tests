@@ -1,5 +1,7 @@
 --TEST--
 Bug #60120 proc_open hangs with stdin/out with 2048+ bytes
+--SKIPIF--
+skip TODO proc_open()
 --FILE--
 <?php
 error_reporting(E_ALL);

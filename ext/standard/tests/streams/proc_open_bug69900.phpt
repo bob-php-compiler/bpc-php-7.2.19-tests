@@ -1,5 +1,7 @@
 --TEST--
 Bug #69900 Commandline input/output weird behaviour with STDIO
+--SKIPIF--
+skip TODO proc_open()
 --FILE--
 <?php
 
