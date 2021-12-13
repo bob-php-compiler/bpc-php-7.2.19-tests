@@ -1,5 +1,7 @@
 --TEST--
 Bug #54623: Segfault when when writing to a persistent socket after closing a copy of the socket
+--SKIPIF--
+skip TODO pfsockopen()
 --FILE--
 <?php
 $sock = pfsockopen('udp://127.0.0.1', '63844');
