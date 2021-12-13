@@ -19,7 +19,7 @@ array(7) {
   ["stream_type"]=>
   string(%d) "tcp_socke%s"
   ["mode"]=>
-  string(2) "r+"
+  string(1) "r"
   ["unread_bytes"]=>
   int(0)
   ["seekable"]=>
