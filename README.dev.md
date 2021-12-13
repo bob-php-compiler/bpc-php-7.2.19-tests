@@ -800,6 +800,10 @@
     error message different
     TODO STREAM_OOB
 
+32. feof() on socket will try to fill the buffer
+
+    @see ext/standard/tests/streams/stream_get_meta_data_socket_variation1.phpt
+
 ## ext/date
 
 1. ini_set date.timezone warning message
