@@ -1,5 +1,7 @@
 --TEST--
 Bug #60455: stream_get_line and 1-line noeol input
+--SKIPIF--
+skip TODO stream_socket_pair()
 --FILE--
 <?php
 
