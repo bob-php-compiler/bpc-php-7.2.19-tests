@@ -33,7 +33,7 @@ foreach($streams as $stream)
 ===DONE===
 <?php exit(0); ?>
 --EXPECTF--
-array(7) {
+array(8) {
   ["base64"]=>
   bool(false)
   ["wrapper_type"]=>
@@ -48,13 +48,15 @@ array(7) {
   bool(true)
   ["uri"]=>
   string(8) "data://,"
+  ["eof"]=>
+  bool(true)
 }
 NULL
 
 Warning: fopen(data://): failed to open stream: rfc2397: no comma in URL in %sstream_rfc2397_002.php on line %d
 NULL
 NULL
-array(7) {
+array(8) {
   ["base64"]=>
   bool(true)
   ["wrapper_type"]=>
@@ -69,6 +71,8 @@ array(7) {
   bool(true)
   ["uri"]=>
   string(15) "data://;base64,"
+  ["eof"]=>
+  bool(true)
 }
 NULL
 
@@ -83,7 +87,7 @@ NULL
 Warning: fopen(data://foo=bar,): failed to open stream: rfc2397: illegal media type in %sstream_rfc2397_002.php on line %d
 NULL
 NULL
-array(8) {
+array(9) {
   ["mediatype"]=>
   string(10) "text/plain"
   ["base64"]=>
@@ -100,13 +104,15 @@ array(8) {
   bool(true)
   ["uri"]=>
   string(18) "data://text/plain,"
+  ["eof"]=>
+  bool(true)
 }
 NULL
 
 Warning: fopen(data://text/plain;foo,): failed to open stream: rfc2397: illegal parameter in %sstream_rfc2397_002.php on line %d
 NULL
 NULL
-array(9) {
+array(10) {
   ["mediatype"]=>
   string(10) "text/plain"
   ["foo"]=>
@@ -125,13 +131,15 @@ array(9) {
   bool(true)
   ["uri"]=>
   string(26) "data://text/plain;foo=bar,"
+  ["eof"]=>
+  bool(true)
 }
 string(3) "bar"
 
 Warning: fopen(data://text/plain;foo=bar;bla,): failed to open stream: rfc2397: illegal parameter in %sstream_rfc2397_002.php on line %d
 NULL
 NULL
-array(9) {
+array(10) {
   ["mediatype"]=>
   string(10) "text/plain"
   ["foo"]=>
@@ -150,13 +158,15 @@ array(9) {
   bool(true)
   ["uri"]=>
   string(33) "data://text/plain;foo=bar;base64,"
+  ["eof"]=>
+  bool(true)
 }
 string(3) "bar"
 
 Warning: fopen(data://text/plain;foo=bar;bar=baz): failed to open stream: rfc2397: no comma in URL in %sstream_rfc2397_002.php on line %d
 NULL
 NULL
-array(10) {
+array(11) {
   ["mediatype"]=>
   string(10) "text/plain"
   ["foo"]=>
@@ -177,6 +187,8 @@ array(10) {
   bool(true)
   ["uri"]=>
   string(34) "data://text/plain;foo=bar;bar=baz,"
+  ["eof"]=>
+  bool(true)
 }
 string(3) "bar"
 ===DONE===

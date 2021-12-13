@@ -807,6 +807,10 @@
 
 33. stream_select() return value remove dup streams
 
+34. stream_get_meta_data() on rfc2397 stream return eof/unread_bytes status
+
+    php: no eof and unread_bytes always 0
+
 ## ext/date
 
 1. ini_set date.timezone warning message
