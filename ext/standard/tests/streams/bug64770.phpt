@@ -1,5 +1,7 @@
 --TEST--
 Bug #64770 stream_select() fails with pipes from proc_open()
+--SKIPIF--
+skip TODO proc_open()
 --FILE--
 <?php
 

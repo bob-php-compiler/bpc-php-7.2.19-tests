@@ -1,6 +1,7 @@
 --TEST--
 Bug #72853 (stream_set_blocking doesn't work)
 --SKIPIF--
+skip TODO proc_open()
 <?php
 if(substr(PHP_OS, 0, 3) == 'WIN' ) {
     die('skip not for windows');

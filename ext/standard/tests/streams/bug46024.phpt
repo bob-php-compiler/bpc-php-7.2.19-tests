@@ -1,6 +1,7 @@
 --TEST--
 Bug #46024 stream_select() doesn't return the correct number
 --SKIPIF--
+skip TODO proc_open()
 <?php if (!getenv('TEST_PHP_EXECUTABLE')) die("skip TEST_PHP_EXECUTABLE not defined"); ?>
 --FILE--
 <?php

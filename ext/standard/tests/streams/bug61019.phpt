@@ -1,5 +1,7 @@
 --TEST--
 Bug #61019 (Out of memory on command stream_get_contents)
+--SKIPIF--
+skip TODO proc_open()
 --FILE--
 <?php
 

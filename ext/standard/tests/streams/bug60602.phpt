@@ -1,5 +1,7 @@
 --TEST--
 Bug #60602 proc_open() modifies environment if it contains arrays
+--SKIPIF--
+skip TODO proc_open()
 --FILE--
 <?php
 
