@@ -2,7 +2,7 @@
 Bug #53427 + emulate_read (stream_select does not preserve keys)
 --FILE--
 <?php
-$read[1] = fopen(__FILE__, 'r');
+$read[1] = fopen('/proc/self/comm', 'r');
 $read['myindex'] = reset($read);
 $write = NULL;
 $except = NULL;
@@ -21,15 +21,11 @@ array(2) {
   ["myindex"]=>
   resource(%d) of type (stream)
 }
-array(2) {
-  [1]=>
-  resource(%d) of type (stream)
+array(1) {
   ["myindex"]=>
   resource(%d) of type (stream)
 }
-array(2) {
-  [1]=>
-  resource(%d) of type (stream)
+array(1) {
   ["myindex"]=>
   resource(%d) of type (stream)
 }

@@ -805,6 +805,8 @@
 
     @see ext/standard/tests/streams/stream_get_meta_data_socket_variation1.phpt
 
+33. stream_select() return value remove dup streams
+
 ## ext/date
 
 1. ini_set date.timezone warning message
