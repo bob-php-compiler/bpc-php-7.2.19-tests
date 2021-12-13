@@ -778,8 +778,8 @@
     
         fclose()
         stream_socket_accept()
-        stream_socket_recvfrom()    // udp only
-        stream_socket_sendto()      // udp only
+        stream_socket_recvfrom()    // udp/udg only
+        stream_socket_sendto()      // udp/udg only
         stream_socket_get_name()
         stream_set_blocking()
         stream_set_timeout()
@@ -795,10 +795,10 @@
 
     as bpc use Gio, errno is g_io_error_from_errno ()
 
-31. stream_socket_sendto()
+31. stream_socket_sendto/stream_socket_recvfrom()
 
     error message different
-    TODO STREAM_OOB
+    TODO STREAM_OOB STREAM_PEEK
 
 32. feof() on socket will try to fill the buffer
 

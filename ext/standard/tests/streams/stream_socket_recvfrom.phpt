@@ -17,18 +17,8 @@ $sockLen = 1500;
 var_dump(stream_socket_recvfrom($sock, $sockLen));
 var_dump(stream_socket_recvfrom($sock, $sockLen, STREAM_OOB));
 var_dump(stream_socket_recvfrom($sock, $sockLen, STREAM_PEEK));
-?>
---CLEAN--
-<?php
+
 fclose($sock);
-unset($serverUri);
-unset($clientFlags);
-unset($sock);
-unset($sockLen);
-unset($errno);
-unset($errstr);
 ?>
---EXPECT--
-bool(false)
-bool(false)
-bool(false)
+--EXPECTF--
+Fatal error: stream_socket_recvfrom(): recvfrom on server socket only works with udp/udg in %s on line %d
