@@ -1,5 +1,7 @@
 --TEST--
 bug#44712 (stream_context_set_params segfaults on invalid arguments)
+--SKIPIF--
+skip not support stream context params
 --FILE--
 <?php
 $ctx = stream_context_get_default();

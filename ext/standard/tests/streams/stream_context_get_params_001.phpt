@@ -1,5 +1,7 @@
 --TEST--
 stream_context_get_params()
+--SKIPIF--
+skip not support stream context params
 --FILE--
 <?php
 

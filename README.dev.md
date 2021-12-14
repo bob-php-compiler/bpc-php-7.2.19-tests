@@ -818,6 +818,8 @@
 
 35. not support file://
 
+36. not support stream context params
+
 ## ext/date
 
 1. ini_set date.timezone warning message
