@@ -827,6 +827,8 @@
     php://temp   is a tmpfile in sys_temp_dir
     both of them open mode fixed to "w+"
 
+39. stream_context_get_options/stream_context_set_option() only accept stream-context resource
+
 ## ext/date
 
 1. ini_set date.timezone warning message
