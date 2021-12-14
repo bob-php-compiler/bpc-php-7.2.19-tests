@@ -9,7 +9,7 @@ $meta = stream_get_meta_data(fopen($file, "r"));
 var_dump($meta);
 ?>
 --EXPECTF--
-array(10) {
+array(11) {
   ["mediatype"]=>
   string(10) "text/plain"
   ["z"]=>
@@ -27,7 +27,9 @@ array(10) {
   ["mode"]=>
   string(1) "r"
   ["unread_bytes"]=>
-  int(0)
+  int(8)
   ["seekable"]=>
   bool(true)
+  ["eof"]=>
+  bool(false)
 }
