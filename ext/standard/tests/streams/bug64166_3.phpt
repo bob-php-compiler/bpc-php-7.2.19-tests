@@ -1,5 +1,7 @@
 --TEST--
 Bug #64166: quoted-printable-encode stream filter incorrectly discarding whitespace - writes
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 
