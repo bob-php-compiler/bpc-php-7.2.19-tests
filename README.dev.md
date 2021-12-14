@@ -820,6 +820,8 @@
 
 36. not support stream context params
 
+37. opendir only support local directory
+
 ## ext/date
 
 1. ini_set date.timezone warning message
