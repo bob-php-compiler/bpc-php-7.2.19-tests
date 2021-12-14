@@ -492,7 +492,7 @@
 1. TODO
 
     will support in the future
-    TODO php://memory php://temp file://
+    TODO php://memory php://temp
     TODO `@"double quoted string"`
 
 2. No Undefined variable
@@ -815,6 +815,8 @@
 
     bpc: only rfc2397 stream and socket/socket-server stream support metadata, dir and file always return false
     php: return metadata array
+
+35. not support file://
 
 ## ext/date
 
