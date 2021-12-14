@@ -17,9 +17,9 @@ test("php://temp","w");
 --EXPECTF--
 php://memory, r
 resource(%d) of type (stream)
+int(3)
 int(0)
-int(0)
-string(0) ""
+string(3) "foo"
 php://memory, r+
 resource(%d) of type (stream)
 int(3)
@@ -27,9 +27,9 @@ int(0)
 string(3) "foo"
 php://temp, r
 resource(%d) of type (stream)
+int(3)
 int(0)
-int(0)
-string(0) ""
+string(3) "foo"
 php://temp, w
 resource(%d) of type (stream)
 int(3)

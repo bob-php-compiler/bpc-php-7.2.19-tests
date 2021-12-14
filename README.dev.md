@@ -821,6 +821,12 @@
 
 37. opendir only support local directory
 
+38. php://memory php://temp
+
+    php://memory is a tmpfile in /run/shm
+    php://temp   is a tmpfile in sys_temp_dir
+    both of them open mode fixed to "w+"
+
 ## ext/date
 
 1. ini_set date.timezone warning message
