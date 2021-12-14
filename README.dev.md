@@ -492,7 +492,6 @@
 1. TODO
 
     will support in the future
-    TODO php://memory php://temp
     TODO `@"double quoted string"`
 
 2. No Undefined variable
