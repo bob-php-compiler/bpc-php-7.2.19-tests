@@ -3,7 +3,7 @@ Testing stream_get_meta_data() "unread_bytes" field
 --FILE--
 <?php
 
-$filename = __FILE__ . '.tmp';
+$filename = 'stream_get_meta_data_file_variation2.php.tmp';
 
 $fp = fopen($filename, "w+");
 
@@ -42,94 +42,18 @@ unlink($filename);
 ?>
 --EXPECTF--
 Write some data to the file:
-array(9) {
-  ["timed_out"]=>
-  bool(false)
-  ["blocked"]=>
-  bool(true)
-  ["eof"]=>
-  bool(false)
-  ["wrapper_type"]=>
-  string(9) "plainfile"
-  ["stream_type"]=>
-  string(5) "STDIO"
-  ["mode"]=>
-  string(2) "w+"
-  ["unread_bytes"]=>
-  int(0)
-  ["seekable"]=>
-  bool(true)
-  ["uri"]=>
-  string(%i) "%s.tmp"
-}
+bool(false)
 
 
 Read a line of the file, causing data to be buffered:
 string(15) "a line of data
 "
-array(9) {
-  ["timed_out"]=>
-  bool(false)
-  ["blocked"]=>
-  bool(true)
-  ["eof"]=>
-  bool(false)
-  ["wrapper_type"]=>
-  string(9) "plainfile"
-  ["stream_type"]=>
-  string(5) "STDIO"
-  ["mode"]=>
-  string(2) "w+"
-  ["unread_bytes"]=>
-  int(285)
-  ["seekable"]=>
-  bool(true)
-  ["uri"]=>
-  string(%i) "%s.tmp"
-}
+bool(false)
 
 
 Read 20 bytes from the file:
-array(9) {
-  ["timed_out"]=>
-  bool(false)
-  ["blocked"]=>
-  bool(true)
-  ["eof"]=>
-  bool(false)
-  ["wrapper_type"]=>
-  string(9) "plainfile"
-  ["stream_type"]=>
-  string(5) "STDIO"
-  ["mode"]=>
-  string(2) "w+"
-  ["unread_bytes"]=>
-  int(265)
-  ["seekable"]=>
-  bool(true)
-  ["uri"]=>
-  string(%i) "%s.tmp"
-}
+bool(false)
 
 
 Read entire file:
-array(9) {
-  ["timed_out"]=>
-  bool(false)
-  ["blocked"]=>
-  bool(true)
-  ["eof"]=>
-  bool(true)
-  ["wrapper_type"]=>
-  string(9) "plainfile"
-  ["stream_type"]=>
-  string(5) "STDIO"
-  ["mode"]=>
-  string(2) "w+"
-  ["unread_bytes"]=>
-  int(0)
-  ["seekable"]=>
-  bool(true)
-  ["uri"]=>
-  string(%i) "%s.tmp"
-}
+bool(false)

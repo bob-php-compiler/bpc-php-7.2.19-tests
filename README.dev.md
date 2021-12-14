@@ -807,9 +807,14 @@
 
 33. stream_select() return value remove dup streams
 
-34. stream_get_meta_data() on rfc2397 stream return eof/unread_bytes status
+34. stream_get_meta_data()
 
-    php: no eof and unread_bytes always 0
+    rfc2397 stream:
+        bpc: return eof/unread_bytes status
+        php: no eof and unread_bytes always 0
+
+    bpc: only rfc2397 stream and socket/socket-server stream support metadata, dir and file always return false
+    php: return metadata array
 
 ## ext/date
 
