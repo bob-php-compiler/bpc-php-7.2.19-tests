@@ -1,7 +1,5 @@
 --TEST--
 Bug #68887 (resources are not freed correctly)
---SKIPIF--
-skip TODO
 --FILE--
 <?php
 fclose(fopen("php://temp","w+"));
