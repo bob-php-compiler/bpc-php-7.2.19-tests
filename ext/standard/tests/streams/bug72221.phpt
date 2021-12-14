@@ -1,5 +1,7 @@
 --TEST--
 Bug #72221 (Segmentation fault in stream_get_line / zend_memnstr_ex)
+--SKIPIF--
+skip TODO php://memory
 --FILE--
 <?php
 $fp = fopen("php://memory", "r+");
