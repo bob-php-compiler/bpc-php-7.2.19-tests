@@ -1,7 +1,5 @@
 --TEST--
 Bug #63240: stream_get_line() return contains delimiter string
---SKIPIF--
-skip TODO php://temp
 --FILE--
 <?php
 $fd = fopen('php://temp', 'r+');
