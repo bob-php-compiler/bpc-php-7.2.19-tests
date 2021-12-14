@@ -2,7 +2,7 @@
 Bug#54946 stream_get_contents infinite loop
 --FILE--
 <?php
-$filename = tempnam(__DIR__, "phpbug");
+$filename = tempnam('.', "phpbug");
 $stream = fopen($filename, "w"); // w or a
 $retval = stream_get_contents($stream, 1, 1);
 fclose($stream);
@@ -11,7 +11,7 @@ unlink($filename);
 
 
 
-$filename = tempnam(__DIR__, "phpbug2");
+$filename = tempnam('.', "phpbug2");
 
 $stream = fopen($filename, "a");
 $retval = stream_get_contents($stream, 1, 1);
@@ -21,7 +21,7 @@ unlink($filename);
 
 
 
-$filename = tempnam(__DIR__, "phpbug3");
+$filename = tempnam('.', "phpbug3");
 
 $stream = fopen($filename, "a");
 fseek($stream, 1);
