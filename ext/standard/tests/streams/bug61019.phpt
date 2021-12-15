@@ -1,7 +1,5 @@
 --TEST--
 Bug #61019 (Out of memory on command stream_get_contents)
---SKIPIF--
-skip TODO proc_open()
 --FILE--
 <?php
 
@@ -19,9 +17,9 @@ if(is_resource($process))
 	stream_set_blocking($pipes[0],false);
 	stream_set_blocking($pipes[1],false);
 	stream_set_blocking($pipes[2],false);
-	stream_set_write_buffer($pipes[0],0);
-	stream_set_read_buffer($pipes[1],0);
-	stream_set_read_buffer($pipes[2],0);
+	//stream_set_write_buffer($pipes[0],0);
+	//stream_set_read_buffer($pipes[1],0);
+	//stream_set_read_buffer($pipes[2],0);
 	$stdin_stream="";
 	$stderr_stream="";
 
