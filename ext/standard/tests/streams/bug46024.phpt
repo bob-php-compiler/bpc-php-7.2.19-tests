@@ -1,16 +1,12 @@
 --TEST--
 Bug #46024 stream_select() doesn't return the correct number
---SKIPIF--
-skip TODO proc_open()
-<?php if (!getenv('TEST_PHP_EXECUTABLE')) die("skip TEST_PHP_EXECUTABLE not defined"); ?>
 --FILE--
 <?php
-$php = realpath(getenv('TEST_PHP_EXECUTABLE'));
 $pipes = array();
 $proc = proc_open(
-	"$php -n -i"
+	"php -n -i"
 	,array(0 => array('pipe', 'r'), 1 => array('pipe', 'w'))
-	,$pipes, dirname(__FILE__), array(), array('binary_pipes' => true)
+	,$pipes, getcwd(), array(), array('binary_pipes' => true)
 );
 var_dump($proc);
 if (!$proc) {
