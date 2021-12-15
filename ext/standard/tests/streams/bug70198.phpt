@@ -1,7 +1,6 @@
 --TEST--
 Bug #70198 Checking liveness does not work as expected
 --SKIPIF--
-skip TODO proc_open()
 <?php
 if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
 ?>
@@ -15,7 +14,7 @@ if (getenv("SKIP_SLOW_TESTS")) die("skip slow test");
 */
 
 $srv_addr = "tcp://127.0.0.1:8964";
-$srv_fl = dirname(__FILE__) . "/bug70198_svr_" . md5(uniqid()) . ".php";
+$srv_fl = "bug70198_svr_" . md5(uniqid()) . ".php";
 $srv_fl_cont = <<<SRV
 <?php
 \$socket = stream_socket_server('$srv_addr', \$errno, \$errstr);
@@ -34,7 +33,7 @@ if (!\$socket) {
 SRV;
 file_put_contents($srv_fl, $srv_fl_cont);
 $dummy0 = $dummy1 = array();
-$srv_proc = proc_open(PHP_BINARY . " -n $srv_fl", $dummy0, $dummy1);
+$srv_proc = proc_open("php -n $srv_fl", $dummy0, $dummy1);
 
 $i = 0;
 /* wait a bit for the server startup */
