@@ -1,13 +1,11 @@
 --TEST--
 Bug #69900 Commandline input/output weird behaviour with STDIO
---SKIPIF--
-skip TODO proc_open()
 --FILE--
 <?php
 
 error_reporting(E_ALL);
 
-$fl = dirname(__FILE__) . DIRECTORY_SEPARATOR . "test69900.php";
+$fl = "test69900.php";
 $max_ms = ((bool)getenv('TRAVIS') || (bool)getenv('APPVEYOR')) ? 10 : 1;
 
 $test_content = '<?php
@@ -25,7 +23,7 @@ file_put_contents($fl, $test_content);
 $descriptorspec = array(0 => array("pipe", "r"),1 => array("pipe", "w"));
 $pipes = array();
 
-$process = proc_open(PHP_BINARY.' -n -f ' . $fl, $descriptorspec, $pipes, NULL, NULL, array("blocking_pipes" => true));
+$process = proc_open('php -n -f ' . $fl, $descriptorspec, $pipes, NULL, NULL, array("blocking_pipes" => true));
 
 for($i = 0; $i < 10; $i++){
 	fwrite($pipes[0], "hello$i\r\n");
@@ -48,7 +46,7 @@ proc_close($process);
 ===DONE===
 --CLEAN--
 <?php
-$fl = dirname(__FILE__) . DIRECTORY_SEPARATOR . "test69900.php";
+$fl = "test69900.php";
 @unlink($fl);
 ?>
 --EXPECTF--
