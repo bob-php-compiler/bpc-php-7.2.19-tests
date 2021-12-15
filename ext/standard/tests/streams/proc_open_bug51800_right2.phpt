@@ -1,12 +1,9 @@
 --TEST--
 Bug #51800 proc_open on Windows hangs forever, the right way to do it with more data
---SKIPIF--
-skip TODO proc_open()
 --FILE--
 <?php
-$callee = dirname(__FILE__) . "/process_proc_open_bug51800_right2.php";
-$php = PHP_BINARY;
-$cmd = "$php -n $callee";
+$callee = "process_proc_open_bug51800_right2.php";
+$cmd = "php -n $callee";
 
 $status;
 $stdout = "";
@@ -68,7 +65,7 @@ var_dump(array(
 ===DONE===
 --CLEAN--
 <?php
-$callee = dirname(__FILE__) . "/process_proc_open_bug51800_right2.php";
+$callee = "process_proc_open_bug51800_right2.php";
 unlink($callee);
 ?>
 --EXPECTF--
