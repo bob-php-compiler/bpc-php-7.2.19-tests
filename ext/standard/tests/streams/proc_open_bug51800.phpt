@@ -1,7 +1,6 @@
 --TEST--
 Bug #51800 proc_open on Windows hangs forever
 --SKIPIF--
-skip TODO proc_open()
 <?php
 	echo 'skip expected to fail or take too long';
 	if (getenv("SKIP_SLOW_TESTS")) {
