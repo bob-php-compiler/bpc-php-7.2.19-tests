@@ -1,7 +1,5 @@
 --TEST--
 Bug #64438 proc_open hangs with stdin/out with 4097+ bytes
---SKIPIF--
-skip TODO proc_open()
 --FILE--
 <?php
 
@@ -10,7 +8,7 @@ error_reporting(E_ALL);
 if (substr(PHP_OS, 0, 3) == 'WIN') {
 	$cmd = PHP_BINARY . ' -n -r "fwrite(STDOUT, $in = file_get_contents(\'php://stdin\')); fwrite(STDERR, $in);"';
 } else {
-	$cmd = PHP_BINARY . ' -n -r \'fwrite(STDOUT, $in = file_get_contents("php://stdin")); fwrite(STDERR, $in);\'';
+	$cmd = 'php -n -r \'fwrite(STDOUT, $in = file_get_contents("php://stdin")); fwrite(STDERR, $in);\'';
 }
 $descriptors = array(array('pipe', 'r'), array('pipe', 'w'), array('pipe', 'w'));
 $stdin = str_repeat('*', 4097);
