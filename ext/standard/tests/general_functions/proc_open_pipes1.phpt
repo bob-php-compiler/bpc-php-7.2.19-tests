@@ -3,25 +3,17 @@ proc_open() with > 16 pipes
 --FILE--
 <?php
 
-include dirname(__FILE__) . "/proc_open_pipes.inc";
-
 for ($i = 3; $i<= 30; $i++) {
 	$spec[$i] = array('pipe', 'w');
 }
 
-$php = getenv("TEST_PHP_EXECUTABLE");
-$callee = create_sleep_script();
-proc_open("$php -n $callee", $spec, $pipes);
+$proc = proc_open("sleep 1", $spec, $pipes);
+if ($proc) {
+    proc_close($proc);
+}
 
 var_dump(count($spec));
 var_dump($pipes);
-
-?>
---CLEAN--
-<?php
-include dirname(__FILE__) . "/proc_open_pipes.inc";
-
-unlink_sleep_script();
 
 ?>
 --EXPECTF--
