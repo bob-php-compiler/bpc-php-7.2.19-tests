@@ -1,7 +1,6 @@
 --TEST--
 Bug #72853 (stream_set_blocking doesn't work)
 --SKIPIF--
-skip TODO proc_open()
 <?php
 if(substr(PHP_OS, 0, 3) == 'WIN' ) {
     die('skip not for windows');
@@ -26,35 +25,5 @@ var_dump(stream_get_meta_data($pipes[1]));
 proc_close($p);
 ?>
 --EXPECTF--
-array(7) {
-  ["timed_out"]=>
-  bool(false)
-  ["blocked"]=>
-  bool(false)
-  ["eof"]=>
-  bool(false)
-  ["stream_type"]=>
-  string(5) "STDIO"
-  ["mode"]=>
-  string(1) "r"
-  ["unread_bytes"]=>
-  int(0)
-  ["seekable"]=>
-  bool(false)
-}
-array(7) {
-  ["timed_out"]=>
-  bool(false)
-  ["blocked"]=>
-  bool(true)
-  ["eof"]=>
-  bool(true)
-  ["stream_type"]=>
-  string(5) "STDIO"
-  ["mode"]=>
-  string(1) "r"
-  ["unread_bytes"]=>
-  int(0)
-  ["seekable"]=>
-  bool(false)
-}
+bool(false)
+bool(false)
