@@ -840,6 +840,8 @@
 
 41. no default stream context
 
+42. not support ftp:// or ftps://
+
 ## ext/date
 
 1. ini_set date.timezone warning message

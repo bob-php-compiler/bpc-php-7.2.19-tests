@@ -1,10 +1,7 @@
 --TEST--
 Bug #73457. Wrong error message when fopen FTP wrapped fails to open data connection
 --SKIPIF--
-<?php
-if (array_search('ftp',stream_get_wrappers()) === FALSE) die("skip ftp wrapper not available.");
-if (!function_exists('pcntl_fork')) die("skip pcntl_fork() not available.");
-?>
+skip not support ftp:// or ftps://
 --FILE--
 <?php
 

@@ -1,10 +1,7 @@
 --TEST--
 Recursive mkdir() on ftp should create missing directories.
 --SKIPIF--
-<?php
-if (array_search('ftp',stream_get_wrappers()) === FALSE) die("skip ftp wrapper not available.");
-if (!function_exists('pcntl_fork')) die("skip pcntl_fork() not available.");
-?>
+skip not support ftp:// or ftps://
 --FILE--
 <?php
 $bug77680=1;
