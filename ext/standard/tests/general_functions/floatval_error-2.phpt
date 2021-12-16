@@ -9,12 +9,12 @@ Testing floatval() and its alias doubleval() : error conditions -  wrong numbers
 echo "*** Testing floatval() and doubleval() : error conditions ***\n";
 
 
-echo "\n-- Testing floatval() and doubleval() function with no arguments --\n";
-var_dump( floatval() );
+echo "\n-- Testing floatval() and doubleval() function with more than expected no. of arguments --\n";
+var_dump( floatval(10.5, FALSE) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function floatval(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function floatval(): 1 at most, 2 provided in %s on line %d
  -- compile-error
