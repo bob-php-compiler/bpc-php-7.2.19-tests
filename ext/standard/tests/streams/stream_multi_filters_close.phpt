@@ -1,5 +1,7 @@
 --TEST--
 Check if multiple filters are closed correctly and never called again after close
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 
