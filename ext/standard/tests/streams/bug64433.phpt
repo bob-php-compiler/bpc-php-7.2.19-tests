@@ -1,22 +1,13 @@
 --TEST--
 Bug #60180 ($_SERVER["PHP_SELF"] incorrect)
 --SKIPIF--
-<?php
-if(!file_exists(dirname(__FILE__)."/../../../../sapi/cli/tests/php_cli_server.inc"))
-	die("skip could not found cli server script");
-$res = @include dirname(__FILE__)."/../../../../sapi/cli/tests/php_cli_server.inc";
-if(!$res) {
-	die("skip could not open cli server script");
-}
-
-if (CURL_WRAPPERS_ENABLED) {
-	die("skip curl wrappers used");
-}
-?>
+skip TODO wait curl ready
+--ARGS--
+--bpc-include-file ext/standard/tests/streams/php_cli_server.inc \
 --FILE--
 <?php
-include dirname(__FILE__)."/../../../../sapi/cli/tests/php_cli_server.inc";
-php_cli_server_start(file_get_contents(dirname(__FILE__).'/bug64433_srv.inc'));
+include "php_cli_server.inc";
+php_cli_server_start(file_get_contents('bug64433_srv.inc'));
 
 echo file_get_contents("http://".PHP_CLI_SERVER_ADDRESS."/index.php");
 echo "default\n";
