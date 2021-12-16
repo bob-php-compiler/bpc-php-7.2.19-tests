@@ -105,8 +105,8 @@ foreach ($scalars as $scalar ) {
 
 echo "\n*** Testing strval() with non_scalar values ***\n";
 // get a resource type variable
-$fp = fopen(__FILE__, "r");
-$dfp = opendir( dirname(__FILE__) );
+$fp = fopen('/proc/self/comm', "r");
+$dfp = opendir( '.' );
 
 // unset variable
 $unset_var = 10;
@@ -141,13 +141,6 @@ foreach ($not_scalars as $value ) {
    var_dump( strval($value) );
 }
 
-echo "\n*** Testing error conditions ***\n";
-//Zero argument
-var_dump( strval() );
-
-//arguments more than expected
-var_dump( strval( $scalars[0], $scalars[1]) );
-
 echo "Done\n";
 
 // close the resources used
@@ -156,6 +149,7 @@ closedir($dfp);
 
 ?>
 --EXPECTF--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
 *** Testing str_val() with scalar values***
 -- Iteration 1 --
 string(1) "0"
@@ -306,12 +300,4 @@ string(0) ""
 string(0) ""
 -- Iteration 11 --
 string(0) ""
-
-*** Testing error conditions ***
-
-Warning: strval() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: strval() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
 Done
