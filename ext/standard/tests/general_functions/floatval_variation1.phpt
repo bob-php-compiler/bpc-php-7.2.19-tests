@@ -9,9 +9,9 @@ Testing floatval() and its alias doubleval() functions : usage variations - diff
 
 
 // get a resource type variable
-$fp = fopen (__FILE__, "r");
+$fp = fopen ('/proc/self/comm', "r");
 fclose($fp);
-$dfp = opendir ( dirname(__FILE__) );
+$dfp = opendir ( '.' );
 closedir($dfp);
 
 // other types in an array
@@ -52,9 +52,8 @@ foreach ($not_float_types as $key => $type ) {
 ?>
 ===DONE===
 --EXPECTF--
-Notice: A non well formed numeric value encountered in %s on line %d
-
-Notice: A non well formed numeric value encountered in %s on line %d
+A non well formed numeric value encountered
+A non well formed numeric value encountered
 
 *** Testing floatval() on non floating types ***
 
