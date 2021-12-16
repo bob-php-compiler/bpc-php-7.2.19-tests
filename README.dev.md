@@ -843,6 +843,10 @@
 
 42. not support ftp:// or ftps://
 
+43. gettype() of closed resource return "resource"
+
+    php return "resource (closed)"
+
 ## ext/date
 
 1. ini_set date.timezone warning message

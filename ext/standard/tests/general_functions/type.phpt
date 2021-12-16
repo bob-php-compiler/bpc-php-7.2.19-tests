@@ -9,9 +9,9 @@ function foo($errno, $errstr, $errfile, $errline) {
 
 set_error_handler("foo");
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 fclose($fp);
-$fp1 = fopen(__FILE__, "r");
+$fp1 = fopen('/proc/self/comm', "r");
 
 $var1 = "another string";
 $var2 = array(2,3,4);
@@ -63,7 +63,7 @@ string(6) "double"
 string(4) "NULL"
 string(7) "boolean"
 string(6) "string"
-string(17) "resource (closed)"
+string(8) "resource"
 string(8) "resource"
 string(6) "object"
 bool(true)
