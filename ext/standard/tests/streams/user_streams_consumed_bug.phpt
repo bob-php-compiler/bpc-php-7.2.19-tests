@@ -1,5 +1,7 @@
 --TEST--
 Testing user filter on streams
+--SKIPIF--
+skip not support stream filter
 --FILE--
 <?php
 class Intercept extends php_user_filter
