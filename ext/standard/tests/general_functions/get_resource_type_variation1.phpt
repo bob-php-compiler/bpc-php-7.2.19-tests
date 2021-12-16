@@ -15,7 +15,7 @@ class Hello {
   }
 }
 
-$res = fopen(__FILE__, "r");
+$res = fopen('/proc/self/comm', "r");
 
 $vars = array(
 	"bool"=>true,

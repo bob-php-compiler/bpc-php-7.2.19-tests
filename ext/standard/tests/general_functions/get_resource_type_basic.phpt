@@ -9,7 +9,7 @@ Test get_resource_type() function : basic functionality
 
 echo "*** Testing get_resource_type() : basic functionality ***\n";
 
-$res = fopen(__FILE__, "r");
+$res = fopen('/proc/self/comm', "r");
 var_dump(get_resource_type($res));
 
 ?>
