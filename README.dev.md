@@ -644,6 +644,7 @@
 
     - stream_is_local
     - stream_resolve_include_path
+    - pfsockopen
 
 ------------------------------------
 
