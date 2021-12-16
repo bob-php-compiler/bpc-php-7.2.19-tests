@@ -506,7 +506,9 @@
 
     bpc not support debug_zval_dump, debug_zval_dump is an alias of var_dump
 
-5. compile time +-*/% calculate
+5. literal expr evaled compile time
+
+    compile time +-*/% calculate, may report warning, if can be calc result when compile, the final exectable will only contain the result, so not warning again
 
 6. no constant PHP_BINARY
 
@@ -608,26 +610,24 @@
     php eval offset first, then throw Error
     bpc throw Error
 
-29. literal expr evaled compile time
-
-30. isset/empty preferred silent
+29. isset/empty preferred silent
 
     @see Zend/tests/isset_003.phpt
 
-31. double quoted string may split into string-cats
+30. double quoted string may split into string-cats
 
     @see Zend/tests/instanceof_001-1.phpt
 
-32. resource can be array key
+31. resource can be array key
 
     php: `array($fp => 'value')` Illegal offset type, `$arr[$fp] = 'value';` notice casting
     bpc: both notice casting
 
-33. bpc error message binary safe
+32. bpc error message binary safe
 
     php not. @see ext/standard/tests/file/fscanf_error.phpt
 
-35. TO BE FIXED bigloo pipe problem
+33. TO BE FIXED bigloo pipe problem
 
     tests/basic/timeout_variation_*.phpt sometimes got empty output
     ext/standard/tests/file/popen_pclose_basic.phpt sort output should not come first

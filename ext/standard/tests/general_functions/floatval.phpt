@@ -52,9 +52,9 @@ foreach ($valid_floats as $value ) {
 echo "\n*** Testing floatval() on non floating types ***\n";
 
 // get a resource type variable
-$fp = fopen (__FILE__, "r");
+$fp = fopen ('/proc/self/comm', "r");
 fclose($fp);
-$dfp = opendir ( dirname(__FILE__) );
+$dfp = opendir ( '.' );
 closedir($dfp);
 
 // other types in an array
@@ -94,20 +94,14 @@ foreach ($not_float_types as $type ) {
 
 
 
-echo "\n*** Testing error conditions ***\n";
-//Zero argument
-var_dump( floatval() );
-var_dump( doubleval() );
-
-//arguments more than expected
-var_dump( floatval(TRUE, FALSE) );
-var_dump( doubleval(TRUE, FALSE) );
-
 echo "\nDone\n";
 
 
 ?>
 --EXPECTF--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
+A non well formed numeric value encountered
+A non well formed numeric value encountered
 *** Testing floatval() with valid float values ***
 float(0)
 float(1)
@@ -155,10 +149,6 @@ float(5000000)
 float(-5000000)
 
 *** Testing floatval() on non floating types ***
-
-Notice: A non well formed numeric value encountered in %s on line 69
-
-Notice: A non well formed numeric value encountered in %s on line 70
 float(-2147483648)
 float(2147483648)
 float(%d)
@@ -193,19 +183,5 @@ float(0)
 float(1)
 float(0)
 float(0)
-
-*** Testing error conditions ***
-
-Warning: floatval() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: doubleval() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: floatval() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
-
-Warning: doubleval() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
 
 Done
