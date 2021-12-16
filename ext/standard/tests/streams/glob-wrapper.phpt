@@ -3,8 +3,7 @@ Glob wrapper bypasses open_basedir
 --INI--
 open_basedir=/does_not_exist
 --SKIPIF--
-<?php
-if (!in_array("glob", stream_get_wrappers())) echo "skip";
+skip not support glob://
 --FILE--
 <?php
 

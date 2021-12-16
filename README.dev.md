@@ -829,6 +829,8 @@
 
 39. stream_context_get_options/stream_context_set_option() only accept stream-context resource
 
+40. not support glob://
+
 ## ext/date
 
 1. ini_set date.timezone warning message
