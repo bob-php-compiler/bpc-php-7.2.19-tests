@@ -9,12 +9,14 @@ Test get_resource_type() function : error conditions
 
 echo "*** Testing get_resource_type() : error conditions ***\n";
 
-echo "\n-- Testing get_resource_type() function with Zero arguments --\n";
-var_dump( get_resource_type() );
+echo "\n-- Testing get_resource_type() function with more than expected no. of arguments --\n";
+$res = fopen(__FILE__, "r");
+$extra_arg = 10;
+var_dump( get_resource_type($res, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function get_resource_type(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function get_resource_type(): 1 at most, 2 provided in %s on line %d
  -- compile-error
