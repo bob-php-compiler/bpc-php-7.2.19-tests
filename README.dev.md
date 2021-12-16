@@ -640,6 +640,12 @@
 
 ## ext/standard
 
+**functions not implemented**
+
+    - stream_is_local
+
+------------------------------------
+
 1. no ini unserialize_callback_func
 
 2. unserialize() not support "r:array"

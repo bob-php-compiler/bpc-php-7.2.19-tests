@@ -1,5 +1,7 @@
 --TEST--
 Testing stream_is_local()
+--SKIPIF--
+skip functions not implemented: stream_is_local
 --FILE--
 <?php
 
