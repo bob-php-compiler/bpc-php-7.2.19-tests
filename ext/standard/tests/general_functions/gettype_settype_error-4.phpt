@@ -13,14 +13,12 @@ Test gettype() & settype() functions : error conditions
 
 echo "**** Testing gettype() and settype() functions ****\n";
 
-// passing an invalid type to set
-var_dump( settype( $var, "unknown" ) );
+// args more than expected
+$var = 10.5;
+var_dump( settype( $var, $var, "int" ) );
 
-echo "Done\n";
 ?>
 --EXPECTF--
-**** Testing gettype() and settype() functions ****
-
-Warning: settype(): Invalid type in %s on line %d
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function settype(): 2 at most, 3 provided in %s on line %d
+ -- compile-error
