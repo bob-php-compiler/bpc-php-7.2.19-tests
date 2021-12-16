@@ -1,5 +1,7 @@
 --TEST--
 stream_resolve_include_path(string path)
+--SKIPIF--
+skip functions not implemented: stream_resolve_include_path
 --FILE--
 <?php
 $include_path = __DIR__ . '/test_path';
