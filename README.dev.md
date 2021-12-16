@@ -838,6 +838,8 @@
 
 40. not support glob://
 
+41. no default stream context
+
 ## ext/date
 
 1. ini_set date.timezone warning message

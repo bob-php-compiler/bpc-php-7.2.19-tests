@@ -1,5 +1,7 @@
 --TEST--
 Bug #71884 (Null pointer deref (segfault) in stream_context_get_default)
+--SKIPIF--
+skip no default stream context
 --FILE--
 <?php
 $arr=array();
