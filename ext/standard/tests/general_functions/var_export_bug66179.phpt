@@ -1,5 +1,7 @@
 --TEST--
 Bug #66179 (var_export() exports float as integer)
+--INI--
+serialize_precision=17
 --FILE--
 <?php
 
