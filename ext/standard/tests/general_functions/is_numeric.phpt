@@ -98,8 +98,8 @@ foreach ($numerics as $num ) {
 echo "\n*** Testing is_numeric() on non numeric types ***\n";
 
 // get a resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 // unset variable
 $unset_var = 10.5;
@@ -145,13 +145,6 @@ foreach ($not_numerics as $type ) {
   var_dump( is_numeric($type) );
 }
 
-echo "\n*** Testing error conditions ***\n";
-//Zero argument
-var_dump( is_numeric() );
-
-//arguments more than expected
-var_dump( is_numeric("10", "20") );
-
 echo "Done\n";
 
 // close the resources used
@@ -160,6 +153,8 @@ closedir($dfp);
 
 ?>
 --EXPECTF--
+Warning: truncate literal float '1.444444444444444444' to '1.4444444444444444', use string may avoid truncate
+Warning: truncate literal float '2.00000000000000000000001' to '2.0', use string may avoid truncate
 *** Testing is_numeric() with valid numeric values ***
 -- Iteration 1 --
 bool(true)
@@ -373,12 +368,4 @@ bool(false)
 bool(false)
 -- Iteration 29 --
 bool(false)
-
-*** Testing error conditions ***
-
-Warning: is_numeric() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: is_numeric() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
 Done
