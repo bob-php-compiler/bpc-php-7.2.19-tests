@@ -9,12 +9,14 @@ Test is_resource() function : error conditions
 
 echo "*** Testing is_resource() : error conditions ***\n";
 
-echo "\n-- Testing is_resource() function with Zero arguments --\n";
-var_dump( is_resource() );
+echo "\n-- Testing is_resource() function with more than expected no. of arguments --\n";
+$res = fopen(__FILE__, "r");
+$extra_arg = 10;
+var_dump( is_resource($res, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function is_resource(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function is_resource(): 1 at most, 2 provided in %s on line %d
  -- compile-error
