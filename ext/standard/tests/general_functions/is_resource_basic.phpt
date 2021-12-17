@@ -46,7 +46,7 @@ for ($i=0; $i < count($vars); $i++) {
 	}
 }
 
-$res = fopen(__FILE__, "r");
+$res = fopen('/proc/self/comm', "r");
 echo "\nResource type..var_dump after file open returns\n";
 var_dump($res);
 echo "Resource type..after file open  is_resource() returns";
