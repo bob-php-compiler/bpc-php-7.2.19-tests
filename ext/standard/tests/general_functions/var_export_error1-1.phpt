@@ -10,13 +10,16 @@ Test var_export() function : error conditions
 
 echo "*** Testing var_export() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing var_export() function with Zero arguments --\n";
-var_dump( var_export() );
+//Test var_export with one more than the expected number of arguments
+echo "\n-- Testing var_export() function with more than expected no. of arguments --\n";
+$var = 1;
+$return = true;
+$extra_arg = 10;
+var_dump( var_export($var, $return, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function var_export(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function var_export(): 2 at most, 3 provided in %s on line %d
  -- compile-error
