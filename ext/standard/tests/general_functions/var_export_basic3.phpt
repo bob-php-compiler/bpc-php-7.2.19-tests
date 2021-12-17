@@ -49,6 +49,7 @@ foreach($valid_floats as $key => $float_value) {
 ?>
 ===DONE===
 --EXPECT--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
 *** Testing var_export() with valid float values ***
 
 *** Output for float values ***
