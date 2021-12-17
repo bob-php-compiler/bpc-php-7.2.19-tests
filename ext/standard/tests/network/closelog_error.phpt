@@ -18,10 +18,6 @@ var_dump( closelog($extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing closelog() : error conditions ***
-
--- Testing closelog() function with one argument --
-
-Warning: closelog() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function closelog(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
