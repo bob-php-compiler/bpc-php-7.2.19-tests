@@ -9,12 +9,12 @@ Test is_callable() function
 
 echo "\n*** Testing error conditions ***\n";
 
-echo "\n-- Testing is_callable() function with less than expected no. of arguments --\n";
-var_dump( is_callable() );
+echo "\n-- Testing is_callable() function with more than expected no. of arguments --\n";
+var_dump( is_callable("string", TRUE, $callable_name, "EXTRA") );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function is_callable(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function is_callable(): 3 at most, 4 provided in %s on line %d
  -- compile-error
