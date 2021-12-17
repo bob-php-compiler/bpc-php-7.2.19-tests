@@ -58,8 +58,8 @@ foreach ($floats as $float ) {
 
 echo "\n*** Testing is_float(), is_double() & is_real() with non float values ***\n";
 // get a resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 // unset variable
 $unset_var = 10;
@@ -129,20 +129,10 @@ foreach ($not_floats as $value ) {
   var_dump( is_real($value) );
 }
 
-echo "\n*** Testing error conditions ***\n";
-//Zero argument
-var_dump( is_float() );
-var_dump( is_double() );
-var_dump( is_real() );
-
-//arguments more than expected
-var_dump( is_float( $floats[0], $floats[1]) );
-var_dump( is_double( $floats[0], $floats[1]) );
-var_dump( is_real( $floats[0], $floats[1]) );
-
 echo "Done\n";
 ?>
 --EXPECTF--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
 *** Testing is_float(), is_double() and is_real() with float values***
 -- Iteration 1 --
 bool(false)
@@ -413,25 +403,5 @@ bool(false)
 --Iteration 37--
 bool(false)
 bool(false)
-bool(false)
-
-*** Testing error conditions ***
-
-Warning: is_float() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: is_double() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: is_real() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: is_float() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
-
-Warning: is_double() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
-
-Warning: is_real() expects exactly 1 parameter, 2 given in %s on line %d
 bool(false)
 Done

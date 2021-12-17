@@ -25,8 +25,8 @@ foreach ($valid_bools as $bool_val ) {
 echo "\n*** Testing is_bool() on non boolean values ***\n";
 
 // get a resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 // unset variable
 $unset_bool1 = true;
@@ -127,13 +127,6 @@ foreach ($not_bool_types as $type ) {
   var_dump( is_bool($type) );
 }
 
-echo "\n*** Testing error conditions ***\n";
-//Zero argument
-var_dump( is_bool() );
-
-//arguments more than expected
-var_dump( is_bool(TRUE, FALSE) );
-
 echo "Done\n";
 
 // close resources
@@ -142,6 +135,7 @@ closedir($dfp);
 
 ?>
 --EXPECTF--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
 *** Testing is_bool() with valid boolean values ***
 -- Iteration 1 --
 bool(true)
@@ -282,13 +276,5 @@ bool(false)
 -- Iteration 64 --
 bool(false)
 -- Iteration 65 --
-bool(false)
-
-*** Testing error conditions ***
-
-Warning: is_bool() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: is_bool() expects exactly 1 parameter, 2 given in %s on line %d
 bool(false)
 Done

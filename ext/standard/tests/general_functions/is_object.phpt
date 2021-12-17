@@ -101,8 +101,8 @@ foreach ($valid_objects as $object ) {
 echo "\n*** Testing is_object() on non object types ***\n";
 
 // get a resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 // unset object
 $unset_object = new foo();
@@ -138,13 +138,6 @@ foreach ($not_objects as $type ) {
   var_dump( is_object($type) );
 }
 
-echo "\n*** Testing error conditions ***\n";
-//Zero argument
-var_dump( is_object() );
-
-//arguments more than expected
-var_dump( is_object($myClass_object, $myClass_object) );
-
 echo "Done\n";
 
 // close the resources used
@@ -153,6 +146,7 @@ closedir($dfp);
 
 ?>
 --EXPECTF--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
 *** Testing is_object() with valid objects ***
 -- Iteration 1 --
 bool(true)
@@ -215,13 +209,5 @@ bool(false)
 -- Iteration 18 --
 bool(false)
 -- Iteration 19 --
-bool(false)
-
-*** Testing error conditions ***
-
-Warning: is_object() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: is_object() expects exactly 1 parameter, 2 given in %s on line %d
 bool(false)
 Done

@@ -36,8 +36,8 @@ foreach ($arrays as $var_array ) {
 echo "\n*** Testing is_array() on non array types ***\n";
 
 // get a resource type variable
-$fp = fopen (__FILE__, "r");
-$dfp = opendir ( dirname(__FILE__) );
+$fp = fopen ('/proc/self/comm', "r");
+$dfp = opendir ( '.' );
 
 // unset variables
 $unset_array = array(10);
@@ -98,19 +98,13 @@ foreach ($varient_arrays as $type ) {
   var_dump( is_array ($type) );
 }
 
-echo "\n*** Testing error conditions ***\n";
-//Zero argument
-var_dump( is_array() );
-
-//arguments more than expected
-var_dump( is_array ($fp, $fp) );
-
 echo "Done\n";
 /* close resources */
 fclose($fp);
 closedir($dfp);
 ?>
 --EXPECTF--
+Warning: truncate literal float '10.0000000000000000005' to '10.0', use string may avoid truncate
 *** Testing is_array() on different type of arrays ***
 -- Iteration 1 --
 bool(true)
@@ -201,13 +195,5 @@ bool(false)
 -- Iteration 28 --
 bool(false)
 -- Iteration 29 --
-bool(false)
-
-*** Testing error conditions ***
-
-Warning: is_array() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-
-Warning: is_array() expects exactly 1 parameter, 2 given in %s on line %d
 bool(false)
 Done
