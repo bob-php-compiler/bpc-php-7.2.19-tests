@@ -226,10 +226,10 @@ var_dump($recursion_obj2);
 
 echo "\n*** Testing var_dump() on resources ***\n";
 /* file type resource */
-$file_handle = fopen(__FILE__, "r");
+$file_handle = fopen('/proc/self/comm', "r");
 
 /* directory type resource */
-$dir_handle = opendir( dirname(__FILE__) );
+$dir_handle = opendir( '.' );
 
 $resources = array (
   $file_handle,
@@ -273,18 +273,6 @@ check_vardump($misc_values);
 echo "\n*** Testing var_dump() on multiple arguments ***\n";
 var_dump( $integers, $floats, $strings, $arrays, $booleans, $resources,
           $objects, $misc_values, $variations );
-
-/* checking var_dump() on functions */
-echo "\n*** Testing var_dump() on anonymous functions ***\n";
-$newfunc = create_function('$a,$b', 'return "$a * $b = " . ($a * $b);');
-echo "New anonymous function: $newfunc\n";
-var_dump( $newfunc(2, 3) );
-/* creating anonymous function dynamically */
-var_dump( create_function('$a', 'return "$a * $a = " . ($a * $b);') );
-
-echo "\n*** Testing error conditions ***\n";
-//passing zero argument
-var_dump();
 
 /* closing resource handle used */
 closedir($dir_handle);
@@ -573,7 +561,7 @@ array(2) {
 
 *** Testing var_dump() on object variables ***
 -- Iteration 1 --
-object(object_class)#6 (7) {
+object(object_class)#%d (7) {
   ["value"]=>
   int(50)
   ["public_var1"]=>
@@ -590,14 +578,14 @@ object(object_class)#6 (7) {
   int(11)
 }
 -- Iteration 2 --
-object(no_member_class)#7 (0) {
+object(no_member_class)#%d (0) {
 }
 -- Iteration 3 --
-object(contains_object_class)#8 (7) {
+object(contains_object_class)#%d (7) {
   ["p"]=>
   int(30)
   ["class_object1"]=>
-  object(object_class)#9 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -614,7 +602,7 @@ object(contains_object_class)#8 (7) {
     int(11)
   }
   ["class_object2"]=>
-  object(object_class)#10 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -631,7 +619,7 @@ object(contains_object_class)#8 (7) {
     int(11)
   }
   ["class_object3":"contains_object_class":private]=>
-  object(object_class)#9 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -648,7 +636,7 @@ object(contains_object_class)#8 (7) {
     int(11)
   }
   ["class_object4":protected]=>
-  object(object_class)#10 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -665,17 +653,17 @@ object(contains_object_class)#8 (7) {
     int(11)
   }
   ["no_member_class_object"]=>
-  object(no_member_class)#11 (0) {
+  object(no_member_class)#%d (0) {
   }
   ["class_object5"]=>
   *RECURSION*
 }
 -- Iteration 4 --
-object(contains_object_class)#1 (7) {
+object(contains_object_class)#%d (7) {
   ["p"]=>
   int(30)
   ["class_object1"]=>
-  object(object_class)#2 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -692,7 +680,7 @@ object(contains_object_class)#1 (7) {
     int(11)
   }
   ["class_object2"]=>
-  object(object_class)#3 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -709,7 +697,7 @@ object(contains_object_class)#1 (7) {
     int(11)
   }
   ["class_object3":"contains_object_class":private]=>
-  object(object_class)#2 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -726,7 +714,7 @@ object(contains_object_class)#1 (7) {
     int(11)
   }
   ["class_object4":protected]=>
-  object(object_class)#3 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -743,13 +731,13 @@ object(contains_object_class)#1 (7) {
     int(11)
   }
   ["no_member_class_object"]=>
-  object(no_member_class)#4 (0) {
+  object(no_member_class)#%d (0) {
   }
   ["class_object5"]=>
   *RECURSION*
 }
 -- Iteration 5 --
-object(object_class)#2 (7) {
+object(object_class)#%d (7) {
   ["value"]=>
   int(50)
   ["public_var1"]=>
@@ -766,7 +754,7 @@ object(object_class)#2 (7) {
   int(11)
 }
 -- Iteration 6 --
-object(object_class)#3 (7) {
+object(object_class)#%d (7) {
   ["value"]=>
   int(50)
   ["public_var1"]=>
@@ -783,10 +771,10 @@ object(object_class)#3 (7) {
   int(11)
 }
 -- Iteration 7 --
-object(no_member_class)#4 (0) {
+object(no_member_class)#%d (0) {
 }
 -- Iteration 8 --
-object(object_class)#5 (7) {
+object(object_class)#%d (7) {
   ["value"]=>
   int(50)
   ["public_var1"]=>
@@ -806,7 +794,7 @@ object(object_class)#5 (7) {
 NULL
 
 ** Testing var_dump() on objects having circular reference **
-object(object_class)#13 (8) {
+object(object_class)#%d (8) {
   ["value"]=>
   int(50)
   ["public_var1"]=>
@@ -822,7 +810,7 @@ object(object_class)#13 (8) {
   ["public_var2"]=>
   int(11)
   ["obj"]=>
-  &object(object_class)#12 (8) {
+  &object(object_class)#%d (8) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -880,7 +868,7 @@ array(4) {
 -- Iteration 3 --
 array(4) {
   [0]=>
-  object(no_member_class)#14 (0) {
+  object(no_member_class)#%d (0) {
   }
   [1]=>
   array(0) {
@@ -1233,7 +1221,7 @@ array(2) {
 }
 array(9) {
   [0]=>
-  object(object_class)#6 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -1250,14 +1238,14 @@ array(9) {
     int(11)
   }
   [1]=>
-  object(no_member_class)#7 (0) {
+  object(no_member_class)#%d (0) {
   }
   [2]=>
-  object(contains_object_class)#8 (7) {
+  object(contains_object_class)#%d (7) {
     ["p"]=>
     int(30)
     ["class_object1"]=>
-    object(object_class)#9 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1274,7 +1262,7 @@ array(9) {
       int(11)
     }
     ["class_object2"]=>
-    object(object_class)#10 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1291,7 +1279,7 @@ array(9) {
       int(11)
     }
     ["class_object3":"contains_object_class":private]=>
-    object(object_class)#9 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1308,7 +1296,7 @@ array(9) {
       int(11)
     }
     ["class_object4":protected]=>
-    object(object_class)#10 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1325,17 +1313,17 @@ array(9) {
       int(11)
     }
     ["no_member_class_object"]=>
-    object(no_member_class)#11 (0) {
+    object(no_member_class)#%d (0) {
     }
     ["class_object5"]=>
     *RECURSION*
   }
   [3]=>
-  object(contains_object_class)#1 (7) {
+  object(contains_object_class)#%d (7) {
     ["p"]=>
     int(30)
     ["class_object1"]=>
-    object(object_class)#2 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1352,7 +1340,7 @@ array(9) {
       int(11)
     }
     ["class_object2"]=>
-    object(object_class)#3 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1369,7 +1357,7 @@ array(9) {
       int(11)
     }
     ["class_object3":"contains_object_class":private]=>
-    object(object_class)#2 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1386,7 +1374,7 @@ array(9) {
       int(11)
     }
     ["class_object4":protected]=>
-    object(object_class)#3 (7) {
+    object(object_class)#%d (7) {
       ["value"]=>
       int(50)
       ["public_var1"]=>
@@ -1403,13 +1391,13 @@ array(9) {
       int(11)
     }
     ["no_member_class_object"]=>
-    object(no_member_class)#4 (0) {
+    object(no_member_class)#%d (0) {
     }
     ["class_object5"]=>
     *RECURSION*
   }
   [4]=>
-  object(object_class)#2 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -1426,7 +1414,7 @@ array(9) {
     int(11)
   }
   [5]=>
-  object(object_class)#3 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -1443,10 +1431,10 @@ array(9) {
     int(11)
   }
   [6]=>
-  object(no_member_class)#4 (0) {
+  object(no_member_class)#%d (0) {
   }
   [7]=>
-  object(object_class)#5 (7) {
+  object(object_class)#%d (7) {
     ["value"]=>
     int(50)
     ["public_var1"]=>
@@ -1506,7 +1494,7 @@ array(6) {
   [2]=>
   array(4) {
     [0]=>
-    object(no_member_class)#14 (0) {
+    object(no_member_class)#%d (0) {
     }
     [1]=>
     array(0) {
@@ -1561,17 +1549,4 @@ array(6) {
     string(5) "/00\7"
   }
 }
-
-*** Testing var_dump() on anonymous functions ***
-
-Deprecated: Function create_function() is deprecated in %s on line %d
-New anonymous function:  lambda_1
-string(9) "2 * 3 = 6"
-
-Deprecated: Function create_function() is deprecated in %s on line %d
-string(9) " lambda_2"
-
-*** Testing error conditions ***
-
-Warning: var_dump() expects at least 1 parameter, 0 given in %s on line %d
 Done
