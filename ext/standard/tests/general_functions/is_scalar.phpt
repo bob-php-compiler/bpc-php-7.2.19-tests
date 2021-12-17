@@ -66,7 +66,7 @@ $resource = opendir('.');
 unset($int_var, $float_var, $string_var, $boolean_var, $object, $array, $resource);
 
 // resources
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 $dfp = opendir(".");
 
 $variation_array = array(
@@ -104,14 +104,6 @@ foreach( $variation_array as $value ) {
   echo "-- Iteration $loop_counter --\n"; $loop_counter++;
   var_dump( is_scalar($value) );
 }
-
-echo "\n*** Testing error conditions ***\n";
-// Zero arguments
-var_dump( is_scalar() );
-
-// Arguments more than expected
-var_dump( is_scalar( $scalar_variables[2], $scalar_variables[2]) );
-var_dump( is_scalar( new stdclass, new stdclass) );
 
 echo "Done\n";
 
@@ -226,15 +218,4 @@ bool(false)
 bool(false)
 -- Iteration 18 --
 bool(false)
-
-*** Testing error conditions ***
-
-Warning: is_scalar() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
-
-Warning: is_scalar() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
-
-Warning: is_scalar() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
 Done
