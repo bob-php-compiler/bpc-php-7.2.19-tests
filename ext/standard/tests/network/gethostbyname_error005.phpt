@@ -8,5 +8,7 @@ display_errors=false
 <?php
 	var_dump(gethostbyname());
 ?>
---EXPECT--
-NULL
+--EXPECTF--
+*** ERROR:compile-error:
+Error: Too few arguments to function gethostbyname(): 1 required, 0 provided in %s on line %d
+ -- compile-error
