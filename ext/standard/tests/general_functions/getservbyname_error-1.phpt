@@ -8,11 +8,9 @@ Danilo Sanchi (sanchi@grupporetina.com)
 --FILE--
 <?php
 $service = "www";
-$protocol = "tcp";
-$extra_arg = 12;
-var_dump(getservbyname($service, $protocol, $extra_arg ) );
+var_dump(getservbyname($service));
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function getservbyname(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function getservbyname(): 2 required, 1 provided in %s on line %d
  -- compile-error
