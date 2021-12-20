@@ -8,11 +8,9 @@ Simone Gentili (sensorario@gmail.com)
 --FILE--
 <?php
 $port = 80;
-$protocol = "tcp";
-$extra_arg = 12;
-var_dump(getservbyport( $port, $protocol, $extra_arg ) );
+var_dump(getservbyport($port));
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function getservbyport(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function getservbyport(): 2 required, 1 provided in %s on line %d
  -- compile-error
