@@ -10,13 +10,15 @@ Test ip2long() function : error conditions
 
 echo "*** Testing ip2long() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing ip2long() function with Zero arguments --\n";
-var_dump( ip2long() );
+//Test ip2long with one more than the expected number of arguments
+echo "\n-- Testing ip2long() function with more than expected no. of arguments --\n";
+$ip_address = '127.0.0.1';
+$extra_arg = 10;
+var_dump( ip2long($ip_address, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ip2long(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ip2long(): 1 at most, 2 provided in %s on line %d
  -- compile-error
