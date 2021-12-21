@@ -340,6 +340,8 @@
 
 18. no ini zend.enable_gc
 
+19. no ini magic_quotes_gpc
+
 **syntax**
 
 1. not support GOTO

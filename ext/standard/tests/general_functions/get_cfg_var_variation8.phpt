@@ -12,4 +12,5 @@ var_dump(get_cfg_var( 'magic_quotes_gpc' ) );
 
 ?>
 --EXPECTF--
-Fatal error: Directive 'magic_quotes_gpc' is no longer available in PHP in Unknown on line 0
+*** Test by calling method or function with deprecated option ***
+bool(false)
