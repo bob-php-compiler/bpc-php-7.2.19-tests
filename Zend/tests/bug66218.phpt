@@ -7,7 +7,7 @@ if (!function_exists("dl")) die("skip need dl");
 ?>
 --FILE--
 <?php
-$tab = get_extension_funcs("runtime");
+$tab = get_extension_funcs("standard");
 $fcts = array("dl");
 foreach ($fcts as $fct) {
 	if (in_array($fct, $tab)) {
