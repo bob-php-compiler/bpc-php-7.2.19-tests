@@ -16,10 +16,6 @@ var_dump( get_defined_constants(true, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing get_defined_constants() : error conditions ***
-
--- Testing get_defined_constants() function with more than expected no. of arguments --
-
-Warning: get_defined_constants() expects at most 1 parameter, 2 given in %s on line 11
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function get_defined_constants(): 1 at most, 2 provided in %s on line 11
+ -- compile-error
