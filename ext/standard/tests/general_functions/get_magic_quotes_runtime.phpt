@@ -1,5 +1,7 @@
 --TEST--
 Test get_magic_quotes_runtime() function
+--SKIPIF--
+skip no ini magic_quotes_gpc
 --FILE--
 <?php
 /* Prototype: int get_magic_quotes_runtime  ( void  )
