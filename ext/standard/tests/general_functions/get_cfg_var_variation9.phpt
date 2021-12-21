@@ -3,6 +3,8 @@ Test function get_cfg_var() by substituting argument with array of valid paramet
 --CREDITS--
 Francesco Fullone ff@ideato.it
 #PHPTestFest Cesena Italia on 2009-06-20
+--SKIPIF--
+skip TODO session
 --INI--
 session.use_cookies=0
 session.serialize_handler=php
