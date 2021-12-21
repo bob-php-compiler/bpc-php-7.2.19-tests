@@ -1,6 +1,7 @@
 --TEST--
 user defined error handler + set_error_handling(EH_THROW)
 --SKIPIF--
+skip TODO DirectoryIterator
 <?php
 	if(substr(PHP_OS, 0, 3) == "WIN") die("skip Not for Windows");
 	if (!extension_loaded("spl") || is_dir('/this/path/does/not/exist')) die("skip");
