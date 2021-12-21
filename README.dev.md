@@ -640,6 +640,7 @@
 
 **functions not implemented**
 
+    - array_multisort
     - stream_is_local
     - stream_resolve_include_path
     - pfsockopen
@@ -649,6 +650,7 @@
     - assert
     - cli_get_process_title
     - cli_set_process_title
+    - mail
 
 ------------------------------------
 
