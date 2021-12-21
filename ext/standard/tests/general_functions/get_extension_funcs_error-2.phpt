@@ -10,14 +10,13 @@ Test get_extension_funcs() function : error conditions
 
 echo "*** Testing get_extension_funcs() : error conditions ***\n";
 
-echo "\n-- Invalid extension name --\n";
-var_dump(get_extension_funcs("foo"));
+$extra_arg = 1;
+echo "\n-- Too many arguments --\n";
+var_dump(get_extension_funcs("standard", $extra_arg));
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing get_extension_funcs() : error conditions ***
-
--- Invalid extension name --
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function get_extension_funcs(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

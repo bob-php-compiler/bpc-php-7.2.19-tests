@@ -10,14 +10,12 @@ Test get_extension_funcs() function : error conditions
 
 echo "*** Testing get_extension_funcs() : error conditions ***\n";
 
-echo "\n-- Invalid extension name --\n";
-var_dump(get_extension_funcs("foo"));
+echo "\n-- Too few arguments --\n";
+var_dump(get_extension_funcs());
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing get_extension_funcs() : error conditions ***
-
--- Invalid extension name --
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too few arguments to function get_extension_funcs(): 1 required, 0 provided in %s on line %d
+ -- compile-error
