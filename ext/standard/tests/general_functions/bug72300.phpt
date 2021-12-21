@@ -1,5 +1,7 @@
 --TEST--
 Bug #72300 (ignore_user_abort(false) has no effect)
+--SKIPIF--
+skip functions not implemented
 --INI--
 ignore_user_abort=0
 --FILE--
