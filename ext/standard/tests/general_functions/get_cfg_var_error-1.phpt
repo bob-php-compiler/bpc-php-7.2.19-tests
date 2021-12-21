@@ -12,11 +12,11 @@ session.save_handler=files
 
 echo "*** Test by calling method or function with incorrect numbers of arguments ***\n";
 
-var_dump(get_cfg_var( 'session.use_cookies', 'session.serialize_handler' ) );
+var_dump(get_cfg_var(  ) );
 
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function get_cfg_var(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function get_cfg_var(): 1 required, 0 provided in %s on line %d
  -- compile-error
