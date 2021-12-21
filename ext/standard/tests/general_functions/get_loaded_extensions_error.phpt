@@ -10,17 +10,12 @@ Test get_loaded_extensions() function : error conditions
 echo "*** Testing get_loaded_extensions() : error conditions ***\n";
 
 echo "\n-- Testing get_loaded_extensions() function with more than expected no. of arguments --\n";
-$res = fopen(__FILE__, "r");
 $extra_arg = 10;
-var_dump( get_resource_type(true, $extra_arg) );
+var_dump( get_loaded_extensions($extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing get_loaded_extensions() : error conditions ***
-
--- Testing get_loaded_extensions() function with more than expected no. of arguments --
-
-Warning: get_resource_type() expects exactly 1 parameter, 2 given in %s on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function get_loaded_extensions(): 0 at most, 1 provided in %s on line %d
+ -- compile-error

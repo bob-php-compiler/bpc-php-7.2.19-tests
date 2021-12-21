@@ -112,27 +112,25 @@
 
 11. no highlight_file() highlight_string() php_strip_whitespace()
 
-12. get_loaded_extensions() no zend_extensions parameter
+12. no class_alias()
 
-13. no class_alias()
+13. function name downcase!
 
-14. function name downcase!
-
-15. debug_print_backtrace() print args same as stack trace
+14. debug_print_backtrace() print args same as stack trace
 
     php print full args value
 
-16. not support get_defined_vars()
+15. not support get_defined_vars()
 
-17. dynamic function call warning message
+16. dynamic function call warning message
 
-18. no __halt_compiler()
+17. no __halt_compiler()
 
-19. some functions moved to runtime
+18. some functions moved to runtime
 
-20. get_defined_functions() return encrypted function names
+19. get_defined_functions() return encrypted function names
 
-21. function alias preferred original name
+20. function alias preferred original name
 
     eg. count/sizeof: warning message start with count() not sizeof()
 
@@ -647,6 +645,10 @@
     - pfsockopen
     - getlastmod
     - getmyinode
+    - assert_options
+    - assert
+    - cli_get_process_title
+    - cli_set_process_title
 
 ------------------------------------
 
@@ -844,6 +846,8 @@
 41. no default stream context
 
 42. not support ftp:// or ftps://
+
+43. get_loaded_extensions() no zend_extensions parameter
 
 ## ext/date
 
