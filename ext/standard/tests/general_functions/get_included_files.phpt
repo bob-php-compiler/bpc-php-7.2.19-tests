@@ -2,6 +2,10 @@
 Test get_include_files() function
 --INI--
 include_path=.
+--ARGS--
+--bpc-include-file ext/standard/tests/general_functions/get_included_files_inc1.inc \
+--bpc-include-file ext/standard/tests/general_functions/get_included_files_inc2.inc \
+--bpc-include-file ext/standard/tests/general_functions/get_included_files_inc3.inc \
 --FILE--
 <?php
 /* Prototype: array get_included_files  ( void  )
@@ -21,9 +25,6 @@ var_dump(get_included_files());
 include(dirname(__FILE__)."/get_included_files_inc2.inc");
 echo "\n-- List included files atfter including inc2 which will include inc3 which includes inc1 --\n";
 var_dump(get_included_files());
-
-echo "\n-- Error cases --\n";
-var_dump(get_included_files(true));
 
 ?>
 ===DONE===
@@ -49,15 +50,10 @@ array(4) {
   [0]=>
   string(%d) "%sget_included_files.php"
   [1]=>
-  string(%d) "%sget_included_files_inc1.inc"
-  [2]=>
   string(%d) "%sget_included_files_inc2.inc"
-  [3]=>
+  [2]=>
   string(%d) "%sget_included_files_inc3.inc"
+  [3]=>
+  string(%d) "%sget_included_files_inc1.inc"
 }
-
--- Error cases --
-
-Warning: get_included_files() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
 ===DONE===

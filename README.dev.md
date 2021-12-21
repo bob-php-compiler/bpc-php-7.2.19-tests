@@ -856,6 +856,8 @@
 
 43. get_loaded_extensions() no zend_extensions parameter
 
+44. get_include_files() order different
+
 ## ext/date
 
 1. ini_set date.timezone warning message
