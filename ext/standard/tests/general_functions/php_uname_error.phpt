@@ -8,9 +8,6 @@ Test php_uname() function -  error conditions - pass function incorrect argument
 
 echo "*** Testing php_uname() - error test\n";
 
-echo "\n-- Testing php_uname() function with more than expected no. of arguments --\n";
-var_dump( php_uname('a', true) );
-
 echo "\n-- Testing php_uname() function with invalid mode --\n";
 // am invalid mode should result in same o/p as mode 'a'
 var_dump( php_uname('z') == php_uname('z') );
@@ -18,7 +15,7 @@ var_dump( php_uname('z') == php_uname('z') );
 class barClass {
 }
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 echo "\n-- Testing php_uname() function with invalid argument types --\n";
 var_dump(php_uname(array()));
@@ -31,11 +28,6 @@ fclose($fp);
 ===DONE===
 --EXPECTF--
 *** Testing php_uname() - error test
-
--- Testing php_uname() function with more than expected no. of arguments --
-
-Warning: php_uname() expects at most 1 parameter, 2 given in %s on line %d
-NULL
 
 -- Testing php_uname() function with invalid mode --
 bool(true)
