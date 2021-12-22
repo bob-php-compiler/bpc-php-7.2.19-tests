@@ -5,7 +5,7 @@ pcre.jit=1
 pcre.backtrack_limit=1000000
 pcre.recursion_limit=100000
 --SKIPIF--
-<?php if (!extension_loaded("reflection")) die("skip"); ?>
+<?php if (!extension_loaded("posix")) die("skip need posix"); ?>
 <?php
 if (ini_get("pcre.jit") === FALSE) {
 	die("skip no jit built");
@@ -17,10 +17,10 @@ if (ini_get("pcre.jit") === FALSE) {
 var_dump(gettype(ini_get_all()));
 var_dump(ini_get_all(""));
 var_dump(ini_get_all("nosuchextension"));
-var_dump(ini_get_all("reflection"));
+var_dump(ini_get_all("posix"));
 var_dump(ini_get_all("pcre"));
 var_dump(ini_get_all("pcre", false));
-var_dump(ini_get_all("reflection", false));
+var_dump(ini_get_all("posix", false));
 
 var_dump(ini_get_all("", ""));
 
@@ -44,7 +44,7 @@ array(3) {
     ["local_value"]=>
     string(7) "1000000"
     ["access"]=>
-    int(7)
+    int(-1)
   }
   ["pcre.jit"]=>
   array(3) {
@@ -53,7 +53,7 @@ array(3) {
     ["local_value"]=>
     string(1) "1"
     ["access"]=>
-    int(7)
+    int(-1)
   }
   ["pcre.recursion_limit"]=>
   array(3) {
@@ -62,7 +62,7 @@ array(3) {
     ["local_value"]=>
     string(6) "100000"
     ["access"]=>
-    int(7)
+    int(-1)
   }
 }
 array(3) {

@@ -344,6 +344,8 @@
 
 20. no ini register_argc_argv
 
+21. ini has no access level, ini_get_all return access = -1
+
 **syntax**
 
 1. not support GOTO
