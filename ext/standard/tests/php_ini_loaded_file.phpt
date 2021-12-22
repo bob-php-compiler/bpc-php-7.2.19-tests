@@ -4,6 +4,8 @@ Check the php_ini_loaded_file() function
 Sebastian Schürmann
 sschuermann@chip.de
 Testfest 2009 Munich
+--SKIPIF--
+skip functions not implemented
 --INI--
 precision=12
 --FILE--

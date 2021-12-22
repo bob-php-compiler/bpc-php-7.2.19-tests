@@ -1,5 +1,7 @@
 --TEST--
 phpcredits() CGI
+--SKIPIF--
+skip functions not implemented
 --POST--
 dummy=x
 --FILE--

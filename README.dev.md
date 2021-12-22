@@ -660,6 +660,10 @@
     - ignore_user_abort
     - connection_aborted
     - connection_status
+    - php_ini_loaded_file
+    - php_ini_scanned_files
+    - phpcredits
+    - zend_thread_id
 
 ------------------------------------
 

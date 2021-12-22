@@ -1,5 +1,7 @@
 --TEST--
 phpcredits()
+--SKIPIF--
+skip functions not implemented
 --FILE--
 <?php
 
