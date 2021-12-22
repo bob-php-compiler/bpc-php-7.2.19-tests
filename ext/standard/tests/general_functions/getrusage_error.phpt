@@ -16,10 +16,6 @@ Test getrusage() function : error conditions - incorrect number of args
 
 echo "*** Testing getrusage() : error conditions ***\n";
 
-echo "\n-- Testing getrusage() function with more than expected no. of arguments --\n";
-$extra_arg = 10;
-$dat = getrusage(1, $extra_arg);
-
 echo "\n-- Testing getrusage() function with invalid argument - non-numeric STRING--\n";
 $string_arg = "foo";
 $dat = getrusage($string_arg);
@@ -39,7 +35,7 @@ $obj_arg = new classA();
 $dat = getrusage($obj_arg);
 
 echo "\n-- Testing getrusage() function with invalid argument - RESOURCE --\n";
-$file_handle=fopen(__FILE__, "r");
+$file_handle=fopen('/proc/self/comm', "r");
 $dat = getrusage($file_handle);
 fclose($file_handle);
 
@@ -47,10 +43,6 @@ fclose($file_handle);
 ===DONE===
 --EXPECTF--
 *** Testing getrusage() : error conditions ***
-
--- Testing getrusage() function with more than expected no. of arguments --
-
-Warning: getrusage() expects at most 1 parameter, 2 given in %s on line %d
 
 -- Testing getrusage() function with invalid argument - non-numeric STRING--
 
