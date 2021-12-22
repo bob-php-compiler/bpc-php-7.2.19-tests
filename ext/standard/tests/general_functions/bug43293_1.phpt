@@ -1,13 +1,11 @@
 --TEST--
 Bug #43293 (Multiple segfaults in getopt())
---INI--
-register_argc_argv=Off
 --FILE--
 <?php
-$argv = array(1, 2, 3);
+$_SERVER['argv'] = array(1, 2, 3);
 var_dump(getopt("abcd"));
-var_dump($argv);
-$argv = null;
+var_dump($_SERVER['argv']);
+$_SERVER['argv'] = null;
 var_dump(getopt("abcd"));
 ?>
 --EXPECT--

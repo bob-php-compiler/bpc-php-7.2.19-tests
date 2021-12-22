@@ -2,8 +2,6 @@
 Bug #43293 (Multiple segfaults in getopt())
 --ARGS--
 -f --f
---INI--
-register_argc_argv=On
 --FILE--
 <?php
 $args = array(true, false, "f");

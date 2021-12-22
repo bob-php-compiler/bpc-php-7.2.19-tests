@@ -342,6 +342,8 @@
 
 19. no ini magic_quotes_gpc
 
+20. no ini register_argc_argv
+
 **syntax**
 
 1. not support GOTO
@@ -857,6 +859,8 @@
 43. get_loaded_extensions() no zend_extensions parameter
 
 44. get_include_files() order different
+
+45. getopt() always use $_SERVER['argv']
 
 ## ext/date
 
