@@ -1,5 +1,7 @@
 --TEST--
 Bug #74708 Wrong reflection on random_bytes and random_int
+--SKIPIF--
+skip not support Reflection
 --FILE--
 <?php
 $rf = new ReflectionFunction('random_bytes');
