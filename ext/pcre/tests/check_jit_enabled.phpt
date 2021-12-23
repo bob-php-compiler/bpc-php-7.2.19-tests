@@ -5,7 +5,6 @@ Check for JIT enablement status
 if (ini_get("pcre.jit") === FALSE) {
 	die("skip no jit built");
 }
-echo "skip TODO";
 --FILE--
 <?php
 
