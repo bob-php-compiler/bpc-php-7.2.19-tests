@@ -2,6 +2,8 @@
 Test get_browser() against a larger corpus
 --INI--
 browscap={PWD}/browscap_lite_2016_12_06.ini
+--SKIPIF--
+skip functions not implemented
 --FILE--
 <?php
 

@@ -3,6 +3,7 @@ Bug #65550 (get_browser() incorrectly parses entries with "+" sign)
 --INI--
 browscap={PWD}/browscap.ini
 --SKIPIF--
+skip functions not implemented
 <?php
 if (!is_readable(ini_get('browscap'))) die('skip browscap.ini file ' . ini_get('browscap') . ' not readable');
 ?>

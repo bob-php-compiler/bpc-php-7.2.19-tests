@@ -664,6 +664,7 @@
     - php_ini_scanned_files
     - phpcredits
     - zend_thread_id
+    - get_browser
 
 ------------------------------------
 

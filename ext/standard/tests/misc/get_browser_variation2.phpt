@@ -3,6 +3,7 @@ Test get_browser() function variation : Return data as object
 --INI--
 browscap={PWD}/browscap.ini
 --SKIPIF--
+skip functions not implemented
 <?php
 	/**
 	 * Basic test, it would be pretty much coincidence if there's
