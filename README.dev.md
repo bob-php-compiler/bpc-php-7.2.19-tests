@@ -868,6 +868,11 @@
 
 45. getopt() always use $_SERVER['argv']
 
+46. phpinfo()
+
+    - not support INFO_CREDITS INFO_LICENSE
+    - details info may different
+
 ## ext/date
 
 1. ini_set date.timezone warning message
