@@ -10,5 +10,6 @@ Francesco Fullone ff@ideato.it
   var_dump(time_sleep_until());
 ?>
 --EXPECTF--
-Warning: time_sleep_until() expects exactly 1 parameter, 0 given in %s on line 2
-NULL
+*** ERROR:compile-error:
+Error: Too few arguments to function time_sleep_until(): 1 required, 0 provided in %s on line %d
+ -- compile-error
