@@ -8,16 +8,10 @@ Test uniqid() function : error conditions
 */
 echo "*** Testing uniqid() : error conditions ***\n";
 
-echo "\n-- Testing uniqid() function with more than expected no. of arguments --\n";
-$prefix = null;
-$more_entropy = false;
-$extra_arg = false;
-var_dump(uniqid($prefix, $more_entropy, $extra_arg));
-
 echo "\n-- Testing uniqid() function with invalid values for \$prefix --\n";
 class class1{}
 $obj = new class1();
-$res = fopen(__FILE__, "r");
+$res = fopen('/proc/self/comm', "r");
 $array = array(1,2,3);
 
 uniqid($array, false);
@@ -30,11 +24,6 @@ fclose($res);
 ===DONE===
 --EXPECTF--
 *** Testing uniqid() : error conditions ***
-
--- Testing uniqid() function with more than expected no. of arguments --
-
-Warning: uniqid() expects at most 2 parameters, 3 given in %s on line %d
-NULL
 
 -- Testing uniqid() function with invalid values for $prefix --
 
