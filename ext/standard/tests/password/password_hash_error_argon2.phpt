@@ -7,12 +7,12 @@ if (!defined('PASSWORD_ARGON2ID')) die('skip password_hash not built with Argon2
 ?>
 --FILE--
 <?php
-var_dump(password_hash('test', PASSWORD_ARGON2I, ['memory_cost' => 0]));
-var_dump(password_hash('test', PASSWORD_ARGON2I, ['time_cost' => 0]));
-var_dump(password_hash('test', PASSWORD_ARGON2I, ['threads' => 0]));
-var_dump(password_hash('test', PASSWORD_ARGON2ID, ['memory_cost' => 0]));
-var_dump(password_hash('test', PASSWORD_ARGON2ID, ['time_cost' => 0]));
-var_dump(password_hash('test', PASSWORD_ARGON2ID, ['threads' => 0]));
+var_dump(password_hash('test', PASSWORD_ARGON2I, array('memory_cost' => 0)));
+var_dump(password_hash('test', PASSWORD_ARGON2I, array('time_cost' => 0)));
+var_dump(password_hash('test', PASSWORD_ARGON2I, array('threads' => 0)));
+var_dump(password_hash('test', PASSWORD_ARGON2ID, array('memory_cost' => 0)));
+var_dump(password_hash('test', PASSWORD_ARGON2ID, array('time_cost' => 0)));
+var_dump(password_hash('test', PASSWORD_ARGON2ID, array('threads' => 0)));
 ?>
 --EXPECTF--
 Warning: password_hash(): Memory cost is outside of allowed memory range in %s on line %d
