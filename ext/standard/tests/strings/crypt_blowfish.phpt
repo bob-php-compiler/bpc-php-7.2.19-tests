@@ -107,4 +107,6 @@ foreach($tests2 as $test) {
 31. OK
 32. OK
 33. OK
+
+Warning: crypt(): salt '*0' has the wrong format in strings/crypt_blowfish.php on line 56
 34. OK

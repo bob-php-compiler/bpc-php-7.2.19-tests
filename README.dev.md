@@ -705,7 +705,7 @@
 
 12. crypt()
 
-    bpc simply use the C function `crypt()`, so not support CRYPT_EXT_DES and CRYPT_BLOWFISH
+    bpc simply use the C function `crypt()` + crypt_blowfish(https://www.openwall.com/crypt/), so not support CRYPT_EXT_DES
     bpc warning if C `crypt()` return NULL
 
 13. php8 levenshtein()
