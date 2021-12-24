@@ -2,11 +2,6 @@
 Test error operation of password_hash()
 --FILE--
 <?php
-//-=-=-=-
-
-var_dump(password_hash());
-
-var_dump(password_hash("foo"));
 
 var_dump(password_hash("foo", array()));
 
@@ -23,12 +18,6 @@ var_dump(password_hash('123', PASSWORD_BCRYPT, array('salt' => 1234)));
 
 ?>
 --EXPECTF--
-Warning: password_hash() expects at least 2 parameters, 0 given in %s on line %d
-NULL
-
-Warning: password_hash() expects at least 2 parameters, 1 given in %s on line %d
-NULL
-
 Notice: Array to string conversion in %s on line %d
 
 Warning: password_hash(): Unknown password hashing algorithm: Array in %s on line %d
