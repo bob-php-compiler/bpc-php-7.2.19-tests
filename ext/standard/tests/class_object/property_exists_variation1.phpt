@@ -1,5 +1,7 @@
 --TEST--
 Test property_exists() function : class auto loading
+--ARGS--
+--bpc-include-file ext/standard/tests/class_object/AutoTest.inc \
 --FILE--
 <?php
 /* Prototype  : bool property_exists(mixed object_or_class, string property_name)
