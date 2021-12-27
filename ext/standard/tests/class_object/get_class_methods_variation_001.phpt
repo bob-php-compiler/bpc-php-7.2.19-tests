@@ -9,7 +9,7 @@ Test get_class_methods() function : usage variations  - unexpected types
  */
 
 
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	echo "Error: $err_no - $err_msg, $filename($linenum)\n";
 }
 set_error_handler('test_error_handler');
@@ -84,8 +84,6 @@ echo "Done";
 ?>
 --EXPECTF--
 *** Testing get_class_methods() : usage variations ***
-Error: 8 - Undefined variable: undefined_var, %s(67)
-Error: 8 - Undefined variable: unset_var, %s(70)
 
 Arg value 0 
 NULL
