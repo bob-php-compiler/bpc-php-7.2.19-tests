@@ -18,10 +18,6 @@ var_dump( get_declared_classes($extra_arg) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing get_declared_classes() : error conditions ***
-
--- Testing get_declared_classes() function with one argument --
-
-Warning: get_declared_classes() expects exactly 0 parameters, 1 given in %s on line 13
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function get_declared_classes(): 0 at most, 1 provided in %s on line 13
+ -- compile-error
