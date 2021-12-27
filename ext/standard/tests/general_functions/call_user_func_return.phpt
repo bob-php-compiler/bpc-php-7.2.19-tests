@@ -12,15 +12,6 @@ function test1($arg1, $arg2)
 	return $t1;
 }
 
-$t2 = 'test2';
-
-function & test2($arg1, $arg2)
-{
-	global $t2;
-	echo "$arg1 $arg2\n";
-	return $t2;
-}
-
 function test($func)
 {
 	debug_zval_dump($func('Direct', 'Call'));
@@ -28,17 +19,12 @@ function test($func)
 }
 
 test('test1');
-test('test2');
 
 ?>
 ===DONE===
 --EXPECTF--
 Direct Call
-string(5) "test1" refcount(%d)
+string(5) "test1"
 User Func
-string(5) "test1" refcount(%d)
-Direct Call
-string(5) "test2" refcount(%d)
-User Func
-string(5) "test2" refcount(%d)
+string(5) "test1"
 ===DONE===
