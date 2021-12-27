@@ -1,9 +1,10 @@
 --TEST--
 Test is_a() function : usage variations  - wrong type for arg 1
 --INI--
-error_reporting=E_ALL | E_STRICT | E_DEPRECATED
+error_reporting=32767
 --FILE--
 <?php
+// E_ALL | E_STRICT | E_DEPRECATED = 32767
 /* Prototype  : proto bool is_a(object object, string class_name)
  * Description: Returns true if the object is of this class or has this class as one of its parents
  * Source code: Zend/zend_builtin_functions.c
@@ -70,7 +71,7 @@ $values = array(
 // loop through each element of the array for object
 
 foreach($values as $value) {
-      echo @"\nArg value $value \n";
+      echo @("\nArg value $value \n");
       var_dump( is_a($value, $class_name) );
 };
 
@@ -78,10 +79,6 @@ echo "Done";
 ?>
 --EXPECTF--
 *** Testing is_a() : usage variations ***
-
-Notice: Undefined variable: undefined_var in %s on line 59
-
-Notice: Undefined variable: unset_var in %s on line 62
 
 Arg value 0 
 bool(false)
