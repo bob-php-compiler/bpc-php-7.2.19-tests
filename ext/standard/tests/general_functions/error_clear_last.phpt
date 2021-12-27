@@ -7,7 +7,8 @@ var_dump(error_get_last());
 error_clear_last();
 var_dump(error_get_last());
 
-@$a = $b;
+$b = array();
+@$a = $b[0];
 
 var_dump(error_get_last());
 error_clear_last();
@@ -22,7 +23,7 @@ array(4) {
   ["type"]=>
   int(8)
   ["message"]=>
-  string(21) "Undefined variable: b"
+  string(19) "Undefined offset: 0"
   ["file"]=>
   string(%d) "%s"
   ["line"]=>
