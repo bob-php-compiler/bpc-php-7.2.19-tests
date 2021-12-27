@@ -67,7 +67,7 @@ $values = array(
 // loop through each element of the array for object
 
 foreach($values as $value) {
-      echo @"\nArg value: $value (type: " . gettype($value) . ")\n";
+      echo @("\nArg value: $value (type: " . gettype($value) . ")\n");
       var_dump( get_class($value) );
 };
 
@@ -75,10 +75,6 @@ echo "Done";
 ?>
 --EXPECTF--
 *** Testing get_class() : usage variations ***
-
-Notice: Undefined variable: undefined_var in %sget_class_variation_001.php on line 58
-
-Notice: Undefined variable: unset_var in %sget_class_variation_001.php on line 61
 
 Arg value: 0 (type: integer)
 
