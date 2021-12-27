@@ -14,12 +14,14 @@ Test get_class_methods() function : error conditions
 
 echo "*** Testing get_class_methods() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing get_class_methods() function with Zero arguments --\n";
-var_dump( get_class_methods() );
+//Test get_class_methods with one more than the expected number of arguments
+echo "\n-- Testing get_class_methods() function with more than expected no. of arguments --\n";
+$class = 1;
+$extra_arg = 10;
+var_dump( get_class_methods($class, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function get_class_methods(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function get_class_methods(): 1 at most, 2 provided in %s on line %d
  -- compile-error
