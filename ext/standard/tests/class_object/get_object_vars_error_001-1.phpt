@@ -10,12 +10,14 @@ Test get_object_vars() function : error conditions - wrong number of args
 
 echo "*** Testing get_object_vars() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing get_object_vars() function with Zero arguments --\n";
-var_dump( get_object_vars() );
+//Test get_object_vars with one more than the expected number of arguments
+echo "\n-- Testing get_object_vars() function with more than expected no. of arguments --\n";
+$obj = new stdclass();
+$extra_arg = 10;
+var_dump( get_object_vars($obj, $extra_arg) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function get_object_vars(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function get_object_vars(): 1 at most, 2 provided in %s on line %d
  -- compile-error
