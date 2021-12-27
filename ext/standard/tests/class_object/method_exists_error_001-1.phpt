@@ -11,15 +11,13 @@ Test method_exists() function : error conditions - wrong number of args
 echo "*** Testing method_exists() : error conditions ***\n";
 
 
-//Test method_exists with one more than the expected number of arguments
-echo "\n-- Testing method_exists() function with more than expected no. of arguments --\n";
+// Testing method_exists with one less than the expected number of arguments
+echo "\n-- Testing method_exists() function with less than expected no. of arguments --\n";
 $object = new stdclass();
-$method = 'string_val';
-$extra_arg = 10;
-var_dump( method_exists($object, $method, $extra_arg) );
+var_dump( method_exists($object) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function method_exists(): 2 at most, 3 provided in %s on line %d
+Error: Too few arguments to function method_exists(): 2 required, 1 provided in %s on line %d
  -- compile-error

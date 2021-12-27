@@ -10,18 +10,18 @@ Test property_exists() function : error conditions
 
 echo "*** Testing property_exists() : error conditions ***\n";
 
+$object_or_class = "obj";
 $property_name = 'string_val';
+$extra_arg = 10;
 
-echo "\n-- Testing property_exists() function with incorrect arguments --\n";
-var_dump( property_exists(10, $property_name) );
+
+echo "\n-- Testing property_exists() function with more than expected no. of arguments --\n";
+var_dump( property_exists($object_or_class, $property_name, $extra_arg) );
+
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing property_exists() : error conditions ***
-
--- Testing property_exists() function with incorrect arguments --
-
-Warning: First parameter must either be an object or the name of an existing class in %sproperty_exists_error.php on line %d
-NULL
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function property_exists(): 2 at most, 3 provided in %s on line %d
+ -- compile-error
