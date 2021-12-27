@@ -20,10 +20,6 @@ var_dump( get_parent_class($object, $extra_arg) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing get_parent_class() : error conditions ***
-
--- Testing get_parent_class() function with more than expected no. of arguments --
-
-Warning: get_parent_class() expects at most 1 parameter, 2 given in %s on line 15
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function get_parent_class(): 1 at most, 2 provided in %s on line 15
+ -- compile-error
