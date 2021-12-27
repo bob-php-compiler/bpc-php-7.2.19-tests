@@ -19,10 +19,6 @@ var_dump( get_class($object, $extra_arg) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing get_class() : error conditions ***
-
--- Testing get_class() function with more than expected no. of arguments --
-
-Warning: get_class() expects at most 1 parameter, 2 given in %s on line 14
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function get_class(): 1 at most, 2 provided in %s on line 14
+ -- compile-error
