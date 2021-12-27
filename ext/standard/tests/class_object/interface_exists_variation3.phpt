@@ -1,5 +1,7 @@
 --TEST--
 Test interface_exists() function : autoloaded interface
+--ARGS--
+--bpc-include-file ext/standard/tests/class_object/AutoInterface.inc \
 --FILE--
 <?php
 /* Prototype  : bool interface_exists(string classname [, bool autoload])
