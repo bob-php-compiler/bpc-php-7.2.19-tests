@@ -70,13 +70,13 @@ echo "Done";
 Accessing D from global scope:
 array(4) {
   [0]=>
-  string(4) "pubD"
-  [1]=>
-  string(9) "testFromD"
-  [2]=>
   string(4) "pubC"
-  [3]=>
+  [1]=>
   string(9) "testFromC"
+  [2]=>
+  string(4) "pubD"
+  [3]=>
+  string(9) "testFromD"
 }
 Accessing C from C:
 array(4) {
@@ -92,19 +92,19 @@ array(4) {
 Accessing D from C:
 array(7) {
   [0]=>
-  string(5) "protD"
-  [1]=>
-  string(4) "pubD"
-  [2]=>
-  string(9) "testFromD"
-  [3]=>
   string(5) "privC"
-  [4]=>
+  [1]=>
   string(5) "protC"
-  [5]=>
+  [2]=>
   string(4) "pubC"
-  [6]=>
+  [3]=>
   string(9) "testFromC"
+  [4]=>
+  string(5) "protD"
+  [5]=>
+  string(4) "pubD"
+  [6]=>
+  string(9) "testFromD"
 }
 Accessing X from C:
 array(2) {
@@ -125,19 +125,19 @@ array(3) {
 Accessing D from D:
 array(7) {
   [0]=>
-  string(5) "privD"
-  [1]=>
-  string(5) "protD"
-  [2]=>
-  string(4) "pubD"
-  [3]=>
-  string(9) "testFromD"
-  [4]=>
   string(5) "protC"
-  [5]=>
+  [1]=>
   string(4) "pubC"
-  [6]=>
+  [2]=>
   string(9) "testFromC"
+  [3]=>
+  string(5) "privD"
+  [4]=>
+  string(5) "protD"
+  [5]=>
+  string(4) "pubD"
+  [6]=>
+  string(9) "testFromD"
 }
 Accessing X from D:
 array(2) {
@@ -156,13 +156,13 @@ array(2) {
 Accessing D from X:
 array(4) {
   [0]=>
-  string(4) "pubD"
-  [1]=>
-  string(9) "testFromD"
-  [2]=>
   string(4) "pubC"
-  [3]=>
+  [1]=>
   string(9) "testFromC"
+  [2]=>
+  string(4) "pubD"
+  [3]=>
+  string(9) "testFromD"
 }
 Accessing X from X:
 array(4) {
