@@ -10,13 +10,16 @@ Test interface_exists() function : error conditions
 
 echo "*** Testing interface_exists() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing interface_exists() function with Zero arguments --\n";
-var_dump( interface_exists() );
+//Test interface_exists with one more than the expected number of arguments
+echo "\n-- Testing interface_exists() function with more than expected no. of arguments --\n";
+$classname = 'string_val';
+$autoload = true;
+$extra_arg = 10;
+var_dump( interface_exists($classname, $autoload, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function interface_exists(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function interface_exists(): 2 at most, 3 provided in %s on line %d
  -- compile-error
