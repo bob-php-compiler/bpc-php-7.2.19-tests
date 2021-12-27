@@ -1,5 +1,7 @@
 --TEST--
 Test get_declared_classes() function : testing autoloaded classes
+--ARGS--
+--bpc-include-file ext/standard/tests/class_object/AutoLoaded.inc \
 --FILE--
 <?php
 /* Prototype  : proto array get_declared_classes()

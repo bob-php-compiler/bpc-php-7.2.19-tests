@@ -1,5 +1,7 @@
 --TEST--
 Test get_declared_interfaces() function : autoloading of interfaces
+--ARGS--
+--bpc-include-file ext/standard/tests/class_object/AutoInterface.inc \
 --FILE--
 <?php
 /* Prototype  : proto array get_declared_interfaces()
