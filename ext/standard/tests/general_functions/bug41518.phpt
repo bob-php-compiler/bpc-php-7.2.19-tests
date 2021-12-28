@@ -1,6 +1,7 @@
 --TEST--
 Bug #41518 (file_exists() warns of open_basedir restriction on non-existent file)
 --SKIPIF--
+skip no ini open_basedir
 <?php
 $tmp_dir = __DIR__ . '/bug41518';
 mkdir($tmp_dir);
