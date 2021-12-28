@@ -134,6 +134,11 @@
 
     eg. count/sizeof: warning message start with count() not sizeof()
 
+21. register_shutdown_function()
+
+    php may throw exception if object/class method not callable, but warning if function not callable
+    bpc always warning
+
 **object**
 
 1. __destruct

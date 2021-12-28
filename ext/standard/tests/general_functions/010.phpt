@@ -20,7 +20,6 @@ try {
 echo "Done\n";
 ?>
 --EXPECTF--
-Exception: Non-static method test::__call() cannot be called statically
+Warning: register_shutdown_function(): Invalid shutdown callback 'test::__call' passed in %s on line %d
+bool(false)
 Done
-
-Fatal error: Non-static method test::__call() cannot be called statically in %s on line %d
