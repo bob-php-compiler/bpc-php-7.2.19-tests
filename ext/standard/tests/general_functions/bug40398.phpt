@@ -75,10 +75,12 @@ new Derived_6('6');
 ?>
 ===DONE===
 --EXPECTF--
-Base::__construct(1)
+Warning: call_user_func_array() expects parameter 1 to be callable, Derived_1::Base::__construct given in %s on line 16
 Base::__construct(2)
-Base::__construct(3)
-Base::__construct(4)
+
+Warning: call_user_func_array() expects parameter 1 to be callable, Base::__construct given in %s on line 34
+
+Warning: call_user_func_array() expects parameter 1 to be callable, parent::__construct given in %s on line 43
 Base::__construct(5)
 Base::__construct(6)
 ===DONE===
