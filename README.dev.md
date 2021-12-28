@@ -139,6 +139,10 @@
     php may throw exception if object/class method not callable, but warning if function not callable
     bpc always warning
 
+    php seems validate callable again before run shutdown function
+    bpc not
+    @see ext/standard/tests/general_functions/bug32647.phpt
+
 **object**
 
 1. __destruct
