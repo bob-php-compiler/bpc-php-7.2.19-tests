@@ -12,14 +12,13 @@ output_buffering=0
 
 echo "*** Testing ob_get_flush() : error conditions ***\n";
 
-// No ob_start() executed
-var_dump( ob_get_flush() );
+// One extra argument
+$extra_arg = 10;
+var_dump( ob_get_flush( $extra_arg ) );
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing ob_get_flush() : error conditions ***
-
-Notice: ob_get_flush(): failed to delete and flush buffer. No buffer to delete or flush in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function ob_get_flush(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
