@@ -1,5 +1,7 @@
 --TEST--
 Bug #35229 (call_user_func() crashes when argument stack is nearly full)
+--ARGS--
+--bpc-include-file ext/standard/tests/general_functions/test1.inc \
 --FILE--
 <?php
 class test2 {
@@ -9,7 +11,7 @@ class test2 {
 }
 
 spl_autoload_register(function ($class) {
-	eval('class test1 extends test2 {}');
+    include "$class.inc";
 
 	test1::use_stack(
     1,2,3,4,5,6,7,8,9,10,
