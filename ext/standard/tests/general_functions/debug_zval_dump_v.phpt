@@ -146,8 +146,6 @@ NULL
 int(10)
 
 -- Value of $ref_first_var --
-
-Notice: Undefined variable: ref_first_var in %s on line %d
 NULL
 
 -- Value of $first_var --
@@ -165,8 +163,6 @@ int(10)
 int(10)
 
 -- Value of $var_3: (after unsetting var_3) --
-
-Notice: Undefined variable: var_3 in %s on line %d
 NULL
 
 -- Value of $var_2: --
@@ -176,8 +172,6 @@ int(10)
 int(10)
 
 -- Value of $var_1: (after unsetting variable_1) --
-
-Notice: Undefined variable: var_1 in %s on line %d
 NULL
 
 -- Value of $var_2: --
@@ -193,11 +187,11 @@ NULL
 -- Iteration 4 --
 NULL
 -- Iteration 5 --
-string(7) "TRUE123" refcount(%d)
+string(7) "TRUE123"
 -- Iteration 6 --
-string(9) "123string" refcount(%d)
+string(9) "123string"
 -- Iteration 7 --
-string(9) "string123" refcount(%d)
+string(9) "string123"
 -- Iteration 8 --
-string(10) "NULLstring" refcount(%d)
+string(10) "NULLstring"
 Done
