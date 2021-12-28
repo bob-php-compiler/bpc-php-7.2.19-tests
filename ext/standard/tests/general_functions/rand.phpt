@@ -22,10 +22,8 @@ var_dump(mt_srand(-1));
 var_dump(mt_srand(array()));
 
 var_dump(getrandmax());
-var_dump(getrandmax(1));
 
 var_dump(mt_getrandmax());
-var_dump(mt_getrandmax(1));
 
 echo "Done\n";
 ?>
@@ -45,7 +43,7 @@ int(%d)
 NULL
 NULL
 
-Warning: srand() expects parameter 1 to be integer, array given in %s on line %d
+Warning: mt_srand() expects parameter 1 to be integer, array given in %s on line %d
 NULL
 NULL
 NULL
@@ -53,11 +51,5 @@ NULL
 Warning: mt_srand() expects parameter 1 to be integer, array given in %s on line %d
 NULL
 int(%d)
-
-Warning: getrandmax() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
 int(%d)
-
-Warning: mt_getrandmax() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
 Done
