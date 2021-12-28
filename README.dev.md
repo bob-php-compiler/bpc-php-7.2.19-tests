@@ -198,9 +198,7 @@
     ```
     works fine
 
-13. class constant visibility
-
-    bpc not support class constant visibility
+13. not support class constant visibility
 
 14. call parent private method error message
 
