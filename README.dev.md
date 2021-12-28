@@ -176,6 +176,8 @@
 
 9. call_user_func not support "CLASS::STATIC_METHOD"
 
+    bpc support `call_user_func(array($obj, 'parent/self::mthod'))` but not support `call_user_func(array('CLASS', 'parent/self::mthod'))`
+
 10. class name preferred defined name because of CLASS-xxx
 
 11. literal class must exists when compile

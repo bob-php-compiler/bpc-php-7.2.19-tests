@@ -24,9 +24,9 @@ class C extends B {
     }
     public function test() {
         $this->call(array('parent', 'who'));
-        $this->call(array('C', 'parent::who'));
-        $this->call(array('B', 'parent::who'));
-        $this->call(array('E', 'parent::who'));
+        $this->call(array('B', 'who'));
+        $this->call(array('A', 'who'));
+        $this->call(array('D', 'who'));
         $this->call(array('A', 'who'));
         $this->call(array('C', 'who'));
         $this->call(array('B', 'who2'));
@@ -67,8 +67,8 @@ class P extends O {
     }
     public function test() {
         $this->call(array('parent', 'who'));
-        $this->call(array('P', 'parent::who'));
-        $this->call(array($this, 'O::who'));
+        $this->call(array('O', 'who'));
+        $this->call(array($this, 'parent::who'));
         $this->call(array($this, 'B::who'));
     }
 }
@@ -83,11 +83,11 @@ $o->test();
 --EXPECTF--
 parent|who
 B
-C|parent::who
+B|who
 B
-B|parent::who
+A|who
 A
-E|parent::who
+D|who
 D
 A|who
 A
@@ -98,11 +98,11 @@ A
 ===FOREIGN===
 parent|who
 O
-P|parent::who
+O|who
 O
-$this|O::who
+$this|parent::who
 O
 $this|B::who
 
-Warning: call_user_func() expects parameter 1 to be a valid callback, class 'P' is not a subclass of 'B' in %s on line %d
+Warning: call_user_func() expects parameter 1 to be callable, P::B::who given in %s on line %d
 ===DONE===
