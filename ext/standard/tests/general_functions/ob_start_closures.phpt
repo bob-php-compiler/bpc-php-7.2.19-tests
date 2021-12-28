@@ -6,11 +6,11 @@ output_buffering=0
 <?php
 echo "*** Testing ob_start() : closures as output handlers ***\n";
 
-ob_start(function ($output) {
+ob_start(function ($output, $phase) {
   return 'Output (1): ' . $output;
 });
 
-ob_start(function ($output) {
+ob_start(function ($output, $phase) {
   return 'Output (2): ' . $output;
 });
 
