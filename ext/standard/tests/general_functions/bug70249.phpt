@@ -5,13 +5,13 @@ Bug #70249 (Segmentation fault while running PHPUnit tests on phpBB 3.2-dev)
 
 class Logger {
     public function __construct() {
-        register_shutdown_function(function () {
+        register_shutdown_function(function ($obj) {
             // make regular flush before other shutdown functions, which allows session data collection and so on
-            $this->flush();
+            $obj->flush();
             // make sure log entries written by shutdown functions are also flushed
             // ensure "flush()" is called last when there are multiple shutdown functions
-            register_shutdown_function([$this, 'flush'], true);
-        });
+            register_shutdown_function(array($obj, 'flush'), true);
+        }, $this);
     }
 
     public function flush($final = false) {
