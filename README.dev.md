@@ -651,6 +651,8 @@
 
 2. php error/warning/notice/... messages unbuffered
 
+3. no ini url_rewriter
+
 ## ext/standard
 
 **functions not implemented**
