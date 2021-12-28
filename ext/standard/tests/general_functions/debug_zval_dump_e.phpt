@@ -16,7 +16,6 @@ echo "Done\n";
 
 ?>
 --EXPECTF--
-*** Testing error conditions ***
-
-Warning: debug_zval_dump() expects at least %d parameter, %d given in %s on line %d
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function debug_zval_dump(): 1 required, 0 provided in %s on line %d
+ -- compile-error
