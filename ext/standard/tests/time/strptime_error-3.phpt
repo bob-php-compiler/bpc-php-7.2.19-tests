@@ -19,16 +19,18 @@ date_default_timezone_set("Europe/London");
 
 echo "*** Testing strptime() : error conditions ***\n";
 
+echo "\n-- Testing strptime() function with less than expected no. of arguments --\n";
 $format = '%b %d %Y %H:%M:%S';
+$timestamp = mktime(8, 8, 8, 8, 8, 2008);
+$date = strftime($format, $timestamp);
 
-echo "\n-- Testing strptime() function on failure --\n";
-var_dump( strptime('foo', $format) );
+echo "\n-- Testing strptime() function with more than expected no. of arguments --\n";
+$extra_arg = 10;
+var_dump( strptime($date, $format, $extra_arg) );
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing strptime() : error conditions ***
-
--- Testing strptime() function on failure --
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function strptime(): 2 at most, 3 provided in %s on line %d
+ -- compile-error

@@ -19,16 +19,12 @@ date_default_timezone_set("Europe/London");
 
 echo "*** Testing strptime() : error conditions ***\n";
 
-$format = '%b %d %Y %H:%M:%S';
-
-echo "\n-- Testing strptime() function on failure --\n";
-var_dump( strptime('foo', $format) );
+echo "\n-- Testing strptime() function with Zero arguments --\n";
+var_dump( strptime() );
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Testing strptime() : error conditions ***
-
--- Testing strptime() function on failure --
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too few arguments to function strptime(): 2 required, 0 provided in %s on line %d
+ -- compile-error
