@@ -17,7 +17,7 @@ $a = array(1,2,3,4,5);
 $b = true;
 $n = NULL;
 $obj = new foo;
-$res = fopen(__FILE__, "r");
+$res = fopen('/proc/self/comm', "r");
 
 echo "Integer test: " . (isset($i) ? "YES": "NO")  . "\n";
 echo "Float test: " . (isset($f) ? "YES": "NO") . "\n";
