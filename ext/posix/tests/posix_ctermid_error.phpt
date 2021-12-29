@@ -15,5 +15,6 @@ var_dump( posix_ctermid( 'foo' ) );
 
 ?>
 --EXPECTF--
-Warning: posix_ctermid() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_ctermid(): 0 at most, 1 provided in %s on line %d
+ -- compile-error

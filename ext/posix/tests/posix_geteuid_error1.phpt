@@ -15,23 +15,9 @@ echo "*** Test by calling method or function with incorrect numbers of arguments
 $extra_args = array( 12312, 2 => '1234', 'string' => 'string' );
 
 var_dump( posix_geteuid( $extra_args ));
-foreach ( $extra_args as $arg )
-{
-	var_dump(posix_geteuid( $arg ));
-}
 
 ?>
 --EXPECTF--
-*** Test by calling method or function with incorrect numbers of arguments ***
-
-Warning: posix_geteuid() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
-
-Warning: posix_geteuid() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
-
-Warning: posix_geteuid() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
-
-Warning: posix_geteuid() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_geteuid(): 0 at most, 1 provided in %s on line %d
+ -- compile-error

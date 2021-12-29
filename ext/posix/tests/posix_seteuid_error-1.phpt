@@ -14,14 +14,11 @@ Francesco Fullone ff@ideato.it
 
 echo "*** Test by calling method or function with incorrect numbers of arguments ***\n";
 
-$uid = '123';
-$extra_arg = '12312';
-
-var_dump(posix_seteuid( $uid, $extra_arg ) );
+var_dump(posix_seteuid(  ) );
 
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function posix_seteuid(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function posix_seteuid(): 1 required, 0 provided in %s on line %d
  -- compile-error

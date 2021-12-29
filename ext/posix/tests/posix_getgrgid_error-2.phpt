@@ -14,15 +14,15 @@ Test posix_getgrgid() function : error conditions
 
 echo "*** Testing posix_getgrgid() : error conditions ***\n";
 
-echo "\n-- Testing posix_getgrgid() function with a negative group id --\n";
-$gid = -999;
-var_dump( posix_getgrgid($gid));
+//Test posix_getgrgid with one more than the expected number of arguments
+echo "\n-- Testing posix_getgrgid() function with more than expected no. of arguments --\n";
 
-echo "Done";
+$extra_arg = 10;
+$gid = 0;
+var_dump( posix_getgrgid($gid, $extra_arg) );
+
 ?>
 --EXPECTF--
-*** Testing posix_getgrgid() : error conditions ***
-
--- Testing posix_getgrgid() function with a negative group id --
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_getgrgid(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

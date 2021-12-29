@@ -14,15 +14,12 @@ Test posix_getgrgid() function : error conditions
 
 echo "*** Testing posix_getgrgid() : error conditions ***\n";
 
-echo "\n-- Testing posix_getgrgid() function with a negative group id --\n";
-$gid = -999;
-var_dump( posix_getgrgid($gid));
+// Zero arguments
+echo "\n-- Testing posix_getgrgid() function with Zero arguments --\n";
+var_dump( posix_getgrgid() );
 
-echo "Done";
 ?>
 --EXPECTF--
-*** Testing posix_getgrgid() : error conditions ***
-
--- Testing posix_getgrgid() function with a negative group id --
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too few arguments to function posix_getgrgid(): 1 required, 0 provided in %s on line %d
+ -- compile-error

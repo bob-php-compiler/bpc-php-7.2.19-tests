@@ -22,10 +22,6 @@ var_dump( posix_getpgrp($extra_arg) );
 echo "Done";
 ?>
 --EXPECTF--
-*** Testing posix_getpgrp() : error conditions ***
-
--- Testing posix_getpgrp() function with one argument --
-
-Warning: posix_getpgrp() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_getpgrp(): 0 at most, 1 provided in %s on line %d
+ -- compile-error

@@ -17,16 +17,10 @@ $gid = posix_getgid();
 $extra_arg = '123';
 
 var_dump(posix_setgid( $gid, $extra_arg ) );
-var_dump(posix_setgid(  ) );
 
 ?>
 ===DONE===
 --EXPECTF--
-*** Test by calling method or function with incorrect numbers of arguments ***
-
-Warning: posix_setgid() expects exactly 1 parameter, 2 given in %s on line %d
-bool(false)
-
-Warning: posix_setgid() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_setgid(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

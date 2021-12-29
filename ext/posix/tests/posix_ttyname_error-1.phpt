@@ -16,13 +16,10 @@ if (!extension_loaded('posix')) {
 
 echo "*** Test by calling method or function with incorrect numbers of arguments ***\n";
 
-$fd = 'foo';
-$extra_arg = 'bar';
-
-var_dump(posix_ttyname( $fd, $extra_arg ) );
+var_dump(posix_ttyname(  ) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function posix_ttyname(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function posix_ttyname(): 1 required, 0 provided in %s on line %d
  -- compile-error

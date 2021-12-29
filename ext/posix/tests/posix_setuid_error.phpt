@@ -21,15 +21,8 @@ $extra_arg = '12312';
 
 var_dump(posix_setuid( $uid, $extra_arg ) );
 
-var_dump(posix_setuid(  ) );
-
-
 ?>
 --EXPECTF--
-*** Test by calling method or function with incorrect numbers of arguments ***
-
-Warning: posix_setuid() expects exactly 1 parameter, 2 given in %s on line 11
-bool(false)
-
-Warning: posix_setuid() expects exactly 1 parameter, 0 given in %s on line 13
-bool(false)
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_setuid(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

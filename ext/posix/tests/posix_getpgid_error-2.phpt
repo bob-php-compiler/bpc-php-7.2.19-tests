@@ -16,15 +16,13 @@ if((!extension_loaded("posix")) || (!function_exists("posix_getpgid"))) {
 
 echo "*** Testing posix_getpgid() : error conditions ***\n";
 
-echo "\n-- Testing posix_getpgid() with negative pid  --\n";
-$pid = -99;
-var_dump( posix_getpgid($pid) );
+echo "\n-- Testing posix_getpgid() with one extra argument --\n";
+$pid = 10;
+$extra_arg = 20;
+var_dump( posix_getpgid($pid, $extra_arg) );
 
-echo "Done";
 ?>
 --EXPECTF--
-*** Testing posix_getpgid() : error conditions ***
-
--- Testing posix_getpgid() with negative pid  --
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_getpgid(): 1 at most, 2 provided in %s on line %d
+ -- compile-error

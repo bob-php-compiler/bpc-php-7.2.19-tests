@@ -16,24 +16,14 @@ Test posix_kill() function : error conditions
 echo "*** Testing posix_kill() : error conditions ***\n";
 
 
-echo "\n-- Testing posix_kill() function with invalid signal --\n";
+echo "\n-- Testing posix_kill() function with more than expected no. of arguments --\n";
 $pid = posix_getpid();
-$sig = 999;
-var_dump( posix_kill($pid, 999) );
-
-echo "\n-- Testing posix_kill() function with negative pid --\n";
-$pid = -999;
 $sig = 9;
-var_dump( posix_kill($pid, 999) );
+$extra_arg = 10;
+var_dump( posix_kill($pid, $sig, $extra_arg) );
 
-echo "Done";
 ?>
 --EXPECTF--
-*** Testing posix_kill() : error conditions ***
-
--- Testing posix_kill() function with invalid signal --
-bool(false)
-
--- Testing posix_kill() function with negative pid --
-bool(false)
-Done
+*** ERROR:compile-error:
+Error: Too many arguments to function posix_kill(): 2 at most, 3 provided in %s on line %d
+ -- compile-error

@@ -1,5 +1,5 @@
 --TEST--
-Test function posix_seteuid() by calling it more than or less than its expected arguments
+Test function posix_setuid() by calling it more than or less than its expected arguments
 --SKIPIF--
 <?php
         if(!extension_loaded("posix")) print "skip - POSIX extension not loaded";
@@ -14,14 +14,10 @@ Francesco Fullone ff@ideato.it
 
 echo "*** Test by calling method or function with incorrect numbers of arguments ***\n";
 
-$uid = '123';
-$extra_arg = '12312';
-
-var_dump(posix_seteuid( $uid, $extra_arg ) );
-
+var_dump(posix_setuid(  ) );
 
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too many arguments to function posix_seteuid(): 1 at most, 2 provided in %s on line %d
+Error: Too few arguments to function posix_setuid(): 1 required, 0 provided in %s on line %d
  -- compile-error

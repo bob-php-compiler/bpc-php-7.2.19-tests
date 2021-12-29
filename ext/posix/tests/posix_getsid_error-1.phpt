@@ -13,12 +13,10 @@ PHP Testfest Berlin 2009-05-10
 ?>
 --FILE--
 <?php
-var_dump( posix_getsid(array()) );
-var_dump( posix_getsid(-1) );
+var_dump( posix_getsid() );
 ?>
 ===DONE===
 --EXPECTF--
-Warning: posix_getsid() expects parameter 1 to be integer, array given in %s on line %d
-bool(false)
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too few arguments to function posix_getsid(): 1 required, 0 provided in %s on line %d
+ -- compile-error
