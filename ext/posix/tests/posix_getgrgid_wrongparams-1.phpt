@@ -13,12 +13,10 @@ if (strtolower(PHP_OS) == 'darwin') {
 }
 --FILE--
 <?php
-$gid = PHP_INT_MAX; // obscene high gid
-var_dump(posix_getgrgid($gid));
-var_dump(posix_getgrgid(-1));
+var_dump(posix_getgrgid());
 ?>
 ===DONE===
 --EXPECTF--
-bool(false)
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too few arguments to function posix_getgrgid(): 1 required, 0 provided in %s on line %d
+ -- compile-error
