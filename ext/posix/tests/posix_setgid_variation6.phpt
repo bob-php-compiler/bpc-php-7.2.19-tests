@@ -16,7 +16,7 @@ echo "*** Test substituting argument 1 with object values ***\n";
 
 
 
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
         if (error_reporting() != 0) {
                 // report non-silenced errors
                 echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -55,4 +55,4 @@ bool(false)
 Error: 2 - posix_setgid() expects parameter 1 to be integer, object given, %s
 bool(false)
 ===DONE===
-	
+
