@@ -11,9 +11,10 @@ if (!extension_loaded('posix')) {
 ?>
 --FILE--
 <?php
-var_dump(posix_mkfifo(null, 0644));
+posix_mkfifo(null);
 ?>
 ===DONE===
 --EXPECTF--
-bool(false)
-===DONE===
+*** ERROR:compile-error:
+Error: Too few arguments to function posix_mkfifo(): 2 required, 1 provided in %s on line %d
+ -- compile-error
