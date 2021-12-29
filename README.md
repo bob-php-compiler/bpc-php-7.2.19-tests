@@ -2,6 +2,8 @@
 
 - [x] tests
 - [x] Zend
+- [x] ext/standard
+- [x] ext/posix
 - [x] ext/date
 - [x] ext/pcre
 - [x] ext/mbstring
