@@ -281,6 +281,13 @@
 
     compile error
 
+35. foreach on object
+
+    @see Zend/tests/foreach_018.phpt
+    keys looked like mangled properties not worked
+    
+    eq `foreach (get_object_vars($obj) as $k => $v) {}`
+
 **array**
 
 1. array copy/separate different
