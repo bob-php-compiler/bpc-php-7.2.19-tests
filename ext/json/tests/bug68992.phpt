@@ -12,7 +12,7 @@ class MyClass implements JsonSerializable {
 	    throw new Exception('Not implemented!');
 	}
 }
-$classes = [];
+$classes = array();
 for($i = 0; $i < 5; $i++) {
     $classes[] = new MyClass();
 }
