@@ -6,9 +6,10 @@ if (!extension_loaded('json')) die("skip requires ext/json");
 ?>
 --INI--
 precision=14
-error_reporting = E_ALL & ~E_NOTICE | E_STRICT
+error_reporting = 32759
 --FILE--
 <?php
+// E_ALL & ~E_NOTICE | E_STRICT = 32759
 /* Prototype: bool is_callable ( mixed $var [, bool $syntax_only [, string &$callable_name]] );
    Description: Verify that the contents of a variable can be called as a function
                 In case of objects, $var = array($SomeObject, 'MethodName')
