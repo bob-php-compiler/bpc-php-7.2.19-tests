@@ -7,6 +7,7 @@
 - [x] ext/date
 - [x] ext/pcre
 - [x] ext/mbstring
+- [x] ext/json
 - [x] bpc
 
 # Requirements
