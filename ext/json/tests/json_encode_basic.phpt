@@ -11,7 +11,7 @@ $unset_var = 10;
 unset ($unset_var);
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // get an object
 class sample  {
