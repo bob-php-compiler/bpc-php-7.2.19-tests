@@ -5,7 +5,7 @@ An error is thrown when an unsupported type is encoded
 --FILE--
 <?php
 
-$resource = fopen(__FILE__, "r");
+$resource = fopen('/proc/self/comm', "r");
 
 var_dump($resource);
 
