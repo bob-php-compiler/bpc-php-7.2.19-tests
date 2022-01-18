@@ -923,3 +923,8 @@
 2. finfo::__construct()
 
     php finfo::finfo()
+
+3. finfo_file()
+
+    bpc check filename is path as argument
+    php check filename is string as argument, then check is valid path
