@@ -928,3 +928,6 @@
 
     bpc check filename is path as argument
     php check filename is string as argument, then check is valid path
+    
+    bpc call magic_file()
+    php call magic_stream()
