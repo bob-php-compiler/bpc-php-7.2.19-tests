@@ -8,6 +8,7 @@
 - [x] ext/pcre
 - [x] ext/mbstring
 - [x] ext/json
+- [x] ext/fileinfo
 - [x] bpc
 
 # Requirements
