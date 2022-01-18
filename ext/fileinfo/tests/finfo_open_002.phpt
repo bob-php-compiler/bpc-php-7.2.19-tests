@@ -1,5 +1,7 @@
 --TEST--
 FileInfo - Calling the constructor twice
+--SKIPIF--
+skip invalid test, bpc will leak memory
 --FILE--
 <?php
 
