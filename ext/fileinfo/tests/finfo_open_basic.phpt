@@ -1,5 +1,7 @@
 --TEST--
 Test finfo_open() function : basic functionality
+--CAPTURE_STDIO--
+STDOUT
 --FILE--
 <?php
 /* Prototype  : resource finfo_open([int options [, string arg]])
@@ -8,7 +10,7 @@ Test finfo_open() function : basic functionality
  * Alias to functions:
  */
 
-$magicFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'magic';
+$magicFile = './magic';
 
 echo "*** Testing finfo_open() : basic functionality ***\n";
 
