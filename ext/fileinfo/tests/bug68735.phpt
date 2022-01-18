@@ -1,7 +1,5 @@
 --TEST--
 Bug #68735 fileinfo out-of-bounds memory access
---SKIPIF--
-<?php require_once(dirname(__FILE__) . '/skipif.inc'); ?>
 --FILE--
 <?php
 	$test_file = dirname(__FILE__) . DIRECTORY_SEPARATOR . "bug68735.jpg";

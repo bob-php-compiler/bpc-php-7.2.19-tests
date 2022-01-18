@@ -1,7 +1,5 @@
 --TEST--
 mime_content_type(): Testing wrong parameters
---SKIPIF--
-<?php require_once(dirname(__FILE__) . '/skipif.inc'); ?>
 --FILE--
 <?php
 

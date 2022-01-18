@@ -1,7 +1,5 @@
 --TEST--
 Bug #68735 fileinfo out-of-bounds memory access
---SKIPIF--
-<?php require_once(dirname(__FILE__) . '/skipif.inc'); ?>
 --FILE--
 <?php
 $a='#!env python
