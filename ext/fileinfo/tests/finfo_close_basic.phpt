@@ -1,5 +1,7 @@
 --TEST--
 Test finfo_close() function : basic functionality
+--CAPTURE_STDIO--
+STDOUT
 --FILE--
 <?php
 /* Prototype  : resource finfo_close(resource finfo)
@@ -10,7 +12,7 @@ Test finfo_close() function : basic functionality
 
 echo "*** Testing finfo_close() : basic functionality ***\n";
 
-$magicFile = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'magic';
+$magicFile = './magic';
 
 $finfo = finfo_open( FILEINFO_MIME, $magicFile );
 var_dump( $finfo );
