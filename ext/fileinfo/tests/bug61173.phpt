@@ -1,9 +1,5 @@
 --TEST--
 Bug #61173: Unable to detect error from finfo constructor
---SKIPIF--
-<?php
-if (!class_exists('finfo'))
-	die('skip no fileinfo extension');
 --FILE--
 <?php
 
@@ -14,4 +10,5 @@ try {
     echo $e->getMessage(), "\n";
 }
 --EXPECTF--
-finfo::finfo() expects at most 2 parameters, 3 given
+object(finfo)#%d (0) {
+}

@@ -15,6 +15,7 @@
     compile error (functions) or runtime warning (functions/builtin class methods)
     user defined class methods is fine.
     bpc continue to run the function while php return NULL if the function is builtin.
+    for method with default value arguments, bpc not check arguments count. @see ext/fileinfo/tests/bug61173.phpt
 
 3. must take exactly arguments
 
