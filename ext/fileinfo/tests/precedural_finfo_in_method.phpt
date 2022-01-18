@@ -6,7 +6,7 @@ Using procedural finfo API in a method
 class Test {
     public function method() {
         $finfo = finfo_open(FILEINFO_MIME);
-        var_dump(finfo_file($finfo, __FILE__));
+        var_dump(finfo_file($finfo, 'precedural_finfo_in_method.php'));
     }
 }
 
