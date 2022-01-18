@@ -931,3 +931,7 @@
     
     bpc call magic_file()
     php call magic_stream()
+
+4. mime_content_type()
+
+    for file, bpc call magic_file(), php call magic_stream()
