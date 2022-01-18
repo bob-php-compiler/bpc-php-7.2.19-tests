@@ -1,5 +1,7 @@
 --TEST--
 Test finfo_set_flags() function : basic functionality
+--CAPTURE_STDIO--
+STDOUT
 --FILE--
 <?php
 /* Prototype  : bool finfo_set_flags(resource finfo, int options)
@@ -8,21 +10,24 @@ Test finfo_set_flags() function : basic functionality
  * Alias to functions:
  */
 
-$magicFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'magic';
+$magicFile = './magic';
 $finfo = finfo_open( FILEINFO_MIME, $magicFile );
 
 echo "*** Testing finfo_set_flags() : basic functionality ***\n";
 
 var_dump( finfo_set_flags( $finfo, FILEINFO_NONE ) );
 var_dump( finfo_set_flags( $finfo, FILEINFO_SYMLINK ) );
-var_dump( finfo_set_flags() );
 
 finfo_close( $finfo );
 
 // OO way
 $finfo = new finfo( FILEINFO_NONE, $magicFile );
 var_dump( $finfo->set_flags( FILEINFO_MIME ) );
-var_dump( $finfo->set_flags() );
+try {
+    var_dump( $finfo->set_flags() );
+} catch (ArgumentCountError $e) {
+    echo $e->getMessage(), "\n";
+}
 
 ?>
 ===DONE===
@@ -30,11 +35,6 @@ var_dump( $finfo->set_flags() );
 *** Testing finfo_set_flags() : basic functionality ***
 bool(true)
 bool(true)
-
-Warning: finfo_set_flags() expects exactly 2 parameters, 0 given in %s on line %d
-bool(false)
 bool(true)
-
-Warning: finfo::set_flags() expects exactly 1 parameter, 0 given in %s on line %d
-bool(false)
+Too few arguments to method finfo::set_flags(): 1 required, 0 provided
 ===DONE===
