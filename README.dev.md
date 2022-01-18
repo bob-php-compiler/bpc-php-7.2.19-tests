@@ -652,6 +652,8 @@
     tests/basic/timeout_variation_*.phpt sometimes got empty output
     ext/standard/tests/file/popen_pclose_basic.phpt sort output should not come first
 
+34. resource id may different
+
 ## output buffering
 
 1. chunk_size and buffer_used different
@@ -910,3 +912,14 @@
 4. no ini mbstring.http_*, mbstring.encoding_translation
 
 5. mb_convert_variables() corrupts reference of array element
+
+## ext/fileinfo
+
+1. finfo_open()
+
+    bpc not try to open magic_database before call magic_load()
+    bpc not capture libmagic warning
+
+2. finfo::__construct()
+
+    php finfo::finfo()
