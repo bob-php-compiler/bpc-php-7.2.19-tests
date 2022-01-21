@@ -1,6 +1,7 @@
 --TEST--
 CURL file uploading
---INI--
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
@@ -23,36 +24,38 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "{$host}/get.php?test=file");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-testcurl($ch, __DIR__ . '/curl_testdata1.txt');
-testcurl($ch, __DIR__ . '/curl_testdata1.txt', 'text/plain');
-testcurl($ch, __DIR__ . '/curl_testdata1.txt', '', 'foo.txt');
-testcurl($ch, __DIR__ . '/curl_testdata1.txt', 'text/plain', 'foo.txt');
+$dir = getcwd();
 
-$file = new CurlFile(__DIR__ . '/curl_testdata1.txt');
+testcurl($ch, $dir . '/curl_testdata1.txt');
+testcurl($ch, $dir . '/curl_testdata1.txt', 'text/plain');
+testcurl($ch, $dir . '/curl_testdata1.txt', '', 'foo.txt');
+testcurl($ch, $dir . '/curl_testdata1.txt', 'text/plain', 'foo.txt');
+
+$file = new CurlFile($dir . '/curl_testdata1.txt');
 $file->setMimeType('text/plain');
 var_dump($file->getMimeType());
 var_dump($file->getFilename());
 curl_setopt($ch, CURLOPT_POSTFIELDS, array("file" => $file));
 var_dump(curl_exec($ch));
 
-$file = curl_file_create(__DIR__ . '/curl_testdata1.txt');
+$file = curl_file_create($dir . '/curl_testdata1.txt');
 $file->setPostFilename('foo.txt');
 var_dump($file->getPostFilename());
 curl_setopt($ch, CURLOPT_POSTFIELDS, array("file" => $file));
 var_dump(curl_exec($ch));
 
 curl_setopt($ch, CURLOPT_SAFE_UPLOAD, 0);
-$params = array('file' => '@' . __DIR__ . '/curl_testdata1.txt');
+$params = array('file' => '@' . $dir . '/curl_testdata1.txt');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
 var_dump(curl_exec($ch));
 
 curl_setopt($ch, CURLOPT_SAFE_UPLOAD, true);
-$params = array('file' => '@' . __DIR__ . '/curl_testdata1.txt');
+$params = array('file' => '@' . $dir . '/curl_testdata1.txt');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
 var_dump(curl_exec($ch));
 
 curl_setopt($ch, CURLOPT_URL, "{$host}/get.php?test=post");
-$params = array('file' => '@' . __DIR__ . '/curl_testdata1.txt');
+$params = array('file' => '@' . $dir . '/curl_testdata1.txt');
 curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
 var_dump(curl_exec($ch));
 

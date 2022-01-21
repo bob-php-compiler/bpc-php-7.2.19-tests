@@ -2,6 +2,8 @@
 Memory corruption error if fp of just created file is closed before curl_close.
 --CREDITS--
 Alexey Shein <confik@gmail.com>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
@@ -9,7 +11,7 @@ include 'server.inc';
 $host = curl_cli_server_start();
 $ch = curl_init($host);
 
-$temp_file = dirname(__FILE__) . '/curl_file_deleted_before_curl_close.tmp';
+$temp_file = 'curl_file_deleted_before_curl_close.tmp';
 if (file_exists($temp_file)) {
 	unlink($temp_file); // file should not exist before test
 }
@@ -31,7 +33,7 @@ echo "Closed correctly\n";
 ?>
 --CLEAN--
 <?php
-unlink(dirname(__FILE__) . '/curl_file_deleted_before_curl_close.tmp');
+unlink('curl_file_deleted_before_curl_close.tmp');
 ?>
 --EXPECT--
 Closed correctly
