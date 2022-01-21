@@ -7,6 +7,8 @@ if ($curl_version['version_number'] > 0x070a08) {
 	exit("skip: tests works a versions of curl >= 7.10.8");
 }
 ?>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 include 'server.inc';
