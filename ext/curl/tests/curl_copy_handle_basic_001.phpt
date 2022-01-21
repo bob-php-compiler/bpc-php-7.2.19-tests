@@ -3,6 +3,8 @@ Test curl_copy_handle() with simple get
 --CREDITS--
 Rick Buitenman <rick@meritos.nl>
 #testfest Utrecht 2009
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
@@ -38,4 +40,4 @@ string(106) "array(2) {
 array(0) {
 }
 "
-===DONE=== 
+===DONE===

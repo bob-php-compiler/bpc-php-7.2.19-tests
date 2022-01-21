@@ -6,6 +6,8 @@ if(substr(PHP_OS, 0, 3) == 'WIN' ) {
     die('skip not for Windows');
 }
 ?>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 

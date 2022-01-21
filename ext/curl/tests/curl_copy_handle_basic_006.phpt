@@ -3,6 +3,8 @@ Test curl_copy_handle() with User Agent
 --CREDITS--
 Rick Buitenman <rick@meritos.nl>
 #testfest Utrecht 2009
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
@@ -33,4 +35,4 @@ Rick Buitenman <rick@meritos.nl>
 *** Testing curl copy handle with User Agent ***
 string(9) "cURL phpt"
 string(9) "cURL phpt"
-===DONE===  
+===DONE===

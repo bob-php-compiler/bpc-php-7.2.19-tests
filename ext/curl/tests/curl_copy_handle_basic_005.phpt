@@ -3,6 +3,8 @@ Test curl_copy_handle() after exec() with POST
 --CREDITS--
 Rick Buitenman <rick@meritos.nl>
 #testfest Utrecht 2009
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
@@ -46,4 +48,4 @@ array(3) {
   string(8) "John Doe"
 }
 "
-===DONE=== 
+===DONE===
