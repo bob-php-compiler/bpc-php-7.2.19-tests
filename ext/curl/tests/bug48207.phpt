@@ -3,6 +3,8 @@ Test curl_setopt() CURLOPT_FILE readonly file handle
 --CREDITS--
 Mark van der Velden
 #testfest Utrecht 2009
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 /*
