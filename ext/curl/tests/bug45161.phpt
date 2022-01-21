@@ -2,6 +2,7 @@
 Bug #45161 (Reusing a curl handle leaks memory)
 --SKIPIF--
 <?php
+echo 'skip gc different';
 if (substr(PHP_OS, 0, 3) == 'WIN') {
 	exit("skip not for Windows");
 }
