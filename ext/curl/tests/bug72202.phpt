@@ -11,7 +11,7 @@ if (getenv("SKIP_ONLINE_TESTS")) {
 ?>
 --FILE--
 <?php
-$a = fopen(__FILE__, "r");
+$a = fopen('/proc/self/comm', "r");
 $b = $a;
 var_dump($a, $b);
 fclose($a);
