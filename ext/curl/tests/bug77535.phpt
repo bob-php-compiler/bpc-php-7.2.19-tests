@@ -2,7 +2,6 @@
 Bug #77535 (Invalid callback, h2 server push)
 --SKIPIF--
 <?php
-include 'skipif.inc';
 if (getenv("SKIP_ONLINE_TESTS")) {
 	die("skip online test");
 }

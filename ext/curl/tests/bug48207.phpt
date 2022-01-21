@@ -3,8 +3,6 @@ Test curl_setopt() CURLOPT_FILE readonly file handle
 --CREDITS--
 Mark van der Velden
 #testfest Utrecht 2009
---SKIPIF--
-<?php include 'skipif.inc'; ?>
 --FILE--
 <?php
 /*

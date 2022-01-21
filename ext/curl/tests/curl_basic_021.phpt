@@ -2,8 +2,6 @@
 Test curl_getinfo() function with CURLINFO_CONTENT_TYPE parameter
 --CREDITS--
 Jean-Marc Fontaine <jmf@durcommefaire.net>
---SKIPIF--
-<?php include 'skipif.inc'; ?>
 --FILE--
 <?php
   include 'server.inc';

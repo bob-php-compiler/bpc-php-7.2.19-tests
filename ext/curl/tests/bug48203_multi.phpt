@@ -1,9 +1,5 @@
 --TEST--
 Variation of bug #48203 with curl_multi_exec (Crash when file pointers passed to curl are closed before calling curl_multi_exec)
---SKIPIF--
-<?php
-include 'skipif.inc';
-?>
 --FILE--
 <?php
 include 'server.inc';

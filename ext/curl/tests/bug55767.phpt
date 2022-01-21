@@ -1,9 +1,5 @@
 --TEST--
 Test curl_opt() function with POST params from array with a numeric key
---SKIPIF--
-<?php
-include 'skipif.inc';
-?>
 --FILE--
 <?php
 /* Prototype  : bool curl_setopt(resource ch, int option, mixed value)

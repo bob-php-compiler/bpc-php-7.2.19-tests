@@ -3,8 +3,6 @@ Curl_multi_getcontent() basic test with different sources (local file/http)
 --CREDITS--
 Rein Velt (rein@velt.org)
 #TestFest Utrecht 20090509
---SKIPIF--
-<?php include 'skipif.inc'; ?>
 --FILE--
 <?php
 	//CURL_MULTI_GETCONTENT TEST

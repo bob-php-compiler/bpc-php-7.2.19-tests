@@ -3,8 +3,6 @@ curl_setopt basic tests with CURLOPT_STDERR.
 --CREDITS--
 Paul Sohier
 #phptestfest utrecht
---SKIPIF--
-<?php include 'skipif.inc'; ?>
 --FILE--
 <?php
 

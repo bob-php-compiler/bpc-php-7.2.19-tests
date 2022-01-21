@@ -3,8 +3,6 @@ curl_setopt() call with CURLOPT_RETURNTRANSFER
 --CREDITS--
 Paul Sohier
 #phptestfest utrecht
---SKIPIF--
-<?php include 'skipif.inc'; ?>
 --FILE--
 <?php
 

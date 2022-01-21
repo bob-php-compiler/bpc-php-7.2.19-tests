@@ -1,7 +1,5 @@
 --TEST--
 Bug #69485 (Double free on zend_list_dtor)
---SKIPIF--
-<?php include 'skipif.inc'; ?>
 --FILE--
 <?php
 

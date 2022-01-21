@@ -2,8 +2,6 @@
 Test curl_multi_exec() function with basic functionality
 --CREDITS--
 TestFest 2009 - AFUP - Thomas Rabaix <thomas.rabaix@gmail.com>
---SKIPIF--
-<?php include 'skipif.inc'; ?>
 --FILE--
 <?php
 /* Prototype  : bool curl_multi_exec(resource ch)
