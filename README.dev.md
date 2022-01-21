@@ -655,9 +655,10 @@
 
 34. resource id may different
 
-35. bigloo (current-error-port) not equal to stderr
+35. STDIN/STDOUT/STDERR not equal to stdin/stdout/stderr
 
     @see ext/curl/tests/bug48203.phpt output order may different
+    @see ext/curl/tests/curl_write_stdout.phpt
 
 ## output buffering
 
