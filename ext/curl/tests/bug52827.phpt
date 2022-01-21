@@ -10,7 +10,7 @@ if (!extension_loaded('curl')) {
 ?>
 --FILE--
 <?php
-$s = fopen('php://temp/maxmemory=1024','wb+');
+$s = fopen('php://temp','wb+');
 
 /* force conversion of inner stream to STDIO.
  * This is not necessary in Windows because the
