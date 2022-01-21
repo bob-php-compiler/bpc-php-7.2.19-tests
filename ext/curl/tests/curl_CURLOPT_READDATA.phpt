@@ -3,6 +3,8 @@ Test CURLOPT_READDATA without a callback function
 --CREDITS--
 Mattijs Hoitink mattijshoitink@gmail.com
 #Testfest Utrecht 2009
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
