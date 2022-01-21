@@ -1,5 +1,7 @@
 --TEST--
 Test curl_opt() function with POST params from array with a numeric key
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 /* Prototype  : bool curl_setopt(resource ch, int option, mixed value)

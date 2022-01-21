@@ -1,5 +1,7 @@
 --TEST--
 Bug #66109 (Option CURLOPT_CUSTOMREQUEST can't be reset to default.)
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 include 'server.inc';
