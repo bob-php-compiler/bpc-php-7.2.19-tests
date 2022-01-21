@@ -19,10 +19,6 @@ var_dump( curl_version(1, $extra_arg) );
 ?>
 ===Done===
 --EXPECTF--
-*** Testing curl_version() : error conditions ***
-
--- Testing curl_version() function with more than expected no. of arguments --
-
-Warning: curl_version() expects at most 1 parameter, 2 given in %s on line %d
-NULL
-===Done===
+*** ERROR:compile-error:
+Error: Too many arguments to function curl_version(): 1 at most, 2 provided in %s on line %d
+ -- compile-error
