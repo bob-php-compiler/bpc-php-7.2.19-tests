@@ -3,10 +3,6 @@ cURL option CURLOPT_READFUNCTION
 --CREDITS--
 WHITE new media architects - Jeroen Vermeulen
 #testfest Utrecht 2009
---SKIPIF--
-<?php
-if (!extension_loaded("curl")) print "skip cURL extension not loaded";
-?>
 --FILE--
 <?php
 function custom_readfunction($oCurl, $hReadHandle, $iMaxOut)
@@ -19,7 +15,7 @@ function custom_readfunction($oCurl, $hReadHandle, $iMaxOut)
   return $sData;
 }
 
-$sFileBase  = dirname(__FILE__).DIRECTORY_SEPARATOR.'curl_opt_CURLOPT_READFUNCTION';
+$sFileBase  = getcwd().DIRECTORY_SEPARATOR.'curl_opt_CURLOPT_READFUNCTION';
 $sReadFile  = $sFileBase.'_in.tmp';
 $sWriteFile = $sFileBase.'_out.tmp';
 $sWriteUrl  = 'file://'.$sWriteFile;
@@ -43,7 +39,7 @@ var_dump($sOutput);
 ===DONE===
 --CLEAN--
 <?php
-$sFileBase  = dirname(__FILE__).DIRECTORY_SEPARATOR.'curl_opt_CURLOPT_READFUNCTION';
+$sFileBase  = getcwd().DIRECTORY_SEPARATOR.'curl_opt_CURLOPT_READFUNCTION';
 $sReadFile  = $sFileBase.'_in.tmp';
 $sWriteFile = $sFileBase.'_out.tmp';
 unlink($sReadFile);
