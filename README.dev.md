@@ -655,6 +655,10 @@
 
 34. resource id may different
 
+35. bigloo (current-error-port) not equal to stderr
+
+    @see ext/curl/tests/bug48203.phpt output order may different
+
 ## output buffering
 
 1. chunk_size and buffer_used different
