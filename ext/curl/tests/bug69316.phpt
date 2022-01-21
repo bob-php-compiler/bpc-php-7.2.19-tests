@@ -1,5 +1,7 @@
 --TEST--
 Bug #69316: Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
   function hdr_callback($ch, $data) {
@@ -16,7 +18,7 @@ Bug #69316: Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEA
 
   include 'server.inc';
   $host = curl_cli_server_start();
-  $temp_file = dirname(__FILE__) . '/body.tmp';
+  $temp_file = 'body.tmp';
   $url = "{$host}/get.php?test=getpost";
   $ch = curl_init();
   $f_file = fopen($temp_file, "w") or die("failed to open file\n");
@@ -30,7 +32,7 @@ Bug #69316: Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEA
 ===DONE===
 --CLEAN--
 <?php
-unlink(dirname(__FILE__) . '/body.tmp');
+unlink('body.tmp');
 ?>
 --EXPECTF--
 Warning: curl_exec(): CURLOPT_FILE resource has gone away, resetting to default in %s on line %d
