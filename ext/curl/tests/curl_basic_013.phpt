@@ -2,6 +2,8 @@
 Test curl_opt() function with CURLOPT_HTTP_VERSION/CURL_HTTP_VERSION_1_1
 --CREDITS--
 TestFest 2009 - AFUP - Xavier Gorse <xgorse@elao.com>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 /* Prototype  : bool curl_setopt(resource ch, int option, mixed value)
@@ -34,4 +36,4 @@ TestFest 2009 - AFUP - Xavier Gorse <xgorse@elao.com>
 *** Testing curl with HTTP/1.1 ***
 string(8) "HTTP/1.1"
 ===DONE===
-                     
+

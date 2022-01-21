@@ -2,6 +2,8 @@
 Test curl_opt() function with COOKIE
 --CREDITS--
 TestFest 2009 - AFUP - Xavier Gorse <xgorse@elao.com>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 /* Prototype  : bool curl_setopt(resource ch, int option, mixed value)

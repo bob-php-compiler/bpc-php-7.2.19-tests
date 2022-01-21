@@ -4,12 +4,13 @@ Test curl_getinfo() function with basic functionality
 Jean-Marc Fontaine <jmf@durcommefaire.net>
 --SKIPIF--
 <?php
-if (!extension_loaded("curl")) exit("skip curl extension not loaded");
 $curl_version = curl_version();
 if ($curl_version['version_number'] > 0x071201) {
     exit("skip: tests works only on older versions of curl");
 }
 ?>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
   $ch   = curl_init();

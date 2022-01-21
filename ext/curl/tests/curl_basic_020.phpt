@@ -2,6 +2,8 @@
 Test curl_getinfo() function with CURLINFO_HTTP_CODE parameter
 --CREDITS--
 Jean-Marc Fontaine <jmf@durcommefaire.net>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
   include 'server.inc';

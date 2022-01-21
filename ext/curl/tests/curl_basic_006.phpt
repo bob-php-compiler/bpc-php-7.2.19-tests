@@ -3,6 +3,8 @@ Test curl_opt() function with CURLOPT_WRITEFUNCTION parameter set to a closure
 --CREDITS--
 ?
 TestFest 2009 - AFUP - Jean-Marc Fontaine <jmf@durcommefaire.net>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 /* Prototype  : bool curl_setopt(resource ch, int option, mixed value)

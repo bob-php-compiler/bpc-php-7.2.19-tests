@@ -1,12 +1,14 @@
 --TEST--
 Test curl_getinfo() function with CURLINFO_COOKIELIST parameter
 --SKIPIF--
-<?php if (!extension_loaded("curl")) print "skip";
+<?php
 $curl_version = curl_version();
 if ($curl_version['version_number'] < 0x070e01) {
 	    exit("skip: test works only with curl >= 7.14.1");
 }
 ?>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 

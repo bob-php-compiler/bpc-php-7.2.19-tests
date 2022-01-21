@@ -3,6 +3,8 @@ Test curl_opt() function with POST parameters
 --CREDITS--
 Sebastian Deutsch <sebastian.deutsch@9elements.com>
 TestFest 2009 - AFUP - Jean-Marc Fontaine <jmf@durcommefaire.net>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 /* Prototype  : bool curl_setopt(resource ch, int option, mixed value)

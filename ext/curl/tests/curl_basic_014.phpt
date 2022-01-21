@@ -2,8 +2,8 @@
 Test curl_init() function with basic functionality
 --CREDITS--
 Jean-Marc Fontaine <jmf@durcommefaire.net>
---SKIPIF--
-<?php if (!extension_loaded("curl")) exit("skip curl extension not loaded"); ?>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
   $ch = curl_init();
