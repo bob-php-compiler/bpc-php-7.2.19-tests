@@ -3,6 +3,8 @@ curl_setopt basic tests with CURLOPT_STDERR.
 --CREDITS--
 Paul Sohier
 #phptestfest utrecht
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 

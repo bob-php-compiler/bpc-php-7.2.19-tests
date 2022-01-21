@@ -3,6 +3,8 @@ curl_setopt() call with CURLOPT_HTTPHEADER
 --CREDITS--
 Paul Sohier
 #phptestfest utrecht
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
