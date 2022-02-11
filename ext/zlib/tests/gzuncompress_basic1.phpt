@@ -6,6 +6,8 @@ if (!extension_loaded("zlib")) {
 	print "skip - ZLIB extension not loaded";
 }
 ?>
+--ARGS--
+--bpc-include-file ext/zlib/tests/data.inc \
 --FILE--
 <?php
 /* Prototype  : string gzuncompress(string data [, int length])
