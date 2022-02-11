@@ -20,17 +20,8 @@ if (!extension_loaded("zlib")) {
 
 echo "*** Testing gzcompress() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing gzcompress() function with Zero arguments --\n";
-var_dump( gzcompress() );
-
-//Test gzcompress with one more than the expected number of arguments
-echo "\n-- Testing gzcompress() function with more than expected no. of arguments --\n";
 $data = 'string_val';
 $level = 2;
-$encoding = ZLIB_ENCODING_RAW;
-$extra_arg = 10;
-var_dump( gzcompress($data, $level, $encoding, $extra_arg) );
 
 echo "\n-- Testing with incorrect compression level --\n";
 $bad_level = 99;
@@ -56,16 +47,6 @@ var_dump(gzcompress($testclass));
 ===Done===
 --EXPECTF--
 *** Testing gzcompress() : error conditions ***
-
--- Testing gzcompress() function with Zero arguments --
-
-Warning: gzcompress() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-
--- Testing gzcompress() function with more than expected no. of arguments --
-
-Warning: gzcompress() expects at most 3 parameters, 4 given in %s on line %d
-NULL
 
 -- Testing with incorrect compression level --
 
