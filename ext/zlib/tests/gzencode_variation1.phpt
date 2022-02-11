@@ -11,6 +11,8 @@ if (!extension_loaded("zlib")) {
 	print "skip - ZLIB extension not loaded";
 }
 ?>
+--ARGS--
+--bpc-include-file ext/zlib/tests/data.inc \
 --FILE--
 <?php
 /* Prototype  : string gzencode  ( string $data  [, int $level  [, int $encoding_mode  ]] )
