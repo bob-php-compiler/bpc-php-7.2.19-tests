@@ -20,17 +20,8 @@ if (!extension_loaded("zlib")) {
 
 echo "*** Testing gzdeflate() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing gzdeflate() function with Zero arguments --\n";
-var_dump( gzdeflate() );
-
-//Test gzdeflate with one more than the expected number of arguments
-echo "\n-- Testing gzdeflate() function with more than expected no. of arguments --\n";
 $data = 'string_val';
 $level = 2;
-$encoding = ZLIB_ENCODING_RAW;
-$extra_arg = 10;
-var_dump( gzdeflate($data, $level, $encoding, $extra_arg) );
 
 echo "\n-- Testing with incorrect compression level --\n";
 $bad_level = 99;
@@ -55,16 +46,6 @@ var_dump(gzdeflate($data, $testclass));
 ===Done===
 --EXPECTF--
 *** Testing gzdeflate() : error conditions ***
-
--- Testing gzdeflate() function with Zero arguments --
-
-Warning: gzdeflate() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-
--- Testing gzdeflate() function with more than expected no. of arguments --
-
-Warning: gzdeflate() expects at most 3 parameters, 4 given in %s on line %d
-NULL
 
 -- Testing with incorrect compression level --
 

@@ -20,17 +20,8 @@ if (!extension_loaded("zlib")) {
 
 echo "*** Testing gzencode() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing gzencode() function with Zero arguments --\n";
-var_dump( gzencode() );
-
-//Test gzencode with one more than the expected number of arguments
-echo "\n-- Testing gzencode() function with more than expected no. of arguments --\n";
 $data = 'string_val';
 $level = 2;
-$encoding_mode = FORCE_DEFLATE;
-$extra_arg = 10;
-var_dump( gzencode($data, $level, $encoding_mode, $extra_arg) );
 
 echo "\n-- Testing with incorrect compression level --\n";
 $bad_level = 99;
@@ -58,16 +49,6 @@ var_dump(gzencode($data, "a very none numeric string\n"));
 ===Done===
 --EXPECTF--
 *** Testing gzencode() : error conditions ***
-
--- Testing gzencode() function with Zero arguments --
-
-Warning: gzencode() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-
--- Testing gzencode() function with more than expected no. of arguments --
-
-Warning: gzencode() expects at most 3 parameters, 4 given in %s on line %d
-NULL
 
 -- Testing with incorrect compression level --
 
