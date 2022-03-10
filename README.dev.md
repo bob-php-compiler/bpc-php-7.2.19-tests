@@ -660,6 +660,8 @@
     @see ext/curl/tests/bug48203.phpt output order may different
     @see ext/curl/tests/curl_write_stdout.phpt
 
+36. not support $HTTP_RAW_POST_DATA
+
 ## output buffering
 
 1. chunk_size and buffer_used different
