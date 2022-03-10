@@ -666,6 +666,10 @@
 
     `<input>` name only accept `^([-_A-Za-z0-9]+)\\[([-_A-Za-z0-9]*)\\]$`
 
+38. Input variable nesting level exceeded warning displayed
+
+    php not
+
 ## output buffering
 
 1. chunk_size and buffer_used different

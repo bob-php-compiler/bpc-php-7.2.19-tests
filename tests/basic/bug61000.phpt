@@ -11,6 +11,9 @@ a[a][]=foo&a[a][b][c]=bar
 print_r($_GET);
 print_r($_POST);
 --EXPECTF--
+Warning: Input variable nesting level exceeded 2. To increase the limit change max_input_nesting_level in bpc.ini. in Unknown on line 0
+
+Warning: Input variable nesting level exceeded 2. To increase the limit change max_input_nesting_level in bpc.ini. in Unknown on line 0
 Array
 (
 )
