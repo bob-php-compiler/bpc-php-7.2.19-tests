@@ -5,15 +5,15 @@ always_populate_raw_post_data=0
 display_errors=0
 max_input_nesting_level=10
 max_input_vars=1000
-track_errors=1
 log_errors=0
 --POST--
 a=1&b=ZYX&c[][][][][][][][][][][][][][][][][][][][][][]=123&d=123&e[][]][]=3
 --FILE--
 <?php
-var_dump($_POST, $php_errormsg);
+var_dump($_POST);
+var_dump(error_get_last());
 ?>
---EXPECT--
+--EXPECTF--
 array(4) {
   ["a"]=>
   string(1) "1"
@@ -30,4 +30,13 @@ array(4) {
     }
   }
 }
-string(115) "Unknown: Input variable nesting level exceeded 10. To increase the limit change max_input_nesting_level in php.ini."
+array(4) {
+  ["type"]=>
+  int(2)
+  ["message"]=>
+  string(%d) "Input variable nesting level exceeded 10. To increase the limit change max_input_nesting_level in %s."
+  ["file"]=>
+  string(7) "Unknown"
+  ["line"]=>
+  int(0)
+}
