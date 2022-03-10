@@ -30,5 +30,5 @@ echo fgetc($f2);
 Done
 --EXPECT--
 Test
-315371
+3153471
 Done

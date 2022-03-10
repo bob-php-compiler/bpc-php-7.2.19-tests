@@ -782,7 +782,7 @@
         if fseek failed, pos not change
         fseek to end, pos is string length - 1
     php:
-        if fseek failed, ftell return false
+        if fseek failed, ftell return false, fgetc return false
         fseek to end, pos is string length
     @see ext/standard/tests/file/stream_rfc2397_007.phpt
 
