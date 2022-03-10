@@ -662,13 +662,19 @@
 
 36. not support $HTTP_RAW_POST_DATA
 
-37. strict uploading array of files
+37. Input variable nesting level exceeded warning displayed
+
+    php not
+
+## File uploading
+
+1. strict uploading array of files
 
     `<input>` name only accept `^([-_A-Za-z0-9]+)\\[([-_A-Za-z0-9]*)\\]$`
 
-38. Input variable nesting level exceeded warning displayed
+2. not support anonymous upload
 
-    php not
+    @see tests/basic/rfc1867_anonymous_upload.phpt
 
 ## output buffering
 
