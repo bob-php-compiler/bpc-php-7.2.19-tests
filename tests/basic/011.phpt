@@ -1,5 +1,7 @@
 --TEST--
 Testing $argc and $argv handling (GET)
+--SKIPIF--
+skip no ini register_argc_argv
 --INI--
 register_argc_argv=1
 --GET--
