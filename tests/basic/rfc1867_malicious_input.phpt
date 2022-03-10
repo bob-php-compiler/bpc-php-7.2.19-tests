@@ -17,7 +17,20 @@ var_dump($_FILES);
 var_dump($_POST);
 ?>
 --EXPECTF--
-array(0) {
+array(1) {
+  ["foo[]bar"]=>
+  array(5) {
+    ["name"]=>
+    string(9) "file1.txt"
+    ["type"]=>
+    string(16) "text/plain-file1"
+    ["tmp_name"]=>
+    string(%d) "%s"
+    ["error"]=>
+    int(0)
+    ["size"]=>
+    int(1)
+  }
 }
 array(0) {
 }
