@@ -34,7 +34,7 @@ var_dump($_FILES);
 var_dump($_POST);
 ?>
 --EXPECTF--
-array(1) {
+array(4) {
   ["file"]=>
   array(5) {
     ["name"]=>
@@ -62,6 +62,45 @@ array(1) {
       [0]=>
       int(1)
     }
+  }
+  ["file[[type]"]=>
+  array(5) {
+    ["name"]=>
+    string(9) "file2.txt"
+    ["type"]=>
+    string(16) "text/plain-file2"
+    ["tmp_name"]=>
+    string(%d) "%s"
+    ["error"]=>
+    int(0)
+    ["size"]=>
+    int(1)
+  }
+  ["file[[name]"]=>
+  array(5) {
+    ["name"]=>
+    string(9) "file3.txt"
+    ["type"]=>
+    string(16) "text/plain-file3"
+    ["tmp_name"]=>
+    string(%d) "%s"
+    ["error"]=>
+    int(0)
+    ["size"]=>
+    int(1)
+  }
+  ["file[name]["]=>
+  array(5) {
+    ["name"]=>
+    string(9) "file4.txt"
+    ["type"]=>
+    string(16) "text/plain-file3"
+    ["tmp_name"]=>
+    string(%d) "%s"
+    ["error"]=>
+    int(0)
+    ["size"]=>
+    int(1)
   }
 }
 array(0) {

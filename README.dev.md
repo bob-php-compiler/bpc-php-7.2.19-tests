@@ -662,6 +662,10 @@
 
 36. not support $HTTP_RAW_POST_DATA
 
+37. strict uploading array of files
+
+    `<input>` name only accept `^([-_A-Za-z0-9]+)\\[([-_A-Za-z0-9]*)\\]$`
+
 ## output buffering
 
 1. chunk_size and buffer_used different
