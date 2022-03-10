@@ -38,6 +38,7 @@ if (is_uploaded_file($_FILES["file3"]["tmp_name"])) {
 }
 ?>
 --EXPECTF--
+Notice: MAX_FILE_SIZE of 1 bytes exceeded - file [file2=file2.txt] not saved in Unknown on line 0
 array(3) {
   ["file1"]=>
   array(5) {

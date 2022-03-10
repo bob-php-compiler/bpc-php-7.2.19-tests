@@ -666,7 +666,7 @@
 
     php not
 
-## File uploading
+## File uploading / multipart form / rfc1867
 
 1. strict uploading array of files
 
@@ -675,6 +675,10 @@
 2. not support anonymous upload
 
     @see tests/basic/rfc1867_anonymous_upload.phpt
+
+3. rfc1867: all warning/notice reported
+
+    @see php rfc1867.c DEBUG_FILE_UPLOAD
 
 ## output buffering
 

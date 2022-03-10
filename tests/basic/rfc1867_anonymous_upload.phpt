@@ -23,7 +23,7 @@ var_dump($_FILES);
 var_dump($_POST);
 ?>
 --EXPECTF--
-Warning: Invalid Content-Disposition: %s in Unknown on line 0
+Warning: File Upload Mime headers garbled in Unknown on line 0
 array(0) {
 }
 array(0) {
