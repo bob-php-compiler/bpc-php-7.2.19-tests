@@ -1,7 +1,5 @@
 --TEST--
 Dynamic access of static members
---SKIPIF--
-skip TODO
 --FILE--
 <?php
 class A {
