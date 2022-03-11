@@ -1,7 +1,5 @@
 --TEST--
 ZE2 ArrayAccess::offsetGet ambiguties
---SKIPIF--
-skip TODO Notice: Indirect modification of overloaded element
 --INI--
 error_reporting=4095
 --FILE--
