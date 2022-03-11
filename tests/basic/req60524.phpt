@@ -3,7 +3,6 @@ Req #60524 (Specify temporary directory)
 --INI--
 sys_temp_dir=/path/to/temp/dir
 --SKIPIF--
-skip TODO
 <?php
 if(PHP_OS_FAMILY === "Windows") {
     die('skip non-windows only test');
