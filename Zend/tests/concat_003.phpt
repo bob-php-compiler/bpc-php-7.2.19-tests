@@ -1,7 +1,7 @@
 --TEST--
 Concatenating many small strings should not slowdown allocations
 --SKIPIF--
-<?php if (PHP_DEBUG) { die ("skip debug version is slow"); } ?>
+skip TODO: bpc array is slow
 --FILE--
 <?php
 
@@ -10,7 +10,7 @@ $time = microtime(TRUE);
 /* This might vary on Linux/Windows, so the worst case and also count in slow machines. */
 $t_max = 1.0;
 
-$datas = array_fill(0, 220000, [
+$datas = array_fill(0, 220000, array(
     '000.000.000.000',
     '000.255.255.255',
     '保留地址',
@@ -19,7 +19,7 @@ $datas = array_fill(0, 220000, [
     '保留地址',
     '保留地址',
     '保留地址',
-]);
+));
 
 $time = microtime(TRUE);
 $texts = '';
