@@ -1,5 +1,7 @@
 --TEST--
 php_sapi_name() function when switching to webserver by using post
+--SKIPIF--
+skip invalid test
 --POST--
 foo=BAR
 --CREDITS--
