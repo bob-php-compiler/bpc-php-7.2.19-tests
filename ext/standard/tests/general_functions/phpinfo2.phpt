@@ -13,7 +13,7 @@ echo "--\n";
 var_dump(phpinfo(0));
 
 echo "--\n";
-var_dump(phpinfo(INFO_LICENSE));
+var_dump(phpinfo(INFO_GENERAL));
 
 ?>
 --EXPECTF--
