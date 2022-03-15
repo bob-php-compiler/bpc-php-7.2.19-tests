@@ -15,6 +15,7 @@ a=1&b[][][]=2&c[][][][][][]=7
 print_r($_POST);
 ?>
 --EXPECT--
+Warning: Input variable nesting level exceeded 5. To increase the limit change max_input_nesting_level in bpc.ini. in Unknown on line 0
 Array
 (
     [a] => 1
