@@ -24,7 +24,7 @@ abcdef123456789
 <?php
 
 echo "Valid move\n";
-$destination1 = __FILE__ . ".tmp";
+$destination1 = "move_uploaded_file_basic.php.tmp";
 
 var_dump(move_uploaded_file($_FILES['file1']['tmp_name'], $destination1));
 $file_contents = file_get_contents($destination1);
@@ -34,25 +34,20 @@ unlink($destination1);
 echo "\n";
 
 echo "Original name of uploaded file\n";
-$destination2 = __FILE__ . ".tmp2";
+$destination2 = "move_uploaded_file_basic.php.tmp2";
 var_dump(move_uploaded_file($_FILES['file1']['name'], $destination2));
 
 echo "Non-uploaded source file\n";
-$source = __FILE__;
-$destination3 = __FILE__ . ".tmp3";
+$source = 'move_uploaded_file_basic.php';
+$destination3 = "move_uploaded_file_basic.php.tmp3";
 var_dump(move_uploaded_file($source, $destination3));
 
 echo "Valid move to existing file\n";
-$destination4 = __FILE__ . ".tmp4";
+$destination4 = "move_uploaded_file_basic.php.tmp4";
 $fd = fopen($destination4, "w");
 fclose($fd);
 var_dump(move_uploaded_file($_FILES['file2']['tmp_name'], $destination4));
 unlink($destination4);
-
-echo "Wrong parameters\n";
-var_dump(move_uploaded_file());
-var_dump(move_uploaded_file(1, 2, 3));
-
 
 ?>
 --EXPECTF--
@@ -66,10 +61,3 @@ Non-uploaded source file
 bool(false)
 Valid move to existing file
 bool(true)
-Wrong parameters
-
-Warning: move_uploaded_file() expects exactly 2 parameters, 0 given in %s on line %d
-NULL
-
-Warning: move_uploaded_file() expects exactly 2 parameters, 3 given in %s on line %d
-NULL
