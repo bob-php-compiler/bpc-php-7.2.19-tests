@@ -27,7 +27,7 @@ var_dump($php_errormsg);
 Division by zero
 string(1) "1"
 string(5) "32767"
-string(0) ""
+string(1) "0"
 bool(false)
-string(0) ""
+string(1) "0"
 NULL
