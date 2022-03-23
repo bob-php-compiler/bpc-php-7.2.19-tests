@@ -3,7 +3,7 @@ Test session_start() function : variation
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : bool session_start(void)
@@ -26,7 +26,6 @@ var_dump(session_write_close());
 var_dump(session_destroy());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_start() : variation ***

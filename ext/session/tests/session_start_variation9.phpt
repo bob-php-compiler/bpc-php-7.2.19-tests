@@ -5,7 +5,7 @@ session.auto_start=1
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : bool session_start(void)
@@ -22,7 +22,6 @@ var_dump(session_destroy());
 var_dump(session_id());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_start() : variation ***
