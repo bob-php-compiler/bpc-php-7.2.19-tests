@@ -4,8 +4,6 @@ Test session_set_save_handler() function: create_sid
 session.save_handler=files
 session.name=PHPSESSID
 session.save_path=/tmp
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

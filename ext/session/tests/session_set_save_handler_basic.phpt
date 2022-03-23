@@ -5,8 +5,6 @@ session.save_path=
 session.name=PHPSESSID
 session.gc_probability=0
 session.save_handler=files
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

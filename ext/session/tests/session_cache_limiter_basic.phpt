@@ -1,7 +1,5 @@
 --TEST--
 Test session_cache_limiter() function : basic functionality
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

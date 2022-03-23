@@ -1,7 +1,5 @@
 --TEST--
 Test session_encode() function : variation
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.auto_start=1
 --FILE--

@@ -1,7 +1,5 @@
 --TEST--
 Test session_status() function : active, none
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

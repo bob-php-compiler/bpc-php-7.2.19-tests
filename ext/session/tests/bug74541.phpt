@@ -2,7 +2,6 @@
 Bug #74541 Wrong reflection on session_start()
 --SKIPIF--
 <?php
-include('skipif.inc');
 if (!extension_loaded('reflection')) die("skip");
 ?>
 --FILE--

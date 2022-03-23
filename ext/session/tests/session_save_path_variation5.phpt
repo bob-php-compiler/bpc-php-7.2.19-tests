@@ -1,10 +1,5 @@
 --TEST--
 Test session_save_path() function : variation
---SKIPIF--
-<?php include('skipif.inc');
-if(substr(PHP_OS, 0, 3) == "WIN")
-	die("skip Not for Windows");
-?>
 --INI--
 session.save_handler=files
 session.save_path=

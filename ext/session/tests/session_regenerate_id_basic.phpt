@@ -1,7 +1,5 @@
 --TEST--
 Test session_regenerate_id() function : basic functionality
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

@@ -1,7 +1,5 @@
 --TEST--
 custom save handler, multiple session_start()s, complex data structure test.
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.use_cookies=0
 session.use_strict_mode=0

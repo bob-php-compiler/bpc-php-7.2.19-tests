@@ -1,7 +1,5 @@
 --TEST--
 Test session_encode() function : basic functionality
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

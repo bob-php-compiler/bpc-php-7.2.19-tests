@@ -1,7 +1,5 @@
 --TEST--
 Test session_decode() function : basic functionality
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

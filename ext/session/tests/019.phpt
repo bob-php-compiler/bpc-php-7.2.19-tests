@@ -1,7 +1,5 @@
 --TEST--
 serializing references test case using globals
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.use_cookies=0
 session.use_strict_mode=0

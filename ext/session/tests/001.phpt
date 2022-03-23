@@ -1,7 +1,5 @@
 --TEST--
 session object serialization
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.use_cookies=0
 session.cache_limiter=

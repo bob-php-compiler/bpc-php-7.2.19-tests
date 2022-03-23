@@ -3,8 +3,6 @@ Bug #63379: Warning when using session_regenerate_id(TRUE) with a SessionHandler
 --INI--
 session.save_handler=files
 session.name=PHPSESSID
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

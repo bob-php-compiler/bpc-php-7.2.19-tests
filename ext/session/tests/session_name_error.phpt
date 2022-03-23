@@ -3,8 +3,6 @@ Test session_name() function : error functionality
 --INI--
 session.save_path=
 session.name=PHPSESSID
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

@@ -2,8 +2,6 @@
 Test session_set_cookie_params() function : variation
 --INI--
 session.cookie_lifetime=3600
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

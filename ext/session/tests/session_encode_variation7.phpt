@@ -1,7 +1,5 @@
 --TEST--
 Test session_encode() function : variation
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.serialize_handler=php_binary
 --FILE--

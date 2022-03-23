@@ -1,7 +1,5 @@
 --TEST--
 Bug #53141 (autoload misbehaves if called from closing session)
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 spl_autoload_register(function ($class) {

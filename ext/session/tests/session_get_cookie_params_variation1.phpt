@@ -1,7 +1,5 @@
 --TEST--
 Test session_get_cookie_params() function : variation
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.cookie_lifetime=0
 session.cookie_path="/"

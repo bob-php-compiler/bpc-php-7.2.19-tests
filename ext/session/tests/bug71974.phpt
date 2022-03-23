@@ -1,7 +1,5 @@
 --TEST--
 Bug #71974 Trans sid will always be send, even if cookies are available
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.save_handler=files
 session.auto_start=0

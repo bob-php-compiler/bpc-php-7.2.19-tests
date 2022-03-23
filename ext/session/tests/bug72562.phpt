@@ -1,7 +1,5 @@
 --TEST--
 Bug #72562: Use After Free in unserialize() with Unexpected Session Deserialization
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

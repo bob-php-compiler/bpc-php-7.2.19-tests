@@ -4,8 +4,6 @@ Test session_set_save_handler() function : using closures as callbacks
 session.save_path=
 session.name=PHPSESSID
 session.save_handler=files
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

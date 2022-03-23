@@ -4,10 +4,6 @@ Test session_set_save_handler() : calling default handler when save_handler=user
 session.save_handler=user
 session.name=PHPSESSID
 display_errors=off
---SKIPIF--
-<?php
-include('skipif.inc');
-?>
 --FILE--
 <?php
 

@@ -1,7 +1,5 @@
 --TEST--
 Test session_commit() function : variation
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.use_strict_mode=0
 --FILE--

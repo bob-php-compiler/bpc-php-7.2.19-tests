@@ -1,7 +1,5 @@
 --TEST--
 Test session_module_name() function : variation
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.gc_probability=1
 session.gc_divisor=1

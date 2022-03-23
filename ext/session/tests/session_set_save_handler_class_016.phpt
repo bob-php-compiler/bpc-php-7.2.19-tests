@@ -3,8 +3,6 @@ Test session_set_save_handler() function: class with create_sid
 --INI--
 session.save_handler=files
 session.name=PHPSESSID
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

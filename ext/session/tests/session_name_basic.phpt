@@ -4,8 +4,6 @@ Test session_name() function : error functionality
 session.save_path=
 session.name=PHPSESSID
 session.save_handler=files
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

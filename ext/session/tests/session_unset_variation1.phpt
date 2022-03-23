@@ -1,7 +1,5 @@
 --TEST--
 Test session_unset() function : variation
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

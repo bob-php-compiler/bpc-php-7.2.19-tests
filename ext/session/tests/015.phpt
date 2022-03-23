@@ -1,7 +1,5 @@
 --TEST--
 use_trans_sid should not affect SID
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.use_trans_sid=1
 session.use_cookies=0

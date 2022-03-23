@@ -1,7 +1,5 @@
 --TEST--
 Test session_unset() function : error functionality
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

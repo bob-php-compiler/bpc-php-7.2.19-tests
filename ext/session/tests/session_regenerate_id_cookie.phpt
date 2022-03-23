@@ -1,15 +1,5 @@
 --TEST--
 Test session_regenerate_id() function : basic functionality
---SKIPIF--
-<?php
-
-include('skipif.inc');
-
-require __DIR__.'/../../../sapi/cgi/tests/include.inc';
-
-get_cgi_path() or die('skip no cgi');
-
-?>
 --FILE--
 <?php
 

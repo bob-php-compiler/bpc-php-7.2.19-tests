@@ -2,8 +2,6 @@
 Bug #73529 session_decode() silently fails on wrong input
 --XFAIL--
 session_decode() does not return proper status.
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

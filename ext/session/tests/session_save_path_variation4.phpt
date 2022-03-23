@@ -1,7 +1,5 @@
 --TEST--
 Test session_save_path() function : variation
---SKIPIF--
-<?php include('skipif.inc');?>
 --INI--
 open_basedir=.
 session.save_handler=files

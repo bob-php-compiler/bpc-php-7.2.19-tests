@@ -10,8 +10,6 @@ session.gc_maxlifetime=300
 session.save_path=
 session.sid_length=32
 session.name=PHPSESSID
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 

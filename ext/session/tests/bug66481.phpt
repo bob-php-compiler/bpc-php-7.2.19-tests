@@ -2,8 +2,6 @@
 Bug #66481: Calls to session_name() segfault when session.name is null.
 --INI--
 session.name=
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 ob_start();

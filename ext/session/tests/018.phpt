@@ -1,7 +1,5 @@
 --TEST--
 rewriter correctly handles attribute names which contain dashes
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.use_cookies=0
 session.use_only_cookies=0

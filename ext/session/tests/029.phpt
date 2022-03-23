@@ -1,7 +1,5 @@
 --TEST--
 session_decode(); should not segfault
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --INI--
 session.use_cookies=0
 session.cache_limiter=

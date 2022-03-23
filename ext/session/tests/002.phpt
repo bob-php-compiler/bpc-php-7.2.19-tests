@@ -1,7 +1,5 @@
 --TEST--
 session_unset() without a initialized session
---SKIPIF--
-<?php include('skipif.inc'); ?>
 --FILE--
 <?php
 error_reporting(E_ALL);
