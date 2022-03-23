@@ -363,6 +363,14 @@
 
 21. ini has no access level, ini_get_all return access = -1
 
+22. ini int value conversion same as (int) typecast
+
+    php use strtol()
+    @see ext/session/tests/session_cache_expire_error.phpt 12.3456789000E-10
+    strtol('1.2xxxE-9') = 1
+    
+    (int)'1.2xxxE-9' = 0
+
 **syntax**
 
 1. not support GOTO

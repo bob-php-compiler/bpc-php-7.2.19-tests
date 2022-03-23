@@ -28,7 +28,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -118,7 +118,7 @@ int(-10)
 int(%s)
 
 -- Iteration 9 --
-int(1)
+int(0)
 
 -- Iteration 10 --
 int(0)
