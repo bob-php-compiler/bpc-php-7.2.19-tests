@@ -976,10 +976,14 @@
 
 ## ext/session
 
-1. limited reference support when decode session data
+1. session serialize_handler: limited reference support
 
-    serializer php/php_binary decode not support reference
-    serializer php_serialize support reference in normal case
+    php/php_binary support reference in one value
+    @see ext/session/tests/session_encode_variation4.phpt
+    @see ext/session/tests/session_encode_variation5.phpt
+    
+    php_serialize support reference in normal case
+    @see ext/standard/tests/serialize/bug70219_1.phpt
 
 2. session.save_hanlder session.serialize_handler always have a valid value
 
