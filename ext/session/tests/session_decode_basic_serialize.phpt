@@ -1,5 +1,7 @@
 --TEST--
 Test session_decode() function : basic functionality
+--INI--
+serialize_precision=17
 --FILE--
 <?php
 
@@ -28,7 +30,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
