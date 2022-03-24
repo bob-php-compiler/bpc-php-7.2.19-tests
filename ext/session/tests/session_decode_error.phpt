@@ -3,8 +3,6 @@ Test session_decode() function : error functionality
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : string session_decode(void)
  * Description : Decodes session data from a string
@@ -28,7 +26,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -90,7 +88,6 @@ foreach($inputs as $input) {
 var_dump(session_destroy());
 fclose($fp);
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_decode() : error functionality ***
