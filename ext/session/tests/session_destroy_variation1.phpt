@@ -3,8 +3,6 @@ Test session_destroy() function : variation
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : bool session_destroy(void)
  * Description : Destroys all data registered to a session
@@ -21,7 +19,6 @@ var_dump(session_destroy());
 var_dump(session_destroy());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_destroy() : variation ***
