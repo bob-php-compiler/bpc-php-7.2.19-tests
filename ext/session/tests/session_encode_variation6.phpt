@@ -3,8 +3,6 @@ Test session_encode() function : variation
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : string session_encode(void)
  * Description : Encodes the current session data as a string
@@ -27,7 +25,6 @@ var_dump(session_encode());
 var_dump(session_destroy());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_encode() : variation ***
