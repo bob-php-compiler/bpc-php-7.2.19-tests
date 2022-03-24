@@ -371,6 +371,10 @@
     
     (int)'1.2xxxE-9' = 0
 
+23. ini on-modify warning message without function name
+
+    @see ext/session/tests/session_ini_set.phpt
+
 **syntax**
 
 1. not support GOTO
@@ -994,3 +998,5 @@
 3. $_SESSION always exists
 
     @see ext/session/tests/session_encode_variation1.phpt
+
+4. no ini session.use_trans_sid
