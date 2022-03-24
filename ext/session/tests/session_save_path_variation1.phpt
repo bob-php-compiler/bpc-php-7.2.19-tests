@@ -8,7 +8,7 @@ session.save_handler=files
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : string session_save_path([string $path])
@@ -18,7 +18,7 @@ ob_start();
 
 echo "*** Testing session_save_path() : variation ***\n";
 
-$directory = dirname(__FILE__);
+$directory = getcwd();
 var_dump(session_save_path());
 var_dump(session_save_path($directory));
 var_dump(session_save_path());
@@ -32,7 +32,6 @@ var_dump(session_destroy());
 var_dump(session_save_path());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_save_path() : variation ***
