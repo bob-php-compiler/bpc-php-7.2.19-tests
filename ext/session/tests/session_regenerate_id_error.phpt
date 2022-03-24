@@ -3,8 +3,6 @@ Test session_regenerate_id() function : error functionality
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : bool session_regenerate_id([bool $delete_old_session])
  * Description : Update the current session id with a newly generated one
@@ -28,7 +26,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -88,7 +86,6 @@ foreach($inputs as $input) {
 
 fclose($fp);
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_regenerate_id() : error functionality ***
