@@ -973,3 +973,10 @@
 4. mime_content_type()
 
     for file, bpc call magic_file(), php call magic_stream()
+
+## ext/session
+
+1. limited reference support when decode session data
+
+    serializer php/php_binary decode not support reference
+    serializer php_serialize support reference in normal case

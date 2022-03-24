@@ -46,7 +46,5 @@ array(2) {
     NULL
   }
 }
-object(obj)#1 (1) {
-  ["data"]=>
-  NULL
+array(0) {
 }
