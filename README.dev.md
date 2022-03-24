@@ -674,6 +674,10 @@
 
     php not
 
+38. headers always send at last
+
+    bpc use (with-output-to-string) to buffer php scripts output, so no "Cannot XXX when headers already sent" warning
+
 ## File uploading / multipart form / rfc1867
 
 1. strict uploading array of files

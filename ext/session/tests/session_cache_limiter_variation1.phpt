@@ -5,7 +5,7 @@ session.cache_limiter=nocache
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : string session_cache_limiter([string $cache_limiter])
@@ -24,7 +24,6 @@ var_dump(session_destroy());
 var_dump(session_cache_limiter());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_cache_limiter() : variation ***
