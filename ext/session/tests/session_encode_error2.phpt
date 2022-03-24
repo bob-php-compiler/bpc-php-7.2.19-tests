@@ -3,7 +3,7 @@ Test session_encode() function : error functionality
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : string session_encode(void)
@@ -28,7 +28,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -90,7 +90,6 @@ foreach($inputs as $input) {
 
 fclose($fp);
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_encode() : error functionality ***
