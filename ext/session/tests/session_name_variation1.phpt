@@ -7,8 +7,6 @@ session.save_handler=files
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : string session_name([string $name])
  * Description : Get and/or set the current session name
@@ -36,7 +34,6 @@ var_dump(session_destroy());
 var_dump(session_name());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_name() : variation ***
@@ -51,7 +48,7 @@ string(1) "	"
 bool(true)
 string(1) "	"
 
-Warning: session_name(): session.name cannot be a numeric or empty '' in %s on line %d
+Warning: session.name cannot be a numeric or empty '' in %s on line %d
 string(1) "	"
 bool(true)
 string(1) "	"
