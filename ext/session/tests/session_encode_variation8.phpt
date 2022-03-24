@@ -25,14 +25,10 @@ echo "Done";
 ob_end_flush();
 ?>
 --EXPECTF--
+Cannot find serialization handler 'blah'
+invalid config value blah for ini entry session.serialize_handler
 *** Testing session_encode() : variation ***
-
-Warning: session_start(): Cannot find serialization handler 'blah' - session startup failed in %s on line %d
-bool(false)
-
-Warning: session_encode(): Cannot encode non-existent session in %s on line %d
-string(0) ""
-
-Warning: session_destroy(): Trying to destroy uninitialized session in %s on line %d
-bool(false)
+bool(true)
+string(24) "Zm9vfGk6MTIzNDU2Nzg5MDs="
+bool(true)
 Done
