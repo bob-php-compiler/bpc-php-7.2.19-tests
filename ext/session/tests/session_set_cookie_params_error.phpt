@@ -3,7 +3,7 @@ Test session_set_cookie_params() function : error functionality
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : void session_set_cookie_params(int $lifetime [, string $path [, string $domain [, bool $secure [, bool $httponly]]]])
@@ -28,7 +28,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -92,7 +92,6 @@ foreach($inputs as $input) {
 
 fclose($fp);
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_cookie_params() : error functionality ***
@@ -123,7 +122,7 @@ bool(true)
 
 -- Iteration 4 --
 
-Warning: session_set_cookie_params(): CookieLifetime cannot be negative in %s on line 81
+Warning: CookieLifetime cannot be negative in %s on line 81
 bool(false)
 bool(true)
 bool(true)
@@ -141,7 +140,7 @@ bool(true)
 
 -- Iteration 6 --
 
-Warning: session_set_cookie_params(): CookieLifetime cannot be negative in %s on line 81
+Warning: CookieLifetime cannot be negative in %s on line 81
 bool(false)
 bool(true)
 bool(true)
