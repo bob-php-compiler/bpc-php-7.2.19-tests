@@ -3,7 +3,7 @@ Test session_set_cookie_params() function : basic functionality
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : void session_set_cookie_params(int $lifetime [, string $path [, string $domain [, bool $secure [, bool $httponly]]]])
@@ -20,7 +20,6 @@ var_dump(session_destroy());
 var_dump(session_set_cookie_params(1234567890));
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_cookie_params() : basic functionality ***
