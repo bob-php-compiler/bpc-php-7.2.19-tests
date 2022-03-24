@@ -1,11 +1,11 @@
 --TEST--
 Test session_set_cookie_params() function : variation
 --INI--
-session.cookie_httponly=TRUE
+session.cookie_httponly=1
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : void session_set_cookie_params(int $lifetime [, string $path [, string $domain [, bool $secure [, bool $httponly]]]])
@@ -28,7 +28,6 @@ var_dump(session_set_cookie_params(3600, "/path", "blah", FALSE, FALSE));
 var_dump(ini_get("session.cookie_httponly"));
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_cookie_params() : variation ***
