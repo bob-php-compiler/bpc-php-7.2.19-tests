@@ -1,5 +1,7 @@
 --TEST--
 Test session_save_path() function : variation
+--SKIPIF--
+skip no ini open_basedir
 --INI--
 session.save_handler=files
 session.save_path=
