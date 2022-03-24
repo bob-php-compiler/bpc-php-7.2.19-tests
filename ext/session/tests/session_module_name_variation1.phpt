@@ -3,8 +3,6 @@ Test session_module_name() function : variation
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : string session_module_name([string $module])
  * Description : Get and/or set the current session module
@@ -19,7 +17,6 @@ var_dump(session_destroy());
 var_dump(session_module_name());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_module_name() : variation ***
