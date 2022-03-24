@@ -3,8 +3,6 @@ Test session_gc() function : basic functionality
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : int session_gc(void)
  * Description : Perform GC
@@ -21,7 +19,6 @@ var_dump(session_destroy());
 var_dump(session_id());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_gc() : basic functionality ***
