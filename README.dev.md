@@ -980,3 +980,9 @@
 
     serializer php/php_binary decode not support reference
     serializer php_serialize support reference in normal case
+
+2. session.save_hanlder session.serialize_handler always have a valid value
+
+    php can set a invalid value and session_start will failed
+    bpc ensure valid default value, and ignore invalid settings
+    @see ext/session/tests/session_decode_variation3.phpt

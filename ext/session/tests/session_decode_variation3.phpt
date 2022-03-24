@@ -29,14 +29,13 @@ var_dump(session_destroy());
 echo "Done";
 ob_end_flush();
 ?>
---EXPECTF--
+--EXPECT--
+Cannot find serialization handler 'blah'
+invalid config value blah for ini entry session.serialize_handler
 *** Testing session_decode() : variation ***
-
-Warning: session_start(): Cannot find serialization handler 'blah' - session startup failed in %s on line %d
-bool(false)
-
-Notice: Undefined variable: _SESSION in %s on line %d
-NULL
+bool(true)
+array(0) {
+}
 array(3) {
   ["foo"]=>
   int(1234567890)
@@ -45,9 +44,7 @@ array(3) {
   ["guff"]=>
   float(123.456)
 }
-
-Warning: session_decode(): Session is not active. You cannot decode session data in %s on line %d
-bool(false)
+bool(true)
 array(3) {
   ["foo"]=>
   int(1234567890)
@@ -56,7 +53,5 @@ array(3) {
   ["guff"]=>
   float(123.456)
 }
-
-Warning: session_destroy(): Trying to destroy uninitialized session in %s on line %d
-bool(false)
+bool(true)
 Done
