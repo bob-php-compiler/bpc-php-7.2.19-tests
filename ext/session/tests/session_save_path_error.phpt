@@ -8,8 +8,6 @@ session.save_handler=files
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : string session_save_path([string $path])
  * Description : Get and/or set the current session save path
@@ -33,7 +31,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -93,7 +91,6 @@ foreach($inputs as $input) {
 
 fclose($fp);
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_save_path() : error functionality ***
