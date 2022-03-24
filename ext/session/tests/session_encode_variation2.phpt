@@ -26,7 +26,5 @@ ob_end_flush();
 *** Testing session_encode() : variation ***
 bool(false)
 bool(true)
-
-Warning: session_encode(): Cannot encode non-existent session in %s on line %d
 bool(false)
 Done

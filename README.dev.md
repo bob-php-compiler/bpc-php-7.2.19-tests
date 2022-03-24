@@ -986,3 +986,7 @@
     php can set a invalid value and session_start will failed
     bpc ensure valid default value, and ignore invalid settings
     @see ext/session/tests/session_decode_variation3.phpt
+
+3. $_SESSION always exists
+
+    @see ext/session/tests/session_encode_variation1.phpt
