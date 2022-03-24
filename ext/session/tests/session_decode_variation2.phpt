@@ -19,7 +19,7 @@ $_SESSION["foo"] = 1234567890;
 $_SESSION["bar"] = "Hello World!";
 $_SESSION["guff"] = 123.456;
 var_dump($_SESSION);
-var_dump(session_decode("foo|a:3:{i:0;i:1;i:1;i:2;i:2;i:3;}guff|R:1;blah|R:1;"));
+var_dump(session_decode("foo|a:3:{i:0;i:1;i:1;i:2;i:2;i:3;}guff|i:1;blah|b:1;"));
 var_dump($_SESSION);
 var_dump(session_destroy());
 
@@ -42,7 +42,7 @@ array(3) {
 bool(true)
 array(4) {
   ["foo"]=>
-  &array(3) {
+  array(3) {
     [0]=>
     int(1)
     [1]=>
@@ -53,23 +53,9 @@ array(4) {
   ["bar"]=>
   string(12) "Hello World!"
   ["guff"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
+  int(1)
   ["blah"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
+  bool(true)
 }
 bool(true)
 Done
