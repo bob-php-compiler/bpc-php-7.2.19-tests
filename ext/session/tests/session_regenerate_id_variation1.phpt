@@ -3,8 +3,6 @@ Test session_regenerate_id() function : variation
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : bool session_regenerate_id([bool $delete_old_session])
  * Description : Update the current session id with a newly generated one
@@ -24,7 +22,6 @@ var_dump(session_regenerate_id(TRUE));
 var_dump(session_id());
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_regenerate_id() : variation ***
