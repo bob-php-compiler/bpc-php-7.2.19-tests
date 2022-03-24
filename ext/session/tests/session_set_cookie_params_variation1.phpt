@@ -5,7 +5,7 @@ session.cookie_lifetime=3600
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : void session_set_cookie_params(int $lifetime [, string $path [, string $domain [, bool $secure [, bool $httponly]]]])
@@ -30,7 +30,6 @@ var_dump(session_set_cookie_params(1234567890));
 var_dump(ini_get("session.cookie_lifetime"));
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_cookie_params() : variation ***

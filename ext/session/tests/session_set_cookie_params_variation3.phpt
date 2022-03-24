@@ -5,7 +5,7 @@ session.cookie_domain=foo
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : void session_set_cookie_params(int $lifetime [, string $path [, string $domain [, bool $secure [, bool $httponly]]]])
@@ -28,7 +28,6 @@ var_dump(session_set_cookie_params(3600, "/path", "foo"));
 var_dump(ini_get("session.cookie_domain"));
 
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_cookie_params() : variation ***
