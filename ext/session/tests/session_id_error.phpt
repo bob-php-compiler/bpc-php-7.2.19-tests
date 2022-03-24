@@ -3,8 +3,6 @@ Test session_id() function : error functionality
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : string session_id([string $id])
  * Description : Get and/or set the current session id
@@ -28,7 +26,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -88,7 +86,6 @@ foreach($inputs as $input) {
 
 fclose($fp);
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_id() : error functionality ***
