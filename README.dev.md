@@ -1004,3 +1004,7 @@
     @see ext/session/tests/session_encode_variation1.phpt
 
 4. no ini session.use_trans_sid
+
+5. session save_handler warning message without function name
+
+    @see ext/session/tests/session_save_path_variation2.phpt
