@@ -7,7 +7,7 @@ session.save_handler=files
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : string session_module_name([string $module])
@@ -33,18 +33,15 @@ var_dump(session_start());
 var_dump(session_module_name());
 var_dump(session_destroy());
 
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_module_name() : variation ***
 string(5) "files"
 string(4) "user"
 
-Warning: session_start(): Failed to initialize storage module: user (path: ) in %s on line 25
-
 Fatal error: Uncaught Exception: Stop...! in %s:13
 Stack trace:
 #0 [internal function]: open('', 'PHPSESSID')
-#1 %s(25): session_start()
+#1 %s(25): session_start(unpassed)
 #2 {main}
-  thrown in %s on line 13
+  thrown in %s on line 25

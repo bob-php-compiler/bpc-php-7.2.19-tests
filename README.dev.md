@@ -682,6 +682,10 @@
 
     bpc use (with-output-to-string) to buffer php scripts output, so no "Cannot XXX when headers already sent" warning
 
+39. exception throw immediately
+
+    @see ext/session/tests/session_module_name_variation3.phpt
+
 ## File uploading / multipart form / rfc1867
 
 1. strict uploading array of files
