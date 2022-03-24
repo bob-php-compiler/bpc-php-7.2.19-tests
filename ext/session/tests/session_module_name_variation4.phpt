@@ -17,8 +17,7 @@ ob_start();
 
 echo "*** Testing session_module_name() : variation ***\n";
 
-require_once "save_handler.inc";
-$path = dirname(__FILE__);
+$path = getcwd();
 session_save_path($path);
 session_module_name("files");
 
