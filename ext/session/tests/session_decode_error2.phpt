@@ -3,8 +3,6 @@ Test session_decode() function : error functionality
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : string session_decode(void)
  * Description : Decodes session data from a string
@@ -25,7 +23,6 @@ for($index = 0; $index < strlen($data); $index++) {
 
 var_dump(session_destroy());
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_decode() : error functionality ***
@@ -360,118 +357,38 @@ array(0) {
 }
 
 -- Iteration 43 --
-bool(true)
-array(2) {
-  ["foo"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
-  ["guff"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
+
+Warning: session_decode(): Failed to decode session object. Session has been destroyed in %s%esession_decode_error2.php on line %d
+bool(false)
+array(0) {
 }
 
 -- Iteration 44 --
-bool(true)
-array(2) {
-  ["foo"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
-  ["guff"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
+
+Warning: session_decode(): Failed to decode session object. Session has been destroyed in %s%esession_decode_error2.php on line %d
+bool(false)
+array(0) {
 }
 
 -- Iteration 45 --
-bool(true)
-array(2) {
-  ["foo"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
-  ["guff"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
+
+Warning: session_decode(): Failed to decode session object. Session has been destroyed in %s%esession_decode_error2.php on line %d
+bool(false)
+array(0) {
 }
 
 -- Iteration 46 --
-bool(true)
-array(2) {
-  ["foo"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
-  ["guff"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
+
+Warning: session_decode(): Failed to decode session object. Session has been destroyed in %s%esession_decode_error2.php on line %d
+bool(false)
+array(0) {
 }
 
 -- Iteration 47 --
-bool(true)
-array(2) {
-  ["foo"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
-  ["guff"]=>
-  &array(3) {
-    [0]=>
-    int(1)
-    [1]=>
-    int(2)
-    [2]=>
-    int(3)
-  }
+
+Warning: session_decode(): Failed to decode session object. Session has been destroyed in %s%esession_decode_error2.php on line %d
+bool(false)
+array(0) {
 }
 
 -- Iteration 48 --
