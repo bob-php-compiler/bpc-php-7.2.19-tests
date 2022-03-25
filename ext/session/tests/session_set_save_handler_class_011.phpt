@@ -56,6 +56,8 @@ echo "done\n";
 ob_end_flush();
 ?>
 --EXPECTF--
+Warning: in %s line 20: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 *** Testing session_set_save_handler() : shutdown failure ***
 (#1) constructor called
 done
