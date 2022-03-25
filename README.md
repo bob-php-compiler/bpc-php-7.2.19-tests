@@ -9,6 +9,7 @@
 - [x] ext/mbstring
 - [x] ext/json
 - [x] ext/fileinfo
+- [x] ext/session
 - [x] bpc
 
 # Requirements
