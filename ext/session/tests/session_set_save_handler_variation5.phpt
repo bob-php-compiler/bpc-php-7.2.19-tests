@@ -28,7 +28,8 @@ function noisy_gc($maxlifetime) {
 echo "*** Testing session_set_save_handler() : variation ***\n";
 
 require_once "save_handler.inc";
-$path = getcwd();
+$path = getcwd() . '/session-set-save-handler-variation5';
+mkdir($path);
 var_dump(session_save_path($path));
 
 echo "*** Without lazy_write ***\n";
@@ -51,6 +52,7 @@ var_dump(session_id($session_id));
 var_dump(session_start());
 var_dump(session_destroy());
 
+rmdir($path);
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : variation ***

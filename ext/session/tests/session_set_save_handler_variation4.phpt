@@ -27,7 +27,8 @@ function noisy_gc($maxlifetime) {
 }
 
 require_once "save_handler.inc";
-$path = getcwd();
+$path = getcwd() . '/session-set-save-handler-variation4';
+mkdir($path);
 session_save_path($path);
 session_set_save_handler("open", "close", "read", "write", "destroy", "noisy_gc");
 
@@ -45,6 +46,7 @@ session_start();
 var_dump($_SESSION);
 var_dump(session_destroy());
 
+rmdir($path);
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : variation ***
