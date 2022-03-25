@@ -2,10 +2,12 @@
 Test session_set_save_handler() function : variation
 --INI--
 session.auto_start=1
+--ARGS--
+--bpc-include-file ext/session/tests/save_handler.inc \
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : bool session_set_save_handler(callback $open, callback $close, callback $read, callback $write, callback $destroy, callback $gc)
@@ -16,13 +18,12 @@ ob_start();
 echo "*** Testing session_set_save_handler() : variation ***\n";
 
 require_once "save_handler.inc";
-$path = dirname(__FILE__);
+$path = getcwd();
 var_dump(session_status());
 session_save_path($path);
 var_dump(session_set_save_handler("open", "close", "read", "write", "destroy", "gc"));
 var_dump(session_destroy());
 
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : variation ***
