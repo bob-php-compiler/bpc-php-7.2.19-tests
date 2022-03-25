@@ -7,7 +7,7 @@ session.use_strict_mode=0
 --FILE--
 <?php
 
-class CustomReadHandler extends \SessionHandler {
+class CustomReadHandler extends SessionHandler {
 
     public function read($session_id) {
         return parent::read('mycustomsession');
