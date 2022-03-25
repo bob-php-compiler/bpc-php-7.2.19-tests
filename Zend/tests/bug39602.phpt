@@ -1,7 +1,5 @@
 --TEST--
 Bug #39602 (Invalid session.save_handler crashes PHP)
---SKIPIF--
-<?php if (!extension_loaded("session")) die("skip session extension required"); ?>
 --INI--
 session.save_handler=qwerty
 error_reporting=0
@@ -12,4 +10,6 @@ $x = new stdClass();
 echo "ok";
 ?>
 --EXPECT--
+Cannot find save handler 'qwerty'
+invalid config value qwerty for ini entry session.save_handler
 ok
