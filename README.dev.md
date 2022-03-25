@@ -520,6 +520,10 @@
 
     @see ext/standard/tests/strings/bug47168.phpt
 
+44. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+
+    @see ext/session/tests/bug67694.phpt
+
 **misc**
 
 1. TODO

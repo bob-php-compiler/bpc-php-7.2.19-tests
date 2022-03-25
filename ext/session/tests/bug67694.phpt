@@ -28,7 +28,7 @@ var_dump($newid != $id);
 
 session_write_close();
 
-unset($_SESSION);
+$_SESSION = array();
 
 session_id($newid);
 session_start();

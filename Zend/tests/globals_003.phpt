@@ -18,7 +18,7 @@ class test {
 		unset($_SERVER['PHP_SELF']);
 		var_dump($_SERVER['PHP_SELF']);
 
-		unset($_SERVER);
+		$_SERVER = null;
 		var_dump($_SERVER);
 
 	}

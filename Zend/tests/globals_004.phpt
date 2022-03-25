@@ -3,7 +3,7 @@ globals in local scope - 3
 --INI--
 variables_order="egpcs"
 --ARGS--
---bpc-include-file Zend/tests/globals.inc
+--bpc-include-file Zend/tests/globals.inc \
 --FILE--
 <?php
 
