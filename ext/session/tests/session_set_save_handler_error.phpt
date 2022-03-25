@@ -3,8 +3,6 @@ Test session_set_save_handler() function : error functionality
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : bool session_set_save_handler(callback $open, callback $close, callback $read, callback $write, callback $destroy, callback $gc)
  * Description : Sets user-level session storage functions
@@ -28,7 +26,7 @@ $heredoc = <<<EOT
 Hello World!
 EOT;
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // Unexpected values to be passed as arguments
 $inputs = array(
@@ -88,7 +86,6 @@ foreach($inputs as $input) {
 
 fclose($fp);
 echo "Done";
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : error functionality ***
