@@ -11,5 +11,6 @@ echo "ok\n";
 
 ?>
 --EXPECTF--
-PHP Recoverable fatal error:  PHP Startup: Cannot set 'user' save handler by ini_set() or session_module_name() in Unknown on line 0
+Cannot set 'user' save handler by ini_set() or session_module_name()
+invalid config value user for ini entry session.save_handler
 ok
