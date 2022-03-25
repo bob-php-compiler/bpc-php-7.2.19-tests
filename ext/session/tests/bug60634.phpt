@@ -7,8 +7,6 @@ session.save_handler=files
 --FILE--
 <?php
 
-ob_start();
-
 function open($save_path, $session_name) {
     return true;
 }
@@ -48,10 +46,9 @@ echo "um, hi\n";
  */
 
 ?>
---EXPECTF--
+--EXPECT--
+*** ERROR:php-exit:
+exiting -- write: goodbye cruel world
+
 write: goodbye cruel world
-
-Warning: Unknown: Cannot call session save handler in a recursive manner in Unknown on line 0
-
-Warning: Unknown: Failed to write session data using user defined save handler. (session.save_path: ) in Unknown on line 0
-close: goodbye cruel world
+write: goodbye cruel world
