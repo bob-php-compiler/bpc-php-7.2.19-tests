@@ -1010,3 +1010,5 @@
     @see ext/session/tests/session_save_path_variation2.phpt
 
 6. no ini session.upload_progress.*
+
+7. no $HTTP_SESSION_VARS
