@@ -6,7 +6,7 @@ session.name=PHPSESSID
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : bool session_set_save_handler(SessionHandler $handler [, bool $register_shutdown_function = true])
@@ -50,4 +50,4 @@ int(2)
 array(0) {
 }
 
-Warning: SessionHandler::close() expects exactly 0 parameters, 1 given in %s on line %d
+Warning: Too many arguments to method SessionHandler::close(): 0 at most, 1 provided in %s on line %d
