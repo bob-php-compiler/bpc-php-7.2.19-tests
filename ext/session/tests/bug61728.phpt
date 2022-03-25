@@ -2,7 +2,7 @@
 Bug #61728 (PHP crash when calling ob_start in request_shutdown phase)
 --FILE--
 <?php
-function output_html($ext) {
+function output_html($ext, $phase) {
     return strlen($ext);
 }
 
