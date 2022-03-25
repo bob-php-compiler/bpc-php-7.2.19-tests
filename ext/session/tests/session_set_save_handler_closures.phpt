@@ -4,10 +4,10 @@ Test session_set_save_handler() function : using closures as callbacks
 session.save_path=
 session.name=PHPSESSID
 session.save_handler=files
+--ARGS--
+--bpc-include-file ext/session/tests/save_handler.inc --bpc-include-file ext/session/tests/save_handler_closures.inc \
 --FILE--
 <?php
-
-ob_start();
 
 /*
  * Prototype : bool session_set_save_handler(callback $open, callback $close, callback $read, callback $write, callback $destroy, callback $gc)
@@ -23,7 +23,7 @@ var_dump(session_module_name(FALSE));
 var_dump(session_module_name("blah"));
 var_dump(session_module_name("foo"));
 
-$path = dirname(__FILE__);
+$path = getcwd();
 session_save_path($path);
 session_set_save_handler($open_closure, $close_closure, $read_closure, $write_closure, $destroy_closure, $gc_closure);
 
@@ -45,7 +45,6 @@ $_SESSION['Bar'] = 'Foo';
 var_dump($_SESSION);
 session_write_close();
 
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : using closures as callbacks ***
