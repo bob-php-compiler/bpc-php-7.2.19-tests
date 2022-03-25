@@ -41,12 +41,14 @@ session_start();
 ob_end_flush();
 ?>
 --EXPECTF--
+Warning: in %s line 15: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 *** Testing session_set_save_handler() : using objects in close ***
 object(MySession7_Foo)#%d (%d) {
   ["state"]=>
-  string(2) "ok"
+  string(9) "destroyed"
 }
 object(MySession7_Foo)#%d (%d) {
   ["state"]=>
-  string(2) "ok"
+  string(9) "destroyed"
 }
