@@ -7,7 +7,7 @@ session.save_handler=files
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : bool session_set_save_handler(callback $open, callback $close, callback $read, callback $write, callback $destroy, callback $gc)
@@ -28,16 +28,13 @@ function gc($maxlifetime) {  return true; }
 
 session_set_save_handler("open", "close", "read", "write", "destroy", "gc");
 session_start();
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : error functionality ***
 
-Warning: session_start(): Failed to initialize storage module: user (path: ) in %s on line 23
-
 Fatal error: Uncaught Exception: Do something bad..! in %s:13
 Stack trace:
 #0 [internal function]: open('', 'PHPSESSID')
-#1 %s(23): session_start()
+#1 %s(23): session_start(unpassed)
 #2 {main}
-  thrown in %s on line 13
+  thrown in %s on line 23
