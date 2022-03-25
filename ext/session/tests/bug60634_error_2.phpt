@@ -42,11 +42,12 @@ echo "um, hi\n";
 
 ?>
 --EXPECTF--
-write: goodbye cruel world
-
 Fatal error: Uncaught Exception in %s
 Stack trace:
 #0 [internal function]: write('%s', '')
 #1 %s(%d): session_write_close()
 #2 {main}
   thrown in %s on line %d
+write: goodbye cruel world
+write: goodbye cruel world
+close: goodbye cruel world
