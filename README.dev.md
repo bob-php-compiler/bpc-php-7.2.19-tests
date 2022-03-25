@@ -1008,3 +1008,5 @@
 5. session save_handler warning message without function name
 
     @see ext/session/tests/session_save_path_variation2.phpt
+
+6. no ini session.upload_progress.*
