@@ -7,10 +7,10 @@ session.gc_maxlifetime=0
 session.save_path=
 session.name=PHPSESSID
 session.save_handler=files
+--ARGS--
+--bpc-include-file ext/session/tests/save_handler.inc \
 --FILE--
 <?php
-
-ob_start();
 
 /*
  * Prototype : bool session_set_save_handler(callback $open, callback $close, callback $read, callback $write, callback $destroy, callback $gc)
@@ -27,7 +27,7 @@ function noisy_gc($maxlifetime) {
 }
 
 require_once "save_handler.inc";
-$path = dirname(__FILE__);
+$path = getcwd();
 session_save_path($path);
 session_set_save_handler("open", "close", "read", "write", "destroy", "noisy_gc");
 
@@ -45,14 +45,13 @@ session_start();
 var_dump($_SESSION);
 var_dump(session_destroy());
 
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : variation ***
 Open [%s,PHPSESSID]
 Read [%s,%s]
 GC [0]
-2 deleted
+1 deleted
 array(3) {
   ["Blah"]=>
   string(12) "Hello World!"
