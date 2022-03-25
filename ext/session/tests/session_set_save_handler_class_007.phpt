@@ -60,14 +60,16 @@ echo "done\n";
 ob_end_flush();
 ?>
 --EXPECTF--
+Warning: in %s line 19: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 *** Testing session_set_save_handler() : manual shutdown, reopen ***
 (#1) constructor called
 (#1) finish called %s
 (#1) writing %s = foo|s:3:"bar";
 (#1) closing %s
 (#2) constructor called
-(#1) destructor called
 done
+(#1) destructor called
+(#2) destructor called
 (#2) writing %s = foo|s:3:"bar";abc|s:3:"xyz";
 (#2) closing %s
-(#2) destructor called
