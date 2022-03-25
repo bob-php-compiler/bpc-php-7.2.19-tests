@@ -7,7 +7,7 @@ session.gc_probability=0
 --FILE--
 <?php
 
-ob_start();
+
 
 /*
  * Prototype : bool session_set_save_handler(SessionHandler $handler [, bool $register_shutdown_function = true])
@@ -39,22 +39,14 @@ session_set_save_handler($handler);
 var_dump(session_start());
 
 var_dump(session_id(), $oldHandler, ini_get('session.save_handler'), $handler->i, $_SESSION);
+?>
 --EXPECTF--
 *** Testing session_set_save_handler() : incorrect arguments for existing handler open ***
 Open 
 
-Warning: SessionHandler::open() expects exactly 2 parameters, 0 given in %s on line %d
-Read %s
-
-Warning: SessionHandler::read(): Parent session handler is not open in %s on line %d
-
-Warning: SessionHandler::close(): Parent session handler is not open in %s on line %d
-
-Warning: session_start(): Failed to read session data: user (%s) in %s on line %d
-bool(false)
-string(0) ""
-string(5) "files"
-string(4) "user"
-int(2)
-array(0) {
-}
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method SessionHandler::open(): 2 required, 0 provided in %s:20
+Stack trace:
+#0 [internal function]: MySession->open('', 'PHPSESSID')
+#1 %s(32): session_start(unpassed)
+#2 {main}
+  thrown in %s on line 32
