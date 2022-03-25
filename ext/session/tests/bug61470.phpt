@@ -4,7 +4,7 @@ Bug #61470 (session_regenerate_id() does not create session file)
 --FILE--
 <?php
 ob_start();
-ini_set('session.save_path', __DIR__);
+ini_set('session.save_path', getcwd());
 $path = ini_get('session.save_path') . '/sess_';
 session_start();
 // starts session & creates and locks file
