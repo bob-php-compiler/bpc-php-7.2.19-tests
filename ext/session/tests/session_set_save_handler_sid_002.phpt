@@ -7,8 +7,6 @@ session.save_path=/tmp
 --FILE--
 <?php
 
-ob_start();
-
 echo "*** Testing session_set_save_handler() function: create_sid ***\n";
 
 class MySession2 {
@@ -74,11 +72,6 @@ session_unset();
 
 Fatal error: Uncaught Error: Session id must be a string in %s:%d
 Stack trace:
-#0 %s(%d): session_start()
-#1 {main}
-
-Next Error: Failed to create session ID: user (path: %s) in %s:%d
-Stack trace:
-#0 %s(%d): session_start()
+#0 %s(%d): session_start(unpassed)
 #1 {main}
   thrown in %s on line %d
