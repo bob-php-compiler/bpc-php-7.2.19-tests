@@ -1,10 +1,12 @@
 --TEST--
 Bug #53141 (autoload misbehaves if called from closing session)
+--ARGS--
+--bpc-include-file ext/session/tests/Bar.inc \
 --FILE--
 <?php
 spl_autoload_register(function ($class) {
-    var_dump("Loading $class");
-    eval('class Bar {}');
+    fwrite(STDOUT, "Loading $class");
+    include "$class.inc";
 });
 
 class Foo
@@ -21,4 +23,4 @@ $_SESSION['foo'] = new Foo;
 
 ?>
 --EXPECT--
-string(11) "Loading Bar"
+Loading Bar
