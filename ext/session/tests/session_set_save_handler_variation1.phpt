@@ -3,8 +3,6 @@ Test session_set_save_handler() function : variation
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : bool session_set_save_handler(callback $open, callback $close, callback $read, callback $write, callback $destroy, callback $gc)
  * Description : Sets user-level session storage functions
@@ -21,7 +19,6 @@ var_dump(session_module_name());
 var_dump(session_module_name("files"));
 var_dump(session_module_name());
 
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : variation ***
