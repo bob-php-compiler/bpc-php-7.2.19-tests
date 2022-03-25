@@ -41,11 +41,12 @@ echo "um, hi\n";
 
 ?>
 --EXPECTF--
-close: goodbye cruel world
-
 Fatal error: Uncaught Error: Call to undefined function undefined_function() in %s:%d
 Stack trace:
 #0 [internal function]: close()
 #1 %s(%d): session_write_close()
 #2 {main}
   thrown in %s on line %d
+close: goodbye cruel world
+
+Warning: Failed to write session data (user). Please verify that the current setting of session.save_path is correct () in %s on line %d
