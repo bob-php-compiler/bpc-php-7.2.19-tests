@@ -40,12 +40,7 @@ session_start();
 
 ?>
 --EXPECTF--
+*** ERROR:php-exit:
+exiting -- 0
 write: goodbye cruel world
-
-Fatal error: Uncaught Exception in %s
-Stack trace:
-#0 [internal function]: write('%s', '')
-#1 {main}
-  thrown in %s on line %d
-
-Warning: Unknown: Cannot call session save handler in a recursive manner in Unknown on line 0
+close: goodbye cruel world
