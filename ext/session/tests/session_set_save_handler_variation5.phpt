@@ -8,10 +8,10 @@ session.gc_maxlifetime=0
 session.save_path=
 session.name=PHPSESSID
 session.save_handler=files
+--ARGS--
+--bpc-include-file ext/session/tests/save_handler.inc \
 --FILE--
 <?php
-
-ob_start();
 
 /*
  * Prototype : bool session_set_save_handler(callback $open, callback $close, callback $read, callback $write, callback $destroy, callback $gc)
@@ -28,12 +28,12 @@ function noisy_gc($maxlifetime) {
 echo "*** Testing session_set_save_handler() : variation ***\n";
 
 require_once "save_handler.inc";
-$path = dirname(__FILE__);
+$path = getcwd();
 var_dump(session_save_path($path));
 
 echo "*** Without lazy_write ***\n";
 var_dump(session_set_save_handler("open", "close", "read", "write", "destroy", "noisy_gc", "create_sid", "validate_sid", "update"));
-var_dump(session_start(['lazy_write'=>FALSE]));
+var_dump(session_start(array('lazy_write'=>FALSE)));
 $session_id = session_id();
 var_dump(session_id());
 var_dump(session_write_close());
@@ -42,7 +42,7 @@ var_dump(session_id());
 echo "*** With lazy_write ***\n";
 var_dump(session_id($session_id));
 var_dump(session_set_save_handler("open", "close", "read", "write", "destroy", "noisy_gc", "create_sid", "validate_sid", "update"));
-var_dump(session_start(['lazy_write'=>TRUE]));
+var_dump(session_start(array('lazy_write'=>TRUE)));
 var_dump(session_commit());
 var_dump(session_id());
 
@@ -51,7 +51,6 @@ var_dump(session_id($session_id));
 var_dump(session_start());
 var_dump(session_destroy());
 
-ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_set_save_handler() : variation ***
