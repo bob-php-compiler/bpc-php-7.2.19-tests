@@ -6,8 +6,6 @@ session.name=PHPSESSID
 --FILE--
 <?php
 
-ob_start();
-
 /*
  * Prototype : bool session_set_save_handler(SessionHandlerInterface $handler [, bool $register_shutdown_function = true])
  * Description : Sets user-level session storage functions
@@ -78,6 +76,7 @@ $ret = session_set_save_handler($handler);
 var_dump($ret);
 
 session_start();
+?>
 --EXPECTF--
 *** Testing session_set_save_handler() function: interface wrong ***
 bool(true)
