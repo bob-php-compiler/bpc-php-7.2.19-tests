@@ -8,14 +8,14 @@ session_decode() does not return proper status.
 ini_set("session.serialize_handler", "php_serialize");
 session_start();
 
-$result1 = session_decode(serialize(["foo" => "bar"]));
+$result1 = session_decode(serialize(array("foo" => "bar")));
 $session1 = $_SESSION;
 session_destroy();
 
 ini_set("session.serialize_handler", "php");
 session_start();
 
-$result2 = session_decode(serialize(["foo" => "bar"]));
+$result2 = session_decode(serialize(array("foo" => "bar")));
 $session2 = $_SESSION;
 session_destroy();
 
