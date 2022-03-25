@@ -52,7 +52,7 @@ function read($id) {
     //       e.g. Use "serializable transaction isolation level" with RDBMS.
     //       read() would be the best place for locking for most save handlers.
 
-    global $session_save_path, $name, $session_id;
+    global $session_save_path, $session_id;
     $session_id = $id;
     echo "Read [${session_save_path},${id}]\n";
     $session_file = "$session_save_path/".SESSION_FILE_PREFIX.$id;
@@ -72,7 +72,7 @@ function write($id, $session_data) {
     // NOTE: This function may unlock session data locked by read(). If write() is
     //       is not suitable place your handler to unlock. Unlock data at close().
 
-    global $session_save_path, $name, $session_id;
+    global $session_save_path, $session_id;
     $session_id = $id;
     echo "Write [${session_save_path},${id},${session_data}]\n";
     $session_file = "$session_save_path/".SESSION_FILE_PREFIX.$id;
@@ -90,7 +90,7 @@ function write($id, $session_data) {
 function destroy($id) {
     // string $id - Session ID string
 
-    global $session_save_path, $name;
+    global $session_save_path;
     echo "Destroy [${session_save_path},${id}]\n";
     $session_file = "$session_save_path/".SESSION_FILE_PREFIX.$id;
     unlink($session_file);
@@ -105,7 +105,7 @@ function destroy($id) {
 function gc($maxlifetime) {
     // long $maxlifetime - GC TTL in seconds. Default: session.gc_maxlifetime
 
-    global $session_save_path, $name;
+    global $session_save_path;
     $gc_cnt = 0;
     $directory = opendir($session_save_path."/");
     $length = strlen(SESSION_FILE_PREFIX);
@@ -147,7 +147,7 @@ function create_sid() {
 function validate_sid($id) {
     // string $id - Session ID string
 
-    global $session_save_path, $name;
+    global $session_save_path;
     echo "ValidateID [${session_save_path},${id}]\n";
     $session_file = "$session_save_path/".SESSION_FILE_PREFIX.$id;
     $ret = file_exists($session_file);
@@ -167,7 +167,7 @@ function update($id, $session_data) {
     // NOTE: This handler is optional. If your session database cannot
     //       support time stamp updating, you must not define this.
 
-    global $session_save_path, $name;
+    global $session_save_path;
     echo "Update [${session_save_path},${id}]\n";
     $session_file = "$session_save_path/".SESSION_FILE_PREFIX.$id;
     $ret = touch($session_file);
