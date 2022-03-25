@@ -7,6 +7,8 @@ session.save_path=
 session.name=PHPSESSID
 session.gc_probability=0
 session.save_handler=files
+--ARGS--
+--bpc-include-file ext/session/tests/save_handler.inc \
 --FILE--
 <?php
 
@@ -21,7 +23,7 @@ ob_start();
 echo "*** Testing session_set_save_handler() : test write short circuit ***\n";
 
 require_once "save_handler.inc";
-$path = dirname(__FILE__);
+$path = getcwd();
 session_save_path($path);
 session_set_save_handler("open", "close", "read", "write", "destroy", "gc", "create_sid", "validate_sid", "update");
 
