@@ -29,8 +29,8 @@ $ao = new ArrayObject($original);
 try {
 	$copy = $ao->exchangeArray();
 	$copy['addedToCopy'] = 'added To Copy';
-} catch (Exception $e) {
-	echo "Exception:" . $e->getMessage() . "\n";
+} catch (ArgumentCountError $e) {
+	echo "ArgumentCountError:" . $e->getMessage() . "\n";
 }
 $original->addedToOriginal = 'added To Original';
 var_dump($ao, $original, $copy);
@@ -51,22 +51,22 @@ var_dump($ao, $original, $copy);
 ?>
 --EXPECTF--
 --> exchangeArray() with objects:
-object(ArrayObject)#2 (1) {
+object(ArrayObject)#%d (1) {
   ["storage":"ArrayObject":private]=>
-  object(C)#3 (2) {
+  object(C)#%d (2) {
     ["pub1"]=>
     string(7) "public1"
     ["addedToSwapIn"]=>
     string(16) "added To Swap-In"
   }
 }
-object(C)#1 (2) {
+object(C)#%d (2) {
   ["pub1"]=>
   string(7) "public1"
   ["addedToOriginal"]=>
   string(17) "added To Original"
 }
-object(C)#3 (2) {
+object(C)#%d (2) {
   ["pub1"]=>
   string(7) "public1"
   ["addedToSwapIn"]=>
@@ -81,43 +81,37 @@ array(2) {
 
 
 --> exchangeArray() with no arg:
-
-Warning: ArrayObject::exchangeArray() expects exactly 1 parameter, 0 given in %s on line 27
-object(ArrayObject)#2 (1) {
+ArgumentCountError:Too few arguments to method ArrayObject::exchangeArray(): 1 required, 0 provided
+object(ArrayObject)#%d (1) {
   ["storage":"ArrayObject":private]=>
-  object(C)#3 (2) {
+  object(C)#%d (2) {
     ["pub1"]=>
     string(7) "public1"
     ["addedToOriginal"]=>
     string(17) "added To Original"
   }
 }
-object(C)#3 (2) {
+object(C)#%d (2) {
   ["pub1"]=>
   string(7) "public1"
   ["addedToOriginal"]=>
   string(17) "added To Original"
 }
-array(1) {
-  ["addedToCopy"]=>
-  string(13) "added To Copy"
-}
+NULL
 
 
 --> exchangeArray() with bad arg type:
 Exception:Passed variable is not an array or object
-
-Notice: Undefined variable: copy in %s on line 46
-object(ArrayObject)#3 (1) {
+object(ArrayObject)#%d (1) {
   ["storage":"ArrayObject":private]=>
-  object(C)#2 (2) {
+  object(C)#%d (2) {
     ["pub1"]=>
     string(7) "public1"
     ["addedToOriginal"]=>
     string(17) "added To Original"
   }
 }
-object(C)#2 (2) {
+object(C)#%d (2) {
   ["pub1"]=>
   string(7) "public1"
   ["addedToOriginal"]=>
