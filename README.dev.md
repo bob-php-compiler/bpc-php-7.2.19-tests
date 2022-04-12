@@ -1016,3 +1016,9 @@
 6. no ini session.upload_progress.*
 
 7. no $HTTP_SESSION_VARS
+
+## ext/spl
+
+1. ArrayObject iteratorClass should be ArrayIterator
+
+    php allow iterator, but fatal error "Internal compiler error, Class is not child of ArrayObject or ArrayIterator"
