@@ -68,8 +68,8 @@ int(2)
 int(99)
 int(1)
 
-Warning: ArrayObject::count() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
+Warning: Too many arguments to method ArrayObject::count(): 0 at most, 1 provided in %s on line %d
+int(1)
 ==ArrayIterator==
 int(99)
 int(0)
@@ -80,5 +80,5 @@ int(2)
 int(99)
 int(1)
 
-Warning: ArrayIterator::count() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
+Warning: Too many arguments to method ArrayIterator::count(): 0 at most, 1 provided in %s on line %d
+int(1)
