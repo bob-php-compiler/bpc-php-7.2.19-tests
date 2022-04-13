@@ -3,7 +3,7 @@ Test sorting of various ArrayObject backing storage
 --FILE--
 <?php
 
-$obj = (object)['a' => 2, 'b' => 1];
+$obj = (object)array('a' => 2, 'b' => 1);
 $ao = new ArrayObject($obj);
 $ao->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao);
@@ -19,30 +19,30 @@ $ao3->b = 1;
 $ao3->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao3);
 
-$ao4 = new ArrayObject([]);
+$ao4 = new ArrayObject(array());
 $ao4->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao4);
 
-$ao5 = new ArrayObject(['a' => 2, 'b' => 1]);
+$ao5 = new ArrayObject(array('a' => 2, 'b' => 1));
 $ao5->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao5);
 
 ?>
---EXPECT--
-object(ArrayObject)#2 (1) {
+--EXPECTF--
+object(ArrayObject)#%d (1) {
   ["storage":"ArrayObject":private]=>
-  object(stdClass)#1 (2) {
+  object(stdClass)#%d (2) {
     ["b"]=>
     int(1)
     ["a"]=>
     int(2)
   }
 }
-object(ArrayObject)#3 (1) {
+object(ArrayObject)#%d (1) {
   ["storage":"ArrayObject":private]=>
-  object(ArrayObject)#2 (1) {
+  object(ArrayObject)#%d (1) {
     ["storage":"ArrayObject":private]=>
-    object(stdClass)#1 (2) {
+    object(stdClass)#%d (2) {
       ["a"]=>
       int(2)
       ["b"]=>
@@ -50,18 +50,18 @@ object(ArrayObject)#3 (1) {
     }
   }
 }
-object(ArrayObject)#4 (2) {
+object(ArrayObject)#%d (2) {
   ["b"]=>
   int(1)
   ["a"]=>
   int(2)
 }
-object(ArrayObject)#5 (1) {
+object(ArrayObject)#%d (1) {
   ["storage":"ArrayObject":private]=>
   array(0) {
   }
 }
-object(ArrayObject)#6 (1) {
+object(ArrayObject)#%d (1) {
   ["storage":"ArrayObject":private]=>
   array(2) {
     ["b"]=>
