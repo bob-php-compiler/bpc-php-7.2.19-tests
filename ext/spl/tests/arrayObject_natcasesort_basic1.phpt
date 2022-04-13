@@ -37,6 +37,8 @@ object(ArrayObject)#1 (1) {
     string(5) "boo22"
   }
 }
+
+Warning: Too many arguments to method ArrayObject::natcasesort(): 0 at most, 1 provided in %s on line %d
 bool(true)
 object(ArrayObject)#2 (1) {
   ["storage":"ArrayObject":private]=>
