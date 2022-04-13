@@ -4,6 +4,8 @@ Bug # #68937 (Segfault in curl_multi_exec)
 <?php
 if (getenv("SKIP_ONLINE_TESTS")) die("skip online test");
 ?>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
