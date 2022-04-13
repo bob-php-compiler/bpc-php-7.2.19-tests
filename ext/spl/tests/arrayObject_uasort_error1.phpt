@@ -13,7 +13,7 @@ $ao = new ArrayObject();
 
 try {
 	$ao->uasort();
-} catch (BadMethodCallException $e) {
+} catch (ArgumentCountError $e) {
 	echo $e->getMessage() . "\n";
 }
 
@@ -25,6 +25,9 @@ try {
 ?>
 ===DONE===
 --EXPECTF--
-Function expects exactly one argument
-Function expects exactly one argument
+Too few arguments to method ArrayObject::uasort(): 1 required, 0 provided
+
+Warning: Too many arguments to method ArrayObject::uasort(): 1 at most, 2 provided in %s on line %d
+
+Warning: uasort() expects parameter 2 to be callable, 1 given in %s on line %d
 ===DONE===
