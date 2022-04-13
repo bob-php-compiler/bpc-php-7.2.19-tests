@@ -3,7 +3,7 @@ Don't recurse into USE_OTHER when checking for STD_PROP_LIST
 --FILE--
 <?php
 
-$a = new ArrayObject([1, 2, 3], ArrayObject::STD_PROP_LIST);
+$a = new ArrayObject(array(1, 2, 3), ArrayObject::STD_PROP_LIST);
 $a->prop = 'a';
 $b = new ArrayObject($a, 0);
 $b->prop = 'b';
