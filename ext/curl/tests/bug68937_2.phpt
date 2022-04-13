@@ -4,6 +4,8 @@ Bug # #68937 (Segfault in curl_multi_exec)
 <?php
 if (getenv("SKIP_ONLINE_TESTS")) die("skip online test");
 ?>
+--ARGS--
+--bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 include 'server.inc';
@@ -16,8 +18,8 @@ curl_setopt_array($ch, array(
 	CURLOPT_HEADER => false,
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_POST => true,
-	CURLOPT_INFILESIZE => filesize(__FILE__),
-	CURLOPT_INFILE => fopen(__FILE__, 'r'),
+	CURLOPT_INFILESIZE => filesize('bug68937_2.php'),
+	CURLOPT_INFILE => fopen('bug68937_2.php', 'r'),
 	CURLOPT_HTTPHEADER => array(
 		'Expect:',
 		'Content-Length: 1',
