@@ -3,8 +3,8 @@ Assignments to illegal ArrayObject offsets shouldn't leak
 --FILE--
 <?php
 
-$ao = new ArrayObject([1, 2, 3]);
-$ao[[]] = new stdClass;
+$ao = new ArrayObject(array(1, 2, 3));
+$ao[array()] = new stdClass;
 
 ?>
 --EXPECTF--
