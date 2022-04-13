@@ -61,9 +61,9 @@ foreach($ao as $key=>$value) {
 --EXPECTF--
 --> Access using MyIterator:
 string(10) "MyIterator"
-object(MyIterator)#2 (1) {
+object(MyIterator)#%d (1) {
   ["storage":"ArrayIterator":private]=>
-  object(ArrayObject)#1 (1) {
+  object(ArrayObject)#%d (1) {
     ["storage":"ArrayObject":private]=>
     array(3) {
       ["a"]=>
@@ -97,9 +97,9 @@ object(MyIterator)#2 (1) {
 --> Access using ArrayIterator:
 NULL
 string(13) "ArrayIterator"
-object(ArrayIterator)#3 (1) {
+object(ArrayIterator)#%d (1) {
   ["storage":"ArrayIterator":private]=>
-  object(ArrayObject)#1 (1) {
+  object(ArrayObject)#%d (1) {
     ["storage":"ArrayObject":private]=>
     array(3) {
       ["a"]=>
