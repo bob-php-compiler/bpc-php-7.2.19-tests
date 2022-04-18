@@ -32,7 +32,7 @@ try {
 	echo $e->getMessage() . "\n";
 }
 
-$it = new CallbackFilterIterator(new ArrayIterator(array(1)), function() {
+$it = new CallbackFilterIterator(new ArrayIterator(array(1)), function($current, $key, $iterator) {
 	throw new Exception("some message");
 });
 try {
@@ -41,8 +41,8 @@ try {
 	echo $e->getMessage() . "\n";
 }
 --EXPECT--
-CallbackFilterIterator::__construct() expects exactly 2 parameters, 0 given
-Argument 1 passed to CallbackFilterIterator::__construct() must implement interface Iterator, null given
-CallbackFilterIterator::__construct() expects parameter 2 to be a valid callback, no array or string given
-CallbackFilterIterator::__construct() expects parameter 2 to be a valid callback, array must have exactly two members
+Too few arguments to method CallbackFilterIterator::__construct(): 2 required, 0 provided
+Too few arguments to method CallbackFilterIterator::__construct(): 2 required, 1 provided
+CallbackFilterIterator::__construct() expects parameter 2 to be callable,  given
+CallbackFilterIterator::__construct() expects parameter 2 to be callable, Array given
 some message
