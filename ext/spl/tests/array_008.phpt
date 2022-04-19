@@ -1,5 +1,7 @@
 --TEST--
 SPL: ArrayIterator and foreach reference
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 
