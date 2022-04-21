@@ -147,6 +147,7 @@ NoRewindIteratorEx::rewind
 NoRewindIteratorEx::valid
 ArrayIteratorEx::valid
 NoRewindIteratorEx::current
+ArrayIteratorEx::current
 int(2)
 NoRewindIteratorEx::next
 ArrayIteratorEx::next
