@@ -13,7 +13,11 @@ $arr = array(
 $it = new RecursiveArrayIterator($arr);
 $it = new RecursiveTreeIterator($it);
 
-$it->setPrefixPart(1); // Should throw a warning as setPrefixPart expects 2 arguments
+try {
+    $it->setPrefixPart(1); // Should throw a warning as setPrefixPart expects 2 arguments
+} catch (ArgumentCountError $e) {
+    echo "Error: ", $e->getMessage(), "\n";
+}
 
 $a = new stdClass();
 $it->setPrefixPart($a, 1); // Should throw a warning as setPrefixPart expects argument 1 to be long integer
@@ -24,7 +28,7 @@ $it->setPrefixPart(1, $a); // Should throw a warning as setPrefixPart expects ar
 ?>
 ===DONE===
 --EXPECTF--
-Warning: RecursiveTreeIterator::setPrefixPart() expects exactly 2 parameters, 1 given in %s on line %d
+Error: Too few arguments to method RecursiveTreeIterator::setPrefixPart(): 2 required, 1 provided
 
 Warning: RecursiveTreeIterator::setPrefixPart() expects parameter 1 to be integer, object given in %s on line %d
 
