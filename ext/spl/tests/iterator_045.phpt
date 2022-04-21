@@ -73,9 +73,21 @@ catch(Exception $e)
 
 $it = new MyCachingIterator(new ArrayIterator(array(0, 1, 2, 3)), CachingIterator::FULL_CACHE);
 
-var_dump($it->offsetSet());
-var_dump($it->offsetSet(0));
-var_dump($it->offsetUnset());
+try {
+    var_dump($it->offsetSet());
+} catch (ArgumentCountError $e) {
+    echo "Error: ", $e->getMessage(), "\n";
+}
+try {
+    var_dump($it->offsetSet(0));
+} catch (ArgumentCountError $e) {
+    echo "Error: ", $e->getMessage(), "\n";
+}
+try {
+    var_dump($it->offsetUnset());
+} catch (ArgumentCountError $e) {
+    echo "Error: ", $e->getMessage(), "\n";
+}
 
 $checks = array(0 => 25, 1 => 42, 3 => 'FooBar');
 $unsets = array(0, 2);
@@ -97,15 +109,9 @@ $it->show();
 --EXPECTF--
 Exception: MyCachingIterator does not use a full cache (see CachingIterator::__construct)
 Exception: MyCachingIterator does not use a full cache (see CachingIterator::__construct)
-
-Warning: CachingIterator::offsetSet() expects exactly 2 parameters, 0 given in %siterator_045.php on line %d
-NULL
-
-Warning: CachingIterator::offsetSet() expects exactly 2 parameters, 1 given in %siterator_045.php on line %d
-NULL
-
-Warning: CachingIterator::offsetUnset() expects exactly 1 parameter, 0 given in %siterator_045.php on line %d
-NULL
+Error: Too few arguments to method CachingIterator::offsetSet(): 2 required, 0 provided
+Error: Too few arguments to method CachingIterator::offsetSet(): 2 required, 1 provided
+Error: Too few arguments to method CachingIterator::offsetUnset(): 1 required, 0 provided
 MyCachingIterator::testSet()
 set(0,25)
 set(1,42)
