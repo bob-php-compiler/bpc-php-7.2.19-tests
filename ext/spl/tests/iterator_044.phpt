@@ -52,8 +52,16 @@ catch(Exception $e)
 
 $it = new MyCachingIterator(new ArrayIterator(array(0, 'foo'=>1, 2, 'bar'=>3, 4)), CachingIterator::FULL_CACHE);
 
-var_dump($it->offsetExists());
-var_dump($it->offsetGet());
+try {
+    var_dump($it->offsetExists());
+} catch (ArgumentCountError $e) {
+    echo "Error: ", $e->getMessage(), "\n";
+}
+try {
+    var_dump($it->offsetGet());
+} catch (ArgumentCountError $e) {
+    echo "Error: ", $e->getMessage(), "\n";
+}
 
 $checks = array(0, new stdClass, new MyFoo, NULL, 2, 'foo', 3);
 
@@ -71,12 +79,8 @@ $it->test($checks);
 --EXPECTF--
 Exception: MyCachingIterator does not use a full cache (see CachingIterator::__construct)
 Exception: MyCachingIterator does not use a full cache (see CachingIterator::__construct)
-
-Warning: CachingIterator::offsetExists() expects exactly 1 parameter, 0 given in %siterator_044.php on line %d
-NULL
-
-Warning: CachingIterator::offsetGet() expects exactly 1 parameter, 0 given in %siterator_044.php on line %d
-NULL
+Error: Too few arguments to method CachingIterator::offsetExists(): 1 required, 0 provided
+Error: Too few arguments to method CachingIterator::offsetGet(): 1 required, 0 provided
 ===0===
 int(0)
 bool(false)
@@ -129,7 +133,7 @@ int(0)
 bool(true)
 int(0)
 ===1===
-object(stdClass)#1 (0) {
+object(stdClass)#%d (0) {
 }
 
 Warning: CachingIterator::offsetExists() expects parameter 1 to be string, object given in %siterator_044.php on line %d
@@ -138,7 +142,7 @@ NULL
 Warning: CachingIterator::offsetGet() expects parameter 1 to be string, object given in %siterator_044.php on line %d
 NULL
 ===2===
-object(MyFoo)#2 (0) {
+object(MyFoo)#%d (0) {
 }
 bool(true)
 int(1)
