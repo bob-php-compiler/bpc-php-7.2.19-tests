@@ -10,5 +10,5 @@ try {
 ?>
 ===DONE===
 --EXPECT--
-RecursiveCachingIterator::__construct() expects parameter 1 to be RecursiveIterator, object given
+RecursiveCachingIterator::__construct() expects parameter 1 to be RecursiveIterator, ArrayIterator given
 ===DONE===
