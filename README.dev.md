@@ -1022,3 +1022,10 @@
 1. ArrayObject iteratorClass should be ArrayIterator
 
     php allow iterator, but fatal error "Internal compiler error, Class is not child of ArrayObject or ArrayIterator"
+
+2. ArrayObject/ArrayIterator nested array assignment may report undefined index notice
+
+    @see ext/spl/tests/array_026.phpt `$test['d1']['d2'] = 'hello';`
+    1) offsetGet('d1') report notice and return NULL
+    2) offsetSet('d1', (make-php-hash))
+    3) (php-hash-insert! d1-empty-hash "d2" "hello")
