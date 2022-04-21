@@ -27,8 +27,10 @@ unset($obj);
 
 ?>
 ===DONE===
---EXPECT--
-Test::foo()
-TestIteratorIterator::__destruct()
+--EXPECTF--
+Warning: in %s line 15: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Test::foo()
 ===DONE===
+TestIteratorIterator::__destruct()
+Test::foo()
