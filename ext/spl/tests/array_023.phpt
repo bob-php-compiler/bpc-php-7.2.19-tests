@@ -36,8 +36,8 @@ var_dump($a);
 var_dump($a->var);
 
 ?>
---EXPECT--
-object(Name)#1 (4) {
+--EXPECTF--
+object(Name)#%d (4) {
   ["var"]=>
   string(1) "a"
   ["bar":protected]=>
@@ -49,7 +49,7 @@ object(Name)#1 (4) {
   }
 }
 string(1) "a"
-object(Name)#2 (4) {
+object(Name)#%d (4) {
   ["var"]=>
   string(1) "a"
   ["bar":protected]=>
@@ -61,7 +61,7 @@ object(Name)#2 (4) {
   }
 }
 string(1) "a"
-object(Bla)#1 (4) {
+object(Bla)#%d (4) {
   ["var"]=>
   string(3) "aaa"
   ["bar":protected]=>
@@ -73,7 +73,7 @@ object(Bla)#1 (4) {
   }
 }
 string(3) "aaa"
-object(Bla)#2 (4) {
+object(Bla)#%d (4) {
   ["var"]=>
   string(3) "aaa"
   ["bar":protected]=>
