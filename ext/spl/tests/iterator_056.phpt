@@ -56,9 +56,9 @@ try {
 
 ?>
 --EXPECT--
-FilterIterator::__construct() expects exactly 1 parameter, 0 given
-CachingIterator::__construct() expects at least 1 parameter, 0 given
-RecursiveCachingIterator::__construct() expects at least 1 parameter, 0 given
-ParentIterator::__construct() expects exactly 1 parameter, 0 given
-LimitIterator::__construct() expects at least 1 parameter, 0 given
-NoRewindIterator::__construct() expects exactly 1 parameter, 0 given
+Too few arguments to method FilterIterator::__construct(): 1 required, 0 provided
+Too few arguments to method CachingIterator::__construct(): 1 required, 0 provided
+Too few arguments to method RecursiveCachingIterator::__construct(): 1 required, 0 provided
+Too few arguments to method ParentIterator::__construct(): 1 required, 0 provided
+Too few arguments to method LimitIterator::__construct(): 1 required, 0 provided
+Too few arguments to method NoRewindIterator::__construct(): 1 required, 0 provided
