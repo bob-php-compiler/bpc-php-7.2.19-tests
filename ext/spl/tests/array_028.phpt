@@ -2,9 +2,9 @@
 ArrayObject/Iterator on array with NUL bytes
 --FILE--
 <?php
-$array = [
+$array = array(
     "\0foo" => "bar",
-];
+);
 
 $it = new ArrayIterator($array);
 foreach ($it as $v) {
