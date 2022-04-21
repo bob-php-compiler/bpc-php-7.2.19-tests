@@ -1,10 +1,10 @@
 --TEST--
 SPL: RecursiveTreeIterator and Exception from getEntry()
 --INI--
-error_reporting=E_ALL&~E_NOTICE
+error_reporting=32759
 --FILE--
 <?php
-
+// E_ALL&~E_NOTICE = 32759
 $ary = array(new stdClass);
 
 class RecursiveArrayIteratorAggregated implements IteratorAggregate {
@@ -18,16 +18,11 @@ class RecursiveArrayIteratorAggregated implements IteratorAggregate {
 }
 
 $it = new RecursiveArrayIteratorAggregated($ary);
-try {
 	foreach(new RecursiveTreeIterator($it) as $k => $v) {
 		echo "[$k] => $v\n";
 	}
-} catch (UnexpectedValueException $e) {
-	echo "UnexpectedValueException thrown\n";
-}
 
 ?>
 ===DONE===
 --EXPECTF--
-UnexpectedValueException thrown
-===DONE===
+Recoverable fatal error: Object of class stdClass could not be converted to string in %s on line %d

@@ -1029,3 +1029,7 @@
     1) offsetGet('d1') report notice and return NULL
     2) offsetSet('d1', (make-php-hash))
     3) (php-hash-insert! d1-empty-hash "d2" "hello")
+
+3. RecursiveTreeIterator::getEntry not convert recoverable fatal error to UnexpectedValueException
+
+    @see ext/spl/tests/recursive_tree_iterator_007.phpt
