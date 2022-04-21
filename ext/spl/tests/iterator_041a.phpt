@@ -92,9 +92,10 @@ MyArrayIterator::test('iterator_count', array(3 => 6));
 ?>
 ===DONE===
 <?php exit(0); ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 54: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 ===iterator_to_array===
-State 7: __destruct()
 array(2) {
   [0]=>
   int(1)
@@ -102,6 +103,18 @@ array(2) {
   int(2)
 }
 ===iterator_count===
-State 7: __destruct()
 int(2)
 ===DONE===
+
+Fatal error: Uncaught Exception: State 7: __destruct() in %s:12
+Stack trace:
+#0 %s(56): MyArrayIterator->fail(7, '__destruct')
+#1 %s(91): MyArrayIterator->__destruct()
+#2 {main}
+
+Next Exception: State 7: __destruct() in %s:12
+Stack trace:
+#0 %s(56): MyArrayIterator->fail(7, '__destruct')
+#1 %s(91): MyArrayIterator->__destruct()
+#2 {main}
+  thrown in %s on line 91

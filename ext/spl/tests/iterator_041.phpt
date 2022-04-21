@@ -92,7 +92,9 @@ MyArrayIterator::test('iterator_count', array(3 => 6));
 ?>
 ===DONE===
 <?php exit(0); ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 54: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 ===iterator_to_array===
 State 0: __construct()
 State 1: __construct()
