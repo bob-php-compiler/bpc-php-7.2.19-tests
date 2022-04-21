@@ -1,5 +1,7 @@
 --TEST--
 SPL: RecursiveIteratorIterator cannot be used with foreach by reference
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 
