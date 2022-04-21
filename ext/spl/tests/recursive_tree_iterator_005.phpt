@@ -1,17 +1,17 @@
 --TEST--
 SPL: RecursiveTreeIterator and binary vs unicode (PHP 6.0+)
 --INI--
-error_reporting=E_ALL&~E_NOTICE
+error_reporting=32759
 --FILE--
 <?php
-
+// E_ALL&~E_NOTICE = 32759
 $ary = array(
 	0 => array(
-		(binary) "binary",
+		"binary",
 		"abc2",
 		1,
 	),
-	(binary) "binary" => array(
+	"binary" => array(
 		2,
 		"b",
 		3 => array(
