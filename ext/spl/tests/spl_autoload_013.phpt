@@ -30,12 +30,7 @@ var_dump(spl_autoload_functions());
 --EXPECTF--
 array(3) {
   [0]=>
-  object(Closure)#%d (1) {
-    ["parameter"]=>
-    array(1) {
-      ["$class"]=>
-      string(10) "<required>"
-    }
+  object(Closure)#%d (0) {
   }
   [1]=>
   object(Autoloader)#%d (1) {
