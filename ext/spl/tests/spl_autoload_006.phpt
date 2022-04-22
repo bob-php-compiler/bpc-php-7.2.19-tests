@@ -12,7 +12,7 @@ class MyAutoLoader {
         }
 }
 
-spl_autoload_register('MyAutoLoader::autoLoad');
+spl_autoload_register(array('MyAutoLoader', 'autoLoad'));
 
 var_dump(spl_autoload_functions());
 
