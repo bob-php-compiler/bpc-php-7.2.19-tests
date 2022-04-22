@@ -10,4 +10,6 @@ iterator_to_array();//requires iterator as arg
 
 ?>
 --EXPECTF--
-Warning: iterator_to_array() expects at least 1 parameter, %s
+*** ERROR:compile-error:
+Error: Too few arguments to function iterator_to_array(): 1 required, 0 provided in %s on line %d
+ -- compile-error
