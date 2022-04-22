@@ -1,5 +1,7 @@
 --TEST--
 SPL: spl_autoload_unregister() with closures and invokables
+--ARGS--
+--bpc-include-file ext/spl/tests/spl_autoload_014-TestX.inc --bpc-include-file ext/spl/tests/spl_autoload_014-TestY.inc \
 --FILE--
 <?php
 $closure = function($class) {
@@ -19,7 +21,7 @@ class Autoloader {
 class WorkingAutoloader {
   public function __invoke($class) {
     echo ("WorkingAutoloader() called with $class\n");
-    eval("class $class { }");
+    include "spl_autoload_014-$class.inc";
   }
 }
 
