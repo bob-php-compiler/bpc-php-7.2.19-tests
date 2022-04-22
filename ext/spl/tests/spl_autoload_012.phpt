@@ -1,5 +1,7 @@
 --TEST--
 SPL: spl_autoload() capturing multiple Exceptions in __autoload
+--ARGS--
+--bpc-include-file ext/spl/tests/spl_autoload_012.inc \
 --FILE--
 <?php
 
@@ -53,13 +55,13 @@ Fatal error: Uncaught Exception: first in %sspl_autoload_012.php:%d
 Stack trace:
 #0 [internal function]: autoload_first('ThisClassDoesNo...')
 #1 [internal function]: spl_autoload_call('ThisClassDoesNo...')
-#2 %sspl_autoload_012.php(%d): class_exists('ThisClassDoesNo...')
+#2 %sspl_autoload_012.php(%d): class_exists('ThisClassDoesNo...', true)
 #3 {main}
 
 Next Exception: second in %sspl_autoload_012.php:%d
 Stack trace:
 #0 [internal function]: autoload_second('ThisClassDoesNo...')
 #1 [internal function]: spl_autoload_call('ThisClassDoesNo...')
-#2 %sspl_autoload_012.php(%d): class_exists('ThisClassDoesNo...')
+#2 %sspl_autoload_012.php(%d): class_exists('ThisClassDoesNo...', true)
 #3 {main}
   thrown in %sspl_autoload_012.php on line %d
