@@ -1,5 +1,7 @@
 --TEST--
 SPL: IteratorIterator foreach by reference failure
+--SKIPIF--
+skip not support foreach as reference
 --CREDITS--
 Lukasz Andrzejak meltir@meltir.com
 #testfest London 2009-05-09
