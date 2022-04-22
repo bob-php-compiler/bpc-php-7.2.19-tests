@@ -38,8 +38,8 @@ catch(Exception $e)
 ===DONE===
 <?php exit(0); ?>
 --EXPECTF--
-TestFunc1(TestClass)
-TestFunc2(TestClass)
-TestFunc3(TestClass)
+testfunc1(TestClass)
+testfunc2(TestClass)
+testfunc3(TestClass)
 Exception: Class TestClass missing
 ===DONE===
