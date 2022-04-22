@@ -2,6 +2,8 @@
 SPL: spl_autoload() and friends
 --INI--
 include_path=.
+--ARGS--
+--bpc-include-file ext/spl/tests/testclass --bpc-include-file ext/spl/tests/testclass.class.inc --bpc-include-file ext/spl/tests/testclass.inc --bpc-include-file ext/spl/tests/testclass.php.inc \
 --FILE--
 <?php
 
@@ -96,14 +98,14 @@ Class TestClass could not be loaded
 string(4) ".inc"
 bool(false)
 ===REGISTER===
-TestFunc1(TestClass)
-TestFunc2(TestClass)
+testfunc1(TestClass)
+testfunc2(TestClass)
 bool(false)
 ===LOAD===
-TestFunc1(TestClass)
-TestFunc2(TestClass)
+testfunc1(TestClass)
+testfunc2(TestClass)
 %stestclass.class.inc
 bool(true)
 ===NOFUNCTION===
-Exception: Function 'unavailable_autoload_function' not found (function 'unavailable_autoload_function' not found or invalid function name)
+Exception: spl_autoload_register() expects parameter 1 to be callable, unavailable_autoload_function given
 ===DONE===
