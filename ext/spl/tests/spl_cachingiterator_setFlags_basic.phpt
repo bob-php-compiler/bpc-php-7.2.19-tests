@@ -13,4 +13,7 @@ $ci->setFlags(); //expects arg
 
 ?>
 --EXPECTF--
-Warning: CachingIterator::setFlags() expects exactly 1 parameter, %s
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method CachingIterator::setFlags(): 1 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d
