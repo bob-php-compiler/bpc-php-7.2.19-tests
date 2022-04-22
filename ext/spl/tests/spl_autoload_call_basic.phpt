@@ -3,6 +3,8 @@ spl_autoload_call() function - basic test for spl_autoload_call()
 --CREDITS--
 Jean-Marc Fontaine <jean-marc.fontaine@alterway.fr>
 # Alter Way Contribution Day 2011
+--ARGS--
+--bpc-include-file ext/spl/tests/testclass.class.inc \
 --FILE--
 <?php
 function customAutolader($class) {
