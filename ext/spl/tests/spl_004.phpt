@@ -48,7 +48,6 @@ try {
 	my_error_handler($e->getCode(), $e->getMessage(), $e->getFile(), $e->getLine());
 }
 var_dump(iterator_apply($it, 'non_existing_function'));
-var_dump(iterator_apply($it, 'non_existing_function', NULL, 2));
 
 ?>
 ===DONE===
@@ -79,8 +78,6 @@ int(6)
 int(4)
 ===ERRORS===
 Error: Argument 3 passed to iterator_apply() must be of the type array or null, integer given
-Error: iterator_apply() expects parameter 2 to be a valid callback, function 'non_existing_function' not found or invalid function name
-NULL
-Error: iterator_apply() expects at most 3 parameters, 4 given
+Error: iterator_apply() expects parameter 2 to be callable, non_existing_function given
 NULL
 ===DONE===
