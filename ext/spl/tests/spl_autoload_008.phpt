@@ -30,8 +30,6 @@ $obj = new MyAutoLoader;
 
 $funcs = array(
 	'MyAutoLoad',
-	'MyAutoLoader::autoLoad',
-	'MyAutoLoader::dynaLoad',
 	array('MyAutoLoader', 'autoLoad'),
 	array('MyAutoLoader', 'dynaLoad'),
 	array($obj, 'autoLoad'),
@@ -69,20 +67,10 @@ foreach($funcs as $idx => $func)
 ====0====
 string(10) "MyAutoLoad"
 registered
-MyAutoLoad(NoExistingTestClass)
+myautoload(NoExistingTestClass)
 Exception: Bla
 int(0)
 ====1====
-string(22) "MyAutoLoader::autoLoad"
-registered
-MyAutoLoader::autoLoad(NoExistingTestClass)
-Exception: Bla
-int(0)
-====2====
-string(22) "MyAutoLoader::dynaLoad"
-LogicException: Function 'MyAutoLoader::dynaLoad' not callable (non-static method MyAutoLoader::dynaLoad() should not be called statically)
-int(0)
-====3====
 array(2) {
   [0]=>
   string(12) "MyAutoLoader"
@@ -93,7 +81,7 @@ registered
 MyAutoLoader::autoLoad(NoExistingTestClass)
 Exception: Bla
 int(0)
-====4====
+====2====
 array(2) {
   [0]=>
   string(12) "MyAutoLoader"
@@ -102,7 +90,7 @@ array(2) {
 }
 LogicException: Passed array specifies a non static method but no object (non-static method MyAutoLoader::dynaLoad() should not be called statically)
 int(0)
-====5====
+====3====
 array(2) {
   [0]=>
   object(MyAutoLoader)#%d (0) {
@@ -114,7 +102,7 @@ registered
 MyAutoLoader::autoLoad(NoExistingTestClass)
 Exception: Bla
 int(0)
-====6====
+====4====
 array(2) {
   [0]=>
   object(MyAutoLoader)#%d (0) {
