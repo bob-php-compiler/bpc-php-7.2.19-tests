@@ -33,4 +33,7 @@ try{
 
 ?>
 --EXPECTF--
-Warning: RegexIterator::setPregFlags() expects exactly 1 parameter, 0 given in %s
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method RegexIterator::setPregFlags(): 1 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d
