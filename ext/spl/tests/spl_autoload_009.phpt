@@ -2,12 +2,14 @@
 SPL: spl_autoload() and friends
 --INI--
 include_path=.
+--ARGS--
+--bpc-include-file ext/spl/tests/testclass --bpc-include-file ext/spl/tests/testclass.class.inc --bpc-include-file ext/spl/tests/testclass.inc --bpc-include-file ext/spl/tests/testclass.php.inc \
 --FILE--
 <?php
 
 function my_autoload($name)
 {
-	require $name . '.class.inc';
+	require strtolower($name) . '.class.inc';
 	var_dump(class_exists($name));
 }
 
