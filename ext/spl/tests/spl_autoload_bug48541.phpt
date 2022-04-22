@@ -1,5 +1,7 @@
 --TEST--
 SPL: spl_autoload_register() Bug #48541: registering multiple closures fails with memleaks
+--ARGS--
+--bpc-include-file ext/spl/tests/spl_autoload_bug48541.inc \
 --FILE--
 <?php
 
@@ -17,7 +19,7 @@ $a = function ($class) {
 $x = new X;
 $a2 = $x->getClosure();
 $b = function ($class) {
-    eval('class ' . $class . '{function __construct(){echo "foo\n";}}');
+    include 'spl_autoload_bug48541.inc';
     echo "b called\n";
 };
 spl_autoload_register($a);
