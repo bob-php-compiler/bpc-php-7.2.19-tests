@@ -22,7 +22,4 @@ $test->setMaxDepth(1,2,3);
 ?>
 ===DONE===
 --EXPECTF--
-Warning: RecursiveIteratorIterator::setMaxDepth() expects at most 1 parameter, 2 given in %s on line 10
-
-Warning: RecursiveIteratorIterator::setMaxDepth() expects at most 1 parameter, 3 given in %s on line 11
 ===DONE===
