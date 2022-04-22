@@ -23,10 +23,6 @@ class MyAutoLoader {
 $obj = new MyAutoLoader;
 
 $funcs = array(
-	'MyAutoLoader::notExist',
-	'MyAutoLoader::noAccess',
-	'MyAutoLoader::autoLoad',
-	'MyAutoLoader::dynaLoad',
 	array('MyAutoLoader', 'notExist'),
 	array('MyAutoLoader', 'noAccess'),
 	array('MyAutoLoader', 'autoLoad'),
@@ -56,25 +52,13 @@ foreach($funcs as $idx => $func)
 ===DONE===
 <?php exit(0); ?>
 --EXPECTF--
-string(22) "MyAutoLoader::notExist"
-Function 'MyAutoLoader::notExist' not found (class 'MyAutoLoader' does not have a method 'notExist')
-
-string(22) "MyAutoLoader::noAccess"
-Function 'MyAutoLoader::noAccess' not callable (cannot access protected method MyAutoLoader::noAccess())
-
-string(22) "MyAutoLoader::autoLoad"
-ok
-
-string(22) "MyAutoLoader::dynaLoad"
-Function 'MyAutoLoader::dynaLoad' not callable (non-static method MyAutoLoader::dynaLoad() should not be called statically)
-
 array(2) {
   [0]=>
   string(12) "MyAutoLoader"
   [1]=>
   string(8) "notExist"
 }
-Passed array does not specify an existing static method (class 'MyAutoLoader' does not have a method 'notExist')
+spl_autoload_register() expects parameter 1 to be callable, MyAutoLoader::notExist given
 
 array(2) {
   [0]=>
@@ -82,7 +66,7 @@ array(2) {
   [1]=>
   string(8) "noAccess"
 }
-Passed array does not specify a callable static method (cannot access protected method MyAutoLoader::noAccess())
+spl_autoload_register() expects parameter 1 to be callable, MyAutoLoader::noAccess given
 
 array(2) {
   [0]=>
@@ -107,7 +91,7 @@ array(2) {
   [1]=>
   string(8) "notExist"
 }
-Passed array does not specify an existing method (class 'MyAutoLoader' does not have a method 'notExist')
+spl_autoload_register() expects parameter 1 to be callable, MyAutoLoader::notExist given
 
 array(2) {
   [0]=>
@@ -116,7 +100,7 @@ array(2) {
   [1]=>
   string(8) "noAccess"
 }
-Passed array does not specify a callable method (cannot access protected method MyAutoLoader::noAccess())
+spl_autoload_register() expects parameter 1 to be callable, MyAutoLoader::noAccess given
 
 array(2) {
   [0]=>
