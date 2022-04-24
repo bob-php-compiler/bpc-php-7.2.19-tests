@@ -5,7 +5,7 @@ Bug #73686 (Adding settype()ed values to ArrayObject results in references)
 
 $ao = new ArrayObject;
 
-foreach ([1, 2, 3] as $i => $var)
+foreach (array(1, 2, 3) as $i => $var)
 {
 	settype($var, 'string');
 	$ao[$i] = $var;
@@ -14,7 +14,7 @@ var_dump($ao);
 
 $ao = new ArrayObject;
 
-foreach ([1, 2, 3] as $i => $var)
+foreach (array(1, 2, 3) as $i => $var)
 {
 	$ao[$i] = &$var;
 }
