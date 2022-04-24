@@ -24,8 +24,8 @@ var_dump(empty($b['b'])); //true
 var_dump(empty($b[37])); //true
 --EXPECT--
 bool(false)
-bool(false)
-bool(false)
+bool(true)
+bool(true)
 bool(false)
 bool(true)
 bool(true)

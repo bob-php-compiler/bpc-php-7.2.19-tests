@@ -1037,3 +1037,9 @@
 4. SPL classes: bpc not check parent constructor if called for subclass methods, but bpc does %parent-construct-guard
 
     @see ext/spl/tests/bug41828.phpt
+
+5. ArrayObject/ArrayIterator ArrayAccess behavior
+
+    php: if subclass override ArrayAccess method offsetExists, isset() simply call offsetExists(), otherwise not call offsetExists, but check key exists and not null, same as array
+    bpc: always call offsetExists
+    @see ext/spl/tests/bug61347.phpt
