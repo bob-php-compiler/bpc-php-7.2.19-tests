@@ -1,5 +1,7 @@
 --TEST--
 Bug #38325 (spl_autoload_register() gaves wrong line for "class not found")
+--ARGS--
+--bpc-include-file ext/spl/tests/bug38325.inc \
 --FILE--
 <?php
 spl_autoload_register();
