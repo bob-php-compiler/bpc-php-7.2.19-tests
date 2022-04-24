@@ -3,7 +3,7 @@ Bug #75049 (spl_autoload_unregister can't handle spl_autoload_functions results)
 --FILE--
 <?php
 class Auto { public static function loader() {}}
-$autoloader = '\Auto::loader';
+$autoloader = array('Auto', 'loader');
 
 echo (int)spl_autoload_register($autoloader);
 echo (int)spl_autoload_unregister($autoloader);
