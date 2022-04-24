@@ -13,5 +13,7 @@ Notice: Undefined index:  in %s on line %d
 NULL
 
 Notice: Undefined index:  in %s on line %d
+
+Notice: Indirect modification of overloaded element of ArrayObject has no effect in %s on line %d
 NULL
 ===DONE===
