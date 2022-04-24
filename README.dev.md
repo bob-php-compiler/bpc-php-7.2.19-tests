@@ -1043,3 +1043,7 @@
     php: if subclass override ArrayAccess method offsetExists, isset() simply call offsetExists(), otherwise not call offsetExists, but check key exists and not null, same as array
     bpc: always call offsetExists
     @see ext/spl/tests/bug61347.phpt
+
+6. iterator current method return false when beyond the end (same as array current function)
+
+    @see ext/spl/tests/bug61527.phpt

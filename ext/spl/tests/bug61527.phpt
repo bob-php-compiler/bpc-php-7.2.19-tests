@@ -66,13 +66,13 @@ var_dump($ai4->getChildren());
 <?php exit(0); ?>
 --EXPECTF--
 NULL
-NULL
+bool(false)
 int(4)
 int(5)
 NULL
+bool(false)
 NULL
-NULL
-NULL
+bool(false)
 NULL
 NULL
 NULL
