@@ -1047,3 +1047,7 @@
 6. iterator current method return false when beyond the end (same as array current function)
 
     @see ext/spl/tests/bug61527.phpt
+
+7. CallbackFilterIterator callback not support reference
+
+    @see ext/spl/tests/bug72051.phpt
