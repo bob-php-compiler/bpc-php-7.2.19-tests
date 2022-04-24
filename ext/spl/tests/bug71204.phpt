@@ -1,5 +1,7 @@
 --TEST--
 Bug #71204 (segfault if clean spl_autoload_funcs while autoloading )
+--ARGS--
+--bpc-include-file ext/spl/tests/bug71204.inc \
 --FILE--
 <?php
 
