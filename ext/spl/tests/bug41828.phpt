@@ -18,4 +18,4 @@ echo $foo->bar();
 ==DONE==
 <?php exit(0); ?>
 --EXPECTF--
-Fatal error: main(): The foo instance wasn't initialized properly in %s on line %d
+==DONE==

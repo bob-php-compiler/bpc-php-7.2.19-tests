@@ -1033,3 +1033,7 @@
 3. RecursiveTreeIterator::getEntry not convert recoverable fatal error to UnexpectedValueException
 
     @see ext/spl/tests/recursive_tree_iterator_007.phpt
+
+4. SPL classes: bpc not check parent constructor if called for subclass methods, but bpc does %parent-construct-guard
+
+    @see ext/spl/tests/bug41828.phpt
