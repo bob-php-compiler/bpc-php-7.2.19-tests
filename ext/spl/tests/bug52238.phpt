@@ -19,6 +19,6 @@ Fatal error: Uncaught Exception in %s
 Stack trace:
 #0 %s: Foo->bar()
 #1 [internal function]: Foo->getIterator()
-#2 %s: iterator_to_array(Object(Foo))
+#2 %s: iterator_to_array(Object(Foo), true)
 #3 {main}
   thrown in %s on line %d
