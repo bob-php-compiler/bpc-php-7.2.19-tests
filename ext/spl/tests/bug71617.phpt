@@ -25,7 +25,7 @@ class Test extends ArrayObject
 	}
 }
 
-$test = new Test(['a' => 'a', 'b' => 'b']);
+$test = new Test(array('a' => 'a', 'b' => 'b'));
 $test->setName('ok');
 
 $ser = serialize($test);
