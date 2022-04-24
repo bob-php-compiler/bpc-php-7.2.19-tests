@@ -20,18 +20,18 @@ $e = 'srsly?';
 var_dump($a['epic_magic']); // srsly.
 var_dump(isset($a['epic_magic']));
 
-$fp = fopen(__FILE__, 'r');
+$fp = fopen('/proc/self/comm', 'r');
 var_dump($a[$fp]);
 
 fclose($fp);
 --EXPECTF--
-Notice: Undefined index: epic_magic in %sbug62978.php on line %d
-NULL
+Notice: Undefined index:  in %sbug62978.php on line %d
 
 Notice: Undefined index: epic_magic in %sbug62978.php on line %d
 NULL
 
-Notice: Undefined variable: c in %sbug62978.php on line %d
+Notice: Undefined index: epic_magic in %sbug62978.php on line %d
+NULL
 NULL
 
 Notice: Undefined index: epic_magic in %sbug62978.php on line %d
