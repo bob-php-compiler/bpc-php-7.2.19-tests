@@ -2,7 +2,7 @@
 Bug #70730 (Incorrect ArrayObject serialization if unset is called in serialize())
 --FILE--
 <?php
-class A extends \ArrayObject
+class A extends ArrayObject
 {
 	protected $foo;
 
