@@ -1,8 +1,10 @@
 --TEST--
 Bug #48023 (spl_autoload_register didn't addref closures)
+--ARGS--
+--bpc-include-file ext/spl/tests/bug48023.inc \
 --FILE--
 <?php
-spl_autoload_register(function(){});
+spl_autoload_register(function($class){});
 
 new Foo;
 
