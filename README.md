@@ -11,6 +11,7 @@
 - [x] ext/fileinfo
 - [x] ext/session
 - [ ] ext/curl (TODO curl_multi curl_share)
+- [ ] ext/spl (TODO Datastructures MultipleIterator SplFileInfo)
 - [x] bpc
 
 # Requirements
