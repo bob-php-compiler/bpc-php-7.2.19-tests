@@ -3,15 +3,12 @@ PDO Common: Bug #60665 (call to empty() on NULL result using PDO::FETCH_LAZY ret
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo')) die('skip');
-$dir = getenv('REDIR_TEST_DIR');
-if (false == $dir) die('skip no driver');
-require_once $dir . 'pdo_test.inc';
+require_once 'pdo_test.inc';
 PDOTest::skip();
 ?>
 --FILE--
 <?php
-if (getenv('REDIR_TEST_DIR') === false) putenv('REDIR_TEST_DIR='.dirname(__FILE__) . '/../../pdo/tests/');
-require_once getenv('REDIR_TEST_DIR') . 'pdo_test.inc';
+require_once 'pdo_test.inc';
 $db = PDOTest::factory();
 switch ($db->getAttribute(PDO::ATTR_DRIVER_NAME)) {
 	case 'oci': $from = 'from dual'; break;

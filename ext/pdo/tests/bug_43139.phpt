@@ -3,15 +3,12 @@ PDO Common: Bug #43139 (PDO ignore ATTR_DEFAULT_FETCH_MODE in some cases with fe
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');
-$dir = getenv('REDIR_TEST_DIR');
-if (false == $dir) die('skip no driver');
-require_once $dir . 'pdo_test.inc';
+require_once 'pdo_test.inc';
 PDOTest::skip();
 ?>
 --FILE--
 <?php
-if (getenv('REDIR_TEST_DIR') === false) putenv('REDIR_TEST_DIR='.dirname(__FILE__) . '/../../pdo/tests/');
-require_once getenv('REDIR_TEST_DIR') . 'pdo_test.inc';
+require_once 'pdo_test.inc';
 $db = PDOTest::factory();
 
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

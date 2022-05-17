@@ -2,17 +2,10 @@
 # PDO test framework utilities
 
 if (getenv('PDOTEST_DSN') === false) {
-	$common = '';
-	$append = false;
-	foreach(file(dirname($_SERVER['PHP_SELF']).'/common.phpt') as $line) {
-		if ($append) {
-			$common .= $line;
-		} elseif (trim($line) == '--REDIRECTTEST--') {
-			$append = true;
-		}
+	include 'config.inc';
+	foreach($config['ENV'] as $n => $v) {
+		putenv("$n=$v");
 	}
-	$conf = eval($common);
-	foreach($conf['ENV'] as $n=>$v) putenv("$n=$v");
 }
 
 class PDOTest {
@@ -66,19 +59,26 @@ class PDOTest {
 	}
 
 	static function test_factory($file) {
-		$config = self::get_config($file);
+		include $file;
 		foreach ($config['ENV'] as $k => $v) {
 			putenv("$k=$v");
 		}
 		return self::factory();
 	}
-
-	static function get_config($file) {
-		$data = file_get_contents($file);
-		$data = preg_replace('/^.*--REDIRECTTEST--/s', '', $data);
-		$config = eval($data);
-
-		return $config;
-	}
 }
-?>
+
+function detect_transactional_mysql_engine($db) {
+	foreach ($db->query("show variables like 'have%'") as $row) {
+		if (!empty($row) && $row[1] == 'YES' && ($row[0] == 'have_innodb' || $row[0] == 'have_bdb')) {
+			return str_replace("have_", "", $row[0]);
+		}
+	}
+	/* MySQL 5.6.1+ */
+	foreach ($db->query("SHOW ENGINES") as $row) {
+		if (isset($row['engine']) && isset($row['support'])) {
+			 if ('InnoDB' == $row['engine'] && ('YES' == $row['support'] || 'DEFAULT' == $row['support']))
+				return 'innodb';
+		}
+	}
+	return false;
+}

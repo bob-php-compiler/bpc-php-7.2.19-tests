@@ -3,8 +3,7 @@ PDO Common: Bug #44861 (scrollable cursor don't work with pgsql)
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');
-$dir = getenv('REDIR_TEST_DIR');
-if (false == $dir) die('skip no driver');
+require_once 'pdo_test.inc';
 $allowed = array('oci', 'pgsql');
 $ok = false;
 foreach ($allowed as $driver) {
@@ -15,13 +14,11 @@ foreach ($allowed as $driver) {
 if (!$ok) {
 	die("skip Scrollable cursors not supported");
 }
-require_once $dir . 'pdo_test.inc';
 PDOTest::skip();
 ?>
 --FILE--
 <?php
-if (getenv('REDIR_TEST_DIR') === false) putenv('REDIR_TEST_DIR='.dirname(__FILE__) . '/../../pdo/tests/');
-require_once getenv('REDIR_TEST_DIR') . 'pdo_test.inc';
+require_once 'pdo_test.inc';
 $db = PDOTest::factory();
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

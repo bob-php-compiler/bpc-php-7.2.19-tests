@@ -3,16 +3,13 @@ PDO Common: Bug #38394 (Prepared statement error stops subsequent statements)
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');
-$dir = getenv('REDIR_TEST_DIR');
-if (false == $dir) die('skip no driver');
+require_once 'pdo_test.inc';
 if (!strncasecmp(getenv('PDOTEST_DSN'), 'sqlite2', strlen('sqlite2'))) die('skip not relevant for pdo_sqlite2 driver');
-require_once $dir . 'pdo_test.inc';
 PDOTest::skip();
 ?>
 --FILE--
 <?php
-if (getenv('REDIR_TEST_DIR') === false) putenv('REDIR_TEST_DIR='.dirname(__FILE__) . '/../../pdo/tests/');
-require_once getenv('REDIR_TEST_DIR') . 'pdo_test.inc';
+require_once 'pdo_test.inc';
 
 $db = PDOTest::factory();
 $db->exec("CREATE TABLE test (a INT, b INT, c INT)");
