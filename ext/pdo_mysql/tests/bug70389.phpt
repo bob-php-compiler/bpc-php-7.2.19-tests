@@ -2,7 +2,7 @@
 Bug #70389 (PDO constructor changes unrelated variables)
 --SKIPIF--
 <?php
-require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'skipif.inc');
+if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip PDO_MySQL driver not loaded');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'mysql_pdo_test.inc');
 MySQLPDOTest::skip();
 ?>
@@ -10,7 +10,7 @@ MySQLPDOTest::skip();
 <?php
 require(dirname(__FILE__). DIRECTORY_SEPARATOR . 'config.inc');
 $flags = [
-	PDO::MYSQL_ATTR_FOUND_ROWS	=> true,
+	PDO::MYSQL_ATTR_FOUND_ROWS	=> true, // mysqlnd 1005 libmysqlclient 1008
 	PDO::MYSQL_ATTR_LOCAL_INFILE	=> true,
 	PDO::ATTR_PERSISTENT 		=> true,
 ];
@@ -24,7 +24,7 @@ var_dump($flags);
 ?>
 --EXPECTF--
 array(3) {
-  [1005]=>
+  [%d]=>
   bool(true)
   [1001]=>
   bool(true)

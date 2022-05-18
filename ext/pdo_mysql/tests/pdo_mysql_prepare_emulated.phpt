@@ -2,7 +2,7 @@
 MySQL PDO->prepare(), emulated PS
 --SKIPIF--
 <?php
-require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'skipif.inc');
+if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip PDO_MySQL driver not loaded');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'mysql_pdo_test.inc');
 MySQLPDOTest::skip();
 $db = MySQLPDOTest::factory();
@@ -324,10 +324,7 @@ require dirname(__FILE__) . '/mysql_pdo_test.inc';
 $db = MySQLPDOTest::factory();
 $db->exec('DROP TABLE IF EXISTS test');
 ?>
---XFAIL--
-PDO's PS parser has some problems with invalid SQL and crashes from time to time
-(check with valgrind...)
---EXPECTF--
+--EXPECT--
 array(1) {
   ["one"]=>
   string(1) "1"

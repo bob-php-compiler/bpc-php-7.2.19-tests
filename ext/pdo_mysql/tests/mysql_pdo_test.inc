@@ -1,6 +1,6 @@
 <?php
-require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'config.inc');
-require_once(dirname(__FILE__) . '/../../../ext/pdo/tests/pdo_test.inc');
+
+require_once('pdo_test.inc');
 
 class MySQLPDOTest extends PDOTest {
 
@@ -118,27 +118,7 @@ class MySQLPDOTest extends PDOTest {
 	}
 
 	static function getTempDir() {
-
-		if (!function_exists('sys_get_temp_dir')) {
-
-			if (!empty($_ENV['TMP']))
-				return realpath( $_ENV['TMP'] );
-			if (!empty($_ENV['TMPDIR']))
-				return realpath( $_ENV['TMPDIR'] );
-			if (!empty($_ENV['TEMP']))
-				return realpath( $_ENV['TEMP'] );
-
-			$temp_file = tempnam(md5(uniqid(rand(), TRUE)), '');
-			if ($temp_file) {
-				$temp_dir = realpath(dirname($temp_file));
-				unlink($temp_file);
-				return $temp_dir;
-			}
-			return FALSE;
-		} else {
-			return sys_get_temp_dir();
-		}
-
+		return sys_get_temp_dir();
 	}
 
 	static function detect_transactional_mysql_engine($db) {

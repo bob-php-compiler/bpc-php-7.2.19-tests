@@ -2,8 +2,7 @@
 Bug #61411 (PDO Segfaults with PERSISTENT == TRUE && EMULATE_PREPARES == FALSE)
 --SKIPIF--
 <?php
-if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip not loaded');
-require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'skipif.inc');
+if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip PDO_MySQL driver not loaded');
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'mysql_pdo_test.inc');
 MySQLPDOTest::skip();
 $db = MySQLPDOTest::factory();
@@ -42,12 +41,15 @@ foreach ($stmt as $line) {
 }
 
 print "done!";
+
+// mysqlnd: int 1
+// libmysqlclient: string 1
 ?>
 --EXPECTF--
 array(2) {
   [1]=>
-  int(1)
+  string(1) "1"
   [2]=>
-  int(1)
+  string(1) "1"
 }
 done!

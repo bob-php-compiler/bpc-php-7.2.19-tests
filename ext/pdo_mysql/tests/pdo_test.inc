@@ -58,19 +58,3 @@ class PDOTest {
 		}
 	}
 }
-
-function detect_transactional_mysql_engine($db) {
-	foreach ($db->query("show variables like 'have%'") as $row) {
-		if (!empty($row) && $row[1] == 'YES' && ($row[0] == 'have_innodb' || $row[0] == 'have_bdb')) {
-			return str_replace("have_", "", $row[0]);
-		}
-	}
-	/* MySQL 5.6.1+ */
-	foreach ($db->query("SHOW ENGINES") as $row) {
-		if (isset($row['engine']) && isset($row['support'])) {
-			 if ('InnoDB' == $row['engine'] && ('YES' == $row['support'] || 'DEFAULT' == $row['support']))
-				return 'innodb';
-		}
-	}
-	return false;
-}

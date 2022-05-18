@@ -3,14 +3,13 @@ PDO MySQL PECL Bug #5802 (bindParam/bindValue retain the is_null flag)
 --SKIPIF--
 <?php # vim:ft=php:
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip not loaded');
-require dirname(__FILE__) . '/config.inc';
-require dirname(__FILE__) . '/../../../ext/pdo/tests/pdo_test.inc';
-PDOTest::skip();
+require 'mysql_pdo_test.inc';
+MySQLPDOTest::skip();
 ?>
 --FILE--
 <?php
-require dirname(__FILE__) . '/../../../ext/pdo/tests/pdo_test.inc';
-$db = PDOTest::test_factory(dirname(__FILE__). '/common.phpt');
+require 'mysql_pdo_test.inc';
+$db = MySQLPDOTest::factory();
 
 $db->exec('create table test ( bar char(3) NULL )');
 $stmt = $db->prepare('insert into test (bar) values(:bar)') or var_dump($db->errorInfo());

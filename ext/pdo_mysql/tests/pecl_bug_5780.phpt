@@ -3,14 +3,13 @@ PDO MySQL PECL Bug #5780 (Failure to produce an error when one is expected)
 --SKIPIF--
 <?php # vim:ft=php:
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip not loaded');
-require dirname(__FILE__) . '/config.inc';
-require dirname(__FILE__) . '/../../../ext/pdo/tests/pdo_test.inc';
+require 'pdo_test.inc';
 PDOTest::skip();
 ?>
 --FILE--
 <?php
-require dirname(__FILE__) . '/../../../ext/pdo/tests/pdo_test.inc';
-$db = PDOTest::test_factory(dirname(__FILE__). '/common.phpt');
+require 'pdo_test.inc';
+$db = PDOTest::factory();
 
 $db->exec("CREATE TABLE test (login varchar(32) NOT NULL, data varchar(64) NOT NULL)");
 $db->exec("CREATE TABLE test2 (login varchar(32) NOT NULL, password varchar(64) NOT NULL)");
