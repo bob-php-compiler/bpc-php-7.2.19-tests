@@ -3,8 +3,8 @@ Bug #46139 (PDOStatement->setFetchMode() forgets FETCH_PROPS_LATE)
 --FILE--
 <?php
 
-require dirname(__FILE__) . '/../../../ext/pdo/tests/pdo_test.inc';
-$db = PDOTest::test_factory(dirname(__FILE__) . '/common.phpt');
+require 'pdo_test.inc';
+$db = PDOTest::factory();
 
 class Person {
     public $test = NULL;

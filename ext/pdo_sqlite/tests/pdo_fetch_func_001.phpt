@@ -78,7 +78,7 @@ object(PDOStatement)#%d (1) {
   ["queryString"]=>
   %string|unicode%(21) "SELECT * FROM testing"
 }
-data: 2,
+data: 2, 
 array(2) {
   [0]=>
   %string|unicode%(3) "PHP"
