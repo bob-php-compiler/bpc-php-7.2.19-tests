@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #36798 (Error parsing named parameters with queries containing high-ascii chars)
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo')) die('skip');

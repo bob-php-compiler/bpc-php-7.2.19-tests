@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #42917 (PDO::FETCH_KEY_PAIR doesn't work with setFetchMode)
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');

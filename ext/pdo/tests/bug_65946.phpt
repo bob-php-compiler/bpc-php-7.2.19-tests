@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #65946 (pdo_sql_parser.c permanently converts values bound to strings)
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo')) die('skip');

@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #43139 (PDO ignore ATTR_DEFAULT_FETCH_MODE in some cases with fetchAll())
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');

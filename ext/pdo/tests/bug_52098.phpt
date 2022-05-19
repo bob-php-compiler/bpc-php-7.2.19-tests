@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #52098 Own PDOStatement implementation ignore __call()
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');

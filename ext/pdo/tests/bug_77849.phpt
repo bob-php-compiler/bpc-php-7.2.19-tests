@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #77849 (Unexpected segfault attempting to use cloned PDO object)
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo')) die('skip');

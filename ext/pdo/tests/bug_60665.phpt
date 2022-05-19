@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #60665 (call to empty() on NULL result using PDO::FETCH_LAZY returns false)
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo')) die('skip');

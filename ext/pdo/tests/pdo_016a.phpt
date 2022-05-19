@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: PDO::FETCH_BOUND w/o :
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');

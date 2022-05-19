@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #61292 (Segfault while calling a method on an overloaded PDO object)
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo')) die('skip');

@@ -1,5 +1,7 @@
 --TEST--
 PDO Common: Bug #44173 (PDO->query() parameter parsing/checking needs an update)
+--ARGS--
+--bpc-include-file ext/pdo/tests/config.inc --bpc-include-file ext/pdo/tests/pdo_test.inc \
 --SKIPIF--
 <?php # vim:ft=php
 if (!extension_loaded('pdo')) die('skip');
