@@ -1,10 +1,5 @@
 --TEST--
 PDO_sqlite: Testing sqliteCreateFunction() with flags
---SKIPIF--
-<?php
-if (!extension_loaded('pdo_sqlite')) print 'skip not loaded';
-if (!defined('PDO::SQLITE_DETERMINISTIC')) die('skip system sqlite is too old');
-?>
 --FILE--
 <?php
 

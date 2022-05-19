@@ -1,9 +1,5 @@
 --TEST--
 Bug #66033 (Segmentation Fault when constructor of PDO statement throws an exception)
---SKIPIF--
-<?php
-if (!extension_loaded('pdo_sqlite')) print 'skip not loaded';
-?>
 --FILE--
 <?php
 class DBStatement extends PDOStatement {

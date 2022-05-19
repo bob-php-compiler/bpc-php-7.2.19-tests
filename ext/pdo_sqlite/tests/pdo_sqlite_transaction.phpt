@@ -1,7 +1,5 @@
 --TEST--
 PDO_sqlite: Testing transaction
---SKIPIF--
-<?php if (!extension_loaded('pdo_sqlite')) print 'skip not loaded'; ?>
 --FILE--
 <?php
 

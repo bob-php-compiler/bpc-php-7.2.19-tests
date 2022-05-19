@@ -1,9 +1,5 @@
 --TEST--
 Testing several callbacks using PDO::FETCH_FUNC
---SKIPIF--
-<?php
-if (!extension_loaded('pdo_sqlite')) print 'skip not loaded';
-?>
 --FILE--
 <?php
 
@@ -82,7 +78,7 @@ object(PDOStatement)#%d (1) {
   ["queryString"]=>
   %string|unicode%(21) "SELECT * FROM testing"
 }
-data: 2, 
+data: 2,
 array(2) {
   [0]=>
   %string|unicode%(3) "PHP"

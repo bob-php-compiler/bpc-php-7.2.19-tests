@@ -1,9 +1,5 @@
 --TEST--
 Bug #60104 (Segmentation Fault in pdo_sqlite when using sqliteCreateFunction())
---SKIPIF--
-<?php
-if (!extension_loaded('pdo_sqlite')) print 'skip not loaded';
-?>
 --FILE--
 <?php
 function setUp()
