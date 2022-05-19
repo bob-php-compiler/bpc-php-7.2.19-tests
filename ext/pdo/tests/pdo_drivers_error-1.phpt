@@ -4,6 +4,8 @@ Test that PDO::getAvailableDrivers / pdo_drivers does not accept any parameters
 Amo Chohan <amo.chohan@gmail.com>
 --FILE--
 <?php
-PDO::getAvailableDrivers('fail');
+pdo_drivers('fail');
 --EXPECTF--
-Warning: Too many arguments to method PDO::getAvailableDrivers(): 0 at most, 1 provided in %s on line %d
+*** ERROR:compile-error:
+Error: Too many arguments to function pdo_drivers(): 0 at most, 1 provided in %s on line %d
+ -- compile-error
