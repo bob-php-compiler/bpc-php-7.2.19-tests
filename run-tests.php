@@ -1610,6 +1610,8 @@ TEST $file
 
 	settings2params($ini_settings);
 
+	$args = isset($section_text['ARGS']) ? ' -- ' . $section_text['ARGS'] : '';
+
 	// Check if test should be skipped.
 	$info = '';
 	$warn = false;
@@ -1632,7 +1634,7 @@ TEST $file
 
 			junit_start_timer($shortname);
 
-			$output = system_with_timeout("$extra $php $pass_options -q $ini_settings $no_file_cache -d display_errors=0 \"$test_skipif\"", $env);
+			$output = system_with_timeout("$extra $php $pass_options -q $ini_settings $no_file_cache -d display_errors=0 \"$test_skipif\" $args", $env);
 
 			junit_finish_timer($shortname);
 
@@ -1792,8 +1794,6 @@ TEST $file
 	} else {
 		$env['HTTP_COOKIE'] = '';
 	}
-
-	$args = isset($section_text['ARGS']) ? ' -- ' . $section_text['ARGS'] : '';
 
 	if (array_key_exists('POST_RAW', $section_text) && !empty($section_text['POST_RAW'])) {
 
@@ -1982,7 +1982,7 @@ COMMAND $cmd
 				settings2params($clean_params);
 				$extra = substr(PHP_OS, 0, 3) !== "WIN" ?
 					"unset REQUEST_METHOD; unset QUERY_STRING; unset PATH_TRANSLATED; unset SCRIPT_FILENAME; unset REQUEST_METHOD;": "";
-				system_with_timeout("$extra $php $pass_options -q $clean_params $no_file_cache \"$test_clean\"", $env);
+				system_with_timeout("$extra $php $pass_options -q $clean_params $no_file_cache \"$test_clean\" $args", $env);
 			}
 
 			if (!$cfg['keep']['clean']) {
