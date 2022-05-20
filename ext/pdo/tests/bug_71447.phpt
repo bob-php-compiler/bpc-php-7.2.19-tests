@@ -13,9 +13,9 @@ PDOTest::skip();
 require_once 'pdo_test.inc';
 
 $db = PDOTest::factory();
-$db->setAttribute (\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
-$db->setAttribute (\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_NUM);
-$db->setAttribute (\PDO::ATTR_EMULATE_PREPARES, false);
+$db->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+$db->setAttribute (PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_NUM);
+$db->setAttribute (PDO::ATTR_EMULATE_PREPARES, false);
 $db->exec('CREATE TABLE test(id int)');
 $db->exec('INSERT INTO test VALUES(1)');
 
@@ -77,7 +77,7 @@ $stmt = $db->prepare("
 	WHERE id = ?
 ");
 
-$stmt->execute([1]);
+$stmt->execute(array(1));
 var_dump($stmt->fetchColumn());
 
 // Comment with named placeholder
@@ -88,7 +88,7 @@ $stmt = $db->prepare("
 	WHERE id = :id
 ");
 
-$stmt->execute(['id' => 1]);
+$stmt->execute(array('id' => 1));
 var_dump($stmt->fetchColumn());
 
 
