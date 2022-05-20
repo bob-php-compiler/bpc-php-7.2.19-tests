@@ -85,7 +85,11 @@ foreach($stmt as $obj) {
 echo "===DONE===\n";
 exit(0);
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 20: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 34: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 string(11) "PDODatabase"
 string(12) "PDOStatement"
 ===QUERY===
@@ -120,5 +124,5 @@ array(3) {
   string(3) "tsr"
 }
 ===DONE===
-PDOStatementX::__destruct()
 PDODatabase::__destruct()
+PDOStatementX::__destruct()
