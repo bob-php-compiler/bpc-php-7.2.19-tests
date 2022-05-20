@@ -36,9 +36,9 @@ var_dump(fetchColumn($stmt, 0));
 var_dump(fetchColumn($stmt, 1));
 ?>
 --EXPECTF--
-Warning: PDOStatement::fetchColumn(): SQLSTATE[HY000]: General error: Invalid column index in %s
+Warning: SQLSTATE[HY000]: General error: Invalid column index in %s
 bool(false)
 string(1) "1"
 
-Warning: PDOStatement::fetchColumn(): SQLSTATE[HY000]: General error: Invalid column index in %s
+Warning: SQLSTATE[HY000]: General error: Invalid column index in %s
 bool(false)
