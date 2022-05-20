@@ -1051,3 +1051,9 @@
 7. CallbackFilterIterator callback not support reference
 
     @see ext/spl/tests/bug72051.phpt
+    
+## ext/pdo
+
+1. pdo-handle-error pdo-raise-impl-error warning message not include method name
+
+    @see ext/pdo/tests/pdo_034.phpt
