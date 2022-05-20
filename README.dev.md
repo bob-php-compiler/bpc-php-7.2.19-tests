@@ -1057,3 +1057,9 @@
 1. pdo-handle-error pdo-raise-impl-error warning message not include method name
 
     @see ext/pdo/tests/pdo_034.phpt
+
+2. PDORow
+
+    `new PDORow;` compile error
+    `$classname = 'PDORow'; new $classname;` same as php
+    @see ext/pdo/tests/pdorow.phpt

@@ -4,8 +4,8 @@ Trying instantiate a PDORow object manually
 <?php if (!extension_loaded('pdo')) die('skip'); ?>
 --FILE--
 <?php
-
-new PDORow;
+$classname = 'PDORow';
+new $classname;
 
 ?>
 --EXPECTF--
