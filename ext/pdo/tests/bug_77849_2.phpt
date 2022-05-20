@@ -11,8 +11,8 @@ $stmt = new PDOStatement();
 clone $stmt;
 ?>
 --EXPECTF--
-Fatal error: Uncaught Error: Trying to clone an uncloneable object of class PDOStatement in %s:4
+Fatal error: Uncaught Error: Trying to clone an uncloneable object of class PDOStatement in %s:%d
 Stack trace:
 #0 {main}
-  thrown in %s on line 4
+  thrown in %s on line %d
 
