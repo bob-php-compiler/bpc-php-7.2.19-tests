@@ -48,7 +48,7 @@ $db->exec("DROP TABLE test");
 --EXPECTF--
 ===FAIL===
 
-Warning: PDO::query(): SQLSTATE[%s]: %s
+Warning: SQLSTATE[%s]: %s
 %A
 ===TEST===
 bool(true)
@@ -65,7 +65,7 @@ array(3) {
 }
 ===FAIL===
 
-Warning: PDO::exec(): SQLSTATE[%s]: %s
+Warning: SQLSTATE[%s]: %s
 %A
 ===TEST===
 bool(true)
