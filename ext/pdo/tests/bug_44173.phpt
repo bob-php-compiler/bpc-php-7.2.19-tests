@@ -18,8 +18,11 @@ $db->exec("INSERT INTO test VALUES (1)");
 
 
 // Bug entry [1]
-$stmt = $db->query();
-var_dump($stmt);
+try {
+    $stmt = $db->query();
+} catch (ArgumentCountError $e) {
+    echo $e->getMessage(), "\n";
+}
 
 
 // Bug entry [2] -- 1 is PDO::FETCH_LAZY
@@ -54,23 +57,22 @@ var_dump($stmt);
 
 ?>
 --EXPECTF--
-Warning: PDO::query() expects at least 1 parameter, 0 given in %s
+Too few arguments to method PDO::query(): 1 required, 0 provided
+
+Warning: SQLSTATE[HY000]: General error: fetch mode doesn't allow any extra arguments in %s
 bool(false)
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: fetch mode doesn't allow any extra arguments in %s
+Warning: SQLSTATE[HY000]: General error: mode must be an integer in %s
 bool(false)
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: mode must be an integer in %s
+Warning: SQLSTATE[HY000]: General error: too many arguments in %s
 bool(false)
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: too many arguments in %s
+Warning: SQLSTATE[HY000]: General error: fetch mode requires the object parameter in %s
 bool(false)
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: fetch mode requires the object parameter in %s
+Warning: SQLSTATE[HY000]: General error: fetch mode requires the colno argument in %s
 bool(false)
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: fetch mode requires the colno argument in %s
-bool(false)
-
-Warning: PDO::query(): SQLSTATE[HY000]: General error: fetch mode requires the classname argument in %s
+Warning: SQLSTATE[HY000]: General error: fetch mode requires the classname argument in %s
 bool(false)
