@@ -74,6 +74,10 @@ $db = NULL;
 
 ?>
 --EXPECTF--
+Warning: in %s line 15: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line 25: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 int(1)
 int(2)
 object(PDODatabaseX)#%d (2) {
@@ -84,13 +88,10 @@ object(PDODatabaseX)#%d (2) {
 }
 PDODatabaseX::query()
 PDOStatementX::__construct()
-PDOStatementX::__destruct()
 PDODatabaseX::query()
 PDOStatementX::__construct()
-PDOStatementX::__destruct()
 PDODatabaseX::query()
 PDOStatementX::__construct()
-PDOStatementX::__destruct()
 PDODatabaseX::query()
 PDOStatementX::__construct()
 object(PDOStatementX)#%d (3) {
@@ -107,5 +108,8 @@ array(2) {
   ["B"]=>
   string(1) "1"
 }
-PDOStatementX::__destruct()
 PDODatabaseX::__destruct()
+PDOStatementX::__destruct()
+PDOStatementX::__destruct()
+PDOStatementX::__destruct()
+PDOStatementX::__destruct()
