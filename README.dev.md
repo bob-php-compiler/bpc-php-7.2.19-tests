@@ -524,6 +524,10 @@
 
     @see ext/session/tests/bug67694.phpt
 
+45. arguments without default value must before arguments with default value
+
+    @see Zend/tests/bug71428.2.phpt
+
 **misc**
 
 1. TODO

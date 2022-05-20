@@ -18,5 +18,5 @@ class Statement1 extends PDOStatement implements StatementInterface1 {}
 
 echo "ok";
 ?>
---EXPECT--
-ok
+--EXPECTF--
+Parse error: (unexpected token `comma') in %s on line 3
