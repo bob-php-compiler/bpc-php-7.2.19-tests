@@ -14,7 +14,9 @@ $db = MySQLPDOTest::factory();
 	require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'mysql_pdo_test.inc');
 	$db = MySQLPDOTest::factory();
 
-	assert(('' == $db->errorCode()) || ('00000' == $db->errorCode()));
+	if (('' != $db->errorCode()) && ('00000' != $db->errorCode())) {
+	    die('expect no error');
+	}
 
 	$name = $db->getAttribute(PDO::ATTR_DRIVER_NAME);
 	var_dump($name);
