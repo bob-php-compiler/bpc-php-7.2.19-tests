@@ -1,5 +1,7 @@
 --TEST--
 Bug #50323 (No ability to connect to database named 't;', no chance to escape semicolon)
+--ARGS--
+--bpc-include-file ext/pdo_mysql/tests/config.inc --bpc-include-file ext/pdo_mysql/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip not loaded');

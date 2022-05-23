@@ -1,5 +1,7 @@
 --TEST--
 PDO MySQL PECL Bug #5780 (Failure to produce an error when one is expected)
+--ARGS--
+--bpc-include-file ext/pdo_mysql/tests/config.inc --bpc-include-file ext/pdo_mysql/tests/pdo_test.inc \
 --SKIPIF--
 <?php # vim:ft=php:
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip not loaded');

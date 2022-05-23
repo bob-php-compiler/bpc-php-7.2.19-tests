@@ -1,5 +1,7 @@
 --TEST--
 PDO MySQL Bug #41698 (float parameters truncated to integer in prepared statements)
+--ARGS--
+--bpc-include-file ext/pdo_mysql/tests/config.inc --bpc-include-file ext/pdo_mysql/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip not loaded');

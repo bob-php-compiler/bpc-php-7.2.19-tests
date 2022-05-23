@@ -1,5 +1,7 @@
 --TEST--
 PDO MySQL Bug #33689 (query() execute() and fetch() return false on valid select queries)
+--ARGS--
+--bpc-include-file ext/pdo_mysql/tests/config.inc --bpc-include-file ext/pdo_mysql/tests/pdo_test.inc \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip not loaded');
