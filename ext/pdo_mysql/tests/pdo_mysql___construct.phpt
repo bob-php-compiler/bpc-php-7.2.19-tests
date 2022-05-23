@@ -1,7 +1,7 @@
 --TEST--
 MySQL PDO->__construct() - Generic + DSN
 --ARGS--
---bpc-include-file ext/pdo_mysql/tests/config.inc --bpc-include-file ext/pdo_mysql/tests/pdo_test.inc --bpc-include-file ext/pdo_mysql/tests/mysql_pdo_test.inc \
+--bpc-include-file ext/pdo_mysql/tests/config.inc --bpc-include-file ext/pdo_mysql/tests/pdo_test.inc --bpc-include-file ext/pdo_mysql/tests/mysql_pdo_test.inc --bpc-lib-path /tmp/pdo_mysql \
 --SKIPIF--
 <?php
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip PDO_MySQL driver not loaded');
@@ -15,8 +15,8 @@ MySQLPDOTest::skip();
 	function tryandcatch($offset, $code) {
 
 		try {
-			eval($code);
-			assert(sprintf("[%03d] Should have failed\n", $offset) != '');
+			bpc_eval('/tmp/pdo_mysql', 'php-pdo_mysql___construct_' . $offset, $code);
+			//assert(sprintf("[%03d] Should have failed\n", $offset) != '');
 		} catch (PDOException $e) {
 			return sprintf("[%03d] %s, [%s] %s\n",
 				$offset,
