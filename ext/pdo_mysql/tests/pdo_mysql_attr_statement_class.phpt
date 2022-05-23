@@ -18,8 +18,13 @@ $db = MySQLPDOTest::factory();
 	$default =  $db->getAttribute(PDO::ATTR_STATEMENT_CLASS);
 	var_dump($default);
 
-	if (false !== ($tmp = @$db->setAttribute(PDO::ATTR_STATEMENT_CLASS)))
-		printf("[001] Expecting boolean/false got %s\n", var_export($tmp, true));
+    try {
+        $db->setAttribute(PDO::ATTR_STATEMENT_CLASS);
+    } catch (ArgumentCountError $e) {
+        if ($e->getMessage() != 'Too few arguments to method PDO::setAttribute(): 2 required, 1 provided') {
+            die('unexpected');
+        }
+    }
 
 	if (false !== ($tmp = @$db->setAttribute(PDO::ATTR_STATEMENT_CLASS, 'foo')))
 		printf("[002] Expecting boolean/false got %s\n", var_export($tmp, true));
@@ -110,22 +115,24 @@ $db = MySQLPDOTest::factory();
 	print "done!";
 ?>
 --EXPECTF--
+Warning: in %s line 48: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 array(1) {
   [0]=>
   string(12) "PDOStatement"
 }
 
-Warning: PDO::setAttribute(): SQLSTATE[HY000]: General error: PDO::ATTR_STATEMENT_CLASS requires format array(classname, array(ctor_args)); the classname must be a string specifying an existing class in %s on line %d
+Warning: SQLSTATE[HY000]: General error: PDO::ATTR_STATEMENT_CLASS requires format array(classname, array(ctor_args)); the classname must be a string specifying an existing class in %s on line %d
 
-Warning: PDO::setAttribute(): SQLSTATE[HY000]: General error in %s on line %d
+Warning: SQLSTATE[HY000]: General error in %s on line %d
 
-Warning: PDO::setAttribute(): SQLSTATE[HY000]: General error: user-supplied statement class must be derived from PDOStatement in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied statement class must be derived from PDOStatement in %s on line %d
 
-Warning: PDO::setAttribute(): SQLSTATE[HY000]: General error in %s on line %d
+Warning: SQLSTATE[HY000]: General error in %s on line %d
 
-Warning: PDO::setAttribute(): SQLSTATE[HY000]: General error: user-supplied statement class cannot have a public constructor in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied statement class cannot have a public constructor in %s on line %d
 
-Warning: PDO::setAttribute(): SQLSTATE[HY000]: General error in %s on line %d
+Warning: SQLSTATE[HY000]: General error in %s on line %d
 array(2) {
   [0]=>
   string(12) "mystatement4"
