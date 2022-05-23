@@ -1070,6 +1070,11 @@
 
 3. PDO dsn not support uri:
 
+4. PDO::closeConnection()
+
+    php: `$pdo = null;`
+    bpc: `$pdo->closeConnection();`
+
 ## ext/pdo_mysql
 
 1. PDO::getAttribute() not support MYSQL_ATTR_LOCAL_INFILE

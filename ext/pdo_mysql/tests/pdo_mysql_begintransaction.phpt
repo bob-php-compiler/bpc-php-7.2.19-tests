@@ -31,7 +31,11 @@ if (false == MySQLPDOTest::detect_transactional_mysql_engine($db))
 		printf("[004] No rows deleted, can't be true.\n");
 
 	/* This is the PDO way to close a connection */
-	$db = null;
+	if (defined('__BPC__')) {
+	    $db->closeConnection();
+	} else {
+	    $db = null;
+	}
 	$db = MySQLPDOTest::factory();
 
 	/* Autocommit was off - by definition. Commit was not issued. DELETE should have been rolled back. */
@@ -144,7 +148,9 @@ if (false == MySQLPDOTest::detect_transactional_mysql_engine($db))
 			printf("[030] No false and no exception - that's wrong.\n");
 		}
 	} catch (PDOException $e) {
-		assert($e->getMessage() != '');
+		if ($e->getMessage() == '') {
+		    die('unexpected');
+		}
 	}
 
 	// TODO: What about an engine that does not support transactions?
