@@ -1067,3 +1067,7 @@
     `new PDORow;` compile error
     `$classname = 'PDORow'; new $classname;` same as php
     @see ext/pdo/tests/pdorow.phpt
+
+## ext/pdo_mysql
+
+1. PDO::getAttribute() not support MYSQL_ATTR_LOCAL_INFILE
