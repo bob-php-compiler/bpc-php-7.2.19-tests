@@ -18,6 +18,7 @@ if (false == MySQLPDOTest::detect_transactional_mysql_engine($db))
 
 	$expected = array(
 		'__construct'							=> true,
+		'closeConnection' => true,
 		'prepare' 							=> true,
 		'beginTransaction'						=> true,
 		'commit'							=> true,
