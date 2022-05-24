@@ -4,6 +4,7 @@ PDO MySQL specific class constants
 --bpc-include-file ext/pdo_mysql/tests/config.inc --bpc-include-file ext/pdo_mysql/tests/pdo_test.inc --bpc-include-file ext/pdo_mysql/tests/mysql_pdo_test.inc \
 --SKIPIF--
 <?php
+die('skip not support Reflection');
 if (!extension_loaded('pdo') || !extension_loaded('pdo_mysql')) die('skip PDO_MySQL driver not loaded');
 if (!extension_loaded('mysqli') && !extension_loaded('mysqlnd')) {
 	/* Need connection to detect library version */
