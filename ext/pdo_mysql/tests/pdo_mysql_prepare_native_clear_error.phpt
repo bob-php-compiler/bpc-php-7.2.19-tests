@@ -77,7 +77,7 @@ $db = MySQLPDOTest::factory();
 $db->exec('DROP TABLE IF EXISTS test');
 ?>
 --EXPECTF--
-Warning: PDOStatement::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'unknown_column' in 'field list' in %s on line %d
+Warning: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'unknown_column' in 'field list' in %s on line %d
 [003] Execute has failed, '42S22' array (
   0 => '42S22',
   1 => 1054,
@@ -93,7 +93,7 @@ array(1) {
   }
 }
 
-Warning: PDO::prepare(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'unknown_column' in 'field list' in %s on line %d
+Warning: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'unknown_column' in 'field list' in %s on line %d
 
 Fatal error: Uncaught Error: Call to a member function execute() on boolean in %s:%d
 Stack trace:

@@ -45,7 +45,7 @@ array(1) {
   }
 }
 
-Warning: PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in %s on line %d
+Warning: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in %s on line %d
 array(0) {
 }
 done!

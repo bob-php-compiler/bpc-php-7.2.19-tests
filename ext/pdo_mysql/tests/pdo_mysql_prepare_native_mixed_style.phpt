@@ -34,9 +34,9 @@ require dirname(__FILE__) . '/mysql_pdo_test.inc';
 MySQLPDOTest::dropTestTable();
 ?>
 --EXPECTF--
-Warning: PDO::prepare(): SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters in %s on line %d
+Warning: SQLSTATE[HY093]: Invalid parameter number: mixed named and positional parameters in %s on line %d
 
-Warning: PDO::prepare(): SQLSTATE[HY093]: Invalid parameter number in %s on line %d
+Warning: SQLSTATE[HY093]: Invalid parameter number in %s on line %d
 
 Fatal error: Uncaught Error: Call to a member function execute() on boolean in %s:%d
 Stack trace:
