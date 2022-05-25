@@ -13,7 +13,7 @@ MySQLPDOTest::skip();
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'mysql_pdo_test.inc');
 
 $attr = getenv('PDOTEST_ATTR');
-$attr = $attr ? unserialize($attr) : [];
+$attr = $attr ? unserialize($attr) : array();
 $attr[PDO::ATTR_PERSISTENT] = true;
 $attr[PDO::ATTR_EMULATE_PREPARES] = false;
 
