@@ -19,6 +19,10 @@ MySQLPDOTest::skip();
 		var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
 		var_dump($stmt->errorInfo());
 
+        if (defined('__BPC__')) {
+            $stmt->destroy();
+        }
+
 	}
 
 	function mysql_stmt_multiquery_proper_usage($db) {
@@ -99,7 +103,7 @@ array(1) {
 }
 Native Prepared Statements...
 
-Warning: PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your %s server version for the right syntax to use near '%SSELECT label FROM test ORDER BY id ASC LIMIT 1' at line %d in %s on line %d
+Warning: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your %s server version for the right syntax to use near '%SSELECT label FROM test ORDER BY id ASC LIMIT 1' at line %d in %s on line %d
 
 Fatal error: Uncaught Error: Call to a member function errorInfo() on boolean in %s:%d
 Stack trace:

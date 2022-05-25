@@ -1075,6 +1075,11 @@
     php: `$pdo = null;`
     bpc: `$pdo->closeConnection();`
 
+5. PDOStatement::destroy()
+
+    php: free stmt object when refcount = 0
+    bpc: need free manually (call PDOStatement::destroy) or free at page end
+
 ## ext/pdo_mysql
 
 1. PDO::getAttribute() not support MYSQL_ATTR_LOCAL_INFILE
