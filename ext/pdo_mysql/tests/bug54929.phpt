@@ -49,7 +49,7 @@ array(1) {
   string(3) "foo"
 }
 
-Warning: PDOStatement::execute(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your %s server version for the right syntax to use near '--'' at line 1 in %s on line %d
+Warning: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your %s server version for the right syntax to use near '--'' at line 1 in %s on line %d
 array(3) {
   [0]=>
   string(5) "42000"

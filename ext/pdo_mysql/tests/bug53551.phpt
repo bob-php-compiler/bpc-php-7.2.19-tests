@@ -51,7 +51,7 @@ $db->exec('DROP TABLE IF EXISTS bug53551');
 --EXPECTF--
 1
 
-Warning: PDOStatement::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'count' cannot be null in %s on line %d
+Warning: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'count' cannot be null in %s on line %d
 array(3) {
   [0]=>
   string(5) "23000"
@@ -62,7 +62,7 @@ array(3) {
 }
 2
 
-Warning: PDOStatement::execute(): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'count' cannot be null in %s on line %d
+Warning: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'count' cannot be null in %s on line %d
 array(3) {
   [0]=>
   string(5) "23000"
