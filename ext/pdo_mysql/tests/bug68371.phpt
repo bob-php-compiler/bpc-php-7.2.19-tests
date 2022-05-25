@@ -12,7 +12,7 @@ MySQLPDOTest::skip();
 <?php
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'mysql_pdo_test.inc');
 $pdo = MySQLPDOTest::factory();
-$pdo->setAttribute (\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+$pdo->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $attrs = array(
     // Extensive test: default value and set+get values
@@ -53,10 +53,10 @@ foreach ($attrs as $a => $vals) {
 				if ($pdo->getAttribute($a) === $v) {
 					echo "OK\n";
 				} else {
-					throw new \Exception('KO');
+					throw new Exception('KO');
 				}
 			}
-		} catch (\Exception $e) {
+		} catch (Exception $e) {
 			if ($e->getCode() == 'IM001') {
 				echo "ERR\n";
 			} else {
