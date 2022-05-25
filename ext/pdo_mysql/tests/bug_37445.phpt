@@ -17,8 +17,6 @@ $db->setAttribute(PDO :: ATTR_EMULATE_PREPARES, true);
 $stmt = $db->prepare("SELECT 1");
 $stmt->bindParam(':a', 'b');
 ?>
+==done==
 --EXPECTF--
-Fatal error: Uncaught Error: Cannot pass parameter 2 by reference in %sbug_37445.php:%d
-Stack trace:
-#0 {main}
-  thrown in %sbug_37445.php on line %d
+==done==
