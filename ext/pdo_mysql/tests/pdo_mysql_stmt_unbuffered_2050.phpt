@@ -35,7 +35,7 @@ if (MYSQLPDOTest::isPDOMySQLnd())
 		$db->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
 		$stmt = $db->query('SELECT id, label FROM test WHERE id = 1');
 		var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
-		/*
+		/* bpc close stmt at page end, so bpc will not cause any error.
 		NOTE - this will cause an error and it OK
 		When using unbuffered prepared statements MySQL expects you to
 		fetch all data from the row before sending new data to the server.
@@ -138,13 +138,23 @@ array(1) {
   }
 }
 Unbuffered...
-
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: 2050  in %s on line %d
-array(0) {
+array(1) {
+  [0]=>
+  array(2) {
+    ["id"]=>
+    string(1) "1"
+    ["label"]=>
+    string(1) "a"
+  }
 }
-
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: 2050  in %s on line %d
-array(0) {
+array(1) {
+  [0]=>
+  array(2) {
+    ["id"]=>
+    string(1) "1"
+    ["label"]=>
+    string(1) "a"
+  }
 }
 array(1) {
   [0]=>
