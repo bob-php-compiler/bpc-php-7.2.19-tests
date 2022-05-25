@@ -46,6 +46,4 @@ object(PDO)#%d (0) {
 }
 object(MyPDO)#%d (0) {
 }
-
-Notice: Undefined variable: bar in %s on line %d
 NULL
