@@ -11,11 +11,11 @@ MySQLPDOTest::skip();
 --FILE--
 <?php
 require(dirname(__FILE__). DIRECTORY_SEPARATOR . 'config.inc');
-$flags = [
+$flags = array(
 	PDO::MYSQL_ATTR_FOUND_ROWS	=> true, // mysqlnd 1005 libmysqlclient 1008
 	PDO::MYSQL_ATTR_LOCAL_INFILE	=> true,
 	PDO::ATTR_PERSISTENT 		=> true,
-];
+);
 
 $std = new StdClass();
 $std->flags = $flags;
