@@ -13,9 +13,9 @@ MySQLPDOTest::skip();
 require(dirname(__FILE__). DIRECTORY_SEPARATOR . 'config.inc');
 
 try {
-    new PDO(PDO_MYSQL_TEST_DSN, PDO_MYSQL_TEST_USER, PDO_MYSQL_TEST_PASS, [
+    new PDO(PDO_MYSQL_TEST_DSN, PDO_MYSQL_TEST_USER, PDO_MYSQL_TEST_PASS, array(
         PDO::MYSQL_ATTR_INIT_COMMAND => null,
-    ]);
+    ));
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
