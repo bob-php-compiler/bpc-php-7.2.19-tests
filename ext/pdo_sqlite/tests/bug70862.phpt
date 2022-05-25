@@ -1,5 +1,7 @@
 --TEST--
 PDO_sqlite: Testing sqliteCreateCollation()
+--SKIPIF--
+skip not support streamWrapper
 --FILE--
 <?php
 
