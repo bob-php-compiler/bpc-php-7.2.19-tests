@@ -5,7 +5,7 @@ Bug #46542 Extending PDO class with a __call() function
 class A extends PDO
 { function __call($m, $p) {print __CLASS__."::$m\n";} }
 
-$a = new A('sqlite:' . __DIR__ . '/dummy.db');
+$a = new A('sqlite:' . getcwd() . '/dummy.db');
 
 $a->truc();
 $a->TRUC();
@@ -13,7 +13,7 @@ $a->TRUC();
 ?>
 --CLEAN--
 <?php
-unlink(__DIR__ . '/dummy.db');
+unlink(getcwd() . '/dummy.db');
 ?>
 --EXPECT--
 A::truc
