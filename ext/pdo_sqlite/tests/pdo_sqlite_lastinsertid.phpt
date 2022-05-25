@@ -15,7 +15,7 @@ $db->query('DROP TABLE foo');
 
 ?>
 --EXPECTF--
-object(PDOStatement)#2 (1) {
+object(PDOStatement)#%d (1) {
   ["queryString"]=>
   %string|unicode%(17) "SELECT * FROM foo"
 }
