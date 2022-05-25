@@ -85,10 +85,7 @@ if (($row = $stmt->fetch(PDO::FETCH_ASSOC)) && ($row['value'] != '')) {
 		fwrite($fp, "2;bar");
 		fclose($fp);
 
-		// This should fail, the PS protocol should not support it.
-		// mysqlnd will give 2014 as a follow-up of the fallback logic
-		// libmysql will give a little more precise 2030 error code
-		// However, you get an error and the big question is what happens to the line
+		// with libmysql, prepare will fail, and then fallback to emulation
 		$stmt = $db->prepare(sprintf("LOAD DATA INFILE %s INTO TABLE test FIELDS TERMINATED BY ';' LINES TERMINATED  BY '\n'", $db->quote($filename)));
 		if (!$stmt->execute()) {
 			printf("[004] [%d] %s\n", $stmt->errorCode(), var_export($stmt->errorInfo(), true));
@@ -122,10 +119,4 @@ require dirname(__FILE__) . '/mysql_pdo_test.inc';
 MySQLPDOTest::dropTestTable();
 ?>
 --EXPECTF--
-Warning: PDOStatement::execute(): SQLSTATE[HY000]: General error: %s in %s on line %d
-[004] [0] array (
-  0 => 'HY000',
-  1 => %d,
-  2 => %s,
-)
 done!
