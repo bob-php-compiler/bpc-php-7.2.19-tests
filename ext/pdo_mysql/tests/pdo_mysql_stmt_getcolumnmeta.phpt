@@ -33,8 +33,13 @@ try {
 
 	$stmt->execute();
 	// Warning: PDOStatement::getColumnMeta() expects exactly 1 parameter, 0 given in
-	if (false !== ($tmp = @$stmt->getColumnMeta()))
-		printf("[003] Expecting false got %s\n", var_export($tmp, true));
+	try {
+	    $stmt->getColumnMeta();
+	} catch (ArgumentCountError $e) {
+	    if ($e->getMessage() != 'Too few arguments to method PDOStatement::getColumnMeta(): 1 required, 0 provided') {
+	        die('unexpected');
+	    }
+	}
 
 	// invalid offset
 	if (false !== ($tmp = @$stmt->getColumnMeta(-1)))
