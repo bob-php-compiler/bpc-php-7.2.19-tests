@@ -9,7 +9,7 @@ $db->exec('INSERT INTO testing VALUES(1, "php")');
 $db->exec('INSERT INTO testing VALUES(2, "")');
 
 $st = $db->query('SELECT * FROM testing');
-$st->fetchAll(PDO::FETCH_FUNC, function($x, $y) use ($st) { var_dump($st); print "data: $x, $y\n"; });
+$st->fetchAll(PDO::FETCH_FUNC, function($x, $y) { global $st; var_dump($st); print "data: $x, $y\n"; });
 
 $st = $db->query('SELECT name FROM testing');
 var_dump($st->fetchAll(PDO::FETCH_FUNC, 'strtoupper'));
@@ -86,19 +86,19 @@ array(2) {
   %string|unicode%(0) ""
 }
 
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: function 'nothing' not found or invalid function name in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied function must be a valid callback in %s on line %d
 bool(false)
 
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: function '' not found or invalid function name in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied function must be a valid callback in %s on line %d
 bool(false)
 
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: no array or string given in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied function must be a valid callback in %s on line %d
 bool(false)
 
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: no array or string given in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied function must be a valid callback in %s on line %d
 bool(false)
 
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: class 'PDOStatement' does not have a method 'foo' in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied function must be a valid callback in %s on line %d
 bool(false)
 array(2) {
   [0]=>
@@ -113,8 +113,12 @@ array(2) {
   %string|unicode%(4) "2---"
 }
 
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: cannot access private method bar::test2() in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied function must be a valid callback in %s on line %d
 bool(false)
+
+Deprecated: Non-static method bar::test3() should not be called statically in %s on line %d
+
+Deprecated: Non-static method bar::test3() should not be called statically in %s on line %d
 array(2) {
   [0]=>
   %string|unicode%(7) "1===php"
@@ -122,5 +126,5 @@ array(2) {
   %string|unicode%(4) "2==="
 }
 
-Warning: PDOStatement::fetchAll(): SQLSTATE[HY000]: General error: class 'bar' does not have a method 'inexistent' in %s on line %d
+Warning: SQLSTATE[HY000]: General error: user-supplied function must be a valid callback in %s on line %d
 bool(false)
