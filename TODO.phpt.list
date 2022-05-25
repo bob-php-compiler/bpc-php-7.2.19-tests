@@ -419,3 +419,11 @@ ext/spl/tests/bug73029.phpt
 ext/spl/tests/bug73423.phpt
 ext/spl/tests/bug73896.phpt
 ext/spl/tests/bug74669.phpt
+ext/pdo_sqlite/tests/pdo_sqlite_createaggregate.phpt
+ext/pdo_sqlite/tests/pdo_sqlite_createaggregate_002.phpt
+ext/pdo_sqlite/tests/pdo_sqlite_createcollation.phpt
+ext/pdo_sqlite/tests/pdo_sqlite_createfunction.phpt
+ext/pdo_sqlite/tests/pdo_sqlite_createfunction_002.phpt
+ext/pdo_sqlite/tests/pdo_sqlite_createfunction_with_flags.phpt
+ext/pdo_sqlite/tests/bug60104.phpt
+ext/pdo_sqlite/tests/bug70221.phpt
