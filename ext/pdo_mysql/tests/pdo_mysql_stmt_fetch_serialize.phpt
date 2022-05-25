@@ -122,6 +122,8 @@ $db = MySQLPDOTest::factory();
 $db->exec('DROP TABLE IF EXISTS test');
 ?>
 --EXPECTF--
+Warning: in %s line 18: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Creating an object, serializing it and writing it to DB...
 myclass::singleton(Creating object)
 myclass::__construct(Creating object)
