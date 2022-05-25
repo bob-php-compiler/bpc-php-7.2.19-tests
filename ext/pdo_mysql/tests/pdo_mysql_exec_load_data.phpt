@@ -61,7 +61,7 @@ if (($row = $stmt->fetch(PDO::FETCH_ASSOC)) && ($row['value'] != '')) {
 	}
 
 	require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'mysql_pdo_test.inc');
-	putenv('PDOTEST_ATTR='.serialize([PDO::MYSQL_ATTR_LOCAL_INFILE=>true]));
+	putenv('PDOTEST_ATTR='.serialize(array(PDO::MYSQL_ATTR_LOCAL_INFILE=>true)));
 	$db = MySQLPDOTest::factory();
 	MySQLPDOTest::createTestTable($db, MySQLPDOTest::detect_transactional_mysql_engine($db));
 
@@ -91,13 +91,18 @@ if (($row = $stmt->fetch(PDO::FETCH_ASSOC)) && ($row['value'] != '')) {
 			$expected = array(array("id" => 1, "col1" => "foo"), array("id" => 2, "col1" => "bar"));
 			$ret = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			foreach ($expected as $offset => $exp) {
+			    $break = false;
 				foreach ($exp as $key => $value) {
 					if ($ret[$offset][$key] != $value) {
 						printf("Results seem wrong, check manually\n");
 						var_dump($ret);
 						var_dump($expected);
-						break 2;
+						$break = true;
+						break;
 					}
+				}
+				if ($break) {
+				    break;
 				}
 			}
 		}
