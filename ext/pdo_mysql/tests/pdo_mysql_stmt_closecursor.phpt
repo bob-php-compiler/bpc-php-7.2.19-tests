@@ -64,7 +64,9 @@ $db = MySQLPDOTest::factory();
 		// fetch only the first rows and let closeCursor() clean up
 		$row3 = $stmt1->fetch(PDO::FETCH_ASSOC);
 		$stmt1->closeCursor();
-		assert($row3 == $row2);
+		if ($row3 != $row2) {
+		    die('row3 should equal to row2');
+		}
 
 		$stmt2 = $db->prepare('UPDATE test SET label = ? WHERE id = ?');
 		$stmt2->bindValue(1, "a");
@@ -75,7 +77,9 @@ $db = MySQLPDOTest::factory();
 		$stmt1->execute();
 		$row4 = $stmt1->fetch(PDO::FETCH_ASSOC);
 		$stmt1->closeCursor();
-		assert($row4 == $row1);
+		if ($row4 != $row1) {
+		    die('row4 should equal to row2');
+		}
 
 		$offset = 0;
 		$stmt = $db->prepare('SELECT id, label FROM test WHERE id > ? ORDER BY id ASC LIMIT 2');
@@ -156,23 +160,23 @@ $db->exec('DROP TABLE IF EXISTS test');
 Testing emulated PS...
 Buffered...
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
+Warning: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
 in = 0 -> id = 1 (integer) / label = 'a' (string)
 in = 0 -> id = 2 (integer) / label = 'b' (string)
 Unbuffered...
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
+Warning: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
 in = 0 -> id = 1 (integer) / label = 'a' (string)
 in = 0 -> id = 2 (integer) / label = 'b' (string)
 Testing native PS...
 Buffered...
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
+Warning: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
 in = 0 -> id = 1 (integer) / label = 'a' (string)
 in = 0 -> id = 2 (integer) / label = 'b' (string)
 Unbuffered...
 
-Warning: PDO::query(): SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
+Warning: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute. in %s on line %d
 in = 0 -> id = 1 (integer) / label = 'a' (string)
 in = 0 -> id = 2 (integer) / label = 'b' (string)
 done!
