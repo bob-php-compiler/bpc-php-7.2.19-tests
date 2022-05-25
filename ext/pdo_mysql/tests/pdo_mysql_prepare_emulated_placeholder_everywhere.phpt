@@ -63,7 +63,7 @@ $db = MySQLPDOTest::factory();
 $db->exec('DROP TABLE IF EXISTS test');
 ?>
 --EXPECTF--
-Warning: PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number in %s on line %d
+Warning: SQLSTATE[HY093]: Invalid parameter number in %s on line %d
 [003] Execute has failed, 'HY093' array (
   0 => 'HY093',
   1 => NULL,
@@ -73,9 +73,9 @@ array(0) {
 }
 now the same with emulated PS
 
-Warning: PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in %s on line %d
+Warning: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in %s on line %d
 
-Warning: PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number in %s on line 33
+Warning: SQLSTATE[HY093]: Invalid parameter number in %s on line 33
 [005] Execute has failed, 'HY093' array (
   0 => 'HY093',
   1 => NULL,
