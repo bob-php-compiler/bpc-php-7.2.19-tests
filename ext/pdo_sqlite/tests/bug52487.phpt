@@ -1,5 +1,7 @@
 --TEST--
 Bug #52487 (PDO::FETCH_INTO leaks memory)
+--ARGS--
+--bpc-include-file ext/pdo_sqlite/tests/config.inc --bpc-include-file ext/pdo_sqlite/tests/pdo_test.inc \
 --FILE--
 <?php
 require 'pdo_test.inc';

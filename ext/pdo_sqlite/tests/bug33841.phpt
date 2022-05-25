@@ -1,5 +1,7 @@
 --TEST--
 PDO SQLite Bug #33841 (rowCount() does not work on prepared statements)
+--ARGS--
+--bpc-include-file ext/pdo_sqlite/tests/config.inc --bpc-include-file ext/pdo_sqlite/tests/pdo_test.inc \
 --FILE--
 <?php
 require 'pdo_test.inc';

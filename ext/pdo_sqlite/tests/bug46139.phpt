@@ -1,5 +1,7 @@
 --TEST--
 Bug #46139 (PDOStatement->setFetchMode() forgets FETCH_PROPS_LATE)
+--ARGS--
+--bpc-include-file ext/pdo_sqlite/tests/config.inc --bpc-include-file ext/pdo_sqlite/tests/pdo_test.inc \
 --FILE--
 <?php
 
