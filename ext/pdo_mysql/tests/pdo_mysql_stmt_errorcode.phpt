@@ -52,11 +52,11 @@ $db = MySQLPDOTest::factory();
 --EXPECTF--
 Testing emulated PS...
 
-Warning: PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
+Warning: SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
 string(5) "42S02"
 Testing native PS...
 
-Warning: PDO::prepare(): SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
+Warning: SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
 
 Fatal error: Uncaught Error: Call to a member function execute() on boolean in %s:%d
 Stack trace:

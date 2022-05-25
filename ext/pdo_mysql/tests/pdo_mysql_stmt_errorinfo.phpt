@@ -77,7 +77,7 @@ array(3) {
   NULL
 }
 
-Warning: PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
+Warning: SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
 array(3) {
   [0]=>
   string(5) "42S02"
@@ -87,7 +87,7 @@ array(3) {
   string(%d) "Table '%s.ihopeitdoesnotexist' doesn't exist"
 }
 
-Warning: PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.test' doesn't exist in %s on line %d
+Warning: SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.test' doesn't exist in %s on line %d
 bool(false)
 array(3) {
   [0]=>
@@ -107,7 +107,7 @@ array(3) {
 }
 Testing native PS...
 
-Warning: PDO::prepare(): SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
+Warning: SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.ihopeitdoesnotexist' doesn't exist in %s on line %d
 bool(false)
 array(3) {
   [0]=>
@@ -118,7 +118,7 @@ array(3) {
   NULL
 }
 
-Warning: PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.test' doesn't exist in %s on line %d
+Warning: SQLSTATE[42S02]: Base table or view not found: 1146 Table '%s.test' doesn't exist in %s on line %d
 array(3) {
   [0]=>
   string(5) "42S02"
