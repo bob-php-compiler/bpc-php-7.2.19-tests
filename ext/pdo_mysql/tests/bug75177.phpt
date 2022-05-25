@@ -29,7 +29,7 @@ foreach ($ret as $i) {
 ?>
 ==DONE==
 --EXPECT--
-string(1) "1"
-string(1) "3"
-string(2) "12"
+string(1) ""
+string(1) ""
+string(1) ""
 ==DONE==

@@ -1083,3 +1083,7 @@
 ## ext/pdo_mysql
 
 1. PDO::getAttribute() not support MYSQL_ATTR_LOCAL_INFILE
+
+2. BIT field will keep raw value, not convert to int string
+
+    @see ext/pdo_mysql/tests/bug75177.phpt
