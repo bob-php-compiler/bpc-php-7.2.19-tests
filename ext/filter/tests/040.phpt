@@ -9,7 +9,6 @@ ap[]=1&bp=test&cp=
 --FILE--
 <?php
 
-var_dump(filter_has_var());
 var_dump(filter_has_var(INPUT_GET,""));
 var_dump(filter_has_var(INPUT_GET,array()));
 var_dump(filter_has_var(INPUT_POST, "ap"));
@@ -25,8 +24,6 @@ var_dump(filter_has_var("", "cc"));
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: filter_has_var() expects exactly 2 parameters, 0 given in %s on line %d
-bool(false)
 bool(false)
 
 Warning: filter_has_var() expects parameter 2 to be string, array given in %s on line %d
