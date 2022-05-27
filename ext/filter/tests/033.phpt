@@ -1,7 +1,7 @@
 --TEST--
 Test all filters returned by filter_list()
---SKIPIF--
-<?php if (!extension_loaded("filter")) die("skip"); ?>
+--ARGS--
+--bpc-include-file ext/filter/tests/033_run.inc \
 --INI--
 precision=14
 default_charset=UTF-8
