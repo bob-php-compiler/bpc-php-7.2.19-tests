@@ -1,12 +1,9 @@
 --TEST--
 filter_list()
---SKIPIF--
-<?php if (!extension_loaded("filter")) die("skip"); ?>
 --FILE--
 <?php
 
 var_dump(filter_list());
-var_dump(filter_list(array()));
 
 echo "Done\n";
 ?>
@@ -55,7 +52,4 @@ array(21) {
   [20]=>
   string(8) "callback"
 }
-
-Warning: filter_list() expects exactly 0 parameters, 1 given in %s on line %d
-NULL
 Done
