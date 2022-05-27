@@ -2,8 +2,6 @@
 input_get()
 --INI--
 precision=14
---SKIPIF--
-<?php if (!extension_loaded("filter")) die("skip"); ?>
 --GET--
 a=<b>test</b>&b=http://example.com
 --POST--
@@ -23,8 +21,6 @@ var_dump(filter_input(INPUT_POST, "d", FILTER_VALIDATE_INT));
 var_dump(filter_var(new stdClass, "d"));
 
 var_dump(filter_input(INPUT_POST, "c", "", ""));
-var_dump(filter_var("", "", "", "", ""));
-var_dump(filter_var(0, 0, 0, 0, 0));
 
 echo "Done\n";
 ?>
@@ -44,11 +40,5 @@ Warning: filter_var() expects parameter 2 to be integer, string given in %s011.p
 NULL
 
 Warning: filter_input() expects parameter 3 to be integer, string given in %s011.php on line %d
-NULL
-
-Warning: filter_var() expects at most 3 parameters, 5 given in %s011.php on line %d
-NULL
-
-Warning: filter_var() expects at most 3 parameters, 5 given in %s011.php on line %d
 NULL
 Done
