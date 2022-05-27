@@ -94,12 +94,28 @@ string(0) ""
 NULL
 NULL
 NULL
+
+Warning: Parameter 1 to test2() expected to be a reference, value given in %s on line %d
 NULL
+
+Warning: Parameter 1 to test2() expected to be a reference, value given in %s on line %d
 NULL
+
+Warning: Parameter 1 to test2() expected to be a reference, value given in %s on line %d
 NULL
+
+Warning: Parameter 1 to test3() expected to be a reference, value given in %s on line %d
 NULL
+
+Warning: Parameter 1 to test3() expected to be a reference, value given in %s on line %d
 NULL
+
+Warning: Parameter 1 to test3() expected to be a reference, value given in %s on line %d
 NULL
+
+Warning: Parameter 1 to test4() expected to be a reference, value given in %s on line %d
 int(1)
+
+Warning: Parameter 1 to test5() expected to be a reference, value given in %s on line %d
 string(4) "test"
 Done
