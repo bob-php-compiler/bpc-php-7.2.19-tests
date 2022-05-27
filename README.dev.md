@@ -1087,3 +1087,7 @@
 2. BIT field will keep raw value, not convert to int string
 
     @see ext/pdo_mysql/tests/bug75177.phpt
+
+## ext/filter
+
+1. no ini filter.default filter.default_flags
