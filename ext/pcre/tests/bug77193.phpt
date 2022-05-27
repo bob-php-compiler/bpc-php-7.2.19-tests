@@ -15,7 +15,7 @@ preg_replace_callback(
 	'/([0-9]+)/i',
 	function ($matches) {
 		echo $matches[1];
-		filter_var('http', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^http$/i']]);
+		filter_var('http', FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/^http$/i')));
 	},
 	$text
 );
