@@ -10,6 +10,7 @@
 - [x] ext/json
 - [x] ext/fileinfo
 - [x] ext/session
+- [x] ext/filter
 - [ ] ext/curl (TODO curl_multi curl_share)
 - [ ] ext/spl (TODO Datastructures MultipleIterator SplFileInfo)
 - [x] ext/pdo
