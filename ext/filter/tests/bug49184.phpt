@@ -1,9 +1,5 @@
 --TEST--
 Bug #67296 (filter_input doesn't validate variables)
---XFAIL--
-See Bug #49184
---SKIPIF--
-<?php if (!extension_loaded("filter")) die("skip needs filter ext"); ?>
 --ENV--
 return <<<END
 HTTP_X_FORWARDED_FOR=example.com
