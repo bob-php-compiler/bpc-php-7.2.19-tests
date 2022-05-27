@@ -1,24 +1,20 @@
 --TEST--
 Bug #76366 (references in sub-array for filtering breaks the filter)
---SKIPIF--
-<?php
-if (!extension_loaded('filter')) die('skip filter extension not available');
-?>
 --FILE--
 <?php
 
 #array to filter
-$data = ['foo' => 6];
+$data = array('foo' => 6);
 
 #filter args
-$args = [
-    'foo'=> [
+$args = array(
+    'foo'=> array(
         'filter' => FILTER_VALIDATE_INT,
         'flags' => FILTER_FORCE_ARRAY
-    ]
-];
+    )
+);
 
-$args['foo']['options'] = [];
+$args['foo']['options'] = array();
 
 #create reference
 $options = &$args['foo']['options'];
