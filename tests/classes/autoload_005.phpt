@@ -5,7 +5,7 @@ ZE2 Autoload from destructor
 	if (class_exists('autoload_root', false)) die('skip Autoload test classes exist already');
 ?>
 --ARGS--
---bpc-include-file tests/classes/autoload_root.p5c --bpc-include-file tests/classes/autoload_derived.p5c
+--bpc-php-exts .php,.p5c --bpc-include-file tests/classes/autoload_root.p5c --bpc-include-file tests/classes/autoload_derived.p5c \
 --FILE--
 <?php
 
@@ -33,6 +33,8 @@ unset($o);
 ?>
 ===DONE===
 --EXPECTF--
+Warning: in %s line 14: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 bool(false)
 bool(false)
 ===DONE===
