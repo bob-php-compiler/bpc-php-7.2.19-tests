@@ -5,7 +5,7 @@ Bug #30234 (__autoload() not invoked for interfaces)
 	if (class_exists('autoload_root', false)) die('skip Autoload test classes exist already');
 ?>
 --ARGS--
---bpc-include-file ext/standard/tests/serialize/autoload_interface.p5c --bpc-include-file ext/standard/tests/serialize/autoload_implements.p5c
+--bpc-php-exts .php,.p5c --bpc-include-file ext/standard/tests/serialize/autoload_interface.p5c --bpc-include-file ext/standard/tests/serialize/autoload_implements.p5c \
 --FILE--
 <?php
 
