@@ -5,7 +5,7 @@ ZE2 Autoload and get_class_methods
 	if (class_exists('autoload_root', false)) die('skip Autoload test classes exist already');
 ?>
 --ARGS--
---bpc-include-file tests/classes/autoload_root.p5c
+--bpc-php-exts .php,.p5c --bpc-include-file tests/classes/autoload_root.p5c \
 --FILE--
 <?php
 

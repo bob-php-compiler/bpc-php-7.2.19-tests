@@ -3,7 +3,7 @@ SPL: spl_autoload() and friends
 --INI--
 include_path=.
 --ARGS--
---bpc-include-file ext/spl/tests/testclass --bpc-include-file ext/spl/tests/testclass.class.inc --bpc-include-file ext/spl/tests/testclass.inc --bpc-include-file ext/spl/tests/testclass.php.inc \
+--bpc-php-exts .php,.inc, --bpc-include-file ext/spl/tests/testclass --bpc-include-file ext/spl/tests/testclass.class.inc --bpc-include-file ext/spl/tests/testclass.inc --bpc-include-file ext/spl/tests/testclass.php.inc \
 --FILE--
 <?php
 

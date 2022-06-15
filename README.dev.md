@@ -316,6 +316,8 @@
 
     @see Zend/tests/constants/dir-constant-includes.phpt
 
+6. --bpc-php-exts
+
 **ini**
 
 1. ini extra semicolon

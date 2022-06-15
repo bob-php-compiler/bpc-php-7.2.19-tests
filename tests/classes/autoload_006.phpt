@@ -5,7 +5,7 @@ ZE2 Autoload from destructor
 	if (class_exists('autoload_root', false)) die('skip Autoload test classes exist already');
 ?>
 --ARGS--
---bpc-include-file tests/classes/autoload_interface.p5c --bpc-include-file tests/classes/autoload_implements.p5c
+--bpc-php-exts .php,.p5c --bpc-include-file tests/classes/autoload_interface.p5c --bpc-include-file tests/classes/autoload_implements.p5c \
 --FILE--
 <?php
 
