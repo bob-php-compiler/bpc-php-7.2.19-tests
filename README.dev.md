@@ -530,6 +530,8 @@
 
     @see Zend/tests/bug71428.2.phpt
 
+46. not support CLASS::$static_property = &$var
+
 **misc**
 
 1. TODO

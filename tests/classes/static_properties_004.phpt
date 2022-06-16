@@ -13,10 +13,11 @@ echo "\nChanging one changes all the others:\n";
 D::$p = 'changed.all';
 var_dump(C::$p, D::$p, E::$p);
 
+/*
 echo "\nBut because this is implemented using PHP references, the reference set can easily be split:\n";
 $ref = 'changed.one';
 D::$p =& $ref;
-var_dump(C::$p, D::$p, E::$p);
+var_dump(C::$p, D::$p, E::$p);*/
 ?>
 ==Done==
 --EXPECTF--
@@ -28,10 +29,5 @@ string(8) "original"
 Changing one changes all the others:
 string(11) "changed.all"
 string(11) "changed.all"
-string(11) "changed.all"
-
-But because this is implemented using PHP references, the reference set can easily be split:
-string(11) "changed.all"
-string(11) "changed.one"
 string(11) "changed.all"
 ==Done==
