@@ -1,7 +1,5 @@
 --TEST--
 Bug #55646: textual input in openssl_csr_new() is not expected in UTF-8
---SKIPIF--
-<?php if (!extension_loaded("openssl")) die("skip"); ?>
 --FILE--
 <?php
 
@@ -31,7 +29,7 @@ while (openssl_error_string()) {}
 $csr_res = openssl_csr_new(
     $csr_info,
     $private,
-    ['config' => __DIR__. DIRECTORY_SEPARATOR . "openssl.cnf"]
+    array('config' => "openssl.cnf")
 );
 if (!$csr_res) {
     while ($e = openssl_error_string()) {
