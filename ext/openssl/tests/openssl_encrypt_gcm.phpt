@@ -2,11 +2,11 @@
 openssl_encrypt() with GCM cipher algorithm tests
 --SKIPIF--
 <?php
-if (!extension_loaded("openssl"))
-	die("skip");
 if (!in_array('aes-128-gcm', openssl_get_cipher_methods()))
 	die("skip: aes-128-gcm not available");
 ?>
+--ARGS--
+--bpc-include-file ext/openssl/tests/cipher_tests.inc \
 --FILE--
 <?php
 require_once __DIR__ . "/cipher_tests.inc";
