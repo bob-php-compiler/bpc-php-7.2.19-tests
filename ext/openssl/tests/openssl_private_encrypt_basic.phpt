@@ -1,12 +1,10 @@
 --TEST--
 openssl_private_encrypt() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
 $data = "Testing openssl_private_encrypt()";
-$privkey = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
-$pubkey = "file://" . dirname(__FILE__) . "/public.key";
+$privkey = "file://private_rsa_1024.key";
+$pubkey = "file://public.key";
 $wrong = "wrong";
 
 class test {
