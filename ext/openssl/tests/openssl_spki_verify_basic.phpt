@@ -2,10 +2,6 @@
 openssl_spki_verify() tests for valid signature
 --INI--
 error_reporting=0
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip");
-?>
 --FILE--
 <?php
 
@@ -13,7 +9,7 @@ if (!extension_loaded("openssl")) die("skip");
 $key_sizes = array(1024, 2048, 4096);
 $pkeys = array();
 foreach ($key_sizes as $key_size) {
-    $key_file = "file://" . dirname(__FILE__) . "/private_rsa_" . $key_size . ".key";
+    $key_file = "file://private_rsa_" . $key_size . ".key";
     $pkeys[] = openssl_pkey_get_private($key_file);
 }
 
