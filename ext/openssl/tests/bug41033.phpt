@@ -1,13 +1,9 @@
 --TEST--
 #41033, enable signing with DSA keys
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip, openssl required");
-?>
 --FILE--
 <?php
-$prv = 'file://' . dirname(__FILE__) . '/' . 'bug41033.pem';
-$pub = 'file://' . dirname(__FILE__) . '/' . 'bug41033pub.pem';
+$prv = 'file://bug41033.pem';
+$pub = 'file://bug41033pub.pem';
 
 
 $prkeyid = openssl_get_privatekey($prv, "1234");
