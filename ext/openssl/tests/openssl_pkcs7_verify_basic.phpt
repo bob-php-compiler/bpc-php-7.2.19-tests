@@ -1,7 +1,5 @@
 --TEST--
 openssl_pkcs7_verify() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
 $outfile = tempnam(sys_get_temp_dir(), "ssl");
@@ -14,10 +12,10 @@ if ($contentfile === false) {
 	die("failed to get a temporary filename!");
 }
 
-$pkcsfile = dirname(__FILE__) . "/openssl_pkcs7_verify__pkcsfile.tmp";
+$pkcsfile = "openssl_pkcs7_verify__pkcsfile.tmp";
 
-$infile = dirname(__FILE__) . "/cert.crt";
-$eml = dirname(__FILE__) . "/signed.eml";
+$infile = "cert.crt";
+$eml = "signed.eml";
 $wrong = "wrong";
 $empty = "";
 $cainfo = array();
@@ -43,7 +41,7 @@ if (file_exists($contentfile)) {
 ?>
 --CLEAN--
 <?php
-unlink(__DIR__ . DIRECTORY_SEPARATOR . '/openssl_pkcs7_verify__pkcsfile.tmp');
+unlink('openssl_pkcs7_verify__pkcsfile.tmp');
 ?>
 --EXPECTF--
 int(-1)

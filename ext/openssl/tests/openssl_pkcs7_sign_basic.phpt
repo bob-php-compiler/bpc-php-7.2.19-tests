@@ -1,17 +1,15 @@
 --TEST--
 openssl_pkcs7_sign() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$infile = dirname(__FILE__) . "/cert.crt";
+$infile = "cert.crt";
 $outfile = tempnam(sys_get_temp_dir(), "ssl");
 if ($outfile === false) {
     die("failed to get a temporary filename!");
 }
 
-$privkey = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
-$single_cert = "file://" . dirname(__FILE__) . "/cert.crt";
+$privkey = "file://private_rsa_1024.key";
+$single_cert = "file://cert.crt";
 $assoc_headers = array("To" => "test@test", "Subject" => "testing openssl_pkcs7_sign()");
 $headers = array("test@test", "testing openssl_pkcs7_sign()");
 $empty_headers = array();
