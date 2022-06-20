@@ -1,11 +1,9 @@
 --TEST--
 openssl_x509_export_to_file() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$outfilename = dirname(__FILE__) . "/openssl_x509_export_to_file__outfilename.tmp";
-$cert_file = dirname(__FILE__) . "/cert.crt";
+$outfilename = "openssl_x509_export_to_file__outfilename.tmp";
+$cert_file = "cert.crt";
 
 $a = file_get_contents($cert_file);
 $b = "file://" . $cert_file;
@@ -23,7 +21,7 @@ var_dump($exists = file_exists($outfilename));
 ?>
 --CLEAN--
 <?php
-$outfilename = dirname(__FILE__) . "/openssl_x509_export_to_file__outfilename.tmp";
+$outfilename = "openssl_x509_export_to_file__outfilename.tmp";
 if (file_exists($outfilename)) {
     unlink($outfilename);
 }

@@ -1,10 +1,8 @@
 --TEST--
 openssl_x509_export() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$cert_file = dirname(__FILE__) . "/cert.crt";
+$cert_file = "cert.crt";
 
 $a = file_get_contents($cert_file);
 $b = "file://" . $cert_file;
