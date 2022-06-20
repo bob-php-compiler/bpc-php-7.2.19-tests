@@ -1,12 +1,8 @@
 --TEST--
 openssl_csr_get_subject() tests
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip");
-?>
 --FILE--
 <?php
-$config = __DIR__ . DIRECTORY_SEPARATOR . 'openssl.cnf';
+$config = 'openssl.cnf';
 $phex = 'dcf93a0b883972ec0e19989ac5a2ce310e1d37717e8d9571bb7623731866e61e' .
         'f75a2e27898b057f9891c2e27a639c3f29b60814581cd3b2ca3986d268370557' .
         '7d45c2e7e52dc81c7a171876e5cea74b1448bfdfaf18828efd2519f14e45e382' .
@@ -32,9 +28,9 @@ $args = array(
     "config" => $config,
 );
 
-$privkey_file = 'file://' . dirname(__FILE__) . '/private_rsa_2048.key';
+$privkey_file = 'file://private_rsa_2048.key';
 $csr = openssl_csr_new($dn, $privkey_file, $args);
-$csr_file = file_get_contents(dirname(__FILE__) . '/cert.csr');
+$csr_file = file_get_contents('cert.csr');
 
 var_dump(openssl_csr_get_subject($csr_file));
 var_dump(openssl_csr_get_subject($csr, false));

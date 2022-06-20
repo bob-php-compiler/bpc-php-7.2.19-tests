@@ -1,11 +1,9 @@
 --TEST--
 openssl_csr_export() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
 $wrong = "wrong";
-$config = __DIR__ . DIRECTORY_SEPARATOR . 'openssl.cnf';
+$config = 'openssl.cnf';
 $config_arg = array('config' => $config);
 
 $dn = array(
