@@ -1,21 +1,19 @@
 --TEST--
 openssl_pkcs12_export() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$cert_file = dirname(__FILE__) . "/public.crt";
+$cert_file = "public.crt";
 $cert = file_get_contents($cert_file);
 $cert_path = "file://" . $cert_file;
-$priv_file = dirname(__FILE__) . "/private.crt";
+$priv_file = "private.crt";
 $priv = file_get_contents($priv_file);
 $priv_path = "file://" . $priv_file;
 $cert_res = openssl_x509_read($cert);
 $priv_res = openssl_pkey_get_private($priv);
 $pass = "test";
 $invalid = "";
-$invalid_path = dirname(__FILE__) . "/invalid_path";
-$opts = [];
+$invalid_path = "invalid_path";
+$opts = array();
 
 var_dump(openssl_pkcs12_export($cert, $output, $priv, $pass)); // read certs as a string
 var_dump(openssl_pkcs12_read($output, $opts, $pass));
