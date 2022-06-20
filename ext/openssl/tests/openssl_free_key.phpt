@@ -4,8 +4,6 @@ void openssl_free_key ( resource $key_identifier );
 marcosptf - <marcosptf@yahoo.com.br> - @phpsp - sao paulo - br
 --SKIPIF--
 <?php
-if (!extension_loaded("openssl"))
-    die("skip");
 if (!@openssl_pkey_new())
     die("skip cannot create private key");
 ?>
@@ -22,7 +20,7 @@ for ($z = "", $i = 0; $i < 1024; $i++) {
         usleep($i);
 }
 
-$conf = array('config' => dirname(__FILE__) . DIRECTORY_SEPARATOR . 'openssl.cnf');
+$conf = array('config' => 'openssl.cnf');
 $privkey = openssl_pkey_new($conf);
 
 if ($privkey === false)
