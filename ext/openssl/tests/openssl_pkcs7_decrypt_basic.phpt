@@ -1,11 +1,9 @@
 --TEST--
 openssl_pkcs7_decrypt() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$infile = dirname(__FILE__) . "/cert.crt";
-$privkey = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
+$infile = "cert.crt";
+$privkey = "file://private_rsa_1024.key";
 $encrypted = tempnam(sys_get_temp_dir(), "ssl");
 if ($encrypted === false)
     die("failed to get a temporary filename!");
@@ -15,7 +13,7 @@ if ($outfile === false) {
     die("failed to get a temporary filename!");
 }
 
-$single_cert = "file://" . dirname(__FILE__) . "/cert.crt";
+$single_cert = "file://cert.crt";
 $headers = array("test@test", "testing openssl_pkcs7_encrypt()");
 $wrong = "wrong";
 $empty = "";
