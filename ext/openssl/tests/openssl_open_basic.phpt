@@ -1,12 +1,10 @@
 --TEST--
 openssl_open() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
 $data = "openssl_open() test";
-$pub_key = "file://" . dirname(__FILE__) . "/public.key";
-$priv_key = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
+$pub_key = "file://public.key";
+$priv_key = "file://private_rsa_1024.key";
 $wrong = "wrong";
 
 openssl_seal($data, $sealed, $ekeys, array($pub_key, $pub_key, $pub_key));
