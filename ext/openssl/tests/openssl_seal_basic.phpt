@@ -1,7 +1,5 @@
 --TEST--
 openssl_seal() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
 // simple tests
@@ -17,7 +15,7 @@ var_dump(openssl_seal($b, $b, $b, ""));
 
 // tests with cert
 $data = "openssl_open() test";
-$pub_key = "file://" . dirname(__FILE__) . "/public.key";
+$pub_key = "file://public.key";
 $wrong = "wrong";
 
 var_dump(openssl_seal($data, $sealed, $ekeys, array($pub_key)));                  // no output

@@ -1,11 +1,9 @@
 --TEST--
 openssl_sign() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
 $data = "Testing openssl_sign()";
-$privkey = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
+$privkey = "file://private_rsa_1024.key";
 $wrong = "wrong";
 
 var_dump(openssl_sign($data, $sign, $privkey));                 // no output
