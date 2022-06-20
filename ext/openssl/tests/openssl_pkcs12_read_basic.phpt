@@ -1,10 +1,8 @@
 --TEST--
 openssl_pkcs12_read() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$p12_file = dirname(__FILE__) . "/p12_with_extra_certs.p12";
+$p12_file = "p12_with_extra_certs.p12";
 $p12 = file_get_contents($p12_file);
 $certs = array();
 $pass = "qwerty";
