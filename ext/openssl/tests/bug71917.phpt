@@ -1,14 +1,10 @@
 --TEST--
 Bug #71917: openssl_open() returns junk on envelope < 16 bytes
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-?>
 --FILE--
 <?php
 function test($envkey) {
-    $publicKey = "file://" . dirname(__FILE__) . "/public.key";
-    $privateKey = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
+    $publicKey = "file://public.key";
+    $privateKey = "file://private_rsa_1024.key";
     openssl_public_encrypt($envkey, $envelope, $publicKey);
     $sealed = openssl_encrypt(
         'plaintext',
