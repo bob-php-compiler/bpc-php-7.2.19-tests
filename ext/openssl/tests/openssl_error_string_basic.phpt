@@ -1,7 +1,5 @@
 --TEST--
 openssl_error_string() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
 // helper function to check openssl errors
@@ -48,22 +46,24 @@ function dump_openssl_errors($name) {
     }
 }
 
+$cwd = getcwd();
+
 // common output file
-$output_file =  __DIR__ . "/openssl_error_string_basic_output.tmp";
+$output_file =  $cwd . "/openssl_error_string_basic_output.tmp";
 // invalid file for read is something that does not exist in current directory
-$invalid_file_for_read = __DIR__ . "/invalid_file_for_read_operation.txt";
+$invalid_file_for_read = $cwd . "/invalid_file_for_read_operation.txt";
 // invalid file for is the test dir as writting file to existing dir should alway fail
-$invalid_file_for_write = __DIR__;
+$invalid_file_for_write = $cwd;
 // crt file
-$crt_file = "file://" . __DIR__ . "/cert.crt";
+$crt_file = "file://" . $cwd . "/cert.crt";
 // csr file
-$csr_file = "file://" . __DIR__ . "/cert.csr";
+$csr_file = "file://" . $cwd . "/cert.csr";
 // public key file
-$public_key_file = "file://" .__DIR__ . "/public.key";
+$public_key_file = "file://" .$cwd . "/public.key";
 // private key file
-$private_key_file = "file://" .__DIR__ . "/private_rsa_1024.key";
+$private_key_file = "file://" .$cwd . "/private_rsa_1024.key";
 // private key file with password (password is 'php')
-$private_key_file_with_pass = "file://" .__DIR__ . "/private_rsa_2048_pass_php.key";
+$private_key_file_with_pass = "file://" .$cwd . "/private_rsa_2048_pass_php.key";
 
 // ENCRYPTION
 $data = "test";
@@ -97,53 +97,53 @@ $err_pem_no_start_line = $is_111 ? '0909006C': '0906D06C';
 echo "PKEY errors\n";
 // file for pkey (file:///) fails when opennig (BIO_new_file)
 @openssl_pkey_export_to_file("file://" . $invalid_file_for_read, $output_file);
-expect_openssl_errors('openssl_pkey_export_to_file opening', ['02001002', '2006D080']);
+expect_openssl_errors('openssl_pkey_export_to_file opening', array('02001002', '2006D080'));
 // file or private pkey is not correct PEM - failing PEM_read_bio_PrivateKey
 @openssl_pkey_export_to_file($csr_file, $output_file);
-expect_openssl_errors('openssl_pkey_export_to_file pem', [$err_pem_no_start_line]);
+expect_openssl_errors('openssl_pkey_export_to_file pem', array($err_pem_no_start_line));
 // file to export cannot be written
 @openssl_pkey_export_to_file($private_key_file, $invalid_file_for_write);
-expect_openssl_errors('openssl_pkey_export_to_file write', ['2006D002']);
+expect_openssl_errors('openssl_pkey_export_to_file write', array('2006D002'));
 // succesful export
 @openssl_pkey_export($private_key_file_with_pass, $out, 'wrong pwd');
-expect_openssl_errors('openssl_pkey_export', ['06065064', '0906A065']);
+expect_openssl_errors('openssl_pkey_export', array('06065064', '0906A065'));
 // invalid x509 for getting public key
 @openssl_pkey_get_public($private_key_file);
-expect_openssl_errors('openssl_pkey_get_public', [$err_pem_no_start_line]);
+expect_openssl_errors('openssl_pkey_get_public', array($err_pem_no_start_line));
 // private encrypt with unknown padding
 @openssl_private_encrypt("data", $crypted, $private_key_file, 1000);
-expect_openssl_errors('openssl_private_encrypt', ['04066076']);
+expect_openssl_errors('openssl_private_encrypt', array('04066076'));
 // private decrypt with failed padding check
 @openssl_private_decrypt("data", $crypted, $private_key_file);
-expect_openssl_errors('openssl_private_decrypt', ['04065072']);
+expect_openssl_errors('openssl_private_decrypt', array('04065072'));
 // public encrypt and decrypt with failed padding check and padding
 @openssl_public_encrypt("data", $crypted, $public_key_file, 1000);
 @openssl_public_decrypt("data", $crypted, $public_key_file);
-expect_openssl_errors('openssl_private_(en|de)crypt padding', [$err_pem_no_start_line, '04068076', '04067072']);
+expect_openssl_errors('openssl_private_(en|de)crypt padding', array($err_pem_no_start_line, '04068076', '04067072'));
 
 // X509
 echo "X509 errors\n";
 // file for x509 (file:///) fails when opennig (BIO_new_file)
 @openssl_x509_export_to_file("file://" . $invalid_file_for_read, $output_file);
-expect_openssl_errors('openssl_x509_export_to_file open', ['02001002']);
+expect_openssl_errors('openssl_x509_export_to_file open', array('02001002'));
 // file or str cert is not correct PEM - failing PEM_read_bio_X509 or PEM_ASN1_read_bio
 @openssl_x509_export_to_file($csr_file, $output_file);
-expect_openssl_errors('openssl_x509_export_to_file pem', [$err_pem_no_start_line]);
+expect_openssl_errors('openssl_x509_export_to_file pem', array($err_pem_no_start_line));
 // file to export cannot be written
 @openssl_x509_export_to_file($crt_file, $invalid_file_for_write);
-expect_openssl_errors('openssl_x509_export_to_file write', ['2006D002']);
+expect_openssl_errors('openssl_x509_export_to_file write', array('2006D002'));
 // checking purpose fails because there is no such purpose 1000
 @openssl_x509_checkpurpose($crt_file, 1000);
-expect_openssl_errors('openssl_x509_checkpurpose purpose', ['0B086079']);
+expect_openssl_errors('openssl_x509_checkpurpose purpose', array('0B086079'));
 
 // CSR
 echo "CSR errors\n";
 // file for csr (file:///) fails when opennig (BIO_new_file)
 @openssl_csr_get_subject("file://" . $invalid_file_for_read);
-expect_openssl_errors('openssl_csr_get_subject open', ['02001002', '2006D080']);
+expect_openssl_errors('openssl_csr_get_subject open', array('02001002', '2006D080'));
 // file or str csr is not correct PEM - failing PEM_read_bio_X509_REQ
 @openssl_csr_get_subject($crt_file);
-expect_openssl_errors('openssl_csr_get_subjec pem', [$err_pem_no_start_line]);
+expect_openssl_errors('openssl_csr_get_subjec pem', array($err_pem_no_start_line));
 
 // other possible cuases that are difficult to catch:
 // - ASN1_STRING_to_UTF8 fails in add_assoc_name_entry
@@ -152,7 +152,7 @@ expect_openssl_errors('openssl_csr_get_subjec pem', [$err_pem_no_start_line]);
 ?>
 --CLEAN--
 <?php
-$output_file =  __DIR__ . "/openssl_error_string_basic_output.tmp";
+$output_file =  getcwd() . "/openssl_error_string_basic_output.tmp";
 if (is_file($output_file)) {
 	unlink($output_file);
 }
