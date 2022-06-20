@@ -1,14 +1,12 @@
 --TEST--
 openssl_x509_read() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$fp = fopen(dirname(__FILE__) . "/cert.crt","r");
+$fp = fopen("cert.crt","r");
 $a = fread($fp,8192);
 fclose($fp);
 
-$b = "file://" . dirname(__FILE__) . "/cert.crt";
+$b = "file://cert.crt";
 $c = "invalid cert";
 $d = openssl_x509_read($a);
 $e = array();
