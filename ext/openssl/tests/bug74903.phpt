@@ -1,9 +1,5 @@
 --TEST--
 Bug #74903 openssl_pkcs7_encrypt() uses different EOL than before
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip");
-?>
 --FILE--
 <?php
 
@@ -65,7 +61,7 @@ $tmpFileIn = tempnam(sys_get_temp_dir(), 'test');
 $tmpFileOut = tempnam(sys_get_temp_dir(), 'test');
 file_put_contents($tmpFileIn, $envelopeData);
 
-openssl_pkcs7_encrypt($tmpFileIn, $tmpFileOut, [$cert], array(), PKCS7_BINARY, OPENSSL_CIPHER_AES_128_CBC);
+openssl_pkcs7_encrypt($tmpFileIn, $tmpFileOut, array($cert), array(), PKCS7_BINARY, OPENSSL_CIPHER_AES_128_CBC);
 
 $result = file_get_contents($tmpFileOut);
 var_dump(strpos($result, "\r\n") === false); // behaviour before 7.2
