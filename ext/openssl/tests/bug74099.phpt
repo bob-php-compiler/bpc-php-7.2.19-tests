@@ -1,9 +1,5 @@
 --TEST--
 Bug #74099 Memory leak with openssl_encrypt()
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip");
-?>
 --FILE--
 <?php
 $aad = random_bytes(32);
@@ -13,7 +9,7 @@ $key = random_bytes(32);
 $plaintext = '';
 $tag = null;
 
-$ciphertext = openssl_encrypt($plaintext, 'aes-256-gcm', $key, \OPENSSL_RAW_DATA, $iv, $tag, $aad);
+$ciphertext = openssl_encrypt($plaintext, 'aes-256-gcm', $key, OPENSSL_RAW_DATA, $iv, $tag, $aad);
 var_dump($ciphertext);
 ?>
 --EXPECTF--
