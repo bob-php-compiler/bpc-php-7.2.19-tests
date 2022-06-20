@@ -2,8 +2,7 @@
 Request #70438: Add IV parameter for openssl_seal and openssl_open
 --SKIPIF--
 <?php
-if (!extension_loaded("openssl")) print "skip";
-if (!in_array('AES-128-CBC', openssl_get_cipher_methods(true))) {
+if (!in_array('aes-128-cbc', openssl_get_cipher_methods(true))) {
     print "skip";
 }
 ?>
@@ -11,8 +10,8 @@ if (!in_array('AES-128-CBC', openssl_get_cipher_methods(true))) {
 <?php
 $data = "openssl_seal() test";
 $cipher = 'AES-128-CBC';
-$pub_key = "file://" . dirname(__FILE__) . "/public.key";
-$priv_key = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
+$pub_key = "file://public.key";
+$priv_key = "file://private_rsa_1024.key";
 
 openssl_seal($data, $sealed, $ekeys, array($pub_key, $pub_key), $cipher);
 openssl_seal($data, $sealed, $ekeys, array($pub_key, $pub_key), 'sparkles', $iv);
