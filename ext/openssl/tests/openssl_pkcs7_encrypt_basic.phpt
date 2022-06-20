@@ -1,10 +1,8 @@
 --TEST--
 openssl_pkcs7_encrypt() tests
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
 --FILE--
 <?php
-$infile = dirname(__FILE__) . "/cert.crt";
+$infile = "cert.crt";
 $outfile = tempnam(sys_get_temp_dir(), "ssl");
 if ($outfile === false)
     die("failed to get a temporary filename!");
@@ -12,8 +10,8 @@ $outfile2 = tempnam(sys_get_temp_dir(), "ssl");
 if ($outfile2 === false)
     die("failed to get a temporary filename!");
 
-$single_cert = "file://" . dirname(__FILE__) . "/cert.crt";
-$privkey = "file://" . dirname(__FILE__) . "/private_rsa_1024.key";
+$single_cert = "file://cert.crt";
+$privkey = "file://private_rsa_1024.key";
 $multi_certs = array($single_cert, $single_cert);
 $assoc_headers = array("To" => "test@test", "Subject" => "testing openssl_pkcs7_encrypt()");
 $headers = array("test@test", "testing openssl_pkcs7_encrypt()");
@@ -53,7 +51,7 @@ bool(true)
 bool(true)
 
 Warning: openssl_pkcs7_encrypt() expects parameter 4 to be array, string given in %s on line %d
-bool(false)
+NULL
 bool(false)
 bool(false)
 bool(false)
@@ -61,7 +59,7 @@ bool(false)
 bool(false)
 
 Warning: openssl_pkcs7_encrypt() expects parameter 4 to be array, string given in %s on line %d
-bool(false)
+NULL
 bool(true)
 bool(true)
 true
