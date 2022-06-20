@@ -2,14 +2,13 @@
 OpenSSL private key functions
 --SKIPIF--
 <?php
-if (!extension_loaded("openssl")) die("skip");
 if (!@openssl_pkey_new()) die("skip cannot create private key");
 ?>
 --FILE--
 <?php
 echo "Creating private key\n";
 
-$conf = array('config' => __DIR__ . DIRECTORY_SEPARATOR . 'openssl.cnf');
+$conf = array('config' => 'openssl.cnf');
 $privkey = openssl_pkey_new($conf);
 
 if ($privkey === false) {
@@ -17,7 +16,7 @@ if ($privkey === false) {
 }
 
 $passphrase = "banana";
-$key_file_name = __DIR__ . '/001-tmp.key';
+$key_file_name = '001-tmp.key';
 if ($key_file_name === false) {
     die("failed to get a temporary filename!");
 }
@@ -72,6 +71,6 @@ Load key manually and use string syntax
 OK!
 --CLEAN--
 <?php
-$key_file_name = __DIR__ . DIRECTORY_SEPARATOR . '001-tmp.key';
+$key_file_name = '001-tmp.key';
 @unlink($key_file_name);
 ?>
