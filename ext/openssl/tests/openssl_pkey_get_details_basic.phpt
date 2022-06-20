@@ -2,12 +2,11 @@
 openssl_pkey_get_details() with EC key
 --SKIPIF--
 <?php
-if (!extension_loaded("openssl")) die("skip");
 if (!defined("OPENSSL_KEYTYPE_EC")) die("skip no EC available");
 ?>
 --FILE--
 <?php
-$key = openssl_pkey_get_private("file://" . dirname(__FILE__) . "/private_ec.key");
+$key = openssl_pkey_get_private("file://private_ec.key");
 
 print_r(openssl_pkey_get_details($key));
 ?>

@@ -2,17 +2,15 @@
 openssl_pkey_export() with EC key
 --SKIPIF--
 <?php
-if (!extension_loaded("openssl"))
-    die("skip");
 if (!defined('OPENSSL_KEYTYPE_EC'))
     die("skip no EC available");
 ?>
 --FILE--
 <?php
-$key = openssl_pkey_get_private('file://' . dirname(__FILE__) . '/private_ec.key');
+$key = openssl_pkey_get_private('file://private_ec.key');
 var_dump($key);
 
-$config_arg = array("config" => __DIR__ . DIRECTORY_SEPARATOR . "openssl.cnf");
+$config_arg = array("config" => "openssl.cnf");
 
 var_dump(openssl_pkey_export($key, $output, NULL, $config_arg));
 echo $output;
@@ -28,7 +26,7 @@ $details = openssl_pkey_get_details(openssl_pkey_get_private($output, 'passphras
 var_dump(OPENSSL_KEYTYPE_EC === $details['type']);
 
 // Read public key
-$pKey = openssl_pkey_get_public('file://' . dirname(__FILE__) . '/public_ec.key');
+$pKey = openssl_pkey_get_public('file://public_ec.key');
 var_dump($pKey);
 // The details are the same for a public or private key, expect the private key parameter 'd
 $detailsPKey = openssl_pkey_get_details($pKey);
