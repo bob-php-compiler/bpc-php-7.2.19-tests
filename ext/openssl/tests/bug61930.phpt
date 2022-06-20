@@ -1,12 +1,8 @@
 --TEST--
 Bug #61930: openssl corrupts ssl key resource when using openssl_get_publickey()
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip");
-?>
 --FILE--
 <?php
-$cert = file_get_contents(__DIR__.'/cert.crt');
+$cert = file_get_contents('cert.crt');
 
 $data = <<<DATA
 Please verify me

@@ -2,12 +2,11 @@
 Bug #64802: openssl_x509_parse fails to parse subject properly in some cases
 --SKIPIF--
 <?php
-if (!extension_loaded("openssl")) die("skip");
 if (!defined('OPENSSL_KEYTYPE_EC')) die("skip no EC available");
 ?>
 --FILE--
 <?php
-$cert = file_get_contents(__DIR__.'/bug64802.pem');
+$cert = file_get_contents('bug64802.pem');
 $r = openssl_x509_parse($cert,$use_short_names=false);
 var_dump($r['subject']['commonName']);
 ?>
