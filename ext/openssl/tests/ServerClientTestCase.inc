@@ -1,8 +1,29 @@
 <?php
 
-const WORKER_ARGV_VALUE = 'RUN_WORKER';
+/**
+使用方法:
 
-const WORKER_DEFAULT_NAME = 'server';
+<?php
+    define('__SELF_BINARY__', './TEST-BINARY'); // @see spawnWorkerProcess
+
+    include 'ServerClientTestCase-constants.inc'; // function signatures before global code
+    include 'ServerClientTestCase.inc';
+
+    if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
+        ServerClientTestCase::getInstance(true)->runWorker();
+    } else {
+        ServerClientTestCase::getInstance()->run('master.inc', 'worker.inc');
+    }
+?>
+
+运行逻辑:
+
+    1. 运行 ./TEST-BINARY, 由于没有 $argv[1], 所以 run('master.inc', 'worker.inc')
+    2. run() 调用 spawnWorkerProcess() 运行 ./TEST-BINARY WORKER_ARGV_VALUE, 并传递 worker.inc
+    3. ./TEST-BINARY WORKER_ARGV_VALUE 得到 ./TEST-BINARY 传递的 worker.inc, include运行
+    4. run() 接着 include master.inc 运行
+    5. 到此 worker.inc 和 master.inc 都运行起来了,两者如果需要通信,可以使用 phpt_notify(), 如果需要同步,可以使用 phpt_wait()
+*/
 
 function phpt_notify($worker = WORKER_DEFAULT_NAME)
 {
@@ -14,18 +35,6 @@ function phpt_wait($worker = WORKER_DEFAULT_NAME, $timeout = null)
     ServerClientTestCase::getInstance()->wait($worker, $timeout);
 }
 
-function phpt_has_sslv3() {
-    static $result = null;
-    if (!is_null($result)) {
-        return $result;
-    }
-    $server = @stream_socket_server('sslv3://127.0.0.1:10013');
-    if ($result = !!$server) {
-        fclose($server);
-    }
-    return $result;
-}
-
 /**
  * This is a singleton to let the wait/notify functions work
  * I know it's horrible, but it's a means to an end
@@ -34,11 +43,11 @@ class ServerClientTestCase
 {
     private $isWorker = false;
 
-    private $workerHandle = [];
+    private $workerHandle = array();
 
-    private $workerStdIn = [];
+    private $workerStdIn = array();
 
-    private $workerStdOut = [];
+    private $workerStdOut = array();
 
     private static $instance;
 
@@ -60,34 +69,21 @@ class ServerClientTestCase
         $this->isWorker = $isWorker;
     }
 
-    private function spawnWorkerProcess($worker, $code)
+    private function spawnWorkerProcess($worker, $inc)
     {
-        if (defined("PHP_WINDOWS_VERSION_MAJOR")) {
-            $ini = php_ini_loaded_file();
-            $cmd = sprintf(
-                '%s %s "%s" %s',
-                PHP_BINARY, $ini ? "-n -c $ini" : "",
-                __FILE__,
-                WORKER_ARGV_VALUE
-            );
-        } else {
-            $cmd = sprintf(
-                '%s "%s" %s %s',
-                PHP_BINARY,
-                __FILE__,
-                WORKER_ARGV_VALUE,
-                $worker
-            );
-        }
         $this->workerHandle[$worker] = proc_open(
-            $cmd,
-            [['pipe', 'r'], ['pipe', 'w'], STDERR],
+            __SELF_BINARY__ . " " . WORKER_ARGV_VALUE,
+            array(
+                array('pipe', 'r'),
+                array('pipe', 'w'),
+                STDERR
+            ),
             $pipes
         );
         $this->workerStdIn[$worker] = $pipes[0];
         $this->workerStdOut[$worker] = $pipes[1];
 
-        fwrite($this->workerStdIn[$worker], $code . "\n---\n");
+        fwrite($this->workerStdIn[$worker], $inc . "\n");
     }
 
     private function cleanupWorkerProcess($worker)
@@ -97,38 +93,22 @@ class ServerClientTestCase
         proc_close($this->workerHandle[$worker]);
     }
 
-    private function stripPhpTagsFromCode($code)
-    {
-        return preg_replace('/^\s*<\?(?:php)?|\?>\s*$/i', '', $code);
-    }
-
     public function runWorker()
     {
-        $code = '';
-
-        while (1) {
-            $line = fgets(STDIN);
-
-            if (trim($line) === "---") {
-                break;
-            }
-
-            $code .= $line;
-        }
-
-        eval($code);
+        $inc = trim(fgets(STDIN));
+        include $inc;
     }
 
-    public function run($masterCode, $workerCode)
+    public function run($masterInc, $workerInc)
     {
-        if (!is_array($workerCode)) {
-            $workerCode = [WORKER_DEFAULT_NAME => $workerCode];
+        if (!is_array($workerInc)) {
+            $workerInc = array(WORKER_DEFAULT_NAME => $workerInc);
         }
-        foreach ($workerCode as $worker => $code) {
-            $this->spawnWorkerProcess($worker, $this->stripPhpTagsFromCode($code));
+        foreach ($workerInc as $worker => $inc) {
+            $this->spawnWorkerProcess($worker, $inc);
         }
-        eval($this->stripPhpTagsFromCode($masterCode));
-        foreach ($workerCode as $worker => $code) {
+        include $masterInc;
+        foreach ($workerInc as $worker => $inc) {
             $this->cleanupWorkerProcess($worker);
         }
     }
@@ -142,7 +122,7 @@ class ServerClientTestCase
         }
 
         stream_set_blocking($handle, false);
-        $read = [$handle];
+        $read = array($handle);
         $result = stream_select($read, $write, $except, $timeout);
         if (!$result) {
             return false;
@@ -155,10 +135,8 @@ class ServerClientTestCase
 
     public function notify($worker)
     {
-        fwrite($this->isWorker ? STDOUT : $this->workerStdIn[$worker], "\n");
+        $fp = $this->isWorker ? STDOUT : $this->workerStdIn[$worker];
+        fwrite($fp, "\n");
+        fflush($fp);
     }
-}
-
-if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
-    ServerClientTestCase::getInstance(true)->runWorker();
 }

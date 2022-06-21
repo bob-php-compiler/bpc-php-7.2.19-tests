@@ -1,61 +1,25 @@
 --TEST--
 tls stream wrapper
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-if (!function_exists("proc_open")) die("skip no proc_open");
-?>
+--ARGS--
+--bpc-include-file ext/openssl/tests/tls_wrapper_server.inc --bpc-include-file ext/openssl/tests/tls_wrapper_client.inc --bpc-include-file ext/openssl/tests/ServerClientTestCase-constants.inc --bpc-include-file ext/openssl/tests/ServerClientTestCase.inc \
 --FILE--
 <?php
-$serverCode = <<<'CODE'
-    $flags = STREAM_SERVER_BIND|STREAM_SERVER_LISTEN;
-    $ctx = stream_context_create(['ssl' => [
-        'local_cert' => __DIR__ . '/streams_crypto_method.pem',
-    ]]);
 
-    $server = stream_socket_server('tls://127.0.0.1:64321', $errno, $errstr, $flags, $ctx);
-    phpt_notify();
+define('__SELF_BINARY__', './tls_wrapper');
 
-    for ($i = 0; $i < (phpt_has_sslv3() ? 6 : 5); $i++) {
-        @stream_socket_accept($server, 3);
-    }
-CODE;
-
-$clientCode = <<<'CODE'
-    $flags = STREAM_CLIENT_CONNECT;
-    $ctx = stream_context_create(['ssl' => [
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-    ]]);
-
-    phpt_wait();
-
-    $client = stream_socket_client("tlsv1.0://127.0.0.1:64321", $errno, $errstr, 3, $flags, $ctx);
-    var_dump($client);
-
-    $client = @stream_socket_client("sslv3://127.0.0.1:64321", $errno, $errstr, 3, $flags, $ctx);
-    var_dump($client);
-
-    $client = @stream_socket_client("tlsv1.1://127.0.0.1:64321", $errno, $errstr, 3, $flags, $ctx);
-    var_dump($client);
-
-    $client = @stream_socket_client("tlsv1.2://127.0.0.1:64321", $errno, $errstr, 3, $flags, $ctx);
-    var_dump($client);
-
-    $client = @stream_socket_client("ssl://127.0.0.1:64321", $errno, $errstr, 3, $flags, $ctx);
-    var_dump($client);
-
-    $client = @stream_socket_client("tls://127.0.0.1:64321", $errno, $errstr, 3, $flags, $ctx);
-    var_dump($client);
-CODE;
-
+include 'ServerClientTestCase-constants.inc';
 include 'ServerClientTestCase.inc';
-ServerClientTestCase::getInstance()->run($clientCode, $serverCode);
+
+if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
+    ServerClientTestCase::getInstance(true)->runWorker();
+} else {
+    ServerClientTestCase::getInstance()->run('tls_wrapper_client.inc', 'tls_wrapper_server.inc');
+}
 ?>
 --EXPECTF--
 resource(%d) of type (stream)
-bool(false)
-resource(%d) of type (stream)
-resource(%d) of type (stream)
-resource(%d) of type (stream)
-resource(%d) of type (stream)
+string(6) "hello
+"
+resource(10) of type (stream)
+string(%d) "hello
+"

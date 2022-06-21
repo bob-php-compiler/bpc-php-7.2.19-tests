@@ -813,6 +813,17 @@
         file_get_contents("https?://xxx")
         stream_socket_client()
         stream_socket_server()
+    
+    Socket context options:
+
+        tcp_nodelay
+        backlog
+
+    SSL context options
+
+        tls_validation_flags @see GTlsCertificateFlags
+        local_cert
+        local_pk
 
 20. ftell()
 
@@ -951,6 +962,12 @@
 
     - not support INFO_CREDITS INFO_LICENSE
     - details info may different
+
+47. ssl connection not fully established util send or receive data on the connection
+
+    @see g_tls_connection_handshake()
+
+48. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
 
 ## ext/date
 
