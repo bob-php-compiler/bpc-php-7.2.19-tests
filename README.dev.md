@@ -823,6 +823,7 @@
 
         tls_validation_flags @see GTlsCertificateFlags
         peer_name
+        cafile
         local_cert
         local_pk
 
