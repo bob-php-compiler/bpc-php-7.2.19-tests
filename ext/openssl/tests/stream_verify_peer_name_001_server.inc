@@ -9,4 +9,8 @@ $serverCtx = stream_context_create(array('ssl' => array(
 $server = stream_socket_server($serverUri, $errno, $errstr, $serverFlags, $serverCtx);
 phpt_notify();
 
-@stream_socket_accept($server, 1);
+$fp = stream_socket_accept($server, 1);
+if ($fp) {
+    fwrite($fp, "hello\n");
+    fclose($fp);
+}

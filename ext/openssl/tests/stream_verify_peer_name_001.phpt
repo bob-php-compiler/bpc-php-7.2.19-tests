@@ -28,3 +28,5 @@ if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
 ?>
 --EXPECTF--
 resource(%d) of type (stream)
+string(6) "hello
+"

@@ -11,3 +11,5 @@ $clientCtx = stream_context_create(array('ssl' => array(
 phpt_wait();
 $client = stream_socket_client($serverUri, $errno, $errstr, 1, $clientFlags, $clientCtx);
 var_dump($client);
+var_dump(fgets($client));
+fclose($client);
