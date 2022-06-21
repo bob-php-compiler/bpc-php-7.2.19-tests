@@ -2,7 +2,7 @@
 
 class CertificateGenerator
 {
-    const CONFIG = __DIR__. DIRECTORY_SEPARATOR . 'openssl.cnf';
+    const CONFIG = 'openssl.cnf';
 
     /** @var resource */
     private $ca;
@@ -36,32 +36,32 @@ class CertificateGenerator
             $keyLength = 2048;
         }
 
-        return openssl_pkey_new([
+        return openssl_pkey_new(array(
             'private_key_bits' => $keyLength,
             'private_key_type' => OPENSSL_KEYTYPE_RSA,
             'encrypt_key' => false,
-        ]);
+        ));
     }
 
     private function generateCa()
     {
         $this->caKey = self::generateKey();
-        $dn = [
+        $dn = array(
             'countryName' => 'GB',
             'stateOrProvinceName' => 'Berkshire',
             'localityName' => 'Newbury',
             'organizationName' => 'Example Certificate Authority',
             'commonName' => 'CA for PHP Tests'
-        ];
+        );
 
         $this->ca = openssl_csr_sign(
             openssl_csr_new(
                 $dn,
                 $this->caKey,
-                [
+                array(
                     'x509_extensions' => 'v3_ca',
                     'config' => self::CONFIG,
-                ]
+                )
             ),
             null,
             $this->caKey,
@@ -84,17 +84,17 @@ class CertificateGenerator
 
     public function saveNewCertAsFileWithKey($commonNameForCert, $file, $keyLength = null)
     {
-        $dn = [
+        $dn = array(
             'countryName' => 'BY',
             'stateOrProvinceName' => 'Minsk',
             'localityName' => 'Minsk',
             'organizationName' => 'Example Org',
             'commonName' => $commonNameForCert,
-        ];
+        );
 
         $this->lastKey = self::generateKey($keyLength);
         $this->lastCert = openssl_csr_sign(
-            openssl_csr_new($dn, $this->lastKey, ['req_extensions' => 'v3_req']),
+            openssl_csr_new($dn, $this->lastKey, array('req_extensions' => 'v3_req')),
             $this->ca,
             $this->caKey,
             2

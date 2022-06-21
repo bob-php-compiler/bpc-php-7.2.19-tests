@@ -822,6 +822,7 @@
     SSL context options
 
         tls_validation_flags @see GTlsCertificateFlags
+        peer_name
         local_cert
         local_pk
 
@@ -963,11 +964,7 @@
     - not support INFO_CREDITS INFO_LICENSE
     - details info may different
 
-47. ssl connection not fully established util send or receive data on the connection
-
-    @see g_tls_connection_handshake()
-
-48. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
+47. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
 
 ## ext/date
 
