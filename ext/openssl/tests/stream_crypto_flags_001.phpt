@@ -1,10 +1,7 @@
 --TEST--
 Basic bitwise stream crypto context flag assignment
 --SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-if (!function_exists("proc_open")) die("skip no proc_open");
-?>
+skip limited context parameter support
 --FILE--
 <?php
 $certFile = __DIR__ . DIRECTORY_SEPARATOR . 'stream_crypto_flags_001.pem.tmp';
