@@ -13,7 +13,6 @@ phpt_notify();
 for ($i = 0; $i < 2; $i++) {
     $fp = @stream_socket_accept($server, 3);
     if ($fp) {
-        // ssl connection not fully established util send or receive data on the connection
         fwrite($fp, "hello\n");
         fclose($fp);
     }
