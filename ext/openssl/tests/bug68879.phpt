@@ -1,10 +1,7 @@
 --TEST--
 Bug #68879: Match IP address fields in subjectAltName checks
 --SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-if (!function_exists("proc_open")) die("skip no proc_open");
-?>
+skip limited context parameter support
 --FILE--
 <?php
 $serverCode = <<<'CODE'
