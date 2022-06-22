@@ -1,10 +1,7 @@
 --TEST--
 Bug #48182: ssl handshake fails during asynchronous socket connection
 --SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-if (!function_exists("proc_open")) die("skip no proc_open");
-?>
+skip stream_socket_client() not support STREAM_CLIENT_ASYNC_CONNECT
 --FILE--
 <?php
 $certFile = __DIR__ . DIRECTORY_SEPARATOR . 'bug48182.pem.tmp';
