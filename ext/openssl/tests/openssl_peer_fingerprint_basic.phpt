@@ -1,10 +1,7 @@
 --TEST--
 Testing peer fingerprint on connection
 --SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-if (!function_exists("proc_open")) die("skip no proc_open");
-?>
+skip limited context parameter support
 --FILE--
 <?php
 $certFile = __DIR__ . DIRECTORY_SEPARATOR . 'openssl_peer_fingerprint_basic.pem.tmp';
