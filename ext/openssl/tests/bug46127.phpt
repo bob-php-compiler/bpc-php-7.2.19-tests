@@ -1,54 +1,29 @@
 --TEST--
 #46127 php_openssl_tcp_sockop_accept forgets to set context on accepted stream
---SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-if (!function_exists("proc_open")) die("skip no proc_open");
-?>
+--ARGS--
+--bpc-include-file ext/openssl/tests/CertificateGenerator.inc --bpc-include-file ext/openssl/tests/bug46127_client.inc --bpc-include-file ext/openssl/tests/bug46127_server.inc --bpc-include-file ext/openssl/tests/ServerClientTestCase-constants.inc --bpc-include-file ext/openssl/tests/ServerClientTestCase.inc \
 --FILE--
 <?php
-$certFile = __DIR__ . DIRECTORY_SEPARATOR . 'bug46127.pem.tmp';
-
-$serverCode = <<<'CODE'
-    $serverUri = "ssl://127.0.0.1:64321";
-    $serverFlags = STREAM_SERVER_BIND | STREAM_SERVER_LISTEN;
-    $serverCtx = stream_context_create(['ssl' => [
-        'local_cert' => '%s',
-    ]]);
-
-    $sock = stream_socket_server($serverUri, $errno, $errstr, $serverFlags, $serverCtx);
-    phpt_notify();
-
-    $link = stream_socket_accept($sock);
-    fwrite($link, "Sending bug 46127\n");
-CODE;
-$serverCode = sprintf($serverCode, $certFile);
-
-$clientCode = <<<'CODE'
-    $serverUri = "ssl://127.0.0.1:64321";
-    $clientFlags = STREAM_CLIENT_CONNECT;
-
-    $clientCtx = stream_context_create(['ssl' => [
-        'verify_peer' => false,
-        'verify_peer_name' => false
-    ]]);
-
-    phpt_wait();
-    $sock = stream_socket_client($serverUri, $errno, $errstr, 2, $clientFlags, $clientCtx);
-
-    echo fgets($sock);
-CODE;
+$certFile = 'bug46127.pem.tmp';
 
 include 'CertificateGenerator.inc';
 $certificateGenerator = new CertificateGenerator();
 $certificateGenerator->saveNewCertAsFileWithKey('bug46127', $certFile);
 
+define('__SELF_BINARY__', './bug46127');
+
+include 'ServerClientTestCase-constants.inc';
 include 'ServerClientTestCase.inc';
-ServerClientTestCase::getInstance()->run($clientCode, $serverCode);
+
+if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
+    ServerClientTestCase::getInstance(true)->runWorker();
+} else {
+    ServerClientTestCase::getInstance()->run('bug46127_client.inc', 'bug46127_server.inc');
+}
 ?>
 --CLEAN--
 <?php
-@unlink(__DIR__ . DIRECTORY_SEPARATOR . 'bug46127.pem.tmp');
+@unlink('bug46127.pem.tmp');
 ?>
 --EXPECT--
 Sending bug 46127
