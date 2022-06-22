@@ -968,6 +968,16 @@
 
 47. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
 
+48. stream_socket_enable_crypto()
+
+    parameter 4 different:
+    php: resouce session_stream = null
+    bpc: array options = null
+    
+    parameter 3 crypto_method currently only support:
+    STREAM_CRYPTO_METHOD_TLS_CLIENT
+    STREAM_CRYPTO_METHOD_TLS_SERVER
+
 ## ext/date
 
 1. ini_set date.timezone warning message
