@@ -1,10 +1,7 @@
 --TEST--
 Capture SSL session meta array in stream context
 --SKIPIF--
-<?php
-if (!extension_loaded("openssl")) die("skip openssl not loaded");
-if (!function_exists("proc_open")) die("skip no proc_open");
-?>
+skip limited context parameter support
 --FILE--
 <?php
 $certFile = __DIR__ . DIRECTORY_SEPARATOR . 'session_meta_capture.pem.tmp';
