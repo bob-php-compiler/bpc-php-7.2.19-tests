@@ -16,6 +16,7 @@
 - [x] ext/pdo
 - [x] ext/pdo_mysql
 - [ ] ext/pdo_sqlite (TODO extended PDO methods, sqliteCreateFunction/sqliteCreateAggregate/sqliteCreateCollation)
+- [x] ext/openssl
 - [x] bpc
 
 # Requirements
