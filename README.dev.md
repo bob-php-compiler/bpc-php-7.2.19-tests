@@ -978,6 +978,10 @@
     STREAM_CRYPTO_METHOD_TLS_CLIENT
     STREAM_CRYPTO_METHOD_TLS_SERVER
 
+49. file_get_contents()
+
+    bpc implements file_get_contents("https?://") by curl extension, so error message may different
+
 ## ext/date
 
 1. ini_set date.timezone warning message
