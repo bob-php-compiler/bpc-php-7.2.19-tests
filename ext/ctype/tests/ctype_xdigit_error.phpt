@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_xdigit() function : error conditions - Incorrect number of args
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_xdigit(mixed $c)

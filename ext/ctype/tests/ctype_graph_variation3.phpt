@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_graph() function : usage variations - different strings
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_graph(mixed $c)

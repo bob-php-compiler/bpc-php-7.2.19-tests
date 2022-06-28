@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_space() function : usage variations - different data types as $c argument
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_space(mixed $c)
@@ -31,7 +29,7 @@ class classA
 
 // heredoc string
 $heredoc = <<<EOT
- 
+
 EOT;
 
 // get a resource variable

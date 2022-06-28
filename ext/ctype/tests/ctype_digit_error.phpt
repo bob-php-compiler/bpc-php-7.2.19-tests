@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_digit() function : error conditions - incorrect number of arguments
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_digit(mixed $c)

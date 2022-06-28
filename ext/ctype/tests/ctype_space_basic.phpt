@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_space() function : basic functionality
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_space(mixed $c)

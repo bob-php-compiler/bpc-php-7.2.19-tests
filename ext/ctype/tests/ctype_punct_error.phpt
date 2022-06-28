@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_punct() function : error conditions - incorrect number of args
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_punct(mixed $c)

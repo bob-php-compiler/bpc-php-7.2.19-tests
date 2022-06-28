@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_cntrl() function : usage variations - Octal and hexadecimal values
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_cntrl(mixed $c)

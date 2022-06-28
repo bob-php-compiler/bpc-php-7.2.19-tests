@@ -1,7 +1,5 @@
 --TEST--
 Test ctype_lower() function : usage variations - different data types as $c arg
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 /* Prototype  : bool ctype_lower(mixed $c)
