@@ -13,13 +13,14 @@ Test ctype_upper() function : error conditions - incorrect number of args
 
 echo "*** Testing ctype_upper() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing ctype_upper() function with Zero arguments --\n";
-var_dump( ctype_upper() );
-
+//Test ctype_upper with one more than the expected number of arguments
+echo "\n-- Testing ctype_upper() function with more than expected no. of arguments --\n";
+$c = 1;
+$extra_arg = 10;
+var_dump( ctype_upper($c, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ctype_upper(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ctype_upper(): 1 at most, 2 provided in %s on line %d
  -- compile-error

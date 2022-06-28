@@ -13,13 +13,14 @@ Test ctype_lower() function : error conditions - incorrect number of args
 
 echo "*** Testing ctype_lower() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing ctype_lower() function with Zero arguments --\n";
-var_dump( ctype_lower() );
-
+//Test ctype_lower with one more than the expected number of arguments
+echo "\n-- Testing ctype_lower() function with more than expected no. of arguments --\n";
+$c = 1;
+$extra_arg = 10;
+var_dump( ctype_lower($c, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ctype_lower(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ctype_lower(): 1 at most, 2 provided in %s on line %d
  -- compile-error

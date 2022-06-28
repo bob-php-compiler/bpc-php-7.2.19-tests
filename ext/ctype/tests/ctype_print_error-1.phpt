@@ -13,13 +13,14 @@ Test ctype_print() function : error conditions - incorrect number of args
 
 echo "*** Testing ctype_print() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing ctype_print() function with Zero arguments --\n";
-var_dump( ctype_print() );
-
+//Test ctype_print with one more than the expected number of arguments
+echo "\n-- Testing ctype_print() function with more than expected no. of arguments --\n";
+$c = 1;
+$extra_arg = 10;
+var_dump( ctype_print($c, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ctype_print(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ctype_print(): 1 at most, 2 provided in %s on line %d
  -- compile-error

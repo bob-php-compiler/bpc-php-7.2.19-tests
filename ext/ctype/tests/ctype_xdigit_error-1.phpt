@@ -13,13 +13,14 @@ Test ctype_xdigit() function : error conditions - Incorrect number of args
 
 echo "*** Testing ctype_xdigit() : error conditions ***\n";
 
-// Zero arguments
-echo "\n-- Testing ctype_xdigit() function with Zero arguments --\n";
-var_dump( ctype_xdigit() );
-
+//Test ctype_xdigit with one more than the expected number of arguments
+echo "\n-- Testing ctype_xdigit() function with more than expected no. of arguments --\n";
+$c = 1;
+$extra_arg = 10;
+var_dump( ctype_xdigit($c, $extra_arg) );
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ctype_xdigit(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ctype_xdigit(): 1 at most, 2 provided in %s on line %d
  -- compile-error

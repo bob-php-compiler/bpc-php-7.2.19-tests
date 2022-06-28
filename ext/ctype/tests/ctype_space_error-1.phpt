@@ -15,14 +15,16 @@ echo "*** Testing ctype_space() : error conditions ***\n";
 
 $orig = setlocale(LC_CTYPE, "C");
 
-// Zero arguments
-echo "\n-- Testing ctype_space() function with Zero arguments --\n";
-var_dump( ctype_space() );
+//Test ctype_space with one more than the expected number of arguments
+echo "\n-- Testing ctype_space() function with more than expected no. of arguments --\n";
+$c = " ";
+$extra_arg = 10;
+var_dump( ctype_space($c, $extra_arg) );
 
 setlocale(LC_CTYPE, $orig);
 ?>
 ===DONE===
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function ctype_space(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function ctype_space(): 1 at most, 2 provided in %s on line %d
  -- compile-error
