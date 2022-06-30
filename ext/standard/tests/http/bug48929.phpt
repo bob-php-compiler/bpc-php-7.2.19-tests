@@ -1,11 +1,12 @@
 --TEST--
 Bug #48929 (duplicate \r\n sent after last header line)
---INI--
-allow_url_fopen=1
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342'); ?>
 --FILE--
 <?php
+ob_implicit_flush();
 require 'server.inc';
 
 function do_test($context_options) {
@@ -20,7 +21,7 @@ function do_test($context_options) {
 
 	foreach($responses as $r) {
 
-		$fd = fopen('http://127.0.0.1:12342/', 'rb', false, $context);
+		file_get_contents('http://127.0.0.1:12342/', false, $context);
 
 		fseek($output, 0, SEEK_SET);
 		var_dump(stream_get_contents($output));
@@ -43,18 +44,19 @@ do_test(array('header' => "X-Foo: bar\r\nContent-Type: text/plain", 'method' => 
 -- Test: requests with 'header' as array --
 string(%d) "POST / HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
-Content-Length: 4
+Accept: */*
 X-Foo: bar
 Content-Type: text/plain
+Content-Length: 4
 
 ohai"
 -- Test: requests with 'header' as string --
 string(%d) "POST / HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
-Content-Length: 4
+Accept: */*
 X-Foo: bar
 Content-Type: text/plain
+Content-Length: 4
+Content-Type: application/x-www-form-urlencoded
 
 ohai"
