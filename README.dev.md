@@ -1129,3 +1129,7 @@
 ## ext/pcntl
 
 1. not support pcntl_async_signals()
+
+2. currently not support realtime signal
+
+    try bigloo `signal` procedure
