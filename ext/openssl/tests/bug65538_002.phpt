@@ -13,7 +13,7 @@ $clientCtx = stream_context_create(array('ssl' => array(
 var_dump(file_get_contents('https://github.com', false, $clientCtx));
 ?>
 --EXPECTF--
-Warning: file_get_contents(): error setting certificate verify locations:
+Warning: file_get_contents(https://github.com): error setting certificate verify locations:
   CAfile: http://www.nginx.org
   CApath: %s in %s on line %d
 bool(false)
