@@ -1,10 +1,9 @@
 --TEST--
 $http_reponse_header (no redirect)
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:22346'); ?>
---INI--
-allow_url_fopen=1
-allow_url_include=1
 --FILE--
 <?php
 require 'server.inc';
@@ -27,12 +26,5 @@ http_server_kill($pid);
 ==DONE==
 --EXPECT--
 string(4) "Body"
-array(3) {
-  [0]=>
-  string(15) "HTTP/1.0 200 Ok"
-  [1]=>
-  string(12) "Some: Header"
-  [2]=>
-  string(12) "Some: Header"
-}
+NULL
 ==DONE==

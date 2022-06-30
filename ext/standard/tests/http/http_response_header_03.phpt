@@ -1,10 +1,9 @@
 --TEST--
 $http_reponse_header (redirect + not found)
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:22348'); ?>
---INI--
-allow_url_fopen=1
-allow_url_include=1
 --FILE--
 <?php
 require 'server.inc';
@@ -28,18 +27,7 @@ http_server_kill($pid);
 ?>
 ==DONE==
 --EXPECTF--
-Warning: file_get_contents(http://127.0.0.1:22348/): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found%a
+Warning: file_get_contents(): The requested URL returned error: 404 Not Found in %a
 bool(false)
-array(5) {
-  [0]=>
-  string(18) "HTTP/1.0 302 Found"
-  [1]=>
-  string(12) "Some: Header"
-  [2]=>
-  string(42) "Location: http://127.0.0.1:22348/try-again"
-  [3]=>
-  string(22) "HTTP/1.0 404 Not Found"
-  [4]=>
-  string(12) "Some: Header"
-}
+NULL
 ==DONE==
