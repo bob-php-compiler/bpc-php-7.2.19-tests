@@ -27,7 +27,7 @@ http_server_kill($pid);
 ?>
 ==DONE==
 --EXPECTF--
-Warning: file_get_contents(): The requested URL returned error: 404 Not Found in %a
+Warning: file_get_contents(http://127.0.0.1:22348/): The requested URL returned error: 404 Not Found in %a
 bool(false)
 NULL
 ==DONE==
