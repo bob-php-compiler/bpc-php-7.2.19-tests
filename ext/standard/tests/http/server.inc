@@ -33,6 +33,8 @@ function http_server($socket_string, array $files, &$output = null) {
 	if ($pid == -1) {
 		die('could not fork');
 	} else if ($pid) {
+	    // BPC: 这里要fclose,不然$server要到程序结束才会close
+	    fclose($server);
 		return $pid;
 	}
 

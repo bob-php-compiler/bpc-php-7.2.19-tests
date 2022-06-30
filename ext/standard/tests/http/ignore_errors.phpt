@@ -1,11 +1,12 @@
 --TEST--
 http:// and ignore_errors
---INI--
-allow_url_fopen=1
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342'); ?>
 --FILE--
 <?php
+ob_implicit_flush();
 require 'server.inc';
 
 function do_test($context_options) {
@@ -21,15 +22,7 @@ function do_test($context_options) {
 
 	foreach($responses as $r) {
 
-		$fd = fopen('http://127.0.0.1:12342/foo/bar', 'rb', false, $context);
-		var_dump($fd);
-
-		if ($fd) {
-			$meta_data = stream_get_meta_data($fd);
-			var_dump($meta_data['wrapper_data']);
-
-			var_dump(stream_get_contents($fd));
-		}
+        var_dump(file_get_contents('http://127.0.0.1:12342/foo/bar', false, $context));
 
 		fseek($output, 0, SEEK_SET);
 		var_dump(stream_get_contents($output));
@@ -54,79 +47,43 @@ do_test(array('ignore_errors' => 1));
 ?>
 --EXPECTF--
 -- Test: requests without ignore_errors --
-resource(%d) of type (stream)
-array(2) {
-  [0]=>
-  string(15) "HTTP/1.0 200 Ok"
-  [1]=>
-  string(10) "X-Foo: bar"
-}
 string(1) "1"
 string(%d) "GET /foo/bar HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 "
 
-Warning: fopen(http://127.0.0.1:12342/foo/bar): failed to open stream: HTTP request failed! HTTP/1.0 404 Not found
- in %s on line %d
+Warning: file_get_contents(): The requested URL returned error: 404 Not found in %s on line %d
 bool(false)
 string(%d) "GET /foo/bar HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 "
 -- Test: requests with ignore_errors --
-resource(%d) of type (stream)
-array(2) {
-  [0]=>
-  string(15) "HTTP/1.0 200 Ok"
-  [1]=>
-  string(10) "X-Foo: bar"
-}
 string(1) "1"
 string(%d) "GET /foo/bar HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 "
-resource(%d) of type (stream)
-array(2) {
-  [0]=>
-  string(22) "HTTP/1.0 404 Not found"
-  [1]=>
-  string(10) "X-bar: baz"
-}
 string(1) "2"
 string(%d) "GET /foo/bar HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 "
 -- Test: requests with ignore_errors (2) --
-resource(%d) of type (stream)
-array(2) {
-  [0]=>
-  string(15) "HTTP/1.0 200 Ok"
-  [1]=>
-  string(10) "X-Foo: bar"
-}
 string(1) "1"
 string(%d) "GET /foo/bar HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 "
-resource(%d) of type (stream)
-array(2) {
-  [0]=>
-  string(22) "HTTP/1.0 404 Not found"
-  [1]=>
-  string(10) "X-bar: baz"
-}
 string(1) "2"
 string(%d) "GET /foo/bar HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 "
