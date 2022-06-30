@@ -980,7 +980,7 @@
 
 49. file_get_contents()
 
-    bpc implements file_get_contents("https?://") by curl extension, so error message may different
+    bpc implements file_get_contents("https?://") by curl extension
     currently not support $http_reponse_header
 
 ## ext/date
