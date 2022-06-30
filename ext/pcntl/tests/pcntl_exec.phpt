@@ -1,15 +1,13 @@
 --TEST--
 pcntl_exec()
---SKIPIF--
-<?php
-if (!extension_loaded("pcntl")) print "skip";
-if (!getenv("TEST_PHP_EXECUTABLE") || !is_executable(getenv("TEST_PHP_EXECUTABLE"))) die("skip TEST_PHP_EXECUTABLE not set");
-?>
 --FILE--
 <?php
+ob_implicit_flush();
 echo "ok\n";
-pcntl_exec(getenv("TEST_PHP_EXECUTABLE"), ['-n']);
+pcntl_exec(getenv("TEST_PHP_EXECUTABLE"), array('-n'));
 echo "nok\n";
 ?>
 --EXPECT--
+Error: No files to compile.
+Rerunning with -v[234] may provide more information.
 ok
