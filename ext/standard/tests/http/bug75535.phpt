@@ -1,9 +1,9 @@
 --TEST--
 Bug #75535: Inappropriately parsing HTTP response leads to PHP segment fault
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:22351'); ?>
---INI--
-allow_url_fopen=1
 --FILE--
 <?php
 require 'server.inc';
@@ -22,10 +22,5 @@ http_server_kill($pid);
 ==DONE==
 --EXPECT--
 string(0) ""
-array(2) {
-  [0]=>
-  string(15) "HTTP/1.0 200 Ok"
-  [1]=>
-  string(14) "Content-Length"
-}
+NULL
 ==DONE==
