@@ -1,12 +1,5 @@
 --TEST--
 pcntl: pcntl_sigprocmask(), pcntl_sigwaitinfo(), pcntl_sigtimedwait()
---SKIPIF--
-<?php
-	if (!extension_loaded('pcntl')) die('skip pcntl extension not available');
-	elseif (!extension_loaded('posix')) die('skip posix extension not available');
-	elseif (!function_exists('pcntl_sigwaitinfo') or !function_exists('pcntl_sigtimedwait')) die('skip required functionality is not available');
-	elseif (!defined('CLD_EXITED')) die('skip CLD_EXITED not defined');
-?>
 --FILE--
 <?php
 
@@ -46,7 +39,7 @@ if ($pid == -1) {
 	var_dump($siginfo['pid'] === $pid);
 	pcntl_waitpid($pid, $status);
 
-	set_error_handler(function($errno, $errstr) { echo "Error triggered\n"; }, E_WARNING);
+	set_error_handler(function($errno, $errstr) { echo "Error triggered\n"; });
 
 	echo "sigprocmask with invalid arguments\n";
 
