@@ -1125,3 +1125,7 @@
 ## ext/filter
 
 1. no ini filter.default filter.default_flags
+
+## ext/pcntl
+
+1. not support pcntl_async_signals()
