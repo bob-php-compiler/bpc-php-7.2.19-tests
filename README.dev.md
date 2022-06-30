@@ -377,6 +377,8 @@
 
     @see ext/session/tests/session_ini_set.phpt
 
+24. no ini from
+
 **syntax**
 
 1. not support GOTO
