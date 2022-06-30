@@ -1,14 +1,14 @@
 --TEST--
 Bug #69337 (Stream context leaks when http request fails)
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:22345'); ?>
---INI--
-allow_url_fopen=1
-allow_url_include=1
 --FILE--
 <?php
 require 'server.inc';
 
+/*
 function stream_notification_callback($notification_code, $severity, $message, $message_code, $bytes_transferred, $bytes_max)
 {
 	if($notification_code == STREAM_NOTIFY_REDIRECTED) {
@@ -17,9 +17,10 @@ function stream_notification_callback($notification_code, $severity, $message, $
        $GLOBALS['http_response_header'] = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\0\0\0\0";
     }
 }
+*/
 
 $ctx = stream_context_create();
-stream_context_set_params($ctx, array("notification" => "stream_notification_callback"));
+//stream_context_set_params($ctx, array("notification" => "stream_notification_callback"));
 
 $responses = array(
 	"data://text/plain,HTTP/1.0 302 Found\r\nLocation: http://127.0.0.1:22345/try-again\r\n\r\n",
@@ -35,6 +36,6 @@ var_dump($f);
 ?>
 ==DONE==
 --EXPECTF--
-Warning: file_get_contents(http://127.0.0.1:22345/): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found%ain %s on line %d
+Warning: file_get_contents(http://127.0.0.1:22345/): The requested URL returned error: 404 Not Found in %s on line %d
 bool(false)
 ==DONE==
