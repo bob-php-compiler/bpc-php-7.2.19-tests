@@ -1,7 +1,7 @@
 --TEST--
 Bug #67430 (http:// wrapper doesn't follow 308 redirects)
---INI--
-allow_url_fopen=1
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342'); ?>
 --FILE--
@@ -9,22 +9,22 @@ allow_url_fopen=1
 require 'server.inc';
 
 function do_test($follow) {
-  $options = [
-    'http' => [
+  $options = array(
+    'http' => array(
       'method' => 'POST',
       'follow_location' => $follow,
-    ],
-  ];
+    ),
+  );
 
   $ctx = stream_context_create($options);
 
-  $responses = [
+  $responses = array(
     "data://text/plain,HTTP/1.1 308\r\nLocation: /foo\r\n\r\n",
     "data://text/plain,HTTP/1.1 200\r\nConnection: close\r\n\r\n",
-  ];
+  );
   $pid = http_server('tcp://127.0.0.1:12342', $responses, $output);
 
-  $fd = fopen('http://127.0.0.1:12342/', 'rb', false, $ctx);
+  file_get_contents('http://127.0.0.1:12342/', false, $ctx);
   fseek($output, 0, SEEK_SET);
   echo stream_get_contents($output);
 
@@ -39,14 +39,14 @@ Done
 --EXPECT--
 POST / HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
-GET /foo HTTP/1.0
+POST /foo HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 POST / HTTP/1.0
 Host: 127.0.0.1:12342
-Connection: close
+Accept: */*
 
 Done
