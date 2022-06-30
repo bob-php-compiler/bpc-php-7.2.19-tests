@@ -1,13 +1,15 @@
 --TEST--
 Bug #47021 (SoapClient stumbles over WSDL delivered with "Transfer-Encoding: chunked")
---INI--
-allow_url_fopen=1
+--ARGS--
+--bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342'); ?>
 --FILE--
 <?php
+ob_implicit_flush();
 require 'server.inc';
 
+/*
 function stream_notification_callback($notification_code, $severity, $message, $message_code, $bytes_transferred, $bytes_max) {
 
     switch($notification_code) {
@@ -19,23 +21,24 @@ function stream_notification_callback($notification_code, $severity, $message, $
             break;
     }
 }
+*/
 
 function do_test($num_spaces, $leave_trailing_space=false) {
   // SOAPClient exhibits the bug because it forces HTTP/1.1,
   // whereas file_get_contents() uses HTTP/1.0 by default.
-  $options = [
-    'http' => [
+  $options = array(
+    'http' => array(
       'protocol_version' => '1.1',
       'header' => 'Connection: Close'
-    ],
-  ];
+    ),
+  );
 
   $ctx = stream_context_create($options);
-  stream_context_set_params($ctx, array("notification" => "stream_notification_callback"));
+  //stream_context_set_params($ctx, array("notification" => "stream_notification_callback"));
 
   $spaces = str_repeat(' ', $num_spaces);
   $trailing = ($leave_trailing_space ? ' ' : '');
-  $responses = [
+  $responses = array(
     "data://text/plain,HTTP/1.1 200 OK\r\n"
       . "Content-Type:{$spaces}text/plain{$trailing}\r\n"
       . "Transfer-Encoding:{$spaces}Chunked{$trailing}\r\n\r\n"
@@ -44,7 +47,7 @@ function do_test($num_spaces, $leave_trailing_space=false) {
       . "Content-Type\r\n" // Deliberately invalid header
       . "Content-Length:{$spaces}5{$trailing}\r\n\r\n"
       . "World"
-  ];
+  );
   $pid = http_server('tcp://127.0.0.1:12342', $responses);
 
   echo file_get_contents('http://127.0.0.1:12342/', false, $ctx);
@@ -71,22 +74,14 @@ echo "\n";
 
 ?>
 --EXPECT--
-Type='text/plain'
 Hello
-Size=5
 World
 
-Type='text/plain'
 Hello
-Size=5
 World
 
-Type='text/plain'
 Hello
-Size=5
 World
 
-Type='text/plain'
 Hello
-Size=5
 World
