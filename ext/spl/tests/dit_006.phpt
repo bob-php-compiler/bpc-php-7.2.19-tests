@@ -2,7 +2,7 @@
 SPL: DirectoryIterator and seek
 --FILE--
 <?php
-$di = new DirectoryIterator(__DIR__."/..");
+$di = new DirectoryIterator("..");
 $di->seek(2);
 
 $n = 0;
@@ -34,7 +34,7 @@ try {
     $p = 0;
     $di->seek($o+1);
     $p = 1;
-} catch (\OutOfBoundsException $ex) {
+} catch (OutOfBoundsException $ex) {
     echo $ex->getMessage() . PHP_EOL;
 }
 
