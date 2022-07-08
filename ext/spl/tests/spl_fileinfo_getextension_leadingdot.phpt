@@ -2,7 +2,7 @@
 SPL: Spl File Info test getExtension with leading dot
 --FILE--
 <?php
-$file = __DIR__ . '/.test';
+$file = getcwd() . '/.test';
 touch($file);
 $fileInfo = new SplFileInfo($file);
 

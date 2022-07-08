@@ -10,7 +10,7 @@ Jacopo Romei <jacopo@sviluppoagile.it>
 #Test Fest Cesena (Italy) on 2009-06-20
 --FILE--
 <?php
-$filename = __DIR__ . "/SplFileInfo_getGroup_basic";
+$filename = "SplFileInfo_getGroup_basic.tmp";
 touch($filename);
 $fileInfo = new SplFileInfo($filename);
 $expected = filegroup($filename);
@@ -19,7 +19,7 @@ var_dump($expected == $actual);
 ?>
 --CLEAN--
 <?php
-$filename = __DIR__ . "/SplFileInfo_getGroup_basic";
+$filename = "/SplFileInfo_getGroup_basic.tmp";
 unlink($filename);
 ?>
 --EXPECTF--

@@ -1,14 +1,8 @@
 --TEST--
 SPL: DirectoryIterator::getExtension() basic test
---SKIPIF--
-<?php
-if (substr(PHP_OS, 0, 3) == 'WIN') {
-    die('skip.. only for Unix');
-}
-?>
 --FILE--
 <?php
-$dir = __DIR__ . DIRECTORY_SEPARATOR . md5('DirectoryIterator::getExtension') . DIRECTORY_SEPARATOR;
+$dir = getcwd() . DIRECTORY_SEPARATOR . md5('DirectoryIterator::getExtension') . DIRECTORY_SEPARATOR;
 mkdir($dir);
 
 $files = array('test.txt', 'test.extension', 'test..', 'test.', 'test');
@@ -33,7 +27,7 @@ var_dump($dit_exts);
 ?>
 --CLEAN--
 <?php
-$dir   = __DIR__ . DIRECTORY_SEPARATOR . md5('DirectoryIterator::getExtension') . DIRECTORY_SEPARATOR;
+$dir   = getcwd() . DIRECTORY_SEPARATOR . md5('DirectoryIterator::getExtension') . DIRECTORY_SEPARATOR;
 $files = array('test.txt', 'test.extension', 'test..', 'test.', 'test');
 foreach ($files as $file) {
     unlink($dir . $file);

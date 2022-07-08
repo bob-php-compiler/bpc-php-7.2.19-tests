@@ -13,7 +13,7 @@ Jacopo Romei <jacopo@sviluppoagile.it>
 #Test Fest Cesena (Italy) on 2009-06-20
 --FILE--
 <?php
-$dirname = 'DirectoryIterator_getGroup_basic';
+$dirname = 'DirectoryIterator_getGroup_basic.tmp';
 mkdir($dirname);
 $dir = new DirectoryIterator($dirname);
 $expected = filegroup($dirname);
@@ -22,7 +22,7 @@ var_dump($expected == $actual);
 ?>
 --CLEAN--
 <?php
-$dirname = 'DirectoryIterator_getGroup_basic';
+$dirname = 'DirectoryIterator_getGroup_basic.tmp';
 rmdir($dirname);
 ?>
 --EXPECTF--
