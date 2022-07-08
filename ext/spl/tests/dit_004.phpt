@@ -2,7 +2,7 @@
 SPL: DirectoryIterator and clone
 --FILE--
 <?php
-$a = new DirectoryIterator(__DIR__);
+$a = new DirectoryIterator('.');
 $b = clone $a;
 var_dump((string)$b == (string)$a);
 var_dump($a->key(), $b->key());
