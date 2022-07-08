@@ -12,7 +12,7 @@
 - [x] ext/session
 - [x] ext/filter
 - [ ] ext/curl (TODO curl_multi curl_share)
-- [ ] ext/spl (TODO Datastructures MultipleIterator SplFileInfo)
+- [ ] ext/spl (TODO Datastructures MultipleIterator SplFileObject)
 - [x] ext/pdo
 - [x] ext/pdo_mysql
 - [ ] ext/pdo_sqlite (TODO extended PDO methods, sqliteCreateFunction/sqliteCreateAggregate/sqliteCreateCollation)
