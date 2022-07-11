@@ -2,7 +2,7 @@
 Bug #64023: Overloading __toString() in SplFileInfo has no effect
 --FILE--
 <?php
-class A extends \SplFileInfo
+class A extends SplFileInfo
 {
 	    public function __toString() {return ' -expected- ';}
 }
