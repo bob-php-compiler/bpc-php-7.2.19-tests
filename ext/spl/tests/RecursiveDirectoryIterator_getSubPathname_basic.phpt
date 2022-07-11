@@ -8,15 +8,15 @@ Pawel Krynicki <pawel [dot] krynicki [at] xsolve [dot] pl>
 $depth0 = "depth02";
 $depth1 = "depth1";
 $depth2 = "depth2";
-$targetDir = __DIR__ . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . $depth1 . DIRECTORY_SEPARATOR . $depth2;
+$targetDir = getcwd() . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . $depth1 . DIRECTORY_SEPARATOR . $depth2;
 mkdir($targetDir, 0777, true);
 touch($targetDir . DIRECTORY_SEPARATOR . 'getSubPathname_test_2.tmp');
-touch(__DIR__ . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . $depth1 . DIRECTORY_SEPARATOR . 'getSubPathname_test_3.tmp');
-touch(__DIR__ . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . 'getSubPathname_test_1.tmp');
-$iterator = new RecursiveDirectoryIterator(__DIR__ . DIRECTORY_SEPARATOR . $depth0);
+touch(getcwd() . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . $depth1 . DIRECTORY_SEPARATOR . 'getSubPathname_test_3.tmp');
+touch(getcwd() . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . 'getSubPathname_test_1.tmp');
+$iterator = new RecursiveDirectoryIterator(getcwd() . DIRECTORY_SEPARATOR . $depth0);
 $it = new RecursiveIteratorIterator($iterator);
 
-$list = [];
+$list = array();
 $it->rewind(); //see https://bugs.php.net/bug.php?id=62914
 while($it->valid()) {
   $list[] = $it->getSubPathname();
@@ -41,7 +41,7 @@ function rrmdir($dir) {
 	rmdir($dir);
 }
 
-$targetDir = __DIR__ . DIRECTORY_SEPARATOR . "depth02";
+$targetDir = getcwd() . DIRECTORY_SEPARATOR . "depth02";
 rrmdir($targetDir);
 ?>
 --EXPECTF--

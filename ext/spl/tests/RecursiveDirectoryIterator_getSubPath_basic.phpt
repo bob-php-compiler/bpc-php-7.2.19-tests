@@ -8,13 +8,13 @@ Pawel Krynicki <pawel [dot] krynicki [at] xsolve [dot] pl>
 $depth0 = "depth01";
 $depth1 = 'depth1';
 $depth2 = 'depth2';
-$targetDir = __DIR__ . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . $depth1 . DIRECTORY_SEPARATOR . $depth2;
+$targetDir = getcwd() . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . $depth1 . DIRECTORY_SEPARATOR . $depth2;
 mkdir($targetDir, 0777, true);
 touch($targetDir . DIRECTORY_SEPARATOR . 'getSubPath_test.tmp');
-$iterator = new RecursiveDirectoryIterator(__DIR__ . DIRECTORY_SEPARATOR . $depth0);
+$iterator = new RecursiveDirectoryIterator(getcwd() . DIRECTORY_SEPARATOR . $depth0);
 $it = new RecursiveIteratorIterator($iterator);
 
-$list = [];
+$list = array();
 while($it->valid()) {
   $list[] = $it->getSubPath();
   $it->next();
@@ -38,7 +38,7 @@ function rrmdir($dir) {
     rmdir($dir);
 }
 
-$targetDir = __DIR__.DIRECTORY_SEPARATOR . "depth01";
+$targetDir = getcwd().DIRECTORY_SEPARATOR . "depth01";
 rrmdir($targetDir);
 ?>
 --EXPECTF--
