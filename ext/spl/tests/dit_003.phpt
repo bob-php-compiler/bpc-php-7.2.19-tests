@@ -3,7 +3,7 @@ SPL: FilesystemIterator and foreach
 --FILE--
 <?php
 $count = 0;
-foreach(new FilesystemIterator(__DIR__) as $ent)
+foreach(new FilesystemIterator('.') as $ent)
 {
 	++$count;
 }
