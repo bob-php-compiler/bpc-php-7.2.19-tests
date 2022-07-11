@@ -4,7 +4,7 @@ SPL: RecursiveDirectoryIterator with CURRENT_AS_PATHNAME flag
 Paul Garvin pgarvin76@gmail.com
 --FILE--
 <?php
-$td = __DIR__ . '/bug66405';
+$td = getcwd() . '/bug66405.tmp';
 mkdir($td);
 touch($td . '/file1.txt');
 touch($td . '/file2.md');
@@ -45,7 +45,7 @@ echo implode("\n", $results);
 ?>
 --CLEAN--
 <?php
-$td = __DIR__ . '/bug66405';
+$td = getcwd() . '/bug66405.tmp';
 unlink($td . '/testsubdir/file3.csv');
 unlink($td . '/file2.md');
 unlink($td . '/file1.txt');
@@ -54,6 +54,6 @@ rmdir($td);
 ?>
 --EXPECTF--
 Bug66405 file3.csv
-string %sbug66405%efile1.txt
-string %sbug66405%efile2.md
-string %sbug66405%etestsubdir%efile3.csv
+string %sbug66405.tmp%efile1.txt
+string %sbug66405.tmp%efile2.md
+string %sbug66405.tmp%etestsubdir%efile3.csv
