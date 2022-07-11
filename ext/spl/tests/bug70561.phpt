@@ -2,7 +2,7 @@
 Bug #70561 (DirectoryIterator::seek should throw OutOfBoundsException)
 --FILE--
 <?php
-$di = new DirectoryIterator(__DIR__ . '/..');
+$di = new DirectoryIterator(getcwd() . '/..');
 
 $cnt = 0;
 $di->rewind();
