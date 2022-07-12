@@ -1,9 +1,5 @@
 --TEST--
 mhash() test
---SKIPIF--
-<?php
-	include "skip_mhash.inc";
-?>
 --FILE--
 <?php
 

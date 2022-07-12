@@ -1,9 +1,5 @@
 --TEST--
 mhash() modifying algorithm parameter
---SKIPIF--
-<?php
-	include "skip_mhash.inc";
-?>
 --FILE--
 <?php
 

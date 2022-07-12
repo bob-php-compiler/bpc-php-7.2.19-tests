@@ -1,9 +1,5 @@
 --TEST--
 mhash_keygen_s2k() test
---SKIPIF--
-<?php
-	include "skip_mhash.inc";
-?>
 --FILE--
 <?php
 
