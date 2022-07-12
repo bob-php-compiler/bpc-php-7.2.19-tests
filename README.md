@@ -19,6 +19,7 @@
 - [x] ext/openssl
 - [x] ext/ctype
 - [x] ext/pcntl
+- [x] ext/hash
 - [x] bpc
 
 # Requirements
