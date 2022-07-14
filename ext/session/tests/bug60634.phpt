@@ -47,8 +47,6 @@ echo "um, hi\n";
 
 ?>
 --EXPECT--
-*** ERROR:php-exit:
-exiting -- write: goodbye cruel world
-
 write: goodbye cruel world
 write: goodbye cruel world
+close: goodbye cruel world
