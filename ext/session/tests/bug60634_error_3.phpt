@@ -40,7 +40,5 @@ session_start();
 
 ?>
 --EXPECTF--
-*** ERROR:php-exit:
-exiting -- 0
 write: goodbye cruel world
 close: goodbye cruel world
