@@ -22,4 +22,4 @@ new test2;
 --EXPECTF--
 Warning: in %s line 12: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
 
-test1::shutdown
+test1::shutdowntest1::shutdowntest2::__destruct
