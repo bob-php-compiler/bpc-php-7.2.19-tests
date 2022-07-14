@@ -1,7 +1,7 @@
 --TEST--
 Bug #39438 (Fatal error: Out of memory)
 --INI--
-memory_limit=16M
+memory_limit=17M
 --FILE--
 <?php
 $i=0;
