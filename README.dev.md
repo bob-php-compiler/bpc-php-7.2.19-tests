@@ -772,8 +772,8 @@
 10. array_walk/array_walk_recursive
 
     unset array elements in callback function different with php
-    bpc still walk all elements, include unset elements
-    php walk only left elements
+    bpc: unset move iterator to NEXT, and array_walk() then call next(), so NEXT skipped.
+    php: @see ext/standard/array.c::php_array_walk()
     @see ext/standard/tests/array/bug61730.phpt
 
     change array itself in callback function different with php
