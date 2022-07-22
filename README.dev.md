@@ -959,18 +959,16 @@
 
 43. get_loaded_extensions() no zend_extensions parameter
 
-44. get_include_files() order different
+44. getopt() always use $_SERVER['argv']
 
-45. getopt() always use $_SERVER['argv']
-
-46. phpinfo()
+45. phpinfo()
 
     - not support INFO_CREDITS INFO_LICENSE
     - details info may different
 
-47. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
+46. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
 
-48. stream_socket_enable_crypto()
+47. stream_socket_enable_crypto()
 
     parameter 4 different:
     php: resouce session_stream = null
@@ -980,7 +978,7 @@
     STREAM_CRYPTO_METHOD_TLS_CLIENT
     STREAM_CRYPTO_METHOD_TLS_SERVER
 
-49. file_get_contents()
+48. file_get_contents()
 
     bpc implements file_get_contents("https?://") by curl extension
     currently not support $http_reponse_header

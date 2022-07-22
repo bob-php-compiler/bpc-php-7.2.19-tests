@@ -50,10 +50,10 @@ array(4) {
   [0]=>
   string(%d) "%sget_included_files.php"
   [1]=>
-  string(%d) "%sget_included_files_inc2.inc"
-  [2]=>
-  string(%d) "%sget_included_files_inc3.inc"
-  [3]=>
   string(%d) "%sget_included_files_inc1.inc"
+  [2]=>
+  string(%d) "%sget_included_files_inc2.inc"
+  [3]=>
+  string(%d) "%sget_included_files_inc3.inc"
 }
 ===DONE===
