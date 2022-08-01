@@ -5,34 +5,104 @@ SimpleXML: var_dump()
 --FILE--
 <?php
 
-$sxe = simplexml_load_file(dirname(__FILE__).'/000.xml');
+$sxe = simplexml_load_file('000.xml');
 
-function test($what)
-{
-	global $sxe;
-	echo "===$what\n";
-	eval("var_dump(isset(\$$what));");
-	eval("var_dump((bool)\$$what);");
-	eval("if (isset(\$$what)) var_dump(count(\$$what));");
-	eval("var_dump(\$$what);");
-}
-
-test('sxe');
-test('sxe->elem1');
-test('sxe->elem1[0]');
-test('sxe->elem1[0]->elem2');
-test('sxe->elem1[0]->elem2->bla');
-if (!ini_get("unicode_semantics")) test('sxe->elem1[0]["attr1"]');
-test('sxe->elem1[0]->attr1');
-test('sxe->elem1[1]');
-test('sxe->elem1[2]');
-test('sxe->elem11');
-test('sxe->elem11->elem111');
-test('sxe->elem11->elem111->elem1111');
-test('sxe->elem22');
-test('sxe->elem22->elem222');
-test('sxe->elem22->attr22');
-test('sxe->elem22["attr22"]');
+// test('sxe')
+echo "===sxe\n";
+var_dump(isset($sxe));
+var_dump((bool)$sxe);
+if (isset($sxe)) var_dump(count($sxe));
+var_dump($sxe);
+//test('sxe->elem1');
+echo "===sxe->elem1\n";
+var_dump(isset($sxe->elem1));
+var_dump((bool)$sxe->elem1);
+if (isset($sxe->elem1)) var_dump(count($sxe->elem1));
+var_dump($sxe->elem1);
+//test('sxe->elem1[0]');
+echo "===sxe->elem1[0]\n";
+var_dump(isset($sxe->elem1[0]));
+var_dump((bool)$sxe->elem1[0]);
+if (isset($sxe->elem1[0])) var_dump(count($sxe->elem1[0]));
+var_dump($sxe->elem1[0]);
+//test('sxe->elem1[0]->elem2');
+echo "===sxe->elem1[0]->elem2\n";
+var_dump(isset($sxe->elem1[0]->elem2));
+var_dump((bool)$sxe->elem1[0]->elem2);
+if (isset($sxe->elem1[0]->elem2)) var_dump(count($sxe->elem1[0]->elem2));
+var_dump($sxe->elem1[0]->elem2);
+//test('sxe->elem1[0]->elem2->bla');
+echo "===sxe->elem1[0]->elem2->bla\n";
+var_dump(isset($sxe->elem1[0]->elem2->bla));
+var_dump((bool)$sxe->elem1[0]->elem2->bla);
+if (isset($sxe->elem1[0]->elem2->bla)) var_dump(count($sxe->elem1[0]->elem2->bla));
+var_dump($sxe->elem1[0]->elem2->bla);
+//if (!ini_get("unicode_semantics")) test('sxe->elem1[0]["attr1"]');
+echo "===sxe->elem1[0][\"attr1\"]\n";
+var_dump(isset($sxe->elem1[0]["attr1"]));
+var_dump((bool)$sxe->elem1[0]["attr1"]);
+if (isset($sxe->elem1[0]["attr1"])) var_dump(count($sxe->elem1[0]["attr1"]));
+var_dump($sxe->elem1[0]["attr1"]);
+//test('sxe->elem1[0]->attr1');
+echo "===sxe->elem1[0]->attr1\n";
+var_dump(isset($sxe->elem1[0]->attr1));
+var_dump((bool)$sxe->elem1[0]->attr1);
+if (isset($sxe->elem1[0]->attr1)) var_dump(count($sxe->elem1[0]->attr1));
+var_dump($sxe->elem1[0]->attr1);
+//test('sxe->elem1[1]');
+echo "===sxe->elem1[1]\n";
+var_dump(isset($sxe->elem1[1]));
+var_dump((bool)$sxe->elem1[1]);
+if (isset($sxe->elem1[1])) var_dump(count($sxe->elem1[1]));
+var_dump($sxe->elem1[1]);
+//test('sxe->elem1[2]');
+echo "===sxe->elem1[2]\n";
+var_dump(isset($sxe->elem1[2]));
+var_dump((bool)$sxe->elem1[2]);
+if (isset($sxe->elem1[2])) var_dump(count($sxe->elem1[2]));
+var_dump($sxe->elem1[2]);
+//test('sxe->elem11');
+echo "===sxe->elem11\n";
+var_dump(isset($sxe->elem11));
+var_dump((bool)$sxe->elem11);
+if (isset($sxe->elem11)) var_dump(count($sxe->elem11));
+var_dump($sxe->elem11);
+//test('sxe->elem11->elem111');
+echo "===sxe->elem11->elem111\n";
+var_dump(isset($sxe->elem11->elem111));
+var_dump((bool)$sxe->elem11->elem111);
+if (isset($sxe->elem11->elem111)) var_dump(count($sxe->elem11->elem111));
+var_dump($sxe->elem11->elem111);
+//test('sxe->elem11->elem111->elem1111');
+echo "===sxe->elem11->elem111->elem1111\n";
+var_dump(isset($sxe->elem11->elem111->elem1111));
+var_dump((bool)$sxe->elem11->elem111->elem1111);
+if (isset($sxe->elem11->elem111->elem1111)) var_dump(count($sxe->elem11->elem111->elem1111));
+var_dump($sxe->elem11->elem111->elem1111);
+//test('sxe->elem22');
+echo "===sxe->elem22\n";
+var_dump(isset($sxe->elem22));
+var_dump((bool)$sxe->elem22);
+if (isset($sxe->elem22)) var_dump(count($sxe->elem22));
+var_dump($sxe->elem22);
+//test('sxe->elem22->elem222');
+echo "===sxe->elem22->elem222\n";
+var_dump(isset($sxe->elem22->elem222));
+var_dump((bool)$sxe->elem22->elem222);
+if (isset($sxe->elem22->elem222)) var_dump(count($sxe->elem22->elem222));
+var_dump($sxe->elem22->elem222);
+//test('sxe->elem22->attr22');
+echo "===sxe->elem22->attr22\n";
+var_dump(isset($sxe->elem22->attr22));
+var_dump((bool)$sxe->elem22->attr22);
+if (isset($sxe->elem22->attr22)) var_dump(count($sxe->elem22->attr22));
+var_dump($sxe->elem22->attr22);
+//test('sxe->elem22["attr22"]');
+echo "===sxe->elem22[\"attr22\"]\n";
+var_dump(isset($sxe->elem22["attr22"]));
+var_dump((bool)$sxe->elem22["attr22"]);
+if (isset($sxe->elem22["attr22"])) var_dump(count($sxe->elem22["attr22"]));
+var_dump($sxe->elem22["attr22"]);
 
 ?>
 ===DONE===
@@ -175,7 +245,7 @@ bool(true)
 bool(true)
 int(0)
 object(SimpleXMLElement)#%d (1) {
-  [0]=>
+  ["0"]=>
   string(5) "first"
 }
 ===sxe->elem1[0]->attr1
