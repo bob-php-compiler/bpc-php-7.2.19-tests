@@ -1,11 +1,9 @@
 --TEST--
 SimpleXML: Simple document
---SKIPIF--
-<?php if (!extension_loaded("simplexml")) print "skip"; ?>
 --FILE--
 <?php
 
-var_dump(simplexml_load_file(dirname(__FILE__).'/sxe.xml'));
+var_dump(simplexml_load_file('sxe.xml'));
 
 ?>
 ===DONE===
