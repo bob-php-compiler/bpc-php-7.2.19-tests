@@ -1,7 +1,5 @@
 --TEST--
 SimpleXML: XPath
---SKIPIF--
-<?php if (!extension_loaded("simplexml")) print "skip"; ?>
 --FILE--
 <?php
 
@@ -31,6 +29,8 @@ var_dump($sxe->xpath("***"));
 var_dump($sxe->xpath("**"));
 ?>
 --EXPECTF--
+XPath error : Invalid expression
+xmlXPathEval: evaluation failed
 array(1) {
   [0]=>
   object(SimpleXMLElement)#%d (1) {
@@ -41,6 +41,4 @@ array(1) {
 }
 array(0) {
 }
-
-Warning: SimpleXMLElement::xpath(): Invalid expression in %s on line %d%A
 bool(false)

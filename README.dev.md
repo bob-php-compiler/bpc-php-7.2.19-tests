@@ -1142,3 +1142,5 @@
 ## ext/simplexml
 
 1. TODO property/dim write/unset
+
+2. TODO error handler
