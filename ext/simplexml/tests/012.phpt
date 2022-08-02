@@ -1,9 +1,7 @@
 --TEST--
 SimpleXML: Attribute creation
 --SKIPIF--
-<?php
-	if (!extension_loaded('simplexml')) print 'skip';
-?>
+skip TODO property/dim write/unset
 --FILE--
 <?php
 
