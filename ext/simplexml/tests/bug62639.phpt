@@ -1,9 +1,5 @@
 --TEST--
 Bug #62639 (XML structure broken)
---SKIPIF--
-<?php
-if (!extension_loaded("simplexml")) die("skip SimpleXML not available");
-?>
 --FILE--
 <?php
 
@@ -42,22 +38,22 @@ $a2 = new A($xml2);
 foreach ($a2->b->c->children() as $key => $value) {
     var_dump($value);
 }?>
---EXPECT--
-object(A)#2 (2) {
+--EXPECTF--
+object(A)#%d (2) {
   ["@attributes"]=>
   array(1) {
     ["attr"]=>
     string(9) "Some Attr"
   }
-  [0]=>
+  ["0"]=>
   string(10) "Some Value"
 }
-object(A)#3 (2) {
+object(A)#%d (2) {
   ["@attributes"]=>
   array(1) {
     ["attr"]=>
     string(9) "Some Attr"
   }
-  [0]=>
+  ["0"]=>
   string(10) "Some Value"
 }
