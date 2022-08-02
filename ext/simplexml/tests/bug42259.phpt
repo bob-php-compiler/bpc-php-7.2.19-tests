@@ -1,10 +1,5 @@
 --TEST--
 Bug #42259 (SimpleXMLIterator loses ancestry)
---SKIPIF--
-<?php
-if (!extension_loaded('simplexml')) print 'skip';
-if (!extension_loaded("libxml")) print "skip LibXML not present";
-?>
 --FILE--
 <?php
 $xml =<<<EOF

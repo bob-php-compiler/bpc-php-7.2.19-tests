@@ -1,10 +1,5 @@
 --TEST--
 SPL: SimpleXMLIterator
---SKIPIF--
-<?php
-if (!extension_loaded("simplexml")) print "skip SimpleXML not present";
-if (!extension_loaded("libxml")) print "skip LibXML not present";
-?>
 --FILE--
 <?php
 
