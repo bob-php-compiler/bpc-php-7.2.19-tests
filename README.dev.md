@@ -700,6 +700,10 @@
 
     @see ext/session/tests/session_module_name_variation3.phpt
 
+40. var_dump(object) key always double quoted
+
+    @see ext/simplexml/tests/007.phpt
+
 ## File uploading / multipart form / rfc1867
 
 1. strict uploading array of files
@@ -1134,3 +1138,7 @@
 2. currently not support realtime signal
 
     try bigloo `signal` procedure
+
+## ext/simplexml
+
+1. TODO property/dim write/unset
