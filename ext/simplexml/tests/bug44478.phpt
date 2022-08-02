@@ -1,7 +1,7 @@
 --TEST--
 Bug #44478 (Inconsistent behaviour when assigning new nodes)
 --SKIPIF--
-<?php if (!extension_loaded("simplexml")) print "skip"; ?>
+skip TODO property/dim write/unset
 --FILE--
 <?php
 $xml_element = new simpleXMLElement('<root></root>');
@@ -26,4 +26,4 @@ a & b
 <?xml version="1.0"?>
 <root><node1>a &amp;#38; b</node1><node2>a &amp; b</node2></root>
 ===DONE===
-	
+
