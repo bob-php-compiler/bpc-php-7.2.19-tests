@@ -1,7 +1,5 @@
 --TEST--
 SimpleXML: Attributes with entities
---SKIPIF--
-<?php if (!extension_loaded("simplexml")) print "skip"; ?>
 --FILE--
 <?php
 
@@ -30,7 +28,7 @@ object(SimpleXMLElement)#%d (1) {
   }
 }
 object(SimpleXMLElement)#%d (1) {
-  [0]=>
+  ["0"]=>
   string(%d) "foo%sbar%sbaz"
 }
 ===DONE===
