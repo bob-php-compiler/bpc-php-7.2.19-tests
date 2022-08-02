@@ -20,6 +20,7 @@
 - [x] ext/ctype
 - [x] ext/pcntl
 - [x] ext/hash
+- [x] ext/simplexml
 - [x] bpc
 
 # Requirements
