@@ -1,7 +1,7 @@
 --TEST--
 SimpleXML: modifying attributes of singular subnode
 --SKIPIF--
-<?php if (!extension_loaded("simplexml")) print "skip"; ?>
+skip TODO property/dim write/unset
 --FILE--
 <?php
 $xml =<<<EOF
