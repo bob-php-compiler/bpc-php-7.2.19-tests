@@ -1,10 +1,5 @@
 --TEST--
 Test iconv_get_encoding() function : basic functionality
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_get_encoding') or die("skip iconv_get_encoding() is not available in this build");
-?>
 --FILE--
 <?php
 /* Prototype  : mixed iconv_get_encoding([string type])
@@ -36,7 +31,7 @@ Nothing
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $encoding argument
 $inputs = array(

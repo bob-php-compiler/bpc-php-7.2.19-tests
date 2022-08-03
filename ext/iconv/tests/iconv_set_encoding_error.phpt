@@ -1,10 +1,5 @@
 --TEST--
 Test iconv_set_encoding() function : basic functionality
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_set_encoding') or die("skip iconv_set_encoding() is not available in this build");
-?>
 --FILE--
 <?php
 /* Prototype  : bool iconv_set_encoding(string type, string charset)
@@ -36,7 +31,7 @@ Nothing
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $encoding argument
 $inputs = array(
