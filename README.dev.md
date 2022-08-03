@@ -1148,3 +1148,5 @@
 ## ext/iconv
 
 1. not support ob_iconv_handler()
+
+2. no ini iconv.input_encoding iconv.output_encoding
