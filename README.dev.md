@@ -1144,3 +1144,7 @@
 1. TODO property/dim write/unset
 
 2. TODO error handler
+
+## ext/iconv
+
+1. not support ob_iconv_handler()

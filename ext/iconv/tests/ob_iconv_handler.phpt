@@ -1,5 +1,7 @@
 --TEST--
 ob_iconv_handler()
+--SKIPIF--
+skip not support ob_iconv_handler()
 --INI--
 error_reporting=2039
 --FILE--
