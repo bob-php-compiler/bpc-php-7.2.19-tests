@@ -1,12 +1,10 @@
 --TEST--
 iconv_mime_encode()
---SKIPIF--
-<?php extension_loaded('iconv') or die('skip iconv extension is not available'); ?>
 --INI--
 iconv.internal_charset=iso-8859-1
 --FILE--
 <?php
-function my_error_handler($errno, $errmsg, $filename, $linenum, $vars)
+function my_error_handler($errno, $errmsg, $filename, $linenum)
 {
 	echo "$errno: $errmsg\n";
 }
