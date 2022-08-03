@@ -1,10 +1,5 @@
 --TEST--
 Test iconv_mime_encode() function : usage variations - Pass different data types to headers arg
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_mime_decode_headers') or die("skip iconv_mime_decode_headers() is not available in this build");
-?>
 --FILE--
 <?php
 /* Prototype  : array iconv_mime_decode_headers(string headers [, int mode, string charset])
@@ -54,7 +49,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $str argument
 $inputs = array(

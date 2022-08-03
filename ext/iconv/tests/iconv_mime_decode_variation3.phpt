@@ -1,10 +1,5 @@
 --TEST--
 Test iconv_mime_decode() function : usage variations - Pass different data types to charset arg
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_mime_decode') or die("skip iconv_mime_decode() is not available in this build");
-?>
 --FILE--
 <?php
 /* Prototype  : string iconv_mime_decode(string encoded_string [, int mode, string charset])
@@ -45,7 +40,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $str argument
 $inputs = array(

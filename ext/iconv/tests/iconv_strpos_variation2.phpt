@@ -1,10 +1,5 @@
 --TEST--
 Test iconv_strpos() function : usage variations - pass different data types as $needle arg
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_strpos') or die("skip iconv_strpos() is not available in this build");
-?>
 --FILE--
 <?php
 /* Prototype  : int iconv_strpos(string haystack, string needle [, int offset [, string charset]])
@@ -41,7 +36,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $needle argument
 $inputs = array(

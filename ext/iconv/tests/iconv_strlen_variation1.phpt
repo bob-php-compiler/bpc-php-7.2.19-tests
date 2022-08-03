@@ -1,10 +1,5 @@
 --TEST--
 Test iconv_strlen() function : usage variations - Pass different data types as $str arg
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_strlen') or die("skip iconv_strlen() is not available in this build");
-?>
 --FILE--
 <?php
 /* Prototype  : int iconv_strlen(string str [, string charset])
@@ -39,7 +34,7 @@ hello world
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $str argument
 $inputs = array(

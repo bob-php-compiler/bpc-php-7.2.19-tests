@@ -1,10 +1,5 @@
 --TEST--
 Test iconv_strrpos() function : usage variations - pass different data types as $encoding arg
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_strrpos') or die("skip iconv_strrpos() is not available in this build");
-?>
 --FILE--
 <?php
 /* Prototype  : proto int iconv_strrpos(string haystack, string needle [, string charset])
@@ -41,7 +36,7 @@ UTF-8
 EOT;
 
 // get a resource variable
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 
 // unexpected values to be passed to $encoding argument
 $inputs = array(
