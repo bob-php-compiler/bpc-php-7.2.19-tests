@@ -21,6 +21,7 @@
 - [x] ext/pcntl
 - [x] ext/hash
 - [x] ext/simplexml
+- [x] ext/iconv
 - [x] bpc
 
 # Requirements
