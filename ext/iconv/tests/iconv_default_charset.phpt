@@ -1,12 +1,7 @@
 --TEST--
 Test default_charset handling
---SKIPIF--
-<?php
-extension_loaded('iconv') or die('skip');
-function_exists('iconv_get_encoding') or die("skip iconv_get_encoding() is not available in this build");
-?>
 --INI--
-error_reporting=E_ALL & ~E_DEPRECATED
+error_reporting=24575
 default_charset=UTF-8
 internal_encoding=
 input_encoding=
@@ -16,6 +11,7 @@ iconv.input_encoding=
 iconv.output_encoding=
 --FILE--
 <?php
+// E_ALL & ~E_DEPRECATED = 24575
 echo "*** Testing default_charset handling ***\n";
 
 echo "--- Get php.ini values ---\n";
@@ -56,22 +52,22 @@ echo "Done";
 *** Testing default_charset handling ***
 --- Get php.ini values ---
 string(5) "UTF-8"
+bool(false)
+bool(false)
+bool(false)
 string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
 
 --- Altering encodings ---
 string(5) "UTF-8"
 
 --- results of alterations ---
 string(10) "ISO-8859-1"
+bool(false)
+bool(false)
+bool(false)
 string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
-string(0) ""
+bool(false)
+bool(false)
 Done
