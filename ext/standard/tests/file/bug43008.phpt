@@ -1,9 +1,7 @@
 --TEST--
 Bug #43008 (php://filter uris ignore url encoded filternames and can't handle slashes)
 --SKIPIF--
-<?php
-if (!extension_loaded("iconv")) die("skip iconv extension not available");
-?>
+skip not support php://filter
 --INI--
 allow_url_fopen=1
 --FILE--

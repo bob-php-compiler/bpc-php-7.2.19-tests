@@ -987,6 +987,8 @@
     bpc implements file_get_contents("https?://") by curl extension
     currently not support $http_reponse_header
 
+49. not support php://filter
+
 ## ext/date
 
 1. ini_set date.timezone warning message
