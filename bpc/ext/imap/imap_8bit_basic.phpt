@@ -1,9 +1,5 @@
 --TEST--
 Test imap_8bit() function : basic functionality
---SKIPIF--
-<?php
-extension_loaded('imap') or die('skip imap extension not available in this build');
-?>
 --FILE--
 <?php
 /* Prototype  : string imap_8bit  ( string $string  )

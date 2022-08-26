@@ -1,9 +1,5 @@
 --TEST--
 Test imap_binary() function : basic functionality
---SKIPIF--
-<?php
-extension_loaded('imap') or die('skip imap extension not available in this build');
-?>
 --FILE--
 <?php
 /* Prototype  : string imap_binary  ( string $string  )

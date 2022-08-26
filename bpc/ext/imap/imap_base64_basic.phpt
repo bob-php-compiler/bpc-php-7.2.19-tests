@@ -1,9 +1,5 @@
 --TEST--
 Test imap_base64() function : basic functionality
---SKIPIF--
-<?php
-extension_loaded('imap') or die('skip imap extension not available in this build');
-?>
 --FILE--
 <?php
 /* Prototype  : string imap_base64  ( string $text  )
