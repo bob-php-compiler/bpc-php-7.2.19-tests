@@ -23,4 +23,4 @@ echo "Done\n";
 --EXPECTF--
 Done
 
-Warning: cannot access self:: when no class scope is active in %s on line 18
+Warning: cannot access self:: when no class scope is active in %s on line 19

@@ -32,6 +32,6 @@ Warning: in %s line 5: Current implementation of class __destruct is very ugly!!
 
 Fatal error: Uncaught Exception in %stry_finally_012.php:6
 Stack trace:
-#0 %stry_finally_012.php(21): A->__destruct()
+#0 %stry_finally_012.php(25): A->__destruct()
 #1 {main}
-  thrown in %stry_finally_012.php on line 21
+  thrown in %stry_finally_012.php on line 25

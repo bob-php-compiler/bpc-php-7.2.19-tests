@@ -20,4 +20,4 @@ var_dump(ob_start('f'));
 echo "done";
 ?>
 --EXPECTF--
-Fatal error: ob_start(): Cannot use output buffering in output buffering display handlers in %s on line 17
+Fatal error: ob_start(): Cannot use output buffering in output buffering display handlers in %s on line 18

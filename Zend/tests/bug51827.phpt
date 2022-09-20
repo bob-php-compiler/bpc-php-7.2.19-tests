@@ -16,7 +16,7 @@ register_shutdown_function('exploDe');
 --EXPECTF--
 int(1)
 
-Fatal error: Uncaught ArgumentCountError: Too few arguments to function exploDe(): 2 required, 0 provided in %sbug51827.php:10
+Fatal error: Uncaught ArgumentCountError: Too few arguments to function exploDe(): 2 required, 0 provided in %sbug51827.php:12
 Stack trace:
 #0 {main}
-  thrown in %sbug51827.php on line 10
+  thrown in %sbug51827.php on line 12

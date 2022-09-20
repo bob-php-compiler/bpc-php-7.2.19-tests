@@ -31,5 +31,5 @@ Stack trace:
 #1 {main}
 1. Exception: aaa in %sbug52361.php:5
 Stack trace:
-#0 %sbug52361.php(19): aaa->__destruct()
+#0 %sbug52361.php(21): aaa->__destruct()
 #1 {main}

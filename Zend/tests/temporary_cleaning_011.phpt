@@ -22,6 +22,6 @@ Warning: in %s line 3: Current implementation of class __destruct is very ugly!!
 
 Fatal error: Uncaught Exception in %stemporary_cleaning_011.php:4
 Stack trace:
-#0 %stemporary_cleaning_011.php(11): A->__destruct()
+#0 %stemporary_cleaning_011.php(15): A->__destruct()
 #1 {main}
-  thrown in %stemporary_cleaning_011.php on line 11
+  thrown in %stemporary_cleaning_011.php on line 15
