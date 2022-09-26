@@ -1,7 +1,7 @@
 --TEST--
 finfo_file(): Files and directories inside an stream
 --SKIPIF--
-<?php if (!extension_loaded('zip')) { die("skip need zip"); } ?>
+skip not support streamWrapper
 --FILE--
 <?php
 
