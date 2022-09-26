@@ -22,6 +22,7 @@
 - [x] ext/hash
 - [x] ext/simplexml
 - [x] ext/iconv
+- [x] ext/zip
 - [x] bpc
 
 # Requirements
