@@ -1,15 +1,11 @@
 --TEST--
 getComment
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+--ARGS--
+--bpc-include-file ext/zip/tests/utils.inc \
 --FILE--
 <?php
-$dirname = dirname(__FILE__) . '/';
-$file = $dirname . 'test_with_comment.zip';
-include $dirname . 'utils.inc';
+$file = 'test_with_comment.zip';
+include __DIR__ . '/utils.inc';
 $zip = new ZipArchive;
 if (!$zip->open($file)) {
 	exit('failed');
@@ -33,4 +29,7 @@ foo comment
 Notice: ZipArchive::getCommentName(): Empty string as entry name in %s on line %d
 
 
-Warning: ZipArchive::getCommentName() expects at least 1 parameter, 0 given in %s on line %d
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method ZipArchive::getCommentName(): 1 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d
