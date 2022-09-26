@@ -1,24 +1,20 @@
 --TEST--
 ziparchive::addFile() function
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+--ARGS--
+--bpc-include-file ext/zip/tests/utils.inc \
 --FILE--
 <?php
 
-$dirname = dirname(__FILE__) . '/';
-include $dirname . 'utils.inc';
-$file = $dirname . '__tmp_oo_addfile.zip';
+include __DIR__ . '/utils.inc';
+$file = '__tmp_oo_addfile.zip';
 
-copy($dirname . 'test.zip', $file);
+copy('test.zip', $file);
 
 $zip = new ZipArchive;
 if (!$zip->open($file)) {
 	exit('failed');
 }
-if (!$zip->addFile($dirname . 'utils.inc', 'test.php')) {
+if (!$zip->addFile('utils.inc', 'test.php')) {
 	echo "failed\n";
 }
 if ($zip->status == ZIPARCHIVE::ER_OK) {

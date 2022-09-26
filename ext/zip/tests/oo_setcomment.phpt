@@ -1,15 +1,11 @@
 --TEST--
 setComment
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+--ARGS--
+--bpc-include-file ext/zip/tests/utils.inc \
 --FILE--
 <?php
-$dirname = dirname(__FILE__) . '/';
-include $dirname . 'utils.inc';
-$file = $dirname . '__tmp_oo_set_comment.zip';
+include __DIR__ . '/utils.inc';
+$file = '__tmp_oo_set_comment.zip';
 
 @unlink($file);
 

@@ -4,26 +4,22 @@ ZipArchive::addPattern() method
 Sammy Kaye Powers <sammyk@sammykmedia.com>
 w/Kenzo over the shoulder
 #phptek Chicago 2014
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+--ARGS--
+--bpc-include-file ext/zip/tests/utils.inc \
 --FILE--
 <?php
-$dirname = dirname(__FILE__) . '/';
-include $dirname . 'utils.inc';
-$file = $dirname . '__tmp_oo_addpattern.zip';
+include __DIR__ . '/utils.inc';
+$file = '__tmp_oo_addpattern.zip';
 
-copy($dirname . 'test.zip', $file);
-touch($dirname . 'foo.txt');
-touch($dirname . 'bar.txt');
+copy('test.zip', $file);
+touch('foo.txt');
+touch('bar.txt');
 
 $zip = new ZipArchive();
 if (!$zip->open($file)) {
         exit('failed');
 }
-$dir = realpath($dirname);
+$dir = realpath('.');
 $options = array('add_path' => 'baz/', 'remove_path' => $dir);
 if (!$zip->addPattern('/\.txt$/', $dir, $options)) {
         echo "failed\n";
@@ -37,10 +33,9 @@ if ($zip->status == ZIPARCHIVE::ER_OK) {
 ?>
 --CLEAN--
 <?php
-$dirname = dirname(__FILE__) . '/';
-unlink($dirname . '__tmp_oo_addpattern.zip');
-unlink($dirname . 'foo.txt');
-unlink($dirname . 'bar.txt');
+unlink('__tmp_oo_addpattern.zip');
+unlink('foo.txt');
+unlink('bar.txt');
 ?>
 --EXPECTF--
 0 bar

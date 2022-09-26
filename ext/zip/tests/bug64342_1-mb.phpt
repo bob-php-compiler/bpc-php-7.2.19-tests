@@ -1,24 +1,20 @@
 --TEST--
 Bug #64342 ZipArchive::addFile() has to check file existence (variation 2)
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+--ARGS--
+--bpc-include-file ext/zip/tests/utils.inc \
 --FILE--
 <?php
 
-$dirname = dirname(__FILE__) . '/';
-include $dirname . 'utils.inc';
-$file = $dirname . '__私はガラスを食べられますtmp_oo_addfile.zip';
+include __DIR__ . '/utils.inc';
+$file = '__私はガラスを食べられますtmp_oo_addfile.zip';
 
-copy($dirname . 'test.zip', $file);
+copy('test.zip', $file);
 
 $zip = new ZipArchive;
 if (!$zip->open($file)) {
 	exit('failed');
 }
-if (!$zip->addFile($dirname . 'cant_find_me.txt', 'test.php')) {
+if (!$zip->addFile('cant_find_me.txt', 'test.php')) {
 	echo "failed\n";
 }
 if ($zip->status == ZIPARCHIVE::ER_OK) {

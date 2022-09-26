@@ -1,10 +1,7 @@
 --TEST--
 Bug #7658 (modify archive with general bit flag 3 set)
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+--ARGS--
+--bpc-include-file ext/zip/tests/utils.inc \
 --FILE--
 <?php
 $expect = array(
@@ -24,18 +21,17 @@ $expect = array(
 	"settings.xml",
 	"META-INF/manifest.xml",
 );
-$dirname = dirname(__FILE__) . '/';
-include $dirname . 'utils.inc';
-$file = $dirname . '__tmp_bug7658.odt';
+include __DIR__ . '/utils.inc';
+$file = '__tmp_bug7658.odt';
 $zip = new ZipArchive();
-copy($dirname . 'bug7658.odt', $file);
+copy('bug7658.odt', $file);
 if(!$zip->open($file)) {
 	echo 'failed';
 }
 
 
 $zip->deleteName('content.xml');
-$zip->addFile($dirname . "bug7658.xml","content.xml");
+$zip->addFile("bug7658.xml","content.xml");
 $zip->close();
 echo "\n";
 $zip->open($file);
