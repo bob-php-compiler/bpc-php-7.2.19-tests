@@ -11,7 +11,7 @@ zip_close($zip);
 Done
 --EXPECTF--
 entry_close: bool(true)
-entry_close:
+entry_close: 
 Warning: zip_entry_close(): supplied resource is not a valid Zip Entry resource in %s
 bool(false)
 Done
