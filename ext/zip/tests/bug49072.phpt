@@ -1,10 +1,7 @@
 --TEST--
 Bug #49072 (feof never returns true for damaged file in zip)
 --SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+skip not support ZipArchive::getStream()
 --FILE--
 <?php
 $f = dirname(__FILE__)  . '/bug49072.zip';

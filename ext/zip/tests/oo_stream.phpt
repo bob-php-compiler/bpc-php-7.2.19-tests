@@ -1,10 +1,7 @@
 --TEST--
 getStream
 --SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
+skip not support ZipArchive::getStream()
 --FILE--
 <?php
 $dirname = dirname(__FILE__) . '/';

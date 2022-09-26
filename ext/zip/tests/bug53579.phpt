@@ -1,10 +1,7 @@
 --TEST--
 Bug #53579 (stream_get_contents() segfaults on ziparchive streams)
 --SKIPIF--
-<?php
-/* $Id: oo_stream.phpt 260091 2008-05-21 09:27:41Z pajoye $ */
-if(!extension_loaded('zip')) die('skip');
-?>
+skip not support ZipArchive::getStream()
 --FILE--
 <?php
 $dirname = dirname(__FILE__) . '/';
