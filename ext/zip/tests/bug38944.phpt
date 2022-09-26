@@ -1,11 +1,9 @@
 --TEST--
 Bug #38944 (newly created ZipArchive segfaults when accessing comment property)
---SKIPIF--
-<?php if (!extension_loaded("zip")) print "skip"; ?>
 --FILE--
 <?php
 
-$arc_name = dirname(__FILE__)."/bug38944.zip";
+$arc_name = "bug38944.zip";
 $foo = new ZipArchive;
 $foo->open($arc_name, ZIPARCHIVE::CREATE);
 

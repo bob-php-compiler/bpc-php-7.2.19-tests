@@ -1,14 +1,8 @@
 --TEST--
 Bug #47667 (ZipArchive::OVERWRITE seems to have no effect)
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
-$thisdir = dirname(__FILE__);
-$filename = $thisdir . "/bug47667.zip";
+$filename = "bug47667.zip";
 
 $zip = new ZipArchive();
 if ($zip->open($filename, ZipArchive::CREATE) !== true) {

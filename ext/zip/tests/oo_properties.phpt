@@ -1,17 +1,11 @@
 --TEST--
 ziparchive::properties isset()/empty() checks
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
 
-$dirname = dirname(__FILE__) . '/';
-$file = $dirname . '__property_test.zip';
+$file = '__property_test.zip';
 
-copy($dirname . 'test_with_comment.zip', $file);
+copy('test_with_comment.zip', $file);
 
 $zip = new ZipArchive;
 if (!$zip->open($file)) {

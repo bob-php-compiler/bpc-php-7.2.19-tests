@@ -1,14 +1,10 @@
 --TEST--
 Bug #64342 ZipArchive::addFile() has to check file existence (variation 1)
---SKIPIF--
-<?php
-	if(!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
 
 $zip = new ZipArchive;
-$res = $zip->open(dirname(__FILE__) . '/bug64342.zip', ZipArchive::CREATE);
+$res = $zip->open('bug64342.zip', ZipArchive::CREATE);
 if ($res === TRUE) {
 	$f = md5(uniqid()) . '.txt';
 	echo "$f\n";
@@ -34,7 +30,7 @@ DONE
 --CLEAN--
 <?php
 
-@unlink(dirname(__FILE__) . '/bug64342.zip');
+@unlink('bug64342.zip');
 --EXPECTF--
 %s.txt
 add failed

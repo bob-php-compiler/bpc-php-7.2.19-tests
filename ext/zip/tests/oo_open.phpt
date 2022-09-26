@@ -1,34 +1,28 @@
 --TEST--
 zip::open() function
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
 
-$dirname = dirname(__FILE__) . '/';
 $zip = new ZipArchive;
-$r = $zip->open($dirname . 'nofile');
+$r = $zip->open('nofile');
 if ($r !== TRUE) {
 	echo "ER_OPEN: ok\n";
 } else {
 	echo "ER_OPEN: FAILED\n";
 }
 
-$r = $zip->open($dirname . 'nofile', ZIPARCHIVE::CREATE);
+$r = $zip->open('nofile', ZIPARCHIVE::CREATE);
 if (!$r) {
 	echo "create: failed\n";
 } else {
 	echo "create: ok\n";
 }
-@unlink($dirname . 'nofile');
+@unlink('nofile');
 
 $zip = new ZipArchive;
 $zip->open('');
 
-if (!$zip->open($dirname . 'test.zip')) {
+if (!$zip->open('test.zip')) {
 	exit("failed 1\n");
 }
 

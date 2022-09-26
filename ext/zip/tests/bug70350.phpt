@@ -1,13 +1,9 @@
 --TEST--
 Bug #70350 (ZipArchive::extractTo allows for directory traversal when creating directories)
---SKIPIF--
-<?php
-if(!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
 
-$dir = dirname(__FILE__)."/bug70350";
+$dir = "bug70350.dir";
 mkdir($dir);
 $archive = new ZipArchive();
 $archive->open("$dir/a.zip",ZipArchive::CREATE);
@@ -23,7 +19,7 @@ var_dump(file_exists("../down2/"));
 ?>
 --CLEAN--
 <?php
-$dir = dirname(__FILE__)."/bug70350";
+$dir = "bug70350";
 rmdir("$dir/down2");
 unlink("$dir/a.zip");
 rmdir($dir);

@@ -1,13 +1,8 @@
 --TEST--
 setCompressionName and setCompressionIndex methods
---SKIPIF--
-<?php
-/* $Id$ */
-if (!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
-$tmpfile = dirname(__FILE__) . '/__tmp_oo_set_compression.zip';
+$tmpfile = '__tmp_oo_set_compression.zip';
 
 if (file_exists($tmpfile)) {
 	unlink($tmpfile);
@@ -18,7 +13,7 @@ $zip = new ZipArchive;
 if ($zip->open($tmpfile, ZipArchive::CREATE) !== TRUE) {
 	exit('failed');
 }
-$txt = file_get_contents(__FILE__);
+$txt = file_get_contents('oo_setcompression.php');
 $zip->addFromString('entry1.txt', $txt);
 $zip->addFromString('entry2.txt', $txt);
 $zip->addFromString('dir/entry3.txt', $txt);
@@ -53,7 +48,7 @@ zip_close($zip);
 ?>
 --CLEAN--
 <?php
-$tmpfile = dirname(__FILE__) . '/__tmp_oo_set_compression.zip';
+$tmpfile = '__tmp_oo_set_compression.zip';
 unlink($tmpfile);
 ?>
 --EXPECT--

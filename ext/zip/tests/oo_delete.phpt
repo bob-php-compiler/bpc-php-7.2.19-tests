@@ -1,14 +1,8 @@
 --TEST--
 Delete entries
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
-$dirname = dirname(__FILE__) . '/';
-$file = $dirname . '__tmp_oo_delete.zip';
+$file = '__tmp_oo_delete.zip';
 if (file_exists($file)) {
 	unlink($file);
 }

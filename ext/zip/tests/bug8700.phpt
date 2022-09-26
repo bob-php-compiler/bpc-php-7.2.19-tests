@@ -1,14 +1,8 @@
 --TEST--
 Bug #8700 (getFromIndex(0) fails)
---SKIPIF--
-<?php
-/* $Id$ */
-if(!extension_loaded('zip')) die('skip');
-?>
 --FILE--
 <?php
-$thisdir = dirname(__FILE__);
-$filename = $thisdir . "/bug8009.zip";
+$filename = "bug8009.zip";
 
 $zip = new ZipArchive();
 
