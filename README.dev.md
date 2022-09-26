@@ -1156,3 +1156,5 @@
 ## ext/zip
 
 1. not support ZipArchive::getStream()
+
+2. not support zip_entry_open()
