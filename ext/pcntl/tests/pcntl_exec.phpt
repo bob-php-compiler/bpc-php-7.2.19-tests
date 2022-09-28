@@ -9,5 +9,4 @@ echo "nok\n";
 ?>
 --EXPECT--
 Error: No files to compile.
-Rerunning with -v[234] may provide more information.
 ok
