@@ -6,7 +6,15 @@ assigning tests
 function k()
 {
     echo "k\n";
-    return 'k';
+    // bigloo type inference known `return 'k';` return string
+    // bpc not, so when k() as hash key, bpc generate
+    //  (if (php-resource? key)
+    //      (resource-id key)
+    //      key)
+    // then bigloo report
+    //  Type error --  "struct" expected, "bstring" provided
+    $k = 'k';
+    return $k;
 }
 
 class A
