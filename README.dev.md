@@ -571,18 +571,7 @@
     php output concat string
     @see tests/classes/array_conversion_keys.phpt
 
-10. problem running command 'bigloo'
-
-    generate scheme code ok, compile scheme code error.
-    
-    ```php
-    <?php
-    class C
-    {
-        const c1 = D::hello;
-    }
-    ```
-    ERR: Unbound variable -- *CLASS-d*
+10. Unbound variable -- *CLASS-XXX*
 
 11. typehint TypeError message
 
