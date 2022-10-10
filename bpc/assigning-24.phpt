@@ -559,91 +559,91 @@ Warning: Attempt to modify property 'q' of non-object in %s on line 15
 
 Warning: Attempt to increment/decrement property 'p' of non-object in %s on line 15
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 18
 
 Warning: Attempt to increment/decrement property 'p' of non-object in %s on line 18
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 ==resource precrement==
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 23
 
 Warning: Attempt to increment/decrement property 'p' of non-object in %s on line 23
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 26
 
 Warning: Attempt to increment/decrement property 'p' of non-object in %s on line 26
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 ==resource assigning-string-cat==
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 31
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 31
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 ==resource assigning-arithmetic-op==
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 36
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 36
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 39
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 39
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 42
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 42
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 45
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 45
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 48
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 48
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 51
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 51
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 54
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 54
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 57
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 57
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 60
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 60
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 63
 
 Warning: Attempt to assign property 'p' of non-object in %s on line 63
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)

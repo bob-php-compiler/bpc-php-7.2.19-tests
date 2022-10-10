@@ -657,14 +657,14 @@ Warning: Attempt to modify property 'q' of non-object in %s on line 24
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 28
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 ==precrement==
 
@@ -672,14 +672,14 @@ Warning: Attempt to modify property 'q' of non-object in %s on line 34
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 38
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 ==assigning-string-cat==
 
@@ -687,7 +687,7 @@ Warning: Attempt to modify property 'q' of non-object in %s on line 44
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 ==assigning-arithmetic-op==
 
@@ -695,68 +695,68 @@ Warning: Attempt to modify property 'q' of non-object in %s on line 50
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 54
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 58
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 62
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 66
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 70
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 74
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 78
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 82
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }
 
 Warning: Attempt to modify property 'q' of non-object in %s on line 86
 NULL
 object(A)#%d (1) {
   ["resource"]=>
-  resource(5) of type (stream)
+  resource(%d) of type (stream)
 }

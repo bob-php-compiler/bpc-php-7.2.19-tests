@@ -20,6 +20,6 @@ if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
 resource(%d) of type (stream)
 string(6) "hello
 "
-resource(10) of type (stream)
+resource(%d) of type (stream)
 string(%d) "hello
 "

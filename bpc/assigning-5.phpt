@@ -422,63 +422,63 @@ array(0) {
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 16
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 20
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 ==resource precrement==
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 26
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 30
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 ==resource assigning-string-cat==
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 36
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 ==resource assigning-arithmetic-op==
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 42
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 46
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 50
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 54
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 58
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 62
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 66
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 70
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 74
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
 
 Warning: Attempt to modify property 'p' of non-object in %s on line 78
 NULL
-resource(5) of type (stream)
+resource(%d) of type (stream)
