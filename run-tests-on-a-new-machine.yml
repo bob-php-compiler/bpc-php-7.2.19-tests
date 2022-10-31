@@ -1,0 +1,97 @@
+# Usage: ansible-playbook -i REMOTE_IP, -u REMOTE_USER --ask-become-pass -e 'bpc_runtime_version=5.1 bpc_compiler_version=5.1.0 bpc_license=/path/to/bpc.license' run-tests-on-a-new-machine.yml
+- name: run tests on a new machine
+  hosts: all
+  roles:
+    - bpc-compiler
+  vars:
+    sdb1_root: "{{ ansible_env.HOME }}/sdb1"
+  tasks:
+    - name: create mountpoint for /dev/sdb1
+      file: path={{ sdb1_root }} state=directory
+
+    - name: mount /dev/sdb1
+      become: True
+      ansible.builtin.shell: mountpoint {{ sdb1_root }} || (mount /dev/sdb1 {{ sdb1_root }} && chown {{ ansible_user }}:{{ ansible_user }} {{ sdb1_root }})
+      ignore_errors: yes
+
+    - name: copy tests
+      ansible.posix.synchronize:
+        src: .
+        dest: "{{ sdb1_root }}"
+        rsync_opts:
+            - "--exclude=.git"
+            - "--exclude=ext/standard/tests/image"
+
+    - name: install php7.2-cli
+      become: True
+      apt: name=php7.2-cli
+
+    - name: install mysql-server
+      become: True
+      apt: name=mysql-server
+
+    - name: check user rootpw is exists
+      become: True
+      ansible.builtin.command: mysql -s -N -e "SELECT user FROM mysql.user WHERE user LIKE 'rootpw%'"
+      register: result
+      changed_when: result.stdout | length == 0
+
+    - name: create rootpw/123456 for pdo_mysql tests
+      become: True
+      ansible.builtin.command: mysql -e "create user rootpw@localhost identified by '123456'; grant all on *.* to rootpw@localhost with GRANT OPTION;"
+      when: result.stdout | length == 0
+
+    - name: check db test is exists
+      become: True
+      ansible.builtin.command: mysql -s -N -e "SHOW DATABASES LIKE 'test'"
+      register: result
+      changed_when: result.stdout | length == 0
+
+    - name: create test db for pdo_mysql tests
+      become: True
+      ansible.builtin.command: mysql -e "CREATE DATABASE test"
+      when: result.stdout | length == 0
+
+    - name: run tests full
+      ansible.builtin.command:
+        chdir: "{{ sdb1_root }}/bpc-php-7.2.19-tests"
+        cmd: env BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/bpc TEST_PHP_CGI_EXECUTABLE=/usr/local/bin/bpc php run-tests.php {{ item }}
+      with_items:
+        - tests
+        - Zend
+        - ext/standard
+        - ext/posix
+        - ext/date
+        - ext/pcre
+        - ext/mbstring
+        - ext/json
+        - ext/fileinfo
+        - ext/session
+        - ext/filter
+        - ext/pdo
+        - ext/pdo_mysql
+        - ext/openssl
+        - ext/ctype
+        - ext/pcntl
+        - ext/hash
+        - ext/simplexml
+        - ext/iconv
+        - ext/zip
+        - bpc
+      register: tests_full_output
+
+    - name: save tests full output to local
+      local_action: copy content={{ tests_full_output | to_nice_json }} dest=tests_full_output
+
+    - name: run tests partial
+      ansible.builtin.shell:
+        chdir: "{{ sdb1_root }}/bpc-php-7.2.19-tests"
+        cmd: env BPC_AUTO_RUN=TRUE TEST_PHP_EXECUTABLE=/usr/local/bin/bpc TEST_PHP_CGI_EXECUTABLE=/usr/local/bin/bpc php run-tests.php -r `php DIR-TESTS-EXCLUDE-TODO.php ext/curl`
+      with_items:
+        - ext/curl
+        - ext/spl
+        - ext/pdo_sqlite
+      register: tests_partial_output
+
+    - name: save tests partial output to local
+      local_action: copy content={{ tests_partial_output | to_nice_json }} dest=tests_partial_output
