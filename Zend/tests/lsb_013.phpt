@@ -5,7 +5,7 @@ ZE2 Late Static Binding is_callable() and static::method()
 
 class Test1 {
 	static function test() {
-		var_dump(is_callable("static::ok"));
+		//var_dump(is_callable("static::ok"));
 		var_dump(is_callable(array("static","ok")));
 	}
 }
@@ -19,6 +19,4 @@ Test2::test();
 ?>
 --EXPECT--
 bool(false)
-bool(false)
-bool(true)
 bool(true)
