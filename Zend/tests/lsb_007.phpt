@@ -9,4 +9,4 @@ class Foo implements static {
 ?>
 ==DONE==
 --EXPECTF--
-Parse error: %s error,%sexpecting %s in %s on line %d
+Parse error: (unexpected token `static') in %s on line %d

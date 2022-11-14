@@ -5,4 +5,4 @@ ZE2 Late Static Binding interface name "static"
 interface static {
 }
 --EXPECTF--
-Parse error: %s error,%sexpecting %s in %s on line %d
+Parse error: (unexpected token `static') in %s on line %d
