@@ -18,7 +18,7 @@ class B extends A {
 	function test() {
 		self::test1();
 		parent::test2();
-		//static::test3();
+		static::test3();
 		A::test4();
 		B::test5();
 		C::test6();
@@ -35,6 +35,7 @@ $b->test();
 test
 test1
 test2
+test3
 test4
 test5
 

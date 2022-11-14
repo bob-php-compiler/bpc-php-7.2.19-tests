@@ -471,14 +471,12 @@
 
 29. not support return type
 
-30. not support late static bindings
-
-31. not support bprefix strings
+30. not support bprefix strings
 
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
-32. support $arr['index'] in dqstring
+31. support $arr['index'] in dqstring
 
     ```php
     <?php
@@ -488,51 +486,51 @@
     php parse error
     bpc ok
 
-33. not support heredoc/nowdoc embed each other or in dqstring
+32. not support heredoc/nowdoc embed each other or in dqstring
 
-34. not support nullable types
+33. not support nullable types
 
-35. not support indirect call with constants
+34. not support indirect call with constants
 
     @see Zend/tests/indirect_call_from_constant.phpt
 
-36. strict names
+35. strict names
 
     php support ascii 0x80-0xff in variable/class/function... names
     bpc not support this
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-37. not support finally (try..catch..finally)
+36. not support finally (try..catch..finally)
 
-38. not support return type
+37. not support return type
 
-39. optional params should always after required params
+38. optional params should always after required params
 
-40. not support array to string conversion at compile time
+39. not support array to string conversion at compile time
 
     php notice
     bpc parse error
 
-41. not support multi catch
+40. not support multi catch
 
-42. not support literal string as class name
+41. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-43. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+42. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-44. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+43. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-45. arguments without default value must before arguments with default value
+44. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-46. not support CLASS::$static_property = &$var
+45. not support CLASS::$static_property = &$var
 
 **misc**
 
