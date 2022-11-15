@@ -10,8 +10,9 @@ class A {
 class B extends A {
 }
 B::test();
-spl_autoload_register('B::test');
-new X();
+spl_autoload_register(array('B', 'test'));
+$classname = 'X';
+new $classname();
 ?>
 --EXPECTF--
 BB
