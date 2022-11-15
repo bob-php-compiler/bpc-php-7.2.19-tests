@@ -8,7 +8,7 @@ class Example {
 		var_dump(static::class);
 		var_dump(static::class . 'IsAwesome');
 		var_dump(static::class . date('Ymd'));
-		var_dump([static::class]);
+		var_dump(array(static::class));
     }
 }
 
