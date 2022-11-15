@@ -1,5 +1,7 @@
 --TEST--
 Cannot use static::FOO in constant expressions
+--SKIPIF--
+skip define constant
 --FILE--
 <?php
 
