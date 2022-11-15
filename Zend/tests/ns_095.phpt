@@ -3,46 +3,48 @@ Absolute namespaces should be allowed
 --FILE--
 <?php
 
-namespace Foo\Bar {
-    class ClassA{}
-    class ClassB{}
-    class ClassC{}
-
-    function fn_a(){ return __FUNCTION__; }
-    function fn_b(){ return __FUNCTION__; }
-    function fn_c(){ return __FUNCTION__; }
-
-    const CONST_A = 1;
-    const CONST_B = 2;
-    const CONST_C = 3;
+class Foo\Bar\ClassA
+{
 }
-
-namespace Baz {
-
-    use \Foo\Bar\{ClassA, ClassB, ClassC};
-    use function \Foo\Bar\{fn_a, fn_b, fn_c};
-    use const \Foo\Bar\{CONST_A, CONST_B, CONST_C};
-
-    var_dump(ClassA::class);
-    var_dump(ClassB::class);
-    var_dump(ClassC::class);
-    var_dump(fn_a());
-    var_dump(fn_b());
-    var_dump(fn_c());
-    var_dump(CONST_A);
-    var_dump(CONST_B);
-    var_dump(CONST_C);
-
-    echo "\nDone\n";
+class Foo\Bar\ClassB
+{
 }
+class Foo\Bar\ClassC
+{
+}
+function Foo\Bar\fn_a()
+{
+    return __FUNCTION__;
+}
+function Foo\Bar\fn_b()
+{
+    return __FUNCTION__;
+}
+function Foo\Bar\fn_c()
+{
+    return __FUNCTION__;
+}
+define('Foo_Bar_CONST_A', 1);
+define('Foo_Bar_CONST_B', 2);
+define('Foo_Bar_CONST_C', 3);
+var_dump(Foo\Bar\ClassA::class);
+var_dump(Foo\Bar\ClassB::class);
+var_dump(Foo\Bar\ClassC::class);
+var_dump(Foo\Bar\fn_a());
+var_dump(Foo\Bar\fn_b());
+var_dump(Foo\Bar\fn_c());
+var_dump(Foo_Bar_CONST_A);
+var_dump(Foo_Bar_CONST_B);
+var_dump(Foo_Bar_CONST_C);
+echo "\nDone\n";
 ?>
 --EXPECTF--
 string(14) "Foo\Bar\ClassA"
 string(14) "Foo\Bar\ClassB"
 string(14) "Foo\Bar\ClassC"
-string(12) "Foo\Bar\fn_a"
-string(12) "Foo\Bar\fn_b"
-string(12) "Foo\Bar\fn_c"
+string(%d) "foo\bar\fn_a"
+string(%d) "foo\bar\fn_b"
+string(%d) "foo\bar\fn_c"
 int(1)
 int(2)
 int(3)
