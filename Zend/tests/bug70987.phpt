@@ -1,5 +1,7 @@
 --TEST--
 Bug #70987 (static::class within Closure::call() causes segfault)
+--SKIPIF--
+skip closure
 --FILE--
 <?php
 
