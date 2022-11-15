@@ -7,7 +7,7 @@ class A {
 		echo "A\n";
 	}
 	static function __callstatic($name, $args) {
-		call_user_func("static::test");
+		call_user_func(array('static', 'test'));
 	}
 }
 class B extends A {
@@ -16,15 +16,14 @@ class B extends A {
 	}
 	static function __callstatic($name, $args) {
 		parent::__callstatic($name, $args);
-		call_user_func_array("parent::__callstatic", array($name, $args));
+		call_user_func_array(array('parent', '__callstatic'), array($name, $args));
 		parent::foo();
-		call_user_func_array("parent::foo", $args);
+		//call_user_func_array("parent::foo", $args);
 		call_user_func_array(array("parent","foo"), $args);
 	}
 }
 B::foo();
 --EXPECT--
-B
 B
 B
 B
