@@ -1,5 +1,7 @@
 --TEST--
 forward_static_call() calling outside of the inheritance chain.
+--SKIPIF--
+skip TODO forward_static_call
 --FILE--
 <?php
 

@@ -1,5 +1,7 @@
 --TEST--
 forward_static_call() called from outside of a method.
+--SKIPIF--
+skip TODO forward_static_call
 --FILE--
 <?php
 
