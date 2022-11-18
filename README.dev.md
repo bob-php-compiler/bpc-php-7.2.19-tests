@@ -401,10 +401,7 @@
 
 6. closure
 
-    bpc closure not support use syntax
-    bpc closure just a simple anonymous function, can only access argument vars and global vars, it's not a lambda.
-    bpc closure arguments not support default value
-    bpc closure arguments not support reference
+    bpc not support static closure
     bpc closure has only one method: __invoke()
 
 7. not support Null Coalescing Operator ??
