@@ -403,6 +403,7 @@
 
     bpc not support static closure
     bpc closure has only one method: __invoke()
+    var_dump closure got empty Closure object
 
 7. not support Null Coalescing Operator ??
 

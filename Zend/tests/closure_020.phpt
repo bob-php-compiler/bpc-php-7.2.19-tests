@@ -7,7 +7,7 @@ class foo {
 	private $test = 3;
 
 	public function x() {
-		$a = &$this;
+		$a = $this;
 		$this->a = function() use (&$a) { return $a; };
 		var_dump($this->a->__invoke());
 		var_dump(is_a($this->a, 'closure'));
@@ -27,14 +27,7 @@ object(foo)#%d (2) {
   ["test":"foo":private]=>
   int(3)
   ["a"]=>
-  object(Closure)#%d (2) {
-    ["static"]=>
-    array(1) {
-      ["a"]=>
-      *RECURSION*
-    }
-    ["this"]=>
-    *RECURSION*
+  object(Closure)#%d (0) {
   }
 }
 bool(true)
