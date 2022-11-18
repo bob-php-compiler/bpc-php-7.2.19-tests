@@ -1,7 +1,5 @@
 --TEST--
 Closure 033: Recursive var_dump on closures
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 
