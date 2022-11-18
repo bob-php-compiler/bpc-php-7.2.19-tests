@@ -1,7 +1,7 @@
 --TEST--
 runtime cache must be invalidated for Closure::call()
 --SKIPIF--
-skip closure
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 

@@ -1,7 +1,7 @@
 --TEST--
 Rebinding of ::getClosure()s
 --SKIPIF--
-skip closure
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 
