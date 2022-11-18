@@ -1,7 +1,5 @@
 --TEST--
 Testing recursion detection with Closures
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 
