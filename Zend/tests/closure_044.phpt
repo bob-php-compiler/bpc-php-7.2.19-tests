@@ -1,7 +1,7 @@
 --TEST--
 Closure 044: Scope/bounding combination invariants; non static closures
 --SKIPIF--
-skip closure no use
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 /* A non-static closure has a bound instance if it has a scope

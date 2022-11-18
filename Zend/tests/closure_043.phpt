@@ -1,7 +1,7 @@
 --TEST--
 Closure 043: Scope/bounding combination invariants; static closures
 --SKIPIF--
-skip closure no use
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 /* Whether it's scoped or not, a static closure cannot have

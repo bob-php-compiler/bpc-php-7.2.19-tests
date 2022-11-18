@@ -1,7 +1,7 @@
 --TEST--
 Closure 057: segfault in leave helper
 --SKIPIF--
-skip closure
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 class A {

@@ -1,7 +1,7 @@
 --TEST--
 Closure 039: Rebinding closures, change scope, same runtime type
 --SKIPIF--
-skip closure no use
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 

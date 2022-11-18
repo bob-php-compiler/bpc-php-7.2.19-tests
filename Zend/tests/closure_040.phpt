@@ -1,7 +1,7 @@
 --TEST--
 Closure 040: Rebinding closures, bad arguments
 --SKIPIF--
-skip closure no use
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 

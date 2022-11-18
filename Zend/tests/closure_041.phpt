@@ -1,7 +1,7 @@
 --TEST--
 Closure 041: Rebinding: preservation of previous scope when not given as arg unless impossible
 --SKIPIF--
-skip closure no use
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 
