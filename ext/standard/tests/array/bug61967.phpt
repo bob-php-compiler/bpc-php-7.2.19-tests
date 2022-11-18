@@ -11,8 +11,7 @@ $arr = array(
 );
 
 array_walk_recursive($arr,
-    function ($value, $key) {
-        global $arr;
+    function (&$value, $key) use(&$arr) {
         var_dump($key);
         unset($arr[$key]);
     }

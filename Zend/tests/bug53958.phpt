@@ -1,7 +1,5 @@
 --TEST--
 Bug #53958 (Closures can't 'use' shared variables by value and by reference)
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 // TEST 1

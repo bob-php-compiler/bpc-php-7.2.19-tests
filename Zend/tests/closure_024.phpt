@@ -4,10 +4,7 @@ Closure 024: Clone the Closure object
 <?php
 
 $a = 1;
-$c = function($add) {
-    global $a;
-    return $a+$add;
-};
+$c = function($add) use(&$a) { return $a+$add; };
 
 $cc = clone $c;
 

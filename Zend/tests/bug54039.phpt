@@ -1,7 +1,5 @@
 --TEST--
 Bug #54039 (use() of static variables in lambda functions can break staticness)
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 function test_1() {

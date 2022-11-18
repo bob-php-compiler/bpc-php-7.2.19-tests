@@ -1,7 +1,5 @@
 --TEST--
 Closure 056: self::class in non-static closure in static method.
---SKIPIF--
-skip closure
 --FILE--
 <?php
 

@@ -1,7 +1,5 @@
 --TEST--
 Bug #54367 (Use of closure causes problem in ArrayAccess)
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 class MyObjet implements ArrayAccess

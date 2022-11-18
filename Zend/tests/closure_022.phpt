@@ -3,7 +3,7 @@ Closure 022: Closure properties
 --FILE--
 <?php
 $a = 0;
-$foo = function() {
+$foo = function() use ($a) {
 };
 $foo->a = 1;
 ?>
