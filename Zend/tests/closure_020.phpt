@@ -1,7 +1,5 @@
 --TEST--
 Closure 020: Trying to access private property outside class
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 
