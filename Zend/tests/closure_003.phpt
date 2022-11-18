@@ -1,7 +1,5 @@
 --TEST--
 Closure 003: Lambda with lexical variables (local scope)
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 
