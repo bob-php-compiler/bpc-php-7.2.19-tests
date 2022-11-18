@@ -15,11 +15,6 @@ var_dump($x());
 
 ?>
 --EXPECTF--
-object(Closure)#%d (1) {
-  ["static"]=>
-  array(1) {
-    ["x"]=>
-    *RECURSION*
-  }
+object(Closure)#%d (0) {
 }
 int(1)
