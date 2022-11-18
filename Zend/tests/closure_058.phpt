@@ -1,7 +1,5 @@
 --TEST--
 Closure 058: Closure scope and object
---SKIPIF--
-skip closure
 --FILE--
 <?php
 class A {
