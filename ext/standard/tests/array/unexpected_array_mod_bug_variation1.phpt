@@ -10,9 +10,9 @@ $array = array(
     4 => "entry_4",
     5 => "entry_5"
 );
-usort($array, function($a, $b) {
-    global $array;
+usort($array, function($a, $b) use (&$array, &$ref) {
     unset($array[2]);
+    $ref = $array;
     return $a <=> $b;
 });
 var_dump($array);

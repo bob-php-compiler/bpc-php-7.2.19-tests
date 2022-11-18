@@ -1,7 +1,5 @@
 --TEST--
 Closure 037: self:: and static:: within closures
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 class A {
