@@ -12,7 +12,7 @@ test(function() { return new stdclass; });
 
 test(function() { });
 
-$a = function($x) {};
+$a = function($x) use ($y) {};
 try {
 	test($a);
 } catch (Throwable $e) {
