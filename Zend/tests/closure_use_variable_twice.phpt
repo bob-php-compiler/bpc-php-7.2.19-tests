@@ -12,4 +12,4 @@ var_dump($a);
 
 ?>
 --EXPECTF--
-Fatal error: Cannot use variable $a twice in %s on line %d
+Parse error: Redefinition of parameter $a in %s on line %d

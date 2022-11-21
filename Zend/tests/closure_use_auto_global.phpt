@@ -13,4 +13,4 @@ test();
 
 ?>
 --EXPECTF--
-Fatal error: Cannot use auto-global as lexical variable in %s on line %d
+Parse error: Cannot use $GLOBALS as parameter in %s on line %d
