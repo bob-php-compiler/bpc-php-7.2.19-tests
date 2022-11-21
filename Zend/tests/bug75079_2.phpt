@@ -19,7 +19,12 @@ class Foo
 
 $f = Foo::test();
 
-var_dump(($f())());
+var_dump($f()());
+
+//class A{}
+//$a = new A;
+//var_dump($f->bindTo($a, A::CLASS)()());
+
 ?>
 --EXPECTF--
 int(123)
