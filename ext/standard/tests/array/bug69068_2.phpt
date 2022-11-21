@@ -5,17 +5,13 @@ Bug #69068: Exchanging array during array_walk -> memory errors (variation)
 
 $array = array(1, 2, 3);
 $array2 = array(4, 5);
-
-function test(&$value, $key) {
-    global $array2;
+array_walk($array, function(&$value, $key) use ($array2) {
     var_dump($value);
     if ($value == 2) {
         $GLOBALS['array'] = $array2;
     }
     $value *= 10;
-}
-
-array_walk($array, 'test');
+});
 var_dump($array, $array2);
 
 ?>
