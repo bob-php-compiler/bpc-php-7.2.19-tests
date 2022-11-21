@@ -3,10 +3,10 @@ Bug #72622 (array_walk + array_replace_recursive create references from nothing)
 --FILE--
 <?php
 
-function test(&$val, $name) {}
-
 function walk (array $arr) {
-	array_walk($arr, 'test');
+	array_walk($arr, function (&$val, $name) {
+
+	});
 
 	return $arr;
 }
