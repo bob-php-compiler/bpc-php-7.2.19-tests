@@ -7,14 +7,22 @@ function change(&$ref) {
 	return;
 }
 
+$func = function (&$ref) {
+	return change($ref);
+};
+
 $array = array(1);
 var_dump(list($val) = $array); // NG: Invalid opcode
 
 change(list($val) = $array);
 var_dump($array);
 
+$array = array(1);
+
+$func(list($val) = $array);
+var_dump($array);
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Only variables can be passed by reference in %s on line 10
+Error: Only variables can be passed by reference in %s on line %d
  -- compile-error
