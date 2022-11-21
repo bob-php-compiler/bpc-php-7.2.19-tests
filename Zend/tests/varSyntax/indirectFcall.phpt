@@ -21,11 +21,9 @@ $id($id)('var_dump')(7);
 
 (function($x) { return $x; })('id')('var_dump')(8);
 
-/*
 ($f = function($x = null) use (&$f) {
-    return $x ?: $f;
+    return $x ? $x : $f;
 })()()()('var_dump')(9);
-*/
 
 class Test {
     public static function id($x = array(__CLASS__, 'id')) { return $x; }
@@ -52,6 +50,7 @@ int(5)
 int(6)
 int(7)
 int(8)
+int(9)
 int(10)
 int(11)
 int(12)
