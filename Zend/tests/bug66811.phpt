@@ -1,7 +1,7 @@
 --TEST--
 Bug #66811: Cannot access static::class in lambda, writen outside of a class
 --SKIPIF--
-skip closure
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 class A {
