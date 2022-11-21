@@ -9,8 +9,7 @@ var_dump((array) new stdclass);
 var_dump($h = (array) function () { return 2; });
 var_dump($h[0]());
 
-$i = function () {
-    global $h;
+$i = function () use (&$h) {
 	return $h;
 };
 
