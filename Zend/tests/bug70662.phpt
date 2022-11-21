@@ -4,8 +4,7 @@ Bug #70662: Duplicate array key via undefined index error handler
 <?php
 
 $a = array();
-set_error_handler(function() {
-    global $a;
+set_error_handler(function() use(&$a) {
     $a['b'] = 2;
 });
 $a['b'] += 1;
