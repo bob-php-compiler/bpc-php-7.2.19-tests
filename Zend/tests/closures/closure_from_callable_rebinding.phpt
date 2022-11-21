@@ -1,7 +1,7 @@
 --TEST--
 Testing Closure::fromCallable() functionality: Rebinding
 --SKIPIF--
-skip closure
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 
