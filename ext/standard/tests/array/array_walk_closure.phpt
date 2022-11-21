@@ -15,7 +15,7 @@ var_dump(array_walk($ar, function(){ var_dump(func_get_args());}));
 echo "\nclosure with array\n";
 $ar = array("one" => 1, "two"=>2, "three" => 3);
 $user_data = array("sum" => 42);
-$func = function($value, $key, $udata) {
+$func = function($value, $key, &$udata) {
 	var_dump($udata);
 	$udata["sum"] += $value;
 };
@@ -27,8 +27,7 @@ var_dump($user_data["sum"]);
 echo "\nclosure with use\n";
 $ar = array("one" => 1, "two"=>2, "three" => 3);
 $user_data = array("sum" => 42);
-$func = function($value, $key) {
-    global $user_data;
+$func = function($value, $key) use (&$user_data) {
 	var_dump($user_data);
 	$user_data["sum"] += $value;
 };
@@ -41,7 +40,7 @@ var_dump($user_data["sum"]);
 echo "\nclosure with object\n";
 $ar = array("one" => 1, "two"=>2, "three" => 3);
 $user_data = (object)array("sum" => 42);
-$func = function($value, $key, $udata) {
+$func = function($value, $key, &$udata) {
 	var_dump($udata);
 	$udata->sum += $value;
 };
@@ -126,11 +125,11 @@ array(1) {
 }
 array(1) {
   ["sum"]=>
-  int(42)
+  int(43)
 }
 array(1) {
   ["sum"]=>
-  int(42)
+  int(45)
 }
 bool(true)
 End result:int(42)
