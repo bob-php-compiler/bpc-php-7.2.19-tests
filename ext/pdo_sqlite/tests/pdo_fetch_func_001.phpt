@@ -9,7 +9,7 @@ $db->exec('INSERT INTO testing VALUES(1, "php")');
 $db->exec('INSERT INTO testing VALUES(2, "")');
 
 $st = $db->query('SELECT * FROM testing');
-$st->fetchAll(PDO::FETCH_FUNC, function($x, $y) { global $st; var_dump($st); print "data: $x, $y\n"; });
+$st->fetchAll(PDO::FETCH_FUNC, function($x, $y) use ($st) { var_dump($st); print "data: $x, $y\n"; });
 
 $st = $db->query('SELECT name FROM testing');
 var_dump($st->fetchAll(PDO::FETCH_FUNC, 'strtoupper'));
