@@ -7,8 +7,7 @@ $errnames = array(
     E_NOTICE => 'E_NOTICE',
     E_WARNING => 'E_WARNING',
 );
-set_error_handler(function (int $errno, string $errmsg, string $file, int $line) {
-    global $errnames;
+set_error_handler(function (int $errno, string $errmsg, string $file, int $line) use ($errnames) {
     echo "$errnames[$errno]: $errmsg on line $line\n";
     return true;
 });
