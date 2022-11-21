@@ -21,7 +21,7 @@ var_dump( array_filter($input, function($input) { return ($input > 1); }) );
 
 // anonymous callback function with reference
 echo "Anonymous callback function with reference parameter\n";
-var_dump( array_filter($input, function($input) { return ($input < 1); }) );
+var_dump( array_filter($input, function(&$input) { return ($input < 1); }) );
 
 // anonymous callback function with null argument
 echo "Anonymous callback funciton with null argument\n";
