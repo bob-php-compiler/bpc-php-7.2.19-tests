@@ -1,7 +1,5 @@
 --TEST--
 Cannot use() auto-global
---SKIPIF--
-skip closure no use
 --FILE--
 <?php
 
