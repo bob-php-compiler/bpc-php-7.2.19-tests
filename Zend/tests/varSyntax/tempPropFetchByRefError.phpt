@@ -3,8 +3,8 @@ Passing a property fetch on a temporary by reference is not allowed
 --FILE--
 <?php
 
-function f(&$ref) {}
-f(array(0, 1)->prop);
+$fn = function(&$ref) {};
+$fn(array(0, 1)->prop);
 
 ?>
 --EXPECTF--
