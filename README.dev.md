@@ -55,6 +55,14 @@
     
     @see Zend/tests/bug72101.phpt
     method argument is_ref? not checked
+    
+    ```php
+    <?php
+        function test($a) {}
+        $f = 'test';
+        $f(array(0,1)[0]);
+    ```
+    pass literal array element as argument report error "update-value-generic: unexpected assignment lval"
 
 9. typehint argument default value cannot be php-constant
 
