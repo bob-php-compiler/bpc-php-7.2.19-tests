@@ -9,7 +9,7 @@ class Cycle
     public function __construct()
     {
 		$obj = $this;
-        $this->thing = function() {};
+        $this->thing = function() use($obj) {};
     }
 
     public function __destruct()
