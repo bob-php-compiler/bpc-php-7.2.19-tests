@@ -10,7 +10,7 @@ class foo {
 	}
 
 	public function teste() {
-		return foo::x(function ($a,$b) { });
+		return foo::x(function ($a,$b=1) { });
 	}
 }
 
