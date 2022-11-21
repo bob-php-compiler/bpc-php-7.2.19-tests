@@ -1,7 +1,7 @@
 --TEST--
 Bug #70987 (static::class within Closure::call() causes segfault)
 --SKIPIF--
-skip closure
+skip closure has only one method: __invoke()
 --FILE--
 <?php
 
