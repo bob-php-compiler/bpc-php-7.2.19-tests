@@ -1151,3 +1151,7 @@
 1. not support ZipArchive::getStream()
 
 2. not support zip_entry_open()
+
+## ext/event
+
+1. throw exception in callback same as failed to invoke callback
