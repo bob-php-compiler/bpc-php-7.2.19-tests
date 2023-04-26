@@ -13,7 +13,7 @@ register_shutdown_function(function () use (&$stream) {
 	fclose($stream);
 });
 
-$event = new $eventClass($base, $stream, $eventClass::READ | $eventClass::PERSIST, function () {
+$event = new $eventClass($base, $stream, $eventClass::READ | $eventClass::PERSIST, function ($fd, $what, $arg) {
     echo "ok\n";
 });
 $event->add(.1);

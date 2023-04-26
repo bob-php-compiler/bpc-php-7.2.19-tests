@@ -15,7 +15,7 @@ var_dump($config->setFlags($flags));
 
 $base = new $eventBaseClass($config);
 $stream = STDOUT;
-$event = new $eventClass($base, -1, $eventClass::TIMEOUT, function () {
+$event = new $eventClass($base, -1, $eventClass::TIMEOUT, function ($fd, $what, $arg) {
     echo "ok\n";
 });
 $event->add(.1);
