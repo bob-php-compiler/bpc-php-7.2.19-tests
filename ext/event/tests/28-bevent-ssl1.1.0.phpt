@@ -5,7 +5,8 @@ Check for EventBufferEvent SSL features, OpenSSL version 1.1.0 and above
 if (!class_exists('EventBufferEvent')) {
 	die('skip Event is built without EventBufferEvent support');
 }
-if (!class_exists(EVENT_NS . '\\EventSslContext')) {
+$eventSslContextClass = EVENT_NS . '\\EventSslContext';
+if (!class_exists($eventSslContextClass)) {
     die('skip Event is built without SSL support');
 }
 $class = 'EventBufferEvent';
@@ -18,7 +19,7 @@ if (version_compare(PHP_VERSION, '7.0.0') < 0) {
 	die('skip target is PHP version >= 7');
 }
 if (defined('EventSslContext::OPENSSL_VERSION_NUMBER') &&
-	EventSslContext::OPENSSL_VERSION_NUMBER < 0x10100000)
+	$eventSslContextClass::OPENSSL_VERSION_NUMBER < 0x10100000)
 {
 	die('skip the test is for OpenSSL version >= 1.1.0');
 }
