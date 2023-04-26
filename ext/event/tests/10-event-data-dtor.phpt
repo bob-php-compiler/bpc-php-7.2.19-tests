@@ -17,11 +17,11 @@ class _Indicator {
 
 $base = new $eventBaseClass();
 
-$e1 = new $eventClass($base, -1, $eventClass::TIMEOUT, function() {
+$e1 = new $eventClass($base, -1, $eventClass::TIMEOUT, function($fd, $what, $arg) {
 	echo "2\n";
 });
 $e1->addTimer(0.10);
-$e2 = new $eventClass($base, -1, $eventClass::TIMEOUT, function() {
+$e2 = new $eventClass($base, -1, $eventClass::TIMEOUT, function($fd, $what, $arg) {
 	echo "3\n";
 });
 $e2->addTimer(0.11);
@@ -44,10 +44,12 @@ $e1 = null;
 $e2 = null;
 echo "end\n";
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 10: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 start
-1
 2
 3
-4
 end
+1
+4
