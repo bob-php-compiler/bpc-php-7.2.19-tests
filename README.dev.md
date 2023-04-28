@@ -731,8 +731,6 @@
     - getmyinode
     - assert_options
     - assert
-    - cli_get_process_title
-    - cli_set_process_title
     - mail
     - ignore_user_abort
     - connection_aborted

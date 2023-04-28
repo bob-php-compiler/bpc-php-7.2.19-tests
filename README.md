@@ -23,6 +23,7 @@
 - [x] ext/simplexml
 - [x] ext/iconv
 - [x] ext/zip
+- [x] ext/event (core)
 - [x] bpc
 
 # Requirements
