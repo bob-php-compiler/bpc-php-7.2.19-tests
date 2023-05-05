@@ -86,7 +86,7 @@ array(7) {
   ["mode"]=>
   string(2) "r+"
   ["unread_bytes"]=>
-  int(5)
+  int(0)
   ["seekable"]=>
   bool(false)
 }

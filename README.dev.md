@@ -917,13 +917,9 @@
     TODO STREAM_OOB STREAM_PEEK
     recvfrom only set address when success
 
-32. feof() on socket will try to fill the buffer
+32. stream_select() return value remove dup streams
 
-    @see ext/standard/tests/streams/stream_get_meta_data_socket_variation1.phpt
-
-33. stream_select() return value remove dup streams
-
-34. stream_get_meta_data()
+33. stream_get_meta_data()
 
     rfc2397 stream:
         bpc: return eof/unread_bytes status
@@ -932,38 +928,38 @@
     bpc: only rfc2397 stream and socket/socket-server stream support metadata, dir and file always return false
     php: return metadata array
 
-35. not support file://
+34. not support file://
 
-36. not support stream context params
+35. not support stream context params
 
-37. opendir only support local directory
+36. opendir only support local directory
 
-38. php://memory php://temp
+37. php://memory php://temp
 
     php://memory is a tmpfile in /run/shm
     php://temp   is a tmpfile in sys_temp_dir
     both of them open mode fixed to "w+"
 
-39. stream_context_get_options/stream_context_set_option() only accept stream-context resource
+38. stream_context_get_options/stream_context_set_option() only accept stream-context resource
 
-40. not support glob://
+39. not support glob://
 
-41. no default stream context
+40. no default stream context
 
-42. not support ftp:// or ftps://
+41. not support ftp:// or ftps://
 
-43. get_loaded_extensions() no zend_extensions parameter
+42. get_loaded_extensions() no zend_extensions parameter
 
-44. getopt() always use $_SERVER['argv']
+43. getopt() always use $_SERVER['argv']
 
-45. phpinfo()
+44. phpinfo()
 
     - not support INFO_CREDITS INFO_LICENSE
     - details info may different
 
-46. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
+45. Stream Socket Transports currently only support tcp, udp, unix, udg, ssl, tls
 
-47. stream_socket_enable_crypto()
+46. stream_socket_enable_crypto()
 
     parameter 4 different:
     php: resouce session_stream = null
@@ -973,12 +969,12 @@
     STREAM_CRYPTO_METHOD_TLS_CLIENT
     STREAM_CRYPTO_METHOD_TLS_SERVER
 
-48. file_get_contents()
+47. file_get_contents()
 
     bpc implements file_get_contents("https?://") by curl extension
     currently not support $http_reponse_header
 
-49. not support php://filter
+48. not support php://filter
 
 ## ext/date
 
