@@ -3,6 +3,8 @@ Bug #51647 (Certificate file without private key (pk in another file) doesn't wo
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');
+
+putenv('MYSQL_TEST_HOST=127.0.0.1'); // localhost default to unix socket
 require_once("connect.inc");
 
 if ($IS_MYSQLND && !extension_loaded("openssl"))
@@ -35,6 +37,7 @@ $link->close();
 ?>
 --FILE--
 <?php
+    putenv('MYSQL_TEST_HOST=127.0.0.1'); // localhost default to unix socket
 	include ("connect.inc");
 
 	if (!is_object($link = mysqli_init()))
