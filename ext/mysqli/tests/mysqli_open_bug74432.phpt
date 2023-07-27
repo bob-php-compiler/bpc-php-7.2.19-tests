@@ -12,7 +12,7 @@ require_once('skipifconnectfailure.inc');
 
 	require_once("connect.inc");
 
-	$handle = mysqli_connect("$host:$port", $user, $passwd);
+	$handle = mysqli_connect($host, $user, $passwd);
 
 	var_dump($handle);
 
