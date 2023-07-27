@@ -2,7 +2,6 @@
 set character set
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 
 if (!function_exists('mysqli_set_charset')) {

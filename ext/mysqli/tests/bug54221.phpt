@@ -2,7 +2,6 @@
 Bug #54221 mysqli::get_warnings segfault when used in multi queries
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --INI--
@@ -42,6 +41,6 @@ mysqli.reconnect = Off
 	print "done!";
 ?>
 --EXPECTF--
-Warning: : 
+Warning: :
 Warning: 1050: Table 't54221' already exists
 done!

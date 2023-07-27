@@ -2,7 +2,6 @@
 mysqli_fetch_object with classes
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

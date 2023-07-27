@@ -2,7 +2,6 @@
 enable local infile
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --INI--

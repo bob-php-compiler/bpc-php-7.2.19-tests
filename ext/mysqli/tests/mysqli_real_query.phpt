@@ -2,7 +2,6 @@
 mysqli_real_query()
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

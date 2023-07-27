@@ -2,7 +2,6 @@
 Bug #62046 	mysqli@mysqlnd can't iterate over stored sets after call to mysqli_stmt_reset()
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

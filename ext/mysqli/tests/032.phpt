@@ -2,7 +2,6 @@
 function test: mysqli_info
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

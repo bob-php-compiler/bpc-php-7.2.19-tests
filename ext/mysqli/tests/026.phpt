@@ -2,7 +2,6 @@
 mysqli bind_param/bind_result with send_long_data
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

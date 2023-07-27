@@ -2,7 +2,6 @@
 mysqli_stmt_send_long_data() - exceed packet size, libmysql - bug #26824
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 

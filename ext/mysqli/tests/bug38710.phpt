@@ -2,7 +2,6 @@
 Bug #38710 (data leakage because of nonexisting boundary checking in statements)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

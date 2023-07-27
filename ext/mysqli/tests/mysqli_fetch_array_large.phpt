@@ -2,7 +2,6 @@
 mysqli_fetch_array() - large packages (to test compression)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --INI--

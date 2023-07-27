@@ -2,7 +2,6 @@
 Bug #35517 (mysqli_stmt_fetch returns NULL)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

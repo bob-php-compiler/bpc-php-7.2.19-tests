@@ -2,7 +2,6 @@
 mysqli_send_query()
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 if (!function_exists('mysqli_send_query')) {

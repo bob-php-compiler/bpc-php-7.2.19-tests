@@ -1,7 +1,5 @@
 --TEST--
 Bug #31141 (properties declared in the class extending MySQLi are not available)
---SKIPIF--
-<?php require_once('skipif.inc'); ?>
 --FILE--
 <?php
 class Test extends mysqli

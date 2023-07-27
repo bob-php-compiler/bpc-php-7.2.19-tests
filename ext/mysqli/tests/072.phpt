@@ -2,7 +2,6 @@
 mysqli warning_count, get_warnings
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

@@ -2,7 +2,6 @@
 Bug #77597: mysqli_fetch_field hangs scripts
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

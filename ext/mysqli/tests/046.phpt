@@ -2,7 +2,6 @@
 mysqli_stmt_affected_rows (delete)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

@@ -2,7 +2,6 @@
 Persistent connections and mysqli.max_links
 --SKIPIF--
 <?php
-	require_once('skipif.inc');
 	require_once('skipifemb.inc');
 	require_once('skipifconnectfailure.inc');
 	require_once('table.inc');
@@ -260,7 +259,7 @@ array(2) {
   ["label"]=>
   string(1) "a"
 }
-[015] Can open more persistent connections than allowed, [0] 
+[015] Can open more persistent connections than allowed, [0]
 array(3) {
   ["total"]=>
   int(3)

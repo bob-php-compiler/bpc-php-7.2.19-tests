@@ -2,7 +2,6 @@
 mysqli_report(), change user, MySQL 5.6+
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 

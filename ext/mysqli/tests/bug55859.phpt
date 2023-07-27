@@ -2,7 +2,6 @@
 Bug #55859 mysqli->stat property access gives error
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

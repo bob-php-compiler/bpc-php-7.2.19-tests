@@ -2,7 +2,6 @@
 Bug #66762 	mysqli@libmysql segfault in mysqli_stmt::bind_result() when link closed
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

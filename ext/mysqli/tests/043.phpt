@@ -2,7 +2,6 @@
 mysqli_stmt_bind_param (UPDATE)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

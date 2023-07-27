@@ -2,7 +2,6 @@
 mysqli_debug() - enabling trace with ini setting
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 

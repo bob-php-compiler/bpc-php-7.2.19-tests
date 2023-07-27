@@ -2,7 +2,6 @@
 mysqli_stmt_bind_result() - playing with references
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>

@@ -2,7 +2,6 @@
 Bug #55283 (SSL options set by mysqli_ssl_set ignored for MySQLi persistent connections)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 require_once("connect.inc");
 

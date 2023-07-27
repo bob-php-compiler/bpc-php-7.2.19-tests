@@ -1,7 +1,6 @@
 --TEST--
 mysqli_get_client_version()
 --SKIPIF--
-<?php require_once('skipif.inc'); ?>
 <?php require_once('skipifemb.inc'); ?>
 --FILE--
 <?php

@@ -2,7 +2,6 @@
 Bug #45289 (Bogus store_result on PS)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

@@ -2,7 +2,6 @@
 Bug #51647 (Certificate file without private key (pk in another file) doesn't work)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 require_once("connect.inc");
 

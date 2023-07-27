@@ -2,7 +2,6 @@
 mysqli_fetch_array() - all datatypes but BIT
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>

@@ -4,7 +4,6 @@ Bug #33491 (extended mysqli class crashes when result is not object)
 error_reporting=1
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

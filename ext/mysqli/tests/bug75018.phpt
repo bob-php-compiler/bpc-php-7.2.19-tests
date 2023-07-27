@@ -2,7 +2,6 @@
 Bug #75018 Data corruption when reading fields of bit type
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

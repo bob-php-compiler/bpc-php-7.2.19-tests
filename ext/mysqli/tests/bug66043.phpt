@@ -2,7 +2,6 @@
 Bug #66043 (Segfault calling bind_param() on mysqli)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once("connect.inc");
 if ($IS_MYSQLND) {
     die("skip libmysql only test");

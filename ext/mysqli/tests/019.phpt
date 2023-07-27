@@ -2,7 +2,6 @@
 mysqli fetch (bind_param + bind_result)
 --SKIPIF--
 <?php
-require_once('skipif.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--
