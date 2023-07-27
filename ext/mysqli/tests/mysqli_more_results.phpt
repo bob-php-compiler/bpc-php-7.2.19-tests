@@ -36,8 +36,8 @@ require_once('skipifconnectfailure.inc');
 	if ($strict_on)
 		ob_start();
 
-	if (mysqli_get_server_version($link) > 41000 && !($ret = mysqli_more_results($link)))
-		printf("[007] Expecting boolean/true, got %s/%s\n", gettype($ret), $ret);
+	if (mysqli_get_server_version($link) > 41000 && ($ret = mysqli_more_results($link)))
+		printf("[007] Expecting boolean/false, got %s/%s\n", gettype($ret), $ret);
 	do {
 		$res = mysqli_store_result($link);
 		mysqli_free_result($res);
@@ -60,8 +60,8 @@ require_once('skipifconnectfailure.inc');
 		printf("[009] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
 	print "[010]\n";
 	$i = 1;
-	if (mysqli_get_server_version($link) > 41000 && !($ret = mysqli_more_results($link)))
-		printf("[011] Expecting boolean/true, got %s/%s\n", gettype($ret), $ret);
+	if (mysqli_get_server_version($link) > 41000 && ($ret = mysqli_more_results($link)))
+		printf("[011] Expecting boolean/false, got %s/%s\n", gettype($ret), $ret);
 
 	if ($strict_on)
 		ob_start();
