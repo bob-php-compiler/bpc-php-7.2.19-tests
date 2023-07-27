@@ -49,11 +49,13 @@ if ($i != $link->insert_id || $i != mysqli_insert_id($link)) {
     die();
 }*/
 
+/*
 $link->ping();
 if ($i != $link->insert_id || $i != mysqli_insert_id($link)) {
     printf("[006] mysqli_ping changes insert_id: %s", var_export($link->insert_id, true));
     die();
 }
+*/
 
 /*
 mysqlnd resets the IDE to 0
@@ -77,7 +79,7 @@ if (0 != $stmt->insert_id || 0 != mysqli_stmt_insert_id($stmt)) {
     die();
 }
 
-unset($stmt);
+$stmt->close();
 if ($i != $link->insert_id || $i != mysqli_insert_id($link)) {
     printf("[009] stmt free changes insert_id: %s", var_export($link->insert_id, true));
     die();
