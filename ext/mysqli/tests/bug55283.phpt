@@ -3,6 +3,8 @@ Bug #55283 (SSL options set by mysqli_ssl_set ignored for MySQLi persistent conn
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');
+
+putenv('MYSQL_TEST_HOST=127.0.0.1'); // localhost default to unix socket
 require_once("connect.inc");
 
 if ($IS_MYSQLND && !extension_loaded("openssl"))
@@ -35,14 +37,15 @@ $link->close();
 ?>
 --FILE--
 <?php
+    putenv('MYSQL_TEST_HOST=127.0.0.1'); // localhost default to unix socket
 	include "connect.inc";
 	$db1 = new mysqli();
 
 
-	$flags = MYSQLI_CLIENT_SSL | MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT;
+	$flags = MYSQLI_CLIENT_SSL;
 
 	$link = mysqli_init();
-	mysqli_ssl_set($link, null, null, null, null, "RC4-MD5");
+	mysqli_ssl_set($link, null, null, null, null, "AES256-SHA");
 	if (my_mysqli_real_connect($link, 'p:' . $host, $user, $passwd, $db, $port, null, $flags)) {
 		$r = $link->query("SHOW STATUS LIKE 'Ssl_cipher'");
 		var_dump($r->fetch_row());
@@ -50,7 +53,7 @@ $link->close();
 
 	/* non-persistent connection */
 	$link2 = mysqli_init();
-	mysqli_ssl_set($link2, null, null, null, null, "RC4-MD5");
+	mysqli_ssl_set($link2, null, null, null, null, "AES256-SHA");
 	if (my_mysqli_real_connect($link2, $host, $user, $passwd, $db, $port, null, $flags)) {
 		$r2 = $link2->query("SHOW STATUS LIKE 'Ssl_cipher'");
 		var_dump($r2->fetch_row());
@@ -63,12 +66,12 @@ array(2) {
   [0]=>
   string(10) "Ssl_cipher"
   [1]=>
-  string(7) "RC4-MD5"
+  string(10) "AES256-SHA"
 }
 array(2) {
   [0]=>
   string(10) "Ssl_cipher"
   [1]=>
-  string(7) "RC4-MD5"
+  string(10) "AES256-SHA"
 }
 done
