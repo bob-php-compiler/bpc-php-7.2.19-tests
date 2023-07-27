@@ -40,7 +40,7 @@ $link->close();
 	if (!is_object($link = mysqli_init()))
 		printf("[001] Cannot create link\n");
 
-	if (!my_mysqli_real_connect($link, $host, $user, $passwd, $db, $port, $socket, MYSQLI_CLIENT_SSL | MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT)) {
+	if (!my_mysqli_real_connect($link, $host, $user, $passwd, $db, $port, $socket, MYSQLI_CLIENT_SSL)) {
 		printf("[003] Connect failed, [%d] %s\n", mysqli_connect_errno(), mysqli_connect_error());
 	}
 
