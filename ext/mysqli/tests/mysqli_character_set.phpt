@@ -3,7 +3,6 @@ Fetching results from tables of different charsets.
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');
-require_once('skipifemb.inc');
 
 if (!function_exists('mysqli_set_charset')) {
 	die('skip mysqli_set_charset() not available');

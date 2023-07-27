@@ -1153,3 +1153,5 @@
 ## ext/mysqli
 
 1. not support mysqlnd
+
+2. not support mysqli embeded server

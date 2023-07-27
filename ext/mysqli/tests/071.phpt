@@ -2,7 +2,6 @@
 mysqli thread_id & kill
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

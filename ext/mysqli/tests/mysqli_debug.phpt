@@ -2,7 +2,6 @@
 mysqli_debug()
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 
 if (!function_exists('mysqli_debug'))

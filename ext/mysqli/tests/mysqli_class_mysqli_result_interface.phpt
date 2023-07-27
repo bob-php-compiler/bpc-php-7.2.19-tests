@@ -2,7 +2,6 @@
 Interface of the class mysqli_result
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

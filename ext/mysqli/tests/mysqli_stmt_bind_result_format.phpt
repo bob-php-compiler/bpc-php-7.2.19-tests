@@ -2,7 +2,6 @@
 Playing with SELECT FORMAT(...) AS _format - see also bugs.php.net/42378
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --INI--

@@ -2,7 +2,6 @@
 mysql_fetch_row (OO-Style)
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

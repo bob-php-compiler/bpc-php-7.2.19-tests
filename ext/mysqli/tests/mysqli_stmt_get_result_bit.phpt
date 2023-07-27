@@ -2,7 +2,6 @@
 Fetching BIT column values using the PS API
 --SKIPIF--
 <?php
-	require_once('skipifemb.inc');
 	require_once('skipifconnectfailure.inc');
 
 	if (!function_exists('mysqli_stmt_get_result'))

@@ -2,7 +2,6 @@
 mysqli_stmt_bind_result() - ZEROFILL
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

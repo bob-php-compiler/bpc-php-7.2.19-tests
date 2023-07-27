@@ -2,7 +2,6 @@
 mysqli_real_connect()
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --INI--

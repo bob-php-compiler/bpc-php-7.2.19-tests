@@ -2,7 +2,6 @@
 mysqli_result->lengths
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

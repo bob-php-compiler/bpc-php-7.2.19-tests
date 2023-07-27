@@ -5,7 +5,6 @@ mysqli_real_escape_string() - gb2312
 if (ini_get('unicode.semantics'))
 	die("skip Test cannot be run in unicode mode");
 
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 require_once('connect.inc');
 

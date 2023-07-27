@@ -2,7 +2,6 @@
 mysqli_fetch_assoc() - BIT
 --SKIPIF--
 <?php
-	require_once('skipifemb.inc');
 	require_once('skipifconnectfailure.inc');
 
 	require_once('connect.inc');

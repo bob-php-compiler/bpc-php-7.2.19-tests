@@ -2,7 +2,6 @@
 Calling connect() on an open connection to create a new connection
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

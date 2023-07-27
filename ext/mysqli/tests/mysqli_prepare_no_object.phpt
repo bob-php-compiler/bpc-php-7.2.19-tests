@@ -2,7 +2,6 @@
 mysqli_prepare() - no object on failure
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --FILE--

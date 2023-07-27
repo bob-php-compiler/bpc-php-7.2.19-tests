@@ -2,7 +2,6 @@
 Constants exported by ext/mysqli
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 ?>
 --INI--

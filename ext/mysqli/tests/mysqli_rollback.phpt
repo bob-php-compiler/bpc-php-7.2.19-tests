@@ -4,7 +4,6 @@ mysqli_rollback()
 <?php  ?>
 <?php  ?>
 <?PHP
-	require_once('skipifemb.inc');
 	require_once('skipifconnectfailure.inc');
 
 	require_once('connect.inc');

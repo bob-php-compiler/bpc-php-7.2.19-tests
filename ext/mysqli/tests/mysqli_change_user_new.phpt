@@ -2,7 +2,6 @@
 mysqli_change_user(), MySQL 5.6+
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 
 if (!$link = my_mysqli_connect($host, $user, $passwd, $db, $port, $socket))

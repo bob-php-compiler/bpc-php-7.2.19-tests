@@ -2,7 +2,6 @@
 Persistent connections - limits (-1, unlimited)
 --SKIPIF--
 <?php
-require_once('skipifemb.inc');
 require_once('skipifconnectfailure.inc');
 require_once("connect.inc");
 ?>
