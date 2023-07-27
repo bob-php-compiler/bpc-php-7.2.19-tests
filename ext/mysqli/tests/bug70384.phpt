@@ -43,8 +43,8 @@ mysqli_float_handling - ensure 4 byte float is handled correctly
 		printf("[005] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
 		die();
 	}
-	$rows = $res->fetch_all();
-	if (json_encode($rows[0][0]) != json_encode($jsfield_data)) {
+	$rows = $res->fetch_array();
+	if (json_encode($rows[0]) != json_encode($jsfield_data)) {
 		printf("[006] Data differs");
 		var_dump(json_encode($rows[0][0]) != json_encode($jsfield_data));
 		die();
