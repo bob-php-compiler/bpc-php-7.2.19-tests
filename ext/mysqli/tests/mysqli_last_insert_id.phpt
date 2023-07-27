@@ -52,8 +52,8 @@ API vs. SQL LAST_INSERT_ID()
 
 	$api_id = $link->insert_id;
 	$new_sql_id = get_sql_id($link);
-	if (0 !== $api_id) {
-		printf("[007] API id should have been reset to 0 because previous query was SELECT, got API %d, SQL %d\n",
+	if ($api_id == 0) {
+		printf("[007] API id unexpectedly reset to 0 because previous query was SELECT, got API %d, SQL %d\n",
 		  $api_id, $new_sql_id);
 	}
 	if ($new_sql_id != $sql_id) {
@@ -67,8 +67,8 @@ API vs. SQL LAST_INSERT_ID()
 	$api_id = $link->insert_id;
 	$new_sql_id = get_sql_id($link);
 
-	if (0 !== $api_id) {
-		printf("[010] API id should have been reset to 0 because previous query was SELECT, got API %d, SQL %d\n",
+	if ($api_id == 0) {
+		printf("[010] API id unexpectedly reset to 0 because previous query was SELECT, got API %d, SQL %d\n",
 		  $api_id, $new_sql_id);
 	}
 	if ($new_sql_id != $sql_id) {
@@ -142,8 +142,8 @@ API vs. SQL LAST_INSERT_ID()
 
 	$api_id = $link->insert_id;
 	$new_sql_id = get_sql_id($link);
-	if (0 !== $api_id) {
-		printf("[027] API id should have been reset to 0 because previous query failed, got API %d, SQL %d\n",
+	if ($api_id == 0) {
+		printf("[027] API id unexpectedly reset to 0 because previous query failed, got API %d, SQL %d\n",
 		  $api_id, $new_sql_id);
 	}
 	if ($new_sql_id != $sql_id) {
