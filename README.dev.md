@@ -1149,3 +1149,7 @@
 ## ext/event
 
 1. throw exception in callback same as failed to invoke callback
+
+## ext/mysqli
+
+1. not support mysqlnd
