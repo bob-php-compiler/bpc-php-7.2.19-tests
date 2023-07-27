@@ -8,7 +8,7 @@ require_once('skipifconnectfailure.inc');
 <?php
 require_once("connect.inc");
 
-$mysqli = new mysqli("$host:$port", $user, $passwd, $db);
+$mysqli = new mysqli($host, $user, $passwd, $db);
 
 $tbl = "test_bug75018";
 $sql = "DROP TABLE IF EXISTS $tbl";
