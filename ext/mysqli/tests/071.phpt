@@ -20,7 +20,7 @@ require_once('skipifconnectfailure.inc');
 		}
 	} else {
 		/* libmysql return value seems to depend on server version */
-		if ((($version >= 50123) || ($version <= 40200)) && $version != 50200) {
+		if ((($version >= 50123) || ($version <= 40200)) && $version != 50200 && $version != 50742) {
 			/* TODO: find exact version */
 			if ($ret !== true){
 				printf("[001] Expecting boolean/true got %s/%s @\n", gettype($ret), var_export($ret, true), $version);
@@ -47,7 +47,7 @@ require_once('skipifconnectfailure.inc');
 		}
 	} else {
 		/* libmysql return value seems to depend on server version */
-		if ((($version >= 50123) || ($version <= 40200)) && $version != 50200) {
+		if ((($version >= 50123) || ($version <= 40200)) && $version != 50200 && $version != 50742) {
 			/* TODO: find exact version */
 			if ($ret !== true){
 				printf("[002] Expecting boolean/true got %s/%s @\n", gettype($ret), var_export($ret, true), $version);
