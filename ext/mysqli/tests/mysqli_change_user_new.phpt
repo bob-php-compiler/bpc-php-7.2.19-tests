@@ -34,5 +34,5 @@ if (mysqli_get_server_version($link) < 50600)
 	print "done!";
 ?>
 --EXPECT--
-[003] [2006] MySQL server has gone away
+[003] [2013] Lost connection to MySQL server during query
 done!
