@@ -232,10 +232,6 @@ Before second pconnect:array(3) {
   ["cached_plinks"]=>
   int(0)
 }
-
-Warning: main(): MySQL server has gone away in %s on line %d
-
-Warning: main(): Error reading result set's header in %s line %d
 After second pconnect:array(3) {
   ["total"]=>
   int(1)
@@ -258,7 +254,7 @@ array(2) {
   ["label"]=>
   string(1) "a"
 }
-[015] Can open more persistent connections than allowed, [0]
+[015] Can open more persistent connections than allowed, [0] 
 array(3) {
   ["total"]=>
   int(3)
