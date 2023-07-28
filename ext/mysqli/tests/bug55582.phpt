@@ -36,5 +36,7 @@ array(1) {
 Warning: mysqli_num_rows(): Function cannot be used with MYSQL_USE_RESULT in %s on line %d
 int(0)
 NULL
-int(1)
+
+Warning: mysqli_num_rows(): Function cannot be used with MYSQL_USE_RESULT in %s on line %d
+int(0)
 done
