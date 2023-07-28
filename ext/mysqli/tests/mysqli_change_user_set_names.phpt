@@ -151,5 +151,38 @@ if ($version[0] <= 4 && $version[1] < 1)
 	mysqli_close($link);
 	print "done!";
 ?>
---EXPECTF--
+--EXPECT--
+[012] Charsets/collations have not been reset to their defaults.
+Got:
+array(6) {
+  ["charset_client"]=>
+  string(6) "latin2"
+  ["charset_connection"]=>
+  string(6) "latin2"
+  ["charset_results"]=>
+  string(6) "latin2"
+  ["collation_connection"]=>
+  string(17) "latin2_general_ci"
+  ["collation_database"]=>
+  string(17) "latin1_swedish_ci"
+  ["collation_server"]=>
+  string(17) "latin1_swedish_ci"
+}
+Expected:
+array(6) {
+  ["charset_client"]=>
+  string(6) "latin1"
+  ["charset_connection"]=>
+  string(6) "latin1"
+  ["charset_results"]=>
+  string(6) "latin1"
+  ["collation_connection"]=>
+  string(17) "latin1_swedish_ci"
+  ["collation_database"]=>
+  string(17) "latin1_swedish_ci"
+  ["collation_server"]=>
+  string(17) "latin1_swedish_ci"
+}
+[014] Expecting connection charset to be latin1 got latin2
+[015] Expecting collation to be latin1_swedish_ci got latin2_general_ci
 done!
