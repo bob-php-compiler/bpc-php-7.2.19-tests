@@ -24,7 +24,7 @@
 
     
 
-2. mysqli_change_user to invalid username password report error
+2. mysqli_change_user to invalid username password / mysqli_kill report error
 
     ​	`[2013] Lost connection to MySQL server during query`
 
@@ -33,6 +33,8 @@
     ​	`[2006] MySQL server has gone away`
 
     @see mysqli_change_user_new.phpt
+
+    @see mysqli_kill.phpt
 
 3. mysql_stmt_reset clears buffered results, @see bug62046.phpt
 
