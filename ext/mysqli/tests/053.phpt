@@ -1,5 +1,8 @@
 --TEST--
 not freed resultset
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

@@ -1,5 +1,8 @@
 --TEST--
 Calling connect() on an open connection to create a new connection
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

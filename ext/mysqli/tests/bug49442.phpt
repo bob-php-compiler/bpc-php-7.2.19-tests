@@ -1,5 +1,10 @@
 --TEST--
 Bug #49422 (mysqlnd: mysqli_real_connect() and LOAD DATA INFILE crash)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
+--bpc-include-file ext/mysqli/tests/clean_table.inc \
+--bpc-include-file ext/mysqli/tests/local_infile_tools.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

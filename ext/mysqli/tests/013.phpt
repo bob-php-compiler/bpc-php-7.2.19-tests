@@ -1,5 +1,8 @@
 --TEST--
 mysqli fetch mixed / mysql_query (may fail when using 4.1 library with 5.x server)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

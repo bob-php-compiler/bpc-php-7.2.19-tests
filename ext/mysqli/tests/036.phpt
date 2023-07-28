@@ -1,5 +1,8 @@
 --TEST--
 function test: mysqli_insert_id()
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 	if (PHP_INT_SIZE == 8) {

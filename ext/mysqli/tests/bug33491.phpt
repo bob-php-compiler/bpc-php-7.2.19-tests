@@ -2,6 +2,9 @@
 Bug #33491 (extended mysqli class crashes when result is not object)
 --INI--
 error_reporting=1
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

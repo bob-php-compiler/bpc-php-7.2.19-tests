@@ -1,5 +1,10 @@
 --TEST--
 mysqli_multi_query()
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
+--bpc-include-file ext/mysqli/tests/table.inc \
+--bpc-include-file ext/mysqli/tests/clean_table.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

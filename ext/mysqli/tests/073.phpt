@@ -1,5 +1,7 @@
 --TEST--
 mysqli_driver properties
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
 --FILE--
 <?php
 	require_once("connect.inc");

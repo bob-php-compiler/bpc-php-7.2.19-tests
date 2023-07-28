@@ -1,10 +1,13 @@
 --TEST--
 mysqli_options()
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
+--bpc-include-file ext/mysqli/tests/clean_table.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');
 ?>
-<?php require_once('skipifemb.inc'); ?>
 --FILE--
 <?php
 	/* see mysqli.c for details */

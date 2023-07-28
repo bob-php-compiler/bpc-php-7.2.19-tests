@@ -1,5 +1,7 @@
 --TEST--
 Bug #36802 (crashes with with mysqli_set_charset())
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
 --FILE--
 <?php
 	class really_my_mysqli extends mysqli {

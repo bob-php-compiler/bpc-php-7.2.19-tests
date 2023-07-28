@@ -1,5 +1,8 @@
 --TEST--
 Bug #74547 mysqli::change_user() doesn't accept null as $database argument w/strict_types
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
   require_once('skipifconnectfailure.inc');

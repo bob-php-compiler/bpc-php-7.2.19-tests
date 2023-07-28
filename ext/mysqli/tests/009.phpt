@@ -1,5 +1,8 @@
 --TEST--
 mysqli fetch bigint values (ok to fail with 4.1.x)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 	if (PHP_INT_SIZE == 8) {

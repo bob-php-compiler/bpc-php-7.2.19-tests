@@ -1,5 +1,8 @@
 --TEST--
 Playing with datatype change between prepare and execute
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

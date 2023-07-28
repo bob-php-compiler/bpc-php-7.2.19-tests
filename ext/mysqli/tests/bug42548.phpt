@@ -1,5 +1,8 @@
 --TEST--
 Bug #42548 PROCEDURE xxx can't return a result set in the given context (works in 5.2.3!!)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

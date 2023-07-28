@@ -1,5 +1,8 @@
 --TEST--
 Bug #54674 mysqlnd valid_sjis_(head|tail) is using invalid operator and range.
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

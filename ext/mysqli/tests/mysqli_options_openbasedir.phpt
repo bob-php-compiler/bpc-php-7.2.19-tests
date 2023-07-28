@@ -1,5 +1,8 @@
 --TEST--
 mysqli_options() - MYSQLI_OPT_LOCAL_INFILE and open_basedir
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

@@ -1,5 +1,8 @@
 --TEST--
 Bug #35517 (mysqli_stmt_fetch returns NULL)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

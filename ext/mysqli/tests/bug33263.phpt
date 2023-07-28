@@ -1,5 +1,8 @@
 --TEST--
 Bug #33263 (mysqli_real_connect in __construct)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

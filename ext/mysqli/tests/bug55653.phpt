@@ -1,5 +1,8 @@
 --TEST--
 Bug #55653 	PS crash with libmysql when binding same variable as param and out
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

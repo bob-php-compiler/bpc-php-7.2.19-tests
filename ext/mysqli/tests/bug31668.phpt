@@ -1,5 +1,8 @@
 --TEST--
 Bug #31668 (multi_query works exactly every other time (multi_query was global, now per connection))
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

@@ -1,5 +1,8 @@
 --TEST--
 Bug #55283 (SSL options set by mysqli_ssl_set ignored for MySQLi persistent connections)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

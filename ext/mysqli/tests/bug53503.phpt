@@ -1,5 +1,9 @@
 --TEST--
 Bug #53503 (mysqli::query returns false after successful LOAD DATA query)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
+--bpc-include-file ext/mysqli/tests/local_infile_tools.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

@@ -1,5 +1,8 @@
 --TEST--
 Bug #75018 Data corruption when reading fields of bit type
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

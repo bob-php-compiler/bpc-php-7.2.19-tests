@@ -1,5 +1,8 @@
 --TEST--
 MySQL Bug #49406 (Binding params doesn't work when selecting a date inside a CASE-WHEN, http://bugs.mysql.com/bug.php?id=49406)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

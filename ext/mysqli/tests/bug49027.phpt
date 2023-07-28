@@ -1,5 +1,9 @@
 --TEST--
 Bug #49027 (mysqli_options() doesn't work when using mysqlnd)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
+--bpc-include-file ext/mysqli/tests/clean_table.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

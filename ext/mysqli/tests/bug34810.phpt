@@ -1,5 +1,8 @@
 --TEST--
 Bug #34810 (mysqli::init() and others use wrong $this pointer without checks)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

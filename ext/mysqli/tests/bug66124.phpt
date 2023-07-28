@@ -1,5 +1,8 @@
 --TEST--
 Bug #66124 (mysqli under mysqlnd loses precision when bind_param with 'i')
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('connect.inc');

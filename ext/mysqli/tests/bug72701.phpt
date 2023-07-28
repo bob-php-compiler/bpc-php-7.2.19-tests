@@ -1,5 +1,8 @@
 --TEST--
 Bug #72701 mysqli_get_host_info() wrong output
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

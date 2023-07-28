@@ -1,5 +1,9 @@
 --TEST--
 MySQL 5.6 EXPIRE PASSWORD protocol change
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/table.inc \
+--bpc-include-file ext/mysqli/tests/clean_table.inc \
 --SKIPIF--
 <?php
 require_once('connect.inc');

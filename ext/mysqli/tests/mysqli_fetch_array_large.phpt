@@ -1,5 +1,9 @@
 --TEST--
 mysqli_fetch_array() - large packages (to test compression)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
+--bpc-include-file ext/mysqli/tests/clean_table.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

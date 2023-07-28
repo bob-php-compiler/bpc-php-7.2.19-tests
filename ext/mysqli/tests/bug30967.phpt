@@ -1,5 +1,8 @@
 --TEST--
 Bug #30967 (problems with properties declared in the class extending the class extending MySQLi)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

@@ -1,5 +1,8 @@
 --TEST--
 Bug #74021 (fetch_array broken data. Data more then MEDIUMBLOB)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

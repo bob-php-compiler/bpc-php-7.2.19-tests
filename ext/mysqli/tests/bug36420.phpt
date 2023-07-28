@@ -1,5 +1,8 @@
 --TEST--
 Bug #36420 (segfault when access result->num_rows after calling result->close())
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

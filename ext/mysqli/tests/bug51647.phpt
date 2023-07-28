@@ -1,5 +1,8 @@
 --TEST--
 Bug #51647 (Certificate file without private key (pk in another file) doesn't work)
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');

@@ -1,5 +1,9 @@
 --TEST--
 mysqli_float_handling - ensure 4 byte float is handled correctly
+--ARGS--
+--bpc-include-file ext/mysqli/tests/connect.inc \
+--bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
+--bpc-include-file ext/mysqli/tests/clean_table.inc \
 --SKIPIF--
 <?php
 	require_once('skipifconnectfailure.inc');
