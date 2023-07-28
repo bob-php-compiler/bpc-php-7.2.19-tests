@@ -295,6 +295,8 @@ Warning: mysqli_real_query(): (%d/%d): You have an error in your SQL syntax; che
 Warning: mysqli_kill(): processid should have positive value in %s on line %d
 
 Warning: mysqli_stmt_prepare(): (%d/%d): You have an error in your SQL syntax; check the manual that corresponds to your %s server version for the right syntax to use near 'FOO' at line 1 in %s on line %d
+
+Warning: mysqli_kill(): (%d/%d): Query execution was interrupted in %s on line %d
 [013] Access denied for user '%s'@'%s' (using password: YES)
 [016] Access denied for user '%s'@'%s' (using password: YES)
 done!
