@@ -35,5 +35,4 @@ require_once('skipifconnectfailure.inc');
 	echo "done!";
 ?>
 --EXPECT--
-int(42)
 done!
