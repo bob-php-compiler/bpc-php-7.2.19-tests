@@ -61,5 +61,9 @@ if (!mysqli_query($link, "DROP TABLE IF EXISTS my_time"))
 mysqli_close($link);
 ?>
 --EXPECTF--
+Warning: in %s line %d: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
+Warning: in %s line %d: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 %d%d%d%d-%d%d-%d%d %d%d:%d%d:%d%d<br>
 %d%d%d%d-%d%d-%d%d %d%d:%d%d:%d%d<br>
