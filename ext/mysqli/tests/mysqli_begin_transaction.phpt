@@ -22,9 +22,6 @@ if (!have_innodb($link))
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_begin_transaction()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_begin_transaction($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -40,9 +37,6 @@ if (!have_innodb($link))
 
 	if (!is_null($tmp = @mysqli_begin_transaction($link, 0, $link)))
 		printf("[006] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
-	if (!is_null($tmp = @mysqli_begin_transaction($link, 0, "mytrx", $link)))
-		printf("[007] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	if (!mysqli_query($link, 'DROP TABLE IF EXISTS test'))
 		printf("[008] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
