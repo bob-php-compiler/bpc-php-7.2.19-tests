@@ -77,47 +77,69 @@ Interface of the class mysqli_stmt
 		printf("%s\n", $var);
 
 	printf("\nObject variables:\n");
-	$variables = array_keys(get_object_vars($stmt));
+	$variables = array_keys(@get_object_vars($stmt));
 	foreach ($variables as $k => $var)
 		printf("%s\n", $var);
 
 printf("\nMagic, magic properties:\n");
 
-assert(mysqli_stmt_affected_rows($stmt) === $stmt->affected_rows);
+if (mysqli_stmt_affected_rows($stmt) !== $stmt->affected_rows) {
+    printf("expect affected_rows equal\n");
+}
 printf("stmt->affected_rows = '%s'\n", $stmt->affected_rows);
 
 if (!$stmt->prepare("INSERT INTO test(id, label) VALUES (100, 'z')") ||
 !$stmt->execute())
 printf("[001] [%d] %s\n", $stmt->errno, $stmt->error);
 
-assert(mysqli_stmt_affected_rows($stmt) === $stmt->affected_rows);
+if (mysqli_stmt_affected_rows($stmt) !== $stmt->affected_rows) {
+    printf("expect affected_rows equal\n");
+}
 printf("stmt->affected_rows = '%s'\n", $stmt->affected_rows);
 
-assert(mysqli_stmt_errno($stmt) === $stmt->errno);
+if (mysqli_stmt_errno($stmt) !== $stmt->errno) {
+    printf("expect errno equal\n");
+}
 printf("stmt->errno = '%s'\n", $stmt->errno);
 
-assert(mysqli_stmt_error($stmt) === $stmt->error);
+if (mysqli_stmt_error($stmt) !== $stmt->error) {
+    printf("expect error equal\n");
+}
 printf("stmt->error = '%s'\n", $stmt->error);
 
-assert(mysqli_stmt_error_list($stmt) === $stmt->error_list);
+if (mysqli_stmt_error_list($stmt) !== $stmt->error_list) {
+    printf("expect error_list equal\n");
+}
 var_dump("stmt->error = ", $stmt->error_list);
 
-assert(mysqli_stmt_field_count($stmt) === $stmt->field_count);
+if (mysqli_stmt_field_count($stmt) !== $stmt->field_count) {
+    printf("expect field_count equal\n");
+}
 printf("stmt->field_count = '%s'\n", $stmt->field_count);
 
-assert($stmt->id > 0);
+if ($stmt->id <= 0) {
+    printf("expect id > 0\n");
+}
 printf("stmt->id = '%s'\n", $stmt->id);
 
-assert(mysqli_stmt_insert_id($stmt) === $stmt->insert_id);
+if (mysqli_stmt_insert_id($stmt) !== $stmt->insert_id) {
+    printf("expect insert_id equal\n");
+}
 printf("stmt->insert_id = '%s'\n", $stmt->insert_id);
 
-assert(mysqli_stmt_num_rows($stmt) === $stmt->num_rows);
+if (mysqli_stmt_num_rows($stmt) !== $stmt->num_rows) {
+    printf("expect num_rows equal\n");
+}
 printf("stmt->num_rows = '%s'\n", $stmt->num_rows);
 
-assert(mysqli_stmt_param_count($stmt) === $stmt->param_count);
+if (mysqli_stmt_param_count($stmt) !== $stmt->param_count) {
+    printf("expect param_count equal\n");
+}
 printf("stmt->param_count = '%s'\n", $stmt->param_count);
 
-assert(mysqli_stmt_sqlstate($stmt) === $stmt->sqlstate);
+if (mysqli_stmt_sqlstate($stmt) !== $stmt->sqlstate) {
+    printf("expect sqlstate equal\n");
+}
 printf("stmt->sqlstate = '%s'\n", $stmt->sqlstate);
 
 printf("\nAccess to undefined properties:\n");
@@ -170,12 +192,11 @@ id
 
 Magic, magic properties:
 
-Warning: mysqli_stmt_affected_rows(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_affected_rows(): invalid object or resource mysqli_stmt in %s on line %d
 
-Warning: main(): Property access is not allowed yet in %s on line %d
+Warning: Property access is not allowed yet in %s on line %d
 
-Warning: main(): Property access is not allowed yet in %s on line %d
+Warning: Property access is not allowed yet in %s on line %d
 stmt->affected_rows = ''
 stmt->affected_rows = '1'
 stmt->errno = '0'
