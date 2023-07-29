@@ -61,16 +61,22 @@ require_once('skipifconnectfailure.inc');
 
 	printf("\nMagic, magic properties:\n");
 
-	assert(mysqli_get_client_info() === $driver->client_info);
+	if (mysqli_get_client_info() !== $driver->client_info) {
+	    printf("expect client_info equal\n");
+	}
 	printf("driver->client_info = '%s'\n", $driver->client_info);
 
-	assert(mysqli_get_client_version() === $driver->client_version);
+	if (mysqli_get_client_version() !== $driver->client_version) {
+	    printf("expect client_version equal\n");
+	}
 	printf("driver->client_version = '%s'\n", $driver->client_version);
 
-	assert($driver->driver_version > 0);
+	if ($driver->driver_version <= 0) {
+	    printf("expect driver_version > 0\n");
+	}
 	printf("driver->driver_version = '%s'\n", $driver->driver_version);
 
-	assert(in_array($driver->report_mode,
+	if (!in_array($driver->report_mode,
 				array(
 					MYSQLI_REPORT_ALL,
 					MYSQLI_REPORT_STRICT,
@@ -78,13 +84,19 @@ require_once('skipifconnectfailure.inc');
 					MYSQLI_REPORT_INDEX,
 					MYSQLI_REPORT_OFF
 				)
-	));
+	)) {
+	    printf("expect report_mode in array\n");
+	}
 
 	printf("driver->report_mode = '%s'\n", $driver->report_mode);
 	$driver->report_mode = MYSQLI_REPORT_STRICT;
-	assert($driver->report_mode === MYSQLI_REPORT_STRICT);
+	if ($driver->report_mode !== MYSQLI_REPORT_STRICT) {
+	    printf("expect report_mode === MYSQLI_REPORT_STRICT");
+	}
 
-	assert(is_bool($driver->embedded));
+	if (!is_bool(!$driver->embedded)) {
+	    printf("expected embedded is bool\n");
+	}
 	printf("driver->embedded = '%s'\n", $driver->embedded);
 
 	printf("driver->reconnect = '%s'\n", $driver->reconnect);
