@@ -33,7 +33,9 @@ if (!have_innodb($link))
 	mysqli_free_result($res);
 
 	$num = $row['_num'];
-	assert($num > 0);
+	if ($num <= 0) {
+	    printf("expected num > 0");
+	}
 
 	if (!$res = mysqli_query($link, 'DELETE FROM test'))
 		printf("[004] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
