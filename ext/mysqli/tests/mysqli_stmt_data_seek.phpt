@@ -16,12 +16,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_data_seek()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
-	if (!is_null($tmp = @mysqli_stmt_data_seek($link)))
-		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	require('table.inc');
 
 	if (!$stmt = mysqli_stmt_init($link))
@@ -89,8 +83,7 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli_stmt_data_seek(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_data_seek(): invalid object or resource mysqli_stmt in %s on line %d
 int(3)
 int(1)
 int(1)

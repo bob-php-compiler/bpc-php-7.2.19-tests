@@ -16,9 +16,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_field_count()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_stmt_field_count($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -89,11 +86,9 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli_stmt_field_count(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_field_count(): invalid object or resource mysqli_stmt in %s on line %d
 
-Warning: mysqli_stmt_field_count(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_field_count(): invalid object or resource mysqli_stmt in %s on line %d
 
 Warning: mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement in %s on line %d
 

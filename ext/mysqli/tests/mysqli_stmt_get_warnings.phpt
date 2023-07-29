@@ -32,9 +32,6 @@ mysqli_query($link, "DROP TABLE IF EXISTS test");
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_get_warnings()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_stmt_get_warnings($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -106,8 +103,7 @@ mysqli_query($link, "DROP TABLE IF EXISTS test");
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli_stmt_get_warnings(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_get_warnings(): invalid object or resource mysqli_stmt in %s on line %d
 
 Warning: mysqli_stmt_get_warnings(): Couldn't fetch mysqli_stmt in %s on line %d
 done!

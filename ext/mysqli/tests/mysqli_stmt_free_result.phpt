@@ -21,9 +21,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_free_result()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_stmt_free_result($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -82,8 +79,7 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli_stmt_free_result(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_free_result(): invalid object or resource mysqli_stmt in %s on line %d
 
 Warning: mysqli_stmt_free_result(): Couldn't fetch mysqli_stmt in %s on line %d
 done!

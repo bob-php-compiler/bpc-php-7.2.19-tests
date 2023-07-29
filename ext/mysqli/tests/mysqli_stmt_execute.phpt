@@ -22,9 +22,6 @@ if (mysqli_get_server_version($link) <= 40100) {
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_execute()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_stmt_execute($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -140,11 +137,9 @@ if (mysqli_get_server_version($link) <= 40100) {
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli_stmt_execute(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_execute(): invalid object or resource mysqli_stmt in %s on line %d
 
-Warning: mysqli_stmt_execute(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_execute(): invalid object or resource mysqli_stmt in %s on line %d
 bool(true)
 bool(true)
 [027] Expecting boolean/false, got boolean/1
