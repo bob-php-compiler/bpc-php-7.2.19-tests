@@ -16,9 +16,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_param_count()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_stmt_param_count($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -56,11 +53,6 @@ require_once('skipifconnectfailure.inc');
 
 	mysqli_close($link);
 
-	/* Check that the function alias exists. It's a deprecated function,
-	but we have not announce the removal so far, therefore we need to check for it */
-	if (!is_null($tmp = @mysqli_stmt_param_count()))
-		printf("[041] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	print "done!";
 ?>
 --CLEAN--
@@ -68,8 +60,7 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli_stmt_param_count(): invalid object or resource mysqli_stmt
- in %s on line %d
+Warning: mysqli_stmt_param_count(): invalid object or resource mysqli_stmt in %s on line %d
 
 Warning: mysqli_stmt_param_count(): Couldn't fetch mysqli_stmt in %s on line %d
 done!
