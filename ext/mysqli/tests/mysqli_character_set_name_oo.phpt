@@ -19,7 +19,7 @@ mysqli_chararcter_set_name(), mysql_client_encoding() [alias]
 		printf("[001] Cannot connect to the server using host=%s, user=%s, passwd=***, dbname=%s, port=%s, socket=%s\n",
 			$host, $user, $db, $port, $socket);
 
-	if (!is_null($tmp = @$mysqli->character_set_name($link)))
+	if (!is_null($tmp = $mysqli->character_set_name($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	if (!$res = $mysqli->query('SELECT version() AS server_version'))
@@ -68,4 +68,6 @@ mysqli_chararcter_set_name(), mysql_client_encoding() [alias]
 	print "done!";
 ?>
 --EXPECTF--
+Warning: Too many arguments to method mysqli::character_set_name(): 0 at most, 1 provided in %s on line %d
+[002] Expecting NULL, got %s
 done!
