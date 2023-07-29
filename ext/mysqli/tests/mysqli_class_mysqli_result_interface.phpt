@@ -19,7 +19,9 @@ require_once('skipifconnectfailure.inc');
 
 	$link = my_mysqli_connect($host, $user, $passwd, $db, $port, $socket);
 	$res = mysqli_query($link, 'SELECT * FROM test');
-	assert(mysqli_fetch_row($res) === $row);
+	if (mysqli_fetch_row($res) !== $row) {
+	    printf("expected row equal\n");
+	}
 
 	printf("Parent class:\n");
 	var_dump(get_parent_class($mysqli_result));
@@ -81,29 +83,39 @@ require_once('skipifconnectfailure.inc');
 
 	printf("\nMagic, magic properties:\n");
 
-	assert(($tmp = mysqli_field_tell($res)) === $mysqli_result->current_field);
+	if (($tmp = mysqli_field_tell($res)) !== $mysqli_result->current_field) {
+	    printf("expect current_field equal\n");
+	}
 	printf("mysqli_result->current_field = '%s'/%s ('%s'/%s)\n",
 		$mysqli_result->current_field, gettype($mysqli_result->current_field),
 		$tmp, gettype($tmp));
 
-	assert(($tmp = mysqli_field_count($link)) === $mysqli_result->field_count);
+	if (($tmp = mysqli_field_count($link)) !== $mysqli_result->field_count) {
+	    printf("expect field_count equal\n");
+	}
 	printf("mysqli_result->field_count = '%s'/%s ('%s'/%s)\n",
 		$mysqli_result->field_count, gettype($mysqli_result->field_count),
 		$tmp, gettype($tmp));
 
-	assert(($tmp = mysqli_fetch_lengths($res)) === $mysqli_result->lengths);
+	if (($tmp = mysqli_fetch_lengths($res)) !== $mysqli_result->lengths) {
+	    printf("expect lengths equal\n");
+	}
 	printf("mysqli_result->lengths -> '%s'/%s ('%s'/%s)\n",
 		((is_array($mysqli_result->lengths)) ? implode(' ', $mysqli_result->lengths) : 'n/a'),
 		gettype($mysqli_result->lengths),
 		((is_array($tmp)) ? implode(' ', $tmp) : 'n/a'),
 		gettype($tmp));
 
-	assert(($tmp = mysqli_num_rows($res)) === $mysqli_result->num_rows);
+	if (($tmp = mysqli_num_rows($res)) !== $mysqli_result->num_rows) {
+        printf("expect num_rows equal\n");
+    }
 	printf("mysqli_result->num_rows = '%s'/%s ('%s'/%s)\n",
 		$mysqli_result->num_rows, gettype($mysqli_result->num_rows),
 		$tmp, gettype($tmp));
 
-	assert(in_array($mysqli_result->type, array(MYSQLI_STORE_RESULT, MYSQLI_USE_RESULT)));
+	if (!in_array($mysqli_result->type, array(MYSQLI_STORE_RESULT, MYSQLI_USE_RESULT))) {
+	    printf("expect type in array\n");
+	}
 	printf("mysqli_result->type = '%s'/%s\n",
 		((MYSQLI_STORE_RESULT == $mysqli_result->type) ? 'store' : 'use'),
 		gettype($mysqli_result->type));
