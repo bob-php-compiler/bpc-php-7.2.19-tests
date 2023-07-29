@@ -25,15 +25,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_bind_param()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
-	if (!is_null($tmp = @mysqli_stmt_bind_param($link)))
-		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
-	if (!is_null($tmp = @mysqli_stmt_bind_param($link, $link)))
-		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	require('table.inc');
 
 	$stmt = mysqli_stmt_init($link);
@@ -84,7 +75,7 @@ require_once('skipifconnectfailure.inc');
 				printf("[008][$i] Expecting boolean/false, got %s/%s\n", gettype($tmp), $tmp);
 		}
 		if (($tmp = (memory_get_usage() - $mem)) > 600)
-			printf("[009] Function seems to be leaking, because it used %d bytes. During tests it used only 92 bytes.", $tmp);
+			printf("[009] Function seems to be leaking, because it used %d bytes. During tests it used only 92 bytes.\n", $tmp);
 	}
 
 	$id = 100;
@@ -382,10 +373,6 @@ require_once('skipifconnectfailure.inc');
 	mysqli_stmt_close($stmt);
 	mysqli_close($link);
 
-	/* Check that the function alias exists. It's a deprecated function,
-	but we have not announce the removal so far, therefore we need to check for it */
-	if (!is_null($tmp = @mysqli_stmt_bind_param()))
-			printf("[021] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 	print "done!";
 ?>
 --CLEAN--
@@ -404,4 +391,5 @@ Warning: mysqli_stmt_bind_param(): Number of elements in type definition string 
 Warning: mysqli_stmt_bind_param(): Undefined fieldtype a (parameter 3) in %s on line %d
 
 Warning: mysqli_stmt_bind_param(): Undefined fieldtype a (parameter 4) in %s on line %d
+[009] Function seems to be leaking, because it used 233472 bytes. During tests it used only 92 bytes.
 done!
