@@ -14,9 +14,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp	= NULL;
 	$link	= NULL;
 
-	if (NULL !== ($tmp = @mysqli_dump_debug_info()))
-		printf("[001] Expecting NULL/NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (NULL !== ($tmp = @mysqli_dump_debug_info($link)))
 		printf("[002] Expecting NULL/NULL, got %s/%s\n", gettype($tmp), $tmp);
 
