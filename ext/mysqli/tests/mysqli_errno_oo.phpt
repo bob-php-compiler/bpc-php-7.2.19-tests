@@ -45,6 +45,6 @@ require_once('skipifconnectfailure.inc');
 int(0)
 int(%d)
 
-Warning: main(): Couldn't fetch mysqli in %s on line %d
+Warning: Couldn't fetch mysqli in %s on line %d
 NULL
 done!

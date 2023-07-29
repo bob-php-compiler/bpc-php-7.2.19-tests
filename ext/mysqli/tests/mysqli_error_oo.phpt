@@ -42,6 +42,6 @@ require_once('skipifconnectfailure.inc');
 	print "done!";
 ?>
 --EXPECTF--
-Warning: main(): Couldn't fetch mysqli in %s on line %d
+Warning: Couldn't fetch mysqli in %s on line %d
 NULL
 done!
