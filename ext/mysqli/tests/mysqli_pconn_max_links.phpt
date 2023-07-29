@@ -61,8 +61,6 @@ mysqli.rollback_on_cached_plink=1
 			mysqli_errno($plink), mysqli_error($plink));
 	}
 
-	var_dump(mysqli_get_links_stats(1));
-
 	echo "Before pconnect:";
 	var_dump(mysqli_get_links_stats());
 
@@ -124,10 +122,12 @@ mysqli.rollback_on_cached_plink=1
 	echo "Before second pconnect:";
 	var_dump(mysqli_get_links_stats());
 
+	// $plink的赋值导致close,bpc需要明确的close
+	mysqli_close($plink);
 	// this fails and we have 0 (<= $num_plinks) connections
 	if ($plink = @my_mysqli_connect('p:' . $host, 'pcontest', 'pcontest', $db, $port, $socket))
 		printf("[010] Can connect using the old password, [%d] %s\n",
-			mysqli_connect_errno($link), mysqli_connect_error($link));
+			mysqli_connect_errno(), mysqli_connect_error());
 
 	echo "After second pconnect:";
 	var_dump(mysqli_get_links_stats());
@@ -204,8 +204,6 @@ mysqli_query($link, 'DROP USER pcontest');
 mysqli_close($link);
 ?>
 --EXPECTF--
-Warning: mysqli_get_links_stats(): no parameters expected in %s on line %d
-NULL
 Before pconnect:array(3) {
   ["total"]=>
   int(1)

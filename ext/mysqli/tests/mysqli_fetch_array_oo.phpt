@@ -174,7 +174,7 @@ require_once('skipifconnectfailure.inc');
 
 	if ($IS_MYSQLND ||
 		((mysqli_get_server_version($link) >= 51000) &&
-		 (mysqli_get_client_version($link) >= 51000))) {
+		 (mysqli_get_client_version() >= 51000))) {
 		func_mysqli_fetch_array($mysqli, $engine, "BIGINT", "-9223372036854775808", "-9223372036854775808", 250);
 		func_mysqli_fetch_array($mysqli, $engine, "BIGINT", NULL, NULL, 260);
 		func_mysqli_fetch_array($mysqli, $engine, "BIGINT UNSIGNED", "18446744073709551615", "18446744073709551615", 270);
