@@ -62,7 +62,7 @@ mysqli_close($link);
 === fetch_fields ===
 array(2) {
   [0]=>
-  object(stdClass)#5 (13) {
+  object(stdClass)#%d (13) {
     ["name"]=>
     string(3) "foo"
     ["orgname"]=>
@@ -91,7 +91,7 @@ array(2) {
     int(0)
   }
   [1]=>
-  object(stdClass)#6 (13) {
+  object(stdClass)#%d (13) {
     ["name"]=>
     string(3) "bar"
     ["orgname"]=>
@@ -122,7 +122,7 @@ array(2) {
 }
 
 === fetch_field_direct ===
-object(stdClass)#6 (13) {
+object(stdClass)#%d (13) {
   ["name"]=>
   string(3) "foo"
   ["orgname"]=>
@@ -150,7 +150,7 @@ object(stdClass)#6 (13) {
   ["decimals"]=>
   int(0)
 }
-object(stdClass)#6 (13) {
+object(stdClass)#%d (13) {
   ["name"]=>
   string(3) "bar"
   ["orgname"]=>
@@ -180,7 +180,7 @@ object(stdClass)#6 (13) {
 }
 
 === fetch_field ===
-object(stdClass)#6 (13) {
+object(stdClass)#%d (13) {
   ["name"]=>
   string(3) "foo"
   ["orgname"]=>
@@ -208,7 +208,7 @@ object(stdClass)#6 (13) {
   ["decimals"]=>
   int(0)
 }
-object(stdClass)#5 (13) {
+object(stdClass)#%d (13) {
   ["name"]=>
   string(3) "bar"
   ["orgname"]=>
