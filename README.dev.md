@@ -1155,3 +1155,5 @@
 1. not support mysqlnd
 
 2. not support mysqli embeded server
+
+3. property handler warning message not include context function/method name

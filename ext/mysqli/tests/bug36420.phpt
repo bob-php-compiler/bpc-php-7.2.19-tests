@@ -24,7 +24,7 @@ echo $result->num_rows;
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: main(): Couldn't fetch mysqli_result in %s on line %d
+Warning: Couldn't fetch mysqli_result in %s on line %d
 
-Warning: main(): Couldn't fetch mysqli_result in %s on line %d
+Warning: Couldn't fetch mysqli_result in %s on line %d
 Done
