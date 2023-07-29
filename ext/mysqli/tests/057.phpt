@@ -41,7 +41,13 @@ require_once('skipifconnectfailure.inc');
 			printf("[001] Expecting 0, got %d\n", $stmt->affected_rows);
 
 	var_dump(mysqli_stmt_execute($stmt));
-	var_dump($stmt = @mysqli_prepare($link, "SELECT * FROM test_store_result"), mysqli_error($link));
+	// 接下来的 $stmt = @mysqli_prepare() 赋值不管 mysqli_prepare() 返回什么值,都会导致当前 $stmt free
+	// $stmt free时会调用mysql_stmt_close(),从而清空error
+	// 但bpc不会立即free $stmt,所以要和php的结果保持一致,这里需要明确地close $stmt
+	$tmp = @mysqli_prepare($link, "SELECT * FROM test_store_result");
+	mysqli_stmt_close($stmt);
+	$stmt = $tmp;
+	var_dump($stmt, mysqli_error($link));
 	var_dump(mysqli_stmt_reset($stmt));
 
 	$stmt = mysqli_prepare($link, "SELECT * FROM test_store_result");
