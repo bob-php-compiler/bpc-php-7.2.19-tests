@@ -16,19 +16,10 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_send_long_data()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
-	if (!is_null($tmp = @mysqli_stmt_send_long_data($link)))
-		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	require('table.inc');
 
 	if (!$stmt = mysqli_stmt_init($link))
 		printf("[003] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
-
-	if (NULL !== ($tmp = @mysqli_stmt_send_long_data($stmt, '')))
-		printf("[004] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	if (!mysqli_query($link, "DROP TABLE IF EXISTS test"))
 		printf("[005] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
@@ -77,7 +68,9 @@ require_once('skipifconnectfailure.inc');
 					$blob .= 'a';
 	}
 	*/
-	assert(strlen($blob) <= $max_allowed_packet);
+	if (strlen($blob) > $max_allowed_packet) {
+	    printf("expected strlen(blob) <= max_allowed_packet\n");
+	}
 
 	if (false !== ($tmp = mysqli_stmt_send_long_data($stmt, -1, $blob)))
 		printf("[012] Expecting boolean/false, got %s/%s. [%d] %s\n",
@@ -117,14 +110,6 @@ require_once('skipifconnectfailure.inc');
 
 	if ($blob != $row['label'])
 		printf("[021] Blob value has not been stored properly!\n");
-
-	if (NULL !== ($tmp = @mysqli_stmt_send_long_data($stmt, '')))
-		printf("[022] Expecting NULL, got %s/%s\n");
-
-	/* Check that the function alias exists. It's a deprecated function,
-	but we have not announce the removal so far, therefore we need to check for it */
-	if (!is_null($tmp = @mysqli_stmt_send_long_data()))
-		printf("[023] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	mysqli_close($link);
 	print "done!";
