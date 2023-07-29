@@ -29,8 +29,11 @@ require_once('skipifconnectfailure.inc');
 	if (!$res = $mysqli->query('SELECT * FROM test ORDER BY id LIMIT 4', MYSQLI_STORE_RESULT))
 		printf("[003] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
 
-	if (NULL !== ($tmp = @$res->data_seek()))
-		printf("[004] Expecting NULL/NULL, got %s/%s\n", gettype($tmp), $tmp);
+    try {
+	    $res->data_seek();
+	} catch (ArgumentCountError $e) {
+	    echo $e->getMessage(), "\n";
+	}
 
 	if (NULL !== ($tmp = @$res->data_seek($link)))
 		printf("[005] Expecting NULL/NULL, got %s/%s\n", gettype($tmp), $tmp);
@@ -80,6 +83,8 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
+Too few arguments to method mysqli_result::data_seek(): 1 required, 0 provided
+
 Warning: mysqli_result::data_seek(): Function cannot be used with MYSQL_USE_RESULT in %s on line %d
 
 Warning: mysqli_result::data_seek(): Couldn't fetch mysqli_result in %s on line %d
