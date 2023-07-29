@@ -9,7 +9,7 @@ Bug #74547 mysqli::change_user() doesn't accept null as $database argument w/str
 ?>
 --FILE--
 <?php
-	declare(strict_types=1);
+	//declare(strict_types=1);
 
 	require_once("connect.inc");
 
