@@ -16,16 +16,16 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_store_result()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_stmt_store_result($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	require('table.inc');
 
-	if (!is_null($tmp = @mysqli_stmt_store_result(new mysqli_stmt())))
-		printf("[003] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
+    try {
+	    mysqli_stmt_store_result(new mysqli_stmt());
+	} catch (ArgumentCountError $e) {
+	    echo $e->getMessage(), "\n";
+	}
 
 	if (!$stmt = mysqli_stmt_init($link))
 		printf("[004] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
@@ -90,4 +90,5 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
+Too few arguments to method mysqli_stmt::__construct(): 1 required, 0 provided
 done!
