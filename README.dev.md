@@ -1161,3 +1161,5 @@
 4. bpc get_object_vars() call mysql_XXX functions, later call mysql_affected_rows(handle) return -1
 
     @see ext/mysqli/tests/mysqli_class_mysqli_interface.phpt
+
+5. mysqli_commit/mysqli_rollback name arg ignored

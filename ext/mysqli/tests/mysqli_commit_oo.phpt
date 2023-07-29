@@ -103,9 +103,4 @@ if (!have_innodb($link))
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli::commit(): Transaction name truncated. Must be only [0-9A-Za-z\-_=]+ in %s on line %d
-
-Warning: mysqli::commit(): Transaction name truncated. Must be only [0-9A-Za-z\-_=]+ in %s on line %d
-
-Warning: mysqli::commit(): Transaction name truncated. Must be only [0-9A-Za-z\-_=]+ in %s on line %d
 done!
