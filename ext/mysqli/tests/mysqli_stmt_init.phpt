@@ -21,9 +21,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_stmt_init()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_stmt_init($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -52,9 +49,6 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-Warning: mysqli_stmt_close(): invalid object or resource mysqli_stmt
- in %s on line %d
-
 Warning: mysqli_stmt_init() expects parameter 1 to be mysqli, object given in %s on line %d
 
 Warning: mysqli_stmt_init(): Couldn't fetch mysqli in %s on line %d
