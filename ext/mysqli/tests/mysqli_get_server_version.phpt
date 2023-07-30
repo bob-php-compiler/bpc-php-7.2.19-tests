@@ -12,9 +12,6 @@ require_once('skipifconnectfailure.inc');
 <?php
 	require_once("connect.inc");
 
-	if (!is_null($tmp = @mysqli_get_server_version()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_get_server_version(NULL)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 

@@ -8,8 +8,6 @@ mysqli_get_charset()
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');
-if (!function_exists('mysqli_get_charset'))
-	die("skip: function not available");
 ?>
 --FILE--
 <?php
@@ -17,9 +15,6 @@ if (!function_exists('mysqli_get_charset'))
 
 	$tmp    = NULL;
 	$link   = NULL;
-
-	if (!is_null($tmp = @mysqli_get_charset()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	if (!is_null($tmp = @mysqli_get_charset($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);

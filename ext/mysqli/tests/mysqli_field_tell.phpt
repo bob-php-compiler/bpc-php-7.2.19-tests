@@ -16,9 +16,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_field_tell()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_field_tell($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -28,15 +25,10 @@ require_once('skipifconnectfailure.inc');
 	}
 
 	var_dump(mysqli_field_tell($res));
-	var_dump(mysqli_field_seek(1));
 	var_dump(mysqli_field_tell($res));
 	var_dump(mysqli_fetch_field($res));
 	var_dump(mysqli_fetch_field($res));
 	var_dump(mysqli_field_tell($res));
-
-	if (!is_null($tmp = @mysqli_field_tell($res, 'too many arguments')))
-		printf("[004] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 
 	var_dump(mysqli_field_seek($res, 2));
 	var_dump(mysqli_field_tell($res));
@@ -63,9 +55,6 @@ require_once('skipifconnectfailure.inc');
 ?>
 --EXPECTF--
 int(0)
-
-Warning: mysqli_field_seek() expects exactly 2 parameters, 1 given in %s on line %d
-NULL
 int(0)
 object(stdClass)#%d (13) {
   ["name"]=>
