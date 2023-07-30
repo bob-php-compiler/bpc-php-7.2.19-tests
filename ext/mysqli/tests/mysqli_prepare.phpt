@@ -15,12 +15,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_prepare()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
-	if (!is_null($tmp = @mysqli_prepare($link)))
-		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	require('table.inc');
 
 	if (false !== ($tmp = @mysqli_prepare($link, false)))
@@ -107,9 +101,6 @@ require_once('skipifconnectfailure.inc');
 	var_dump(mysqli_stmt_prepare($stmt, 'SELECT 1; SELECT 2'));
 
 	mysqli_stmt_close($stmt);
-
-	if (!is_null($tmp = @mysqli_stmt_prepare($link, 'SELECT id FROM test', 'foo')))
-		printf("[023] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	mysqli_close($link);
 
