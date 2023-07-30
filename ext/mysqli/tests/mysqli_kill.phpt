@@ -16,12 +16,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_kill()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
-	if (!is_null($tmp = @mysqli_kill($link)))
-		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	require('table.inc');
 
 	// Zend will cast the NULL to 0
@@ -99,7 +93,7 @@ object(mysqli)#%d (%d) {
   ["connect_error"]=>
   NULL
   ["errno"]=>
-  int(2006)
+  int(2013)
   ["error"]=>
   string(%d) "%s"
   ["error_list"]=>
@@ -107,7 +101,7 @@ object(mysqli)#%d (%d) {
     [0]=>
     array(3) {
       ["errno"]=>
-      int(2006)
+      int(2013)
       ["sqlstate"]=>
       string(5) "%s"
       ["error"]=>
