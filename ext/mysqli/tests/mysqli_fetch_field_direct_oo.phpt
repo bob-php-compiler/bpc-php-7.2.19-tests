@@ -18,8 +18,12 @@ require_once('skipifconnectfailure.inc');
 
 	$mysqli = new mysqli();
 	$res = @new mysqli_result($mysqli);
-	if (!is_null($tmp = @$res->fetch_field_direct()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
+
+	try {
+	    $res->fetch_field_direct();
+	} catch (ArgumentCountError $e) {
+	    echo $e->getMessage(), "\n";
+	}
 
 	require('table.inc');
 
@@ -30,9 +34,6 @@ require_once('skipifconnectfailure.inc');
 	if (!$res = $mysqli->query("SELECT id AS ID, label FROM test AS TEST ORDER BY id LIMIT 1")) {
 		printf("[003] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
 	}
-
-	if (!is_null($tmp = @$res->fetch_field_direct()))
-		printf("[004] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	if (!is_null($tmp = @$res->fetch_field_direct($link)))
 		printf("[005] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
@@ -57,6 +58,8 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
+Too few arguments to method mysqli_result::fetch_field_direct(): 1 required, 0 provided
+
 Warning: mysqli_result::fetch_field_direct(): Field offset is invalid for resultset in %s on line %d
 bool(false)
 object(stdClass)#%d (13) {

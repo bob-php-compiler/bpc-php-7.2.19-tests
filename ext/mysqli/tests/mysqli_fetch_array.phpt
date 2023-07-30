@@ -14,9 +14,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_fetch_array()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_fetch_array($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -186,7 +183,7 @@ require_once('skipifconnectfailure.inc');
 
 	if ($IS_MYSQLND ||
 		((mysqli_get_server_version($link) >= 51000) &&
-		(mysqli_get_client_version($link) >= 51000))) {
+		(mysqli_get_client_version() >= 51000))) {
 		func_mysqli_fetch_array($link, $engine, "BIGINT", "-9223372036854775808", "-9223372036854775808", 250);
 		func_mysqli_fetch_array($link, $engine, "BIGINT", NULL, NULL, 260);
 		func_mysqli_fetch_array($link, $engine, "BIGINT UNSIGNED", "18446744073709551615", "18446744073709551615", 260);
