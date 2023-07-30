@@ -18,9 +18,6 @@ require_once('skipifconnectfailure.inc');
 	$tmp    = NULL;
 	$link   = NULL;
 
-	if (!is_null($tmp = @mysqli_fetch_object()))
-		printf("[001] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
-
 	if (!is_null($tmp = @mysqli_fetch_object($link)))
 		printf("[002] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
@@ -133,7 +130,11 @@ require_once('skipifconnectfailure.inc');
 	var_dump($obj = new mysqli_fetch_object_private_constructor(1, 2));
 	This does not fail.
 	*/
-	$obj = mysqli_fetch_object($res, 'mysqli_fetch_object_private_constructor', array('a', 'b'));
+	try {
+	    $obj = mysqli_fetch_object($res, 'mysqli_fetch_object_private_constructor', array('a', 'b'));
+	} catch (Error $e) {
+	    handle_catchable_fatal($e->getCode(), $e->getMessage(), $e->getFile(), $e->getLine());
+	}
 	mysqli_free_result($res);
 
 	// Fatal error, script execution will end
@@ -148,14 +149,14 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-[E_WARNING] mysqli_fetch_object() expects at least 1 parameter, 0 given in %s on line %d
 [E_WARNING] mysqli_fetch_object() expects parameter 1 to be mysqli_result, null given in %s on line %d
-Exception: Too few arguments to function mysqli_fetch_object_construct::__construct(), 0 passed and exactly 2 expected
-Exception: Too few arguments to function mysqli_fetch_object_construct::__construct(), 1 passed and exactly 2 expected
+Exception: Too few arguments to method mysqli_fetch_object_construct::__construct(): 2 required, 0 provided
+Exception: Too few arguments to method mysqli_fetch_object_construct::__construct(): 2 required, 1 provided
 NULL
 NULL
 [E_WARNING] mysqli_fetch_object(): Couldn't fetch mysqli_result in %s on line %d
 NULL
-[0] Argument 3 passed to mysqli_fetch_object() must be of the type array, string given in %s on line %d
+[0] mysqli_fetch_object() expects parameter 3 to be array, string given in %s on line %d
+[0] Call to private mysqli_fetch_object_private_constructor::__construct() from invalid context in %s on line %d
 
 Fatal error: Class 'this_class_does_not_exist' not found in %s on line %d
