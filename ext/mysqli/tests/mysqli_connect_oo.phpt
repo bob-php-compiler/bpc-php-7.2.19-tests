@@ -137,9 +137,13 @@ require_once('skipifconnectfailure.inc');
 		/* NOTE that at this point one must use a different syntax! */
 		$mysqli = mysqli_init();
 		$mysqli->real_connect();
-		assert(0 === mysqli_connect_errno());
+		if (0 !== mysqli_connect_errno()) {
+		    printf("expect connect_errno 0\n");
+		}
 		$mysqli->close();
-		assert(0 === mysqli_connect_errno());
+		if (0 !== mysqli_connect_errno()) {
+		    printf("expect connect_errno 0\n");
+		}
 	} catch (mysqli_sql_exception $e) {
 		printf("%s\n", $e->getMessage());
 		printf("[021] Usage of mysqli.default_host failed\n");

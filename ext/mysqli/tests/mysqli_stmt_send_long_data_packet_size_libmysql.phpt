@@ -56,7 +56,9 @@ if (stristr(mysqli_get_client_info(), 'mysqlnd'))
 	for ($i = 0; $i < $limit; $i++)
 		$blob .= $tmp;
 
-	assert(strlen($blob) <= $max_allowed_packet);
+	if (strlen($blob) > $max_allowed_packet) {
+	    printf("expect blob <= max_allowed_packet\n");
+	}
 
 	if (true != ($tmp = mysqli_stmt_send_long_data($stmt, 1, $blob)))
 		printf("[009] Expecting boolean/true, got %s/%s. [%d] %s\n",

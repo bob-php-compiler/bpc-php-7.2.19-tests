@@ -31,7 +31,9 @@ require_once('skipifconnectfailure.inc');
 	if ("\r" !== ($tmp = mysqli_real_escape_string($link, "\r")))
 		printf("[006] Expecting \\r, got %s\n", $tmp);
 
-	assert("foo" . chr(0) . "bar" === "foo" . chr(0) . "bar");
+	if("foo" . chr(0) . "bar" !== "foo" . chr(0) . "bar") {
+	    printf("assert failed\n");
+	}
 	if ("foo" . chr(0) . "bar" !== ($tmp = mysqli_real_escape_string($link, "foo" . chr(0) . "bar")))
 		printf("[007] Expecting %s, got %s\n", "foo" . chr(0) . "bar", $tmp);
 

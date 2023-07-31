@@ -25,7 +25,9 @@ memory_limit=-1
 
 		$sql = substr($sql, 0, -2);
 		$len = strlen($sql);
-		assert($len < $package_size);
+		if ($len >= $package_size) {
+		    printf("expect len < package_size\n");
+		}
 
 		if (!@mysqli_query($link, $sql)) {
 			if (1153 == mysqli_errno($link) || 2006 == mysqli_errno($link) || stristr(mysqli_error($link), 'max_allowed_packet'))
