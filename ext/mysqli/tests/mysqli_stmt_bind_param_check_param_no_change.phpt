@@ -84,7 +84,7 @@ object(foo)#%d (1) {
 Test 2:
 object(foo)#%d (1) {
   ["bar"]=>
-  string(%d) "фубар"
+  &string(%d) "фубар"
 }
 ---
 object(foo)#%d (1) {
@@ -102,7 +102,7 @@ object(foo)#%d (1) {
 Test 3:
 object(foo)#%d (1) {
   ["bar"]=>
-  string(%d) "фубар"
+  &string(%d) "фубар"
 }
 object(foo)#%d (1) {
   ["bar"]=>
