@@ -84,55 +84,55 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-array(7) refcount(2){
+array(7) {
   [0]=>
-  array(2) refcount(1){
+  array(2) {
     ["id"]=>
-    int(1)
+    &int(1)
     ["label"]=>
-    string(1) "a" refcount(%d)
+    string(1) "a"
   }
   [1]=>
-  array(2) refcount(1){
+  array(2) {
     ["id"]=>
-    int(2)
+    &int(2)
     ["label"]=>
-    string(1) "b" refcount(%d)
+    string(1) "b"
   }
   [2]=>
-  array(2) refcount(1){
+  array(2) {
     ["id"]=>
-    int(1)
+    &int(1)
     ["label"]=>
-    string(1) "a" refcount(%d)
+    string(1) "a"
   }
   [3]=>
-  array(2) refcount(1){
+  array(2) {
     ["id"]=>
-    int(2)
+    &int(2)
     ["label"]=>
-    string(1) "b" refcount(%d)
+    string(1) "b"
   }
   [4]=>
-  array(3) refcount(1){
+  array(3) {
     ["id"]=>
     &int(3)
     ["label"]=>
-    string(1) "a" refcount(%d)
+    string(1) "a"
     ["id2"]=>
     &int(3)
   }
   [5]=>
-  array(3) refcount(1){
+  array(3) {
     ["id"]=>
     &int(4)
     ["label"]=>
-    string(1) "b" refcount(%d)
+    string(1) "b"
     ["id2"]=>
     &int(4)
   }
   [6]=>
-  &object(mysqli_result)#%d (5) refcount(%d){
+  &object(mysqli_result)#%d (5) {
     ["current_field"]=>
     NULL
     ["field_count"]=>
@@ -145,13 +145,13 @@ array(7) refcount(2){
     NULL
   }
 }
-array(1) refcount(2){
+array(1) {
   [0]=>
-  array(2) refcount(1){
+  array(2) {
     ["id"]=>
-    string(1) "1" refcount(%d)
+    string(1) "1"
     ["label"]=>
-    string(1) "a" refcount(%d)
+    string(1) "a"
   }
 }
 done!
