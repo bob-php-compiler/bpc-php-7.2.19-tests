@@ -23,6 +23,8 @@ if (!have_innodb($link))
 ?>
 --FILE--
 <?php
+    ob_implicit_flush(1);
+
 	require_once("table.inc");
 
 	$res = mysqli_query($link, "SELECT 'dumped by the parent' AS message");
@@ -107,6 +109,7 @@ if (!have_innodb($link))
 
 				/* let the parent reply... */
 				$start = time();
+				$break = false;
 				do {
 					usleep(100);
 					if (!$pres = mysqli_query($plink, $parent_sql))
@@ -116,12 +119,16 @@ if (!have_innodb($link))
 					if ($tmp['msg_id'] == $msg_id)
 						/* no new message */
 						continue;
-					if ($tmp['msg'] == 'stop')
-						break 2;
+					if ($tmp['msg'] == 'stop') {
+					    $break = true;
+						break;
+					}
 					$msg_id = $tmp['msg_id'];
 					break;
 				} while ((time() - $start) < 5);
-
+                if ($break) {
+                    break;
+                }
 			}
 
 			if (!mysqli_query($plink, sprintf($sql, 'stop')) || !mysqli_commit($link))
@@ -147,11 +154,13 @@ if (!have_innodb($link))
 					$row = mysqli_fetch_assoc($pres);
 					if ($row['msg_id'] != $last_msg_id) {
 						$last_msg_id = $row['msg_id'];
+						$break = false;
 						switch ($row['msg']) {
 							case 'start':
 								break;
 							case 'stop':
-								break 2;
+							    $break = true;
+								break;
 							default:
 								/* client has started fetching rows */
 								$client_row = $row['msg'];
@@ -163,7 +172,8 @@ if (!have_innodb($link))
 									if (!mysqli_query($plink, sprintf($parent_sql, 'stop'))) {
 										printf("[012] Parent cannot inform child\n", mysqli_errno($plink), mysqli_error($plink));
 									}
-									break 2;
+									$break = true;
+									break;
 								}
 
 								if (!$parent_row = mysqli_fetch_assoc($res)) {
@@ -171,7 +181,8 @@ if (!have_innodb($link))
 									if (!mysqli_query($plink, sprintf($parent_sql, 'stop'))) {
 										printf("[014] Parent cannot inform child\n", mysqli_errno($plink), mysqli_error($plink));
 									}
-									break 2;
+									$break = true;
+									break;
 								}
 
 								ob_start();
@@ -186,13 +197,17 @@ if (!have_innodb($link))
 									if (!mysqli_query($plink, sprintf($parent_sql, 'stop'))) {
 										printf("[016] Parent cannot inform child\n", mysqli_errno($plink), mysqli_error($plink));
 									}
-									break 2;
+									$break = true;
+									break;
 								}
 
 								if (!mysqli_query($plink, sprintf($parent_sql, 'continue'))) {
 									printf("[017] Parent cannot inform child to continue.\n", mysqli_errno($plink), mysqli_error($plink));
 								}
 								break;
+						}
+						if ($break) {
+						    break;
 						}
 					}
 					mysqli_free_result($pres);
