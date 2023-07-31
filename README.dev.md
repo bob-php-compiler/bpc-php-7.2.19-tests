@@ -1156,7 +1156,7 @@
 
 2. not support mysqli embeded server
 
-3. property handler warning message not include context function/method name
+3. property handler / result iterator warning message not include context function/method name
 
 4. bpc get_object_vars() call mysql_XXX functions, later call mysql_affected_rows(handle) return -1
 
