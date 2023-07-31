@@ -304,7 +304,7 @@ string(1) "a"
 references, object, private...
 int(1)
 string(1) "a"
-object(mega_bar)#5 (4) {
+object(mega_bar)#%d (4) {
   [%s]=>
   &int(1)
   ["id_ref"]=>
