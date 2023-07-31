@@ -122,7 +122,7 @@ array(1) {
   string(1) "6"
 }
 
-Warning: main(): Couldn't fetch mysqli_result in %s on line %d
+Warning: Couldn't fetch mysqli_result in %s on line %d
 --- Testing USE_RESULT ---
 array(1) {
   ["id"]=>
@@ -150,7 +150,7 @@ array(1) {
 }
 ======
 
-Warning: main(): Data fetched with MYSQLI_USE_RESULT can be iterated only once in %s on line %d
+Warning: Data fetched with MYSQLI_USE_RESULT can be iterated only once in %s on line %d
 --- Testing STORE_RESULT ---
 array(1) {
   ["id"]=>
