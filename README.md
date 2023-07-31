@@ -24,6 +24,7 @@
 - [x] ext/iconv
 - [x] ext/zip
 - [x] ext/event (core)
+- [x] ext/mysqli
 - [x] bpc
 
 # Requirements
