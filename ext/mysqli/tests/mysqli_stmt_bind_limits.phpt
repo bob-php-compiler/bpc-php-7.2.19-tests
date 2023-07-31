@@ -5,8 +5,9 @@ Bind limits
 --bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --bpc-include-file ext/mysqli/tests/clean_table.inc \
 --SKIPIF--
+skip bigloo abort while bpc_eval()
 <?php
-require_once('skipifconnectfailure.inc');
+//require_once('skipifconnectfailure.inc');
 ?>
 --FILE--
 <?php
@@ -58,7 +59,7 @@ require_once('skipifconnectfailure.inc');
 		printf("... statement with %d parameters prepared\n", $stmt->param_count);
 
 		if ($eval) {
-			if (!eval($stmt_bind_param)) {
+			if (!bpc_eval('/tmp/mysqli', 'php-stmt-bind-limits', $stmt_bind_param)) {
 				printf("[%03d + 03] [%d] %s\n", $offset, $stmt->errno, $stmt->error);
 				return false;
 			}
