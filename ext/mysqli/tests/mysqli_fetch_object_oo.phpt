@@ -35,7 +35,7 @@ require_once('skipifconnectfailure.inc');
 		printf("[004] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 
 	try {
-		if (!is_null($tmp = @$res->fetch_object($link, $link)))
+		if (!is_null($tmp = @$res->fetch_object('stdClass', $link)))
 			printf("[005] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 	} catch (Error $e) {
 		handle_catchable_fatal($e->getCode(), $e->getMessage(), $e->getFile(), $e->getLine());
@@ -43,7 +43,7 @@ require_once('skipifconnectfailure.inc');
 
 
 	try {
-		if (!is_null($tmp = @$res->fetch_object($link, $link, $link)))
+		if (!is_null($tmp = @$res->fetch_object('stdClass', $link, $link)))
 			printf("[006] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 	} catch (Error $e) {
 		handle_catchable_fatal($e->getCode(), $e->getMessage(), $e->getFile(), $e->getLine());
@@ -132,14 +132,13 @@ require_once('skipifconnectfailure.inc');
 	require_once("clean_table.inc");
 ?>
 --EXPECTF--
-[E_WARNING] mysqli_result::__construct(): invalid object or resource mysql%s
-%s on line %d
+[E_WARNING] mysqli_result::__construct(): invalid object or resource mysqli in %s on line %d
 [E_WARNING] mysqli_result::fetch_object(): Couldn't fetch mysqli_result in %s on line %d
 [E_WARNING] mysqli_result::fetch_object() expects parameter 1 to be string, object given in %s on line %d
-[0] Argument 2 passed to mysqli_result::fetch_object() must be of the type array, object given in %s on line %d
-[0] Argument 2 passed to mysqli_result::fetch_object() must be of the type array, object given in %s on line %d
-[0] Argument 2 passed to mysqli_result::fetch_object() must be of the type array, null given in %s on line %d
-Exception: Too few arguments to function mysqli_fetch_object_construct::__construct(), 1 passed and exactly 2 expected
+[0] mysqli_result::fetch_object() expects parameter 2 to be array, object given in %s on line %d
+[0] mysqli_result::fetch_object() expects parameter 2 to be array, object given in %s on line %d
+[0] mysqli_result::fetch_object() expects parameter 2 to be array, null given in %s on line %d
+Exception: Too few arguments to method mysqli_fetch_object_construct::__construct(): 2 required, 1 provided
 NULL
 NULL
 [E_WARNING] mysqli_fetch_object(): Couldn't fetch mysqli_result in %s on line %d
