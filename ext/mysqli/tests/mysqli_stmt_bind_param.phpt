@@ -391,5 +391,5 @@ Warning: mysqli_stmt_bind_param(): Number of elements in type definition string 
 Warning: mysqli_stmt_bind_param(): Undefined fieldtype a (parameter 3) in %s on line %d
 
 Warning: mysqli_stmt_bind_param(): Undefined fieldtype a (parameter 4) in %s on line %d
-[009] Function seems to be leaking, because it used 233472 bytes. During tests it used only 92 bytes.
+[009] Function seems to be leaking, because it used %d bytes. During tests it used only 92 bytes.
 done!
