@@ -4,6 +4,7 @@ mysqli_stmt_bind_param() - Binding with very high number of columns
 --bpc-include-file ext/mysqli/tests/connect.inc \
 --bpc-include-file ext/mysqli/tests/skipifconnectfailure.inc \
 --bpc-include-file ext/mysqli/tests/clean_table.inc \
+--bpc-lib-path /tmp/mysqli \
 --SKIPIF--
 <?php
 require_once('skipifconnectfailure.inc');
@@ -73,7 +74,7 @@ memory_limit=256M
 	}
 	$eval_str.="\$s";
 	$eval_str.=");";
-	eval($eval_str);
+	bpc_eval('/tmp/mysqli', 'php-bind-param-many-cols', $eval_str);
 	printf("executing\n");
 	if (!$stmt->execute()) {
 		printf("failed");
