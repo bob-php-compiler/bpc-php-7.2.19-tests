@@ -227,6 +227,7 @@ memory_limit=83886080
 
 		do {
 			$values = array();
+			$break = false;
 			for ($i = 0; $i < 200; $i++) {
 				$current_targets = mt_rand(-100000, 100000) / 10;
 				do {
@@ -240,10 +241,14 @@ memory_limit=83886080
 					$trend);
 				if (!mysqli_query($link, $sql)) {
 					printf("[301] [%d] %s\n", mysqli_errno($link), mysqli_error($link));
-					break 2;
+					$break = true;
+					break;
 				}
 				if ($current_targets > 0 && $trend !== 'NULL')
 					$values[$trend] = $i;
+			}
+			if ($break) {
+			    break;
 			}
 			krsort($values);
 
