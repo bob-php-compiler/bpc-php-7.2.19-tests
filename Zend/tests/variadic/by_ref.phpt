@@ -5,8 +5,8 @@ Variadic arguments with by-reference passing
 
 function test(&... $args) {
     $i = 0;
-    foreach ($args as &$arg) {
-        $arg = $i++;
+    foreach ($args as $idx => $arg) {
+        $args[$idx] = $i++;
     }
 }
 
