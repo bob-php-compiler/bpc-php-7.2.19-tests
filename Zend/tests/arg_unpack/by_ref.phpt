@@ -6,18 +6,18 @@ Argument unpacking with by-ref arguments
 error_reporting(E_ALL);
 
 function test1(&...$args) {
-    foreach ($args as &$arg) {
-        $arg++;
+    foreach ($args as $idx => $arg) {
+        $args[$idx] = ++$arg;
     }
 }
 
-test1(...[1, 2, 3]);
+test1(...array(1, 2, 3));
 
-$array = [1, 2, 3];
+$array = array(1, 2, 3);
 test1(...$array);
 var_dump($array);
 
-$array1 = [1, 2]; $array2 = [3, 4];
+$array1 = array(1, 2); $array2 = array(3, 4);
 test1(...$array1, ...$array2);
 var_dump($array1, $array2);
 
@@ -26,16 +26,16 @@ function test2($val1, &$ref1, $val2, &$ref2) {
     $ref2++;
 }
 
-$array = [0, 0, 0, 0];
+$array = array(0, 0, 0, 0);
 test2(...$array);
 var_dump($array);
 
-$array1 = [1, 2]; $array2 = [4, 5];
+$array1 = array(1, 2); $array2 = array(4, 5);
 test1(...$array1, ...$array2);
 var_dump($array1, $array2);
 
 $a = $b = $c = $d = 0;
-$array = [0, 0, 0, 0];
+$array = array(0, 0, 0, 0);
 
 test2($a, ...$array);
 var_dump($a, $array);
@@ -53,23 +53,23 @@ var_dump($a, $b, $c, $d, $array);
 --EXPECTF--
 array(3) {
   [0]=>
-  int(2)
+  &int(2)
   [1]=>
-  int(3)
+  &int(3)
   [2]=>
-  int(4)
+  &int(4)
 }
 array(2) {
   [0]=>
-  int(2)
+  &int(2)
   [1]=>
-  int(3)
+  &int(3)
 }
 array(2) {
   [0]=>
-  int(4)
+  &int(4)
   [1]=>
-  int(5)
+  &int(5)
 }
 array(4) {
   [0]=>
@@ -83,16 +83,18 @@ array(4) {
 }
 array(2) {
   [0]=>
-  int(2)
+  &int(2)
   [1]=>
-  int(3)
+  &int(3)
 }
 array(2) {
   [0]=>
-  int(5)
+  &int(5)
   [1]=>
-  int(6)
+  &int(6)
 }
+
+Warning: Too many arguments to function %s: 4 at most, 5 provided in %s on line %d
 int(0)
 array(4) {
   [0]=>
@@ -104,6 +106,8 @@ array(4) {
   [3]=>
   int(0)
 }
+
+Warning: Too many arguments to function %s: 4 at most, 6 provided in %s on line %d
 int(0)
 int(1)
 array(4) {
@@ -116,6 +120,8 @@ array(4) {
   [3]=>
   int(0)
 }
+
+Warning: Too many arguments to function %s: 4 at most, 7 provided in %s on line %d
 int(0)
 int(2)
 int(0)
@@ -129,6 +135,8 @@ array(4) {
   [3]=>
   int(0)
 }
+
+Warning: Too many arguments to function %s: 4 at most, 8 provided in %s on line %d
 int(0)
 int(3)
 int(0)
