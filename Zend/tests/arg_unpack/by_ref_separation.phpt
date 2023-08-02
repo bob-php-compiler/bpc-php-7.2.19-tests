@@ -4,12 +4,12 @@ Array must be separated if unpacking by reference
 <?php
 
 function inc(&... $args) {
-    foreach ($args as &$arg) {
-        $arg++;
+    foreach ($args as $idx => $arg) {
+        $args[$idx] = ++$arg;
     }
 }
 
-$arr = [1, 2];
+$arr = array(1, 2);
 $arr[] = 3;
 $arr2 = $arr;
 inc(...$arr);
@@ -20,11 +20,11 @@ var_dump($arr2);
 --EXPECT--
 array(3) {
   [0]=>
-  int(2)
+  &int(2)
   [1]=>
-  int(3)
+  &int(3)
   [2]=>
-  int(4)
+  &int(4)
 }
 array(3) {
   [0]=>
