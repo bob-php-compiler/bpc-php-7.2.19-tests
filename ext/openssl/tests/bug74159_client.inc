@@ -8,14 +8,14 @@ function streamWrite($stream, $data) {
     return fwrite($stream, $data);
 }
 
-function waitForWrite($streams) {
+function waitForWrite(...$streams) {
     $read = null;
     $except = null;
     while($streams && !($n = stream_select($read, $streams, $except, 1)));
     return $n > 0;
 }
 
-function waitForRead($streams) {
+function waitForRead(...$streams) {
     $write = null;
     $except = null;
     while ($streams && !($n = stream_select($streams, $write, $except, 1)));
@@ -49,11 +49,11 @@ while(!empty($data)) {
     $written = streamWrite($fp, $data);
     $total += $written;
     $data = substr($data, $written);
-    waitForWrite(array($fp));
+    waitForWrite($fp);
 }
 printf("Written %d bytes\n", $total);
 
-while(waitForRead(array($fp))) {
+while(waitForRead($fp)) {
     streamRead($fp);
     if (feof($fp)) {
         break;
