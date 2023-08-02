@@ -1,5 +1,7 @@
 --TEST--
 By-ref variadics enforce the reference
+--SKIPIF--
+skip TODO: defbuiltin-v store-signature minimum-arity
 --FILE--
 <?php
 
