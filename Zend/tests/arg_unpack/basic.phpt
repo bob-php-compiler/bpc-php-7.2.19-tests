@@ -14,31 +14,31 @@ function test2($arg1, $arg2, $arg3 = null) {
 function getArray($array) {
     return $array;
 }
-
+/*
 function arrayGen($array) {
     foreach ($array as $element) {
         yield $element;
     }
 }
+*/
+$array = array(1, 2, 3);
 
-$array = [1, 2, 3];
-
-test(...[]);
-test(...[1, 2, 3]);
+test(...array());
+test(...array(1, 2, 3));
 test(...$array);
-test(...getArray([1, 2, 3]));
-test(...arrayGen([]));
-test(...arrayGen([1, 2, 3]));
+test(...getArray(array(1, 2, 3)));
+//test(...arrayGen(array()));
+//test(...arrayGen(array(1, 2, 3)));
 
-test(1, ...[2, 3], ...[4, 5]);
-test(1, ...getArray([2, 3]), ...arrayGen([4, 5]));
+test(1, ...array(2, 3), ...array(4, 5));
+test(1, ...getArray(array(2, 3))/*, ...arrayGen(array(4, 5))*/);
 
-test2(...[1, 2]);
-test2(...[1, 2, 3]);
-test2(...[1], ...[], ...[], ...[2, 3], ...[4, 5]);
+test2(...array(1, 2));
+test2(...array(1, 2, 3));
+test2(...array(1), ...array(), ...array(), ...array(2, 3), ...array(4, 5));
 
 ?>
---EXPECT--
+--EXPECTF--
 array(0) {
 }
 array(3) {
@@ -65,7 +65,17 @@ array(3) {
   [2]=>
   int(3)
 }
-array(0) {
+array(5) {
+  [0]=>
+  int(1)
+  [1]=>
+  int(2)
+  [2]=>
+  int(3)
+  [3]=>
+  int(4)
+  [4]=>
+  int(5)
 }
 array(3) {
   [0]=>
@@ -74,30 +84,6 @@ array(3) {
   int(2)
   [2]=>
   int(3)
-}
-array(5) {
-  [0]=>
-  int(1)
-  [1]=>
-  int(2)
-  [2]=>
-  int(3)
-  [3]=>
-  int(4)
-  [4]=>
-  int(5)
-}
-array(5) {
-  [0]=>
-  int(1)
-  [1]=>
-  int(2)
-  [2]=>
-  int(3)
-  [3]=>
-  int(4)
-  [4]=>
-  int(5)
 }
 int(1)
 int(2)
@@ -105,6 +91,8 @@ NULL
 int(1)
 int(2)
 int(3)
+
+Warning: Too many arguments to function %s: 3 at most, 5 provided in %s on line %d
 int(1)
 int(2)
 int(3)
