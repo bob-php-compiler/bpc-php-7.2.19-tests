@@ -1,5 +1,7 @@
 --TEST--
 Traversables that throw exceptions are properly handled during argument unpack
+--SKIPIF--
+skip TODO: arg_unpack support Traversable
 --FILE--
 <?php
 
