@@ -14,7 +14,7 @@ class Foo {
 }
 
 $foo = new Foo;
-Foo::test2(1, 2, ...[3, 4], ...[], ...[5]);
+Foo::test2(1, 2, ...array(3, 4), ...array(), ...array(5));
 
 ?>
 --EXPECT--
