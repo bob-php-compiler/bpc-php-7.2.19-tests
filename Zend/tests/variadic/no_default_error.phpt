@@ -7,4 +7,4 @@ function test(...$args = 123) {}
 
 ?>
 --EXPECTF--
-Fatal error: Variadic parameter cannot have a default value in %s on line %d
+Parse error: (unexpected token `equals') in %s on line %d

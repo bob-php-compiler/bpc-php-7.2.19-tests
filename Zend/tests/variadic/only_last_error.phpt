@@ -7,4 +7,4 @@ function test($foo, ...$bar, $baz) {}
 
 ?>
 --EXPECTF--
-Fatal error: Only the last parameter can be variadic in %s on line %d
+Parse error: (unexpected token `comma') in %s on line %d
