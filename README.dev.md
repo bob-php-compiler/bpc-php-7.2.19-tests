@@ -467,22 +467,20 @@
 
 24. not support anonymous class
 
-25. not support ... operator
+25. not support generators
 
-26. not support generators
+26. not support multi-level break/continue
 
-27. not support multi-level break/continue
+27. break/continue not in loop/switch compile-error
 
-28. break/continue not in loop/switch compile-error
+28. not support return type
 
-29. not support return type
-
-30. not support bprefix strings
+29. not support bprefix strings
 
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
-31. support $arr['index'] in dqstring
+30. support $arr['index'] in dqstring
 
     ```php
     <?php
@@ -492,51 +490,51 @@
     php parse error
     bpc ok
 
-32. not support heredoc/nowdoc embed each other or in dqstring
+31. not support heredoc/nowdoc embed each other or in dqstring
 
-33. not support nullable types
+32. not support nullable types
 
-34. not support indirect call with constants
+33. not support indirect call with constants
 
     @see Zend/tests/indirect_call_from_constant.phpt
 
-35. strict names
+34. strict names
 
     php support ascii 0x80-0xff in variable/class/function... names
     bpc not support this
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-36. not support finally (try..catch..finally)
+35. not support finally (try..catch..finally)
 
-37. not support return type
+36. not support return type
 
-38. optional params should always after required params
+37. optional params should always after required params
 
-39. not support array to string conversion at compile time
+38. not support array to string conversion at compile time
 
     php notice
     bpc parse error
 
-40. not support multi catch
+39. not support multi catch
 
-41. not support literal string as class name
+40. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-42. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+41. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-43. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+42. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-44. arguments without default value must before arguments with default value
+43. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-45. not support CLASS::$static_property = &$var
+44. not support CLASS::$static_property = &$var
 
 **misc**
 
