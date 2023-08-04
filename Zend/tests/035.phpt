@@ -10,6 +10,5 @@ var_dump($GLOBALS['var']);
 
 ?>
 --EXPECTF--
-*** ERROR:compile-error:
-Error: unexpected global-decl, global-decl only support in function or method in %s on line 3
- -- compile-error
+NULL
+NULL
