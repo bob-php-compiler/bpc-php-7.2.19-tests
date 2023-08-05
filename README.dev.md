@@ -422,65 +422,61 @@
     bpc not support `global $$varname`
     bpc not support `global ${...}`
 
-10. no use global decl var
-
-    compile error
-
-11. zend.multibyte
+10. zend.multibyte
 
     bpc not support multibyte
 
-12. not support traits
+11. not support traits
 
-13. bpc not support mix static var and non-static var
+12. bpc not support mix static var and non-static var
 
-14. redeclare compile error
+13. redeclare compile error
 
     Cannot redeclare function, class property/constant/method
     Cannot redeclare builtin and extension class
 
-15. class const defines one at a time
+14. class const defines one at a time
 
     bpc not support `const c1 = 1, c2 = 2;`
 
-16. parse error
+15. parse error
 
-17. not supported return reference from function/method
+16. not supported return reference from function/method
 
-18. bpc support double quoted string array string index
+17. bpc support double quoted string array string index
 
     @see tests/lang/bug21820.phpt
 
-19. not support foreach as reference
+18. not support foreach as reference
 
-20. static-decl only support in function or method
+19. static-decl only support in function or method
 
-21. not support nested list and `[]` list and keyed list
+20. not support nested list and `[]` list and keyed list
 
     bpc not support `list(list($x)) = `, parse error
 
-22. not support short tags
+21. not support short tags
 
-23. Ternary Operator ?:
+22. Ternary Operator ?:
 
     leave out the middle part of the ternary operator `expr1 ?: expr2` will parse error
 
-24. not support anonymous class
+23. not support anonymous class
 
-25. not support generators
+24. not support generators
 
-26. not support multi-level break/continue
+25. not support multi-level break/continue
 
-27. break/continue not in loop/switch compile-error
+26. break/continue not in loop/switch compile-error
 
-28. not support return type
+27. not support return type
 
-29. not support bprefix strings
+28. not support bprefix strings
 
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
-30. support $arr['index'] in dqstring
+29. support $arr['index'] in dqstring
 
     ```php
     <?php
@@ -490,51 +486,51 @@
     php parse error
     bpc ok
 
-31. not support heredoc/nowdoc embed each other or in dqstring
+30. not support heredoc/nowdoc embed each other or in dqstring
 
-32. not support nullable types
+31. not support nullable types
 
-33. not support indirect call with constants
+32. not support indirect call with constants
 
     @see Zend/tests/indirect_call_from_constant.phpt
 
-34. strict names
+33. strict names
 
     php support ascii 0x80-0xff in variable/class/function... names
     bpc not support this
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-35. not support finally (try..catch..finally)
+34. not support finally (try..catch..finally)
 
-36. not support return type
+35. not support return type
 
-37. optional params should always after required params
+36. optional params should always after required params
 
-38. not support array to string conversion at compile time
+37. not support array to string conversion at compile time
 
     php notice
     bpc parse error
 
-39. not support multi catch
+38. not support multi catch
 
-40. not support literal string as class name
+39. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-41. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+40. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-42. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+41. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-43. arguments without default value must before arguments with default value
+42. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-44. not support CLASS::$static_property = &$var
+43. not support CLASS::$static_property = &$var
 
 **misc**
 
