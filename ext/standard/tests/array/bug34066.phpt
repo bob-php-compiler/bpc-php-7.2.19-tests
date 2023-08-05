@@ -242,6 +242,7 @@ function dump2xml($array) {
 }
 function gen_xml($val, $key, $prefix)
 {
+    global $xml_fd;
     print "gen_xml(prefix=$prefix)\n";
     if (is_array($val)) {
 	if (preg_match('/^\d+$/', $key)) {
