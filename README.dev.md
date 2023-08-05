@@ -453,7 +453,7 @@
 
 19. not support foreach as reference
 
-20. static-decl/global-decl only support in function or method
+20. static-decl only support in function or method
 
 21. not support nested list and `[]` list and keyed list
 
