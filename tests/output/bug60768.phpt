@@ -3,6 +3,8 @@ Bug #60768 Output buffer not discarded
 --FILE--
 <?php
 
+global $storage;
+
 ob_start(function($buffer, $phase) use (&$storage) { $storage .= $buffer; }, 20);
 
 echo str_repeat("0", 20); // fill in the buffer
