@@ -80,7 +80,7 @@ class foo
 
 	function __construct()
 	{
-		global $euc_jp;
+		global $sjis, $jis, $euc_jp;
 
 		$this->s1 = $euc_jp;
 		$this->s2 = $euc_jp;
@@ -96,7 +96,7 @@ class bar
 
 	function __construct()
 	{
-		global $euc_jp;
+		global $sjis, $jis, $euc_jp;
 
 		$this->s1 = $euc_jp;
 		$this->s2 = $euc_jp;
