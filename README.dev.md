@@ -371,7 +371,7 @@
 
 20. no ini register_argc_argv
 
-21. ini has no access level, ini_get_all return access = -1
+21. ini access level INI_ALL or INI_SYSTEM
 
 22. ini int value conversion same as (int) typecast
 

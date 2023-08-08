@@ -44,7 +44,7 @@ array(3) {
     ["local_value"]=>
     string(7) "1000000"
     ["access"]=>
-    int(-1)
+    int(7)
   }
   ["pcre.jit"]=>
   array(3) {
@@ -53,7 +53,7 @@ array(3) {
     ["local_value"]=>
     string(1) "1"
     ["access"]=>
-    int(-1)
+    int(7)
   }
   ["pcre.recursion_limit"]=>
   array(3) {
@@ -62,7 +62,7 @@ array(3) {
     ["local_value"]=>
     string(6) "100000"
     ["access"]=>
-    int(-1)
+    int(7)
   }
 }
 array(3) {
