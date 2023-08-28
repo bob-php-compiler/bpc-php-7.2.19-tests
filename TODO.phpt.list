@@ -3,6 +3,8 @@ ext/curl/tests/bug48514.phpt
 ext/curl/tests/bug67643.phpt
 ext/curl/tests/bug71523.phpt
 ext/curl/tests/bug73147.phpt
+ext/curl/tests/bug76675.phpt
+ext/curl/tests/bug77535.phpt
 ext/curl/tests/curl_basic_017.phpt
 ext/curl/tests/curl_basic_018.phpt
 ext/curl/tests/curl_multi_close_basic.phpt
