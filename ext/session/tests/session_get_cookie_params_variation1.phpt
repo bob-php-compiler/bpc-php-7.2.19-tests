@@ -36,7 +36,7 @@ ob_end_flush();
 ?>
 --EXPECTF--
 *** Testing session_get_cookie_params() : variation ***
-array(5) {
+array(6) {
   ["lifetime"]=>
   int(0)
   ["path"]=>
@@ -47,8 +47,10 @@ array(5) {
   bool(false)
   ["httponly"]=>
   bool(false)
+  ["samesite"]=>
+  string(0) ""
 }
-array(5) {
+array(6) {
   ["lifetime"]=>
   int(3600)
   ["path"]=>
@@ -59,8 +61,10 @@ array(5) {
   bool(false)
   ["httponly"]=>
   bool(false)
+  ["samesite"]=>
+  string(0) ""
 }
-array(5) {
+array(6) {
   ["lifetime"]=>
   int(3600)
   ["path"]=>
@@ -71,8 +75,10 @@ array(5) {
   bool(false)
   ["httponly"]=>
   bool(false)
+  ["samesite"]=>
+  string(0) ""
 }
-array(5) {
+array(6) {
   ["lifetime"]=>
   int(3600)
   ["path"]=>
@@ -83,8 +89,10 @@ array(5) {
   bool(false)
   ["httponly"]=>
   bool(false)
+  ["samesite"]=>
+  string(0) ""
 }
-array(5) {
+array(6) {
   ["lifetime"]=>
   int(3600)
   ["path"]=>
@@ -95,8 +103,10 @@ array(5) {
   bool(true)
   ["httponly"]=>
   bool(false)
+  ["samesite"]=>
+  string(0) ""
 }
-array(5) {
+array(6) {
   ["lifetime"]=>
   int(3600)
   ["path"]=>
@@ -107,5 +117,7 @@ array(5) {
   bool(true)
   ["httponly"]=>
   bool(true)
+  ["samesite"]=>
+  string(0) ""
 }
 Done
