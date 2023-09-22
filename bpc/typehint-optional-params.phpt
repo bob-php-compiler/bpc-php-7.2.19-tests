@@ -1,5 +1,7 @@
 --TEST--
 typehint optional params
+--ARGS--
+--bpc-include-file bpc/typehint-optional-params.inc \
 --FILE--
 <?php
 
@@ -15,6 +17,11 @@ function f(float $arg1 = -1.1, float $arg2 = +2.2, float $arg3 = - 1.1, float $a
 
 i();
 f();
+
+define('ENV', 'dev');
+
+include __DIR__ . '/typehint-optional-params.inc';
+
 ?>
 --EXPECT--
 int(-1)
@@ -25,3 +32,31 @@ float(-1.1)
 float(2.2)
 float(-1.1)
 float(2.2)
+string(3) "dev"
+int(1)
+bool(true)
+float(1.1)
+string(5) "hello"
+array(3) {
+  [0]=>
+  int(1)
+  [1]=>
+  int(2)
+  [2]=>
+  int(3)
+}
+string(6) "strlen"
+string(3) "dev"
+int(1)
+bool(true)
+float(1.1)
+string(5) "hello"
+array(3) {
+  [0]=>
+  int(1)
+  [1]=>
+  int(2)
+  [2]=>
+  int(3)
+}
+string(6) "strlen"
