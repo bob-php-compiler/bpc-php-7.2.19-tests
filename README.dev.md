@@ -488,7 +488,7 @@
 
 30. not support heredoc/nowdoc embed each other or in dqstring
 
-31. not support nullable types
+31. not support iterable
 
 32. not support indirect call with constants
 
