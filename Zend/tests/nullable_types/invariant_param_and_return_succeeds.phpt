@@ -4,11 +4,11 @@ Invariant parameter and return types work with nullable types
 <?php
 
 interface A {
-    function method(?int $i): ?int;
+    function method(?int $i);
 }
 
 class B implements A {
-    function method(?int $i): ?int {
+    function method(?int $i) {
         return $i;
     }
 }

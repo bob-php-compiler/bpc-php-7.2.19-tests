@@ -3,7 +3,7 @@ Explicitly nullable float type
 --FILE--
 <?php
 
-function _float_(?float $v): ?float {
+function _float_(?float $v) {
     return $v;
 }
 

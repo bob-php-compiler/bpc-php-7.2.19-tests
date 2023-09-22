@@ -3,7 +3,7 @@ Explicitly nullable string type
 --FILE--
 <?php
 
-function _string_(?string $v): ?string {
+function _string_(?string $v) {
     return $v;
 }
 

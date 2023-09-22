@@ -3,7 +3,7 @@ Explicitly nullable int type
 --FILE--
 <?php
 
-function _int_(?int $v): ?int {
+function _int_(?int $v) {
     return $v;
 }
 
