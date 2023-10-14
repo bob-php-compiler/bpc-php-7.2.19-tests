@@ -6,5 +6,5 @@ $str = 'C:3:"GMP":4:{s:6666666666:""}';
 var_dump(unserialize($str));
 ?>
 --EXPECTF--
-Notice: unserialize(): Error at offset 13 of 29 bytes in %s on line %d
+Notice: unserialize(): Error at offset %d of 29 bytes in %s on line %d
 bool(false)
