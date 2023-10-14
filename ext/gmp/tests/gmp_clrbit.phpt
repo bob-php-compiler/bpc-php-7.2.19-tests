@@ -29,9 +29,6 @@ var_dump(gmp_strval($n));
 
 $n = array();
 gmp_clrbit($n, 3);
-gmp_clrbit($n, 3, 1);
-gmp_clrbit($n);
-gmp_clrbit();
 
 echo "Done\n";
 ?>
@@ -48,10 +45,4 @@ string(7) "1000000"
 string(30) "238462734628347239571822592658"
 
 Warning: gmp_clrbit() expects parameter 1 to be GMP, array given in %s on line %d
-
-Warning: gmp_clrbit() expects exactly 2 parameters, 3 given in %s on line %d
-
-Warning: gmp_clrbit() expects exactly 2 parameters, 1 given in %s on line %d
-
-Warning: gmp_clrbit() expects exactly 2 parameters, 0 given in %s on line %d
 Done

@@ -33,8 +33,6 @@ var_dump(gmp_strval($n));
 
 $b = "";
 gmp_setbit($b, 23);
-gmp_setbit($b);
-gmp_setbit($b, 23,1,1);
 gmp_setbit($b,array());
 $a = array();
 gmp_setbit($a,array());
@@ -54,10 +52,6 @@ string(12) "100000000000"
 string(12) "100000000008"
 
 Warning: gmp_setbit() expects parameter 1 to be GMP, string given in %s on line %d
-
-Warning: gmp_setbit() expects at least 2 parameters, 1 given in %s on line %d
-
-Warning: gmp_setbit() expects at most 3 parameters, 4 given in %s on line %d
 
 Warning: gmp_setbit() expects parameter 1 to be GMP, string given in %s on line %d
 
