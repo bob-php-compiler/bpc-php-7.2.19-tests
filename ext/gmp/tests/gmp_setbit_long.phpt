@@ -23,6 +23,8 @@ gmp_setbit() with large index
 --FILE--
 <?php
 
+ini_set('memory_limit', '-1');
+
 $n = gmp_init("227200");
 for($a = 1<<30; $a > 0 && $a < 0x8000000000; $a <<= 2) {
 	$i = $a - 1;

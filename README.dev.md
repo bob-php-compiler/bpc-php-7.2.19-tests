@@ -1156,3 +1156,7 @@
     @see ext/mysqli/tests/mysqli_class_mysqli_interface.phpt
 
 5. mysqli_commit/mysqli_rollback name arg ignored
+
+## ext/gmp
+
+1. libgmp use gc
