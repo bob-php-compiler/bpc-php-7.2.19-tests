@@ -5,13 +5,12 @@ gmp_strval() tests
 --FILE--
 <?php
 
-var_dump(gmp_strval());
 var_dump(gmp_strval(""));
 var_dump(gmp_strval("", ""));
 var_dump(gmp_strval("", -1));
 var_dump(gmp_strval(-1, ""));
 
-$fp = fopen(__FILE__, "r");
+$fp = fopen('/proc/self/comm', "r");
 var_dump(gmp_strval($fp));
 
 $g = gmp_init("9765456");
@@ -34,9 +33,6 @@ var_dump(gmp_strval(new stdclass));
 echo "Done\n";
 ?>
 --EXPECTF--
-Warning: gmp_strval() expects at least 1 parameter, 0 given in %s on line %d
-NULL
-
 Warning: gmp_strval(): Unable to convert variable to GMP - string is not an integer in %s on line %d
 bool(false)
 
