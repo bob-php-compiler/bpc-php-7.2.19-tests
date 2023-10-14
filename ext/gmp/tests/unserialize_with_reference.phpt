@@ -7,7 +7,7 @@ var_dump(unserialize($s));
 ?>
 --EXPECT--
 object(GMP)#1 (2) {
-  [46]=>
+  ["46"]=>
   *RECURSION*
   ["num"]=>
   string(1) "2"
