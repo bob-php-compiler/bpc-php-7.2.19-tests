@@ -39,7 +39,7 @@ array(2) {
   string(1) "1"
   [1]=>
   object(GMP)#%d (2) {
-    [0]=>
+    ["0"]=>
     array(1) {
       [0]=>
       string(1) "1"
