@@ -28,7 +28,7 @@ var_dump($a / 0);
 var_dump($a % $b);
 var_dump($a % 17);
 var_dump(42 % $b);
-var_dump($a % 0);
+$zero = 0; var_dump($a % $zero);
 
 var_dump($a ** $b);
 var_dump($a ** 17);
@@ -53,8 +53,8 @@ var_dump(42 << $b);
 var_dump($a >> 2);
 var_dump(-$a >> 2);
 
-var_dump($a << -1);
-var_dump($a >> -1);
+$shift = -1; var_dump($a << $shift);
+var_dump($a >> $shift);
 
 var_dump(~$a);
 var_dump(-$a);
@@ -152,7 +152,7 @@ object(GMP)#%d (1) {
   string(1) "2"
 }
 
-Warning: main(): Zero operand not allowed in %s on line %d
+Warning: Zero operand not allowed in %s on line %d
 bool(false)
 object(GMP)#%d (1) {
   ["num"]=>
@@ -167,7 +167,7 @@ object(GMP)#%d (1) {
   string(1) "8"
 }
 
-Warning: main(): Zero operand not allowed in %s on line %d
+Warning: Zero operand not allowed in %s on line %d
 bool(false)
 object(GMP)#%d (1) {
   ["num"]=>
@@ -238,10 +238,10 @@ object(GMP)#%d (1) {
   string(3) "-11"
 }
 
-Warning: main(): Shift cannot be negative in %s on line %d
+Warning: Shift cannot be negative in %s on line %d
 bool(false)
 
-Warning: main(): Shift cannot be negative in %s on line %d
+Warning: Shift cannot be negative in %s on line %d
 bool(false)
 object(GMP)#%d (1) {
   ["num"]=>
@@ -270,7 +270,7 @@ bool(true)
 bool(false)
 bool(true)
 
-Warning: main(): Unable to convert variable to GMP - wrong type in %s on line %d
+Warning: Unable to convert variable to GMP - wrong type in %s on line %d
 bool(false)
 object(GMP)#%d (1) {
   ["num"]=>
