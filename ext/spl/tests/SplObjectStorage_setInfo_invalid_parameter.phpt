@@ -11,5 +11,7 @@ var_dump($s->setInfo());
 
 ?>
 --EXPECTF--
-Warning: SplObjectStorage::setInfo() expects exactly 1 parameter, 0 given in %s on line %d
-NULL
+Fatal error: Uncaught ArgumentCountError: Too few arguments to method SplObjectStorage::setInfo(): 1 required, 0 provided in %s:%d
+Stack trace:
+#0 {main}
+  thrown in %s on line %d
