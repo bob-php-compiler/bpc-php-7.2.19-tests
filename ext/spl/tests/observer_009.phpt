@@ -4,9 +4,9 @@ SPL: SplObjectStorage addAll/removeAll
 <?php
 class Foo {}
 
-$storageA = new \SplObjectStorage();
-$storageA->attach(new \Foo);
-$storageA->attach(new \Foo);
+$storageA = new SplObjectStorage();
+$storageA->attach(new Foo);
+$storageA->attach(new Foo);
 
 echo ("Count storage A: " . count($storageA));
 foreach ($storageA as $object) {
