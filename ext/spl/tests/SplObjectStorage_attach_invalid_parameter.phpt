@@ -14,6 +14,4 @@ var_dump($s->attach(new stdClass, true, true));
 --EXPECTF--
 Warning: SplObjectStorage::attach() expects parameter 1 to be object, boolean given in %s on line %d
 NULL
-
-Warning: SplObjectStorage::attach() expects at most 2 parameters, 3 given in %s on line %d
 NULL
