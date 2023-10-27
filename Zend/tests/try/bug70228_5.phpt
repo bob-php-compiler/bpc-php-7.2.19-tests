@@ -1,7 +1,5 @@
 --TEST--
 Bug #70228 (memleak if return hidden by throw in finally block)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function test() {
