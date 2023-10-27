@@ -1,13 +1,11 @@
 --TEST--
 Live range & throw from finally
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function test() {
     try {
-        $a = [1, 2, 3];
-        return $a + [];
+        $a = array(1, 2, 3);
+        return $a + array();
     } finally {
         throw new Exception;
     }
