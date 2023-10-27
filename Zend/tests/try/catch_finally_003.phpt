@@ -12,10 +12,10 @@ function foo ($a) {
        return $a;
    } catch (Exception $e) {
        throw $e;
-   }/* finally {
+   } finally {
        dummy("finally");
        return "finally";
-   }*/
+   }
    return "end";
 }
 /*
@@ -34,4 +34,5 @@ var_dump(foo("para"));
 ?>
 --EXPECTF--
 string(3) "try"
-string(4) "para"
+string(7) "finally"
+string(7) "finally"

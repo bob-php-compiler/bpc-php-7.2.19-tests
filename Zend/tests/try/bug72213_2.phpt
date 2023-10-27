@@ -1,7 +1,5 @@
 --TEST--
 Bug #72213 (Finally leaks on nested exceptions)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function test() {
