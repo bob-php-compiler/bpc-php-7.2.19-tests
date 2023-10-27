@@ -1,7 +1,5 @@
 --TEST--
 Bug #70012 (Exception lost with nested finally block)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 try {

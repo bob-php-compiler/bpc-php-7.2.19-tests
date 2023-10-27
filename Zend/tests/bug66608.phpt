@@ -1,7 +1,5 @@
 --TEST--
 Bug #66608 (Incorrect behavior with nested "finally" blocks)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function bar() {

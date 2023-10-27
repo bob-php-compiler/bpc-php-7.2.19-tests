@@ -1,7 +1,5 @@
 --TEST--
 Bug #72188 (Nested try/finally blocks losing return value)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function test() {
