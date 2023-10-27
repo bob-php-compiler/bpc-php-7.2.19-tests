@@ -501,7 +501,9 @@
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-34. not support finally (try..catch..finally)
+34. Uncaught Exception/Error in finally override try-body Exception/Error
+
+    @see Zend/tests/bug65784.phpt
 
 35. not support return type
 

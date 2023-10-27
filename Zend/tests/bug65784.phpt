@@ -1,7 +1,5 @@
 --TEST--
 Fixed Bug #65784 (Segfault with finally)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo1() {
@@ -48,7 +46,7 @@ function foo3() {
 		return true;
 	} finally {
 		try {
-			throw new NotExists();
+			$classname = 'NotExists'; throw new $classname();
 		} catch (Exception $e) {
 		}
 	}
@@ -59,13 +57,8 @@ $bar = foo3();
 string(9) "not catch"
 NULL
 
-Fatal error: Uncaught Exception: not catched in %sbug65784.php:42
+Fatal error: Uncaught Error: Class 'NotExists' not found in %sbug65784.php:46
 Stack trace:
 #0 %sbug65784.php(52): foo3()
 #1 {main}
-
-Next Error: Class 'NotExists' not found in %sbug65784.php:46
-Stack trace:
-#0 %sbug65784.php(52): foo3()
-#1 {main}
-  thrown in %sbug65784.php on line 46
+  thrown in %sbug65784.php on line 52
