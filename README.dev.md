@@ -501,42 +501,40 @@
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-34. Uncaught Exception/Error in finally override try-body Exception/Error
+34. finally
 
-    @see Zend/tests/bug65784.phpt
+    1. Uncaught Exception/Error in finally override try-body Exception/Error    @see Zend/tests/bug65784.phpt
+    2. return in finally not suppress Exception from try-body                   @see Zend/tests/try/bug70228_2.phpt
+    3. Exception in finally not suppress return in try-body                     @see Zend/tests/try/bug70228_7.phpt
 
-35. return in finally not suppress Exception from try-body
+35. not support return type
 
-    @see Zend/tests/try/bug70228_2.phpt
+36. optional params should always after required params
 
-36. not support return type
-
-37. optional params should always after required params
-
-38. not support array to string conversion at compile time
+37. not support array to string conversion at compile time
 
     php notice
     bpc parse error
 
-39. not support multi catch
+38. not support multi catch
 
-40. not support literal string as class name
+39. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-41. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+40. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-42. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+41. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-43. arguments without default value must before arguments with default value
+42. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-44. not support CLASS::$static_property = &$var
+43. not support CLASS::$static_property = &$var
 
 **misc**
 

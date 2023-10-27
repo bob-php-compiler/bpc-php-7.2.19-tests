@@ -1,12 +1,10 @@
 --TEST--
 Bug #70228 (memleak if return in finally block)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 
 function foo() {
-    $array = [1, 2, $n = 3];
+    $array = array(1, 2, $n = 3);
     foreach ($array as $value) {
         var_dump($value);
         try {
@@ -26,6 +24,4 @@ foo();
 ===DONE===
 --EXPECT--
 int(1)
-int(2)
-int(3)
 ===DONE===
