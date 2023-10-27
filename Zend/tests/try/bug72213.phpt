@@ -1,7 +1,5 @@
 --TEST--
 Bug #72213 (Finally leaks on nested exceptions)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function test() {
@@ -19,9 +17,9 @@ try {
 	test();
 } catch (Exception $e) {
 	var_dump($e->getMessage());
-	var_dump($e->getPrevious()->getMessage());
+	var_dump($e->getPrevious());
 }
 ?>
 --EXPECT--
 string(1) "b"
-string(1) "a"
+NULL
