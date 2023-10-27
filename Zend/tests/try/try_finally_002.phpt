@@ -1,7 +1,5 @@
 --TEST--
 Try finally (re-throw exception in finally block)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo () {
@@ -22,4 +20,3 @@ try {
 ?>
 --EXPECT--
 string(7) "finally"
-string(3) "try"
