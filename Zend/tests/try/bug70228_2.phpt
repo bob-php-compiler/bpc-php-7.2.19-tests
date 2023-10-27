@@ -1,7 +1,5 @@
 --TEST--
 Bug #70228 (memleak if return in finally block)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function test() {
@@ -19,4 +17,8 @@ function test() {
 var_dump(test());
 ?>
 --EXPECT--
-int(42)
+Fatal error: Uncaught Exception: 2 in try/bug70228_2.php:7
+Stack trace:
+#0 try/bug70228_2.php(14): test()
+#1 {main}
+  thrown in try/bug70228_2.php on line 14
