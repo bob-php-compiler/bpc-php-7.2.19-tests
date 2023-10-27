@@ -16,16 +16,16 @@ function foo (&$ex) {
       } catch (Exception $e) {
         echo "3";
         throw_exception("catch");
-      } /*finally {
+      } finally {
         echo "4";
         throw_exception("finally");
-      }*/
+      }
    } catch (Exception $e) {
       $ex = $e;
       echo "3";
-   } /*finally {
+   } finally {
       echo "2";
-   }*/
+   }
    return 1;
 }
 
@@ -36,5 +36,5 @@ do {
 } while ($ex = $ex->getPrevious());
 ?>
 --EXPECT--
-1233int(1)
-string(5) "catch"
+123432int(1)
+string(7) "finally"
