@@ -1,7 +1,5 @@
 --TEST--
 Try finally (with for continue)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo () {
@@ -22,4 +20,6 @@ function foo () {
 foo();
 ?>
 --EXPECTF--
-Fatal error: jump out of a finally block is disallowed in %stry_finally_009.php on line %d
+*** ERROR:compile-error:
+Error: unexpected continue in %stry_finally_009.php on line %d
+ -- compile-error

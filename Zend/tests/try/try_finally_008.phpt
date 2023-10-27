@@ -1,7 +1,5 @@
 --TEST--
 Try finally (with break in do...while)
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 function foo () {
@@ -20,4 +18,6 @@ function foo () {
 foo();
 ?>
 --EXPECTF--
-Fatal error: jump out of a finally block is disallowed in %stry_finally_008.php on line %d
+*** ERROR:compile-error:
+Error: unexpected break in %stry_finally_008.php on line %d
+ -- compile-error
