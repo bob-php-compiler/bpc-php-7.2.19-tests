@@ -1,21 +1,24 @@
 --TEST--
 Break 2 in try and return in finally inside nested loop
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 
 function foo() {
-    $array = [1, 2, $n = 3];
+    $array = array(1, 2, $n = 3);
     foreach ($array as $value) {
+        $break = false;
         foreach ($array as $value) {
             try {
                 echo "try\n";
-                break 2;
+                $break = true;
+                break;
             } finally {
                 echo "finally\n";
                 return;
             }
+        }
+        if ($break) {
+            break;
         }
     }
 }
