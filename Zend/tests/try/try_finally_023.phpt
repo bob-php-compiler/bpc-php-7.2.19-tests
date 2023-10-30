@@ -1,7 +1,5 @@
 --TEST--
 Loop var dtor throwing exception during return inside try/catch inside finally
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 
@@ -16,7 +14,7 @@ function test() {
         throw new Exception(1);
     } finally {
         try {
-            foreach ([new Dtor] as $v) {
+            foreach (array(new Dtor) as $v) {
                 unset($v);
                 return 42;
             }
@@ -33,7 +31,15 @@ try {
 
 ?>
 --EXPECTF--
+Warning: in %s line %d: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Exception: 1 in %s:%d
 Stack trace:
 #0 %s(%d): test()
 #1 {main}
+
+Fatal error: Uncaught Exception: 2 in %s:%d
+Stack trace:
+#0 %s(%d): Dtor->__destruct()
+#1 {main}
+  thrown in %s on line %d
