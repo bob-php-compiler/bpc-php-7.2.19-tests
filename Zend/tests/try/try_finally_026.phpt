@@ -1,7 +1,5 @@
 --TEST--
 Throw in finally inside catch inside finally
---SKIPIF--
-skip not support finally (try..catch..finally)
 --FILE--
 <?php
 
@@ -28,12 +26,7 @@ try {
 
 ?>
 --EXPECTF--
-Exception: 1 in %s:%d
-Stack trace:
-#0 %s(%d): test()
-#1 {main}
-
-Next Exception: 3 in %s:%d
+Exception: 3 in %s:%d
 Stack trace:
 #0 %s(%d): test()
 #1 {main}
