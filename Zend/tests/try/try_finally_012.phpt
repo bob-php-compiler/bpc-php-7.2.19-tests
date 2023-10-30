@@ -15,9 +15,9 @@ function foo() {
 			return $a;
 		} catch (Exception $e) {
 			echo "exception in foo\n";
-		}/* finally {
+		} finally {
 			echo "finally\n";
-		}*/
+		}
 	}
 }
 try {
@@ -29,6 +29,7 @@ try {
 --EXPECTF--
 Warning: in %s line 5: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
 
+finally
 
 Fatal error: Uncaught Exception in %stry_finally_012.php:6
 Stack trace:
