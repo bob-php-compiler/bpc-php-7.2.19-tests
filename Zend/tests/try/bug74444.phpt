@@ -1,9 +1,8 @@
 --TEST--
 Bug #74444 (multiple catch freezes in some cases)
---SKIPIF--
-skip not support multi catch
 --FILE--
 <?php
+class FooEx extends Exception {}
 function foo()
 {
 	echo '';
@@ -66,8 +65,8 @@ function foo()
 	echo '';
 	echo '';
 	try {
-		throw new \RuntimeException();
-	} catch (\FooEx  | \RuntimeException $e) {
+		throw new RuntimeException();
+	} catch (FooEx  | RuntimeException $e) {
 		echo 1;
 	}
 	echo 2;

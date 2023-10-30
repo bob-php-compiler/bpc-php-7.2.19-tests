@@ -517,25 +517,23 @@
     php notice
     bpc parse error
 
-38. not support multi catch
-
-39. not support literal string as class name
+38. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-40. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+39. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-41. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+40. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-42. arguments without default value must before arguments with default value
+41. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-43. not support CLASS::$static_property = &$var
+42. not support CLASS::$static_property = &$var
 
 **misc**
 
