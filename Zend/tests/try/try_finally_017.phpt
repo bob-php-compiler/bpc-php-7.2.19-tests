@@ -22,18 +22,18 @@ function foo() {
                     break;
                 } catch (Exception $e) {
                     echo "catch1\n";
-                }/* finally {
+                } finally {
                     echo "finally1\n";
-                }*/
+                }
             }
             if ($break) {
                 break;
             }
         } catch (Exception $e) {
             echo "catch2\n";
-        }/* finally {
+        } finally {
             echo "finally2\n";
-        }*/
+        }
     }
 }
 
@@ -43,6 +43,8 @@ foo();
 --EXPECTF--
 Warning: in %s line 7: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
 
+finally1
+finally2
 ===DONE===
 
 Fatal error: Uncaught Exception in %stry_finally_017.php:8
