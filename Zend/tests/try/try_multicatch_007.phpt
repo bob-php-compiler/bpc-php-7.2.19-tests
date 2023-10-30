@@ -1,7 +1,7 @@
 --TEST--
 Catch second exception in the second multicatch
---SKIPIF--
-skip not support multi catch
+--ARGS--
+--bpc-include-file Zend/tests/try/exceptions.inc \
 --FILE--
 <?php
 require_once __DIR__ . '/exceptions.inc';

@@ -1,7 +1,7 @@
 --TEST--
 Parsing test
---SKIPIF--
-skip not support multi catch
+--ARGS--
+--bpc-include-file Zend/tests/try/exceptions.inc \
 --FILE--
 <?php
 

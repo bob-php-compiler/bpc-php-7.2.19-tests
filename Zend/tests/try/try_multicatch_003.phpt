@@ -1,7 +1,7 @@
 --TEST--
 Catch second exception in the multicatch
---SKIPIF--
-skip not support multi catch
+--ARGS--
+--bpc-include-file Zend/tests/try/exceptions.inc \
 --FILE--
 <?php
 
