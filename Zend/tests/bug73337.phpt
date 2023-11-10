@@ -17,8 +17,9 @@ Fatal error: Uncaught Exception in %sbug73337.php:2
 Stack trace:
 #0 %sbug73337.php(4): d->__destruct()
 #1 {main}
+  thrown in %sbug73337.php on line 4
 
-Next Exception in %sbug73337.php:2
+Fatal error: Uncaught Exception in %sbug73337.php:2
 Stack trace:
 #0 %sbug73337.php(4): d->__destruct()
 #1 {main}

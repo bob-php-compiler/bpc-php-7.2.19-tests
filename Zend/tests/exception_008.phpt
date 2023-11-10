@@ -34,8 +34,9 @@ Fatal error: Uncaught Exception: First in %sexception_008.php:%d
 Stack trace:
 #0 %sexception_008.php(%d): TestFirst->__destruct()
 #1 {main}
+  thrown in %sexception_008.php on line %d
 
-Next Exception: Second in %sexception_008.php:%d
+Fatal error: Uncaught Exception: Second in %sexception_008.php:%d
 Stack trace:
 #0 %sexception_008.php(%d): TestSecond->__destruct()
 #1 {main}

@@ -59,14 +59,15 @@ Done: FatalException::__construct
 Caught Exception: 
 ===DONE===
 FailClass::__destruct
-FailClass::__destruct
 
 Fatal error: Uncaught Exception: FailClass in %sdestructor_and_exceptions.php:10
 Stack trace:
 #0 %sdestructor_and_exceptions.php(51): FailClass->__destruct()
 #1 {main}
+  thrown in %sdestructor_and_exceptions.php on line 51
+FailClass::__destruct
 
-Next Exception: FailClass in %sdestructor_and_exceptions.php:10
+Fatal error: Uncaught Exception: FailClass in %sdestructor_and_exceptions.php:10
 Stack trace:
 #0 %sdestructor_and_exceptions.php(51): FailClass->__destruct()
 #1 {main}

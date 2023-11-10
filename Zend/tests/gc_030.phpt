@@ -27,8 +27,9 @@ Fatal error: Uncaught Exception: foobar in %sgc_030.php:%d
 Stack trace:
 #0 %s(%d): foo->__destruct()
 #1 {main}
+  thrown in %sgc_030.php on line %d
 
-Next Exception: foobar in %sgc_030.php:%d
+Fatal error: Uncaught Exception: foobar in %sgc_030.php:%d
 Stack trace:
 #0 %s(%d): foo->__destruct()
 #1 {main}

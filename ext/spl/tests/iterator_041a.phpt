@@ -111,8 +111,9 @@ Stack trace:
 #0 %s(56): MyArrayIterator->fail(7, '__destruct')
 #1 %s(91): MyArrayIterator->__destruct()
 #2 {main}
+  thrown in %s on line 91
 
-Next Exception: State 7: __destruct() in %s:12
+Fatal error: Uncaught Exception: State 7: __destruct() in %s:12
 Stack trace:
 #0 %s(56): MyArrayIterator->fail(7, '__destruct')
 #1 %s(91): MyArrayIterator->__destruct()
