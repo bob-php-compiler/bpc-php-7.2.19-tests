@@ -37,7 +37,5 @@ object(Generator)#%d (0) {
 }
 object(Generator)#%d (0) {
 }
-object(Generator)#%d (0) {
-}
-object(Generator)#%d (0) {
-}
+NULL
+NULL
