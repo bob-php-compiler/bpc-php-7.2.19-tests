@@ -4,10 +4,10 @@ Creating an infinite fibonacci list using a generator
 <?php
 
 function fib() {
-    list($a, $b) = [1, 1];
+    list($a, $b) = array(1, 1);
     while (true) {
         yield $b;
-        list($a, $b) = [$b, $a + $b];
+        list($a, $b) = array($b, $a + $b);
     }
 }
 
