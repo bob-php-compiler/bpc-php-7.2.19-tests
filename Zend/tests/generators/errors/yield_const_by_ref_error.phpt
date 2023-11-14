@@ -1,5 +1,7 @@
 --TEST--
 A notice is thrown when yielding a constant value by reference
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 

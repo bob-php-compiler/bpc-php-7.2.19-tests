@@ -1,5 +1,7 @@
 --TEST--
 The result of a by-ref function call can be yielded just fine
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 

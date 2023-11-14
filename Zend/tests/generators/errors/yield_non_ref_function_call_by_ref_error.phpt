@@ -1,5 +1,7 @@
 --TEST--
 Yielding the result of a non-ref function call throw a notice
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 

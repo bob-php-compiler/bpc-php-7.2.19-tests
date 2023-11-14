@@ -1,5 +1,7 @@
 --TEST--
 Return from by-ref generator
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 

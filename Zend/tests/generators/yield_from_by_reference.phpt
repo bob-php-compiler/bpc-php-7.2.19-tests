@@ -1,5 +1,7 @@
 --TEST--
 Yield from by reference is not supported
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 
