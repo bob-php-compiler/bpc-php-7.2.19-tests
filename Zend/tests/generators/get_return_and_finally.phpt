@@ -12,9 +12,14 @@ function gen1() {
     yield;
 }
 
-// The exception was discarded, so this works
 $gen = gen1();
-var_dump($gen->getReturn());
+
+// BPC: return in finally not suppress Exception from try-body
+try {
+    var_dump($gen->getReturn());
+} catch (Exception $e) {
+    echo $e->getMessage(), "\n";
+}
 
 function gen2() {
     try {
@@ -42,6 +47,6 @@ try {
 
 ?>
 --EXPECT--
-int(42)
+gen1() throw
 gen2() throw
 Cannot get return value of a generator that hasn't returned
