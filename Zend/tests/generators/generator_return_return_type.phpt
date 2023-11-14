@@ -1,5 +1,7 @@
 --TEST--
 Generators must return a valid variable with return type specified
+--SKIPIF--
+skip not support return type
 --FILE--
 <?php
 
