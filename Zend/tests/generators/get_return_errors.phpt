@@ -38,7 +38,7 @@ try {
 
 function gen3() {
     throw new Exception("gen3() throw");
-    return 1;
+    //return 1;
     yield 2;
 }
 
