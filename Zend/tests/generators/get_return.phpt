@@ -9,8 +9,12 @@ function gen1() {
 }
 
 $gen = gen1();
-// Calling getReturn() directly here is okay due to auto-priming
-var_dump($gen->getReturn());
+// yield编译时会被优化掉
+try {
+    var_dump($gen->getReturn());
+} catch (Error $e) {
+    echo $e->getMessage(), "\n";
+}
 
 function gen2() {
     yield 24;
@@ -22,9 +26,7 @@ var_dump($gen->current());
 $gen->next();
 var_dump($gen->getReturn());
 
-// & for generators specifies by-reference yield, not return
-// so it's okay to return a literal
-function &gen3() {
+function gen3() {
     $var = 24;
     yield $var;
     return 42;
@@ -37,7 +39,7 @@ var_dump($gen->getReturn());
 
 // Return types for generators specify the return of the function,
 // not of the generator return value, so this code is okay
-function gen4() : Generator {
+function gen4()/* : Generator */{
     yield 24;
     return 42;
 }
@@ -57,19 +59,18 @@ var_dump($gen->current());
 $gen->next();
 var_dump($gen->getReturn());
 
-// Explicit value-less return also results in a NULL generator
-// return value and there is no interference with type declarations
-function gen6() : Generator {
+// yield编译时会被优化掉
+function gen6()/* : Generator */{
     return;
     yield 24;
 }
 
 $gen = gen6();
-var_dump($gen->getReturn());
+var_dump($gen);
 
 ?>
 --EXPECTF--
-int(42)
+Call to a member function getReturn() on integer
 int(24)
 int(42)
 int(24)
