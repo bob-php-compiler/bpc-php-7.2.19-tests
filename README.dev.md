@@ -584,6 +584,7 @@
     php show user passed args
     bpc show declared args
     unset arg not affect stack trace, @see Zend/tests/bug70547.phpt
+    generator: called at [internal function]
 
 13. invalid test
 
