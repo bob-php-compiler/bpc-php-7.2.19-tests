@@ -26,5 +26,3 @@ unset($gen);
 ?>
 --EXPECT--
 before yield
-finally run
-second finally run

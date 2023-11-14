@@ -463,7 +463,9 @@
 
 23. not support anonymous class
 
-24. not support generators
+24. generator
+
+    not support unset/close generator, @see Zend/tests/generators/finally/finally_ran_on_close.phpt
 
 25. not support multi-level break/continue
 
