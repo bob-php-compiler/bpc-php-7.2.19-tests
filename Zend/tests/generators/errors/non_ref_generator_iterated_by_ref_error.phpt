@@ -1,5 +1,7 @@
 --TEST--
 Non-ref generators cannot be iterated by-ref
+--SKIPIF--
+skip not support foreach as reference
 --FILE--
 <?php
 
