@@ -468,6 +468,7 @@
     not support unset/close generator, @see Zend/tests/generators/finally/finally_ran_on_close.phpt
     generator: yield outside function compile error
     foreach on generator same as foreach on traversable
+    Generator::throw() check argument type
 
 25. not support multi-level break/continue
 
