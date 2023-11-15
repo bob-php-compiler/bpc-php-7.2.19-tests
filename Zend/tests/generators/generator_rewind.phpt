@@ -21,7 +21,7 @@ try {
     echo "\n", $e, "\n\n";
 }
 
-function &gen2() {
+function gen2() {
     $foo = 'bar';
     yield $foo;
     yield $foo;
@@ -30,7 +30,7 @@ function &gen2() {
 $gen = gen2();
 foreach ($gen as $v) { }
 try {
-    foreach ($gen as $v) { }
+    foreach ($gen as $v) { } // rewind ok, valid return false, loop end
 } catch (Exception $e) {
     echo $e, "\n\n";
 }
@@ -53,9 +53,5 @@ Exception: Cannot rewind a generator that was already run in %s:%d
 Stack trace:
 #0 %s(%d): Generator->rewind()
 #1 {main}
-
-Exception: Cannot traverse an already closed generator in %s:%d
-Stack trace:
-#0 {main}
 
 in generator
