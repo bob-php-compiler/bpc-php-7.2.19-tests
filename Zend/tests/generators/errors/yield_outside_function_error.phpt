@@ -7,4 +7,6 @@ yield "Test";
 
 ?>
 --EXPECTF--
-Fatal error: The "yield" expression can only be used inside a function in %s on line %d
+*** ERROR:compile-error:
+Error: The "yield" expression can only be used inside a function in %s on line %d
+ -- compile-error
