@@ -14,6 +14,7 @@ foreach (gen() as $value) { }
 --EXPECTF--
 Fatal error: Uncaught Exception: foo in %s:%d
 Stack trace:
-#0 %s(%d): gen()
-#1 {main}
+#0 [internal function]: gen()
+#1 %s(%d): Generator->rewind()
+#2 {main}
   thrown in %s on line %d
