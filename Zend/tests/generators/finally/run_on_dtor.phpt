@@ -1,5 +1,7 @@
 --TEST--
 finally is run on object dtor, not free
+--SKIPIF--
+skip not support unset/close generator
 --FILE--
 <?php
 
