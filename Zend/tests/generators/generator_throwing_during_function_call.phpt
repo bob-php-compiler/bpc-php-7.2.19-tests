@@ -9,7 +9,7 @@ function throwException() {
 
 function gen() {
     yield 'foo';
-    strlen("foo", "bar", throwException());
+    strlen(throwException());
     yield 'bar';
 }
 
