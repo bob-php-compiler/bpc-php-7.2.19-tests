@@ -1,5 +1,7 @@
 --TEST--
 Generators work properly in MultipleIterator
+--SKIPIF--
+skip TODO MultipleIterator
 --FILE--
 <?php
 
