@@ -8,11 +8,11 @@ function gen() {
     yield "a" or die;
     yield "k" => "a" . "b";
     yield "k" => "a" or die;
-    var_dump([yield "k" => "a" . "b"]);
+    var_dump(array(yield "k" => "a" . "b"));
     yield yield "k1" => yield "k2" => "a" . "b";
     yield yield "k1" => (yield "k2") => "a" . "b";
-    var_dump([yield "k1" => yield "k2" => "a" . "b"]);
-    var_dump([yield "k1" => (yield "k2") => "a" . "b"]);
+    var_dump(array(yield "k1" => yield "k2" => "a" . "b"));
+    var_dump(array(yield "k1" => (yield "k2") => "a" . "b"));
 }
 
 $g = gen();
