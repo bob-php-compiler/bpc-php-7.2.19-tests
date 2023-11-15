@@ -4,7 +4,7 @@ Generator wit type check
 <?php
 function gen(array $a) { yield; }
 try {
-	gen(42);
+	gen(42)->rewind();
 } catch (TypeError $e) {
 	echo $e->getMessage()."\n";
 }
@@ -18,5 +18,5 @@ try {
 }
 ?>
 --EXPECTF--
-Argument 1 passed to gen() must be of the type array, integer given, called in %sgenerator_with_type_check_2.php on line 4
-Argument 1 passed to gen() must be of the type array, integer given, called in %sgenerator_with_type_check_2.php on line 10
+Argument 1 passed to gen() must be of the type array, integer given
+Argument 1 passed to gen() must be of the type array, integer given
