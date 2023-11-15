@@ -19,6 +19,7 @@ foreach (foo(1, 5) as $x) {
 
 Fatal error: Uncaught Exception in %s:%d
 Stack trace:
-#0 %s(%d): foo(1, 5)
-#1 {main}
+#0 [internal function]: foo(1, 5)
+#1 %s(%d): Generator->next()
+#2 {main}
   thrown in %s on line %d
