@@ -31,9 +31,3 @@ $gen->rewind(); // force run
 before return
 before return in inner finally
 outer finally run
-
-Fatal error: Uncaught Exception: Cannot rewind a generator that was already run in %sreturn_return.php:24
-Stack trace:
-#0 %sreturn_return.php(24): Generator->rewind()
-#1 {main}
-  thrown in %sreturn_return.php on line 24
