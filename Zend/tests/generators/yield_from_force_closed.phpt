@@ -1,5 +1,7 @@
 --TEST--
 Cannot "yield from" from force closed generator
+--SKIPIF--
+skip not support unset/close generator
 --FILE--
 <?php
 
