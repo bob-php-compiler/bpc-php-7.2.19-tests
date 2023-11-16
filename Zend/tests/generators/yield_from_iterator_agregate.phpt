@@ -2,7 +2,7 @@
 yield from with an IteratorAggregate
 --FILE--
 <?php
-class foo implements \IteratorAggregate {
+class foo implements IteratorAggregate {
   public $prop = 1;
   function getIterator() {
     var_dump($this->prop);
