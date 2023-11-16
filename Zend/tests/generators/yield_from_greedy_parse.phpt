@@ -13,7 +13,7 @@ function bar() {
 
 function foo() {
   yield from1234(42);
-  yield from(bar());
+  yield from (bar());
 }
 
 foreach (foo() as $value) {

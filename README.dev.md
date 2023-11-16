@@ -470,6 +470,7 @@
     foreach on generator same as foreach on traversable
     Generator::throw() check argument type
     typehint check in generator rewind
+    generator: yield from must followed by blank, @see Zend/tests/generators/yield_from_greedy_parse.phpt
 
 25. not support multi-level break/continue
 
