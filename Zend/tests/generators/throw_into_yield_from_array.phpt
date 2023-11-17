@@ -3,7 +3,7 @@ Throwing into a generator yielding from an array/iterator
 --FILE--
 <?php
 
-$data = [1, 2, 3];
+$data = array(1, 2, 3);
 
 function yielditer($arr) {
 	foreach($arr as $val) {
