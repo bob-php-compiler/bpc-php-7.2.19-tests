@@ -28,21 +28,22 @@ for ($gen = gen(); $gen->valid(); $gen->next()) {
 --EXPECTF--
 Implicit foreach:
 int(1)
-#0  gen() called at [%s:%d]
+#0  gen() called at [internal function]
+#1  Generator->next() called at [%s:%d]
 int(2)
-#0  from(2) called at [%s:%d]
-#1  gen() called at [%s:%d]
+#0  from(2) called at [internal function]
+#1  Generator->next() called at [%s:%d]
 int(3)
-#0  gen() called at [%s:%d]
+#0  gen() called at [internal function]
+#1  Generator->next() called at [%s:%d]
 
 Explicit iterator:
 int(1)
-#0  gen()
+#0  gen() called at [internal function]
 #1  Generator->next() called at [%s:%d]
 int(2)
-#0  from(2) called at [%s:%d]
-#1  gen()
-#2  Generator->next() called at [%s:%d]
+#0  from(2) called at [internal function]
+#1  Generator->next() called at [%s:%d]
 int(3)
-#0  gen()
+#0  gen() called at [internal function]
 #1  Generator->next() called at [%s:%d]
