@@ -33,13 +33,11 @@ do {
 Caught exception!
 Exception in %s:%d
 Stack trace:
-#0 %s(%d): from()
-#1 [internal function]: gen(Object(Generator))
-#2 %s(%d): Generator->next()
-#3 {main}
+#0 [internal function]: from()
+#1 %s(%d): Generator->next()
+#2 {main}
 Caught exception!
 ClosedGeneratorException: Generator yielded from aborted, no return value available in %s:%d
 Stack trace:
-#0 [internal function]: gen(Object(Generator))
-#1 %s(%d): Generator->next()
-#2 {main}
+#0 %s(%d): Generator->next()
+#1 {main}
