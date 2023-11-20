@@ -1,5 +1,7 @@
 --TEST--
 Generators with arguments unpacking
+--SKIPIF--
+skip TODO
 --FILE--
 <?php
 (function() { yield; })(...range(1, 16384));

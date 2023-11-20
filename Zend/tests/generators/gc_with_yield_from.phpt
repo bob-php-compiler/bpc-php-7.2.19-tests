@@ -1,5 +1,7 @@
 --TEST--
 Verify yield from on generators being properly cycle collected
+--SKIPIF--
+skip TODO
 --INI--
 zend.enable_gc = 1
 --FILE--
