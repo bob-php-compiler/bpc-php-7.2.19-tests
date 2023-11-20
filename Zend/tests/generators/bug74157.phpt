@@ -3,7 +3,7 @@ Bug #74157 (Segfault with nested generators)
 --FILE--
 <?php
 
-function a() {
+function a($arg) {
 	$a = $b = $c = 2;
 	foreach(range(1, 5) as $v) {
 		yield $v;
