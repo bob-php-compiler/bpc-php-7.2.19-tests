@@ -1,5 +1,7 @@
 --TEST--
 Bug #75786: segfault when using spread operator on generator passed by reference
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 
