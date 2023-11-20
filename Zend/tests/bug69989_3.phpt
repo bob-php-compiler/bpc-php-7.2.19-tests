@@ -4,7 +4,7 @@ Generator cycle collection edge cases
 <?php
 
 // Extra args
-function gen1() {
+function gen1($arg) {
     yield;
 }
 $obj = new stdClass;
@@ -30,12 +30,12 @@ $gen = gen3();
 $gen->send($gen);
 
 // Yield from root
-function gen4() {
+function gen4($arg = null) {
     yield from yield;
 }
 $gen = gen4();
 $gen2 = gen4($gen);
-$gen2->send([1, 2, 3]);
+$gen2->send(array(1, 2, 3));
 $gen->send($gen2);
 
 ?>
