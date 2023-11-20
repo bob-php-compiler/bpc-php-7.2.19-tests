@@ -1,5 +1,7 @@
 --TEST--
 Bug #72373: TypeError after Generator function w/declared return type finishes
+--SKIPIF--
+skip not support return type
 --FILE--
 <?php
 
