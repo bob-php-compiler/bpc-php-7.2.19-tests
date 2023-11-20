@@ -1,5 +1,7 @@
 --TEST--
 Bug #71980: Decorated/Nested Generator is Uncloseable in Finally
+--SKIPIF--
+skip not support unset/close generator
 --FILE--
 <?php
 
