@@ -64,14 +64,10 @@ int(13)
 int(14)
 Exception in %s:%d
 Stack trace:
-#0 %s(%d): from(5)
-#1 %s(%d): gen(Object(Generator), 1)
-#2 %s(%d): gen(Object(Generator), 2)
-#3 [internal function]: gen(Object(Generator), 3)
-#4 %s(%d): Generator->next()
-#5 {main}
+#0 [internal function]: from(5)
+#1 %s(%d): Generator->next()
+#2 {main}
 ClosedGeneratorException: Generator yielded from aborted, no return value available in %s:%d
 Stack trace:
-#0 [internal function]: gen(Object(Generator), 1)
-#1 %s(%d): Generator->current()
-#2 {main}
+#0 %s(%d): Generator->current()
+#1 {main}
