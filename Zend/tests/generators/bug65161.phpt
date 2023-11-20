@@ -3,13 +3,14 @@ Bug #65161: Generator + autoload + syntax error = segfault
 --FILE--
 <?php
 
-function autoload() {
+function autoload($class) {
     foo();
 }
 spl_autoload_register('autoload');
 
 function testGenerator() {
-    new SyntaxError('param');
+    $class = 'SyntaxError';
+    new $class('param');
     yield;
 }
 
@@ -21,6 +22,7 @@ Fatal error: Uncaught Error: Call to undefined function foo() in %s:%d
 Stack trace:
 #0 [internal function]: autoload('SyntaxError')
 #1 %s(%d): spl_autoload_call('SyntaxError')
-#2 %s(%d): testGenerator()
-#3 {main}
+#2 [internal function]: testgenerator()
+#3 %s(%d): Generator->rewind()
+#4 {main}
   thrown in %s on line %d
