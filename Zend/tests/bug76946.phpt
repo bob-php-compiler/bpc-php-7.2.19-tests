@@ -5,7 +5,7 @@ Bug #76946: Cyclic reference in generator not detected
 
 function gen() {
     $gen = yield;
-    foreach ([1, $gen] as $v) {
+    foreach (array(1, $gen) as $v) {
         yield $v;
     }
 }
