@@ -1,5 +1,7 @@
 --TEST--
 Bug #72523 (dtrace issue with reflection (failed test))
+--SKIPIF--
+skip not support anonymous class
 --FILE--
 <?php
 
