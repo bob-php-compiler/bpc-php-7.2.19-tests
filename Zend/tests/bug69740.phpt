@@ -20,7 +20,6 @@ foreach (generate() as $i) {
 ?>
 --EXPECTF--
 1
-finally
 
 Fatal error: Uncaught Exception in %s:%d
 Stack trace:
