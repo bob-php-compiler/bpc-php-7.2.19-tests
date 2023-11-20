@@ -1,5 +1,7 @@
 --TEST--
 Bug #71601 (finally block not executed after yield from)
+--SKIPIF--
+skip not support unset/close generator
 --FILE--
 <?php
 
