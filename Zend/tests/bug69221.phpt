@@ -11,8 +11,13 @@ $gen1 = gen();
 $gen2 = (object) $gen1;
 
 foreach ($gen1 as $v1) {
+    $break = false;
     foreach ($gen2 as $v2) {
-        break 2;
+        $break = true;
+        break;
+    }
+    if ($break) {
+        break;
     }
 }
 
