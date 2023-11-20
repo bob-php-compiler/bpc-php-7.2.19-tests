@@ -514,6 +514,7 @@
     2. return in finally not suppress Exception from try-body                   @see Zend/tests/try/bug70228_2.phpt
     3. Exception in finally not suppress return in try-body                     @see Zend/tests/try/bug70228_7.phpt
     4. jump out of a finally block is disallowed message                        @see Zend/tests/try/try_finally_008.phpt
+    5. exit/error still run finally code                                        @see Zend/tests/generators/bug75396.phpt
 
 35. not support return type
 

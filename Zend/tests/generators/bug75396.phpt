@@ -20,3 +20,4 @@ $gen->send("x");
 --EXPECT--
 Try
 Exit
+Finally
