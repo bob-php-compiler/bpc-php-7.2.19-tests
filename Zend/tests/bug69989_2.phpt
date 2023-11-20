@@ -30,7 +30,7 @@ $gen3 = (function() use (&$gen3) {
 
 // Yield from array
 function gen4() {
-    yield from [yield];
+    yield from array(yield);
 }
 
 $gen = gen4();
