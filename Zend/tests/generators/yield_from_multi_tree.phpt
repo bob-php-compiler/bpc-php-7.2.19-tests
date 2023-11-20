@@ -29,12 +29,17 @@ foreach (range(0, 6) as $levels) {
 	}
 
 	while (1) {
+	    $breakWhile = false;
 		foreach ($all as $gen) {
 			var_dump($gen->current());
 			$gen->next();
 			if (!$gen->valid()) {
-				break 2;
+			    $breakWhile = true;
+				break;
 			}
+		}
+		if ($breakWhile) {
+		    break;
 		}
 	}
 
