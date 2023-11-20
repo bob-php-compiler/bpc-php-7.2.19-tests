@@ -38,11 +38,13 @@ function bar() {
 bar();
 
 ?>
---EXPECT--
+--EXPECTF--
+Warning: in %s line 5: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 Starting bar()
 Constructing new FooBar
 [foo()] Caught Exception
-Destructing FooBar
 NULL
 Unsetting $x
 Finishing bar()
+Destructing FooBar
