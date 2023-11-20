@@ -4,7 +4,7 @@ Bug #70965 (yield from with a common iterator primes too much)
 <?php
 
 function it() {
-    yield from [1, 2, 3, 4, 5];
+    yield from array(1, 2, 3, 4, 5);
 }
 
 function bar($g) {
@@ -29,4 +29,4 @@ int(2)
 int(3)
 int(4)
 int(5)
-int(5)
+NULL

@@ -34,10 +34,10 @@ var_dump($g2->current());
 bool(true)
 int(1)
 bool(false)
-bool(true)
-int(1)
 reached!
 bool(true)
 int(2)
+bool(false)
+NULL
 bool(false)
 NULL
