@@ -1,5 +1,7 @@
 --TEST--
 Bug #71441 (Typehinted Generator with return in try/finally crashes)
+--SKIPIF--
+skip no eval(), not support return type
 --FILE--
 <?php
 
