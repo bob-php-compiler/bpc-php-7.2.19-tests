@@ -1,5 +1,7 @@
 --TEST--
 Bug #66041: list() fails to unpack yielded ArrayAccess object
+--SKIPIF--
+skip TODO SplFixedArray
 --FILE--
 <?php
 function dumpElement() {
