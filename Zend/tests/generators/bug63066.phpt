@@ -15,6 +15,7 @@ foo
 
 Fatal error: Uncaught Error: Call to undefined method stdClass::fatalError() in %sbug63066.php:5
 Stack trace:
-#0 %s(%d): gen(Object(stdClass))
-#1 {main}
-  thrown in %sbug63066.php on line 5
+#0 [internal function]: gen(Object(stdClass))
+#1 %s(%d): Generator->next()
+#2 {main}
+  thrown in %sbug63066.php on line %d
