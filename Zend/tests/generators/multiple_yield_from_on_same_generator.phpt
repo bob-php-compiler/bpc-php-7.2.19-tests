@@ -37,7 +37,5 @@ int(4)
 int(6)
 int(3)
 int(5)
-int(3)
 int(5)
-NULL
 bool(false)
