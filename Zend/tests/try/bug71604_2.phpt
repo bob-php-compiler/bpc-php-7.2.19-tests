@@ -1,5 +1,7 @@
 --TEST--
 Bug #71604: Aborted Generators continue after nested finally (2)
+--SKIPIF--
+skip not support unset/close generator
 --FILE--
 <?php
 
