@@ -11,7 +11,7 @@ function gen() {
 
 ?>
 --EXPECTF--
-Fatal error: Uncaught Error: Cannot resume an already running generator in %s:%d
+Fatal error: Uncaught Error: Impossible to yield from the Generator being currently run in %s:%d
 Stack trace:
 #0 %s(%d): Generator->send(Object(Generator))
 #1 {main}
