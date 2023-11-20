@@ -1,5 +1,7 @@
 --TEST--
 Bug #69419: Returning compatible sub generator produces a warning
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 
