@@ -20,4 +20,6 @@ var_dump($x->test());
 
 ?>
 --EXPECTF--
-Fatal error: Failed to evaluate a trait precedence (test). Method of trait foo was defined to be excluded multiple times in %s on line %d
+*** ERROR:compile-error:
+Error: Trait foo duplicated in %s on line %d
+ -- compile-error
