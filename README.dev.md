@@ -426,7 +426,9 @@
 
     bpc not support multibyte
 
-11. not support traits
+11. traits
+
+    bpc currently not support static variables in trait method
 
 12. bpc not support mix static var and non-static var
 

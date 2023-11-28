@@ -1,5 +1,7 @@
 --TEST--
 Statics should work in traits, too.
+--SKIPIF--
+skip bpc currently not support static variables in trait method
 --FILE--
 <?php
 error_reporting(E_ALL);

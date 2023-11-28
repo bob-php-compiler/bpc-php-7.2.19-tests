@@ -1,5 +1,7 @@
 --TEST--
 Statics work like expected for language-based copy'n'paste. No link between methods from the same trait.
+--SKIPIF--
+skip bpc currently not support static variables in trait method
 --FILE--
 <?php
 error_reporting(E_ALL);
