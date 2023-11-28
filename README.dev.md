@@ -429,6 +429,7 @@
 11. traits
 
     bpc currently not support static variables in trait method
+    trait methods inserted to class by define-php-method, @see Zend/tests/traits/inheritance003.phpt
 
 12. bpc not support mix static var and non-static var
 
