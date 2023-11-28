@@ -1,5 +1,5 @@
 --TEST--
-Trying to use instanceof for a method twice
+Trying to use insteadof for a method twice
 --FILE--
 <?php
 
@@ -16,8 +16,8 @@ trait foo2 {
 }
 
 
-class A extends foo {
-	use foo {
+class A {
+	use foo, foo2 {
 		foo2::foo insteadof foo;
 		foo2::foo insteadof foo;
 	}
@@ -25,4 +25,4 @@ class A extends foo {
 
 ?>
 --EXPECTF--
-Fatal error: Class A cannot extend from trait foo in %s on line %d
+Parse error: duplicated selected in %s on line %d
