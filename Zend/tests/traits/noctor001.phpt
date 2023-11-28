@@ -4,26 +4,20 @@ Don't mark trait methods as constructor
 <?php
 trait Foo {
     public function Foo() {
+        echo "foo\n";
     }
 }
 
 class Bar {
     use Foo;
     public function Bar() {
+        echo "bar\n";
     }
 }
 
-$rfoofoo = new ReflectionMethod('Foo::Foo');
-var_dump($rfoofoo->isConstructor());
+$o = new Bar;
 
-$rbarfoo = new ReflectionMethod('Bar::Foo');
-var_dump($rbarfoo->isConstructor());
-
-$rbarbar = new ReflectionMethod('Bar::Bar');
-var_dump($rbarbar->isConstructor());
 ?>
 --EXPECTF--
 Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; Bar has a deprecated constructor in %s on line %d
-bool(false)
-bool(false)
-bool(true)
+bar
