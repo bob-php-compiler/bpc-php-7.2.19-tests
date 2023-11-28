@@ -7,6 +7,13 @@ trait foo {
 	const a = 1;
 }
 
+class C
+{
+    use foo;
+}
+
+var_dump(C::a);
+
 ?>
---EXPECTF--
-Fatal error: Traits cannot have constants in %s on line %d
+--EXPECT--
+int(1)
