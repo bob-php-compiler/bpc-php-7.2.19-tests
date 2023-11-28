@@ -1,5 +1,7 @@
 --TEST--
 Trying to use an undefined trait
+--ARGS--
+--bpc-include-file Zend/tests/traits/error_002.inc \
 --FILE--
 <?php
 
