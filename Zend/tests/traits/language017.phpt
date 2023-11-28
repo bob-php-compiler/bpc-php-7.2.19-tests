@@ -14,4 +14,4 @@ class C {
 	}
 }
 --EXPECTF--
-Fatal error: Required Trait T2 wasn't added to C in %slanguage017.php on line %d
+Parse error: trait name should in trait list in %slanguage017.php on line %d

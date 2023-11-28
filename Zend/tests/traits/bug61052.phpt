@@ -15,4 +15,4 @@ class C {
 }
 C::foo();
 --EXPECTF--
-Fatal error: Inconsistent insteadof definition. The method foo is to be used from T1, but T1 is also on the exclude list in %s on line %d
+Parse error: selected in dropped list in %s on line %d

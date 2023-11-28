@@ -32,4 +32,4 @@ class TestChildClass extends TestParentClass
 
 ?>
 --EXPECTF--
-Fatal error: Class TestParentClass is not a trait, Only traits may be used in 'as' and 'insteadof' statements in %sbug64235b.php on line %d
+Parse error: trait name should in trait list in %sbug64235b.php on line %d

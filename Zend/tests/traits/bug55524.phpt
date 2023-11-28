@@ -12,4 +12,4 @@ trait Foo extends Base {
 echo 'DONE';
 ?>
 --EXPECTF--
-Parse error: syntax error, unexpected 'extends' (T_EXTENDS), expecting '{' in %s on line %d
+Parse error: (unexpected token `extends') in %s on line %d

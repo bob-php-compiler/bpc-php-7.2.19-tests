@@ -12,4 +12,4 @@ class C1 {
 }
 ?>
 --EXPECTF--
-Fatal error: Cannot use 'abstract' as method modifier in %s on line %d
+Parse error: Cannot use 'abstract' as method modifier in %s on line %d
