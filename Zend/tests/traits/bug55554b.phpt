@@ -47,9 +47,7 @@ class ReportCollision {
 echo "ReportCollision: ";
 $o = new ReportCollision;
 --EXPECTF--
-OverridingIsSilent1 __construct
-
 Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; OverridingIsSilent2 has a deprecated constructor in %s on line %d
+OverridingIsSilent1 __construct
 OverridingIsSilent2 OverridingIsSilent2
-
-Fatal error: ReportCollision has colliding constructor definitions coming from traits in %s on line %d
+ReportCollision: foo executed
