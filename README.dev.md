@@ -520,32 +520,30 @@
     4. jump out of a finally block is disallowed message                        @see Zend/tests/try/try_finally_008.phpt
     5. exit/error still run finally code                                        @see Zend/tests/generators/bug75396.phpt
 
-35. not support return type
+35. optional params should always after required params
 
-36. optional params should always after required params
-
-37. not support array to string conversion at compile time
+36. not support array to string conversion at compile time
 
     php notice
     bpc parse error
 
-38. not support literal string as class name
+37. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-39. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+38. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-40. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+39. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-41. arguments without default value must before arguments with default value
+40. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-42. not support CLASS::$static_property = &$var
+41. not support CLASS::$static_property = &$var
 
 **misc**
 
