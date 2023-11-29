@@ -8,7 +8,7 @@ abstract function m3($x);
 }
 
 trait L2t{
-function m3($x): int{}
+function m3($x)/*: int*/{}
 }
 
 class L2 extends L1{
