@@ -432,6 +432,7 @@
     trait methods inserted to class by define-php-method, @see Zend/tests/traits/inheritance003.phpt
     properties order: inherited properties before trait properties, @see Zend/tests/traits/property008.phpt
     trait { A as ... }: A expected a trait method, bpc don't check if it is an alias, @see Zend/tests/traits/bug54441.phpt
+    trait abstract and class implement signature mismatch message may different, @see Zend/tests/traits/bug60217{b,c}.phpt
 
 12. bpc not support mix static var and non-static var
 
