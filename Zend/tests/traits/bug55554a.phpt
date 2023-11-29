@@ -28,6 +28,7 @@ $o = new NewConstructor;
 
 echo "Legacy constructor: ";
 $o = new LegacyConstructor;
---EXPECT--
+--EXPECTF--
+Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; LegacyConstructor has a deprecated constructor in %s on line %d
 New constructor: ctor executed
 Legacy constructor: ctor executed
