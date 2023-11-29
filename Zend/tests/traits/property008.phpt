@@ -49,14 +49,14 @@ object(SubclassClassicInheritance)#1 (2) {
   int(0)
 }
 object(SubclassA)#2 (2) {
-  ["hello":"SubclassA":private]=>
-  int(0)
   ["hello":"BaseWithPropA":private]=>
+  int(0)
+  ["hello":"SubclassA":private]=>
   int(0)
 }
 object(SubclassB)#3 (2) {
-  ["hello":"SubclassB":private]=>
-  int(0)
   ["hello":"BaseWithTPropB":private]=>
+  int(0)
+  ["hello":"SubclassB":private]=>
   int(0)
 }
