@@ -3,70 +3,67 @@ Bug #60717 (Order of traits in use statement can cause unexpected unresolved abs
 --FILE--
 <?php
 
-namespace HTML
-{
-	interface Helper
+	interface HTML\Helper
 	{
 		function text($text);
 		function attributes(array $attributes = null);
-		function textArea(array $attributes = null, $value);
+		function textArea(array $attributes, $value);
 	}
 
-	trait TextUTF8
+	trait HTML\TextUTF8
 	{
 		function text($text) {}
 	}
 
-	trait TextArea
+	trait HTML\TextArea
 	{
-		function textArea(array $attributes = null, $value) {}
+		function textArea(array $attributes, $value) {}
 		abstract function attributes(array $attributes = null);
 		abstract function text($text);
 	}
 
-	trait HTMLAttributes
+	trait HTML\HTMLAttributes
 	{
 		function attributes(array $attributes = null) {	}
 		abstract function text($text);
 	}
 
-	class HTMLHelper implements Helper
+	class HTML\HTMLHelper implements HTML\Helper
 	{
-		use TextArea, HTMLAttributes, TextUTF8;
+		use HTML\TextArea, HTML\HTMLAttributes, HTML\TextUTF8;
 	}
 
-	class HTMLHelper2 implements Helper
+	class HTML\HTMLHelper2 implements HTML\Helper
 	{
-		use TextArea, TextUTF8, HTMLAttributes;
+		use HTML\TextArea, HTML\TextUTF8, HTML\HTMLAttributes;
 	}
 
-	class HTMLHelper3 implements Helper
+	class HTML\HTMLHelper3 implements HTML\Helper
 	{
-		use HTMLAttributes, TextArea, TextUTF8;
+		use HTML\HTMLAttributes, HTML\TextArea, HTML\TextUTF8;
 	}
 
-	class HTMLHelper4 implements Helper
+	class HTML\HTMLHelper4 implements HTML\Helper
 	{
-		use HTMLAttributes, TextUTF8, TextArea;
+		use HTML\HTMLAttributes, HTML\TextUTF8, HTML\TextArea;
 	}
 
-	class HTMLHelper5 implements Helper
+	class HTML\HTMLHelper5 implements HTML\Helper
 	{
-		use TextUTF8, TextArea, HTMLAttributes;
+		use HTML\TextUTF8, HTML\TextArea, HTML\HTMLAttributes;
 	}
 
-	class HTMLHelper6 implements Helper
+	class HTML\HTMLHelper6 implements HTML\Helper
 	{
-		use TextUTF8, HTMLAttributes, TextArea;
+		use HTML\TextUTF8, HTML\HTMLAttributes, HTML\TextArea;
 	}
 
-	$o = new HTMLHelper;
-    $o = new HTMLHelper2;
-    $o = new HTMLHelper3;
-    $o = new HTMLHelper4;
-    $o = new HTMLHelper5;
-    $o = new HTMLHelper6;
+	$o = new HTML\HTMLHelper;
+    $o = new HTML\HTMLHelper2;
+    $o = new HTML\HTMLHelper3;
+    $o = new HTML\HTMLHelper4;
+    $o = new HTML\HTMLHelper5;
+    $o = new HTML\HTMLHelper6;
     echo 'Done';
-}
 --EXPECT--
 Done
