@@ -14,4 +14,4 @@ interface MyInterface {
 
 }
 --EXPECTF--
-Fatal error: Cannot use traits inside of interfaces. foo is used in MyInterface in %s on line %d
+Parse error: Cannot use traits inside of interfaces. (foo) is used in MyInterface in %s on line %d
