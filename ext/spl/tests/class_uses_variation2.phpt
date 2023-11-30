@@ -14,7 +14,7 @@ trait foo {}
 class fooUser { use foo; }
 
 // Define error handler
-function test_error_handler($err_no, $err_msg, $filename, $linenum, $vars) {
+function test_error_handler($err_no, $err_msg, $filename, $linenum) {
 	if (error_reporting() != 0) {
 		// report non-silenced errors
 		echo "Error: $err_no - $err_msg, $filename($linenum)\n";
@@ -26,7 +26,7 @@ set_error_handler('test_error_handler');
 $class = 'fooUser';
 
 //resource
-$res = fopen(__FILE__,'r');
+$res = fopen('/proc/self/comm','r');
 
 //get an unset variable
 $unset_var = 10;
