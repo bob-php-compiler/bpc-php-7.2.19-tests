@@ -12,14 +12,16 @@ Test trait_exists() function : error conditions (wrong number of arguments)
  * Test wrong number of arguments
  */
 
-echo "*** Testing trait_exists() : error conditions ***\n";
+//Test trait_exists with one more than the expected number of arguments
+echo "\n-- Testing trait_exists() function with more than expected no. of arguments --\n";
+$traitname = 'string_val';
+$autoload = true;
+$extra_arg = 10;
+var_dump( trait_exists($traitname, $autoload, $extra_arg) );
 
-// Zero arguments
-echo "\n-- Testing trait_exists() function with Zero arguments --\n";
-var_dump( trait_exists() );
-
+echo "Done";
 ?>
 --EXPECTF--
 *** ERROR:compile-error:
-Error: Too few arguments to function trait_exists(): 1 required, 0 provided in %s on line %d
+Error: Too many arguments to function trait_exists(): 2 at most, 3 provided in %s on line %d
  -- compile-error
