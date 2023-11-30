@@ -2,8 +2,6 @@
 mixed forward_static_call_array ( callable $function , array $parameters );
 --CREDITS--
 marcosptf - <marcosptf@yahoo.com.br> - @phpsp - sao paulo - br
---SKIPIF--
-skip TODO forward_static_call
 --FILE--
 <?php
 

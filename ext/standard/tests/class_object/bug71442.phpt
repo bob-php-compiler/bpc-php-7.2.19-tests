@@ -1,7 +1,5 @@
 --TEST--
 Bug #71442 (forward_static_call crash)
---SKIPIF--
-skip TODO forward_static_call
 --FILE--
 <?php
 

@@ -2,8 +2,6 @@
 Traits and forward_static_call().
 --CREDITS--
 Simas Toleikis simast@gmail.com
---SKIPIF--
-skip TODO forward_static_call
 --FILE--
 <?php
 
