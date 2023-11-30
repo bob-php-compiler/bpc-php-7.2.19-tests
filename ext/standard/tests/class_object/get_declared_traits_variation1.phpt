@@ -1,5 +1,7 @@
 --TEST--
 Test get_declared_traits() function : testing autoloaded traits
+--ARGS--
+--bpc-include-file ext/standard/tests/class_object/AutoTrait.inc \
 --FILE--
 <?php
 /* Prototype  : proto array get_declared_traits()
