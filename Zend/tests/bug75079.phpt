@@ -8,7 +8,7 @@ trait Foo
     public function selfDo(self ...$Selfs)
     {
         array_map(
-            function (self $Self) : self
+            function (self $Self)/* : self*/
             {
                 return $Self;
             },

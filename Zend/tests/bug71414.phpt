@@ -3,11 +3,11 @@ Bug #71414 (Interface method override inherited method and implemented in a trai
 --FILE--
 <?php
 interface InterfaceY {
-    public function z(): string;
+    public function z()/*: string*/;
 }
 
 trait TraitY {
-    public function z(): string {
+    public function z()/*: string*/ {
     }
 }
 
