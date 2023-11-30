@@ -22,7 +22,7 @@ trait TraitB
 
 class Foo
 {
-    use TraitA {
+    use TraitA, TraitB {
         TraitA::
             //
             /** doc comment */
@@ -33,14 +33,12 @@ class Foo
         insteadof TraitB;
 
         TraitA::list as public /**/ foreach;
-    }
 
-    use TraitB {
         try /*comment*/ as public attempt;
         exit // comment
             as/*comment*/die; // non qualified
-        \TraitB::exit as bye; // full qualified
-        namespace\TraitB::exit #
+        TraitB::exit as bye; // full qualified
+        TraitB::exit #
         as byebye; // even more full qualified
         TraitB
             ::
