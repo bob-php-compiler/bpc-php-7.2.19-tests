@@ -1,5 +1,7 @@
 --TEST--
 Bug #64417 (BC break: ArrayAccess::&offsetGet() in a trait causes fatal error)
+--SKIPIF--
+skip not supported return reference from function/method
 --FILE--
 <?php
 trait aa {
