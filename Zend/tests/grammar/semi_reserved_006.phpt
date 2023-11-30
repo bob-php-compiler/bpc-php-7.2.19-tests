@@ -11,7 +11,7 @@ trait TraitA
 
 trait TraitB
 {
-    static $list = ['a' => ['b' => ['c']]];
+    static $list = array('a' => array('b' => array('c')));
 
     public static function catch(){ echo __METHOD__, PHP_EOL; }
     private static function throw(){ echo __METHOD__, PHP_EOL; }
@@ -29,7 +29,7 @@ class Foo
     use TraitA, TraitB {
         TraitA
             ::
-            catch insteadof namespace\TraitB;
+            catch insteadof TraitB;
         TraitA::list as public foreach;
         TraitB::throw as public;
         TraitB::self as public;
@@ -38,8 +38,8 @@ class Foo
     use TraitC {
         try as public attempt;
         exit as die;
-        \TraitC::exit as bye;
-        namespace\TraitC::exit as byebye;
+        TraitC::exit as bye;
+        TraitC::exit as byebye;
         TraitC
             ::
             exit as farewell;
