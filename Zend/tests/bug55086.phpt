@@ -2,34 +2,29 @@
 Bug #55086 (Namespace alias does not work inside trait's use block)
 --FILE--
 <?php
-namespace N1 {
+    class Foo extends Exception {}
 
-    trait T1 {
+    trait N1\T1 {
         public function hello() { return 'hello from t1'; }
     }
 
-    trait T2 {
+    trait N1\T2 {
         public function hello() { return 'hello from t2'; }
     }
 
-}
-namespace N2 {
-    use N1\T1;
-    use N1\T2;
-    class A {
-        use T1, T2 {
-            T1::hello insteadof T2;
-            T1::hello as foo;
+    class N2\A {
+        use N1\T1, N1\T2 {
+            N1\T1::hello insteadof N1\T2;
+            N1\T1::hello as foo;
         }
     }
-    $a = new A;
+    $a = new N2\A;
     echo $a->hello(), PHP_EOL;
     echo $a->foo(), PHP_EOL;
     try {
-    } catch(namespace \Foo $e)
+    } catch(Foo $e)
     {
     }
-}
 ?>
 --EXPECT--
 hello from t1
