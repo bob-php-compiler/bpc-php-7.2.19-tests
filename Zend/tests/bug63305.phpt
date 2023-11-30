@@ -6,35 +6,25 @@ Bug #63305 (zend_mm_heap corrupted with traits)
 spl_autoload_register(function ($class) {
     switch ($class) {
     case "Attachment":
-        eval(<<<'PHP'
-class Attachment extends File {
-}
-PHP
-    );
+        class Attachment extends File {
+        }
         break;
     case "File":
-        eval(<<<'PHP'
-class File {
-    use TDatabaseObject {
-        TDatabaseObject::__construct as private databaseObjectConstruct;
-    }
-    public function __construct() {
-    }
-}
-PHP
-    );
+        class File {
+            use TDatabaseObject {
+                TDatabaseObject::__construct as private databaseObjectConstruct;
+            }
+            public function __construct() {
+            }
+        }
         break;
     case "TDatabaseObject":
-        eval(<<<'PHP'
-trait TDatabaseObject {
-    public function __construct() {
-    }
-}
-PHP
-    );
-        break;
-    }
+        trait TDatabaseObject {
+            public function __construct() {
+            }
+        }
     return TRUE;
+    }
 });
 
 new Attachment("");
