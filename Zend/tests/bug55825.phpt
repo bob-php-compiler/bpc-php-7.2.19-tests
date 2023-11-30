@@ -1,5 +1,7 @@
 --TEST--
 Bug #55825 (Missing initial value of static locals in trait methods)
+--SKIPIF--
+skip bpc currently not support static variables in trait method
 --FILE--
 <?php
 trait T1 {
