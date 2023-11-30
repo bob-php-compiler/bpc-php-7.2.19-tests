@@ -1,5 +1,7 @@
 --TEST--
 Bug #63219 (Segfault when aliasing trait method when autoloader throws excpetion)
+--ARGS--
+--bpc-include-file Zend/tests/bug63219.inc \
 --FILE--
 <?php
 trait TFoo {
@@ -7,7 +9,7 @@ trait TFoo {
 }
 
 class C {
-    use TFoo {
+    use TFoo, Typo {
         Typo::fooMethod as tf;
     }
 }
@@ -15,4 +17,4 @@ class C {
 echo "okey";
 ?>
 --EXPECTF--
-Fatal error: Could not find trait Typo in %sbug63219.php on line %d
+Fatal error: Trait 'Typo' not found in %sbug63219.php on line %d
