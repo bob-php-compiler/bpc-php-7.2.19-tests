@@ -19,4 +19,4 @@ class B extends Foo
 }
 ?>
 --EXPECTF--
-Warning: Declaration of T::bar() should be compatible with Foo::bar($a = 'Foo') in %sbug70957.php on line %d
+Warning: Declaration of B::bar() should be compatible with Foo::bar($a = self::class) in %sbug70957.php on line %d
