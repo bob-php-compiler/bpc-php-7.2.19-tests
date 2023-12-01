@@ -409,7 +409,7 @@
 
 6. closure
 
-    bpc not support static closure
+    closure name in stack trace always "{closure}"
     bpc closure has only one method: __invoke()
     var_dump closure got empty Closure object
 

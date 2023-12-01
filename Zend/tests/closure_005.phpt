@@ -1,7 +1,5 @@
 --TEST--
 Closure 005: Lambda inside class, lifetime of $this
---SKIPIF--
-skip not support static closure
 --FILE--
 <?php
 
@@ -65,16 +63,18 @@ $error();
 echo "Done\n";
 ?>
 --EXPECTF--
+Warning: in %s line %d: Current implementation of class __destruct is very ugly!!! __destruct will never be called until program end!!! class objects memory will never be freed until program end!!!
+
 3
 3
 5
 5
 7
 7
-Destroyed
 
 Fatal error: Uncaught Error: Using $this when not in object context in %sclosure_005.php:28
 Stack trace:
-#0 %s(%d): A::{closure}()
+#0 %s(%d): {closure}()
 #1 {main}
-  thrown in %sclosure_005.php on line 28
+  thrown in %sclosure_005.php on line %d
+Destroyed
