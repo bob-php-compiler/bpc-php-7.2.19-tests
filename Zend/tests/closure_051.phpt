@@ -1,7 +1,5 @@
 --TEST--
 Closure 051: static::class in static closure in static method.
---SKIPIF--
-skip closure
 --FILE--
 <?php
 

@@ -1,7 +1,5 @@
 --TEST--
 Bug 66622: Closures do not correctly capture the late bound class (static::) in some cases
---SKIPIF--
-skip closure
 --FILE--
 <?php
 class A {
