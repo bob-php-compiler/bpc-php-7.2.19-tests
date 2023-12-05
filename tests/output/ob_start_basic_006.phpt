@@ -28,7 +28,7 @@ Class C {
 		return "C::g[call:$i; len:$len] - $string\n";
 	}
 
-	function h($string) {
+	function h($string, $phase) {
 		static $i=0;
 		$i++;
 		$len = strlen($string);

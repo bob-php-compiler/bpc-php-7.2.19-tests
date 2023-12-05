@@ -29,6 +29,8 @@ var_dump( $datetime->setTime($hour, $min, $sec, $microseconds, $extra_arg) );
 *** Testing DateTime::setTime() : error conditions ***
 
 -- Testing DateTime::setTime() function with more than expected no. of arguments --
+
+Warning: Too many arguments to method DateTime::setTime(): 4 at most, 5 provided in %s on line %d
 object(DateTime)#1 (3) {
   ["date"]=>
   string(26) "2009-01-31 18:15:30.123123"

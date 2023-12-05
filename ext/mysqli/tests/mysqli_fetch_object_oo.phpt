@@ -43,7 +43,7 @@ require_once('skipifconnectfailure.inc');
 
 
 	try {
-		if (!is_null($tmp = @$res->fetch_object('stdClass', $link, $link)))
+		if (!is_null($tmp = @$res->fetch_object('stdClass', $link/*, $link*/)))
 			printf("[006] Expecting NULL, got %s/%s\n", gettype($tmp), $tmp);
 	} catch (Error $e) {
 		handle_catchable_fatal($e->getCode(), $e->getMessage(), $e->getFile(), $e->getLine());

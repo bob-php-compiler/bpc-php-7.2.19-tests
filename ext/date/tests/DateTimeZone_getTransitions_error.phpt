@@ -24,10 +24,12 @@ var_dump( $tz->getTransitions($timestamp_begin, $timestamp_end, $extra_arg) );
 
 ?>
 ===DONE===
---EXPECT--
+--EXPECTF--
 *** Testing DateTimeZone::getTransitions() : error conditions ***
 
 -- Testing DateTimeZone::getTransitions() function with more than expected no. of arguments --
+
+Warning: Too many arguments to method DateTimeZone::getTransitions(): 2 at most, 3 provided in %s on line %d
 array(7) {
   [0]=>
   array(5) {

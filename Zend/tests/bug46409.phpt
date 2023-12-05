@@ -5,7 +5,7 @@ Bug #46409 (__invoke method called outside of object context when using array_ma
 class Callback {
     protected $val = 'hello, world';
 
-    public function __invoke() {
+    public function __invoke($v = null) {
         return $this->val;
     }
 }

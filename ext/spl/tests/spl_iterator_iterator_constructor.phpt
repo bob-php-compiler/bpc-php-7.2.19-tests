@@ -22,4 +22,9 @@ try {
 ?>
 ===DONE===
 --EXPECTF--
+Warning: Too many arguments to method IteratorIterator::__construct(): 2 at most, 3 provided in %s on line %d
+
+Warning: Too many arguments to method IteratorIterator::__construct(): 2 at most, 4 provided in %s on line %d
+
+Warning: Too many arguments to method IteratorIterator::__construct(): 2 at most, 5 provided in %s on line %d
 ===DONE===

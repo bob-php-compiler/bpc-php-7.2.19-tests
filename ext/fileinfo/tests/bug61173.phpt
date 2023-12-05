@@ -10,5 +10,6 @@ try {
     echo $e->getMessage(), "\n";
 }
 --EXPECTF--
+Warning: Too many arguments to method finfo::__construct(): 2 at most, 3 provided in %s on line %d
 object(finfo)#%d (0) {
 }

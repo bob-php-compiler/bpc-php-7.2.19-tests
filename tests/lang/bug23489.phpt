@@ -11,7 +11,7 @@ class Test {
     );
   }
 
-  function transform($buffer) {
+  function transform($buffer, $phase) {
     return 'success';
   }
 }

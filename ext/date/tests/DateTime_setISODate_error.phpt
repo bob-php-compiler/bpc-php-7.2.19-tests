@@ -26,10 +26,12 @@ var_dump(  $datetime->setISODate($year, $week, $day, $extra_arg) );
 
 ?>
 ===DONE===
---EXPECT--
+--EXPECTF--
 *** Testing DateTime::setISODate () : error conditions ***
 
 -- Testing date_isodate_set() function with more than expected no. of arguments --
+
+Warning: Too many arguments to method DateTime::setISODate(): 3 at most, 4 provided in %s on line %d
 object(DateTime)#1 (3) {
   ["date"]=>
   string(26) "2009-07-26 19:34:10.000000"

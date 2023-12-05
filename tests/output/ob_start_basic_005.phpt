@@ -8,7 +8,7 @@ ob_start(): non-static method as static callbacks.
 */
 
 Class C {
-	function h($string) {
+	function h($string, $phase) {
 		return $string;
 	}
 }

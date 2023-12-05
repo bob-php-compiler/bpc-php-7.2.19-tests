@@ -84,13 +84,15 @@ foreach($ap as $k=>$v)
 ?>
 ===DONE===
 <?php exit(0); ?>
---EXPECT--
+--EXPECTF--
 MyArrayIterator::rewind
 0=>1
 1=>2
 MyAppendIterator::__construct
 MyAppendIterator::append
 The object is in an invalid state as the parent constructor was not called
+
+Warning: Too many arguments to method MyAppendIterator::parent__construct(): 0 at most, 1 provided in %s on line %d
 AppendIterator::getIterator() must be called exactly once per instance
 MyAppendIterator::append
 MyArrayIterator::rewind

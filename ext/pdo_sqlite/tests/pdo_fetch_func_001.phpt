@@ -30,7 +30,7 @@ $st = $db->query('SELECT * FROM testing');
 var_dump($st->fetchAll(PDO::FETCH_FUNC, array('self', 'foo')));
 
 class foo {
-	public function method($x) {
+	public function method($x, $y) {
 		return "--- $x ---";
 	}
 }

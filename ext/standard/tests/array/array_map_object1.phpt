@@ -62,14 +62,14 @@ echo "\n-- abstract class --\n";
 abstract class AbstractClass
 {
   protected $var2 = 5;
-  abstract function emptyFunction();
+  abstract function emptyFunction($arg);
 }
 
 // class deriving the above abstract class
 class ChildClass extends AbstractClass
 {
   private $var3;
-  public function emptyFunction() {
+  public function emptyFunction($arg) {
     echo "defined in child\n";
   }
 }
@@ -79,7 +79,7 @@ echo "\n-- class with final method --\n";
 class FinalClass
 {
   private $var4;
-  final function finalMethod() {
+  final function finalMethod($arg) {
     echo "This function can't be overloaded\n";
   }
 }

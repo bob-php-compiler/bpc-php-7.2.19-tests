@@ -11,3 +11,4 @@ $iterator->getSubIterator(0);
 $iterator->getSubIterator(0, 0);
 ?>
 --EXPECTF--
+Warning: Too many arguments to method RecursiveIteratorIterator::getSubIterator(): 1 at most, 2 provided in %s on line %d

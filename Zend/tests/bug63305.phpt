@@ -27,7 +27,7 @@ spl_autoload_register(function ($class) {
     }
 });
 
-new Attachment("");
+new Attachment();
 echo "okey";
 ?>
 --EXPECT--

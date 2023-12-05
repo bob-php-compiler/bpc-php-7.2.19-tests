@@ -6,7 +6,7 @@ include_path=.
 <?php
 class A {
     public $var = 1;
-    public function autoload() {
+    public function autoload($class) {
         echo "var:".$this->var."\n";
     }
     public function __destruct() {

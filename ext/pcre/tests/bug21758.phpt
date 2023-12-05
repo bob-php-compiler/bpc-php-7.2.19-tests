@@ -14,7 +14,7 @@ Bug #21758 (preg_replace_callback() not working with class methods)
            ));
     }
 
-    function bar() {
+    function bar($matches) {
       return 'working';
     }
 

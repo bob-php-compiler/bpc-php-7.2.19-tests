@@ -28,6 +28,8 @@ try {
 *** Testing date_create() : error conditions ***
 
 -- Testing new DateTime() with more than expected no. of arguments --
+
+Warning: Too many arguments to method DateTime::__construct(): 2 at most, 3 provided in %s on line %d
 object(DateTime)#2 (3) {
   ["date"]=>
   string(26) "%s"

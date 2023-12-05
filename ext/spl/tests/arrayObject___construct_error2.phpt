@@ -12,6 +12,8 @@ try {
 ?>
 --EXPECTF--
 Too many arguments:
+
+Warning: Too many arguments to method ArrayObject::__construct(): 3 at most, 4 provided in %s on line %d
 object(ArrayObject)#2 (1) {
   ["storage":"ArrayObject":private]=>
   object(stdClass)#1 (0) {

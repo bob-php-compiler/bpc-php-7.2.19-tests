@@ -5,7 +5,7 @@ Bug #36011 (Strict errormsg wrong for call_user_func() and the likes)
 
 class TestClass
 {
-	static function test()
+	static function test($arg = null)
 	{
 		echo __METHOD__ . "()\n";
 	}

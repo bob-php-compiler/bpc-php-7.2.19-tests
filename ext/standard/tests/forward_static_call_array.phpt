@@ -33,7 +33,7 @@ class B extends A {
 
 }
 
-B::test('foo');
+B::test();
 ?>
 --EXPECT--
 B

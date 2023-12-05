@@ -23,7 +23,7 @@ class B extends A
 	}
 }
 
-B::test('foo');
+B::test();
 
 function test() {
 	$args = func_get_args();
