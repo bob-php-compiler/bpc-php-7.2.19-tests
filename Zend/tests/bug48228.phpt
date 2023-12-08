@@ -9,7 +9,7 @@ function do_throw() {
 
 class aa
 {
-	function check()
+	function check($arg)
 	{
 	}
 
