@@ -3,6 +3,8 @@ Bug #48309 (stream_copy_to_stream() and fpasstru() do not update stream position
 --FILE--
 <?php
 
+ob_implicit_flush(1);
+
 $tmp = tmpfile();
 fwrite($tmp, 'test');
 fseek($tmp, 0, SEEK_SET);
