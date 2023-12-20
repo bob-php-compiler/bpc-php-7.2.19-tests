@@ -1,7 +1,5 @@
 --TEST--
 Traversables that throw exceptions are properly handled during argument unpack
---SKIPIF--
-skip TODO: arg_unpack support Traversable
 --FILE--
 <?php
 
@@ -22,11 +20,11 @@ function gen() {
 }
 
 try {
-    test(1, 2, ...new Foo, ...[3, 4]);
+    test(1, 2, ...new Foo, ...array(3, 4));
 } catch (Exception $e) { var_dump($e->getMessage()); }
 
 try {
-    test(1, 2, ...gen(), ...[3, 4]);
+    test(1, 2, ...gen(), ...array(3, 4));
 } catch (Exception $e) { var_dump($e->getMessage()); }
 
 ?>
