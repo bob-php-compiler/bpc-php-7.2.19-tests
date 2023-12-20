@@ -1,7 +1,5 @@
 --TEST--
 Argument unpacking does not work with string keys (forward compatibility for named args)
---SKIPIF--
-skip TODO: arg_unpack support Traversable
 --FILE--
 <?php
 
