@@ -396,8 +396,8 @@ function save_or_mail_results()
 			if ($sum_results['FAILED']) {
 				foreach ($PHP_FAILED_TESTS['FAILED'] as $test_info) {
 					$failed_tests_data .= $sep . $test_info['name'] . $test_info['info'];
-					$failed_tests_data .= $sep . file_get_contents(realpath($test_info['output']), FILE_BINARY);
-					$failed_tests_data .= $sep . file_get_contents(realpath($test_info['diff']), FILE_BINARY);
+					$failed_tests_data .= $sep . file_get_contents(realpath($test_info['output']));
+					$failed_tests_data .= $sep . file_get_contents(realpath($test_info['diff']));
 					$failed_tests_data .= $sep . "\n\n";
 				}
 				$status = "failed";
@@ -495,7 +495,7 @@ $html_file = null;
 $temp_source = null;
 $temp_target = null;
 $temp_urlbase = null;
-$conf_passed = null;
+$conf_passed = '';
 $no_clean = false;
 $slow_min_ms = INF;
 
@@ -1080,12 +1080,12 @@ function save_text($filename, $text, $filename_copy = null)
 	global $DETAILED;
 
 	if ($filename_copy && $filename_copy != $filename) {
-		if (file_put_contents($filename_copy, $text, FILE_BINARY) === false) {
+		if (file_put_contents($filename_copy, $text) === false) {
 			error("Cannot open file '" . $filename_copy . "' (save_text)");
 		}
 	}
 
-	if (file_put_contents($filename, $text, FILE_BINARY) === false) {
+	if (file_put_contents($filename, $text) === false) {
 		error("Cannot open file '" . $filename . "' (save_text)");
 	}
 
@@ -1347,7 +1347,7 @@ TEST $file
 	// the redirect section allows a set of tests to be reused outside of
 	// a given test dir
 	if (!$borked) {
-		if (@count($section_text['REDIRECTTEST']) == 1) {
+		if (isset($section_text['REDIRECTTEST'])) {
 
 			if ($IN_REDIRECT) {
 				$borked = true;
@@ -1358,12 +1358,18 @@ TEST $file
 
 		} else {
 
-			if (!isset($section_text['PHPDBG']) && @count($section_text['FILE']) + @count($section_text['FILEEOF']) + @count($section_text['FILE_EXTERNAL']) != 1) {
-				$bork_info = "missing section --FILE--";
-				$borked = true;
+			if (!isset($section_text['PHPDBG'])) {
+			    $FILE_Count = 0;
+			    if (isset($section_text['FILE'])) $FILE_Count++;
+			    if (isset($section_text['FILEEOF'])) $FILE_Count++;
+			    if (isset($section_text['FILE_EXTERNAL'])) $FILE_Count++;
+			    if ($FILE_Count != 1) {
+			        $bork_info = "missing section --FILE--";
+			        $borked = true;
+			    }
 			}
 
-			if (@count($section_text['FILEEOF']) == 1) {
+			if (isset($section_text['FILEEOF'])) {
 				$section_text['FILE'] = preg_replace("/[\r\n]+$/", '', $section_text['FILEEOF']);
 				unset($section_text['FILEEOF']);
 			}
@@ -1371,12 +1377,12 @@ TEST $file
 			foreach (array( 'FILE', 'EXPECT', 'EXPECTF', 'EXPECTREGEX' ) as $prefix) {
 				$key = $prefix . '_EXTERNAL';
 
-				if (@count($section_text[$key]) == 1) {
+				if (isset($section_text[$key])) {
 					// don't allow tests to retrieve files from anywhere but this subdirectory
 					$section_text[$key] = dirname($file) . '/' . trim(str_replace('..', '', $section_text[$key]));
 
 					if (file_exists($section_text[$key])) {
-						$section_text[$prefix] = file_get_contents($section_text[$key], FILE_BINARY);
+						$section_text[$prefix] = file_get_contents($section_text[$key]);
 						unset($section_text[$key]);
 					} else {
 						$bork_info = "could not load --" . $key . "-- " . dirname($file) . '/' . trim($section_text[$key]);
@@ -1385,7 +1391,11 @@ TEST $file
 				}
 			}
 
-			if ((@count($section_text['EXPECT']) + @count($section_text['EXPECTF']) + @count($section_text['EXPECTREGEX'])) != 1) {
+            $EXPECT_Count = 0;
+            if (isset($section_text['EXPECT'])) $EXPECT_Count++;
+            if (isset($section_text['EXPECTF'])) $EXPECT_Count++;
+            if (isset($section_text['EXPECTREGEX'])) $EXPECT_Count++;
+			if ($EXPECT_Count != 1) {
 				$bork_info = "missing section --EXPECT--, --EXPECTF-- or --EXPECTREGEX--";
 				$borked = true;
 			}
@@ -1689,7 +1699,7 @@ TEST $file
 		return 'SKIPPED';
 	}
 
-	if (@count($section_text['REDIRECTTEST']) == 1) {
+	if (isset($section_text['REDIRECTTEST'])) {
 		$test_files = array();
 
 		$IN_REDIRECT = eval($section_text['REDIRECTTEST']);
@@ -1743,7 +1753,7 @@ TEST $file
 		}
 	}
 
-	if (is_array($org_file) || @count($section_text['REDIRECTTEST']) == 1) {
+	if (is_array($org_file) || isset($section_text['REDIRECTTEST'])) {
 
 		if (is_array($org_file)) {
 			$file = $org_file[0];
@@ -2216,12 +2226,12 @@ COMMAND $cmd
 	if (!$passed) {
 
 		// write .exp
-		if (strpos($log_format, 'E') !== false && file_put_contents($exp_filename, $wanted, FILE_BINARY) === false) {
+		if (strpos($log_format, 'E') !== false && file_put_contents($exp_filename, $wanted) === false) {
 			error("Cannot create expected test output - $exp_filename");
 		}
 
 		// write .out
-		if (strpos($log_format, 'O') !== false && file_put_contents($output_filename, $output, FILE_BINARY) === false) {
+		if (strpos($log_format, 'O') !== false && file_put_contents($output_filename, $output) === false) {
 			error("Cannot create test output - $output_filename");
 		}
 
@@ -2231,7 +2241,7 @@ COMMAND $cmd
 			$diff = "# original source file: $shortname\n" . $diff;
 		}
 		show_file_block('diff', $diff);
-		if (strpos($log_format, 'D') !== false && file_put_contents($diff_filename, $diff, FILE_BINARY) === false) {
+		if (strpos($log_format, 'D') !== false && file_put_contents($diff_filename, $diff) === false) {
 			error("Cannot create test diff - $diff_filename");
 		}
 
@@ -2239,7 +2249,7 @@ COMMAND $cmd
 		if (strpos($log_format, 'S') !== false && file_put_contents($sh_filename, "#!/bin/sh
 
 {$cmd}
-", FILE_BINARY) === false) {
+") === false) {
 			error("Cannot create test shell script - $sh_filename");
 		}
 		chmod($sh_filename, 0755);
@@ -2251,7 +2261,7 @@ $wanted
 ---- ACTUAL OUTPUT
 $output
 ---- FAILED
-", FILE_BINARY) === false) {
+") === false) {
 			error("Cannot create test log - $log_filename");
 			error_report($file, $log_filename, $tested);
 		}
@@ -2444,12 +2454,12 @@ function settings2params(&$ini_settings)
 				$settings .= " -d \"$name=$val\"";
 			}
 		} else {
-			if (substr(PHP_OS, 0, 3) == "WIN" && !empty($value) && $value{0} == '"') {
+			if (substr(PHP_OS, 0, 3) == "WIN" && !empty($value) && $value[0] == '"') {
 				$len = strlen($value);
 
-				if ($value{$len - 1} == '"') {
-					$value{0} = "'";
-					$value{$len - 1} = "'";
+				if ($value[$len - 1] == '"') {
+					$value[0] = "'";
+					$value[$len - 1] = "'";
 				}
 			} else {
 				$value = addslashes($value);
