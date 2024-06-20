@@ -44,7 +44,11 @@ var_dump(is_resource($key));
 --EXPECTF--
 resource(%d) of type (OpenSSL key)
 bool(true)
------BEGIN EC PRIVATE KEY-----%a-----END EC PRIVATE KEY-----
+-----BEGIN PRIVATE KEY-----
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgs+Sqh7IzteDBiS5K
+PfTvuWuyt9YkrkuoyiW/6bag6NmhRANCAAQ+riFshYe8HnWt1avx6OuNajipU1ZW
+6BgW0+D/EtDDSYeQg9ngO8qyo5M6cyh7ORtKZVUy7DP1+W+eocaZC+a6
+-----END PRIVATE KEY-----
 bool(true)
 bool(true)
 resource(%d) of type (OpenSSL key)
