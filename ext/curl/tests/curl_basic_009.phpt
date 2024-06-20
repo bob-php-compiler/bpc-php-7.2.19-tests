@@ -2,12 +2,11 @@
 Test curl_error() & curl_errno() function with problematic protocol
 --CREDITS--
 TestFest 2009 - AFUP - Perrick Penet <perrick@noparking.net>
---ARGS--
---bpc-include-file ext/curl/tests/server.inc \
 --FILE--
 <?php
 
-$url = uniqid()."://www.".uniqid().".".uniqid();
+// Make sure the scheme always starts with an alphabetic character.
+$url = 'a' . substr(uniqid(),0,6)."://www.example.com";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 
@@ -18,6 +17,6 @@ curl_close($ch);
 
 
 ?>
---EXPECTREGEX--
-string\(\d+\) "([^\r\n]*rotocol[^\r\n]+|Could not resolve host: .+)"
-int\(\d\)
+--EXPECTF--
+string(%d) "%Srotocol%s"
+int(1)

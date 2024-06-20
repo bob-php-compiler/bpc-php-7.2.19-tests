@@ -1,5 +1,9 @@
 --TEST--
 Test curl_copy_handle() with CURLOPT_PROGRESSFUNCTION
+--SKIPIF--
+<?php
+if (defined('CURLOPT_XFERINFOFUNCTION')) echo 'skip CURLOPT_PROGRESSFUNCTION is deprecated';
+?>
 --ARGS--
 --bpc-include-file ext/curl/tests/server.inc \
 --FILE--
