@@ -1,7 +1,7 @@
 --TEST--
 finfo_file(): Testing mime types
 --SKIPIF--
-<?php if (LIBMAGIC_VERSION != 532) echo "skip only for libmagic 5.32"; ?>
+<?php if (LIBMAGIC_VERSION != 545) echo "skip only for libmagic 5.45"; ?>
 --FILE--
 <?php
 
@@ -24,7 +24,7 @@ array(9) {
   ["%s/resources/test.awk"]=>
   string(10) "text/plain"
   ["%s/resources/test.bmp"]=>
-  string(14) "image/x-ms-bmp"
+  string(9) "image/bmp"
   ["%s/resources/test.gif"]=>
   string(9) "image/gif"
   ["%s/resources/test.jpg"]=>

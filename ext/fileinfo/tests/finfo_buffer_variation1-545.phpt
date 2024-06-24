@@ -1,7 +1,7 @@
 --TEST--
 Test finfo_buffer() function : basic functionality
 --SKIPIF--
-<?php if (LIBMAGIC_VERSION != 532) echo "skip only for libmagic 5.32"; ?>
+<?php if (LIBMAGIC_VERSION != 545) echo "skip only for libmagic 5.45"; ?>
 --CAPTURE_STDIO--
 STDOUT
 --FILE--
@@ -45,7 +45,7 @@ string(36) "ASCII text, with no line terminators"
 string(3) "ELF"
 string(22) "old ACE/gr binary file"
 string(12) "xo65 object,"
-string(15) "MIFF image data"
+string(36) "ASCII text, with no line terminators"
 string(25) "RIFF (little-endian) data"
 string(28) "text/plain; charset=us-ascii"
 string(26) "text/plain; charset=ebcdic"

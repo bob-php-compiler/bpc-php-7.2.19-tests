@@ -1,7 +1,7 @@
 --TEST--
 Bug #68735 fileinfo out-of-bounds memory access
 --SKIPIF--
-<?php if (LIBMAGIC_VERSION != 532) echo "skip only for libmagic 5.32"; ?>
+<?php if (LIBMAGIC_VERSION != 545) echo "skip only for libmagic 5.45"; ?>
 --FILE--
 <?php
 $a='#!env python
@@ -14,4 +14,4 @@ $finfo = new finfo(FILEINFO_MIME_TYPE);
 echo $finfo->buffer($a) . "\n";
 ?>
 --EXPECT--
-text/x-python
+text/plain

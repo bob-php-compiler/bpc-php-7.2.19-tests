@@ -1,7 +1,7 @@
 --TEST--
 Test finfo_file() function : regex rules
 --SKIPIF--
-<?php if (LIBMAGIC_VERSION != 532) echo "skip only for libmagic 5.32"; ?>
+<?php if (LIBMAGIC_VERSION != 545) echo "skip only for libmagic 5.45"; ?>
 --CAPTURE_STDIO--
 STDOUT
 --FILE--
@@ -26,5 +26,5 @@ var_dump( finfo_file( $finfo, $file, FILEINFO_CONTINUE ) );
 --EXPECTF--
 *** Testing finfo_file() : regex rules ***
 string(28) "text/plain; charset=us-ascii"
-string(%d) "awk%sscript, ASCII text\012- data"
+string(%d) "awk or perl script, ASCII text"
 ===DONE===

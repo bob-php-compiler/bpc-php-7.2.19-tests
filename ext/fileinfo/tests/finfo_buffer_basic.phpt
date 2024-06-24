@@ -1,5 +1,7 @@
 --TEST--
 Test finfo_buffer() function : basic functionality
+--SKIPIF--
+<?php if (LIBMAGIC_VERSION != 532) echo "skip only for libmagic 5.32"; ?>
 --CAPTURE_STDIO--
 STDOUT
 --FILE--
