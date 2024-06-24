@@ -4,7 +4,7 @@ $http_reponse_header (whitespace-only "header")
 --bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php
-    if (LIBCURL_VERSION_NUM >= 0x080500) echo 'skip for libcurl < 8.5.0';
+    if (LIBCURL_VERSION_NUM != 0x080500) echo 'skip for libcurl 8.5.0';
     require 'server.inc'; http_server_skipif('tcp://127.0.0.1:22350'); 
 ?>
 --FILE--
@@ -27,7 +27,8 @@ test();
 http_server_kill($pid);
 ?>
 ==DONE==
---EXPECT--
-string(4) "Body"
+--EXPECTF--
+Warning: file_get_contents(http://127.0.0.1:22350/): Header without colon in %s on line %d
+bool(false)
 NULL
 ==DONE==

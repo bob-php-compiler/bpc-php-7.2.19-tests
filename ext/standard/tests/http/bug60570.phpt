@@ -38,10 +38,10 @@ function do_test() {
 
 do_test();
 --EXPECTF--
-Warning: file_get_contents(http://127.0.0.1:12342/): The requested URL returned error: 404 Not Found in %s on line %d
+Warning: file_get_contents(http://127.0.0.1:12342/): The requested URL returned error: 404%S in %s on line %d
 
-Warning: file_get_contents(http://127.0.0.1:12342/): The requested URL returned error: 404 Not Found in %s on line %d
+Warning: file_get_contents(http://127.0.0.1:12342/): The requested URL returned error: 404%S in %s on line %d
 
-Warning: file_get_contents(http://127.0.0.1:12342/): The requested URL returned error: 404 Not Found in %s on line %d
+Warning: file_get_contents(http://127.0.0.1:12342/): The requested URL returned error: 404%S in %s on line %d
 leak? penultimate iteration: %d, last one: %d
 bool(true)

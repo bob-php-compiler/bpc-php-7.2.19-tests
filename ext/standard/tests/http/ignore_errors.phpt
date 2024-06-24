@@ -54,7 +54,7 @@ Accept: */*
 
 "
 
-Warning: file_get_contents(http://127.0.0.1:12342/foo/bar): The requested URL returned error: 404 Not found in %s on line %d
+Warning: file_get_contents(http://127.0.0.1:12342/foo/bar): The requested URL returned error: 404%S in %s on line %d
 bool(false)
 string(%d) "GET /foo/bar HTTP/1.0
 Host: 127.0.0.1:12342

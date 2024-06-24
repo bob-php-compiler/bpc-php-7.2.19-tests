@@ -36,6 +36,6 @@ var_dump($f);
 ?>
 ==DONE==
 --EXPECTF--
-Warning: file_get_contents(http://127.0.0.1:22345/): The requested URL returned error: 404 Not Found in %s on line %d
+Warning: file_get_contents(http://127.0.0.1:22345/): The requested URL returned error: 404%S in %s on line %d
 bool(false)
 ==DONE==

@@ -44,7 +44,7 @@ function do_test($num_spaces, $leave_trailing_space=false) {
       . "Transfer-Encoding:{$spaces}Chunked{$trailing}\r\n\r\n"
       . "5\nHello\n0\n",
     "data://text/plain,HTTP/1.1 200 OK\r\n"
-      . "Content-Type\r\n" // Deliberately invalid header
+      //. "Content-Type\r\n" // Deliberately invalid header // curl 8.5.0 Header without colon
       . "Content-Length:{$spaces}5{$trailing}\r\n\r\n"
       . "World"
   );

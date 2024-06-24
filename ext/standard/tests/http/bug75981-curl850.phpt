@@ -4,7 +4,7 @@ Bug #75981 (stack-buffer-overflow while parsing HTTP response)
 --bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php
-    if (LIBCURL_VERSION_NUM >= 0x080500) echo 'skip for libcurl < 8.5.0';
+    if (LIBCURL_VERSION_NUM != 0x080500) echo 'skip for libcurl 8.5.0';
     require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342'); 
 ?>
 --FILE--
@@ -25,13 +25,12 @@ $responses = array(
 );
 $pid = http_server('tcp://127.0.0.1:12342', $responses);
 
-echo @file_get_contents('http://127.0.0.1:12342/', false, $ctx);
+echo file_get_contents('http://127.0.0.1:12342/', false, $ctx);
 
 http_server_kill($pid);
 
 ?>
 DONE
---EXPECT--
-000000000100
-
+--EXPECTF--
+Warning: file_get_contents(http://127.0.0.1:12342/): Received HTTP/0.9 when not allowed in %s on line %d
 DONE
