@@ -6,7 +6,7 @@ $clientCtx = stream_context_create(array('ssl' => array(
     //'verify_peer' => true,
     'tls_validation_flags' => G_TLS_CERTIFICATE_VALIDATE_ALL & ~G_TLS_CERTIFICATE_INSECURE,
     'cafile' => getcwd() . '/bug54992-ca.pem.tmp',
-    'peer_name' => 'bug54992_expected_peer_name',
+    'peer_name' => 'bug54992-expected-peer-name',
 )));
 
 phpt_wait();

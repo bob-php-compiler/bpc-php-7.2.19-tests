@@ -39,8 +39,8 @@ NULL
 
 Warning: openssl_seal() expects parameter 1 to be string, array given in %s on line %d
 NULL
-int(19)
-int(19)
+bool(false)
+bool(false)
 
 Warning: openssl_seal(): not a public key (2th member of pubkeys) in %s on line %d
 bool(false)

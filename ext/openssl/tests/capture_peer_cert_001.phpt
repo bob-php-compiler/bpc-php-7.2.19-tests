@@ -7,7 +7,7 @@ capture_peer_cert context captures on verify failure
 $certFile = 'capture_peer_cert_001.pem.tmp';
 $cacertFile = 'capture_peer_cert_001-ca.pem.tmp';
 
-$peerName = 'capture_peer_cert_001';
+$peerName = 'capture-peer-cert-001';
 
 include 'CertificateGenerator.inc';
 $certificateGenerator = new CertificateGenerator();
@@ -31,4 +31,4 @@ if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
 @unlink('capture_peer_cert_001-ca.pem.tmp');
 ?>
 --EXPECTF--
-string(%d) "capture_peer_cert_001"
+string(%d) "capture-peer-cert-001"

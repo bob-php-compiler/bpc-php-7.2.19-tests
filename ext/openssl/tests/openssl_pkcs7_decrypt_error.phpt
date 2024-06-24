@@ -1,7 +1,7 @@
 --TEST--
 openssl_pkcs7_decrypt() and invalid parameters
---SKIPIF--
-<?php if (!extension_loaded("openssl")) print "skip"; ?>
+--EXTENSIONS--
+openssl
 --FILE--
 <?php
 
@@ -25,18 +25,18 @@ var_dump(openssl_pkcs7_decrypt($a, $b, 0, 0));
 
 echo "Done\n";
 ?>
---EXPECTF--
+--EXPECT--
 string(57) "Object of class stdClass could not be converted to string"
-string(66) "openssl_pkcs7_decrypt(): unable to coerce parameter 3 to x509 cert"
+string(62) "openssl_pkcs7_decrypt(): X.509 Certificate cannot be retrieved"
 bool(false)
 object(stdClass)#1 (0) {
 }
-string(66) "openssl_pkcs7_decrypt(): unable to coerce parameter 3 to x509 cert"
+string(62) "openssl_pkcs7_decrypt(): X.509 Certificate cannot be retrieved"
 bool(false)
-string(66) "openssl_pkcs7_decrypt(): unable to coerce parameter 3 to x509 cert"
+string(62) "openssl_pkcs7_decrypt(): X.509 Certificate cannot be retrieved"
 bool(false)
-string(66) "openssl_pkcs7_decrypt(): unable to coerce parameter 3 to x509 cert"
+string(62) "openssl_pkcs7_decrypt(): X.509 Certificate cannot be retrieved"
 bool(false)
-string(66) "openssl_pkcs7_decrypt(): unable to coerce parameter 3 to x509 cert"
+string(62) "openssl_pkcs7_decrypt(): X.509 Certificate cannot be retrieved"
 bool(false)
 Done

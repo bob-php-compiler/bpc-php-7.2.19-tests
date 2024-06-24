@@ -65,7 +65,10 @@ class CertificateGenerator
             ),
             null,
             $this->caKey,
-            2
+            2,
+            array(
+                'config' => self::CONFIG,
+            )
         );
     }
 
@@ -82,31 +85,85 @@ class CertificateGenerator
         openssl_x509_export_to_file($this->ca, $file);
     }
 
-    public function saveNewCertAsFileWithKey($commonNameForCert, $file, $keyLength = null)
-    {
+    private function generateCertAndKey(
+        $commonNameForCert, $file, $keyLength = null, $subjectAltName = null
+    ) {
         $dn = array(
             'countryName' => 'BY',
             'stateOrProvinceName' => 'Minsk',
             'localityName' => 'Minsk',
             'organizationName' => 'Example Org',
-            'commonName' => $commonNameForCert,
+        );
+        if ($commonNameForCert !== null) {
+            $dn['commonName'] = $commonNameForCert;
+        }
+
+        $subjectAltNameConfig =
+            $subjectAltName ? "subjectAltName = $subjectAltName" : "";
+        $configCode = <<<CONFIG
+[ req ]
+distinguished_name = req_distinguished_name
+default_md = sha256
+default_bits = 1024
+
+[ req_distinguished_name ]
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+$subjectAltNameConfig
+
+[ usr_cert ]
+basicConstraints = CA:FALSE
+$subjectAltNameConfig
+CONFIG;
+        $configFile = $file . '.cnf';
+        file_put_contents($configFile, $configCode);
+
+        $config = array(
+            'config' => $configFile,
+            'req_extensions' => 'v3_req',
+            'x509_extensions' => 'usr_cert',
         );
 
         $this->lastKey = self::generateKey($keyLength);
+        $csr = openssl_csr_new($dn, $this->lastKey, $config);
         $this->lastCert = openssl_csr_sign(
-            openssl_csr_new($dn, $this->lastKey, array('req_extensions' => 'v3_req')),
+            $csr,
             $this->ca,
             $this->caKey,
-            2
+            /* days */ 2,
+            $config,
         );
+
+        return $config;
+    }
+
+    public function saveNewCertAsFileWithKey(
+        $commonNameForCert, $file, $keyLength = null, $subjectAltName = null
+    ) {
+        $config = $this->generateCertAndKey($commonNameForCert, $file, $keyLength, $subjectAltName);
 
         $certText = '';
         openssl_x509_export($this->lastCert, $certText);
 
         $keyText = '';
-        openssl_pkey_export($this->lastKey, $keyText);
+        openssl_pkey_export($this->lastKey, $keyText, null, $config);
 
         file_put_contents($file, $certText . PHP_EOL . $keyText);
+
+        unlink($config['config']);
+    }
+
+    public function saveNewCertAndKey(
+        $commonNameForCert, $certFile, $keyFile, $keyLength = null, $subjectAltName = null
+    ) {
+        $config = $this->generateCertAndKey($commonNameForCert, $certFile, $keyLength, $subjectAltName);
+
+        openssl_x509_export_to_file($this->lastCert, $certFile);
+        openssl_pkey_export_to_file($this->lastKey, $keyFile, null, $config);
+
+        unlink($config['config']);
     }
 
     public function getCertDigest($algo)

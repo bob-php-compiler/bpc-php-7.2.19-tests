@@ -3,7 +3,7 @@ openssl_encrypt() with GCM cipher algorithm tests
 --SKIPIF--
 <?php
 if (!in_array('aes-128-gcm', openssl_get_cipher_methods()))
-	die("skip: aes-128-gcm not available");
+    die("skip: aes-128-gcm not available");
 ?>
 --ARGS--
 --bpc-include-file ext/openssl/tests/cipher_tests.inc \
@@ -22,7 +22,7 @@ foreach ($tests as $idx => $test) {
 }
 
 // Empty IV error
-var_dump(openssl_encrypt('data', $method, 'password', 0, NULL, $tag, ''));
+var_dump(openssl_encrypt('data', $method, 'password', 0, '', $tag, ''));
 
 // Failing to retrieve tag (max is 16 bytes)
 var_dump(openssl_encrypt('data', $method, 'password', 0, str_repeat('x', 32), $tag, '', 20));

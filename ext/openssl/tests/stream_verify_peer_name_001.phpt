@@ -5,7 +5,7 @@ Verify host name by default in client transfers
 --FILE--
 <?php
 $certFile = 'stream_verify_peer_name_001.pem.tmp';
-$peerName = 'stream_verify_peer_name_001';
+$peerName = 'stream-verify-peer-name-001';
 
 include 'CertificateGenerator.inc';
 $certificateGenerator = new CertificateGenerator();

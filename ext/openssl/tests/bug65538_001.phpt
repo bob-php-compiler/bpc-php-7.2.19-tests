@@ -7,7 +7,7 @@ Bug #65538: SSL context "cafile" supports stream wrappers
 $certFile = 'bug65538_001.pem.tmp';
 $cacertFile = 'bug65538_001-ca.pem.tmp';
 
-$peerName = 'bug65538_001';
+$peerName = 'bug65538-001';
 
 include 'CertificateGenerator.inc';
 $certificateGenerator = new CertificateGenerator();

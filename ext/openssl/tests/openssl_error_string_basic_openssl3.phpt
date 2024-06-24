@@ -1,7 +1,5 @@
 --TEST--
 openssl_error_string() tests (OpenSSL >= 3.0)
---EXTENSIONS--
-openssl
 --SKIPIF--
 <?php
 if (OPENSSL_VERSION_NUMBER < 0x30000000) die('skip For OpenSSL >= 3.0');
@@ -52,22 +50,24 @@ function dump_openssl_errors($name) {
     }
 }
 
+$cwd = getcwd();
+
 // common output file
-$output_file =  __DIR__ . "/openssl_error_string_basic_output.tmp";
+$output_file =  $cwd . "/openssl_error_string_basic_output.tmp";
 // invalid file for read is something that does not exist in current directory
-$invalid_file_for_read = __DIR__ . "/invalid_file_for_read_operation.txt";
+$invalid_file_for_read = $cwd . "/invalid_file_for_read_operation.txt";
 // invalid file for is the test dir as writing file to existing dir should always fail
-$invalid_file_for_write = __DIR__;
+$invalid_file_for_write = $cwd;
 // crt file
-$crt_file = "file://" . __DIR__ . "/cert.crt";
+$crt_file = "file://" . $cwd . "/cert.crt";
 // csr file
-$csr_file = "file://" . __DIR__ . "/cert.csr";
+$csr_file = "file://" . $cwd . "/cert.csr";
 // public key file
-$public_key_file = "file://" .__DIR__ . "/public.key";
+$public_key_file = "file://" .$cwd . "/public.key";
 // private key file
-$private_key_file = "file://" .__DIR__ . "/private_rsa_1024.key";
+$private_key_file = "file://" .$cwd . "/private_rsa_1024.key";
 // private key file with password (password is 'php')
-$private_key_file_with_pass = "file://" .__DIR__ . "/private_rsa_2048_pass_php.key";
+$private_key_file_with_pass = "file://" .$cwd . "/private_rsa_2048_pass_php.key";
 
 // ENCRYPTION
 $data = "test";
@@ -100,54 +100,54 @@ echo "\n";
 $err_pem_no_start_line = '0480006C';
 
 // PKEY
-$options = ['config' => __DIR__ . DIRECTORY_SEPARATOR . 'openssl.cnf'];
+$options = array('config' => $cwd . DIRECTORY_SEPARATOR . 'openssl.cnf');
 echo "PKEY errors\n";
 // file for pkey (file:///) fails when opennig (BIO_new_file)
 @openssl_pkey_export_to_file("file://" . $invalid_file_for_read, $output_file, null, $options);
-expect_openssl_errors('openssl_pkey_export_to_file opening', ['10000080']);
+expect_openssl_errors('openssl_pkey_export_to_file opening', array('10000080'));
 // file or private pkey is not correct PEM - failing PEM_read_bio_PrivateKey
 @openssl_pkey_export_to_file($csr_file, $output_file, null, $options);
-expect_openssl_errors('openssl_pkey_export_to_file pem', ['1E08010C']);
+expect_openssl_errors('openssl_pkey_export_to_file pem', array('1E08010C'));
 // file to export cannot be written
 @openssl_pkey_export_to_file($private_key_file, $invalid_file_for_write, null, $options);
-expect_openssl_errors('openssl_pkey_export_to_file write', ['10080002']);
+expect_openssl_errors('openssl_pkey_export_to_file write', array('10080002'));
 // successful export
 @openssl_pkey_export($private_key_file_with_pass, $out, 'wrong pwd', $options);
-expect_openssl_errors('openssl_pkey_export', ['1C800064', '04800065']);
+expect_openssl_errors('openssl_pkey_export', array('1C800064', '04800065'));
 // private encrypt with unknown padding
 @openssl_private_encrypt("data", $crypted, $private_key_file, 1000);
-expect_openssl_errors('openssl_private_encrypt', ['1C8000A5']);
+expect_openssl_errors('openssl_private_encrypt', array('1C8000A5'));
 // private decrypt with failed padding check
 @openssl_private_decrypt("data", $crypted, $private_key_file, OPENSSL_PKCS1_OAEP_PADDING);
-expect_openssl_errors('openssl_private_decrypt', ['02000079']);
+expect_openssl_errors('openssl_private_decrypt', array('02000079'));
 // public encrypt and decrypt with failed padding check and padding
 @openssl_public_encrypt("data", $crypted, $public_key_file, 1000);
 @openssl_public_decrypt("data", $crypted, $public_key_file, OPENSSL_PKCS1_OAEP_PADDING);
-expect_openssl_errors('openssl_private_(en|de)crypt padding', ['1C8000A5']);
+expect_openssl_errors('openssl_private_(en|de)crypt padding', array('1C8000A5'));
 
 // X509
 echo "X509 errors\n";
 // file for x509 (file:///) fails when opennig (BIO_new_file)
 @openssl_x509_export_to_file("file://" . $invalid_file_for_read, $output_file);
-expect_openssl_errors('openssl_x509_export_to_file open', ['10000080']);
+expect_openssl_errors('openssl_x509_export_to_file open', array('10000080'));
 // file or str cert is not correct PEM - failing PEM_read_bio_X509 or PEM_ASN1_read_bio
 @openssl_x509_export_to_file($csr_file, $output_file);
-expect_openssl_errors('openssl_x509_export_to_file pem', [$err_pem_no_start_line]);
+expect_openssl_errors('openssl_x509_export_to_file pem', array($err_pem_no_start_line));
 // file to export cannot be written
 @openssl_x509_export_to_file($crt_file, $invalid_file_for_write);
-expect_openssl_errors('openssl_x509_export_to_file write', ['10080002']);
+expect_openssl_errors('openssl_x509_export_to_file write', array('10080002'));
 // checking purpose fails because there is no such purpose 1000
 @openssl_x509_checkpurpose($crt_file, 1000);
-expect_openssl_errors('openssl_x509_checkpurpose purpose', ['05800079']);
+expect_openssl_errors('openssl_x509_checkpurpose purpose', array('05800079'));
 
 // CSR
 echo "CSR errors\n";
 // file for csr (file:///) fails when opennig (BIO_new_file)
 @openssl_csr_get_subject("file://" . $invalid_file_for_read);
-expect_openssl_errors('openssl_csr_get_subject open', ['10000080']);
+expect_openssl_errors('openssl_csr_get_subject open', array('10000080'));
 // file or str csr is not correct PEM - failing PEM_read_bio_X509_REQ
 @openssl_csr_get_subject($crt_file);
-expect_openssl_errors('openssl_csr_get_subjec pem', [$err_pem_no_start_line]);
+expect_openssl_errors('openssl_csr_get_subjec pem', array($err_pem_no_start_line));
 
 // other possible causes that are difficult to catch:
 // - ASN1_STRING_to_UTF8 fails in add_assoc_name_entry
@@ -156,7 +156,7 @@ expect_openssl_errors('openssl_csr_get_subjec pem', [$err_pem_no_start_line]);
 ?>
 --CLEAN--
 <?php
-$output_file =  __DIR__ . "/openssl_error_string_basic_output.tmp";
+$output_file =  getcwd() . "/openssl_error_string_basic_output.tmp";
 if (is_file($output_file)) {
     unlink($output_file);
 }

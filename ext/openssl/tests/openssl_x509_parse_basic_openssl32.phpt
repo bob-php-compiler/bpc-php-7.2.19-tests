@@ -1,12 +1,14 @@
 --TEST--
 openssl_x509_parse() tests
+--EXTENSIONS--
+openssl
 --SKIPIF--
 <?php
-if (OPENSSL_VERSION_NUMBER >= 0x30200000) die('skip For OpenSSL < 3.2');
+if (OPENSSL_VERSION_NUMBER < 0x30200000) die('skip For OpenSSL >= 3.2');
 ?>
 --FILE--
 <?php
-$cert = "file://cert.crt";
+$cert = "file://" . __DIR__ . "/cert.crt";
 
 $parsedCert = openssl_x509_parse($cert);
 var_dump($parsedCert === openssl_x509_parse(openssl_x509_read($cert)));
@@ -67,7 +69,7 @@ array(16) {
   ["signatureTypeNID"]=>
   int(65)
   ["purposes"]=>
-  array(9) {
+  array(10) {
     [1]=>
     array(3) {
       [0]=>
@@ -149,6 +151,15 @@ array(16) {
       [2]=>
       string(13) "timestampsign"
     }
+    [10]=>
+    array(3) {
+      [0]=>
+      bool(false)
+      [1]=>
+      bool(true)
+      [2]=>
+      string(8) "codesign"
+    }
   }
   ["extensions"]=>
   array(3) {
@@ -214,7 +225,7 @@ array(16) {
   ["signatureTypeNID"]=>
   int(65)
   ["purposes"]=>
-  array(9) {
+  array(10) {
     [1]=>
     array(3) {
       [0]=>
@@ -295,6 +306,15 @@ array(16) {
       bool(true)
       [2]=>
       string(18) "Time Stamp signing"
+    }
+    [10]=>
+    array(3) {
+      [0]=>
+      bool(false)
+      [1]=>
+      bool(true)
+      [2]=>
+      string(12) "Code signing"
     }
   }
   ["extensions"]=>

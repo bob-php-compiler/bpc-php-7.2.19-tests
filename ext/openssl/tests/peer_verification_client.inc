@@ -30,7 +30,7 @@ var_dump(stream_socket_client($serverUri, $errno, $errstr, 1, $clientFlags, $cli
 // Should succeed with CA file specified in context
 $clientCtx = stream_context_create(array('ssl' => array(
     'cafile'   => $caFile,
-    'peer_name' => 'peer_verification',
+    'peer_name' => 'peer-verification',
     'tls_validation_flags' => G_TLS_CERTIFICATE_VALIDATE_ALL & ~G_TLS_CERTIFICATE_INSECURE
 )));
 var_dump(stream_socket_client($serverUri, $errno, $errstr, 1, $clientFlags, $clientCtx));

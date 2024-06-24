@@ -7,7 +7,7 @@ Host name mismatch triggers error
 $certFile = 'stream_verify_peer_name_003.pem.tmp';
 $cacertFile = 'stream_verify_peer_name_003-ca.pem.tmp';
 
-$actualPeerName = 'stream_verify_peer_name_003';
+$actualPeerName = 'stream-verify-peer-name-003';
 
 include 'CertificateGenerator.inc';
 $certificateGenerator = new CertificateGenerator();

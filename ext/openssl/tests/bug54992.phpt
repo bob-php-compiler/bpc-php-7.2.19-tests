@@ -7,7 +7,7 @@ Bug #54992: Stream not closed and error not returned when SSL CN_match fails
 $certFile = 'bug54992.pem.tmp';
 $cacertFile = 'bug54992-ca.pem.tmp';
 
-$peerName = 'bug54992_actual_peer_name';
+$peerName = 'bug54992-actual-peer-name';
 
 include 'CertificateGenerator.inc';
 $certificateGenerator = new CertificateGenerator();

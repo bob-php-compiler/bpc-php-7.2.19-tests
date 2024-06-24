@@ -1,5 +1,9 @@
 --TEST--
 Bug #71917: openssl_open() returns junk on envelope < 16 bytes
+--SKIPIF--
+<?php
+if (!in_array('rc4', openssl_get_cipher_methods())) die('skip rc4 not available');
+?>
 --FILE--
 <?php
 function test($envkey) {

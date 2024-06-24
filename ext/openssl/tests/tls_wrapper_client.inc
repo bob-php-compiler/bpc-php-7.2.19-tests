@@ -5,7 +5,7 @@ $ctx = stream_context_create(array('ssl' => array(
     // 'verify_peer' => false,
     // 'verify_peer_name' => false,
     // limited context parameter support
-    'tls_validation_flags' => G_TLS_CERTIFICATE_VALIDATE_ALL & ~(G_TLS_CERTIFICATE_UNKNOWN_CA | G_TLS_CERTIFICATE_BAD_IDENTITY | G_TLS_CERTIFICATE_EXPIRED)
+    'tls_validation_flags' => G_TLS_CERTIFICATE_VALIDATE_ALL & ~(G_TLS_CERTIFICATE_UNKNOWN_CA | G_TLS_CERTIFICATE_BAD_IDENTITY | G_TLS_CERTIFICATE_EXPIRED | G_TLS_CERTIFICATE_INSECURE)
 )));
 
 phpt_wait();

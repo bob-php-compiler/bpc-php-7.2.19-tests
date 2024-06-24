@@ -7,7 +7,7 @@ Peer verification enabled for client streams
 $certFile = 'peer_verification.pem.tmp';
 $cacertFile = 'peer_verification-ca.pem.tmp';
 
-$peerName = 'peer_verification';
+$peerName = 'peer-verification';
 
 include 'CertificateGenerator.inc';
 $certificateGenerator = new CertificateGenerator();
