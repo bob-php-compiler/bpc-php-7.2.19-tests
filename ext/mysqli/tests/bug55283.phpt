@@ -69,12 +69,12 @@ array(2) {
   [0]=>
   string(10) "Ssl_cipher"
   [1]=>
-  string(10) "AES256-SHA"
+  string(%d) "%rAES256-SHA|TLS_AES_256_GCM_SHA384%r"
 }
 array(2) {
   [0]=>
   string(10) "Ssl_cipher"
   [1]=>
-  string(10) "AES256-SHA"
+  string(%d) "%rAES256-SHA|TLS_AES_256_GCM_SHA384%r"
 }
 done

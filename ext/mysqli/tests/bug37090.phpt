@@ -29,7 +29,7 @@ if (!function_exists('mysqli_set_charset')) {
 	var_dump($cs);
 	print "done!";
 ?>
---EXPECT--
+--EXPECTF--
 array(6) {
   [0]=>
   bool(true)
@@ -38,10 +38,10 @@ array(6) {
   [2]=>
   bool(true)
   [3]=>
-  string(4) "utf8"
+  string(%d) "utf8%A"
   [4]=>
   bool(false)
   [5]=>
-  string(4) "utf8"
+  string(%d) "utf8%A"
 }
 done!

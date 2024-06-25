@@ -18,8 +18,11 @@ require_once('skipifconnectfailure.inc');
 		MYSQLI_OPT_LOCAL_INFILE				=> "MYSQLI_OPT_LOCAL_INFILE",
 		MYSQLI_INIT_COMMAND					=> "MYSQLI_INIT_COMMAND",
 		MYSQLI_SET_CHARSET_NAME				=> "MYSQLI_SET_CHARSET_NAME",
-		MYSQLI_OPT_SSL_VERIFY_SERVER_CERT 	=> "MYSQLI_OPT_SSL_VERIFY_SERVER_CERT",
 	);
+	$version = mysqli_get_client_version();
+	if ($version < 80000) {
+	    $valid_options[MYSQLI_OPT_SSL_VERIFY_SERVER_CERT] = "MYSQLI_OPT_SSL_VERIFY_SERVER_CERT";
+	}
 
 	if ($IS_MYSQLND && defined('MYSQLI_OPT_NET_CMD_BUFFER_SIZE'))
 		$valid_options[] = constant('MYSQLI_OPT_NET_CMD_BUFFER_SIZE');

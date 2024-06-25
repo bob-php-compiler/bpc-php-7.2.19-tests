@@ -180,7 +180,7 @@ mysqli.allow_local_infile=1
 		));
 	}
 
-	if ($version > 50110 || $IS_MYSQLND) {
+	if (($version > 50110 || $IS_MYSQLND) && $version < 80000) {
 		$expected_constants['MYSQLI_OPT_SSL_VERIFY_SERVER_CERT'] = true;
 	}
 

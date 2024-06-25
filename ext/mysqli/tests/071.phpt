@@ -22,16 +22,8 @@ require_once('skipifconnectfailure.inc');
 			printf("[001] Expecting boolean/true got %s/%s\n", gettype($ret), var_export($ret, true));
 		}
 	} else {
-		/* libmysql return value seems to depend on server version */
-		if ((($version >= 50123) || ($version <= 40200)) && $version != 50200 && $version != 50742) {
-			/* TODO: find exact version */
-			if ($ret !== true){
-				printf("[001] Expecting boolean/true got %s/%s @\n", gettype($ret), var_export($ret, true), $version);
-			}
-		} else {
-			if ($ret !== false){
-				printf("[001] Expecting boolean/false got %s/%s @\n", gettype($ret), var_export($ret, true), $version);
-			}
+		if ($ret !== false){
+			printf("[001] Expecting boolean/false got %s/%s @\n", gettype($ret), var_export($ret, true), $version);
 		}
 	}
 
@@ -49,16 +41,8 @@ require_once('skipifconnectfailure.inc');
 			printf("[002] Expecting boolean/true got %s/%s\n", gettype($ret), var_export($ret, true));
 		}
 	} else {
-		/* libmysql return value seems to depend on server version */
-		if ((($version >= 50123) || ($version <= 40200)) && $version != 50200 && $version != 50742) {
-			/* TODO: find exact version */
-			if ($ret !== true){
-				printf("[002] Expecting boolean/true got %s/%s @\n", gettype($ret), var_export($ret, true), $version);
-			}
-		} else {
-			if ($ret !== false){
+		if ($ret !== false){
 			printf("[002] Expecting boolean/false got %s/%s @\n", gettype($ret), var_export($ret, true), $version);
-			}
 		}
 	}
 

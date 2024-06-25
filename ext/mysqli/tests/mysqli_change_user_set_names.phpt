@@ -154,38 +154,38 @@ if ($version[0] <= 4 && $version[1] < 1)
 	mysqli_close($link);
 	print "done!";
 ?>
---EXPECT--
+--EXPECTF--
 [012] Charsets/collations have not been reset to their defaults.
 Got:
 array(6) {
   ["charset_client"]=>
-  string(6) "latin2"
+  string(%d) "%rlatin2|latin1%r"
   ["charset_connection"]=>
-  string(6) "latin2"
+  string(%d) "%rlatin2|latin1%r"
   ["charset_results"]=>
-  string(6) "latin2"
+  string(%d) "%rlatin2|latin1%r"
   ["collation_connection"]=>
-  string(17) "latin2_general_ci"
+  string(%d) "%rlatin2_general_ci|latin1_swedish_ci%r"
   ["collation_database"]=>
-  string(17) "latin1_swedish_ci"
+  string(%d) "%rlatin1_swedish_ci|utf8mb4_0900_ai_ci%r"
   ["collation_server"]=>
-  string(17) "latin1_swedish_ci"
+  string(%d) "%rlatin1_swedish_ci|utf8mb4_0900_ai_ci%r"
 }
 Expected:
 array(6) {
   ["charset_client"]=>
-  string(6) "latin1"
+  string(%d) "%rlatin1|utf8mb4%r"
   ["charset_connection"]=>
-  string(6) "latin1"
+  string(%d) "%rlatin1|utf8mb4%r"
   ["charset_results"]=>
-  string(6) "latin1"
+  string(%d) "%rlatin1|utf8mb4%r"
   ["collation_connection"]=>
-  string(17) "latin1_swedish_ci"
+  string(%d) "%rlatin1_swedish_ci|utf8mb4_0900_ai_ci%r"
   ["collation_database"]=>
-  string(17) "latin1_swedish_ci"
+  string(%d) "%rlatin1_swedish_ci|utf8mb4_0900_ai_ci%r"
   ["collation_server"]=>
-  string(17) "latin1_swedish_ci"
+  string(%d) "%rlatin1_swedish_ci|utf8mb4_0900_ai_ci%r"
 }
-[014] Expecting connection charset to be latin1 got latin2
-[015] Expecting collation to be latin1_swedish_ci got latin2_general_ci
+[014] Expecting connection charset to be %rlatin1 got latin2|utf8mb4 got latin1%r
+[015] Expecting collation to be %rlatin1_swedish_ci got latin2_general_ci|utf8mb4_0900_ai_ci got latin1_swedish_ci%r
 done!
