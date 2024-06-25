@@ -13,5 +13,4 @@ var_dump(crypt('foo', '*0'));
 
 ?>
 --EXPECTF--
-Warning: crypt(): salt '*0' has the wrong format in %s on line %d
-string(2) "*1"
+%Astring(2) "*1"

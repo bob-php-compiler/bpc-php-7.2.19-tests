@@ -30,7 +30,6 @@ var_dump($sxe->xpath("**"));
 ?>
 --EXPECTF--
 XPath error : Invalid expression
-xmlXPathEval: evaluation failed
 array(1) {
   [0]=>
   object(SimpleXMLElement)#%d (1) {

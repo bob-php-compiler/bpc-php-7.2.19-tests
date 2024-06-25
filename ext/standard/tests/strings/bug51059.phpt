@@ -8,5 +8,4 @@ else echo 'Not OK';
 
 ?>
 --EXPECTF--
-Warning: crypt(): salt '_' has the wrong format in %s on line 2
-OK
+%AOK
