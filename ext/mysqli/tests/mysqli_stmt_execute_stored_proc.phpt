@@ -20,6 +20,8 @@ if (mysqli_get_server_version($link) <= 50000) {
 	require_once('connect.inc');
 	require_once('table.inc');
 
+    ini_set('memory_limit', '1024M');
+
 	if (!mysqli_query($link, 'DROP PROCEDURE IF EXISTS p'))
 		printf("[009] [%d] %s.\n", mysqli_errno($link), mysqli_error($link));
 

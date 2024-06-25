@@ -9,6 +9,7 @@ require_once('skipifconnectfailure.inc');
 ?>
 --FILE--
 <?php
+    ini_set('memory_limit', '512M');
 	require_once("connect.inc");
 
 	/*** test mysqli_connect 127.0.0.1 ***/
