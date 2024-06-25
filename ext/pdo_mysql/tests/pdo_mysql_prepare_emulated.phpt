@@ -138,7 +138,7 @@ $db = MySQLPDOTest::factory();
 		prepex(20, $db, 'DELETE FROM test');
 		prepex(21, $db, 'INSERT INTO test(id, label) VALUES (1, :placeholder), (2, :placeholder)',
 			array(':placeholder' => 'row'));
-		$stmt = prepex(22, $db, 'SELECT id, label FROM test');
+		$stmt = prepex(22, $db, 'SELECT id, label FROM test order by id');
 		var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
 
 		$stmt = prepex(23, $db, 'SELECT id, label FROM test WHERE :placeholder IS NOT NULL',
@@ -243,7 +243,7 @@ $db = MySQLPDOTest::factory();
 		prepex(61, $db, 'DELETE FROM test');
 		prepex(62, $db, 'INSERT INTO test(id, label) VALUES (1, ?), (2, ?)',
 			array('row', 'row'));
-		$stmt = prepex(63, $db, 'SELECT id, label FROM test');
+		$stmt = prepex(63, $db, 'SELECT id, label FROM test order by id');
 		var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
 
 		$stmt = prepex(64, $db, 'SELECT id, label FROM test WHERE ? IS NOT NULL',
