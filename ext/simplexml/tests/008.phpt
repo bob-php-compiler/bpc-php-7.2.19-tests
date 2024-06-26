@@ -29,7 +29,7 @@ var_dump($sxe->xpath("***"));
 var_dump($sxe->xpath("**"));
 ?>
 --EXPECTF--
-XPath error : Invalid expression
+XPath error : Invalid expression%A
 array(1) {
   [0]=>
   object(SimpleXMLElement)#%d (1) {
