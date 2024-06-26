@@ -132,7 +132,7 @@ mysqli.allow_local_infile=1
 		$version = mysqli_get_client_version();
 	}
 
-	if (($version > 51122 && $version < 60000) || ($version > 60003) || $IS_MYSQLND) {
+	if (($version >= 50742 && $version < 60000) || ($version > 60003) || $IS_MYSQLND) {
 		$expected_constants['MYSQLI_ON_UPDATE_NOW_FLAG'] = true;
 	}
 
