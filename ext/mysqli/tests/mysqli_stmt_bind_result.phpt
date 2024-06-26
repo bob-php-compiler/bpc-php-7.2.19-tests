@@ -12,6 +12,8 @@ require_once('skipifconnectfailure.inc');
 --FILE--
 <?php
 	require_once("connect.inc");
+	
+	ini_set('memory_limit', '512M');
 
 	$tmp    = NULL;
 	$link   = NULL;
