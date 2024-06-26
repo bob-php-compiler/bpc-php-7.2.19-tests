@@ -12,7 +12,7 @@ STDOUT
  * Alias to functions:
  */
 
-$magicFile = './magic私はガラスを食べられます';
+$magicFile = './magic私はガラスを食べられます-545';
 
 $options = array(
 	FILEINFO_NONE,

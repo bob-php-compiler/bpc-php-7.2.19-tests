@@ -10,7 +10,7 @@ Test finfo_file() function : basic functionality
  * Alias to functions:
  */
 
-$magicFile = './magic';
+$magicFile = './magic-545';
 $finfo = finfo_open( FILEINFO_MIME );
 
 echo "*** Testing finfo_file() : basic functionality ***\n";

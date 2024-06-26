@@ -6,6 +6,9 @@ STDOUT
 <?php
 
 $magic_file = './magic';
+if (LIBMAGIC_VERSION == 545) {
+    $magic_file .= '-545';
+}
 
 $ret = @finfo_open(FILEINFO_NONE, $magic_file . ".non-exits");
 var_dump($ret);

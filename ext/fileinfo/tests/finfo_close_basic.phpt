@@ -13,6 +13,9 @@ STDOUT
 echo "*** Testing finfo_close() : basic functionality ***\n";
 
 $magicFile = './magic';
+if (LIBMAGIC_VERSION == 545) {
+    $magicFile .= '-545';
+}
 
 $finfo = finfo_open( FILEINFO_MIME, $magicFile );
 var_dump( $finfo );

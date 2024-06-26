@@ -11,6 +11,9 @@ STDOUT
  */
 
 $magicFile = './magic';
+if (LIBMAGIC_VERSION == 545) {
+    $magicFile .= '-545';
+}
 
 echo "*** Testing finfo_open() : error functionality ***\n";
 
@@ -31,14 +34,14 @@ try {
 --EXPECTF--
 *** Testing finfo_open() : error functionality ***
 
-Warning: finfo_open(): Failed to load magic database at 'foobarfile'. in %sfinfo_open_error.php on line 12
+Warning: finfo_open(): Failed to load magic database at 'foobarfile'. in %sfinfo_open_error.php on line %d
 bool(false)
 
-Warning: finfo_open() expects parameter 1 to be integer, array given in %sfinfo_open_error.php on line 13
+Warning: finfo_open() expects parameter 1 to be integer, array given in %sfinfo_open_error.php on line %d
 bool(false)
 resource(%d) of type (file_info)
 
-Warning: finfo_open() expects parameter 1 to be integer, string given in %sfinfo_open_error.php on line 16
+Warning: finfo_open() expects parameter 1 to be integer, string given in %sfinfo_open_error.php on line %d
 bool(false)
 finfo::__construct() expects parameter 1 to be integer, string given
 ===DONE===

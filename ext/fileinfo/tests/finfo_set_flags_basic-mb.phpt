@@ -11,6 +11,9 @@ STDOUT
  */
 
 $magicFile = './magic私はガラスを食べられます';
+if (LIBMAGIC_VERSION == 545) {
+    $magicFile .= '-545';
+}
 $finfo = finfo_open( FILEINFO_MIME, $magicFile );
 
 echo "*** Testing finfo_set_flags() : basic functionality ***\n";

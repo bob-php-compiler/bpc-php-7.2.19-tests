@@ -12,7 +12,7 @@ STDOUT
  * Alias to functions:
  */
 
-$magicFile = './magic';
+$magicFile = './magic-545';
 
 $options = array(
 	FILEINFO_NONE,

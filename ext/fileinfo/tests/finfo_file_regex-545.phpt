@@ -11,7 +11,7 @@ STDOUT
  * $ file -m magic resources/test.awk
  * resources/test.awk: awk script, ASCII text
  */
-$magicFile = './magic';
+$magicFile = './magic-545';
 $finfo = finfo_open( FILEINFO_MIME, $magicFile );
 
 echo "*** Testing finfo_file() : regex rules ***\n";

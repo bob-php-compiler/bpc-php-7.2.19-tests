@@ -11,6 +11,9 @@ STDOUT
  */
 
 $magicFile = './magic';
+if (LIBMAGIC_VERSION == 545) {
+    $magicFile .= '-545';
+}
 
 echo "*** Testing finfo_open() : variations in opening ***\n";
 

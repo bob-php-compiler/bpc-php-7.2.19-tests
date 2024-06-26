@@ -13,4 +13,4 @@ $type = $finfo->buffer($string);
 var_dump($type);
 ?>
 --EXPECTF--
-string(%d) "ASCII text, with very long lines%s, with CRLF line terminators"
+string(%d) "ASCII text, with very long lines%S, with CRLF line terminators"
