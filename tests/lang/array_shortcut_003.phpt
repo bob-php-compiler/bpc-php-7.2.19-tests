@@ -1,7 +1,5 @@
 --TEST--
 Testing array shortcut and bracket operator
---SKIPIF--
-skip array declare
 --FILE--
 <?php
 $a = [1, 2, 3, 4, 5];
