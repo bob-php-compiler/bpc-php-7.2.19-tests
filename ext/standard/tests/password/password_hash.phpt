@@ -6,11 +6,11 @@ Test normal operation of password_hash()
 
 var_dump(strlen(password_hash("foo", PASSWORD_BCRYPT)));
 
-$algos = array(
+$algos = [
   PASSWORD_BCRYPT,
   '2y',
   1,
-);
+];
 
 foreach ($algos as $algo) {
   $hash = password_hash("foo", $algo);

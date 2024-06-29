@@ -15,7 +15,7 @@ class TestClass
     }
 }
 
-$callback = array('TestClass', 'method');
+$callback = ['TestClass', 'method'];
 echo $callback();
 ?>
 --EXPECTF--

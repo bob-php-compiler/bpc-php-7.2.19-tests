@@ -18,7 +18,7 @@ var_dump(openssl_csr_new($a, $b, $conf));
 
 // options type check
 $x = openssl_pkey_new($conf);
-var_dump(openssl_csr_new(array("countryName" => "DE"), $x, $conf + array("x509_extensions" => 0xDEADBEEF)));
+var_dump(openssl_csr_new(["countryName" => "DE"], $x, $conf + ["x509_extensions" => 0xDEADBEEF]));
 
 
 echo "Done\n";

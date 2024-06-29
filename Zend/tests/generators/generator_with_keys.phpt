@@ -11,10 +11,10 @@ function reverse(array $array) {
     }
 }
 
-$array = array(
+$array = [
     'foo' => 'bar',
     'bar' => 'foo',
-);
+];
 
 foreach (reverse($array) as $key => $value) {
     echo $key, ' => ', $value, "\n";

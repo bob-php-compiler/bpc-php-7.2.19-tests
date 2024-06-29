@@ -8,13 +8,13 @@ opcache.optimization_level=0
 set_error_handler(function($type, $msg) { throw new Exception($msg); });
 
 try {
-	$a = array();
+	$a = [];
 	$a .= "foo";
 } catch (Throwable $e) { var_dump($a); }
 
 try {
 	$a = "foo";
-	$a .= array();
+	$a .= [];
 } catch (Throwable $e) { var_dump($a); }
 
 $x = new stdClass;

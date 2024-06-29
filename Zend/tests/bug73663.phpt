@@ -11,13 +11,13 @@ $func = function (&$ref) {
 	return change($ref);
 };
 
-$array = array(1);
+$array = [1];
 var_dump(list($val) = $array); // NG: Invalid opcode
 
 change(list($val) = $array);
 var_dump($array);
 
-$array = array(1);
+$array = [1];
 
 $func(list($val) = $array);
 var_dump($array);

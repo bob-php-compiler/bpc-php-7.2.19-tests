@@ -3,7 +3,7 @@ Break out of while loop that is followed by a return statement and inside a fore
 --FILE--
 <?php
 
-$a = array(42);
+$a = [42];
 foreach ($a as $b) {
     $break = false;
     while (1) {

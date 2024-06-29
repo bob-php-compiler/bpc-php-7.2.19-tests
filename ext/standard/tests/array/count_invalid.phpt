@@ -18,7 +18,7 @@ var_dump($result);
 $result = count(false);
 var_dump($result);
 
-$result = count((object) array());
+$result = count((object) []);
 var_dump($result);
 
 ?>

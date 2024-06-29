@@ -4,7 +4,7 @@ Bug #70228 (memleak if return in finally block)
 <?php
 
 function foo() {
-    $array = array(1, 2, $n = 3);
+    $array = [1, 2, $n = 3];
     foreach ($array as $value) {
         var_dump($value);
         try {

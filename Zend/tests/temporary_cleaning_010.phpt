@@ -4,8 +4,8 @@ Live range & throw from finally
 <?php
 function test() {
     try {
-        $a = array(1, 2, 3);
-        return $a + array();
+        $a = [1, 2, 3];
+        return $a + [];
     } finally {
         throw new Exception;
     }

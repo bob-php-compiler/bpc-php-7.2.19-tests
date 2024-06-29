@@ -4,11 +4,11 @@ Check for EventBuffer::pullup method behavior
 <?php
 $eventBuffereClass = EVENT_NS . '\\EventBuffer';
 
-$a = array(
+$a = [
 	"",
 	"test",
 	"\0\0\0",
-);
+];
 
 foreach ($a as $s) {
 	$b = new $eventBuffereClass();

@@ -64,7 +64,7 @@ file_put_contents($tmpFileIn, $originalEnvelopeData);
 
 var_dump(filesize($tmpFileIn) === strlen($originalEnvelopeData));
 
-openssl_pkcs7_encrypt($tmpFileIn, $tmpFileOut, array($cert), array(), PKCS7_BINARY, OPENSSL_CIPHER_AES_128_CBC);
+openssl_pkcs7_encrypt($tmpFileIn, $tmpFileOut, [$cert], array(), PKCS7_BINARY, OPENSSL_CIPHER_AES_128_CBC);
 
 $tmpFileOut2 = tempnam(sys_get_temp_dir(), 'test');
 openssl_pkcs7_decrypt($tmpFileOut, $tmpFileOut2, $cert, $pkey);

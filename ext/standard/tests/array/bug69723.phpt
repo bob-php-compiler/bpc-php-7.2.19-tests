@@ -9,17 +9,17 @@ function byReference( & $array){
 	}
 }
 
-$array = array(
-	array(
+$array = [
+	[
 	'superhero'=> 'superman',
 	'nanana' => 'no nana'
-	),
-	array(
+	],
+	[
 	'superhero'=> 'acuaman',
 	'nanana' => 'no nana'
-	),
+	],
 
-	);
+	];
 
 var_dump(array_column($array, 'superhero'));
 byReference($array);

@@ -4,8 +4,8 @@ yielding values from an array
 <?php
 function from() {
 	yield 0;
-	yield from array(); // must not yield anything
-	yield from array(1,2);
+	yield from []; // must not yield anything
+	yield from [1,2];
 }
 
 function gen() {

@@ -3,7 +3,7 @@ Bug #68163: Using reference as object property name
 --FILE--
 <?php
 
-$obj = (object) array('foo' => 'bar');
+$obj = (object) ['foo' => 'bar'];
 $foo = 'foo';
 $ref =& $foo;
 var_dump($obj->$foo);

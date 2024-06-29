@@ -12,7 +12,7 @@ class Foo {
     }
 }
 
-$array = array(array(new Foo));
+$array = [[new Foo]];
 $array[0][0]->array =& $array;
 unset($array[0][0]);
 

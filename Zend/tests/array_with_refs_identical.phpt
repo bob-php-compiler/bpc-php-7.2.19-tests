@@ -4,8 +4,8 @@ Identical comparison of array with references
 <?php
 
 $foo = 42;
-$array1 = array(&$foo);
-$array2 = array($foo);
+$array1 = [&$foo];
+$array2 = [$foo];
 var_dump($array1 === $array2);
 
 ?>

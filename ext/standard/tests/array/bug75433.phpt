@@ -3,7 +3,7 @@ array_values() preserves next index from source array when shallow-copying
 --FILE--
 <?php
 
-$a = array(1,2,3);
+$a = [1,2,3];
 unset($a[2]);
 $b = array_values($a);
 $b[] = 4;

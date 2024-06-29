@@ -4,7 +4,7 @@ Array keys can be yielded from generators
 <?php
 
 function gen() {
-    yield array() => 1;
+    yield [] => 1;
 }
 
 $gen = gen();

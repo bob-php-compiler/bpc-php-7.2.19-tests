@@ -3,7 +3,7 @@ Fixed #69166 (Assigning array_values() to array does not reset key counter)
 --FILE--
 <?php
 
-$array = array(0);
+$array = [0];
 $ar = array_values($array);
 $ar[] = 1;
 var_dump($ar);

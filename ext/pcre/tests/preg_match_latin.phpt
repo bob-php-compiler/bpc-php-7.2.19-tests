@@ -11,7 +11,7 @@ preg_match('/^[\w\p{Cyrillic}\s\-\']+$/u', 'latin', $test1);
 preg_match('/^[\w\p{Cyrillic}\s\-\']+$/u', 'кириллица', $test2);
 preg_match('/^[\w\s\-\']+$/u', 'latin', $test3);
 
-var_dump(array($test1, $test2, $test3));
+var_dump([$test1, $test2, $test3]);
 ?>
 ===Done===
 --EXPECT--

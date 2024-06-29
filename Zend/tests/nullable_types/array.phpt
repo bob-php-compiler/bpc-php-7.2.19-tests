@@ -8,7 +8,7 @@ function _array_(?array $v) {
 }
 
 var_dump(_array_(null));
-var_dump(_array_(array()));
+var_dump(_array_([]));
 --EXPECT--
 NULL
 array(0) {

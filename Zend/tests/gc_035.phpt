@@ -13,7 +13,7 @@ class A {
 }
 $a = new A;
 $a->a = $a;
-$a->x = array();
+$a->x = [];
 $a->x[] =& $a->x;
 $a->x[] = $a;
 var_dump(gc_collect_cycles());

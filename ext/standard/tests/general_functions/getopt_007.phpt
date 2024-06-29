@@ -8,7 +8,7 @@ variables_order=GPS
 --FILE--
 <?php
     $optind = null;
-    getopt('a:b:', array(), $optind);
+    getopt('a:b:', [], $optind);
     var_dump($optind);
 ?>
 --EXPECT--

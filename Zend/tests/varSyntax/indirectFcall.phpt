@@ -12,8 +12,8 @@ id('id')('var_dump')(2);
 id('id')('id')('var_dump')(3);
 id()()('var_dump')(4);
 
-id(array('udef', 'id'))[1]()('var_dump')(5);
-(id((object) array('a' => 'id', 'b' => 'udef'))->a)()()()()('var_dump')(6);
+id(['udef', 'id'])[1]()('var_dump')(5);
+(id((object) ['a' => 'id', 'b' => 'udef'])->a)()()()()('var_dump')(6);
 
 $id = function($x) { return $x; };
 
@@ -26,13 +26,13 @@ $id($id)('var_dump')(7);
 })()()()('var_dump')(9);
 
 class Test {
-    public static function id($x = array(__CLASS__, 'id')) { return $x; }
+    public static function id($x = [__CLASS__, 'id']) { return $x; }
 }
 
 $obj = new Test;
-$call = array($obj, 'id');
+$call = [$obj, 'id'];
 $call()('id')($id)('var_dump')(10);
-$call = array('Test', 'id');
+$call = ['Test', 'id'];
 $call()()('var_dump')(11);
 $call = 'id';
 $call()('id')('var_dump')(12);

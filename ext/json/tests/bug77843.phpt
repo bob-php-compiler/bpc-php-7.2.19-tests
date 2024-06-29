@@ -13,8 +13,8 @@ class X implements JsonSerializable {
     }
 }
 
-$arr = array(new X());
-var_dump(json_encode(array(&$arr)));
+$arr = [new X()];
+var_dump(json_encode([&$arr]));
 
 ?>
 --EXPECT--

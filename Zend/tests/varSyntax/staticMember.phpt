@@ -5,7 +5,7 @@ Static member access
 
 class A {
     public static $b = 0;
-    public static $c = array(0, 1);
+    public static $c = [0, 1];
     public static $A_str = 'A';
 }
 

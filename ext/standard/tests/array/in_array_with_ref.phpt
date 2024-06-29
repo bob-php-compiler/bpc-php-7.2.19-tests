@@ -4,7 +4,7 @@ in_array() with references
 <?php
 
 $value = 42;
-$array = array(&$value);
+$array = [&$value];
 var_dump(in_array(42, $array, false));
 var_dump(in_array(42, $array, true));
 

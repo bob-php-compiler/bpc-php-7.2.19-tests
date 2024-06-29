@@ -35,7 +35,7 @@ function gen4($arg = null) {
 }
 $gen = gen4();
 $gen2 = gen4($gen);
-$gen2->send(array(1, 2, 3));
+$gen2->send([1, 2, 3]);
 $gen->send($gen2);
 
 ?>

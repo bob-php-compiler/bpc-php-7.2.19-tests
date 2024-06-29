@@ -54,17 +54,17 @@ session_set_save_handler($handler);
 
 session_id(sha1(''));
 var_dump(session_id());
-var_dump(session_start(array('lazy_write'=>1)));
+var_dump(session_start(['lazy_write'=>1]));
 session_commit();
 
 session_id(sha1(''));
 var_dump(session_id());
-var_dump(session_start(array('lazy_write'=>1)));
+var_dump(session_start(['lazy_write'=>1]));
 session_commit();
 
 session_id(sha1(''));
 var_dump(session_id());
-var_dump(session_start(array('lazy_write'=>0)));
+var_dump(session_start(['lazy_write'=>0]));
 session_commit();
 ?>
 --EXPECT--

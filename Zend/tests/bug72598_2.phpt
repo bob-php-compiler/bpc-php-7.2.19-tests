@@ -10,7 +10,7 @@ function ref(&$ref) {
 class A {
         function __construct() {
 		$b = 0;
-                $args = array(&$b);
+                $args = [&$b];
 		unset($b);
                 for ($i = 0; $i < 2; $i++) {
                         $a = array_slice($args, 0, 1);

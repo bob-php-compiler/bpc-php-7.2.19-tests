@@ -9,19 +9,19 @@ Bug #67430 (http:// wrapper doesn't follow 308 redirects)
 require 'server.inc';
 
 function do_test($follow) {
-  $options = array(
-    'http' => array(
+  $options = [
+    'http' => [
       'method' => 'POST',
       'follow_location' => $follow,
-    ),
-  );
+    ],
+  ];
 
   $ctx = stream_context_create($options);
 
-  $responses = array(
+  $responses = [
     "data://text/plain,HTTP/1.1 308\r\nLocation: /foo\r\n\r\n",
     "data://text/plain,HTTP/1.1 200\r\nConnection: close\r\n\r\n",
-  );
+  ];
   $pid = http_server('tcp://127.0.0.1:12342', $responses, $output);
 
   file_get_contents('http://127.0.0.1:12342/', false, $ctx);

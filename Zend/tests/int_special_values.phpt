@@ -2,14 +2,14 @@
 Conversion of special float values to int
 --FILE--
 <?php
-$values = array(
+$values = [
     0.0,
     INF,
     -INF,
     1 / INF,
     -1 / INF, // Negative zero,
     NAN
-);
+];
 
 foreach($values as $value) {
     var_dump($value);

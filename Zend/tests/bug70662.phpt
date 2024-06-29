@@ -3,7 +3,7 @@ Bug #70662: Duplicate array key via undefined index error handler
 --FILE--
 <?php
 
-$a = array();
+$a = [];
 set_error_handler(function() use(&$a) {
     $a['b'] = 2;
 });

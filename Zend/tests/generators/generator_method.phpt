@@ -17,7 +17,7 @@ class Test implements IteratorAggregate {
     }
 }
 
-$test = new Test(array('foo', 'bar', 'baz'));
+$test = new Test(['foo', 'bar', 'baz']);
 foreach ($test as $value) {
     var_dump($value);
 }

@@ -6,7 +6,7 @@ Dynamic Constant Expressions
 define('C_0', 0);
 define('C_1', 1);
 define('C_foo', "foo");
-define('C_arr', array(0 => 0, "foo" => "foo"));
+define('C_arr', [0 => 0, "foo" => "foo"]);
 
 define('T_1', C_1 | 2);
 define('T_2', C_1 . "foo");
@@ -26,7 +26,7 @@ define('T_15', C_0 ? C_0 : "bar");
 define('T_16', C_1 ? C_1 : "bar");
 define('T_17', C_arr[0]);
 define('T_18', C_arr["foo"]);
-define('T_19', array(
+define('T_19', [
     C_0,
     "foo" => "foo",
     42 => 42,
@@ -34,7 +34,7 @@ define('T_19', array(
     null => null,
     false => false,
     true => true,
-));
+]);
 define('T_20x', 'a');
 define('T_20', null ? null : (T_20x . 'bc'));
 

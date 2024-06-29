@@ -4,7 +4,7 @@ Bug #76778 (array_reduce leaks memory if callback throws exception)
 <?php
 try {
     array_reduce(
-        array(1),
+        [1],
         function ($carry, $item) {
             throw new Exception;
         },

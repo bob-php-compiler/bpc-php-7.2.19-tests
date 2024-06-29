@@ -4,7 +4,7 @@ Can't use arrays as key for constant array
 <?php
 
 define('C1', 1); // force dynamic evaluation
-define('C2', array(C1, array() => 1));
+define('C2', [C1, [] => 1]);
 
 ?>
 --EXPECTF--

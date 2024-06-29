@@ -2,8 +2,8 @@
 Bug #73833: null character not allowed in openssl_pkey_get_private
 --FILE--
 <?php
-$passwords = array("abc\x00defghijkl", "abcdefghikjl");
-$conf = array('config' => 'openssl.cnf');
+$passwords = ["abc\x00defghijkl", "abcdefghikjl"];
+$conf = ['config' => 'openssl.cnf'];
 
 foreach($passwords as $password) {
     $key = openssl_pkey_new($conf);

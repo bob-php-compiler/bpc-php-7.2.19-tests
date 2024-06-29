@@ -10,7 +10,7 @@ if (!extension_loaded("mbstring")) {
 <?php
 
 $x = "x";
-$array = array("foo" . $x => "bar");
+$array = ["foo" . $x => "bar"];
 mb_convert_encoding($array, 'UTF-8', 'UTF-8');
 var_dump($array);
 

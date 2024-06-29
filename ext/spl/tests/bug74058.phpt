@@ -5,7 +5,7 @@ Bug #74058 (ArrayObject can not notice changes)
 
 class MyArrayObject extends ArrayObject
 {
-    public function __construct($input = array())
+    public function __construct($input = [])
     {
         parent::__construct($input, ArrayObject::ARRAY_AS_PROPS);
     }
@@ -25,7 +25,7 @@ class MyArrayObject extends ArrayObject
 
 class MyArray extends ArrayObject
 {
-    public function __construct($input = array())
+    public function __construct($input = [])
     {
         parent::__construct($input);
     }

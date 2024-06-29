@@ -9,7 +9,7 @@ function ops() {
 
 try{
     $x = 1;
-    $r = array($x) + ops();
+    $r = [$x] + ops();
 } catch (Exception $e) {
 }
 

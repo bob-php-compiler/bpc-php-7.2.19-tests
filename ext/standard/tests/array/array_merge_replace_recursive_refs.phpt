@@ -4,8 +4,8 @@ array_merge/replace_recursive() should unwrap references with rc=1
 <?php
 
 $x = 24;
-$arr1 = array(array(42));
-$arr2 = array(array(&$x));
+$arr1 = [[42]];
+$arr2 = [[&$x]];
 unset($x);
 $arr3 = array_replace_recursive($arr1, $arr2);
 $arr2[0][0] = 12;
@@ -14,8 +14,8 @@ var_dump($arr3);
 unset($arr1, $arr2, $arr3);
 
 $x = 24;
-$arr1 = array(42);
-$arr2 = array(&$x);
+$arr1 = [42];
+$arr2 = [&$x];
 unset($x);
 $arr3 = array_merge_recursive($arr1, $arr2);
 $arr2[0] = 12;

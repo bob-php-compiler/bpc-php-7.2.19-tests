@@ -5,24 +5,24 @@ Bug #75981 (stack-buffer-overflow while parsing HTTP response)
 --SKIPIF--
 <?php
     if (LIBCURL_VERSION_NUM >= 0x080500) echo 'skip for libcurl < 8.5.0';
-    require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342'); 
+    require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342');
 ?>
 --FILE--
 <?php
 require 'server.inc';
 
-$options = array(
-  'http' => array(
+$options = [
+  'http' => [
     'protocol_version' => '1.1',
     'header' => 'Connection: Close'
-  ),
-);
+  ],
+];
 
 $ctx = stream_context_create($options);
 
-$responses = array(
+$responses = [
 	"data://text/plain,000000000100\xA\xA"
-);
+];
 $pid = http_server('tcp://127.0.0.1:12342', $responses);
 
 echo @file_get_contents('http://127.0.0.1:12342/', false, $ctx);

@@ -4,13 +4,13 @@ Bug #75173 incorrect behavior of AppendIterator::append in foreach loop
 <?php
 
 $it = new AppendIterator();
-$it->append(new ArrayIterator(array('foo')));
+$it->append(new ArrayIterator(['foo']));
 
 foreach ($it as $item) {
     var_dump($item);
 
     if ('foo' === $item) {
-        $it->append(new ArrayIterator(array('bar')));
+        $it->append(new ArrayIterator(['bar']));
     }
 }
 --EXPECT--

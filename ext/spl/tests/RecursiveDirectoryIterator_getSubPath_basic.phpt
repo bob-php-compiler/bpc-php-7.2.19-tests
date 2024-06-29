@@ -14,7 +14,7 @@ touch($targetDir . DIRECTORY_SEPARATOR . 'getSubPath_test.tmp');
 $iterator = new RecursiveDirectoryIterator(getcwd() . DIRECTORY_SEPARATOR . $depth0);
 $it = new RecursiveIteratorIterator($iterator);
 
-$list = array();
+$list = [];
 while($it->valid()) {
   $list[] = $it->getSubPath();
   $it->next();

@@ -4,7 +4,7 @@ pcntl_exec()
 <?php
 ob_implicit_flush();
 echo "ok\n";
-pcntl_exec(getenv("TEST_PHP_EXECUTABLE"), array('-n'));
+pcntl_exec(getenv("TEST_PHP_EXECUTABLE"), ['-n']);
 echo "nok\n";
 ?>
 --EXPECT--

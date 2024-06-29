@@ -20,9 +20,9 @@ try{
 	switch ($a) {
 		case 0:
 	}
-	foreach(array(new stdClass()) as $x) {
+	foreach([new stdClass()] as $x) {
 		foreach(new A() as $a) {
-			foreach(array(new stdClass()) as $y) {
+			foreach([new stdClass()] as $y) {
 				try {
 					if (0) { echo "0" . (int)5; }
 					return $a;

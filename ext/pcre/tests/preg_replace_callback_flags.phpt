@@ -10,10 +10,10 @@ var_dump(preg_replace_callback('/./', function($matches) {
 echo "\n";
 
 var_dump(preg_replace_callback_array(
-    array('/./' => function($matches) {
+    ['/./' => function($matches) {
         var_dump($matches);
         return $matches[0][0];
-    }),
+    }],
     'abc', -1, $count, PREG_OFFSET_CAPTURE)
 );
 echo "\n";
@@ -25,10 +25,10 @@ var_dump(preg_replace_callback('/(a)|(b)/', function($matches) {
 echo "\n";
 
 var_dump(preg_replace_callback_array(
-    array('/(a)|(b)/' => function($matches) {
+    ['/(a)|(b)/' => function($matches) {
         var_dump($matches);
         return $matches[0];
-    }),
+    }],
     'abc', -1, $count, PREG_UNMATCHED_AS_NULL)
 );
 echo "\n";

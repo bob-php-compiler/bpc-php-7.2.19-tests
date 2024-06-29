@@ -11,7 +11,7 @@ class TestClass
 }
 
 // Test call using array syntax
-$callback = array('TestClass', '');
+$callback = ['TestClass', ''];
 $callback();
 
 // Test call using Class::method syntax.
@@ -23,7 +23,7 @@ try {
 }
 
 // Test array syntax with empty class name
-$callback = array('', 'method');
+$callback = ['', 'method'];
 try {
     $callback();
 } catch (Error $e) {
@@ -39,7 +39,7 @@ try {
 }
 
 // Test array syntax with empty class and method name
-$callback = array('', '');
+$callback = ['', ''];
 try {
     $callback();
 } catch (Error $e) {

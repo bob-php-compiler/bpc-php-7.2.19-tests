@@ -7,7 +7,7 @@ if (!extension_loaded('mbstring')) die('skip mbstring extension not available');
 --FILE--
 <?php
 var_dump(mb_detect_order('Foo, UTF-8'));
-var_dump(mb_detect_order(array('Foo', 'UTF-8')))
+var_dump(mb_detect_order(['Foo', 'UTF-8']))
 ?>
 ===DONE===
 --EXPECT--

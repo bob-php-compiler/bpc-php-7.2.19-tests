@@ -3,7 +3,7 @@ Bug #68128 - RecursiveRegexIterator raises "Array to string conversion" notice
 --FILE--
 <?php
 
-$arrayIterator = new ArrayIterator(array('key 1' => 'value 1', 'key 2' => array('value 2')));
+$arrayIterator = new ArrayIterator(array('key 1' => 'value 1', 'key 2' => ['value 2']));
 $regexIterator = new RegexIterator($arrayIterator, '/^key/', RegexIterator::MATCH, RegexIterator::USE_KEY);
 
 foreach ($regexIterator as $key => $value) {

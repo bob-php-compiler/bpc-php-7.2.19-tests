@@ -3,7 +3,7 @@ call_user_func() behavior when passing literal to reference parameter
 --FILE--
 <?php
 
-var_dump(call_user_func('sort', array()));
+var_dump(call_user_func('sort', []));
 
 ?>
 --EXPECTF--

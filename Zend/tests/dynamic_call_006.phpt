@@ -4,10 +4,10 @@ Dynamic calls to scope introspection functions are forbidden (function variation
 <?php
 function test() {
     $func = 'extract';
-    $func(array('a' => 'b'));
+    $func(['a' => 'b']);
 
     $func = 'compact';
-    $func(array('a'));
+    $func(['a']);
 
     $func = 'parse_str';
     $func('a=b');

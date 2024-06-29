@@ -4,7 +4,7 @@ Passing a dimension fetch on a temporary by reference is not allowed
 <?php
 
 $fn = function(&$ref) {};
-$fn(array(0, 1)[0]);
+$fn([0, 1][0]);
 
 ?>
 --EXPECTF--

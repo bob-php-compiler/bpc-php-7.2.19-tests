@@ -391,42 +391,38 @@
 
 1. not support GOTO
 
-2. array declare
-
-    bpc only support array(), not support []
-
-3. namespace
+2. namespace
 
     bpc does not support namespace
 
-4. not support declare()
+3. not support declare()
 
-5. define constant
+4. define constant
 
     bpc not support const CONSTANT
     constant always case-sensitive, bpc only support `define(name, value)`, not support `define(name, value, case_insensitive)`
     Class constants cannot be defined or redefined, parse error and runtime warning
 
-6. closure
+5. closure
 
     closure name in stack trace always "{closure}"
     bpc closure has only one method: __invoke()
     var_dump closure got empty Closure object
 
-7. not support Null Coalescing Operator ??
+6. not support Null Coalescing Operator ??
 
-8. not support foreach as list()
+7. not support foreach as list()
 
-9. global decl only support `$var`
+8. global decl only support `$var`
 
     bpc not support `global $$varname`
     bpc not support `global ${...}`
 
-10. zend.multibyte
+9. zend.multibyte
 
     bpc not support multibyte
 
-11. traits
+10. traits
 
     bpc currently not support static variables in trait method
     trait methods inserted to class by define-php-method, @see Zend/tests/traits/inheritance003.phpt
@@ -434,42 +430,42 @@
     trait { A as ... }: A expected a trait method, bpc don't check if it is an alias, @see Zend/tests/traits/bug54441.phpt
     trait abstract and class implement signature mismatch message may different, @see Zend/tests/traits/bug60217{b,c}.phpt
 
-12. bpc not support mix static var and non-static var
+11. bpc not support mix static var and non-static var
 
-13. redeclare compile error
+12. redeclare compile error
 
     Cannot redeclare function, class property/constant/method
     Cannot redeclare builtin and extension class
 
-14. class const defines one at a time
+13. class const defines one at a time
 
     bpc not support `const c1 = 1, c2 = 2;`
 
-15. parse error
+14. parse error
 
-16. not supported return reference from function/method
+15. not supported return reference from function/method
 
-17. bpc support double quoted string array string index
+16. bpc support double quoted string array string index
 
     @see tests/lang/bug21820.phpt
 
-18. not support foreach as reference
+17. not support foreach as reference
 
-19. static-decl only support in function or method
+18. static-decl only support in function or method
 
-20. not support nested list and `[]` list and keyed list
+19. not support nested list and `[]` list and keyed list
 
     bpc not support `list(list($x)) = `, parse error
 
-21. not support short tags
+20. not support short tags
 
-22. Ternary Operator ?:
+21. Ternary Operator ?:
 
     leave out the middle part of the ternary operator `expr1 ?: expr2` will parse error
 
-23. not support anonymous class
+22. not support anonymous class
 
-24. generator
+23. generator
 
     not support unset/close generator, @see Zend/tests/generators/finally/finally_ran_on_close.phpt
     generator: yield outside function compile error
@@ -478,18 +474,18 @@
     typehint check in generator rewind
     generator: yield from must followed by blank, @see Zend/tests/generators/yield_from_greedy_parse.phpt
 
-25. not support multi-level break/continue
+24. not support multi-level break/continue
 
-26. break/continue not in loop/switch compile-error
+25. break/continue not in loop/switch compile-error
 
-27. not support return type
+26. not support return type
 
-28. not support bprefix strings
+27. not support bprefix strings
 
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
-29. support $arr['index'] in dqstring
+28. support $arr['index'] in dqstring
 
     ```php
     <?php
@@ -499,22 +495,22 @@
     php parse error
     bpc ok
 
-30. not support heredoc/nowdoc embed each other or in dqstring
+29. not support heredoc/nowdoc embed each other or in dqstring
 
-31. not support iterable
+30. not support iterable
 
-32. not support indirect call with constants
+31. not support indirect call with constants
 
     @see Zend/tests/indirect_call_from_constant.phpt
 
-33. strict names
+32. strict names
 
     php support ascii 0x80-0xff in variable/class/function... names
     bpc not support this
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-34. finally
+33. finally
 
     1. Uncaught Exception/Error in finally override try-body Exception/Error    @see Zend/tests/bug65784.phpt
     2. return in finally not suppress Exception from try-body                   @see Zend/tests/try/bug70228_2.phpt
@@ -522,30 +518,30 @@
     4. jump out of a finally block is disallowed message                        @see Zend/tests/try/try_finally_008.phpt
     5. exit/error still run finally code                                        @see Zend/tests/generators/bug75396.phpt
 
-35. optional params should always after required params
+34. optional params should always after required params
 
-36. not support array to string conversion at compile time
+35. not support array to string conversion at compile time
 
     php notice
     bpc parse error
 
-37. not support literal string as class name
+36. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-38. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+37. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-39. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+38. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-40. arguments without default value must before arguments with default value
+39. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-41. not support CLASS::$static_property = &$var
+40. not support CLASS::$static_property = &$var
 
 **misc**
 

@@ -10,11 +10,11 @@ ob_implicit_flush();
 require 'server.inc';
 
 function do_test($version, $connection) {
-    $options = array(
-        'http' => array(
+    $options = [
+        'http' => [
             'protocol_version' => $version,
-        ),
-    );
+        ],
+    ];
 
     if ($connection) {
         $options['http']['header'] = "Connection: $connection";
@@ -22,7 +22,7 @@ function do_test($version, $connection) {
 
     $ctx = stream_context_create($options);
 
-    $responses = array("data://text/plain,HTTP/$version 204 No Content\r\n\r\n");
+    $responses = ["data://text/plain,HTTP/$version 204 No Content\r\n\r\n"];
     $pid = http_server('tcp://127.0.0.1:12342', $responses, $output);
 
     file_get_contents('http://127.0.0.1:12342/', false, $ctx);

@@ -9,9 +9,9 @@ class Foo {
     }
 }
 
-new Foo(...array());
-new Foo(...array(1, 2, 3));
-new Foo(...array(1), ...array(), ...array(2, 3));
+new Foo(...[]);
+new Foo(...[1, 2, 3]);
+new Foo(...[1], ...[], ...[2, 3]);
 
 ?>
 --EXPECT--

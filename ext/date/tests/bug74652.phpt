@@ -4,7 +4,7 @@ Test for bug #74652: Incomplete dates
 date.timezone=UTC
 --FILE--
 <?php
-$formats = array(
+$formats = [
 	'2017-03-25 10:52:09',
 	'2017-03-25 10:52',
 	'2017-03-25 10am',
@@ -12,7 +12,7 @@ $formats = array(
 	'2017-03',
 	'2017.042',
 	'2017043',
-);
+];
 
 foreach ( $formats as $format )
 {

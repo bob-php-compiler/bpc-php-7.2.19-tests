@@ -3,7 +3,7 @@ Test error operation of password_needs_rehash()
 --FILE--
 <?php
 
-var_dump(password_needs_rehash('', array()));
+var_dump(password_needs_rehash('', []));
 
 var_dump(password_needs_rehash(array(), PASSWORD_BCRYPT));
 

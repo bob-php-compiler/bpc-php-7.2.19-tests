@@ -30,7 +30,7 @@ var_dump(session_save_path($path));
 
 echo "*** Without lazy_write ***\n";
 var_dump(session_id($session_id));
-var_dump(session_start(array('lazy_write'=>FALSE)));
+var_dump(session_start(['lazy_write'=>FALSE]));
 $session_id_new1 = session_id();
 var_dump($session_id_new1 !== $session_id);
 var_dump(session_write_close());
@@ -38,7 +38,7 @@ var_dump(session_id());
 
 echo "*** With lazy_write ***\n";
 var_dump(session_id($session_id));
-var_dump(session_start(array('lazy_write'=>TRUE)));
+var_dump(session_start(['lazy_write'=>TRUE]));
 $session_id_new2 = session_id();
 var_dump($session_id_new1 !== $session_id_new2);
 var_dump(session_commit());

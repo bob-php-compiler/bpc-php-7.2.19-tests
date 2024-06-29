@@ -3,21 +3,21 @@ Scalar type basics
 --FILE--
 <?php
 
-$errnames = array(
+$errnames = [
     E_NOTICE => 'E_NOTICE',
     E_WARNING => 'E_WARNING',
-);
+];
 set_error_handler(function (int $errno, string $errmsg, string $file, int $line) use ($errnames) {
     echo "$errnames[$errno]: $errmsg on line $line\n";
     return true;
 });
 
-$functions = array(
+$functions = [
     'int' => function (int $i) { return $i; },
     'float' => function (float $f) { return $f; },
     'string' => function (string $s) { return $s; },
     'bool' => function (bool $b) { return $b; }
-);
+];
 
 class Stringable {
     public function __toString() {
@@ -25,7 +25,7 @@ class Stringable {
     }
 }
 
-$values = array(
+$values = [
     1,
     "1",
     1.0,
@@ -38,11 +38,11 @@ $values = array(
     TRUE,
     FALSE,
     NULL,
-    array(),
+    [],
     new StdClass,
     new Stringable,
     fopen("/proc/self/comm", "r")
-);
+];
 
 foreach ($functions as $type => $function) {
     echo PHP_EOL, "Testing '$type' type:", PHP_EOL;

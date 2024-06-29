@@ -10,7 +10,7 @@ class Logger {
             $this->flush();
             // make sure log entries written by shutdown functions are also flushed
             // ensure "flush()" is called last when there are multiple shutdown functions
-            register_shutdown_function(array($this, 'flush'), true);
+            register_shutdown_function([$this, 'flush'], true);
         });
     }
 

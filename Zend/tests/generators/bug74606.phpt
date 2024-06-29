@@ -4,7 +4,7 @@ Bug #74606 (Segfault within try/catch/finally nesting in Generators)
 <?php
 
 function gen() {
-	$array = array("foo");
+	$array = ["foo"];
 	$array[] = "bar";
 
 	foreach ($array as $item) {

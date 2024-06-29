@@ -4,7 +4,7 @@ Bug #71196 (Memory leak with out-of-order live ranges)
 <?php
 try  {
         $a = "1";
-        array(1, (y().$a.$a) . ($a.$a));
+        [1, (y().$a.$a) . ($a.$a)];
 } catch (Error $e) {
         var_dump($e->getMessage());
 }

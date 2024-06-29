@@ -4,11 +4,11 @@ Bug #77669: Crash in extract() when overwriting extracted array
 <?php
 
 function test($mode) {
-    $foo = array();
+    $foo = [];
     $foo["foo"] = 42;
     $foo["bar"] = 24;
     extract($foo, $mode, "");
-    $prefix_foo = array();
+    $prefix_foo = [];
     $prefix_foo["foo"] = 42;
     $prefix_foo["bar"] = 24;
     extract($prefix_foo, $mode, "prefix");

@@ -9,11 +9,11 @@ if (!extension_loaded('json')) die('skip');
 
 class Foo implements JsonSerializable {
     public function jsonSerialize() {
-	    return json_encode(array(1), JSON_PRETTY_PRINT);
+	    return json_encode([1], JSON_PRETTY_PRINT);
 	}
 }
 
-echo json_encode(array(new Foo)), "\n";
+echo json_encode([new Foo]), "\n";
 ?>
 --EXPECT--
 ["[\n    1\n]"]

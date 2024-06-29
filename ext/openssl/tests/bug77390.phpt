@@ -22,10 +22,10 @@ include 'ServerClientTestCase.inc';
 if (isset($argv[1]) && $argv[1] === WORKER_ARGV_VALUE) {
     ServerClientTestCase::getInstance(true)->runWorker();
 } else {
-    ServerClientTestCase::getInstance()->run('bug77390_client.inc', array(
+    ServerClientTestCase::getInstance()->run('bug77390_client.inc', [
         'server' => 'bug77390_server.inc',
         'proxy' => 'bug77390_proxy.inc'
-    ));
+    ]);
 }
 ?>
 --CLEAN--

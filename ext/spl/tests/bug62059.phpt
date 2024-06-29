@@ -26,7 +26,7 @@ class MyArrayObject3 extends ArrayObject {
     }
 }
 
-$arr = array(1 => array(1 => 42));
+$arr = [1 => [1 => 42]];
 $ao = new ArrayObject($arr);
 var_dump(isset($ao[0][1]));
 var_dump(isset($ao[1][0]));

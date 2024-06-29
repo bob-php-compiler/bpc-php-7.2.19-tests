@@ -4,7 +4,7 @@ strtr() with references
 <?php
 
 $foo = 'foo';
-$arr = array('bar' => &$foo);
+$arr = ['bar' => &$foo];
 var_dump(strtr('foobar', $arr));
 
 ?>

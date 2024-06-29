@@ -3,7 +3,7 @@ Test sorting of various ArrayObject backing storage
 --FILE--
 <?php
 
-$obj = (object)array('a' => 2, 'b' => 1);
+$obj = (object)['a' => 2, 'b' => 1];
 $ao = new ArrayObject($obj);
 $ao->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao);
@@ -19,11 +19,11 @@ $ao3->b = 1;
 $ao3->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao3);
 
-$ao4 = new ArrayObject(array());
+$ao4 = new ArrayObject([]);
 $ao4->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao4);
 
-$ao5 = new ArrayObject(array('a' => 2, 'b' => 1));
+$ao5 = new ArrayObject(['a' => 2, 'b' => 1]);
 $ao5->uasort(function($a, $b) { return $a <=> $b; });
 var_dump($ao5);
 

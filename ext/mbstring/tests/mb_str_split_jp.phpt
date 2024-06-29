@@ -14,7 +14,7 @@ include_once('common.inc');
 
 $string = "日本";             /* 2 chars */
 $len = 2;
-$charset = array(
+$charset = [
     "BIG-5",
     "EUC-JP",
     "ISO-2022-JP",
@@ -24,7 +24,7 @@ $charset = array(
     "UTF-32BE",
     "UTF-32LE",
     "UTF-8"
-);
+];
 
 
 foreach($charset as $cs){

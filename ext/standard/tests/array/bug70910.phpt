@@ -5,7 +5,7 @@ Bug #70910 (extract() breaks variable references)
 $var = 'original value';
 $ref =& $var;
 
-$hash = array('var' => 'new value');
+$hash = ['var' => 'new value'];
 
 extract($hash);
 var_dump($var === $ref);

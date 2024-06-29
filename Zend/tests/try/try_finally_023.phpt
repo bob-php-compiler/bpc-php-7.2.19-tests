@@ -14,7 +14,7 @@ function test() {
         throw new Exception(1);
     } finally {
         try {
-            foreach (array(new Dtor) as $v) {
+            foreach ([new Dtor] as $v) {
                 unset($v);
                 return 42;
             }

@@ -3,7 +3,7 @@ Modifications to ArrayObjects should not affect shared properties tables
 --FILE--
 <?php
 
-$obj = (object)array('a' => 1, 'b' => 2);
+$obj = (object)['a' => 1, 'b' => 2];
 $ao = new ArrayObject($obj);
 $arr = (array) $obj;
 $ao['a'] = 42;

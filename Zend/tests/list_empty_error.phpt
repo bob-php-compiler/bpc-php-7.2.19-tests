@@ -3,7 +3,7 @@ Empty list() assignments are not allowed
 --FILE--
 <?php
 
-list(,,,,,,,,,,) = array();
+list(,,,,,,,,,,) = [];
 
 ?>
 --EXPECTF--

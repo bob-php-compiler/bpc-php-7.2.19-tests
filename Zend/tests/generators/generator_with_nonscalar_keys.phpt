@@ -4,8 +4,8 @@ Generators can return non-scalar keys
 <?php
 
 function gen() {
-    yield array(1, 2, 3) => array(4, 5, 6);
-    yield (object) array('a' => 'b') => (object) array('b' => 'a');
+    yield [1, 2, 3] => [4, 5, 6];
+    yield (object) ['a' => 'b'] => (object) ['b' => 'a'];
     yield 3.14 => 2.73;
     yield false => true;
     yield true => false;

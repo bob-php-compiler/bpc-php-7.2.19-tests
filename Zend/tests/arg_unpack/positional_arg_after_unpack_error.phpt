@@ -3,7 +3,7 @@ Positional arguments cannot be used after argument unpacking
 --FILE--
 <?php
 
-var_dump(...array(1, 2, 3), 4);
+var_dump(...[1, 2, 3], 4);
 
 ?>
 --EXPECTF--

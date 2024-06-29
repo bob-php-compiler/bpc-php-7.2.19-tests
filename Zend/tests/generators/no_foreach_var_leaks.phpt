@@ -9,7 +9,7 @@ function gen(array $array) {
 	}
 }
 
-$gen = gen(array('Foo', 'Bar'));
+$gen = gen(['Foo', 'Bar']);
 var_dump($gen->current());
 
 // generator is closed here, without running SWITCH_FREE

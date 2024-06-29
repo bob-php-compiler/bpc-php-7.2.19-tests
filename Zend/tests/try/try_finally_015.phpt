@@ -4,7 +4,7 @@ Ignoring return inside loop using finally
 <?php
 
 function foo() {
-    $array = array(1, 2, $n = 3);
+    $array = [1, 2, $n = 3];
     foreach ($array as $value) {
         var_dump($value);
         try {

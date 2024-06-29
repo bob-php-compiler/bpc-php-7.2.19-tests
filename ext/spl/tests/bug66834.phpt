@@ -49,7 +49,7 @@ class ArrayObjectGetSet extends ArrayObject
 	}
 }
 
-$values = array('foo' => '', 'bar' => null, 'baz' => 42);
+$values = ['foo' => '', 'bar' => null, 'baz' => 42];
 
 echo "==== class with offsetExists() and offsetGet() ====\n";
 $object = new ArrayObjectBoth($values);

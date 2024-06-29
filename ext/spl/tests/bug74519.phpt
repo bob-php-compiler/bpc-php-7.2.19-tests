@@ -4,7 +4,7 @@ Bug #74519 strange behavior of AppendIterator
 <?php
 
 $iterator = new AppendIterator();
-$events = new ArrayIterator(array(1,2,3,4,5));
+$events = new ArrayIterator([1,2,3,4,5]);
 $iterator->append($events);
 
 $events->next();

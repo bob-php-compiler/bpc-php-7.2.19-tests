@@ -77,7 +77,7 @@ $stmt = $db->prepare("
 	WHERE id = ?
 ");
 
-$stmt->execute(array(1));
+$stmt->execute([1]);
 var_dump($stmt->fetchColumn());
 
 // Comment with named placeholder
@@ -88,7 +88,7 @@ $stmt = $db->prepare("
 	WHERE id = :id
 ");
 
-$stmt->execute(array('id' => 1));
+$stmt->execute(['id' => 1]);
 var_dump($stmt->fetchColumn());
 
 

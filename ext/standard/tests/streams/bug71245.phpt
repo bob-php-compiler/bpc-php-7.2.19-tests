@@ -2,9 +2,9 @@
 Bug #71245 (file_get_contents() ignores "header" context option if it's a reference)
 --FILE--
 <?php
-$headers = array('Host: okey.com');
-$httpContext = array(
-	'http' => array(
+$headers = ['Host: okey.com'];
+$httpContext = [
+	'http' => [
 		'protocol_version'	=> '1.1',
 		'method'			=> 'GET',
 		'header'			=> &$headers,
@@ -12,10 +12,10 @@ $httpContext = array(
 		'max_redirects'		=> 0,
 		'ignore_errors'		=> true,
 		'timeout'			=> 60,
-	),
-);
+	],
+];
 $context = stream_context_create($httpContext);
-$headers = array("Host: bad.com");
+$headers = ["Host: bad.com"];
 print_r(stream_context_get_options($context));
 ?>
 --EXPECTF--

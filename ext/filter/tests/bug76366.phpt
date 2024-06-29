@@ -4,17 +4,17 @@ Bug #76366 (references in sub-array for filtering breaks the filter)
 <?php
 
 #array to filter
-$data = array('foo' => 6);
+$data = ['foo' => 6];
 
 #filter args
-$args = array(
-    'foo'=> array(
+$args = [
+    'foo'=> [
         'filter' => FILTER_VALIDATE_INT,
         'flags' => FILTER_FORCE_ARRAY
-    )
-);
+    ]
+];
 
-$args['foo']['options'] = array();
+$args['foo']['options'] = [];
 
 #create reference
 $options = &$args['foo']['options'];

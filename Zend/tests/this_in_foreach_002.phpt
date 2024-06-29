@@ -2,7 +2,7 @@
 $this in foreach
 --FILE--
 <?php
-$a = array(1);
+$a = [1];
 foreach ($a as $this => $dummy) {
 	var_dump($this);
 }

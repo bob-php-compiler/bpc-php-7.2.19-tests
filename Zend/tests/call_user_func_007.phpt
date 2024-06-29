@@ -5,7 +5,7 @@ call_user_func() should not use FUNC_ARG fetches
 
 function foo(&$ref) { $ref = 24; }
 
-$a = array();
+$a = [];
 call_user_func('foo', $a[0][0]);
 var_dump($a);
 

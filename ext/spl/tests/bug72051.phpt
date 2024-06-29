@@ -3,9 +3,9 @@ Bug #72051 (The reference in CallbackFilterIterator doesn't work as expected)
 --FILE--
 <?php
 
-$data = array(
-	array(1,2)
-);
+$data = [
+	[1,2]
+];
 
 $callbackTest = new CallbackFilterIterator(new ArrayIterator($data), function ($current, $key, $iterator) {
     $iterator[$key]['message'] = 'Test message';

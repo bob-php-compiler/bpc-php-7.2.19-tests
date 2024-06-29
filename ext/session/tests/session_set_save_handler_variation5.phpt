@@ -34,7 +34,7 @@ var_dump(session_save_path($path));
 
 echo "*** Without lazy_write ***\n";
 var_dump(session_set_save_handler("open", "close", "read", "write", "destroy", "noisy_gc", "create_sid", "validate_sid", "update"));
-var_dump(session_start(array('lazy_write'=>FALSE)));
+var_dump(session_start(['lazy_write'=>FALSE]));
 $session_id = session_id();
 var_dump(session_id());
 var_dump(session_write_close());
@@ -43,7 +43,7 @@ var_dump(session_id());
 echo "*** With lazy_write ***\n";
 var_dump(session_id($session_id));
 var_dump(session_set_save_handler("open", "close", "read", "write", "destroy", "noisy_gc", "create_sid", "validate_sid", "update"));
-var_dump(session_start(array('lazy_write'=>TRUE)));
+var_dump(session_start(['lazy_write'=>TRUE]));
 var_dump(session_commit());
 var_dump(session_id());
 

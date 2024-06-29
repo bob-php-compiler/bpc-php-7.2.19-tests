@@ -3,7 +3,7 @@ Bug #71359: Null coalescing operator and magic
 --FILE--
 <?php
 class AA {
-    private $data = array();
+    private $data = [];
     public function __isset($name) {
         echo "__isset($name)\n";
         return array_key_exists($name, $this->data);

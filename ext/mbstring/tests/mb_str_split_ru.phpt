@@ -14,7 +14,7 @@ include_once('common.inc');
 
 $string = "рай рай рай ";             /* 12 chars */
 $len = 12;
-$charset = array(
+$charset = [
     "EUC-JP",
     "CP866",
     "KOI8-R",
@@ -23,7 +23,7 @@ $charset = array(
     "UTF-32BE",
     "UTF-32LE",
     "UTF-8"
-);
+];
 
 
 foreach($charset as $cs){

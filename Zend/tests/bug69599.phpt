@@ -4,7 +4,7 @@ Bug #69599: Strange generator+exception+variadic crash
 <?php
 
 function crash() {
-    sin(...array(0));
+    sin(...[0]);
     throw new Exception();
     yield;
 }

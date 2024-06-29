@@ -15,7 +15,7 @@ $priv_res = openssl_pkey_get_private($priv);
 $pass = "test";
 $invalid = "";
 $invalid_path = "invalid_path";
-$opts = array();
+$opts = [];
 
 var_dump(openssl_pkcs12_export_to_file($cert, $pkcsfile, $priv, $pass));
 var_dump(openssl_pkcs12_read(file_get_contents($pkcsfile), $opts, $pass));

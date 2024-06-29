@@ -8,8 +8,8 @@ function test(array... $args) {
 }
 
 test();
-test(array(0), array(1), array(2));
-test(array(0), array(1), 2);
+test([0], [1], [2]);
+test([0], [1], 2);
 
 ?>
 --EXPECTF--

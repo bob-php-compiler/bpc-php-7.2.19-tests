@@ -3,15 +3,15 @@ Test variable occuring on both LHS and RHS of list()
 --FILE--
 <?php
 
-$a = array(1, 2, 3);
+$a = [1, 2, 3];
 list($a, $b, $c) = $a;
 var_dump($a, $b, $c);
 
-$b = array(1, 2, 3);
+$b = [1, 2, 3];
 list($a, $b, $c) = $b;
 var_dump($a, $b, $c);
 
-$c = array(1, 2, 3);
+$c = [1, 2, 3];
 list($a, $b, $c) = $c;
 var_dump($a, $b, $c);
 /*

@@ -30,7 +30,7 @@ var_dump(preg_replace_callback('/a/', function($m) {
 }, 'aa'));
 var_dump(preg_replace_callback('/a/', function($m) {
     for ($i = 0; $i < PREG_CACHE_SIZE; $i++) {
-        preg_grep('/foo' . $i . 'bar/', array('???foo' . $i . 'bar???'));
+        preg_grep('/foo' . $i . 'bar/', ['???foo' . $i . 'bar???']);
     }
     return 'b';
 }, 'aa'));

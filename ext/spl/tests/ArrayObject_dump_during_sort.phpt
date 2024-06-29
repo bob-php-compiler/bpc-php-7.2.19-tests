@@ -3,7 +3,7 @@ Dumping an ArrayObject while it is being sorted
 --FILE--
 <?php
 
-$ao = new ArrayObject(array(1, 2, 3));
+$ao = new ArrayObject([1, 2, 3]);
 $i = 0;
 $ao->uasort(function($a, $b) use ($ao, &$i) {
     if ($i++ == 0) {

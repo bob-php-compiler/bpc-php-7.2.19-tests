@@ -3,9 +3,9 @@ Bug #72369 (array_merge() produces references in PHP7)
 --FILE--
 <?php
 $x = 'xxx';
-$d = array('test' => &$x);
+$d = ['test' => &$x];
 unset($x);
-$a = array('test' => 'yyy');
+$a = ['test' => 'yyy'];
 $a = array_merge($a, $d);
 debug_zval_dump($a);
 ?>

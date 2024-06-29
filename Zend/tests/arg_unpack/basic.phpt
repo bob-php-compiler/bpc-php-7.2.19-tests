@@ -21,21 +21,21 @@ function arrayGen($array) {
     }
 }
 */
-$array = array(1, 2, 3);
+$array = [1, 2, 3];
 
-test(...array());
-test(...array(1, 2, 3));
+test(...[]);
+test(...[1, 2, 3]);
 test(...$array);
-test(...getArray(array(1, 2, 3)));
-//test(...arrayGen(array()));
-//test(...arrayGen(array(1, 2, 3)));
+test(...getArray([1, 2, 3]));
+//test(...arrayGen([]));
+//test(...arrayGen([1, 2, 3]));
 
-test(1, ...array(2, 3), ...array(4, 5));
-test(1, ...getArray(array(2, 3))/*, ...arrayGen(array(4, 5))*/);
+test(1, ...[2, 3], ...[4, 5]);
+test(1, ...getArray([2, 3])/*, ...arrayGen([4, 5])*/);
 
-test2(...array(1, 2));
-test2(...array(1, 2, 3));
-test2(...array(1), ...array(), ...array(), ...array(2, 3), ...array(4, 5));
+test2(...[1, 2]);
+test2(...[1, 2, 3]);
+test2(...[1], ...[], ...[], ...[2, 3], ...[4, 5]);
 
 ?>
 --EXPECTF--

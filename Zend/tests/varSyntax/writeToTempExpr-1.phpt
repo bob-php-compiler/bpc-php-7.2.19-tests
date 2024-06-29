@@ -3,7 +3,7 @@ Writing to a temporary expression is not allowed
 --FILE--
 <?php
 
-array(array(0), 1)[0][0] = 1;
+[[0], 1][0][0] = 1;
 
 ?>
 --EXPECTF--

@@ -4,7 +4,7 @@ yield from with an (Array)Iterator
 <?php
 function g() {
 	yield 1;
-	yield from new ArrayIterator(array(2, 3, 4));
+	yield from new ArrayIterator([2, 3, 4]);
 	yield 5;
 }
 

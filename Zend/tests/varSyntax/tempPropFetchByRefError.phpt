@@ -4,7 +4,7 @@ Passing a property fetch on a temporary by reference is not allowed
 <?php
 
 $fn = function(&$ref) {};
-$fn(array(0, 1)->prop);
+$fn([0, 1]->prop);
 
 ?>
 --EXPECTF--

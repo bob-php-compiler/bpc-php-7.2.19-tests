@@ -4,14 +4,14 @@ Variable as class name for new expression
 <?php
 
 $className = 'stdClass';
-$array = array('className' => 'stdClass');
-$obj = (object) array('className' => 'stdClass');
+$array = ['className' => 'stdClass'];
+$obj = (object) ['className' => 'stdClass'];
 
 class Test {
     public static $className = 'stdClass';
 }
 $test = 'Test';
-$weird = array(0 => (object) array('foo' => 'Test'));
+$weird = [0 => (object) ['foo' => 'Test']];
 
 var_dump(new $className);
 var_dump(new $array['className']);

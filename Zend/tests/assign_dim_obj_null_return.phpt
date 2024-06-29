@@ -4,16 +4,16 @@ Various null return conditions of dim/obj assignments
 <?php
 
 function test() {
-    $array = array(PHP_INT_MAX => 42);
+    $array = [PHP_INT_MAX => 42];
     $true = true;
 
     var_dump($array[] = 123);
-    var_dump($array[array()] = 123);
+    var_dump($array[[]] = 123);
     var_dump($array[new stdClass] = 123);
     var_dump($true[123] = 456);
 
     var_dump($array[] += 123);
-    var_dump($array[array()] += 123);
+    var_dump($array[[]] += 123);
     var_dump($array[new stdClass] += 123);
     var_dump($true[123] += 456);
 

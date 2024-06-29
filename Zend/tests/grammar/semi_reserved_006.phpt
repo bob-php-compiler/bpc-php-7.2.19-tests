@@ -11,7 +11,7 @@ trait TraitA
 
 trait TraitB
 {
-    static $list = array('a' => array('b' => array('c')));
+    static $list = ['a' => ['b' => ['c']]];
 
     public static function catch(){ echo __METHOD__, PHP_EOL; }
     private static function throw(){ echo __METHOD__, PHP_EOL; }

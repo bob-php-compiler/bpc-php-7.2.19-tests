@@ -7,7 +7,7 @@ pcre.jit=1
 
 $iterator =
     new RegexIterator(
-        new ArrayIterator(array('A.phpt', 'B.phpt', 'C.phpt')),
+        new ArrayIterator(['A.phpt', 'B.phpt', 'C.phpt']),
         '/\.phpt$/'
     )
 ;

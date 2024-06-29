@@ -29,7 +29,7 @@ while (openssl_error_string()) {}
 $csr_res = openssl_csr_new(
     $csr_info,
     $private,
-    array('config' => "openssl.cnf")
+    ['config' => "openssl.cnf"]
 );
 if (!$csr_res) {
     while ($e = openssl_error_string()) {

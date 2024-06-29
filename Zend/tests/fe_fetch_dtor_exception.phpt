@@ -13,7 +13,7 @@ class A
 $v = new A;
 
 try {
-    foreach (array(1, 2) as $v) {
+    foreach ([1, 2] as $v) {
         var_dump($v);
     }
 } catch (Exception $e) {

@@ -5,7 +5,7 @@ Overloaded GMP comparison in sort() etc
 --FILE--
 <?php
 
-$arr = array(gmp_init(0), -3, gmp_init(2), 1);
+$arr = [gmp_init(0), -3, gmp_init(2), 1];
 sort($arr);
 var_dump($arr);
 

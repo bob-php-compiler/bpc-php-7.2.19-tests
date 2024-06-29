@@ -4,10 +4,10 @@ Next free element may overflow in array literals
 <?php
 
 $i = PHP_INT_MAX;
-$array = array($i => 42, new stdClass);
+$array = [$i => 42, new stdClass];
 var_dump($array);
 
-define('FOO', array(PHP_INT_MAX => 42, "foo"));
+define('FOO', [PHP_INT_MAX => 42, "foo"]);
 var_dump(FOO);
 
 ?>

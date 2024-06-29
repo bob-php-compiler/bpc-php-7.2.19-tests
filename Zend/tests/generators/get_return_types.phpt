@@ -26,7 +26,7 @@ function gen3($var) {
     return $var; // CV
 }
 
-$gen = gen3(array(1, 2, 3));
+$gen = gen3([1, 2, 3]);
 $gen->next();
 var_dump($gen->getReturn());
 
@@ -35,7 +35,7 @@ function gen4($obj) {
     return $obj->prop; // VAR
 }
 
-$gen = gen4((object) array('prop' => 321));
+$gen = gen4((object) ['prop' => 321]);
 $gen->next();
 var_dump($gen->getReturn());
 

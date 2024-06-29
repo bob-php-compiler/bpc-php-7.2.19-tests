@@ -9,7 +9,7 @@ function inc(&... $args) {
     }
 }
 
-$arr = array(1, 2);
+$arr = [1, 2];
 $arr[] = 3;
 $arr2 = $arr;
 inc(...$arr);

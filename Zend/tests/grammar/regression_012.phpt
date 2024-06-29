@@ -4,7 +4,7 @@ Testing for regression on const list syntax and arrays
 <?php
 
 class A {
-    const A = array(1, FOREACH);
+    const A = [1, FOREACH];
 }
 
 ?>

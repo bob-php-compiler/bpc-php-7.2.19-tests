@@ -11,8 +11,8 @@ function walk (array $arr) {
 	return $arr;
 }
 
-$arr3 = array('foo' => 'foo');
-$arr4 = walk(array('foo' => 'bar'));
+$arr3 = ['foo' => 'foo'];
+$arr4 = walk(['foo' => 'bar']);
 $arr5 = array_replace_recursive($arr3, $arr4);
 $arr5['foo'] = 'baz';
 

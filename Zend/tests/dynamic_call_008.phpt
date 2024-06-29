@@ -4,7 +4,7 @@ Don't optimize dynamic call to non-dynamic one if it drops the warning
 <?php
 
 function test() {
-    ((string) 'extract')(array('a' => 42));
+    ((string) 'extract')(['a' => 42]);
 }
 test();
 

@@ -15,7 +15,7 @@ class Utf8Encoding
 }
 
 $utf8encoding = new Utf8Encoding();
-$encodings = array($utf8encoding);
+$encodings = [$utf8encoding];
 var_dump($encodings);
 mb_convert_encoding('foo', 'UTF-8', $encodings);
 var_dump($encodings);

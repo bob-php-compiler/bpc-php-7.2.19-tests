@@ -4,14 +4,14 @@ Bug #75679 Path 260 character problem
 <?php
 $d = '.';
 $Files2Report =
- array(
-  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_259_characters_long_', 100, '_') . '/', 1), 259, '_') => array(),
-  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_260_characters_long_', 100, '_') . '/', 1), 260, '_') => array(),
-  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_261_characters_long_', 100, '_') . '/', 1), 261, '_') => array(),
- );
+ [
+  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_259_characters_long_', 100, '_') . '/', 1), 259, '_') => [],
+  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_260_characters_long_', 100, '_') . '/', 1), 260, '_') => [],
+  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_261_characters_long_', 100, '_') . '/', 1), 261, '_') => [],
+ ];
 foreach ($Files2Report as $file => $Report)
  {
-  $Report = array('strlen' => strlen ($file), 'result' => 'nok');
+  $Report = ['strlen' => strlen ($file), 'result' => 'nok'];
 
   if (! is_dir (dirname ($file))) mkdir (dirname ($file), 0777, true);
   if (copy ('bug75679.php', $file) && is_file ($file))
@@ -29,11 +29,11 @@ foreach ($Files2Report as $file => $Report)
 <?php
 $d = '.';
 $Files2Report =
- array(
-  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_259_characters_long_', 100, '_') . '/', 1), 259, '_') => array(),
-  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_260_characters_long_', 100, '_') . '/', 1), 260, '_') => array(),
-  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_261_characters_long_', 100, '_') . '/', 1), 261, '_') => array(),
- );
+ [
+  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_259_characters_long_', 100, '_') . '/', 1), 259, '_') => [],
+  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_260_characters_long_', 100, '_') . '/', 1), 260, '_') => [],
+  str_pad ($d . '/' . str_repeat (str_pad ('bug75679_path_261_characters_long_', 100, '_') . '/', 1), 261, '_') => [],
+ ];
 foreach ($Files2Report as $file => $Report)
 {
 	if (is_file($file)) {

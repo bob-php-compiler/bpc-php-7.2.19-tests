@@ -16,19 +16,19 @@ class C2
 
 class C5
 {
-    function __get($x) { return array(0); }
+    function __get($x) { return [0]; }
     function __set($x, $y) {}
 }
 
 class C6
 {
-    public $bar = array(0);
+    public $bar = [0];
     function __get($x) { return $this->bar; }
 }
 
 class C7 implements ArrayAccess
 {
-    function offsetGet($x) { return array(0); }
+    function offsetGet($x) { return [0]; }
     function offsetSet($x, $y) {}
     function offsetExists($x) { return true; }
     function offsetUnset($x) {}
@@ -36,7 +36,7 @@ class C7 implements ArrayAccess
 
 class C8 implements ArrayAccess
 {
-    public $foo = array(0);
+    public $foo = [0];
     function offsetGet($x) { return $this->foo; }
     function offsetSet($x, $y) {}
     function offsetExists($x) { return true; }
@@ -64,7 +64,7 @@ class C11
 
 class C15 implements ArrayAccess
 {
-    function offsetGet($x) { return array(new stdClass); }
+    function offsetGet($x) { return [new stdClass]; }
     function offsetSet($x, $y) {}
     function offsetExists($x) { return true; }
     function offsetUnset($x) {}
@@ -107,37 +107,37 @@ try {
 } catch (Exception $e) { print "caught Exception 1\n"; }
 
 try {
-	var_dump(array(0) + array(new C2));
+	var_dump([0] + [new C2]);
 } catch (Exception $e) { print "caught Exception 2\n"; }
 
 try {
-	$foo = array(0);
-	var_dump($foo += array(new C2));
+	$foo = [0];
+	var_dump($foo += [new C2]);
 } catch (Exception $e) { print "caught Exception 3\n"; }
 
 try {
-	$foo = (object)array("foo" => array(0));
-	var_dump($foo->foo += array(new C2));
+	$foo = (object)["foo" => [0]];
+	var_dump($foo->foo += [new C2]);
 } catch (Exception $e) { print "caught Exception 4\n"; }
 
 try {
 	$foo = new C5;
-	var_dump($foo->foo += array(new C2));
+	var_dump($foo->foo += [new C2]);
 } catch (Exception $e) { print "caught Exception 5\n"; }
 
 try {
 	$foo = new C6;
-	var_dump($foo->foo += array(new C2));
+	var_dump($foo->foo += [new C2]);
 } catch (Exception $e) { print "caught Exception 6\n"; }
 
 try {
 	$foo = new C7;
-	var_dump($foo[0] += array(new C2));
+	var_dump($foo[0] += [new C2]);
 } catch (Exception $e) { print "caught Exception 7\n"; }
 
 try {
 	$foo = new C8;
-	var_dump($foo[0] += array(new C2));
+	var_dump($foo[0] += [new C2]);
 } catch (Exception $e) { print "caught Exception 8\n"; }
 
 try {
@@ -202,12 +202,12 @@ try {
 } catch (Exception $e) { print "caught Exception 23\n"; }
 
 try {
-	$foo = array(new C2);
+	$foo = [new C2];
 	var_dump($foo[0] = new stdClass);
 } catch (Exception $e) { print "caught Exception 24\n"; }
 
 try {
-	$foo = (object) array("foo" => new C2);
+	$foo = (object) ["foo" => new C2];
 	var_dump($foo->foo = new stdClass);
 } catch (Exception $e) { print "caught Exception 25\n"; }
 

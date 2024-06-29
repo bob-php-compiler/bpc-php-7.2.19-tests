@@ -7,7 +7,7 @@ class Foo
     static function __callStatic($name, $arguments) {
        if ($name === 'get') {
             if (!isset($arguments[0])) {
-                var_dump(array('getSomeWhat'));
+                var_dump(['getSomeWhat']);
                 var_dump($arguments);
                 exit;
             }

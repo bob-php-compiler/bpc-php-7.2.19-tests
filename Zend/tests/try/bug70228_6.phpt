@@ -12,7 +12,7 @@ function test($x) {
     }
 }
 
-var_dump(test(array(1)));
+var_dump(test([1]));
 ?>
 --EXPECT--
 int(42)

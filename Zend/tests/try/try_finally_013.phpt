@@ -4,7 +4,7 @@ Return in try and finally inside loop
 <?php
 
 function foo() {
-    $array = array(1, 2, $n = 3);
+    $array = [1, 2, $n = 3];
     foreach ($array as $value) {
         try {
             echo "try\n";

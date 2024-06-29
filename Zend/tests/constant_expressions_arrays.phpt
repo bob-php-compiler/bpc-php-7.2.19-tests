@@ -2,16 +2,16 @@
 Constant expressions with arrays
 --FILE--
 <?php
-define('a', array(1,2,array(3,array(4))));
+define('a', [1,2,[3,[4]]]);
 define('b', a[0]);
 define('c', a[2][0]);
 define('d', a[2]);
-define('e', array("string" => array(1))["string"][0]);
+define('e', ["string" => [1]]["string"][0]);
 
 var_dump(b, c, e);
 
 class foo {
-	const bar = array(1)[0];
+	const bar = [1][0];
 }
 
 var_dump(foo::bar);

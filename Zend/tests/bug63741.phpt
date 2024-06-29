@@ -25,7 +25,7 @@ else
         }
     }
 
-    spl_autoload_register(array("autoloader", "autoload"));
+    spl_autoload_register(["autoloader", "autoload"]);
 
     function start()
     {

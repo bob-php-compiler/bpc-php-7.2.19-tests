@@ -16,7 +16,7 @@ touch(getcwd() . DIRECTORY_SEPARATOR . $depth0 . DIRECTORY_SEPARATOR . 'getSubPa
 $iterator = new RecursiveDirectoryIterator(getcwd() . DIRECTORY_SEPARATOR . $depth0);
 $it = new RecursiveIteratorIterator($iterator);
 
-$list = array();
+$list = [];
 $it->rewind(); //see https://bugs.php.net/bug.php?id=62914
 while($it->valid()) {
   $list[] = $it->getSubPathname();

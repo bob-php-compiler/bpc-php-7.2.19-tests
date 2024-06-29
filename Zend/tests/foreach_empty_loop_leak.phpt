@@ -5,7 +5,7 @@ Empty foreach loops with exception must not leak
 
 class Foo implements IteratorAggregate {
     public function getIterator() {
-        return new ArrayIterator(array());
+        return new ArrayIterator([]);
     }
     public function __destruct() {
         throw new Exception;

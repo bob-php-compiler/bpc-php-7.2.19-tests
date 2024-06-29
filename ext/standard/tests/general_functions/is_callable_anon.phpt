@@ -6,8 +6,8 @@ Test is_callable() function : usage variations - anonymous class method
 class A {
     function __construct() {
         $fname = null;
-        if (is_callable(array($this, 'f'), false, $fname)) {
-            call_user_func(array($this, 'f'));
+        if (is_callable([$this, 'f'], false, $fname)) {
+            call_user_func([$this, 'f']);
         } else {
             echo "dang\n";
         }

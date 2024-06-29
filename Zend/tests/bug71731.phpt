@@ -4,7 +4,7 @@ Bug #71731: Null coalescing operator and ArrayAccess
 <?php
 
 class AA implements ArrayAccess {
-    private $data = array();
+    private $data = [];
     public function offsetExists($name) {
         echo "offsetExists($name)\n";
         return array_key_exists($name, $this->data);

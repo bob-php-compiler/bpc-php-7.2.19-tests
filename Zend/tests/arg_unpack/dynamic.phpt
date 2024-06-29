@@ -7,9 +7,9 @@ $fn = function(...$args) {
     var_dump($args);
 };
 
-$fn(...array());
-$fn(...array(1, 2, 3));
-$fn(1, ...array(2, 3), ...array(), ...array(4, 5));
+$fn(...[]);
+$fn(...[1, 2, 3]);
+$fn(1, ...[2, 3], ...[], ...[4, 5]);
 
 ?>
 --EXPECT--

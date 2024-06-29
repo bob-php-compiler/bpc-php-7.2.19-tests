@@ -7,7 +7,7 @@ foreach ($arr as $idx => $v) {
     $arr[$idx] = $v;
 }
 
-$arr = array($arr);
+$arr = [$arr];
 
 var_dump(array_column($arr, 'name', 'id'));
 ?>

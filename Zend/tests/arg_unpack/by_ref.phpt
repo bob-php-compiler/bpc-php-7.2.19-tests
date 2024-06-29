@@ -11,13 +11,13 @@ function test1(&...$args) {
     }
 }
 
-test1(...array(1, 2, 3));
+test1(...[1, 2, 3]);
 
-$array = array(1, 2, 3);
+$array = [1, 2, 3];
 test1(...$array);
 var_dump($array);
 
-$array1 = array(1, 2); $array2 = array(3, 4);
+$array1 = [1, 2]; $array2 = [3, 4];
 test1(...$array1, ...$array2);
 var_dump($array1, $array2);
 
@@ -26,16 +26,16 @@ function test2($val1, &$ref1, $val2, &$ref2) {
     $ref2++;
 }
 
-$array = array(0, 0, 0, 0);
+$array = [0, 0, 0, 0];
 test2(...$array);
 var_dump($array);
 
-$array1 = array(1, 2); $array2 = array(4, 5);
+$array1 = [1, 2]; $array2 = [4, 5];
 test1(...$array1, ...$array2);
 var_dump($array1, $array2);
 
 $a = $b = $c = $d = 0;
-$array = array(0, 0, 0, 0);
+$array = [0, 0, 0, 0];
 
 test2($a, ...$array);
 var_dump($a, $array);

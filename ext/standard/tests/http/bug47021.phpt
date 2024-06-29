@@ -26,19 +26,19 @@ function stream_notification_callback($notification_code, $severity, $message, $
 function do_test($num_spaces, $leave_trailing_space=false) {
   // SOAPClient exhibits the bug because it forces HTTP/1.1,
   // whereas file_get_contents() uses HTTP/1.0 by default.
-  $options = array(
-    'http' => array(
+  $options = [
+    'http' => [
       'protocol_version' => '1.1',
       'header' => 'Connection: Close'
-    ),
-  );
+    ],
+  ];
 
   $ctx = stream_context_create($options);
   //stream_context_set_params($ctx, array("notification" => "stream_notification_callback"));
 
   $spaces = str_repeat(' ', $num_spaces);
   $trailing = ($leave_trailing_space ? ' ' : '');
-  $responses = array(
+  $responses = [
     "data://text/plain,HTTP/1.1 200 OK\r\n"
       . "Content-Type:{$spaces}text/plain{$trailing}\r\n"
       . "Transfer-Encoding:{$spaces}Chunked{$trailing}\r\n\r\n"
@@ -47,7 +47,7 @@ function do_test($num_spaces, $leave_trailing_space=false) {
       //. "Content-Type\r\n" // Deliberately invalid header // curl 8.5.0 Header without colon
       . "Content-Length:{$spaces}5{$trailing}\r\n\r\n"
       . "World"
-  );
+  ];
   $pid = http_server('tcp://127.0.0.1:12342', $responses);
 
   echo file_get_contents('http://127.0.0.1:12342/', false, $ctx);

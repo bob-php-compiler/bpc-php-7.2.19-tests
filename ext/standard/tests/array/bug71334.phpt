@@ -5,11 +5,11 @@ Bug #71334: Cannot access array keys while uksort()
 
 class myClass
 {
-	private $a = array(
-		'foo-test' => array(1),
-		'-' => array(2),
-		'bar-test' => array(3)
-	);
+	private $a = [
+		'foo-test' => [1],
+		'-' => [2],
+		'bar-test' => [3]
+	];
 
 	private function _mySort($x, $y)
 	{
@@ -26,7 +26,7 @@ class myClass
 
 	public function __construct()
 	{
-		uksort($this->a, array($this, '_mySort'));
+		uksort($this->a, [$this, '_mySort']);
 	}
 }
 

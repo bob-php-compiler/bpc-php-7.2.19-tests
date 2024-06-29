@@ -12,13 +12,13 @@ class A {
 	}
 }
 
-foreach (array(new A(1)) as $a) {
+foreach ([new A(1)] as $a) {
     $a = null;
     try {
-        foreach (array(new A(2)) as $a) {
+        foreach ([new A(2)] as $a) {
             $a = null;
             try {
-                foreach (array(new A(3)) as $a) {
+                foreach ([new A(3)] as $a) {
                     $a = null;
                     throw new Exception();
                 }

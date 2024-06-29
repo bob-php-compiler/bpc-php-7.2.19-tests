@@ -3,8 +3,8 @@ Self-referencing constant expression (part of a constant AST)
 --FILE--
 <?php
 class A {
-   const FOO = array(self::BAR);
-   const BAR = array(self::FOO);
+   const FOO = [self::BAR];
+   const BAR = [self::FOO];
 }
 var_dump(A::FOO);
 ?>

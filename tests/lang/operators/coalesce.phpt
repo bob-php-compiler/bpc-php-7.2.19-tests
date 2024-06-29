@@ -9,19 +9,19 @@ $var2 = NULL;
 $obj = new StdClass;
 $obj->boo = 7;
 
-$arr = array(
+$arr = [
 	2 => 7,
 	"foo" => "bar",
 	"foobar" => NULL,
 	"qux" => $obj,
-	"bing" => array(
+	"bing" => [
 		"bang"
-	)
-);
+	]
+];
 
 function foobar() {
 	echo "called\n";
-	return array('a');
+	return ['a'];
 }
 
 var_dump(isset($nonexistent_variable) ? $nonexistent_variable : 3);

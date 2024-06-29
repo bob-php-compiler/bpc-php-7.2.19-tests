@@ -2,7 +2,7 @@
 Bug #72543.1 (different references behavior comparing to PHP 5)
 --FILE--
 <?php
-$arr = array();
+$arr = [];
 $arr[0] = null;
 $ref =& $arr[0];
 unset($ref);

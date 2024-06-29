@@ -2,7 +2,7 @@
 Bug #63740 (strtotime seems to use both sunday and monday as start of week)
 --FILE--
 <?php
-$dates = array(
+$dates = [
 	'2015-07-04',
 	'2015-07-05',
 	'2015-07-06',
@@ -14,7 +14,7 @@ $dates = array(
 	'2015-07-12',
 	'2015-07-13',
 	'2015-07-14',
-);
+];
 
 foreach ( $dates as $date )
 {

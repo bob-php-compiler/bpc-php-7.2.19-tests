@@ -4,14 +4,14 @@ list() can be used to destructure to string offsets, __set and ArrayAccess::offs
 <?php
 
 class Obj {
-    public $values = array();
+    public $values = [];
     public function __set($name, $value) {
         $this->values[$name] = $value;
     }
 }
 
 class Arr implements ArrayAccess {
-    public $values = array();
+    public $values = [];
     public function offsetSet($name, $value) {
         $this->values[$name] = $value;
     }
@@ -21,15 +21,15 @@ class Arr implements ArrayAccess {
 }
 
 $str = 'ab';
-list($str[0], $str[1]) = array('x', 'y');
+list($str[0], $str[1]) = ['x', 'y'];
 var_dump($str);
 
 $obj = new Obj;
-list($obj->foo, $obj->bar) = array('foo', 'bar');
+list($obj->foo, $obj->bar) = ['foo', 'bar'];
 var_dump($obj->values);
 
 $arr = new Arr;
-list($arr['foo'], $arr['bar']) = array('foo', 'bar');
+list($arr['foo'], $arr['bar']) = ['foo', 'bar'];
 var_dump($arr->values);
 
 ?>

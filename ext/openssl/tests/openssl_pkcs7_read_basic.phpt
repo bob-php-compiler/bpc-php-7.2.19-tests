@@ -4,7 +4,7 @@ openssl_pkcs7_read() tests
 <?php
 $infile = file_get_contents("cert.p7b");
 $certfile = file_get_contents("cert.crt");
-$result = array();
+$result = [];
 
 var_dump(openssl_pkcs7_read("", $result));
 var_dump(openssl_pkcs7_read($certfile, $result));

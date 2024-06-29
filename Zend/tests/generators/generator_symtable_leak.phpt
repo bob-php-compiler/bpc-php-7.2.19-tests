@@ -4,7 +4,7 @@ Generators using symtables must not leak
 <?php
 
 function gen() {
-	$bar = array("some complex var");
+	$bar = ["some complex var"];
 	${"f"."oo"} = "force symtable usage";
 	var_dump($bar);
 	yield;

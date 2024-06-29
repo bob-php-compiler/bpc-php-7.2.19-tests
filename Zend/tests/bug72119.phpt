@@ -7,7 +7,7 @@ interface Foo {
 }
 
 class Hello implements Foo {
-    public function bar(array $baz = array())
+    public function bar(array $baz = [])
     {
 
     }

@@ -11,7 +11,7 @@ Test base64_decode() function : basic functionality - padding and whitespace
  */
 
 echo "Test base64_decode (output as JSON):\n";
-$data = array(
+$data = [
 	"", "=", "==", "===", "====",
 	"V", "V=", "V==", "V===", "V====",
 	"VV", "VV=", "VV==", "VV===", "VV====",
@@ -30,7 +30,7 @@ $data = array(
 	"*VV==", "V*V==", "VV*==", "VV=*=", "VV==*",
 	"\0VV==", "V\0V==", "VV\0==", "VV=\0=", "VV==\0",
 	"\0VVV==", "V\0VV==", "VV\0V==", "VVV\0==", "VVV=\0=", "VVV==\0",
-);
+];
 foreach ($data as $a) {
 	$b = base64_decode($a, false);
 	$c = base64_decode($a, true);

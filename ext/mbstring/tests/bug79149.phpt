@@ -6,8 +6,8 @@ if (!extension_loaded('mbstring')) die('skip mbstring extension not available');
 ?>
 --FILE--
 <?php
-var_dump(mb_convert_encoding("", "UTF-8", array(0)));
-var_dump(mb_convert_encoding('foo', 'UTF-8', array(array('bar'), array('baz'))));
+var_dump(mb_convert_encoding("", "UTF-8", [0]));
+var_dump(mb_convert_encoding('foo', 'UTF-8', array(['bar'], ['baz'])));
 var_dump(mb_convert_encoding('foo', 'UTF-8', array("foo\0bar")));
 ?>
 --EXPECTF--

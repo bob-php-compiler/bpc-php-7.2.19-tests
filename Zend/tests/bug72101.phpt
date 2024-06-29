@@ -15,7 +15,7 @@ class PHPUnit_Framework_MockObject_Stub_ReturnCallback {
 }
 
 class PHPUnit_Framework_MockObject_InvocationMocker {
-    protected $matchers = array();
+    protected $matchers = [];
     public function addMatcher( $matcher) {
         $this->matchers[] = $matcher;
     }
@@ -72,7 +72,7 @@ $foo->inv_mocker = $InvMocker;
 $OuterMatcher = new PHPUnit_Framework_MockObject_Matcher();
 $InvMocker->addMatcher($OuterMatcher);
 $OuterMatcher->methodNameMatcher = null;
-$OuterMatcher->stub = new PHPUnit_Framework_MockObject_Stub_ReturnCallback(array($foo, 'callback'));
+$OuterMatcher->stub = new PHPUnit_Framework_MockObject_Stub_ReturnCallback([$foo, 'callback']);
 $a = $b = $c = 0;
 $foo->bar($a, $b, $c);
 var_dump($a, $b, $c);

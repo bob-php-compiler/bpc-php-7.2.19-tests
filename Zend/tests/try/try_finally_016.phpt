@@ -13,7 +13,7 @@ class A {
 }
 
 function foo() {
-    foreach (array(0) as $_) {
+    foreach ([0] as $_) {
         $break = false;
         foreach (new A as $value) {
             try {

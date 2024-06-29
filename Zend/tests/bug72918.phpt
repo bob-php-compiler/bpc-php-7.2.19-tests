@@ -2,7 +2,7 @@
 Bug #72918 (negative offset inside a quoted string leads to parse error)
 --FILE--
 <?php
-$array = array(-3 => 'foo');
+$array = [-3 => 'foo'];
 $string = 'abcde';
 
 echo "$array[-3]\n";

@@ -6,7 +6,7 @@ Bug #73209: RecursiveArrayIterator does not iterate object properties
 class hello {
   public $props = array();
   function __construct() {
-    $this->props = array('hello' => 5, 'props' => array('keyme' => array('test' => 5)));
+    $this->props = ['hello' => 5, 'props' => ['keyme' => ['test' => 5]]];
   }
 }
 $data = new hello();

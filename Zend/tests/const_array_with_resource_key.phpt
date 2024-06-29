@@ -3,7 +3,7 @@ Constexpr arrays should be able to handle resource keys
 --FILE--
 <?php
 
-define('FOO', array(STDIN => 42));
+define('FOO', [STDIN => 42]);
 var_dump(FOO);
 
 ?>

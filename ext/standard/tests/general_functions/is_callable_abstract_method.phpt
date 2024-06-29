@@ -11,7 +11,7 @@ class B extends A {
     function foo() {}
 }
 
-$foo = array(new B, 'parent::foo');
+$foo = [new B, 'parent::foo'];
 var_dump(is_callable($foo));
 
 ?>

@@ -5,7 +5,7 @@ $this re-assign in extract()
 class C
 {
     function foo() {
-        extract(array("this"=>42));
+        extract(["this"=>42]);
         var_dump($this);
     }
 }

@@ -2,8 +2,8 @@
 Bug #71188 (str_replace converts integers in original $search array to strings)
 --FILE--
 <?php
-$a = array(0, 1, 2);
-$b = array("Nula", "Jedna", "Dva");
+$a = [0, 1, 2];
+$b = ["Nula", "Jedna", "Dva"];
 
 var_dump($a);
 str_replace($a, $b, "1");
