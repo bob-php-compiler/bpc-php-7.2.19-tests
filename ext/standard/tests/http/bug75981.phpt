@@ -4,7 +4,7 @@ Bug #75981 (stack-buffer-overflow while parsing HTTP response)
 --bpc-include-file ext/standard/tests/http/server.inc \
 --SKIPIF--
 <?php
-    if (LIBCURL_VERSION_NUM >= 0x075100) echo 'skip for libcurl < 7.81.0';
+    if (LIBCURL_VERSION_NUM >= 0x074400) echo 'skip for libcurl < 7.68.0';
     require 'server.inc'; http_server_skipif('tcp://127.0.0.1:12342');
 ?>
 --FILE--
