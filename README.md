@@ -30,10 +30,15 @@
 
 # Requirements
 
-1. php7.2
+1. php + mysql-server
 
     ```shell
-    $ sudo apt install php7.2-cli
+    $ sudo apt install php-cli
+    $ sudo apt install mysql-server
+    $ sudo mysql
+    mysql> create user rootpw@localhost identified by '123456'; 
+    mysql> grant all on *.* to rootpw@localhost with GRANT OPTION;
+    mysql> create database test;
     ```
 
 2. bpc
