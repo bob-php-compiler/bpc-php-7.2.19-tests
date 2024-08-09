@@ -66,83 +66,189 @@ bool(false)
 object not_exist_method
 bool(false)
 strlen
-array(2) {
+array(3) {
   ["min"]=>
   int(1)
   ["max"]=>
   int(1)
+  ["typehints"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
 }
 var_dump
-array(2) {
+array(3) {
   ["min"]=>
   int(1)
   ["max"]=>
   int(-1)
+  ["typehints"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
 }
 test
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(-1)
+  ["typehints"]=>
+  array(4) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+    [3]=>
+    NULL
+  }
 }
 C1::test1
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(4)
+  ["typehints"]=>
+  array(4) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+    [3]=>
+    NULL
+  }
 }
 C1::test2
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(-1)
+  ["typehints"]=>
+  array(4) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+    [3]=>
+    NULL
+  }
 }
 C2::test1
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(4)
+  ["typehints"]=>
+  array(4) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+    [3]=>
+    NULL
+  }
 }
 C2::test2
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(-1)
+  ["typehints"]=>
+  array(4) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+    [3]=>
+    NULL
+  }
 }
 C2::__invoke
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(3)
+  ["typehints"]=>
+  array(3) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+  }
 }
 closure
-array(2) {
+array(3) {
   ["min"]=>
   int(0)
   ["max"]=>
   int(0)
+  ["typehints"]=>
+  array(0) {
+  }
 }
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(3)
+  ["typehints"]=>
+  array(3) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+  }
 }
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(-1)
+  ["typehints"]=>
+  array(4) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+    [3]=>
+    NULL
+  }
 }
-array(2) {
+array(3) {
   ["min"]=>
   int(2)
   ["max"]=>
   int(3)
+  ["typehints"]=>
+  array(3) {
+    [0]=>
+    NULL
+    [1]=>
+    NULL
+    [2]=>
+    NULL
+  }
 }

@@ -19,7 +19,7 @@ $functions = [
     'bool' => function (bool $b) { return $b; }
 ];
 
-class Stringable {
+class xStringable {
     public function __toString() {
         return "foobar";
     }
@@ -40,7 +40,7 @@ $values = [
     NULL,
     [],
     new StdClass,
-    new Stringable,
+    new xStringable,
     fopen("/proc/self/comm", "r")
 ];
 
@@ -106,7 +106,7 @@ int(0)
 }
 *** Caught Argument 1 passed to {closure}() must be of the type integer, object given, called in %s on line %d and defined
 
-*** Trying object(Stringable)#%s (0) {
+*** Trying object(xStringable)#%s (0) {
 }
 *** Caught Argument 1 passed to {closure}() must be of the type integer, object given, called in %s on line %d and defined
 
@@ -160,7 +160,7 @@ float(0)
 }
 *** Caught Argument 1 passed to {closure}() must be of the type float, object given, called in %s on line %d and defined
 
-*** Trying object(Stringable)#%s (0) {
+*** Trying object(xStringable)#%s (0) {
 }
 *** Caught Argument 1 passed to {closure}() must be of the type float, object given, called in %s on line %d and defined
 
@@ -213,7 +213,7 @@ string(0) ""
 }
 *** Caught Argument 1 passed to {closure}() must be of the type string, object given, called in %s on line %d and defined
 
-*** Trying object(Stringable)#%s (0) {
+*** Trying object(xStringable)#%s (0) {
 }
 string(6) "foobar"
 
@@ -266,7 +266,7 @@ bool(false)
 }
 *** Caught Argument 1 passed to {closure}() must be of the type boolean, object given, called in %s on line %d and defined
 
-*** Trying object(Stringable)#%s (0) {
+*** Trying object(xStringable)#%s (0) {
 }
 *** Caught Argument 1 passed to {closure}() must be of the type boolean, object given, called in %s on line %d and defined
 
