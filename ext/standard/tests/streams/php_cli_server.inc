@@ -7,7 +7,7 @@ function php_cli_server_start($code = 'echo "Hello world";', $router = 'index.ph
 	$doc_root = getcwd();
 
 	if ($code) {
-		file_put_contents($doc_root . '/' . ($router ? $router : 'index.php'), '<?php ' . $code . ' ?>');
+		file_put_contents($doc_root . '/' . ($router ?: 'index.php'), '<?php ' . $code . ' ?>');
 	}
 
 	$descriptorspec = array(

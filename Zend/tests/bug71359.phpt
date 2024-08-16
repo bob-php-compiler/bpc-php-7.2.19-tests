@@ -28,12 +28,12 @@ class AA {
 $aa = new AA;
 var_dump(isset($aa->zero->one->two));
 var_dump(isset($aa->zero->foo));
-var_dump(isset($aa->zero) ? $aa->zero : 42);
-var_dump(isset($aa->zero->one->two) ? $aa->zero->one->two : 42);
+var_dump($aa->zero ?? 42);
+var_dump($aa->zero->one->two ?? 42);
 $aa->zero = new AA;
 $aa->zero->one = new AA;
 var_dump(isset($aa->zero->one->two));
-var_dump(isset($aa->zero->one->two) ? $aa->zero->one->two : 42);
+var_dump($aa->zero->one->two ?? 42);
 ?>
 --EXPECT--
 __isset(zero)

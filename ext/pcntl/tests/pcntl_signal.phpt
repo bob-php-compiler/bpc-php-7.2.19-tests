@@ -9,7 +9,7 @@ posix_kill(posix_getpid(), SIGTERM);
 pcntl_signal_dispatch();
 
 pcntl_signal(SIGUSR1, function($signo, $siginfo){
-	printf("got signal from %s\n", isset($siginfo['pid']) ? $siginfo['pid'] : 'nobody');
+	printf("got signal from %s\n", $siginfo['pid'] ?? 'nobody');
 });
 posix_kill(posix_getpid(), SIGUSR1);
 pcntl_signal_dispatch();

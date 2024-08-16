@@ -5,7 +5,7 @@ Bug #60169 (Conjunction of ternary and list crashes PHP)
 error_reporting(0);
 $arr  = array("test");
 list($a,$b) = is_array($arr)? $arr : $arr;
-list($c,$d) = is_array($arr)? is_array($arr) : NULL;
+list($c,$d) = is_array($arr)?: NULL;
 echo "ok\n";
 --EXPECT--
 ok

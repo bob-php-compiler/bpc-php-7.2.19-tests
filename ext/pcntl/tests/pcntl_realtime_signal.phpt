@@ -6,7 +6,7 @@ skip currently not support realtime signal
 <?php
 
 pcntl_signal(SIGRTMIN, function ($signo, $siginfo) {
-    printf("got realtime signal from %s, ruid:%s\n", isset($siginfo['pid']) ? $siginfo['pid'] : '', isset($siginfo['uid']) ? $siginfo['uid'] : '');
+    printf("got realtime signal from %s, ruid:%s\n", $siginfo['pid'] ?? '', $siginfo['uid'] ?? '');
 });
 posix_kill(posix_getpid(), SIGRTMIN);
 pcntl_signal_dispatch();

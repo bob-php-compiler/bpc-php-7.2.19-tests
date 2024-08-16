@@ -409,20 +409,18 @@
     bpc closure has only one method: __invoke()
     var_dump closure got empty Closure object
 
-6. not support Null Coalescing Operator ??
+6. not support foreach as list()
 
-7. not support foreach as list()
-
-8. global decl only support `$var`
+7. global decl only support `$var`
 
     bpc not support `global $$varname`
     bpc not support `global ${...}`
 
-9. zend.multibyte
+8. zend.multibyte
 
     bpc not support multibyte
 
-10. traits
+9. traits
 
     bpc currently not support static variables in trait method
     trait methods inserted to class by define-php-method, @see Zend/tests/traits/inheritance003.phpt
@@ -430,42 +428,38 @@
     trait { A as ... }: A expected a trait method, bpc don't check if it is an alias, @see Zend/tests/traits/bug54441.phpt
     trait abstract and class implement signature mismatch message may different, @see Zend/tests/traits/bug60217{b,c}.phpt
 
-11. bpc not support mix static var and non-static var
+10. bpc not support mix static var and non-static var
 
-12. redeclare compile error
+11. redeclare compile error
 
     Cannot redeclare function, class property/constant/method
     Cannot redeclare builtin and extension class
 
-13. class const defines one at a time
+12. class const defines one at a time
 
     bpc not support `const c1 = 1, c2 = 2;`
 
-14. parse error
+13. parse error
 
-15. not supported return reference from function/method
+14. not supported return reference from function/method
 
-16. bpc support double quoted string array string index
+15. bpc support double quoted string array string index
 
     @see tests/lang/bug21820.phpt
 
-17. not support foreach as reference
+16. not support foreach as reference
 
-18. static-decl only support in function or method
+17. static-decl only support in function or method
 
-19. not support nested list and `[]` list and keyed list
+18. not support nested list and `[]` list and keyed list
 
     bpc not support `list(list($x)) = `, parse error
 
-20. not support short tags
+19. not support short tags
 
-21. Ternary Operator ?:
+20. not support anonymous class
 
-    leave out the middle part of the ternary operator `expr1 ?: expr2` will parse error
-
-22. not support anonymous class
-
-23. generator
+21. generator
 
     not support unset/close generator, @see Zend/tests/generators/finally/finally_ran_on_close.phpt
     generator: yield outside function compile error
@@ -474,18 +468,18 @@
     typehint check in generator rewind
     generator: yield from must followed by blank, @see Zend/tests/generators/yield_from_greedy_parse.phpt
 
-24. not support multi-level break/continue
+22. not support multi-level break/continue
 
-25. break/continue not in loop/switch compile-error
+23. break/continue not in loop/switch compile-error
 
-26. not support return type
+24. not support return type
 
-27. not support bprefix strings
+25. not support bprefix strings
 
     @see https://wiki.php.net/rfc/binary_string_deprecation
     @see https://stackoverflow.com/questions/4749442/what-does-the-b-in-front-of-string-literals-do
 
-28. support $arr['index'] in dqstring
+26. support $arr['index'] in dqstring
 
     ```php
     <?php
@@ -495,22 +489,22 @@
     php parse error
     bpc ok
 
-29. not support heredoc/nowdoc embed each other or in dqstring
+27. not support heredoc/nowdoc embed each other or in dqstring
 
-30. not support iterable
+28. not support iterable
 
-31. not support indirect call with constants
+29. not support indirect call with constants
 
     @see Zend/tests/indirect_call_from_constant.phpt
 
-32. strict names
+30. strict names
 
     php support ascii 0x80-0xff in variable/class/function... names
     bpc not support this
     @see https://www.php.net/manual/en/language.variables.basics.php
     @see ext/standard/tests/serialize/006.phpt
 
-33. finally
+31. finally
 
     1. Uncaught Exception/Error in finally override try-body Exception/Error    @see Zend/tests/bug65784.phpt
     2. return in finally not suppress Exception from try-body                   @see Zend/tests/try/bug70228_2.phpt
@@ -518,30 +512,30 @@
     4. jump out of a finally block is disallowed message                        @see Zend/tests/try/try_finally_008.phpt
     5. exit/error still run finally code                                        @see Zend/tests/generators/bug75396.phpt
 
-34. optional params should always after required params
+32. optional params should always after required params
 
-35. not support array to string conversion at compile time
+33. not support array to string conversion at compile time
 
     php notice
     bpc parse error
 
-36. not support literal string as class name
+34. not support literal string as class name
 
     `'A'::$prop` will parse error
 
-37. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
+35. Warning: truncate literal float '~a' to '~a', use string may avoid truncate
 
     @see ext/standard/tests/strings/bug47168.phpt
 
-38. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
+36. cannot reference assignment or unset superglobal, this will split *global-env* and $_XXX
 
     @see ext/session/tests/bug67694.phpt
 
-39. arguments without default value must before arguments with default value
+37. arguments without default value must before arguments with default value
 
     @see Zend/tests/bug71428.2.phpt
 
-40. not support CLASS::$static_property = &$var
+38. not support CLASS::$static_property = &$var
 
 **misc**
 

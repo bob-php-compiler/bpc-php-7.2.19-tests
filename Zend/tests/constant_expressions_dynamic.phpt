@@ -22,8 +22,8 @@ define('T_11', C_0 && 1);
 define('T_12', C_1 && 1);
 define('T_13', C_0 ? "foo" : "bar");
 define('T_14', C_1 ? "foo" : "bar");
-define('T_15', C_0 ? C_0 : "bar");
-define('T_16', C_1 ? C_1 : "bar");
+define('T_15', C_0 ?: "bar");
+define('T_16', C_1 ?: "bar");
 define('T_17', C_arr[0]);
 define('T_18', C_arr["foo"]);
 define('T_19', [
@@ -36,7 +36,7 @@ define('T_19', [
     true => true,
 ]);
 define('T_20x', 'a');
-define('T_20', null ? null : (T_20x . 'bc'));
+define('T_20', null ?: (T_20x . 'bc'));
 
 var_dump(
     T_1, T_2, T_3, T_4, T_5, T_6, T_7, T_8, T_9, T_10,

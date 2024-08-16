@@ -10,8 +10,8 @@ public function __get($x) { var_dump($x); return 42; }
 
 $obj = new Test;
 $name = "foo";
-var_dump(isset($obj->$name) ? $obj->$name : 12);
+var_dump($obj->$name ?? 12);
 ?>
 --EXPECT--
-string(2) "24"
+string(3) "foo"
 int(42)

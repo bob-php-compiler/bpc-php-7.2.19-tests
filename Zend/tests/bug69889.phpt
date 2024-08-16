@@ -1,7 +1,5 @@
 --TEST--
 Bug #69889: Null coalesce operator doesn't work for string offsets
---SKIPIF--
-skip not support Null Coalescing Operator ??
 --FILE--
 <?php
 

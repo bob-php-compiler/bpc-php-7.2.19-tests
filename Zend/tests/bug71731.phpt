@@ -29,13 +29,13 @@ class AA implements ArrayAccess {
 $aa = new AA;
 var_dump(isset($aa[0][1][2]));
 var_dump(isset($aa[0]->foo));
-var_dump(isset($aa[0]) ? $aa[0] : 42);
-var_dump(isset($aa[0][1][2]) ? $aa[0][1][2] : 42);
+var_dump($aa[0] ?? 42);
+var_dump($aa[0][1][2] ?? 42);
 
 $aa[0] = new AA;
 $aa[0][1] = new AA;
 var_dump(isset($aa[0][1][2]));
-var_dump(isset($aa[0][1][2]) ? $aa[0][1][2] : 42);
+var_dump($aa[0][1][2] ?? 42);
 
 ?>
 --EXPECT--

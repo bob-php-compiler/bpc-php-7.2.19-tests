@@ -14,7 +14,7 @@ This is a test string
 ENDOFSTRING
 );
 define('T_9', ~-1);
-define('T_10', (-1?-1:1) + (0?2:3));
+define('T_10', (-1?:1) + (0?2:3));
 define('T_11', 1 && 0);
 define('T_12', 1 and 1);
 define('T_13', 0 || 0);

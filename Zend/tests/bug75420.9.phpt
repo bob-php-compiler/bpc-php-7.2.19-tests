@@ -11,10 +11,10 @@ class Test implements ArrayAccess {
 
 $obj = new Test;
 $name = "foo";
-var_dump(isset($obj[$name]) ? $obj[$name] : 12);
+var_dump($obj[$name] ?? 12);
 var_dump($name);
 ?>
 --EXPECT--
-int(24)
+string(3) "foo"
 int(42)
 int(24)

@@ -10,7 +10,7 @@ class Bar {
 class Test {
 	public $foo = [Bar::A, __CLASS__][__CLASS__ != ""];
 	public $bar = Bar::A && __CLASS__;
-	public $baz = Bar::A ? Bar::A : __CLASS__;
+	public $baz = Bar::A ?: __CLASS__;
 	public $buzz = Bar::A ? __CLASS__ : 0;
 }
 

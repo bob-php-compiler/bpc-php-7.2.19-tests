@@ -8,8 +8,8 @@ $a = new stdClass();
 $b = new stdClass();
 $map = new SplObjectStorage();
 $map[$a] = 'foo';
-var_dump(isset($map[$b]) ? $map[$b] : null);
-var_dump(isset($map[$a]) ? $map[$a] : null);
+var_dump($map[$b] ?? null);
+var_dump($map[$a] ?? null);
 --EXPECTF--
 NULL
 string(3) "foo"

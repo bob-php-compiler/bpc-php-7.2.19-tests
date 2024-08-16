@@ -1,18 +1,18 @@
 --TEST--
 Constant expressions with null coalescing operator ??
---SKIPIF--
-skip not support Null Coalescing Operator ??
+--ARGS--
+--bpc-include-file Zend/tests/constant_expressions_coalesce.inc \
 --FILE--
 <?php
 
-const A = [1 => [[]]];
+define('A', [1 => [[]]]);
 
-const T_1 = null ?? A[1]['undefined']['index'] ?? 1;
-const T_2 = null ?? A['undefined']['index'] ?? 2;
-const T_3 = null ?? A[1][0][2] ?? 3;
-const T_4 = A[1][0][2] ?? 4;
-const T_5 = null ?? __LINE__;
-const T_6 = __LINE__ ?? "bar";
+define('T_1', null ?? A[1]['undefined']['index'] ?? 1);
+define('T_2', null ?? A['undefined']['index'] ?? 2);
+define('T_3', null ?? A[1][0][2] ?? 3);
+define('T_4', A[1][0][2] ?? 4);
+define('T_5', null ?? __LINE__);
+define('T_6', __LINE__ ?? "bar");
 
 var_dump(T_1);
 var_dump(T_2);
@@ -26,10 +26,12 @@ var_dump((function(){ static $var = null ?? A['undefined']['index'] ?? 2; return
 var_dump((function(){ static $var = null ?? A[1][0][2] ?? 3; return $var; })());
 var_dump((function(){ static $var = A[1][0][2] ?? 4; return $var; })());
 
-var_dump((new class { public $var = null ?? A[1]['undefined']['index'] ?? 1; })->var);
-var_dump((new class { public $var = null ?? A['undefined']['index'] ?? 2; })->var);
-var_dump((new class { public $var = null ?? A[1][0][2] ?? 3; })->var);
-var_dump((new class { public $var = A[1][0][2] ?? 4; })->var);
+include 'constant_expressions_coalesce.inc';
+
+var_dump((new C1)->var);
+var_dump((new C2)->var);
+var_dump((new C3)->var);
+var_dump((new C4)->var);
 
 ?>
 --EXPECTF--
