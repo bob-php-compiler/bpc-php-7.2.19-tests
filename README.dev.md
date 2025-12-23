@@ -297,6 +297,8 @@
     
     eq `foreach (get_object_vars($obj) as $k => $v) {}`
 
+36. check "Using $this when not in object context" first in class method
+
 **array**
 
 1. array copy/separate different

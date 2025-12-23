@@ -108,11 +108,9 @@ var_dump(call_user_func($f, 'you'));
 ?>
 --EXPECTF--
 Deprecated: Non-static method Hello::world() should not be called statically in %s on line %d
-Hello, you
 Exception: Using $this when not in object context
 
 Deprecated: %son-static method Hello::world() should not be called statically in %s on line %d
-Hello, you
 Exception: Using $this when not in object context
 -----
 Hello, again
